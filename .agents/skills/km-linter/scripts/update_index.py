@@ -1,8 +1,12 @@
 import os
+import sys
 import unicodedata
 import datetime
 
-VAULT_ROOT = "/Users/suyoo/Library/Mobile Documents/iCloud~md~obsidian/Documents/KM"
+sys.path.insert(0, os.path.dirname(__file__))
+from vault_paths import find_vault_root
+
+VAULT_ROOT = find_vault_root(__file__)
 WIKI_DIR = os.path.join(VAULT_ROOT, "wiki")
 
 def normalize(s):

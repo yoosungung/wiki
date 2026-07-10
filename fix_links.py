@@ -2,8 +2,8 @@ import os
 import re
 import unicodedata
 
-# Configuration
-VAULT_ROOT = "/Users/suyoo/Library/Mobile Documents/iCloud~md~obsidian/Documents/KM"
+# Configuration — repo root auto-detected
+VAULT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__)))
 WIKI_DIR = os.path.join(VAULT_ROOT, "wiki")
 RAW_DIR = os.path.join(VAULT_ROOT, "raw")
 

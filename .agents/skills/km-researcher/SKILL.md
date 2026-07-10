@@ -15,7 +15,7 @@ description: 연구 주제 관리 문서를 분석하여 지식 탐색을 자동
 - 관련 위키 MOC에서 검색 전략(키워드, 채널)을 로드함.
 
 ### 2. EXPLORATION & INGESTION
-- `google_web_search`를 통해 최신 자료를 탐색함.
+- `WebSearch`를 통해 최신 자료를 탐색함.
 - `raw/` 폴더에서 비표준 파일명(예: `Untitled.md`, `새 텍스트 파일.md`)을 탐색하여 내부에 URL이 포함된 경우 수집 대상으로 포함함.
 - 유의미한 자료에 대해 `km-ingestor`를 호출하여 `raw/`에 표준화된 형식으로 저장함.
 

@@ -11,7 +11,7 @@ description: 외부 정보를 추출하여 `raw/` 폴더에 저장하고 에이�
 ## 📋 WORKFLOW
 
 ### 1. DATA_EXTRACTION
-- `web_fetch` 또는 로컬 파일 읽기를 통해 텍스트 및 메타데이터(URL, 날짜 등)를 확보함.
+- `Read`(URL/로컬 파일) 또는 `Shell`(curl)을 통해 텍스트 및 메타데이터(URL, 날짜 등)를 확보함.
 - **원천 링크 추적(Source Tracing)**: 수집 대상 URL이 소셜 미디어(LinkedIn, X/Twitter), 뉴스레터(Substack), 커뮤니티(Hacker News, Reddit) 등 2차 소개글 형태인 경우, 본문 내 외부 링크(예: github.com, arxiv.org, 공식 docs/blog)를 추출하여 **재귀적으로 한 번 더 수집(Recursive Ingestion)**하여 원본 지식을 확보함.
 
 ### 2. WRAPPER_GENERATION

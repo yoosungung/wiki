@@ -2,7 +2,7 @@ import os
 import re
 import unicodedata
 
-VAULT_ROOT = "/Users/suyoo/Library/Mobile Documents/iCloud~md~obsidian/Documents/KM"
+VAULT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__)))
 WIKI_DIR = os.path.join(VAULT_ROOT, "wiki")
 
 def normalize(s):
