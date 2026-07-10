@@ -1,0 +1,85 @@
+name: Deploy Quartz site to GitHub Pages
+on:
+  push:
+    branches:
+      - main
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout user vault
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Checkout Quartz
+        run: |
+          git clone --depth 1 https://github.com/jackyzha0/quartz.git quartz-build
+          cd quartz-build
+          npm ci
+
+      - name: Prepare Content
+        run: |
+          # Empty default Quartz content
+          rm -rf quartz-build/content/*
+          
+          # Copy user's markdown files to quartz content directory
+          # Exclude git, github, and quartz-build folder itself
+          rsync -av --exclude='.git' --exclude='.github' --exclude='quartz-build' ./ quartz-build/content/
+
+      - name: Configure Quartz
+        run: |
+          # If user has custom quartz configs in root, copy them over.
+          # Otherwise, patch the default configuration.
+          if [ -f "quartz.config.ts" ]; then
+            cp quartz.config.ts quartz-build/quartz.config.ts
+          else
+            node -e '
+              const fs = require("fs");
+              let config = fs.readFileSync("quartz-build/quartz.config.ts", "utf8");
+              // Update baseUrl
+              config = config.replace(/baseUrl:\s*"[^"]*"/, `baseUrl: "wiki.askwho.net"`);
+              // Update pageTitle
+              config = config.replace(/pageTitle:\s*"[^"]*"/, `pageTitle: "KM Wiki"`);
+              // Update locale to Korean
+              config = config.replace(/locale:\s*"[^"]*"/, `locale: "ko-KR"`);
+              fs.writeFileSync("quartz-build/quartz.config.ts", config);
+            '
+          fi
+          
+          if [ -f "quartz.layout.ts" ]; then
+            cp quartz.layout.ts quartz-build/quartz.layout.ts
+          fi
+
+      - name: Build Quartz Site
+        run: |
+          cd quartz-build
+          npx quartz build
+
+      - name: Add CNAME
+        run: |
+          # Write CNAME to public directory for GitHub Pages custom domain routing
+          echo "wiki.askwho.net" > quartz-build/public/CNAME
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: quartz-build/public
+          
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: https://wiki.askwho.net
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
