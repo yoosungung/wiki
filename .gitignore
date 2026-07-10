@@ -3,11 +3,7 @@
 Thumbs.db
 
 # Obsidian specific
-.obsidian/workspace
-.obsidian/workspace.json
-.obsidian/graph.json
-.obsidian/cache/
-.obsidian/backups/
+.obsidian/
 
 # Python cache and temporary files
 __pycache__/
