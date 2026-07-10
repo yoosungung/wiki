@@ -27,6 +27,21 @@ jobs:
       - name: Checkout Quartz
         run: |
           git clone --depth 1 https://github.com/jackyzha0/quartz.git quartz-build
+
+      - name: Cache Node Modules & Quartz Plugins
+        id: quartz-cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            quartz-build/node_modules
+            quartz-build/.quartz/plugins
+          key: ${{ runner.os }}-quartz-${{ hashFiles('quartz-build/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-quartz-
+
+      - name: Install dependencies
+        if: steps.quartz-cache.outputs.cache-hit != 'true'
+        run: |
           cd quartz-build
           npm ci
 
