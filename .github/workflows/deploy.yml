@@ -36,26 +36,28 @@ jobs:
 
       - name: Configure Quartz
         run: |
-          # If user has custom quartz configs in root, copy them over.
-          # Otherwise, patch the default configuration.
-          if [ -f "quartz.config.ts" ]; then
-            cp quartz.config.ts quartz-build/quartz.config.ts
+          # If user has custom quartz config YAML in root, copy it over.
+          # Otherwise, copy the default and patch it.
+          if [ -f "quartz.config.yaml" ]; then
+            cp quartz.config.yaml quartz-build/quartz.config.yaml
           else
+            cp quartz-build/quartz.config.default.yaml quartz-build/quartz.config.yaml
             node -e '
               const fs = require("fs");
-              let config = fs.readFileSync("quartz-build/quartz.config.ts", "utf8");
+              let config = fs.readFileSync("quartz-build/quartz.config.yaml", "utf8");
               // Update baseUrl
-              config = config.replace(/baseUrl:\s*"[^"]*"/, `baseUrl: "wiki.askwho.net"`);
+              config = config.replace(/baseUrl:\s*[^\r\n]*/, `baseUrl: wiki.askwho.net`);
               // Update pageTitle
-              config = config.replace(/pageTitle:\s*"[^"]*"/, `pageTitle: "KM Wiki"`);
+              config = config.replace(/pageTitle:\s*[^\r\n]*/, `pageTitle: KM Wiki`);
               // Update locale to Korean
-              config = config.replace(/locale:\s*"[^"]*"/, `locale: "ko-KR"`);
-              fs.writeFileSync("quartz-build/quartz.config.ts", config);
+              config = config.replace(/locale:\s*[^\r\n]*/, `locale: ko-KR`);
+              fs.writeFileSync("quartz-build/quartz.config.yaml", config);
             '
           fi
           
-          if [ -f "quartz.layout.ts" ]; then
-            cp quartz.layout.ts quartz-build/quartz.layout.ts
+          # Allow overriding quartz.ts (for advanced overrides) if present in root
+          if [ -f "quartz.ts" ]; then
+            cp quartz.ts quartz-build/quartz.ts
           fi
 
       - name: Build Quartz Site
