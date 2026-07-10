@@ -1,10 +1,10 @@
 ---
-title: \"GLM-5.2 Architecture and IndexShare Optimization\"
-related_raw: [\"[[raw/2026-06-23-linkedin-sebastianraschka-glm-5-2-release.md]]\"]
+title: "GLM-5.2 Architecture and IndexShare Optimization"
+related_raw: ["[[raw/2026-06-23-linkedin-sebastianraschka-glm-5-2-release.md]]"]
 tags: ['models', 'architecture', 'moe', 'glm-5', 'long-context', 'attention-mechanisms']
-type: \"wiki\"
-status: \"published\"
-last_updated: \"2026-06-23\"
+type: "wiki"
+status: "published"
+last_updated: "2026-06-23"
 ---
 
 # GLM-5.2 아키텍처 및 IndexShare 가속 기술 분석

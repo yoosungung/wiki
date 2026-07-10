@@ -1,10 +1,10 @@
 ---
-title: \"OpenDataLoader PDF Parser: Open-Source Layout Engine for AI and RAG\"
-related_raw: [\"[[raw/2026-06-23-opendataloader-pdf-github-repo.md]]\"]
+title: "OpenDataLoader PDF Parser: Open-Source Layout Engine for AI and RAG"
+related_raw: ["[[raw/2026-06-23-opendataloader-pdf-github-repo.md]]"]
 tags: ['rag', 'pdf-parser', 'opendataloader', 'data-preprocessing', 'open-source']
-type: \"wiki\"
-status: \"published\"
-last_updated: \"2026-06-23\"
+type: "wiki"
+status: "published"
+last_updated: "2026-06-23"
 ---
 
 # OpenDataLoader PDF: AI 및 RAG를 위한 오픈소스 고성능 PDF 파싱 엔진

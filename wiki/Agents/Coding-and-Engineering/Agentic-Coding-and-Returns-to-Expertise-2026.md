@@ -1,10 +1,10 @@
 ---
-title: \"Agentic Coding and Returns to Expertise (Claude Code 40만 세션 분석)\"
-related_raw: [\"[[raw/2026-06-23-claude-code-expertise.md]]\", \"[[raw/2026-06-23-linkedin-dongwoo-anthropic-claude-code.md]]\"]
+title: "Agentic Coding and Returns to Expertise (Claude Code 40만 세션 분석)"
+related_raw: ["[[raw/2026-06-23-claude-code-expertise.md]]", "[[raw/2026-06-23-linkedin-dongwoo-anthropic-claude-code.md]]"]
 tags: ['agentic-coding', 'claude-code', 'human-ai-collaboration', 'domain-expertise']
-type: \"wiki\"
-status: \"published\"
-last_updated: \"2026-06-23\"
+type: "wiki"
+status: "published"
+last_updated: "2026-06-23"
 ---
 
 # 에이전틱 코딩과 도메인 전문성의 지속적 가치 (2026)
