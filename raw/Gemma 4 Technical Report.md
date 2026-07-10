@@ -1,1 +1,0 @@
-[Gemma 4 Technical Report](https://arxiv.org/html/2607.02770v1)

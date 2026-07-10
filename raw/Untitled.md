@@ -1,1 +1,0 @@
-https://www.linkedin.com/posts/gim-gyungjin-7430aab4_2026-06-llm-%EB%85%BC%EB%AC%B8-%EC%9D%BD%EA%B3%A0-%EB%8A%90%EB%82%80%EC%A0%90-agent-%EC%84%B1%EB%8A%A5%EC%9D%80-%EA%B8%B4-%EA%B8%B0%EB%A1%9D%EC%9D%84-share-7474418047156375552-9QjN/?utm_source=share&utm_medium=member_ios&rcm=ACoAADm5eyABU_duDuXv1f9N-6JhXB_iNO6faes
