@@ -1,0 +1,67 @@
+:root {
+  --km-sidebar-width: 320px;
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  .page > #quartz-body {
+    grid-template-columns: var(--km-sidebar-width) minmax(0, 1fr) !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page > #quartz-body {
+    grid-template-columns: var(--km-sidebar-width) minmax(0, 1fr) 320px !important;
+  }
+}
+
+@media (min-width: 800px) {
+  .page > #quartz-body .sidebar.left {
+    position: relative;
+    min-width: 0;
+    width: var(--km-sidebar-width);
+    max-width: 480px;
+    overflow-x: hidden;
+  }
+}
+
+.explorer {
+  min-width: 0;
+  width: 100%;
+}
+
+.explorer-content ul li > a,
+.folder-container div > a,
+.folder-container div > button span {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.folder-container {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.folder-container > div {
+  min-width: 0;
+  flex: 1;
+  overflow: hidden;
+}
+
+.km-sidebar-handle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  cursor: col-resize;
+  z-index: 20;
+  background: transparent;
+}
+
+.km-sidebar-handle:hover {
+  background: var(--lightgray);
+}
