@@ -1,6 +1,10 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-07-10 | RESEARCH | Web | 1 | WebAssembly 3.0 Memory64 정식 표준 런칭 및 WebGPU/WebNN AI 가속 관련 최신 지식 탐색 완료 |
+| 2026-07-10 | INGEST | raw/ | 1 | WebAssembly 3.0 및 브라우저 AI 하드웨어 가속 표준 원천 데이터 수집 완료 |
+| 2026-07-10 | SYNTHESIZE | wiki/ | 1 | WebGPU 및 WebNN 표준화 현황 위키 합성 및 연구_주제_관리.md 비고 업데이트 완료 |
+| 2026-07-10 | LINT | Root / wiki | ALL | 2026-07-10 데일리 노트 생성, index.md 갱신, 과거 데일리 노트(2026-07-07, 2026-07-08) 삭제 및 raw/ 폴더 정리 완료 |
 | 2026-07-08 | INGEST | raw/ | 1 | Telepresence 로컬 디버그 가이드 원천 표준 데이터 수집 및 저장 완료 |
 | 2026-07-08 | SYNTHESIZE | wiki/ | 1 | Telepresence 기반 Kubernetes 로컬 디버깅 가이드 위키 합성 및 Development-Environment MOC 연결 완료 |
 | 2026-07-08 | RESEARCH | Web | 4 | Google LiteRT-LM & Gemma 4 MTP 온디바이스 가속, Furiosa SDK v2026.3.0 DP Router 스코어링 정책, AMD Ryzen AI Max 300 / Intel Panther Lake NPU 스펙, Supermemory MCP Server 등 최신 지식 탐색 완료 |
