@@ -19,6 +19,11 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
       - name: Checkout Quartz
         run: |
           git clone --depth 1 https://github.com/jackyzha0/quartz.git quartz-build
