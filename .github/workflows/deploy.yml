@@ -63,6 +63,7 @@ jobs:
       - name: Build Quartz Site
         run: |
           cd quartz-build
+          npm run install-plugins
           npx quartz build
 
       - name: Add CNAME
