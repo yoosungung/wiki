@@ -1,0 +1,1 @@
+[How to Build an LLM from Scratch | An Overview](https://youtu.be/ZLbVdvOoTKM)

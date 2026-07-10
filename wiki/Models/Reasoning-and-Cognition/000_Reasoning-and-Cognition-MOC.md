@@ -1,0 +1,33 @@
+# Reasoning-and-Cognition MOC
+
+## 📂 Categories
+- [[wiki/Models/Reasoning-and-Cognition/AI Cognition/000_AI Cognition-MOC.md|AI Cognition]]
+- [[wiki/Models/Reasoning-and-Cognition/DeepTutor/000_DeepTutor-MOC.md|DeepTutor]]
+- [[wiki/Models/Reasoning-and-Cognition/Stanford AI Courses/000_Stanford AI Courses-MOC.md|Stanford AI Courses]]
+
+## 📄 Documents
+- [[wiki/Models/Reasoning-and-Cognition/AI 시대의 학습법과 커리어 전략.md]]
+- [[wiki/Models/Reasoning-and-Cognition/AI 협업의 핵심은 공감 지능과 사회성.md]]
+- [[wiki/Models/Reasoning-and-Cognition/AI_지능의_양자화_Grokking_2탄.md]]
+- [[wiki/Models/Reasoning-and-Cognition/Andrej_Karpathy_on_AGI.md]]
+- [[wiki/Models/Reasoning-and-Cognition/Continual-Learning.md]]
+- [[wiki/Models/Reasoning-and-Cognition/Gemini 3.0 슬라이드 제작.md]]
+- [[wiki/Models/Reasoning-and-Cognition/Google-Cloud-Text-to-SQL-Techniques.md]]
+- [[wiki/Models/Reasoning-and-Cognition/KORMo-Team.md]]
+- [[wiki/Models/Reasoning-and-Cognition/LLM 추론의 함정 - 생각을 멈춰야 정확해진다.md]]
+- [[wiki/Models/Reasoning-and-Cognition/LLM 학습 경로.md]]
+- [[wiki/Models/Reasoning-and-Cognition/LLM 학습 패러다임.md]]
+- [[wiki/Models/Reasoning-and-Cognition/LLM_Parallel_Thinking_Parallel-R1.md]]
+- [[wiki/Models/Reasoning-and-Cognition/LLM을 활용한 상향식 지식 그래프 구축.md]]
+- [[wiki/Models/Reasoning-and-Cognition/Memory-centric-Intelligence.md]]
+- [[wiki/Models/Reasoning-and-Cognition/Metacognitive Reuse - LLM 추론의 새로운 패러다임.md]]
+- [[wiki/Models/Reasoning-and-Cognition/Meta의_충격_논문_AI_명령을_버리고_세계를_얻다.md]]
+- [[wiki/Models/Reasoning-and-Cognition/Moonshot-AI-Kimi-K2-Thinking.md]]
+- [[wiki/Models/Reasoning-and-Cognition/Multi-hop-Reasoning-Strategies.md]]
+- [[wiki/Models/Reasoning-and-Cognition/NextLat-잠재-공간-세계-모델-2026.md]]
+- [[wiki/Models/Reasoning-and-Cognition/Perplexity at Work.md]]
+- [[wiki/Models/Reasoning-and-Cognition/Sionic AI STORM Parse.md]]
+- [[wiki/Models/Reasoning-and-Cognition/The Missing Layer of AGI - From Pattern Alchemy to Coordination Physics.md]]
+- [[wiki/Models/Reasoning-and-Cognition/Why LLM models are not good at RAG.md]]
+- [[wiki/Models/Reasoning-and-Cognition/합성 정신병리학 (Synthetic Psychopathology)의 등장.md]]
+- [[wiki/Models/Reasoning-and-Cognition/하버드 AI 논문 - 누가 사람을 평가할 자격이 있는가?.md]]

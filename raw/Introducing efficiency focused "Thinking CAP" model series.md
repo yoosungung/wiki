@@ -1,0 +1,1 @@
+[Introducing efficiency focused "Thinking CAP" model series](https://paperswithcode.co/paper/102599)
