@@ -1,0 +1,20 @@
+{
+  "name": "km-sidebar",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    }
+  },
+  "quartz": {
+    "name": "km-sidebar",
+    "displayName": "KM Sidebar",
+    "category": "emitter",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "defaultOrder": 5,
+    "defaultEnabled": true
+  }
+}
