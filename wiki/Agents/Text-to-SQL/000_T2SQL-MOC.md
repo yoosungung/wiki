@@ -4,6 +4,7 @@ tags: ["T2SQL", "MOC", "Analytics", "Semantic-Layer"]
 type: "wiki"
 status: "published"
 last_updated: "2026-04-26"
+updated: "2026-04-26"
 ---
 
 # 📊 Text-to-SQL (T2SQL) MOC

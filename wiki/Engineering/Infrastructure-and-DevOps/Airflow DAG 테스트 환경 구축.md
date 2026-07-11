@@ -5,6 +5,7 @@ tags: ['wiki', 'engineering_and_infra', 'dev_environment', 'infrastructure_orche
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 ## local run airflow

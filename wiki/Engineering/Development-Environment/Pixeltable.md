@@ -5,6 +5,7 @@ tags: ['wiki', 'engineering_and_infra', 'dev_environment']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Pixeltable: Context Engineering을 위한 통합 프레임워크

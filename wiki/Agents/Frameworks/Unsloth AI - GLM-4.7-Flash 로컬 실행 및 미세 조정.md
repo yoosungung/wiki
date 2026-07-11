@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'models_and_libraries', 'llm_frameworks_and_libraries'
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Unsloth AI - GLM-4.7-Flash 로컬 실행 및 미세 조정

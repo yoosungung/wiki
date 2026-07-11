@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_paramet
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 한 번의 훈련 스텝에서 사용하는 데이터 샘플의 개수를 의미합니다. 이는 모델의 가중치를 업데이트할 때 사용하는 데이터의 양을 결정하며, 모델 훈련의 효율성과 성능에 중요한 영향을 미칩니다.

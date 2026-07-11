@@ -5,6 +5,7 @@ tags: ["wiki", "T2SQL", "DeepAgent", "Agentic-Workflow"]
 type: "wiki"
 status: "published"
 last_updated: "2026-04-20"
+updated: "2026-04-20"
 ---
 
 # DeepAgent 기반 T2SQL 구현

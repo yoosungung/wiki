@@ -4,6 +4,7 @@ tags: ['wiki', 'ai_core', 'deepseek-r1', 'grpo', 'reasoning_model']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-20"
+updated: "2026-04-20"
 ---
 
 # DeepSeek-R1: GRPO 강화 학습 구현 및 성과

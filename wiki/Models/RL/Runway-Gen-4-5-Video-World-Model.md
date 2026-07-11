@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'world_models_&_generative_simulation', 'vi
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Runway Gen-4.5: 전문가용 비디오 생성 및 월드 모델의 정점 (2026-04-11)

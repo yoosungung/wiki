@@ -10,6 +10,7 @@ tags:
 type: wiki
 status: draft
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Contextual Retrieval 및 Semantic Chunking (2026 RAG 최적화)

@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_concept
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 **RLHF (Reinforcement Learning from Human Feedback)**는 인간의 피드백을 이용해 강화 학습을 수행하는 기법입니다. 이 방법은 특히 자연어 처리(NLP) 분야에서 언어 모델의 성능을 개선하는 데 사용됩니다. RLHF는 모델이 생성한 결과물에 대해 인간이 제공하는 피드백을 학습 과정에 통합함으로써, 모델의 출력을 더 자연스럽고 유용하게 만듭니다.

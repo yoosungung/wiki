@@ -2,6 +2,7 @@
 title: "BuildingAI: 적목식(Block-style) AI 애플리케이션 빌더 및 SSRF 보안 취약점 (CVE-2026-7065)"
 tags: ["BuildingAI", "BidingCC", "AI-Builder", "SSRF", "Vulnerability", "Security"]
 last_updated: "2026-07-06"
+updated: "2026-07-06"
 related_raw: ["[[2026-07-06-bidingcc_building_ai.md]]"]
 ---
 

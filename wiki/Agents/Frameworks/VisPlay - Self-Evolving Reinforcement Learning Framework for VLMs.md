@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'basetech', 'llm
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # VisPlay: Vision-Language Model을 위한 자기 진화 강화 학습 프레임워크

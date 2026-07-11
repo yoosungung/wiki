@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'robotics_&_physical_ai_(vla)', 'vla-adapte
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # VLA-Adapter 및 E-VLA: 엣지 로보틱스를 위한 고효율 VLA 모델

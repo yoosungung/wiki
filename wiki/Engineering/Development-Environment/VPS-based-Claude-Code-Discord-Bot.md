@@ -5,6 +5,7 @@ tags: ["Engineering", "Dev-Env", "Claude_Code", "VPS", "Discord_Bot", "Automatio
 type: "wiki"
 status: "published"
 last_updated: "2026-05-15"
+updated: "2026-05-15"
 ---
 
 # 월 1만원대로 24시간 가동되는 나만의 클로드봇 구축

@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'models_and_libraries', 'llm_models']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 AI 엔지니어 강혜진님의 LinkedIn 게시물에 따르면 ByteDance(TikTok)가 텍스트, 표, 방정식, 이미지를 JSON/Markdown으로 변환하는 "Dolphin"이라는 멀티모달 AI 모델을 오픈소스로 공개했습니다. 자연스러운 읽기 순서로 콘텐츠를 완벽하게 파싱하는 기능이 핵심 기능으로 강조되었습니다. 이 모델은 vLLM 및 TensorRT-LLM을 통해 프로덕션 환경에서 가속화된 추론을 지원하며 Hugging Face 생태계와 원활하게 통합됩니다.

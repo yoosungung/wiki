@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_concept
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 Fine-tuning(미세 조정)은 사전에 훈련된 모델을 가져와서 특정 작업이나 새로운 데이터 세트에 맞게 추가 학습을 시키는 과정을 의미합니다. 이 방법은 딥러닝에서 널리 사용되며, 특히 자연어 처리(NLP)나 이미지 인식과 같은 분야에서 효과적입니다. Fine-tuning을 사용하면 기존의 크고 복잡한 모델을 재학습시키는 데 필요한 시간과 리소스를 크게 절약할 수 있습니다.

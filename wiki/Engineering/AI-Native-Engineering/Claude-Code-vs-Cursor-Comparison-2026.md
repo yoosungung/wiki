@@ -5,6 +5,7 @@ tags: ['wiki', 'engineering_and_infra', 'ai_development']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Claude Code vs Cursor: 2026년 AI 개발 도구 비교 분석

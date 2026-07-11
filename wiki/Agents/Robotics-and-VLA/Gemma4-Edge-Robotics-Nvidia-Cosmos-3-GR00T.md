@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'robotics_&_physical_ai_(vla)', 'vision-lan
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Gemma 4와 엣지 로보틱스: VLA 모델의 상용화 (2026.04)

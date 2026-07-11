@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'llm_concepts', 'prompt_engineering']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Gemini 3.0 시스템 프롬프트 분석

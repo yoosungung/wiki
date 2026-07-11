@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'ai_ml_development', 'grpo_dpo_reinforcement_learning'
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Sebastian Raschka: 강화 학습 (RL) 구현에 관한 GRPO 장 완성 요약

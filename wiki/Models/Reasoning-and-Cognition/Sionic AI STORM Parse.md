@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'llm_concepts', 'llm_applications_and_insights']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 - **소개**: 구조화되지 않은 문서(PDF, Word 문서, 이미지 등)를 깔끔하고 AI가 사용할 수 있는 데이터로 변환하는 기술입니다.

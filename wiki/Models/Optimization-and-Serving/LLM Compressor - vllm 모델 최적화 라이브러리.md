@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'models_and_libraries', 'llm_optimization_and_serving'
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # LLM Compressor: vllm 모델 최적화 라이브러리

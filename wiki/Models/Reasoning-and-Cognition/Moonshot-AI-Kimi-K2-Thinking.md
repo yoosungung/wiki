@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'models_and_libraries', 'llm_models']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Moonshot AI의 Kimi K2 Thinking 모델

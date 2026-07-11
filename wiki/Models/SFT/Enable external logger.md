@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_options
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 실험을 기록하고 시각화하기 위해 TensorBoard나 Weights & Biases (wandb)와 같은 외부 로깅 도구를 사용하는 것을 의미합니다. 이러한 도구들은 모델 훈련 과정에서 손실, 정확도, 학습률 등의 메트릭을 기록하고 시각화할 수 있게 도와줍니다.

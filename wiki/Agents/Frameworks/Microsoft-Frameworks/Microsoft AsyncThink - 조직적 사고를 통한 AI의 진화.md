@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'basetech', 'llm
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Microsoft AsyncThink - 조직적 사고를 통한 AI의 진화

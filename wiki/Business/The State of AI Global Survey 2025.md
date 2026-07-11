@@ -5,6 +5,7 @@ tags: ['wiki', 'business_and_misc', 'business']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # AI 현황: 2025년 글로벌 설문조사

@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'basetech', 'lan
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 LangChain의 LinkedIn 게시물은 곧 출시될 LangChain v1 릴리스를 기반으로 구축된 `deepagents` 패키지의 재작성을 발표합니다. `deepagents`는 계획, 파일 시스템 및 하위 작업 기능을 활용하는 에이전트 작업을 위해 설계되었으며 새로운 LangChain v1 미들웨어를 통해 더욱 확장 가능해졌습니다.

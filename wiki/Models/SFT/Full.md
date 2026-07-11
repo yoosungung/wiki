@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_concept
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 **Full fine-tuning**은 모델의 모든 가중치를 업데이트하는 방법입니다.

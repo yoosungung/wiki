@@ -6,6 +6,7 @@ tags: ["Models", "Reasoning", "Multi-hop", "Cognition", "Chain-of-Thought"]
 type: "wiki"
 status: "published"
 last_updated: "2026-05-01"
+updated: "2026-05-01"
 ---
 
 # LLM의 복잡한 문제 해결 전략: 멀티홉 및 다단계 추론

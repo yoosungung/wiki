@@ -5,6 +5,7 @@ category: "Models"
 subcategory: "Optimization-and-Serving"
 tags: [WebGPU, Graphics-API, AI-Inference]
 last_updated: "2026-05-13"
+updated: "2026-05-13"
 related_raw: [
   "[[raw/2026-05-12-WebGPU-2026-70-Browser-Support-15x-Performance-Gains.md]]",
   "[[raw/2026-05-12-webgpu-hits-critical-mass.md]]"

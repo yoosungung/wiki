@@ -6,6 +6,7 @@ tags: ["Models", "Architectures", "Causal_ML", "CCNets", "Causal_Inference"]
 type: "wiki"
 status: "published"
 last_updated: "2026-05-01"
+updated: "2026-05-01"
 ---
 
 # CCNets: 머신러닝에서의 인과관계 학습 프레임워크

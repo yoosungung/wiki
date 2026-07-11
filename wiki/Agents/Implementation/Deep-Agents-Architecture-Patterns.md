@@ -4,6 +4,7 @@ tags: ['wiki', 'agents_2.0', 'deep_agents', 'architecture', 'patterns']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-20"
+updated: "2026-04-20"
 ---
 
 # Deep Agents (Agents 2.0): 아키텍처 패턴 및 핵심 기둥

@@ -5,6 +5,7 @@ tags: ['agentic-coding', 'claude-code', 'human-ai-collaboration', 'domain-expert
 type: "wiki"
 status: "published"
 last_updated: "2026-06-23"
+updated: "2026-06-23"
 ---
 
 # 에이전틱 코딩과 도메인 전문성의 지속적 가치 (2026)

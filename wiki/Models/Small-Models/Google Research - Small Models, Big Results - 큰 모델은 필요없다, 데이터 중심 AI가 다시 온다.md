@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'ai', 'small_models_and_data_centric_ai']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Google Research - Small Models, Big Results: "큰 모델은 필요없다, 데이터 중심 AI가 다시 온다"

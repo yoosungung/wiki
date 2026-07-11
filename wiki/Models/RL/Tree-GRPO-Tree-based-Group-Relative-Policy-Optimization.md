@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'deepseek-r1_grpo_re
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Tree-GRPO: 트리 기반 그룹 상대 정책 최적화 (2026-04-15)

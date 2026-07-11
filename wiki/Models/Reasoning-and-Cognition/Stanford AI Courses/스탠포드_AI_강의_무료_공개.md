@@ -10,6 +10,7 @@ tags:
 type: wiki
 status: draft
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # 스탠포드 AI 강의 무료 공개 요약

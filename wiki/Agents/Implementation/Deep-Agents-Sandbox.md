@@ -4,6 +4,7 @@ tags: ['wiki', 'agents_2.0', 'sandbox', 'security', 'infrastructure']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-20"
+updated: "2026-04-20"
 ---
 
 # Deep Agents를 위한 샌드박스(Sandbox) 활용

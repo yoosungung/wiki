@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_options
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 "Pack sequences into samples of fixed length"**는 가변 길이의 시퀀스 데이터를 고정된 길이로 변환하는 과정을 의미합니다. 이는 딥러닝 모델, 특히 순환 신경망(RNN)이나 트랜스포머 모델을 훈련할 때 중요한 전처리 단계입니다. 고정된 길이의 샘플로 변환하면 배치 처리가 용이해지고, GPU의 병렬 연산 성능을 최대로 활용할 수 있습니다.

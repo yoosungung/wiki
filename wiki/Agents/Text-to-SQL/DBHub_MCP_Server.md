@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'tools']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # DBHub: MCP 기반 범용 DB 연결 도구 확산

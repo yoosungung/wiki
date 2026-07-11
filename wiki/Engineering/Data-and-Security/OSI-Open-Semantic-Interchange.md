@@ -2,6 +2,7 @@
 title: "OSI (Open Semantic Interchange)"
 tags: ["OSI", "Semantic Layer", "Agent", "MCP", "Snowflake", "Data"]
 last_updated: "2026-05-08"
+updated: "2026-05-08"
 related_raw: ["[[raw/2026-04-22-osi-mcp-agent-sharing.md]]", "[[raw/2026-04-29-Spider2-OSI-Updates.md]]", "[[raw/2026-05-08-daily-research-data.md]]"]
 ---
 

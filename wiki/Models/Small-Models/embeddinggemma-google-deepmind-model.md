@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'models_and_libraries', 'llm_models']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 이 콘텐츠는 Google DeepMind의 다국어 임베딩 모델인 EmbeddingGemma에 대해 설명하며, 온디바이스용으로 최적화되었습니다. 주요 기능은 다음과 같습니다.

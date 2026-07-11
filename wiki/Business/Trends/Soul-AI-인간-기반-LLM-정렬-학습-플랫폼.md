@@ -2,6 +2,7 @@
 title: "Soul AI: 인간 피드백 기반(RLHF) LLM 정렬 및 데이터 레이블링 전문가 플랫폼"
 tags: ["Soul-AI", "RLHF", "LLM-Alignment", "Data-Labeling", "Business-Trends"]
 last_updated: "2026-07-06"
+updated: "2026-07-06"
 related_raw: ["[[2026-07-06-soul_ai_platform.md]]"]
 ---
 

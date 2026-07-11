@@ -10,6 +10,7 @@ tags:
 type: wiki
 status: draft
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 ### 2.2. Zep: Graphiti 엔진 기반의 시간적 지식 그래프

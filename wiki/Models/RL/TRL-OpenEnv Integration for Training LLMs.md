@@ -5,6 +5,7 @@ tags: ['wiki', 'engineering_and_infra', 'dev_environment']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # TRL-OpenEnv 통합: 환경과 상호작용하는 LLM 훈련

@@ -5,6 +5,7 @@ tags: ['wiki', 'business_and_misc', 'business']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # 가상 법률 보조원(VLA) - 법률 지원의 미래

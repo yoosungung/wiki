@@ -5,6 +5,7 @@ tags: ["Engineering", "Infrastructure", "Snowflake", "AI-Native", "Cortex", "Tex
 type: "wiki"
 status: "published"
 last_updated: "2026-05-15"
+updated: "2026-05-15"
 ---
 
 # Snowflake AI-Native 데이터 플랫폼 스택

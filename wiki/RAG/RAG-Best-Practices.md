@@ -10,6 +10,7 @@ tags:
 type: wiki
 status: draft
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # RAG(Retrieval Augmented Generation) 시스템 개선을 위한 모범 사례

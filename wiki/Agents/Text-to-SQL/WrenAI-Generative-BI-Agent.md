@@ -5,6 +5,7 @@ tags: ["Agents", "Text-to-SQL", "BI", "Semantic_Layer", "Open_Source", "WrenAI"]
 type: "wiki"
 status: "published"
 last_updated: "2026-05-15"
+updated: "2026-05-15"
 ---
 
 # WrenAI: 비즈니스 사용자를 위한 지능형 SQL 에이전트

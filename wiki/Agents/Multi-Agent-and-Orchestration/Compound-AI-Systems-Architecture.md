@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'compound_ai_sys
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Compound AI Systems: 모델에서 시스템으로의 패러다임 전환 (2026-04-11)

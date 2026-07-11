@@ -13,6 +13,7 @@ tags:
 type: wiki
 status: published
 last_updated: "2026-05-01"
+updated: "2026-05-01"
 ---
 
 ## 1. 개요

@@ -5,6 +5,7 @@ tags: ['wiki', 'knowledge_and_memory', 'advanced_rag_&_knowledge_graph', 'agent_
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Mem-Palace 및 Cognee 기반 에이전트 메모리 (2026-04-09)

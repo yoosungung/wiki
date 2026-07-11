@@ -5,6 +5,7 @@ tags: ["wiki", "T2SQL", "sLM", "LLM", "Optimization"]
 type: "wiki"
 status: "complete"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Text-to-SQL 고도화를 위한 sLM 활용

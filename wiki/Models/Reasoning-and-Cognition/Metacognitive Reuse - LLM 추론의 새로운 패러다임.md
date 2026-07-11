@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'ai', 'metacognitive_reuse']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Metacognitive Reuse - LLM 추론의 새로운 패러다임

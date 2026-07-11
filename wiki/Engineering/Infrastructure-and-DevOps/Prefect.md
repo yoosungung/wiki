@@ -5,6 +5,7 @@ tags: ['wiki', 'engineering_and_infra', 'dev_environment', 'infrastructure_orche
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 ==파이썬 기반의 워크플로우 오케스트레이션 도구==로, 데이터 파이프라인과 같은 복잡한 워크플로우를 구축, 실행, 모니터링, 관리하는 데 사용됩니다. 스크립트를 몇 줄의 코드로 프로덕션 워크플로우로 전환하여 복원력 있고 역동적인 데이터 파이프라인을 만들 수 있도록 지원합니다. 

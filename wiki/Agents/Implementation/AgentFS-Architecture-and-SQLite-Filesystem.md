@@ -4,6 +4,7 @@ tags: ["Agents", "Implementation", "Memory", "AgentFS", "FUSE", "SQLite", "Sandb
 type: "wiki"
 status: "published"
 last_updated: "2026-06-28"
+updated: "2026-06-28"
 related_raw: ["[[2026-06-19-agentfs_sqlite_virtual_filesystem.md]]", "[[2026-06-21-agentfs-sqlite-isolated-sandbox-filesystem.md]]", "[[2026-06-26-agentfs_sqlite_virtual_filesystem.md]]", "[[2026-06-28-agentfs_sqlite_virtual_filesystem_sandbox.md]]"]
 ---
 

@@ -4,6 +4,7 @@ tags: ["Architecture", "Semantic-Layer", "T2SQL", "Agentic-AI"]
 type: "wiki"
 status: "published"
 last_updated: "2026-04-28"
+updated: "2026-04-28"
 related_raw: ["[[raw/2026-04-22-semantic-layer-standards-osi-mcp-research.md]]", "[[raw/2026-04-26-OSI-v1-Updates.md]]", "[[raw/2026-04-28-OSI-v1-ai-context-Standard.md]]"]
 ---
 

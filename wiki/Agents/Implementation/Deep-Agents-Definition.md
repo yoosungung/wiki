@@ -14,6 +14,7 @@ tags: ['wiki', 'agents_2.0', 'deep_agents', 'architecture', 'agent_evolution']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-22"
+updated: "2026-04-22"
 ---
 
 # Deep Agents (Agents 2.0) 정의 및 세대 변화

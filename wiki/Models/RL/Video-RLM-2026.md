@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'llm_concepts', 'recursive_language_models_rlm']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Video-RLM: Recursive Language Models for Long Videos

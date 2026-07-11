@@ -10,6 +10,7 @@ tags:
 type: wiki
 status: draft
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # 3계층 Graph-RAG 시스템: 결정론적 지식 검색 아키텍처

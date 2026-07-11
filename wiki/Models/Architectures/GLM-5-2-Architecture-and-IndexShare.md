@@ -5,6 +5,7 @@ tags: ['models', 'architecture', 'moe', 'glm-5', 'long-context', 'attention-mech
 type: "wiki"
 status: "published"
 last_updated: "2026-06-23"
+updated: "2026-06-23"
 ---
 
 # GLM-5.2 아키텍처 및 IndexShare 가속 기술 분석

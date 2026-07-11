@@ -5,6 +5,7 @@ tags: ["wiki", "T2SQL", "RAG", "Metadata-RAG", "Schema-Pruning"]
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Metadata RAG (Metadata Retrieval-Augmented Generation)

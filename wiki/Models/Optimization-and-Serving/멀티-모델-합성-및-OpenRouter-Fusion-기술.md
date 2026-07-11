@@ -4,6 +4,7 @@ tags: ["Models", "Optimization", "Multi-Model", "OpenRouter", "Fusion", "Orchest
 type: "wiki"
 status: "published"
 last_updated: "2026-06-17"
+updated: "2026-06-17"
 related_raw: ["[[2026-06-17-OpenRouter-Fusion-Model-Orchestration.md]]"]
 ---
 

@@ -4,6 +4,7 @@ tags: ["T2SQL", "Genloop", "Spider-2.0", "Unified-Business-Memory", "Semantic-La
 type: "wiki"
 status: "published"
 last_updated: "2026-05-08"
+updated: "2026-05-08"
 related_notes: ["[[wiki/Agents/Text-to-SQL/Oracle-SOMA-SQL]]", "[[wiki/Agents/Text-to-SQL/T2SQL-Benchmarks-2026]]", "[[wiki/Agents/Text-to-SQL/Agentic-Semantic-Layer]]"]
 related_raw: ["[[raw/2026-05-08-daily-research-data.md]]"]
 ---

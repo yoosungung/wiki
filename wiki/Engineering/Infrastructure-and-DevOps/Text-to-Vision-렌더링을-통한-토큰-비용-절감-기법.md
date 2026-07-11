@@ -2,6 +2,7 @@
 title: "Text-to-Vision 렌더링을 통한 LLM 입력 토큰 및 API 비용 절감 기법 (pxpipe)"
 tags: ["Text-to-Vision", "Token-Reduction", "Cost-Optimization", "pxpipe", "Vision-LLM"]
 last_updated: "2026-07-06"
+updated: "2026-07-06"
 related_raw: ["[[2026-07-06-jyoung105_text_to_vision_token_reduction.md]]"]
 ---
 

@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_options
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 "Use shift short attention proposed by LongLoRA"**는 LongLoRA라는 논문에서 제안된 Shift Short Attention 메커니즘을 사용하는 것을 의미합니다. LongLoRA는 대규모 언어 모델의 효율적인 학습과 추론을 위해 제안된 기법으로, 긴 시퀀스 데이터를 처리할 때 성능을 최적화하기 위해 설계되었습니다. Shift Short Attention은 이러한 긴 시퀀스에서의 주의(attention) 메커니즘을 개선하는 핵심 기법 중 하나입니다.

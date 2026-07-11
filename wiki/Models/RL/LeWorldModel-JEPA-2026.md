@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'world_models_&_generative_simulation']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # LeWorldModel (LeWM): JEPA 기반의 차세대 세계 모델 (2026)

@@ -5,6 +5,7 @@ tags: ["Agents", "Multi-Agent", "Swarm_Intelligence", "Simulation", "MiroFish", 
 type: "wiki"
 status: "published"
 last_updated: "2026-05-15"
+updated: "2026-05-15"
 ---
 
 # MiroFish: 수만 명의 AI 에이전트가 그리는 미래의 시나리오

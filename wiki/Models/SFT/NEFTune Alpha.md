@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_concept
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 임베딩 벡터에 추가되는 노이즈의 크기를 조절하는 파라미터입니다. 이는 모델의 학습 과정에서 임베딩 벡터에 노이즈를 추가하여 모델의 일반화 성능을 향상시키고, 과적합을 방지하는 데 사용됩니다.

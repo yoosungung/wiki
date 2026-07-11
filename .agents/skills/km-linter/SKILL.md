@@ -14,6 +14,7 @@ description: 지식 베이스의 구조적 무결성을 점검하고 `index.md`,
 - **ORPHANED_NOTES**: `wiki/` 내 인바운드 링크(`[[ ]]`)가 0개인 파일을 추출함.
 - **DEAD_LINKS**: `[[ ]]`로 참조되었으나 실제 파일이 존재하지 않는 문서 목록을 추출함.
 - **PATH_SYNC**: 파일 이동으로 인해 발생한 잘못된 경로 링크를 `fix_wiki_links.py` 로직을 사용하여 현재 실제 경로로 자동 수정함.
+- **DATE_SYNC**: GitHub Pages 빌드 시 날짜 왜곡(빌드 날짜로 초기화되는 현상)을 방지하기 위해, frontmatter에 `last_updated` 필드 값을 기반으로 한 `updated` 필드가 올바르게 입력되어 있는지 점검하고 일치시킴.
 
 ### 2. INDEX_REFRESH (index.md) - 필수 수행
 - `index.md`를 **KM_INDEX_AGENT_v1** 포맷으로 **무조건 최신화**함.

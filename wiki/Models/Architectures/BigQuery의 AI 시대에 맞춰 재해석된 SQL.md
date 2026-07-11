@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'llm_concepts', 'llm_applications_and_insights']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 Google은 AI 시대에 맞춰 SQL을 재해석한 BigQuery 관리형 AI 함수(AI.IF, AI.CLASSIFY, AI.SCORE)의 공개 프리뷰를 발표했습니다. 이 함수들은 데이터 분석가들이 복잡한 프롬프트 튜닝이나 새로운 도구 없이도 SQL 쿼리 내에서 직접 생성형 AI를 사용하여 text, 이미지 등 비정형 데이터에 대한 정교한 AI 기반 분석을 수행할 수 있도록 합니다.

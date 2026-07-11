@@ -6,6 +6,7 @@ tags: ["Models", "Small-Models", "GLiNER", "NLP", "Entity_Extraction", "Efficien
 type: "wiki"
 status: "published"
 last_updated: "2026-05-01"
+updated: "2026-05-01"
 ---
 
 # GLiNER: 가벼운 엔티티 추출을 위한 LLM 대체 기술

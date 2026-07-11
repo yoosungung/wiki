@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'implementations
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 DS-STAR는 Google Cloud의 윤진성(Jinsung Yoon)과 남재현(Jaehyun Nam)이 개발한 최첨단 다목적 데이터 과학 에이전트입니다. 통계 분석, 시각화, 데이터 랭글링 등 다양한 데이터 유형에 걸쳐 광범위한 데이터 과학 작업을 자동화하는 것을 목표로 합니다.

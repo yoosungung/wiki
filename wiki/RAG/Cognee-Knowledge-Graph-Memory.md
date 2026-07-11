@@ -10,6 +10,7 @@ tags:
 type: wiki
 status: draft
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Cognee: 지식 그래프 기반 AI 메모리 엔진 (2026-04-11)

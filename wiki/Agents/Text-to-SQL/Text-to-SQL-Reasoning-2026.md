@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'text-to-sql_(t2sql)_&_analytics']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # 🗄️ Text-to-SQL 및 Reasoning Model (Spider 2.0 & Arctic-R1)

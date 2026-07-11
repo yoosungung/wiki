@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'text-to-sql_(t2sql)_&_analytics']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Arctic-Text2SQL-R1: 실행 결과 중심의 강화학습 (RL for SQL)

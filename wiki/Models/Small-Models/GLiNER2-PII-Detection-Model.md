@@ -5,6 +5,7 @@ tags: ["Models", "Small-Models", "Privacy", "PII", "Open_Source", "GLiNER", "Pio
 type: "wiki"
 status: "published"
 last_updated: "2026-05-15"
+updated: "2026-05-15"
 ---
 
 # GLiNER2-PII: 개인정보 보호의 새로운 표준

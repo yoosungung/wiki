@@ -5,6 +5,7 @@ tags: ["wiki", "T2SQL", "Semantic-Layer", "DeepAgent", "Architecture"]
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # DeepAgent Filesystem 기반 세만틱 레이어 (Filesystem-as-Semantic-Layer)

@@ -2,6 +2,7 @@
 title: "Memento: 파라미터 업데이트가 필요 없는 에이전트 스킬 자가 학습(Read-Write Reflective Learning) 프레임워크"
 tags: ["Memento", "Agent-Skills", "Self-Evolution", "Parameter-Free", "Reinforcement-Learning"]
 last_updated: "2026-07-06"
+updated: "2026-07-06"
 related_raw: ["[[2026-07-06-memento_skills_framework.md]]"]
 ---
 

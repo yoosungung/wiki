@@ -5,6 +5,7 @@ category: "Engineering"
 subcategory: "Infrastructure-and-DevOps"
 tags: [Security, Cross-Origin-Isolation, COOP, COEP, WebNN]
 last_updated: "2026-05-13"
+updated: "2026-05-13"
 related_raw: [
   "[[raw/2026-05-12-making-your-website-cross-origin-isolated.md]]",
   "[[raw/2026-05-12-cross-origin-embedder-policy-coep-header.md]]",

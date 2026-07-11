@@ -5,6 +5,7 @@ tags: ['wiki', 'engineering_and_infra', 'dev_environment', 'infrastructure_orche
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 **0. fine_tune.py 스크립트에서 인자 처리**

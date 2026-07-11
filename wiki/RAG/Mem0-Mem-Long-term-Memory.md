@@ -10,6 +10,7 @@ tags:
 type: wiki
 status: draft
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Mem0: AI 에이전트를 위한 지능형 장기 기억 계층 (2026-04-11)

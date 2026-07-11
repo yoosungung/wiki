@@ -4,6 +4,7 @@ tags: ["T2SQL", "Benchmark", "Spider-2.0", "BIRD", "Evaluations"]
 type: "wiki"
 status: "published"
 last_updated: "2026-05-08"
+updated: "2026-05-08"
 related_raw: ["[[raw/2026-04-28-Spider-2-0-SOTA-Updates.md]]", "[[raw/2026-04-29-Spider2-OSI-Updates.md]]", "[[raw/2026-05-08-daily-research-data.md]]"]
 ---
 

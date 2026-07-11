@@ -4,6 +4,7 @@ tags: ['wiki', 'ai_core', 'unsloth', 'grpo', 'optimization', 'local_training']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-20"
+updated: "2026-04-20"
 ---
 
 # Unsloth GRPO 최적화 및 로컬 학습 가이드

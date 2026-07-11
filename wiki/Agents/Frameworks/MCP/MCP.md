@@ -9,6 +9,7 @@ tags:
 type: wiki
 status: draft
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 **서버가 클라이언트에게 제공하는 기능:**

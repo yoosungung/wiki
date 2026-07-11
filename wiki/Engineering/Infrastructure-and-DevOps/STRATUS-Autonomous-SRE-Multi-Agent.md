@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'aiops_&_ai-native_devtools']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # STRATUS: 멀티 에이전트 기반의 자율 SRE 시스템

@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'world_models_&_generative_simulation']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Sora 서비스 종료와 비디오 AI 시장의 지각변동 (2026.04)

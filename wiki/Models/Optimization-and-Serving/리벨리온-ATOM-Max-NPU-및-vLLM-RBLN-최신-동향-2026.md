@@ -4,6 +4,7 @@ tags: ["Models", "Optimization", "Serving", "NPU", "Rebellions", "vLLM-RBLN", "E
 type: "wiki"
 status: "published"
 last_updated: "2026-06-01"
+updated: "2026-06-01"
 related_raw: ["[[2026-06-01-Rebellions-NPU-Update.md]]"]
 ---
 

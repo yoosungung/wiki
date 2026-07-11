@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'unsloth_ai_and_llam
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Unsloth Studio 및 Llama Factory 미세 조정 기술 (2026-04-09)

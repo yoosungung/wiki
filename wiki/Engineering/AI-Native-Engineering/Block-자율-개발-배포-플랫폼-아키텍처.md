@@ -2,6 +2,7 @@
 title: "Block의 빌더봇(Builderbot) 및 구스(Goose) 아키텍처"
 tags: ["Block", "Goose", "Builderbot", "Actionable-CI", "Repo-Readiness", "MCP", "AI-Native-Engineering"]
 last_updated: "2026-07-06"
+updated: "2026-07-06"
 related_raw: ["[[2026-07-06-block_autonomous_development_delivery_platform.md]]"]
 ---
 

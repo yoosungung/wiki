@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_paramet
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 딥러닝 모델을 훈련할 때 사용하는 옵티마이저는 모델의 가중치를 업데이트하여 손실 함수의 값을 최소화하는 역할을 합니다. 주어진 옵션인 `adamw_torch`, `adamw_8bit`, 그리고 `adafactor`는 각각의 특성과 장점을 가진 옵티마이저들입니다. 이들은 모델의 훈련 속도와 성능에 큰 영향을 미칩니다.

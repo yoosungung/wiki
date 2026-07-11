@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'robotics_&_physical_ai_(vla)']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Figure 03: Helix VLA 스택 및 로봇 자율성

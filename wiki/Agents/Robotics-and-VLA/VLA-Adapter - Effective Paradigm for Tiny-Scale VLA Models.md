@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'robotics_&_physical_ai_(vla)']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # VLA-Adapter: 소형 VLA 모델을 위한 효과적인 패러다임

@@ -4,6 +4,7 @@ tags: ["Models", "Small-Models", "SLM", "Reasoning", "VibeThinker", "Sina-Weibo"
 type: "wiki"
 status: "published"
 last_updated: "2026-06-18"
+updated: "2026-06-18"
 related_raw: ["[[2026-06-18-VibeThinker-3B-Sina-Weibo.md]]"]
 ---
 

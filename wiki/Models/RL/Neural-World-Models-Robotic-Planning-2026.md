@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'world_models_&_generative_simulation', 'ne
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Neural World Models for Robotic Planning (2026-04-11)

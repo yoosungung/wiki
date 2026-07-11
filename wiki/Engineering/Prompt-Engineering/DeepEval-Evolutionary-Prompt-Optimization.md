@@ -5,6 +5,7 @@ tags: ["Engineering", "Prompt-Engineering", "Optimization", "Genetic_Algorithm",
 type: "wiki"
 status: "published"
 last_updated: "2026-05-15"
+updated: "2026-05-15"
 ---
 
 # DeepEval: '추측'이 아닌 '진화'로 완성하는 프롬프트 엔지니어링

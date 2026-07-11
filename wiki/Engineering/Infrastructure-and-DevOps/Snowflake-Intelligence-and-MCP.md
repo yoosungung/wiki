@@ -4,6 +4,7 @@ tags: ["Snowflake", "MCP", "AI-Agent", "Data-Cloud"]
 type: "wiki"
 status: "published"
 last_updated: "2026-04-24"
+updated: "2026-04-24"
 ---
 
 # Snowflake Intelligence 및 MCP 연동

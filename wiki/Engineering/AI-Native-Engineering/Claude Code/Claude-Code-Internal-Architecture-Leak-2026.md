@@ -10,6 +10,7 @@ tags:
 type: wiki
 status: draft
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Claude Code: 내부 아키텍처 분석 및 유출 사고 (2026.04)

@@ -5,6 +5,7 @@ category: "Models"
 subcategory: "Optimization-and-Serving"
 tags: [Transformers.js, HuggingFace, ONNX-Runtime, WebGPU]
 last_updated: "2026-05-13"
+updated: "2026-05-13"
 related_raw: [
   "[[raw/2026-05-13-Transformers-js-Hugging-Face.md]]",
   "[[raw/2026-05-13-Transformers-js-Promptfoo.md]]"

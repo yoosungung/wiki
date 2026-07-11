@@ -2,6 +2,7 @@
 title: "로컬 저장소 분석 및 그래프 탐색 도구 (Local Repo Intelligence)"
 tags: ["Engineering", "Tools", "Graph-based-Exploration", "Local-LLM"]
 last_updated: "2024-05-22"
+updated: "2024-05-22"
 ---
 
 # 로컬 저장소 분석 및 그래프 탐색 도구 개요

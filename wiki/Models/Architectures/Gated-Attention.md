@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'llm_concepts', 'llm_architecture_and_technical']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # 대규모 언어 모델을 위한 게이티드 어텐션

@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'world_models_&_generative_simulation', 'au
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Wayve와 Tesla FSD v14 자율주행 기술 비교 및 시장 확장

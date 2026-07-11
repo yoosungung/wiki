@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'robotics_&_physical_ai_(vla)']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # 왜 VLA는 AI 추론과 물리적 로보틱스 사이의 진정한 연결고리가 되고 있는가

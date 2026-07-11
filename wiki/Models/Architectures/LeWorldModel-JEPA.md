@@ -5,6 +5,7 @@ tags: ["Models", "Architectures", "JEPA", "World_Models", "LeWorldModel", "SIGRe
 type: "wiki"
 status: "published"
 last_updated: "2026-04-21"
+updated: "2026-04-21"
 ---
 
 # LeWorldModel (LeWM): 안정적인 엔드 투 엔드 JEPA 세계 모델

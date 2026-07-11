@@ -4,6 +4,7 @@ status: published
 tags: [RAG, Multimodal, KnowledgeGraph, GraphRAG]
 related_raw: ["[[2026-05-08-rag-anything-multimodal.md]]"]
 last_updated: 2026-05-08
+updated: "2026-05-08"
 ---
 
 # RAG-Anything: Multimodal Document Processing Framework

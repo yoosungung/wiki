@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'world_models_&_generative_simulation', 'je
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # JEPA와 LeWorldModel: 시각 데이터에서 물리 법칙을 학습하는 차세대 AI

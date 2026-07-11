@@ -5,6 +5,7 @@ tags: ['wiki', 'knowledge_and_memory', 'advanced_rag_&_knowledge_graph', 'agent_
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 ### 2.1. Mem0: 하이브리드 인덱싱 기반의 적응형 메모리 계층

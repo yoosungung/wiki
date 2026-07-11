@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'text-to-sql_(t2sql)_&_analytics', 'slm_for
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # sLM 기반 Text-to-SQL 및 스키마 링킹 최신 동향 (2026-04-09)

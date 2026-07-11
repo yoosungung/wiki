@@ -4,6 +4,7 @@ tags: ["T2SQL", "Spider-2.0", "GRPO", "Genloop", "Oracle"]
 type: "wiki"
 status: "published"
 last_updated: "2026-04-26"
+updated: "2026-04-26"
 ---
 
 # T2SQL 트렌드 업데이트 (2026-04-26)

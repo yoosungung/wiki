@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'ai', 'claude_code']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Claude Code: 자율형 에이전트 CLI 도구의 진화 (2026-04-11)

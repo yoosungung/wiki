@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'ai_ml_development', 'grpo_dpo_reinforcement_learning'
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # DeepSeek-R1 기반 GRPO 학습법의 실제 도메인 적용 가속화

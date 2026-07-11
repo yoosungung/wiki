@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'robotics_&_physical_ai_(vla)']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 이 기사는 NVIDIA의 로봇 소프트웨어 제품 책임자인 스펜서 황(Spencer Huang)과의 인터뷰 내용을 담고 있습니다. 인터뷰는 NVIDIA의 "물리적 AI(Physical AI)"에 대한 큰 계획, 특히 로봇 공학, 시뮬레이션 및 옴니버스(Omniverse)에 중점을 둡니다.

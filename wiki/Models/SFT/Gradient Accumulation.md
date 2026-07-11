@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_paramet
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 딥러닝 모델을 훈련할 때 배치 크기를 늘리는 방법 중 하나로, 메모리 제한이 있는 환경에서 효과적으로 큰 배치 크기 효과를 얻기 위해 사용됩니다. Gradient Accumulation은 여러 미니 배치에 대한 그라디언트를 누적하여, 마치 큰 배치 크기를 사용하는 것처럼 가중치를 업데이트하는 방법입니다.

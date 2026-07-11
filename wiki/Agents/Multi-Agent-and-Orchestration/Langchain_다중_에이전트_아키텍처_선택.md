@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'multi_agent_orc
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Langchain: 확장 가능한 에이전트 애플리케이션을 위한 다중 에이전트 아키텍처 선택

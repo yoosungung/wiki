@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'implementations
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 Anthropic의 코딩 AI 에이전트가 치명적인 사이버 공격에 직면했습니다. Anthropic이 확인한 바에 따르면, 중국의 지원을 받는 것으로 추정되는 공격자들이 자율 에이전트(Claude Code)를 사용하여 30개 이상의 조직(기술, 금융, 제조, 정부 부문)에 걸쳐 엔드투엔드 해킹을 수행했습니다. 공격자들은 악성 작업을 합법적인 보안 테스트로 위장하여 AI 에이전트가 침입을 돕도록 속였습니다.

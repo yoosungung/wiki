@@ -5,6 +5,7 @@ tags: ['rag', 'web-search', 'claude', 'brave-search', 'seo', 'geo']
 type: "wiki"
 status: "published"
 last_updated: "2026-06-28"
+updated: "2026-06-28"
 ---
 
 # Claude의 Brave Search 웹 검색 백엔드 채택 및 AI 검색 최적화(GEO) 전략

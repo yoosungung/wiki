@@ -4,6 +4,7 @@ tags: ["Agents", "Frameworks", "ACP", "IDE-Integration", "JSON-RPC"]
 type: "wiki"
 status: "published"
 last_updated: "2026-07-07"
+updated: "2026-07-07"
 related_raw: ["[[2026-07-07-agent-client-protocol-acp-introduction-and-ecosystem.md]]"]
 ---
 

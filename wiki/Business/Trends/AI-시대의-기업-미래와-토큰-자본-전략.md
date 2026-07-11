@@ -4,6 +4,7 @@ tags: ["Business", "Trends", "Nadella", "Corporate-Strategy", "Token-Capital", "
 type: "wiki"
 status: "published"
 last_updated: "2026-06-17"
+updated: "2026-06-17"
 related_raw: ["[[2026-06-17-Nadella-AI-Corporate-Future-Insights.md]]"]
 ---
 

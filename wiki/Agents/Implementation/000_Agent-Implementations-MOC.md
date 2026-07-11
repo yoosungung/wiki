@@ -4,6 +4,7 @@ tags: ['moc', 'agents', 'implementations', 'tools']
 type: "moc"
 status: "published"
 last_updated: "2026-06-29"
+updated: "2026-06-29"
 ---
 
 # 🛠 AI 에이전트 구현 도구 및 플랫폼 MOC

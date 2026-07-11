@@ -2,6 +2,7 @@
 title: "Siri AI 및 Apple Intelligence 에이전트 프레임워크 (2026)"
 tags: ["SiriAI", "AppleIntelligence", "Agents", "AppIntents", "AFM3", "WWDC26"]
 last_updated: "2026-06-12"
+updated: "2026-06-12"
 related_raw: ["[[2026-06-11-WWDC26-Core-AI-Siri-AI-Research.md]]", "[[2026-06-12-Autonomous-Agents-OpenClaw-HyperAgent-Update.md]]"]
 ---
 

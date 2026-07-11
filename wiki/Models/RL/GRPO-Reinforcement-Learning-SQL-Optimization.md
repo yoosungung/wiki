@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'ai_ml_development', 'grpo_dpo_reinforcement_learning'
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # GRPO: 강화학습 기반 SQL 최적화 및 정렬

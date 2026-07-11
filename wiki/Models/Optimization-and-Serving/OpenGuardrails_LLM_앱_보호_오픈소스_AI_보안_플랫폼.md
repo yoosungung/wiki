@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'ai', 'security']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # OpenGuardrails를 통한 LLM 앱 보호: 주요 기능 및 이점

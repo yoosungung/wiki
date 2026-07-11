@@ -27,6 +27,7 @@ description: `raw/` 데이터를 분석하여 `wiki/` 5대 핵심 카테고리 �
 
 ### 3. AGENT_EDITING
 - **FRONTMATTER**: `related_raw: ["[[파일명.md]]"]` 및 `tags` 업데이트.
+  - Quartz 빌드 시 올바른 수정 날짜 반영을 위해, frontmatter에 `last_updated: "YYYY-MM-DD"`와 `updated: "YYYY-MM-DD"` 필드를 반드시 동일하게 생성/업데이트함.
 - **LINKING**: 관련된 다른 `wiki/` 문서에 대해 **현재의 전체 상대 경로**(`[[wiki/Category/Sub/File.md]]`)를 사용하여 링크를 생성함.
 
 ### 4. VALIDATION

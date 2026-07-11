@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'ai', 'google_cloud']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # LiteLLM Gateway: Vertex AI Agent Engine 지원

@@ -5,6 +5,7 @@ tags: ['wiki', 'agents', 'evaluation', 'deep_agents', 'langchain']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-20"
+updated: "2026-04-20"
 ---
 
 # Deep Agent 평가 프레임워크

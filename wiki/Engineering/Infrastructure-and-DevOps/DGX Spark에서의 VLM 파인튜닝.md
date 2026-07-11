@@ -5,6 +5,7 @@ tags: ['wiki', 'engineering_and_infra', 'ai_development', 'dgx']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 ## 1. 서론: DGX Spark와 Blackwell 아키텍처 기반 VLM 워크로드의 서막

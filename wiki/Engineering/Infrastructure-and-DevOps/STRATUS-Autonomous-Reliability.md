@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'aiops_&_ai-native_devtools']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # ☁️ STRATUS: 자율적 클라우드 신뢰성 엔지니어링 (Autonomous AIOps)

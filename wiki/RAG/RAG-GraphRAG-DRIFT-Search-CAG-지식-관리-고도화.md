@@ -9,6 +9,7 @@ tags:
 type: wiki
 status: draft
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # RAG, GraphRAG 및 CAG: 지식 관리 및 검색 기술의 고도화

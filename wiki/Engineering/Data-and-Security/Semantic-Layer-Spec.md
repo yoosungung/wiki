@@ -2,6 +2,7 @@
 title: "Semantic Layer 표준 명세 (Spec)"
 tags: ["Engineering", "Data", "Semantic-Layer", "T2SQL", "Spec"]
 last_updated: "2024-05-22"
+updated: "2024-05-22"
 ---
 
 # Semantic Layer 표준 명세

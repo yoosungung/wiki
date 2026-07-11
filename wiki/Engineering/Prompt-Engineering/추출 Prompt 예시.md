@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'llm_concepts', 'prompt_engineering']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 **1. 일반적인 정보 추출 프롬프트:**

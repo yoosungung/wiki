@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'aiops_&_ai-native_devtools']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # AIOps & AI-Native DevTools: STRATUS와 MCP 생태계 (2026)

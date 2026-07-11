@@ -4,6 +4,7 @@ status: published
 tags: [Models, Optimization, UnslothAI, NVIDIA, Training, MoE]
 related_raw: ["[[2026-05-08-unsloth-nvidia-optimization.md]]"]
 last_updated: 2026-05-08
+updated: "2026-05-08"
 ---
 
 # Unsloth AI & NVIDIA: LLM 트레이닝 효율화 가이드

@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'models_and_libraries', 'llm_optimization_and_serving'
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 이러한 문제를 해결하기 위해 등장한 **SGLang**은 단순한 서빙 백엔드나 프롬프트 래퍼가 아닌, LLM 워크플로우를 위해 처음부터 설계된 통합 프로그래밍 및 실행 프레임워크입니다. 이번 리뷰에서는 SGLang의 핵심 특징, 기술적 혁신, 그리고 실제 프로덕션 환경에서의 성과를 종합적으로 분석해보겠습니다.

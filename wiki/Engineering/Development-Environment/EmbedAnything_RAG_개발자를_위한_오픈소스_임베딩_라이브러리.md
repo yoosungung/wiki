@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'ai_ml_development', 'embeddings']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # EmbedAnything: RAG 개발자를 위한 오픈소스 임베딩 라이브러리 요약

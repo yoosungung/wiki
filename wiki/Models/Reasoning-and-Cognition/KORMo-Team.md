@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'models_and_libraries', 'llm_models']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 Hugging Face의 KORMO-Team은 대규모 완전 오픈 소스 모델과 데이터셋을 통해 한국어 이해 및 생성을 발전시키는 데 전념하는 오픈 소스 이니셔티브입니다. 그들의 목표는 한국어 NLP 연구를 투명하고 재현 가능하며 접근 가능하게 만드는 것입니다.

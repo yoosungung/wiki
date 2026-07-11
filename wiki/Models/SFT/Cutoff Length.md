@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_paramet
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 입력 시퀀스의 최대 길이를 제한하는 파라미터입니다. 이는 특히 텍스트 데이터를 다루는 자연어 처리(NLP) 모델에서 중요한 역할을 합니다. Cutoff Length는 다음과 같은 역할을 합니다:

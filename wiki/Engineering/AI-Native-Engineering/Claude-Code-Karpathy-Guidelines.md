@@ -5,6 +5,7 @@ tags: ["Engineering", "AI-Native", "Claude_Code", "CLAUDE_md", "Karpathy", "Prom
 type: "wiki"
 status: "published"
 last_updated: "2026-05-15"
+updated: "2026-05-15"
 ---
 
 # Karpathy-Inspired Claude Code & CLAUDE.md 지침

@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'aiops_&_ai-native_devtools', 'autonomous_c
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Devin 2: 병렬 워크플로우와 완전 자율 AI 에이전트

@@ -4,6 +4,7 @@ tags: ["Agents", "MAS", "RAG", "SIRA", "Retrieval", "Context-Engineering"]
 type: "wiki"
 status: "published"
 last_updated: "2026-07-01"
+updated: "2026-07-01"
 related_raw: []
 ---
 

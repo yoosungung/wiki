@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'ai', 'llms']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # LLM 학습 패러다임: 4가지 진화 단계

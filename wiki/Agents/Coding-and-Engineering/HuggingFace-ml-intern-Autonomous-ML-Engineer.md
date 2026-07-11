@@ -5,6 +5,7 @@ tags: ["Agents", "Coding", "HuggingFace", "Autonomous", "ML_Engineering", "smola
 type: "wiki"
 status: "published"
 last_updated: "2026-05-15"
+updated: "2026-05-15"
 ---
 
 # ml-intern: 논문 읽기부터 모델 배포까지 스스로 하는 AI 엔지니어

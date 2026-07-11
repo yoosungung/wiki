@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'text-to-sql_(t2sql)_&_analytics']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Snowflake: Arctic-Text2SQL-R1 (강화학습 기반 T2SQL)

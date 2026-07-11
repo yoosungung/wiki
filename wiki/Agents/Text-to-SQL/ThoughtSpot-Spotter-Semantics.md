@@ -4,6 +4,7 @@ tags: ["T2SQL", "Semantic-Layer", "ThoughtSpot", "Agentic-AI"]
 type: "wiki"
 status: "published"
 last_updated: "2026-04-28"
+updated: "2026-04-28"
 ---
 
 # ThoughtSpot Spotter Semantics

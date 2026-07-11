@@ -2,6 +2,7 @@
 title: "HaluMem: 에이전트 메모리 시스템의 수집·업데이트·질의(Extraction-Update-QA) 환각 검증 벤치마크"
 tags: ["HaluMem", "Agent-Memory", "Hallucination-Benchmark", "Memory-Evaluation"]
 last_updated: "2026-07-06"
+updated: "2026-07-06"
 related_raw: ["[[2026-07-06-kalyan_ks_halumem_benchmark.md]]"]
 ---
 

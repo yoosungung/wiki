@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'deepseek-r1_grpo_re
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # DeepSeek-V4 및 FIPO 알고리즘: 강화학습의 새로운 표준 (2026.04)

@@ -4,6 +4,7 @@ tags: ["T2SQL", "Oracle", "Spider-2.0", "Ambiguity-Resolution", "Synthetic-Query
 type: "wiki"
 status: "published"
 last_updated: "2026-05-08"
+updated: "2026-05-08"
 related_raw: ["[[raw/2026-05-08-daily-research-data.md]]"]
 related_notes: ["[[wiki/Agents/Text-to-SQL/T2SQL-Benchmarks-2026]]", "[[wiki/Agents/Text-to-SQL/2026-04-26-T2SQL-Trends-Update]]"]
 ---

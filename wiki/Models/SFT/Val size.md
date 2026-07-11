@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_paramet
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 모델 훈련에서 **Validation Set**의 크기를 의미합니다. Validation Set은 모델의 성능을 평가하고, 과적합(overfitting)을 방지하기 위해 훈련 과정 중 사용되는 데이터셋입니다. 모델 훈련 중 주기적으로 또는 에포크(epoch)가 끝날 때마다 Validation Set을 사용하여 모델의 일반화 성능을 평가합니다.

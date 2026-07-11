@@ -8,6 +8,7 @@ tags: ['wiki', 'agents_2.0', 'self_correction', 'self_evolving', 'hyper_agents']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-20"
+updated: "2026-04-20"
 ---
 
 # Deep Agents: 자가 수정 및 자가 진화 메커니즘

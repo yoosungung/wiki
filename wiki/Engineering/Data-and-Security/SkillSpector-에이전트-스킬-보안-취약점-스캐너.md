@@ -2,6 +2,7 @@
 title: "SkillSpector: NVIDIA의 AI 에이전트 스킬 보안 취약점 정적 및 LLM 세맨틱 스캐너"
 tags: ["SkillSpector", "NVIDIA", "Agent-Security", "Vulnerability-Scan", "Data-Security"]
 last_updated: "2026-07-06"
+updated: "2026-07-06"
 related_raw: ["[[2026-07-06-nvidia_skillspector_vulnerability_scanner.md]]"]
 ---
 

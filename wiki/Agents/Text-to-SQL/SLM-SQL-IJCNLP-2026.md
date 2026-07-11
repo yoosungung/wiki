@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'text-to-sql_(t2sql)_&_analytics', 'slm_for
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # SLM-SQL: 초소형 모델로 구현한 고성능 Text-to-SQL

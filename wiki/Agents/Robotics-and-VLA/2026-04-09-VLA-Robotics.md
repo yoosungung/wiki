@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'robotics_&_physical_ai_(vla)', 'vision-lan
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # 로보틱스 VLA(Vision-Language-Action) 모델 최신 기술 동향 (2026-04-09)

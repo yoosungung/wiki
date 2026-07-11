@@ -5,6 +5,7 @@ tags: ['wiki', 'business_and_misc', 'miscellaneous']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 안녕하세요, 저는 AI 전문 외주 개발사 빅시프트의 팀 리드 박재균입니다.

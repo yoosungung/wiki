@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_options
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 LLaMA 모델의 확장된 블록에서 파라미터를 학습 가능(trainable)하도록 설정하는 것을 의미합니다. 이는 특정 모델 블록의 파라미터를 동결(freeze)하지 않고, 모델 훈련 과정에서 업데이트될 수 있도록 허용하는 것입니다.

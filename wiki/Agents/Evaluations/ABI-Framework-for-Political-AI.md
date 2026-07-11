@@ -4,6 +4,7 @@ tags: ["Evaluations", "Political-AI", "ABI-Framework", "Trust"]
 type: "wiki"
 status: "published"
 last_updated: "2026-05-08"
+updated: "2026-05-08"
 related_raw: ["[[raw/2026-04-28-ABI-Framework-Politician-Eval.md]]", "[[raw/2026-05-08-daily-research-data.md]]"]
 ---
 

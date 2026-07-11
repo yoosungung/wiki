@@ -5,6 +5,7 @@ tags: ['wiki', 'engineering_and_infra', 'dev_environment', 'ai_workflow_tools']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Sim: 노코드 AI 에이전트 워크플로우 설계 및 배포 플랫폼

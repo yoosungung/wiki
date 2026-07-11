@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'llm_concepts', 'recursive_language_models_rlm']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # 재귀적 언어 모델(RLM): LLM의 장문 컨텍스트 처리 능력 확장 연구

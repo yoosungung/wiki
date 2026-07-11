@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'models_and_libraries', 'vision_and_ocr']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 Niels Rogge의 LinkedIn 게시물은 Baidu에서 개발하고 Apache 2.0 라이선스로 Hugging Face에 출시한 새로운 오픈 소스 광학 문자 인식(OCR) 엔진인 **PP-OCRv5**를 소개합니다. Tesseract 및 EasyOCR과 같은 이전 OCR 솔루션에 대한 현대적이고 효율적인 대안으로 강조됩니다.

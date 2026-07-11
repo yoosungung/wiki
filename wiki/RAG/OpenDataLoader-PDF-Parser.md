@@ -5,6 +5,7 @@ tags: ['rag', 'pdf-parser', 'opendataloader', 'data-preprocessing', 'open-source
 type: "wiki"
 status: "published"
 last_updated: "2026-06-23"
+updated: "2026-06-23"
 ---
 
 # OpenDataLoader PDF: AI 및 RAG를 위한 오픈소스 고성능 PDF 파싱 엔진

@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'robotics_&_physical_ai_(vla)']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 ROS 2(Robot Operating System 2)는 로봇 애플리케이션 개발을 위한 **오픈소스 소프트웨어 프레임워크**입니다. 로봇 하드웨어 제어, 센서 데이터 처리, 내비게이션, 시각화 등 복잡한 로봇 시스템을 구축하는 데 필요한 라이브러리와 도구들을 제공합니다.

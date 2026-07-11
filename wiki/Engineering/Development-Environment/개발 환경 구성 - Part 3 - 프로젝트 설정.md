@@ -5,6 +5,7 @@ tags: ['wiki', 'engineering_and_infra', 'dev_environment', 'dev_setup_guides']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # 개발 환경 구성 - Part 3 - 프로젝트 설정

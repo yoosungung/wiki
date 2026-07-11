@@ -8,6 +8,7 @@ tags: ["Agents", "Coding", "Optimization", "Claude_Code", "Codex", "Opus_4.7"]
 type: "wiki"
 status: "published"
 last_updated: "2026-04-22"
+updated: "2026-04-22"
 ---
 
 # Claude Code 및 Codex 토큰 최적화 및 효율 향상 가이드

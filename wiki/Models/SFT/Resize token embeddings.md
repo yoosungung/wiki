@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_options
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 **"Resize the tokenizer vocab and the embedding layers"는 자연어 처리(NLP) 모델을 사용할 때, 토크나이저의 어휘(vocabulary) 크기와 임베딩 레이어의 크기를 조정하는 작업을 의미합니다. 이는 모델을 특정 작업이나 데이터셋에 맞추기 위해 어휘를 확장하거나 축소하고, 이에 맞게 임베딩 레이어의 크기를 조정하는 과정입니다.

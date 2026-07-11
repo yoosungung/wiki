@@ -4,6 +4,7 @@ tags: ["Agents", "Frameworks", "AgentProtocol", "A2A", "Interoperability", "Open
 type: "wiki"
 status: "published"
 last_updated: "2026-07-07"
+updated: "2026-07-07"
 related_raw: ["[[2026-07-07-general-agent-protocols-agent-protocol-and-google-a2a.md]]"]
 ---
 

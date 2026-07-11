@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'llm_concepts', 'llm_architecture_and_technical']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Transformer 모델의 구조와 작동 원리 - Part 2 - 아키텍처와 구현

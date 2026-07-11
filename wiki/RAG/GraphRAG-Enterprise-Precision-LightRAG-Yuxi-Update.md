@@ -10,6 +10,7 @@ tags:
 type: wiki
 status: draft
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # GraphRAG 및 LightRAG 엔터프라이즈 구현 현황 (2026.04)

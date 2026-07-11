@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_paramet
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 딥러닝 모델을 훈련하는 동안 특정 간격마다 훈련 상태와 관련된 정보를 기록하는 과정을 의미합니다. Logging Steps는 모델의 훈련 과정을 모니터링하고, 성능을 평가하며, 문제가 발생했을 때 디버깅하는 데 중요한 역할을 합니다.

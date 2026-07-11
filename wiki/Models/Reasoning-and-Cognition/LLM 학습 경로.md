@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'llm_concepts', 'llm_applications_and_insights']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 LLM(Large Language Model) 엔지니어가 되기 위해서는 여러 기술적 지식과 실력을 갖춰야 합니다. Fine-Tuning 같은 고급 기술을 다룰 수 있게 되기 위한 학습 경로는 다음과 같은 순서로 진행될 수 있습니다:

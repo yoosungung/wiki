@@ -9,6 +9,7 @@ tags:
 type: wiki
 status: draft
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # 📊 GraphRAG vs LightRAG: 2026년 성능 및 아키텍처 비교

@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_paramet
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 기계 학습, 특히 딥러닝에서 중요한 개념으로, 모델의 손실 함수(loss function)가 변화하는 방향과 크기를 나타냅니다. 그라디언트는 모델의 가중치를 최적화하는 데 사용되며, 학습 과정에서 가중치를 업데이트하는 데 중요한 역할을 합니다.

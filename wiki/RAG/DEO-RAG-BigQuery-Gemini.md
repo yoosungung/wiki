@@ -7,6 +7,7 @@ tags: ["RAG", "Google_Cloud", "BigQuery", "Gemini", "DEO-RAG", "Negation_Aware_R
 type: "wiki"
 status: "published"
 last_updated: "2026-05-01"
+updated: "2026-05-01"
 ---
 
 # DEO-RAG: BigQuery와 Gemini를 활용한 고도화된 RAG 시스템

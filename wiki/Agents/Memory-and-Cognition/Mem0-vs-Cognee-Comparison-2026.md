@@ -5,6 +5,7 @@ tags: ['wiki', 'knowledge_and_memory', 'advanced_rag_&_knowledge_graph', 'agent_
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # 🧠 LLM 메모리 프레임워크 비교: Mem0 vs Cognee (2026년 업데이트)

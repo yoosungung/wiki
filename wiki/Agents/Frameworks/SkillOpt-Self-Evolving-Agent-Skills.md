@@ -4,6 +4,7 @@ tags: ["Agents", "Frameworks", "SkillOpt", "Self-Evolution", "Optimization", "Cl
 type: "wiki"
 status: "published"
 last_updated: "2026-06-21"
+updated: "2026-06-21"
 related_raw: ["[[2026-06-21-microsoft-skillopt-readme.md]]"]
 ---
 

@@ -5,6 +5,7 @@ category: "Models"
 subcategory: "Optimization-and-Serving"
 tags: [GPU, Benchmarks, FinOps, Blackwell, H200, L40S]
 last_updated: "2026-05-13"
+updated: "2026-05-13"
 related_raw: ["[[raw/2026-05-13-Best-GPU-for-AI-Inference-2026-Spheron.md]]"]
 ---
 

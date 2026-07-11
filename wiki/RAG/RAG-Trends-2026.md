@@ -10,6 +10,7 @@ tags:
 type: wiki
 status: draft
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # 📊 2026 RAG 트렌드: LightRAG vs GraphRAG 및 실무 구현

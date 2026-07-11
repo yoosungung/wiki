@@ -5,6 +5,7 @@ tags: ["Qwen", "Local-AI", "Agentic-Coding", "Open-Source", "Small-Models", "Uns
 type: "wiki"
 status: "published"
 last_updated: "2026-04-30"
+updated: "2026-04-30"
 ---
 
 # Qwen3.6-27B

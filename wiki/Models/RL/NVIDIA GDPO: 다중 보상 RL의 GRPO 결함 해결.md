@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'ai_ml_development']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # NVIDIA GDPO: 다중 보상 RL의 GRPO 결함 해결

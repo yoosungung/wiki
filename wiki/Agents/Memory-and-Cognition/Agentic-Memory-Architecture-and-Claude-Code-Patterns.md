@@ -5,6 +5,7 @@ tags: ["Memory-Architecture", "Claude-Code", "Agentic-AI", "Mem0", "LangGraph", 
 type: "wiki"
 status: "published"
 last_updated: "2026-04-30"
+updated: "2026-04-30"
 ---
 
 # 에이전트 메모리 아키텍처 (Agentic Memory Architecture)

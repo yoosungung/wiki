@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'ai', 'llms', 'gemma4']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Google Gemma 4 출시 및 Gemma 3와의 성능 비교 분석

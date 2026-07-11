@@ -10,6 +10,7 @@ tags:
 type: wiki
 status: draft
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # GraphRAG 효율화: RouteRAG와 LazyGraphRAG (2026 최신 기술)

@@ -5,6 +5,7 @@ tags: ["Models", "Architectures", "PyTorch", "Education", "GPT", "Deep_Learning"
 type: "wiki"
 status: "published"
 last_updated: "2026-05-15"
+updated: "2026-05-15"
 ---
 
 # LLM을 '진짜' 이해하는 가장 빠른 길: 밑바닥부터 구현하기

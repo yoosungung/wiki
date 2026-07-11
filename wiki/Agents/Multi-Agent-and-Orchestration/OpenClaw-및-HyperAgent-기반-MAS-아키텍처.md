@@ -4,6 +4,7 @@ tags: ["Agents", "MAS", "OpenClaw", "HyperAgent", "Orchestration", "TaskFlow"]
 type: "wiki"
 status: "published"
 last_updated: "2026-06-17"
+updated: "2026-06-17"
 related_raw: ["[[2026-06-12-Autonomous-Agents-OpenClaw-HyperAgent-Update.md]]", "[[2026-06-15-Autonomous-Agents-OpenClaw-HyperAgent-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]"]
 ---
 

@@ -10,6 +10,7 @@ tags:
 type: wiki
 status: draft
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Microsoft GraphRAG v3 및 LightRAG 업데이트 (2026-04-09)

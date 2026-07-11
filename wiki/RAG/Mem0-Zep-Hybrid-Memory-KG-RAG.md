@@ -9,6 +9,7 @@ tags:
 type: wiki
 status: draft
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Mem0 & Zep: Hybrid Memory with Knowledge Graphs

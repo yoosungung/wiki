@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_options
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 딥러닝 모델을 훈련할 때 사용하는 숫자 표현 방식(부동소수점)의 종류를 의미합니다. 각각의 부동소수점 형식은 연산 속도, 메모리 사용량, 그리고 계산의 정확성 측면에서 다릅니다. 딥러닝에서 주로 사용되는 부동소수점 형식은 다음과 같습니다: FP16, BF16, Pure BF16, FP32.

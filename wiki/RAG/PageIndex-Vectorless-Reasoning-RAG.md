@@ -5,6 +5,7 @@ tags: ["RAG", "Vectorless", "Reasoning-based", "Search", "Open_Source", "PageInd
 type: "wiki"
 status: "published"
 last_updated: "2026-05-15"
+updated: "2026-05-15"
 ---
 
 # PageIndex: 벡터리스 추론 기반 RAG의 새로운 지평

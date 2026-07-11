@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_concept
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 **Adapter**는 사전 학습된 모델을 특정 작업에 맞게 효율적으로 미세 조정하기 위한 방법론 중 하나입니다. Adapter는 주로 다음과 같은 이유로 사용됩니다:

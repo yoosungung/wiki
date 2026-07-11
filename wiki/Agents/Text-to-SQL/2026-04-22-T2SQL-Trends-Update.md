@@ -5,6 +5,7 @@ related_raw: ["[[2026-04-22-T2SQL-Research-Raw.md]]"]
 type: "wiki"
 status: "published"
 last_updated: "2026-04-22"
+updated: "2026-04-22"
 ---
 
 # 2026-04-22 T2SQL 기술 트렌드 업데이트

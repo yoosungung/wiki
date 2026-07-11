@@ -9,6 +9,7 @@ tags:
 type: wiki
 status: draft
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Meta의 충격 논문: AI, 명령을 버리고 세계를 얻다?

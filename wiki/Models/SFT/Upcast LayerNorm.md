@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_options
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 "Upcast weights of layernorm in float32"**는 레이어 정규화(Layer Normalization) 계층의 가중치를 32비트 부동소수점(float32) 형식으로 변환하는 작업을 의미합니다. 이는 모델 훈련 및 추론 과정에서 수치적 안정성을 확보하고, 계산 정확성을 향상시키기 위해 사용됩니다.

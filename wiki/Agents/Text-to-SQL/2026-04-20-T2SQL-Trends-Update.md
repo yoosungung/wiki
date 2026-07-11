@@ -5,6 +5,7 @@ tags: ["Agents", "Text-to-SQL", "Trends", "Semantic_Layer", "DeepAgent", "Benchm
 type: "wiki"
 status: "published"
 last_updated: "2026-04-21"
+updated: "2026-04-21"
 ---
 
 # 2026 Text-to-SQL 기술 트렌드 요약 (2026-04-20)

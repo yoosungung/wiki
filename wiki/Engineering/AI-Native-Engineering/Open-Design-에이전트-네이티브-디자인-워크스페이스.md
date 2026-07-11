@@ -2,6 +2,7 @@
 title: "Open Design: 에이전트 네이티브 로컬 퍼스트 디자인 워크스페이스"
 tags: ["Open-Design", "Claude-Design", "Agent-UI", "Local-First", "Design-Engine"]
 last_updated: "2026-07-06"
+updated: "2026-07-06"
 related_raw: ["[[2026-07-06-nexu_io_open_design.md]]"]
 ---
 

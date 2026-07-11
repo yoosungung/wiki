@@ -5,6 +5,7 @@ tags: ['wiki', 'knowledge_and_memory', 'advanced_rag_&_knowledge_graph', 'knowle
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # WordLift: 지식 그래프 기반 추론 언어 모델 (RLM on KG)

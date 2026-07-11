@@ -5,6 +5,7 @@ tags: ['wiki', 'agents', 'evaluation', 'methodology', 'observability']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-20"
+updated: "2026-04-20"
 ---
 
 # AI 에이전트 평가 방법론

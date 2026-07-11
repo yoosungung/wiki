@@ -5,6 +5,7 @@ tags: ['wiki', 'engineering_and_infra', 'dev_environment', 'infrastructure_orche
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 Airflow에서 DAG를 비정기적/정기적으로 수행할 때 arguments를 전달하는 방법은 DagRun 객체와 trigger_dag 함수를 활용하는 것입니다.

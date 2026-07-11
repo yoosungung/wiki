@@ -6,6 +6,7 @@ tags: ["Engineering", "Infrastructure", "LangChain", "Token_Cost", "AIOps", "Cos
 type: "wiki"
 status: "published"
 last_updated: "2026-05-01"
+updated: "2026-05-01"
 ---
 
 # LangChain 파이프라인에서의 토큰 비용 할당 및 추적

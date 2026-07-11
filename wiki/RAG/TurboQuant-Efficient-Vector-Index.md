@@ -5,6 +5,7 @@ tags: ["RAG", "Databases", "Vector_Index", "Rust", "Optimization", "TurboQuant"]
 type: "wiki"
 status: "published"
 last_updated: "2026-05-15"
+updated: "2026-05-15"
 ---
 
 # TurboQuant: 제한된 리소스에서의 벡터 검색 혁신

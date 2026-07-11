@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_concept
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 **LoRA**는 파라미터 효율적 미세 조정 방법으로, 모델의 일부 매개변수만 학습하여 업데이트하는 방법입니다.

@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'self_evolving_a
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # 자가 진화형 에이전트: 자율적 도구 생성 및 MiniMax M2.7 (2026-03)

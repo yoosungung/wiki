@@ -7,6 +7,7 @@ tags: ["Agents", "Frameworks", "LangChain", "LangGraph", "Deep_Agents", "Runtime
 type: "wiki"
 status: "published"
 last_updated: "2026-05-01"
+updated: "2026-05-01"
 ---
 
 # LangChain Deep Agents: 프로덕션급 딥 에이전트 런타임 및 최적화

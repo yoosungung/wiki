@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_paramet
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 기계 학습 모델, 특히 딥러닝 모델을 훈련할 때 사용되는 중요한 하이퍼파라미터 중 하나입니다. 학습률은 모델의 가중치를 업데이트할 때 사용하는 스텝 크기를 결정합니다. 더 구체적으로, 학습률은 모델이 손실 함수의 기울기에 따라 가중치를 얼마나 빠르게 또는 느리게 조정할지를 결정합니다.

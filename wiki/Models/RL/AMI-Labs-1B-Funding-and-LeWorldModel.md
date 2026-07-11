@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'world_models_&_generative_simulation', 'je
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # AMI Labs: Yann LeCun의 차세대 세계 모델(World Models)을 위한 10억 달러 투자

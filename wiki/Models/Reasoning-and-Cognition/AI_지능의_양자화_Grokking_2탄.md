@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'llm_concepts', 'llm_architecture_and_technical']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # AI 지능의 양자화: 인공 신경망은 어떻게 ‘갑자기’ 깨닫는가? (Grokking 2탄)

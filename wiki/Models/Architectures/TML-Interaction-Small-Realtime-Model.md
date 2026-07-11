@@ -5,6 +5,7 @@ tags: ["Models", "Architectures", "Real-time", "Multi-modal", "TML", "Mira_Murat
 type: "wiki"
 status: "published"
 last_updated: "2026-05-15"
+updated: "2026-05-15"
 ---
 
 # TML-Interaction-Small: 실시간 상호작용의 패러다임 시프트

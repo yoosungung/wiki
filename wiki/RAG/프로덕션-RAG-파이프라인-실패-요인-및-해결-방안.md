@@ -2,6 +2,7 @@
 title: "프로덕션 환경의 RAG 파이프라인 주요 실패 요인 및 해결 방안"
 tags: ["RAG-Failures", "Production-RAG", "Layout-Parsing", "Chunking-Strategy"]
 last_updated: "2026-07-06"
+updated: "2026-07-06"
 related_raw: ["[[2026-07-06-sai_charan_rag_pipelines_failures.md]]"]
 ---
 

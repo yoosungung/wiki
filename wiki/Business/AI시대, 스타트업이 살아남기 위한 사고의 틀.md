@@ -5,6 +5,7 @@ tags: ['wiki', 'business_and_misc', 'business']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 Global Brain의 한국 대표인 이경훈님의 LinkedIn 게시물은 빠르게 변화하는 세상임을 강조하며 AI 시대에 스타트업이 생존하고 번창하기 위한 프레임워크를 제공합니다. 이 프레임워크는 네 가지 계층으로 나뉩니다.

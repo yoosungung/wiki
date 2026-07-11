@@ -10,6 +10,7 @@ tags:
 type: wiki
 status: draft
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # 🔍 2026년 RAG 및 데이터 인텔리전스 트렌드 업데이트

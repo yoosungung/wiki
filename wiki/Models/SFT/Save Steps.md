@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_paramet
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 딥러닝 모델 훈련 과정에서 특정 간격마다 모델의 상태를 저장하는 과정입니다. 이는 모델 체크포인트(checkpoint)를 생성하여, 훈련 도중이나 후에 모델을 다시 불러와서 사용하거나, 훈련을 이어서 진행할 수 있도록 합니다. Save Steps는 모델 훈련의 안정성과 효율성을 높이는 데 중요한 역할을 합니다.

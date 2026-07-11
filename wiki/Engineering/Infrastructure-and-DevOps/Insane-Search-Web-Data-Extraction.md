@@ -5,6 +5,7 @@ tags: ["Engineering", "Infrastructure", "Web_Scraping", "Claude_Code", "Open_Sou
 type: "wiki"
 status: "published"
 last_updated: "2026-05-15"
+updated: "2026-05-15"
 ---
 
 # Insane-Search: 에이전트를 위한 만능 웹 데이터 수집기

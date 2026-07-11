@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_concept
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 대규모 언어 모델(LLM)의 추론 성능과 효율성을 동시에 향상시키는 방법을 제안합니다.

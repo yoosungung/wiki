@@ -10,6 +10,7 @@ tags:
 type: wiki
 status: draft
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Zilliz (Milvus 개발사) 경량 시맨틱 하이라이트 모델 공개

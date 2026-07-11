@@ -5,6 +5,7 @@ tags: ["wiki", "LLM", "Coder", "Agentic-Workflow"]
 type: "wiki"
 status: "complete"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # 2026년 AI 코딩 모델 현황

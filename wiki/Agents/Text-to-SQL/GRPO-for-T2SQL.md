@@ -4,6 +4,7 @@ tags: ["GRPO", "T2SQL", "RL", "DeepSeek", "sLM"]
 type: "wiki"
 status: "published"
 last_updated: "2026-04-28"
+updated: "2026-04-28"
 ---
 
 # GRPO를 활용한 Text-to-SQL 성능 고도화

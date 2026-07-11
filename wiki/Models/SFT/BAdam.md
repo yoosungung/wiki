@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_paramet
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 **BAdam (Block-wise Adam)**은 Adam 옵티마이저의 변형으로, 모델의 파라미터를 블록 단위로 업데이트하는 기법입니다. 이는 파라미터를 더 효율적으로 학습하고, 모델의 성능을 향상시키기 위해 설계되었습니다. BAdam은 특히 대규모 모델에서 유용하며, 파라미터 업데이트의 세밀한 제어를 가능하게 합니다.

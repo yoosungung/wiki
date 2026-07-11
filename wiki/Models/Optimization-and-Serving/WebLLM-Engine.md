@@ -5,6 +5,7 @@ category: "Models"
 subcategory: "Optimization-and-Serving"
 tags: [WebLLM, MLC-LLM, WebGPU, Browser-LLM]
 last_updated: "2026-05-13"
+updated: "2026-05-13"
 related_raw: [
   "[[raw/2026-05-13-WebLLM-Home.md]]",
   "[[raw/2026-05-13-mlc-ai-web-llm-github.md]]"

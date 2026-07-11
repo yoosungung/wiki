@@ -5,6 +5,7 @@ tags: ["Agents", "Frameworks", "Self-Improving", "Memory", "Skill_Creation", "No
 type: "wiki"
 status: "published"
 last_updated: "2026-05-15"
+updated: "2026-05-15"
 ---
 
 # Hermes: 끊임없이 진화하는 자율형 에이전트

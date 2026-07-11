@@ -5,6 +5,7 @@ tags: ['wiki', 'agents', 'evaluation', 'llm_as_a_judge', 'agent_as_a_judge']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-20"
+updated: "2026-04-20"
 ---
 
 # Judge 모델 비교 및 최적화

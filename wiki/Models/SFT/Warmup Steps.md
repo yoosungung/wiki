@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_paramet
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 딥러닝 모델을 훈련할 때 초기 학습률을 점진적으로 증가시키는 단계입니다. 이는 모델 훈련 초기 단계에서 학습률을 서서히 올려주어, 안정적인 훈련을 돕고 갑작스러운 학습률로 인해 발생할 수 있는 문제를 방지합니다. Warmup 단계가 끝난 후에는 설정된 학습률 스케줄에 따라 학습률이 조정됩니다.

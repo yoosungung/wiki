@@ -5,6 +5,7 @@ tags: ['wiki', 'engineering_and_infra', 'dev_environment']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 google:search{queries:[kubernetes cert-manager letsencrypt setup guide,cert-manager nginx ingress letsencrypt setup,cert-manager ClusterIssuer vs Issuer,k8s ingress tls configuration example]} Kubernetes에서 Let's Encrypt 인증서를 적용하는 표준적인 방법은 **cert-manager**를 사용하는 것입니다. 다음은 3단계 요약입니다.

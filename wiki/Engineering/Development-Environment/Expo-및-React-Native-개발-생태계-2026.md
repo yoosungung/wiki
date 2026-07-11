@@ -4,6 +4,7 @@ tags: ["Engineering", "Development-Environment", "Expo", "React-Native", "Mobile
 type: "wiki"
 status: "published"
 last_updated: "2026-06-17"
+updated: "2026-06-17"
 related_raw: ["[[2026-06-17-Expo-React-Native-Trends.md]]"]
 ---
 

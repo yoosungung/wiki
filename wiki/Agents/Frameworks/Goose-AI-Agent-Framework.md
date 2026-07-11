@@ -4,6 +4,7 @@ status: published
 tags: [Agents, Frameworks, GooseAI, OpenSource, MCP]
 related_raw: ["[[2026-05-08-goose-ai-future-of-work.md]]"]
 last_updated: 2026-05-08
+updated: "2026-05-08"
 ---
 
 # Goose AI (구스): 블록(Block)의 오픈소스 에이전트 프레임워크

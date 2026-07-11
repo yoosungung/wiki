@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'robotics_&_physical_ai_(vla)']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 RoboMonkey는 VLA(Vision-Language-Action) 모델을 **실제 로봇에서 매우 빠르고 효율적으로 실행하기 위한 고성능 추론 프레임워크**입니다.

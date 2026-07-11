@@ -5,6 +5,7 @@ tags: ["Business", "Trends", "Philosophy", "AI_Ethics", "Control_Society", "Divi
 type: "wiki"
 status: "published"
 last_updated: "2026-05-15"
+updated: "2026-05-15"
 ---
 
 # 데이터의 집합체로 분해된 인간: 가분체의 탄생

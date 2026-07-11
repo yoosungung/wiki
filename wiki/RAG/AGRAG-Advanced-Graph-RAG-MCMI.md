@@ -10,6 +10,7 @@ tags:
 type: wiki
 status: draft
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # AGRAG: 통계 기반 그래프 구축 및 MCMI 서브그래프 생성 (2026)

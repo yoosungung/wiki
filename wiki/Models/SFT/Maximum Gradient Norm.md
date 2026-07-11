@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_paramet
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 그라디언트의 크기를 제한하는 기법인 **Gradient Clipping**에서 사용되는 중요한 파라미터입니다. 이는 그라디언트 폭주 문제를 방지하고 학습을 안정화하기 위해 사용됩니다.

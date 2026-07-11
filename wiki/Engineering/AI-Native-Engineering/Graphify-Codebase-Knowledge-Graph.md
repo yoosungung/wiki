@@ -5,6 +5,7 @@ tags: ["Engineering", "AI-Native", "Codebase", "Knowledge_Graph", "Graphify", "R
 type: "wiki"
 status: "published"
 last_updated: "2026-05-15"
+updated: "2026-05-15"
 ---
 
 # Graphify: 코드를 데이터가 아닌 '지식'으로 보는 방법

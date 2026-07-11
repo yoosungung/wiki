@@ -5,6 +5,7 @@ tags: ['wiki', 'business_and_misc', 'business']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 "인간 변호사처럼 생각하기"  

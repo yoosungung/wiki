@@ -10,6 +10,7 @@ tags:
 type: wiki
 status: draft
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # 옥스퍼드 대학의 충격적 연구: 인간과 AI는 같은 방식으로 배우는가?

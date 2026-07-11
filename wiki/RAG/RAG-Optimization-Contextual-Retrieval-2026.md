@@ -10,6 +10,7 @@ tags:
 type: wiki
 status: draft
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # RAG 최적화: Contextual Retrieval 및 Semantic Chunking 전략 (2026)

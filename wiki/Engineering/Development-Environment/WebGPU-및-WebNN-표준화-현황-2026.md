@@ -4,6 +4,7 @@ tags: ["Engineering", "Development-Environment", "WebGPU", "WebNN", "W3C", "Stan
 type: "wiki"
 status: "published"
 last_updated: "2026-07-11"
+updated: "2026-07-11"
 related_raw: ["[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-07-01-webgpu-webnn-wasm3-webmcp.md]]", "[[2026-07-10-web-inference-wasm-3.0.md]]", "[[2026-07-11-webgpu_wasm_3_0_webnn_webllm_browser_serving.md]]"]
 ---
 

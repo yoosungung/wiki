@@ -5,6 +5,7 @@ tags: ["wiki", "MCP", "AI-Standard", "T2SQL"]
 type: "wiki"
 status: "on-hold (postponed)"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Model Context Protocol (MCP) 개요

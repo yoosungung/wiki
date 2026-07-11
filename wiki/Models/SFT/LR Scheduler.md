@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_paramet
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 딥러닝 모델을 훈련할 때 학습률(learning rate)을 동적으로 조정하는 방법을 의미합니다. 학습률은 모델의 가중치를 업데이트할 때 사용하는 스텝 크기를 결정하는 중요한 하이퍼파라미터입니다. 학습률이 너무 크면 훈련이 불안정해지고, 너무 작으면 훈련이 매우 느려질 수 있습니다. 따라서 학습률을 적절히 조정하는 것이 모델 훈련의 성능과 효율성을 높이는 데 중요합니다.

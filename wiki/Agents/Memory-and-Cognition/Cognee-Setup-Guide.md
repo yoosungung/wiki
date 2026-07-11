@@ -5,6 +5,7 @@ tags: ['wiki', 'agents', 'memory', 'setup', 'tutorial']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-20"
+updated: "2026-04-20"
 ---
 
 # Cognee 설정 가이드

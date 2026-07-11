@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'basetech', 'llm
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 Ivan Nardini가 발표한 AI 에이전트 구축을 위한 개발자 가이드 "Context Engineering: Sessions and Memory" 백서에 대한 요약입니다.

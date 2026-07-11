@@ -5,6 +5,7 @@ tags: ['wiki', 'agents', 'memory', 'moc', 'cognee']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-20"
+updated: "2026-04-20"
 ---
 
 # Cognee - AI Memory System (MOC)

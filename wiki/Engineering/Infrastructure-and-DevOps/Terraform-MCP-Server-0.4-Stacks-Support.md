@@ -5,6 +5,7 @@ tags: ['wiki', 'agents_and_systems', 'aiops_&_ai-native_devtools', 'mcp_servers_
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Terraform MCP 서버 0.4 업데이트: Stacks 지원 및 거버넌스 강화

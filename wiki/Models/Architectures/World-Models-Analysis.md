@@ -6,6 +6,7 @@ tags: ["Models", "Architectures", "World_Models", "AI_Research", "System_Analysi
 type: "wiki"
 status: "published"
 last_updated: "2026-05-01"
+updated: "2026-05-01"
 ---
 
 # 월드 모델(World Models) 시스템 분석 및 정의

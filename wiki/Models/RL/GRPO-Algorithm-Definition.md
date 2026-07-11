@@ -4,6 +4,7 @@ tags: ['wiki', 'ai_core', 'reinforcement_learning', 'grpo', 'algorithm']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-20"
+updated: "2026-04-20"
 ---
 
 # GRPO (Group Relative Policy Optimization) 알고리즘 정의

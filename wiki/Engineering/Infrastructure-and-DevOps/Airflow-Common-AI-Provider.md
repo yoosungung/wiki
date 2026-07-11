@@ -5,6 +5,7 @@ tags: ["Airflow", "AI-Agent", "Orchestration", "Common-AI-Provider", "AIOps"]
 type: "wiki"
 status: "published"
 last_updated: "2026-04-30"
+updated: "2026-04-30"
 ---
 
 # Airflow Common AI Provider

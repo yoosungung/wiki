@@ -2,6 +2,7 @@
 title: "SkillOpt: 에이전트 스킬 문서 자율 진화(Self-Evolution) 및 과학적 탐구 멀티 에이전트 시스템"
 tags: ["SkillOpt", "Co-Scientist", "Self-Evolution", "Scientific-Discovery", "Multi-Agent"]
 last_updated: "2026-07-06"
+updated: "2026-07-06"
 related_raw: ["[[2026-07-06-suk_hyun_k_skillopt_scientific_agents.md]]"]
 ---
 

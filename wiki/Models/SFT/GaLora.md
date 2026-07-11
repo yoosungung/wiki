@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_concept
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 **GaLora (Gaussian Low-Rank Adaptation)**는 딥러닝 모델의 파라미터를 효율적으로 학습하기 위해 Gaussian 분포 기반의 저차원 적응을 사용하는 기법입니다. 이는 대규모 모델의 미세 조정(fine-tuning)을 보다 효율적이고 효과적으로 수행하기 위한 기법으로, 특히 대규모 언어 모델에서 사용될 수 있습니다.

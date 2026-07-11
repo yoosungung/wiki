@@ -5,6 +5,7 @@ tags: ['wiki', 'ai_core', 'ai']
 type: "wiki"
 status: "published"
 last_updated: "2026-04-19"
+updated: "2026-04-19"
 ---
 
 # Lottery Ticket Hypothesis와 LLM

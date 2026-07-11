@@ -4,6 +4,7 @@ tags: ["Agents", "Implementation", "Memory", "Supermemory", "MCP", "SMFS", "Clou
 type: "wiki"
 status: "published"
 last_updated: "2026-07-11"
+updated: "2026-07-11"
 related_raw: ["[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]"]
 ---
 
