@@ -49,6 +49,15 @@ class QuartzConfigTest(unittest.TestCase):
         self.assertIn("enabled: false", config)
         self.assertIn("folderClickBehavior: collapse", config)
 
+    def test_agents_md_excluded_from_publish(self):
+        """루트 AGENTS.md는 git에 두되 공개 위키 페이지에서는 제외한다."""
+        config = QUARTZ_CONFIG.read_text()
+        # ignorePatterns 블록 안에서만 검사 (다른 경로 언급과 구분)
+        start = config.index("ignorePatterns:")
+        end = config.index("theme:", start)
+        ignore_block = config[start:end]
+        self.assertIn("AGENTS.md", ignore_block)
+
 
 if __name__ == "__main__":
     unittest.main()
