@@ -16,8 +16,8 @@ related_raw: ["[[2026-06-15-On-Device-AI-PC-Trends-Update.md]]", "[[2026-06-17-R
 | 제조사 | 플랫폼 | 주요 사양 | 핵심 포지셔닝 |
 | :--- | :--- | :--- | :--- |
 | **Intel** | **Lunar Lake (Core Ultra 2) / Panther Lake (Core Ultra 3)** | Intel 18A 공정 / NPU 5 (~50 TOPS, FP8 native 지원) / Xe3-LPG (Battlemage) iGPU (~120 TOPS) / Up to 128GB RAM | 30~70B 파라미터 로컬 모델 구동 가능. Lunar Lake의 NPU 4(48 TOPS) 대비 Panther Lake NPU 5는 플랫폼 총 180 TOPS 처리 지원(CPU, GPU, NPU 분산) 및 높은 면적 효율성 확보. (2026-07-08 업데이트) Panther Lake는 NPU 5(50 TOPS)와 Xe3-LPG GPU(120 TOPS)를 조합하여 경량 상시 AI 연산과 집중형 생성 AI 워크로드를 하이브리드로 완벽 분산 처리합니다. |
-| **AMD** | **Strix Halo (Ryzen AI Max 300)** | 16 'Zen 5' CPU cores / Radeon 8060S (40 RDNA 3.5 CUs) / XDNA 2 NPU (50 TOPS) / Up to 128GB Unified LPDDR5X-8000 | **PS5 / RTX 4060급 GPU 성능** 통합. 최대 70B~200B 모델 로컬 추론 지원. 공식 네임인 **Ryzen AI Max 300 Series** (예: Max+ 395) 런칭. (2026-07-08 업데이트) 최대 128GB LPDDR5X-8000 초고속 통합 메모리(Unified Memory) 지원을 통해 VRAM 병목을 극복하고, 플랫폼 총 AI 처리량 126 TOPS를 확보하여 고강도 로컬 에이전트 구동에 특화되었습니다. |
-| **NVIDIA** | **RTX Spark / RTX GPU** | **1 Petaflop (FP4)** / MediaTek Grace CPU + Blackwell RTX GPU / 128GB Unified LPDDR5X | 2026년 5월 발표된 Arm PC용 superchip. 미디어텍 Grace CPU와 Blackwell GPU를 단일 실리콘에 통합, 1 Petaflop(FP4)의 성능으로 로컬 에이전트 가동. (2026-07-07 업데이트) |
+| **AMD** | **Strix Halo / Gorgon Halo (Ryzen AI Max 300)** | 16 'Zen 5' CPU cores / Radeon 8060S (40 RDNA 3.5 CUs) / XDNA 2 NPU (50 TOPS) / Up to 128GB (Strix) → **192GB (Gorgon Halo, 2026 H2)** Unified LPDDR5X | **PS5 / RTX 4060급 GPU 성능** 통합. Strix Halo는 128GB unified memory로 70B~200B 모델 로컬 추론 지원. **Gorgon Halo**는 Computex 2026에서 RTX Spark 대응 SKU로 192GB 메모리 확장을 예고. (2026-07-11 PM 업데이트) |
+| **NVIDIA** | **RTX Spark / RTX GPU** | **1 Petaflop (FP4)** / 20-core Arm CPU (MediaTek) + Blackwell RTX GPU / 70B transistors (TSMC 3nm) / 128GB Unified LPDDR5X | GTC Taipei/COMPUTEX 2026 공식 런칭. **120B 로컬 에이전트 + 1M 토큰 컨텍스트** 목표. Microsoft **OpenShell** + Windows 보안 프리미티브로 primary PC 에이전트 샌드박스. Adobe Photoshop/Premiere 네이티브 재설계. (2026-07-11 PM 업데이트) |
 | **Qualcomm** | **Snapdragon X2** | NPU 80+ TOPS | Always-On 연결성 및 저전력 배터리 특화. |
 
 ## 2. Windows Copilot+ 생태계 변화 (2026.06)

@@ -59,8 +59,12 @@ graph TD
 
 ## 3. 에코시스템 및 MCP 연동
 
-### 🔌 MCP Native Support
-Supermemory는 모델 컨텍스트 프로토콜(MCP)의 자체 서버로 동작하여, Claude Desktop, Cursor, VS Code, Windsurf, Claude Code 등 서로 다른 AI 어시스턴트(Model-Agnostic Tools) 간에 **크로스 세션 영구 메모리를 완벽히 공유**하게 함으로써 에이전트의 세션 간 기억상실(Amnesia) 문제를 해결하고 중복 입력 오버헤드를 막아줍니다. (2026-07-08 업데이트) Supermemory MCP server는 대화에서 핵심 팩트를 자동 추출하고, 로컬 및 클라우드 지식을 융합하는 하이브리드 검색을 통해 AI 코딩 및 협업 중 맥락이 유실되는 문제를 방지합니다.
+### 🔌 MCP Server 4.0 Native Support (2026-07-11 PM 업데이트)
+Supermemory **MCP Server 4.0**은 Cloudflare Workers + Durable Objects 위에서 동작하며, LongMemEval·LoCoMo·ConvoMem 3대 AI 메모리 벤치마크에서 **#1** 기록을 달성했습니다. Claude Desktop, Cursor, VS Code, Windsurf, Claude Code 등 Model-Agnostic 클라이언트 간 **크로스 세션 영구 메모리**를 공유합니다.
+
+**MCP Resources (URI)**:
+- `supermemory://profile` — 안정적 선호도 + 최근 활동
+- `supermemory://projects` — 프로젝트별 메모리 스코프 목록
 - **설치 명령어**: `npx -y install-mcp@latest https://mcp.supermemory.ai/mcp --client claude --oauth=yes` 를 통해 클라이언트에 연동.
 - **제공되는 3대 핵심 도구**:
     - `memory`: 대화 중 중요한 사실이나 지식을 Supermemory에 영구 기록(또는 삭제).

@@ -1,6 +1,10 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-07-11 | RESEARCH | Web | 6 | PM: LlamaWeb WebGPU, vLLM-RBLN v0.11 Transformers v5, Furiosa FXB/TCL, Gorgon Halo 192GB, Supermemory MCP 4.0 벤치마크 탐색 |
+| 2026-07-11 | INGEST | raw/ | 6 | PM: 6개 신규 원천(LiteRT-LM API, LlamaWeb, vLLM-RBLN, Furiosa FXB, Gorgon Halo, Supermemory MCP 4.0) 수집 |
+| 2026-07-11 | SYNTHESIZE | wiki/ | 6 | PM: 6개 위키 증분 합성 및 연구_주제_관리.md PM 비고 업데이트 |
+| 2026-07-11 | LINT | Root / wiki | ALL | PM: raw/ 정리, log.md 갱신 |
 | 2026-07-11 | RESEARCH | Web | 6 | LiteRT-LM speculative decoding, WASM 3.0 WebGPU, Rebellions/EXAONE, Furiosa RNGD, AI PC Trends, Supermemory MCP 최신 지식 탐색 완료 |
 | 2026-07-11 | INGEST | raw/ | 6 | 6개 핵심 연구 주제에 대한 원천 표준 데이터 수집 및 저장 완료 |
 | 2026-07-11 | SYNTHESIZE | wiki/ | 6 | 스마트폰 LLM 서빙, WebGPU/WebNN 표준, 리벨리온 및 프리오사 NPU 최적화, 온디바이스 AI PC, Supermemory MCP 위키 합성 및 연구_주제_관리.md 비고 업데이트 완료 |

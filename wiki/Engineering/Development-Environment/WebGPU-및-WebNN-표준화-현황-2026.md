@@ -41,6 +41,16 @@ NPU, GPU, CPU 등 하드웨어 가속기를 직접 제어하여 신경망 추론
 - **브라우저 엔진 패리티**: Chromium과 Firefox에 이어 WebKit(Safari)도 2026년 중반 Memory64 및 Wasm 3.0 주요 명세의 구현을 완료하면서 전 브라우저 엔진에 걸친 풀 표준 패리티가 확립되었습니다.
 - **IndexedDB 캐싱**: 모바일 브라우저의 1~4GB 가용 메모리 제약 하에, IndexedDB를 가중치 캐시 저장소로 활용하여 최초 1회 로드 후에는 네트워크 전송 없이 오프라인 기동 및 로컬 가속을 보장합니다.
 
+## 5. LlamaWeb: llama.cpp WebGPU 백엔드 (Microsoft Research, 2026.05)
+
+**LlamaWeb**은 llama.cpp용 네이티브 WebGPU 백엔드로, GGUF 양자화 포맷(Q4_K, Q4_0 등)을 템플릿 GPU 커널로 직접 지원합니다. 16개 디바이스·8개 벤더 평가 결과:
+
+- 기존 브라우저 LLM 프레임워크 대비 **메모리 29–33% 절감**
+- 4개 GPU 벤더에서 **디코드 처리량 45–69% 향상**
+- Static memory planning + tunable kernel library로 cross-device 이식성 확보
+
+WebLLM/Transformers.js와 병행 평가 시, llama.cpp 생태계 사용자는 LlamaWeb 경로로 WebGPU 가속을 즉시 활용할 수 있습니다. 참고: [Microsoft Research Publication](https://www.microsoft.com/en-us/research/publication/llamas-on-the-web-memory-efficient-performance-portable-and-multi-precision-llm-inference-with-webgpu/).
+
 ---
 **관련 문서**:
 - [[wiki/Engineering/Development-Environment/000_Development-Environment-MOC.md]]

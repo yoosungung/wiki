@@ -55,10 +55,29 @@ related_raw: ["[[2026-06-04-Rebellions-ATOM-Max-EXAONE-4.5-Research.md]]", "[[20
 ### 양자화 (Quantization)
 - **INT4/FP8 활용**: ATOM-Max의 INT4(1024 TOPS) 연산력을 극대화하기 위해 4-bit 양자화 적용 권장. FP16 대비 2배 이상의 속도 향상.
 
-## 4. 실전 최적화 체크리스트
+## 4. RBLN SDK v0.11.0 / vLLM-RBLN v0.11.1a6 (2026-07-11 PM 업데이트)
 
-1.  **모델 컴파일**: `optimum-cli`를 사용하여 EXAONE 4.5를 RBLN 바이너리로 변환.
-2.  **병렬화 최적화**: 33B 모델의 경우 8개 이상의 ATOM-Max 칩을 활용한 Tensor Parallelism(TP) 설정 권장.
+### Transformers v5 마이그레이션
+- RBLN SDK **v0.11.0**이 **Transformers v5**를 최초 지원. 컴파일 모델 포맷이 변경되어 **이전 SDK 아티팩트는 재컴파일 필수**.
+- `RBLNGemma4ForCausalLM` 클래스 추가.
+
+### vLLM-RBLN 신규 모델 및 환경 변수
+- **vLLM v0.22.0** 지원, **Gemma4**·**EXAONE-4.5-33B** Model Zoo 등록.
+- `VLLM_RBLN_TP_SIZE` → `VLLM_RBLN_NUM_DEVICES_PER_LOCAL_RANK` (레거시 이름은 deprecation warning).
+- NPU 타겟: `RBLN_FORCE_NPU_NAME` (구 `RBLN_TARGET_SOC`).
+
+```bash
+uv pip install vllm-rbln --extra-index-url https://wheels.vllm.ai/0.22.0/cpu --torch-backend cpu
+```
+
+### Red Hat OpenShift AI GA
+- 듀얼 ATOM Max = 8 NPU / **128GB NPU 메모리** → 70B 모델 서빙.
+- 컨테이너: `repo.rebellions.ai/rebellions/vllm-rbln-rhel9:3.3`
+
+## 5. 실전 최적화 체크리스트
+
+1.  **모델 컴파일**: `optimum-cli`를 사용하여 EXAONE 4.5를 RBLN 바이너리로 변환. SDK v0.11.0+ 사용 시 Transformers v5 호환 포맷으로 재컴파일 확인.
+2.  **병렬화 최적화**: 33B 모델의 경우 8개 이상의 ATOM-Max 칩을 활용한 Tensor Parallelism(TP) 설정 권장. `VLLM_RBLN_NUM_DEVICES_PER_LOCAL_RANK`로 디바이스 수 지정.
 3.  **Physical AI 연동**: LG 로봇 KAPEX 등 물리적 하드웨어와의 실시간 추론 연동 테스트 수행.
 
 ---

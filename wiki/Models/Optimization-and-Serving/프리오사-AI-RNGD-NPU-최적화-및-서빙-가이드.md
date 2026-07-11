@@ -45,7 +45,27 @@ RNGD는 최신 오픈소스 모델들에 대해 최적화된 성능을 제공합
 - **Qwen 3 (MoE 포함)**: 최신 MoE 아키텍처 및 Prefix Caching 지원.
 - **GPT-OSS & Solar Open**: 다양한 글로벌 오픈소스 모델 지원.
 
-## 4. 상용화 및 클라우드 (NPUaaS)
+## 4. SDK 2026.3: TCL/FXB/Overlap Scheduler (2026-07-11 PM 업데이트)
+
+### TCL 커널 프레임워크 + furiosa-kernels
+텐서 수축 연산(TCP 아키텍처 정합)을 1급 원시 타입으로 선언하는 **TCL (Tensor Contraction Language)** eDSL. `@tcl.kernel`로 attention/MoE/vision encoder 블록을 재사용 조합하여 신규 모델 enablement 속도를 획기적으로 단축.
+
+### FXB (Furiosa Executable Bundle)
+`.fxb` = `manifest.json` + 컴파일 EDF 커널. **Architecture fingerprint**로 fine-tuned 변형 모델에 호환 번들 자동 매칭.
+
+```bash
+fxb download furiosa-ai/Qwen3-8B-FP8
+fxb check Qwen/Qwen3-8B-FP8
+furiosa-llm serve Qwen/Qwen3-8B-FP8
+```
+
+### Overlap Scheduler (실험적)
+NPU forward pass 사이 CPU 스케줄링 병목 제거. `--enable-overlap-scheduling`으로 활성화.
+
+### 신규 대규모 모델
+Qwen3-VL-32B (RNGD 최초 VLM), gpt-oss-120b, Solar-Open-100B, Qwen3-30B-A3B, **K-EXAONE-236B-A23B** (NVFP4A16, hybrid attention).
+
+## 5. 상용화 및 클라우드 (NPUaaS)
 
 - **Mass Production**: **2026년 1월 양산 시작**. 현재 NXT RNGD 서버 및 PCIe 카드 글로벌 공급 중.
 - **Samsung Cloud Platform (SCP)**: **2026년 7월** RNGD 기반 **NPU-as-a-Service (NPUaaS)** 공식 런칭 확정. 국내 최초의 NPU 인프라 서비스로, 클라우드 스토리지 및 네트워킹과 통합된 유연한 구성을 제공.
