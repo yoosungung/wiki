@@ -3,8 +3,8 @@ title: "WebGPU 및 WebNN 표준화 현황 (2026)"
 tags: ["Engineering", "Development-Environment", "WebGPU", "WebNN", "W3C", "Standardization"]
 type: "wiki"
 status: "published"
-last_updated: "2026-07-10"
-related_raw: ["[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-07-01-webgpu-webnn-wasm3-webmcp.md]]", "[[2026-07-10-web-inference-wasm-3.0.md]]"]
+last_updated: "2026-07-11"
+related_raw: ["[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-07-01-webgpu-webnn-wasm3-webmcp.md]]", "[[2026-07-10-web-inference-wasm-3.0.md]]", "[[2026-07-11-webgpu_wasm_3_0_webnn_webllm_browser_serving.md]]"]
 ---
 
 # 🌐 WebGPU 및 WebNN 표준화 현황 (2026)
@@ -37,8 +37,8 @@ NPU, GPU, CPU 등 하드웨어 가속기를 직접 제어하여 신경망 추론
 - **역할**: 에이전트가 웹의 DOM을 복잡하게 해석할 필요 없이 웹페이지가 노출하는 도구(Tools), 입력 양식, 상태 데이터를 직접 호출하여 자율 동작(예: 예약, 양식 제출)을 수행합니다.
 
 ## 4. 웹 기반 LLM 서빙 및 실행 가속의 영향
-- **Wasm 3.0 Memory64**: Wasm 3.0의 핵심 기능으로 Memory64가 프로덕션에 공식 적용되면서 기존 32비트의 4GB 메모리 주소 제한이 극복되었습니다. 최대 16EB(Exabytes)까지 주소 공간이 확장되어, 브라우저 환경에서 LLM 가중치 파일을 분할하거나 메모리 오버플로우 걱정 없이 통째로 메모리에 로드(1B~8B 매개변수 모델)하여 실행할 수 있게 되었습니다.
-- **브라우저 엔진 패리티**: Chromium과 Firefox에 이어 WebKit(Safari)도 2026년 중반 Memory64 구현을 완료하면서 전 브라우저 엔진에 걸친 표준 패리티가 확립되었습니다.
+- **Wasm 3.0 Memory64 및 표준 런칭**: 2025년 9월 공식 표준 격상 및 런칭이 완료된 WebAssembly 3.0은 단순한 샌드박스를 넘어 보편적 라이브 런타임으로 이행했습니다. 핵심 기능인 **Memory64**를 통해 기존 32비트의 4GB 힙 메모리 한계를 극복하고 브라우저 실구현 기준 최대 **16GB**까지 주소 공간이 확장되어, 대용량 LLM 가중치 데이터(1B~8B 매개변수 모델)를 통째로 로드하여 실행할 수 있습니다. 또한 **Multiple Memories**를 기본 탑재하여 단일 모듈 내 격리된 다중 메모리 영역 접근 및 WebGPU 버퍼와의 zero-copy 매핑을 지원하며, Component Model(WASIp3) 도입을 통해 클라우드와 브라우저를 관통하는 이식성을 확보했습니다.
+- **브라우저 엔진 패리티**: Chromium과 Firefox에 이어 WebKit(Safari)도 2026년 중반 Memory64 및 Wasm 3.0 주요 명세의 구현을 완료하면서 전 브라우저 엔진에 걸친 풀 표준 패리티가 확립되었습니다.
 - **IndexedDB 캐싱**: 모바일 브라우저의 1~4GB 가용 메모리 제약 하에, IndexedDB를 가중치 캐시 저장소로 활용하여 최초 1회 로드 후에는 네트워크 전송 없이 오프라인 기동 및 로컬 가속을 보장합니다.
 
 ---

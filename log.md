@@ -1,6 +1,10 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-07-11 | RESEARCH | Web | 6 | LiteRT-LM speculative decoding, WASM 3.0 WebGPU, Rebellions/EXAONE, Furiosa RNGD, AI PC Trends, Supermemory MCP 최신 지식 탐색 완료 |
+| 2026-07-11 | INGEST | raw/ | 6 | 6개 핵심 연구 주제에 대한 원천 표준 데이터 수집 및 저장 완료 |
+| 2026-07-11 | SYNTHESIZE | wiki/ | 6 | 스마트폰 LLM 서빙, WebGPU/WebNN 표준, 리벨리온 및 프리오사 NPU 최적화, 온디바이스 AI PC, Supermemory MCP 위키 합성 및 연구_주제_관리.md 비고 업데이트 완료 |
+| 2026-07-11 | LINT | Root / wiki | ALL | 2026-07-11 데일리 노트 생성, index.md 갱신, 과거 데일리 노트 삭제 및 raw/ 폴더 정리 완료 |
 | 2026-07-10 | RESEARCH | Web | 1 | WebAssembly 3.0 Memory64 정식 표준 런칭 및 WebGPU/WebNN AI 가속 관련 최신 지식 탐색 완료 |
 | 2026-07-10 | INGEST | raw/ | 1 | WebAssembly 3.0 및 브라우저 AI 하드웨어 가속 표준 원천 데이터 수집 완료 |
 | 2026-07-10 | SYNTHESIZE | wiki/ | 1 | WebGPU 및 WebNN 표준화 현황 위키 합성 및 연구_주제_관리.md 비고 업데이트 완료 |
