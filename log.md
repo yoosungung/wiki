@@ -1,6 +1,10 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-07-12 | RESEARCH | Web | 3 | LiteRT-LM MTP 태스크별 권장·Kotlin API, vLLM-RBLN Automatic Compilation, Ryzen AI Halo 출하/NPU 한계 탐색 완료 |
+| 2026-07-12 | INGEST | raw/ | 3 | Gemma4 공식 벤치·RBLN SDK 0.11·AI PC NPU reality 원천 3건 수집 |
+| 2026-07-12 | SYNTHESIZE | wiki/ | 3 | 스마트폰 LLM 서빙·리벨리온 EXAONE·온디바이스 AI PC 위키 증분 합성 및 연구_주제_관리.md 비고 갱신 |
+| 2026-07-12 | LINT | Root / wiki | ALL | 2026-07-12 데일리 노트 생성, index.md 갱신, 과거 데일리(2026-07-10) 삭제 및 raw/ 정리 |
 | 2026-07-11 | RESEARCH | Web | 6 | PM: LlamaWeb WebGPU, vLLM-RBLN v0.11 Transformers v5, Furiosa FXB/TCL, Gorgon Halo 192GB, Supermemory MCP 4.0 벤치마크 탐색 |
 | 2026-07-11 | INGEST | raw/ | 6 | PM: 6개 신규 원천(LiteRT-LM API, LlamaWeb, vLLM-RBLN, Furiosa FXB, Gorgon Halo, Supermemory MCP 4.0) 수집 |
 | 2026-07-11 | SYNTHESIZE | wiki/ | 6 | PM: 6개 위키 증분 합성 및 연구_주제_관리.md PM 비고 업데이트 |

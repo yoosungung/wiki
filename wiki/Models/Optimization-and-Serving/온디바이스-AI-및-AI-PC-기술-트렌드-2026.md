@@ -3,9 +3,9 @@ title: "온디바이스 AI 및 AI PC 기술 트렌드 (2026)"
 tags: ["On-Device", "AI-PC", "NPU", "Lunar-Lake", "Strix-Point", "Copilot+", "Agentic-AI"]
 type: "wiki"
 status: "published"
-last_updated: "2026-07-11"
-updated: "2026-07-11"
-related_raw: ["[[2026-06-15-On-Device-AI-PC-Trends-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-on_device_ai_pc_agentic_trends.md]]", "[[2026-06-28-on_device_ai_trends_and_agentic_ai_2026.md]]", "[[2026-06-30-on_device_ai_trends_intel_amd_nvidia.md]]", "[[2026-07-01-on-device-ai-pc-hardware-trends.md]]", "[[2026-07-07-on-device-ai-trends-2026-ryzen-ai-max-panther-lake-rtx-spark.md]]", "[[2026-07-11-on_device_ai_pc_trends_strix_halo_panther_lake_rtx_spark.md]]"]
+last_updated: "2026-07-12"
+updated: "2026-07-12"
+related_raw: ["[[2026-06-15-On-Device-AI-PC-Trends-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-on_device_ai_pc_agentic_trends.md]]", "[[2026-06-28-on_device_ai_trends_and_agentic_ai_2026.md]]", "[[2026-06-30-on_device_ai_trends_intel_amd_nvidia.md]]", "[[2026-07-01-on-device-ai-pc-hardware-trends.md]]", "[[2026-07-07-on-device-ai-trends-2026-ryzen-ai-max-panther-lake-rtx-spark.md]]", "[[2026-07-11-on_device_ai_pc_trends_strix_halo_panther_lake_rtx_spark.md]]", "[[2026-07-12-on-device-ai-pc-ryzen-ai-halo-npu-reality.md]]"]
 ---
 
 # 💻 온디바이스 AI 및 AI PC 기술 트렌드 (2026)
@@ -39,9 +39,24 @@ Microsoft의 Copilot+ 업데이트는 AI 성능의 가시화와 범용성에 초
 - **Local Agentic AI**: OpenClaw 등 MAS 프레임워크가 AI PC의 NPU를 직접 활용하여 이메일 관리, 코드 작성, 시스템 설정을 자율적으로 수행합니다.
 - **통합 메모리(Unified Memory)의 중요성**: 2026년에는 NPU TOPS 수치보다 **대용량 통합 메모리(128GB~192GB)** 확보가 "Frontier" 급 모델을 로컬에서 구동하기 위한 핵심 지표로 부상했습니다. **Strix Halo**가 이 시장을 주도하고 있습니다.
 
-## 4. 향후 과제
+## 4. Ryzen AI Halo 출하 및 NPU vs iGPU 현실 (2026-07-12 업데이트)
+
+### AMD Ryzen AI Halo (Strix Halo Mini PC)
+- **Ryzen AI Max+ 395** 기반 미니 PC 출하: 128GB LPDDR5x-8000 UMA, Radeon 8060S, ~**120W TDP**.
+- 소프트웨어: Debian 계열 **AMD Ryzen AI Developer Platform**, Lemonade Server / LM Studio / 에이전틱 플레이북(n8n) 문서화.
+- 포지셔닝: NVIDIA **DGX Spark / RTX Spark** 대응. 후속 **Gorgon Halo(Ryzen AI Max 400)** 는 최대 **192GB** UMA 예고.
+
+### NPU TOPS ≠ LLM 속도
+- Copilot+ **40+ TOPS** 는 Windows AI 기능 게이트이며, 대형 로컬 LLM 성능을 보장하지 않음.
+- 주류 NPU 경로 천장: 약 **~4B** 파라미터, Phi Silica ~**20 tok/s**.
+- Autoregressive decode는 **메모리 대역폭 바운드**. Ollama/llama.cpp/LM Studio는 기본으로 **iGPU/CPU** 경로를 사용(NPU는 ONNX+QNN/OpenVINO 옵트인).
+- 예외: Max+ 395에서 양자화 **70B ~14 tok/s** — 작업은 **iGPU**(최대 ~96GB 할당)에서 수행되며 NPU가 아님.
+- Windows AI Foundry는 NPU 전용에서 GPU/CPU 경로로 확장 중(Phi Silica on GPU experimental).
+
+## 5. 향후 과제
 - **RAM 증설의 압박**: 로컬 LLM 및 에이전트의 멀티태스킹을 위해 **32GB RAM**이 최소 사양으로 요구되고 있습니다.
 - **통합 메모리 대역폭**: NPU 성능만큼이나 메모리 대역폭(LPDDR5x/LPDDR6) 확보가 온디바이스 성능의 척도가 되고 있습니다.
+- **구매 매트릭스**: Copilot+ AI PC(배터리·Windows AI) vs 96GB+ UMA/dGPU 머신(30B+ 로컬 LLM)을 목적별로 분리.
 
 ---
 **관련 문서**:
