@@ -29,7 +29,7 @@ Claude Code의 개발자인 Boris가 공개한 AI 개발 환경 최적화 팁 12
 11. **긴 작업은 백그라운드에서 처리**: 백그라운드 에이전트나 `ralph-wiggum` 플러그인을 활용하고, 샌드박스 환경에서는 `--permission-mode=dontAsk` 설정을 사용합니다.
     *   [ralph-wiggum 플러그인 깃헙](https://lnkd.in/g_rFKyDv)
 12. **AI에게 '검증 수단' 제공**: Claude가 코드를 작성한 후 스스로 검증할 수 있는 루프를 만들어 품질을 높입니다.
-    *   [Claude Chrome 확장 프로그램](https.lnkd.in/gkq6N88d)
+    *   [Claude Chrome 확장 프로그램](https://lnkd.in/gkq6N88d)
 
 ### 추가 팁
 
