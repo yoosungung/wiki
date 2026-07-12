@@ -19,11 +19,11 @@ Supermemory는 인프라 관리 부담을 줄이고 극도로 낮은 지연 시�
 
 ```mermaid
 graph TD
-    User["🤖 AI 에이전트 (Claude/Cursor)"] -->|MCP / API Query| Workers["⚡ Cloudflare Workers (오케스트레이션)"]
-    Workers -->|실시간 세션 유지| DO["🔄 Durable Objects (State & Lock)"]
-    Workers -->|임베딩 변환 (bge-small)| WorkersAI["🧠 Workers AI (Embedding)"]
-    Workers -->|구조화 메타데이터 & 인덱스 매핑| D1["💾 Cloudflare D1 (SQLite)"]
-    Workers -->|시맨틱 벡터 검색| Vectorize["🔍 Cloudflare Vectorize (Vector DB)"]
+    User["🤖 AI 에이전트 (Claude/Cursor)"] -->|"MCP / API Query"| Workers["⚡ Cloudflare Workers (오케스트레이션)"]
+    Workers -->|"실시간 세션 유지"| DO["🔄 Durable Objects (State & Lock)"]
+    Workers -->|"임베딩 변환 (bge-small)"| WorkersAI["🧠 Workers AI (Embedding)"]
+    Workers -->|"구조화 메타데이터 & 인덱스 매핑"| D1["💾 Cloudflare D1 (SQLite)"]
+    Workers -->|"시맨틱 벡터 검색"| Vectorize["🔍 Cloudflare Vectorize (Vector DB)"]
 ```
 
 ### 🛠️ 구성 요소 상세

@@ -48,17 +48,17 @@ related_raw: ["[[2026-07-07-general-agent-protocols-agent-protocol-and-google-a2
 
 ```mermaid
 graph TD
-    User([개발자 / 사용자])
-    Editor[코드 에디터 / IDE]
-    Client[일반 클라이언트 UI]
-    AgentA[메인 AI 에이전트]
-    AgentB[서브 AI 에이전트]
-    Tool[로컬 파일 / DB / API]
+    User(["개발자 / 사용자"])
+    Editor["코드 에디터 / IDE"]
+    Client["일반 클라이언트 UI"]
+    AgentA["메인 AI 에이전트"]
+    AgentB["서브 AI 에이전트"]
+    Tool["로컬 파일 / DB / API"]
 
-    Editor -->|ACP (stdin/stdout)| AgentA
-    Client -->|Agent Protocol (REST API)| AgentA
-    AgentA -->|A2A (HTTP/WebSocket)| AgentB
-    AgentA -->|MCP (JSON-RPC)| Tool
+    Editor -->|"ACP (stdin/stdout)"| AgentA
+    Client -->|"Agent Protocol (REST API)"| AgentA
+    AgentA -->|"A2A (HTTP/WebSocket)"| AgentB
+    AgentA -->|"MCP (JSON-RPC)"| Tool
 ```
 
 * **MCP (Model Context Protocol)**: **에이전트 $\rightarrow$ 컨텍스트/도구**의 연결을 규격화 (stateless 데이터 제공 중심).
