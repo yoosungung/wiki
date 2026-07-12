@@ -3,9 +3,9 @@ title: "WebGPU 및 WebNN 표준화 현황 (2026)"
 tags: ["Engineering", "Development-Environment", "WebGPU", "WebNN", "W3C", "Standardization"]
 type: "wiki"
 status: "published"
-last_updated: "2026-07-11"
-updated: "2026-07-11"
-related_raw: ["[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-07-01-webgpu-webnn-wasm3-webmcp.md]]", "[[2026-07-10-web-inference-wasm-3.0.md]]", "[[2026-07-11-webgpu_wasm_3_0_webnn_webllm_browser_serving.md]]"]
+last_updated: "2026-07-12"
+updated: "2026-07-12"
+related_raw: ["[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-07-01-webgpu-webnn-wasm3-webmcp.md]]", "[[2026-07-10-web-inference-wasm-3.0.md]]", "[[2026-07-11-webgpu_wasm_3_0_webnn_webllm_browser_serving.md]]", "[[2026-07-12-webllm-3w-opfs-json-workers.md]]"]
 ---
 
 # 🌐 WebGPU 및 WebNN 표준화 현황 (2026)
@@ -51,6 +51,20 @@ NPU, GPU, CPU 등 하드웨어 가속기를 직접 제어하여 신경망 추론
 - Static memory planning + tunable kernel library로 cross-device 이식성 확보
 
 WebLLM/Transformers.js와 병행 평가 시, llama.cpp 생태계 사용자는 LlamaWeb 경로로 WebGPU 가속을 즉시 활용할 수 있습니다. 참고: [Microsoft Research Publication](https://www.microsoft.com/en-us/research/publication/llamas-on-the-web-memory-efficient-performance-portable-and-multi-precision-llm-inference-with-webgpu/).
+
+## 6. WebLLM v0.2.83 · 3W 스택 · OPFS (2026-07-12)
+
+[`@mlc-ai/web-llm`](https://github.com/mlc-ai/web-llm) **v0.2.83**(2026-04)은 OpenAI Chat Completions 호환(스트리밍·JSON-mode·logit 제어) 인브라우저 엔진이다. 구조화 JSON 생성은 **WASM** 모델 라이브러리 경로에서 실행되며([JSON Playground](https://huggingface.co/spaces/mlc-ai/WebLLM-JSON-Playground)), 추론은 WebGPU로 가속한다. 논문([arXiv:2412.15803](https://arxiv.org/abs/2412.15803)) 기준 동일 디바이스 네이티브 대비 최대 **~80%** 성능.
+
+| 계층 (Mozilla.ai **3W**) | 역할 |
+| --- | --- |
+| WebLLM | 양자화 가중치 로드 + WebGPU 디코드 |
+| WASM | 에이전트 로직·전처리의 네이티브급 실행 |
+| WebWorkers / Service Workers | 메인 스레드 UI 블로킹 방지·모델 수명주기 관리 |
+
+- **캐시**: IndexedDB에 더해 **OPFS(Origin Private File System)**에 가중치를 저장해 재방문 로드를 단축.
+- **운영**: 다중 WebLLM 인스턴스는 브라우저 메모리 고갈 위험 → 모델 전환 시 engine terminate/reinit 권장.
+- 데모: [chat.webllm.ai](https://chat.webllm.ai/) · 3W 참고: [Mozilla.ai](https://blog.mozilla.ai/3w-for-in-browser-ai-webllm-wasm-webworkers/)
 
 ---
 **관련 문서**:

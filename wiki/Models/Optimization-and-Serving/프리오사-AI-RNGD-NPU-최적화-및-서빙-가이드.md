@@ -1,9 +1,9 @@
 ---
 title: "프리오사 AI RNGD NPU 최적화 및 서빙 가이드 (2026)"
 tags: ["FuriosaAI", "RNGD", "Renegade", "NPU", "Inference", "vLLM", "HBM3"]
-last_updated: "2026-07-11"
-updated: "2026-07-11"
-related_raw: ["[[2026-06-16-Research-Synthesis-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-furiosa_rngd_npu_serving_optimization.md]]", "[[2026-06-28-furiosa_rngd_npu_llm_serving_optimization.md]]", "[[2026-06-30-furiosa_rngd_furiosa_llm.md]]", "[[2026-07-01-furiosa-rngd-npu-hbm3-inference.md]]", "[[2026-07-07-furiosa-rngd-prefix-aware-dp-router.md]]", "[[2026-07-11-furiosa_rngd_npu_tcp_prefix_aware_router.md]]"]
+last_updated: "2026-07-12"
+updated: "2026-07-12"
+related_raw: ["[[2026-06-16-Research-Synthesis-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-furiosa_rngd_npu_serving_optimization.md]]", "[[2026-06-28-furiosa_rngd_npu_llm_serving_optimization.md]]", "[[2026-06-30-furiosa_rngd_furiosa_llm.md]]", "[[2026-07-01-furiosa-rngd-npu-hbm3-inference.md]]", "[[2026-07-07-furiosa-rngd-prefix-aware-dp-router.md]]", "[[2026-07-11-furiosa_rngd_npu_tcp_prefix_aware_router.md]]", "[[2026-07-12-furiosa-sdk-dp-routing-scoring-weights.md]]"]
 ---
 
 # 🚀 프리오사 AI RNGD NPU 최적화 및 서빙 가이드 (2026)
@@ -65,6 +65,26 @@ NPU forward pass 사이 CPU 스케줄링 병목 제거. `--enable-overlap-schedu
 
 ### 신규 대규모 모델
 Qwen3-VL-32B (RNGD 최초 VLM), gpt-oss-120b, Solar-Open-100B, Qwen3-30B-A3B, **K-EXAONE-236B-A23B** (NVFP4A16, hybrid attention).
+
+### Scoring DP Router 가중치·가상 Prefix Cache (2026-07-12)
+
+공식 Data-Parallel Routing 가이드 기준, `final_score = prefix_weight * prefix_score + load_weight * load_score`. Prefix locality는 replica별 KV 이벤트를 추적하는 **virtual prefix cache**로 계산되며, replica 간 KV를 이동하지 않는다.
+
+| Profile | Prefix/Load | 권장 워크로드 |
+| --- | --- | --- |
+| `balanced` (기본) | 0.55 / 0.45 | 혼합·미지 트래픽 |
+| `locality` | 0.90 / 0.10 | 반복 시스템 프롬프트·멀티턴·RAG prefix (`prefix-aware` 대체명) |
+| `load` | 0.10 / 0.90 | 공유 prefix 희소·균등 부하 우선 |
+
+Prefix caching 비활성 시 자동으로 `load` 프로필로 폴백. Python은 `SchedulerConfig(data_parallel_routing_policy=..., data_parallel_scoring_profile=...)`로 동일 설정. VLM 이미지 재사용은 안정 UUID + `--mm-processor-cache-gb`.
+
+```bash
+furiosa-llm serve <model> --data-parallel-size 2 \
+  --data-parallel-routing-policy scoring \
+  --data-parallel-scoring-profile locality
+```
+
+참고: [Data-Parallel Routing](https://developer.furiosa.ai/latest/en/furiosa_llm/data-parallel-routing.html)
 
 ## 5. 상용화 및 클라우드 (NPUaaS)
 

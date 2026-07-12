@@ -1,6 +1,10 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-07-12 | RESEARCH | Web | 3 | PM: Furiosa DP scoring 가중치·virtual prefix cache, Supermemory `:6767`/CLI/context, WebLLM 3W·OPFS 탐색 완료 |
+| 2026-07-12 | INGEST | raw/ | 3 | PM: Furiosa DP routing, Supermemory local/MCP, WebLLM 3W 원천 3건 수집 |
+| 2026-07-12 | SYNTHESIZE | wiki/ | 3 | PM: 프리오사 RNGD·Supermemory MCP·WebGPU/WebLLM 위키 증분 합성 및 연구_주제_관리.md 비고 갱신 |
+| 2026-07-12 | LINT | Root / wiki | ALL | PM: 데일리 노트 갱신, log 동기화, raw/ 정리 |
 | 2026-07-12 | RESEARCH | Web | 3 | LiteRT-LM MTP 태스크별 권장·Kotlin API, vLLM-RBLN Automatic Compilation, Ryzen AI Halo 출하/NPU 한계 탐색 완료 |
 | 2026-07-12 | INGEST | raw/ | 3 | Gemma4 공식 벤치·RBLN SDK 0.11·AI PC NPU reality 원천 3건 수집 |
 | 2026-07-12 | SYNTHESIZE | wiki/ | 3 | 스마트폰 LLM 서빙·리벨리온 EXAONE·온디바이스 AI PC 위키 증분 합성 및 연구_주제_관리.md 비고 갱신 |
