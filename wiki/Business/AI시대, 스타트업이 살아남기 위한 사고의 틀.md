@@ -46,7 +46,7 @@ Global Brain의 한국 대표인 이경훈님의 LinkedIn 게시물은 빠르게
 *   `https://www.cbinsights.com/research/report/artificial-intelligence-top-startups-2024/`
 *   `https://techcrunch.com/2025/03/22/the-20-hottest-open-source-startups-of-2024/`
 *   `https://www.geekwire.com/2025/legendary-venture-capitalist-vinod-khosla-on-the-single-most-important-decision-for-startup-founders/`
-*   `https.charlesandsystems.substack.com/p/paul-grahams-playbook-for-ai-startup`
+*   `https://charlesandsystems.substack.com/p/paul-grahams-playbook-for-ai-startup`
 *   `https://generativeai.pub/ive-watched-847-ai-startups-die-here-s-what-nobody-tells-you-34b6c37adfb0`
 *   `https://www.pwc.com/us/en/tech-effect/ai-analytics/ai-predictions.html`
 *   `https://d-a-ch.tistory.com/m/306`
