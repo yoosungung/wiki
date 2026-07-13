@@ -5,7 +5,7 @@ type: "wiki"
 status: "published"
 last_updated: "2026-07-13"
 updated: "2026-07-13"
-related_raw: ["[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]", "[[2026-07-12-supermemory-local-6767-cli-mcp-context.md]]", "[[raw/2026-07-13-sadik-mohammad-rag-systems-limitations.md]]"]
+related_raw: ["[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]", "[[2026-07-12-supermemory-local-6767-cli-mcp-context.md]]", "[[raw/2026-07-13-sadik-mohammad-rag-systems-limitations.md]]", "[[2026-07-13-supermemory-openclaw-claude-plugins.md]]"]
 ---
 
 # 🧠 Supermemory: 에이전트 네이티브 메모리 시스템
@@ -111,6 +111,34 @@ const { profile, searchResults } = await client.profile({
   }
 }
 ```
+
+### 🔌 OpenClaw · Claude Code 플러그인 (2026-07-13 PM)
+
+에이전트 하네스별 1st-party 플러그인이 MCP 범용 클라이언트 경로를 보완한다 (Pro+; 셀프호스트 시 `baseUrl`/`SUPERMEMORY_API_URL` → `:6767`).
+
+**OpenClaw** ([`@supermemory/openclaw-supermemory`](https://github.com/supermemoryai/openclaw-supermemory)):
+
+```bash
+openclaw plugins install @supermemory/openclaw-supermemory
+openclaw supermemory setup          # API 키
+openclaw supermemory setup-advanced # container / captureMode / customContainers
+openclaw gateway restart
+```
+
+- Auto-Recall / Auto-Capture 기본 on. Tools: `supermemory_store|search|forget|profile`. Slash: `/remember`, `/recall`.
+- `containerTag` 기본값 `openclaw_{hostname}`; `enableCustomContainerTags`로 work/personal 라우팅.
+
+**Claude Code** ([`supermemoryai/claude-supermemory`](https://github.com/supermemoryai/claude-supermemory)):
+
+```bash
+/plugin marketplace add supermemoryai/claude-supermemory
+/plugin install supermemory
+export SUPERMEMORY_CC_API_KEY=sm_...
+```
+
+- **Reasoned recall**: 매 턴 Claude가 검색 필요 여부를 판단한 뒤에만 자동 검색(권한 프롬프트 없음) → 플랜 사용량·노이즈 제어.
+- Team vs personal: `.claude/.supermemory-claude/config.json`의 `repoContainerTag` / `personalContainerTag`.
+- 구 플러그인명 `claude-supermemory` → `supermemory` 리네임으로 in-place 업데이트 불가; marketplace update 후 재설치.
 
 ---
 **관련 문서**:

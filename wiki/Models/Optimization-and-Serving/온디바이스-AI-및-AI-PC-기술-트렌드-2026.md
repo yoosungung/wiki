@@ -3,9 +3,9 @@ title: "온디바이스 AI 및 AI PC 기술 트렌드 (2026)"
 tags: ["On-Device", "AI-PC", "NPU", "Lunar-Lake", "Strix-Point", "Copilot+", "Agentic-AI"]
 type: "wiki"
 status: "published"
-last_updated: "2026-07-12"
-updated: "2026-07-12"
-related_raw: ["[[2026-06-15-On-Device-AI-PC-Trends-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-on_device_ai_pc_agentic_trends.md]]", "[[2026-06-28-on_device_ai_trends_and_agentic_ai_2026.md]]", "[[2026-06-30-on_device_ai_trends_intel_amd_nvidia.md]]", "[[2026-07-01-on-device-ai-pc-hardware-trends.md]]", "[[2026-07-07-on-device-ai-trends-2026-ryzen-ai-max-panther-lake-rtx-spark.md]]", "[[2026-07-11-on_device_ai_pc_trends_strix_halo_panther_lake_rtx_spark.md]]", "[[2026-07-12-on-device-ai-pc-ryzen-ai-halo-npu-reality.md]]"]
+last_updated: "2026-07-13"
+updated: "2026-07-13"
+related_raw: ["[[2026-06-15-On-Device-AI-PC-Trends-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-on_device_ai_pc_agentic_trends.md]]", "[[2026-06-28-on_device_ai_trends_and_agentic_ai_2026.md]]", "[[2026-06-30-on_device_ai_trends_intel_amd_nvidia.md]]", "[[2026-07-01-on-device-ai-pc-hardware-trends.md]]", "[[2026-07-07-on-device-ai-trends-2026-ryzen-ai-max-panther-lake-rtx-spark.md]]", "[[2026-07-11-on_device_ai_pc_trends_strix_halo_panther_lake_rtx_spark.md]]", "[[2026-07-12-on-device-ai-pc-ryzen-ai-halo-npu-reality.md]]", "[[2026-07-13-ryzen-ai-halo-developer-center-bkc.md]]"]
 ---
 
 # 💻 온디바이스 AI 및 AI PC 기술 트렌드 (2026)
@@ -52,6 +52,14 @@ Microsoft의 Copilot+ 업데이트는 AI 성능의 가시화와 범용성에 초
 - Autoregressive decode는 **메모리 대역폭 바운드**. Ollama/llama.cpp/LM Studio는 기본으로 **iGPU/CPU** 경로를 사용(NPU는 ONNX+QNN/OpenVINO 옵트인).
 - 예외: Max+ 395에서 양자화 **70B ~14 tok/s** — 작업은 **iGPU**(최대 ~96GB 할당)에서 수행되며 NPU가 아님.
 - Windows AI Foundry는 NPU 전용에서 GPU/CPU 경로로 확장 중(Phi Silica on GPU experimental).
+
+### Developer Center · BKC · Playbooks (2026-07-13 PM)
+[LTT Labs (2026-07-06)](https://www.lttlabs.com/articles/2026/07/06/amd-ryzen-ai-halo) 기준, Halo의 차별점은 실리콘보다 **1st-party 소프트웨어 번들**이다.
+- 부팅 시 **Ryzen AI Developer Center**가 드라이버·Lemonade/LM Studio·PyTorch/VS Code·Comfy 등 개발 스택을 유지보수.
+- Windows / Debian계 **AMD Ryzen AI Developer Platform**용 큐레이션 **BKC** 제공(팩토리 이미지 간 자유 전환은 제한적).
+- **Playbooks**: n8n 등 에이전틱 툴 설치, 네트워크 경유 메트릭·원격 VS Code/Jupyter/터미널.
+- 타사 Strix Halo 미니 PC 대비 가치: 동일 Max+ 395라도 큐레이션 OS·지속 지원이 AI 개발 온보딩 비용을 낮춤.
+- 클러스터: DGX Spark식 QSFP(ConnectX-7) 없음 → **10GbE** 기반 클러스터링으로 우회.
 
 ## 5. 향후 과제
 - **RAM 증설의 압박**: 로컬 LLM 및 에이전트의 멀티태스킹을 위해 **32GB RAM**이 최소 사양으로 요구되고 있습니다.
