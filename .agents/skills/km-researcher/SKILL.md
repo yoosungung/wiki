@@ -29,6 +29,7 @@ description: 연구 주제 관리 문서를 분석하여 지식 탐색을 자동
 ### 4. DAILY_REPORTING (Agent-Style)
 - `YYYY-MM-DD.md` 데일리 노트를 생성함.
 - 인간 중심의 설명 대신 **[RESEARCH_SUMMARY]** 섹션에 탐색한 주제, 수집된 Raw 개수, 업데이트된 Wiki 경로 리스트를 기재함.
+- **SYNTHESIZED_WIKI** 항목은 backtick 경로가 아니라 Obsidian 위키링크 `[[wiki/Category/.../Filename.md]]`로 기재하여 클릭으로 바로 내용을 확인할 수 있게 함.
 
 ### 5. CLEANUP
 - 파일명 형식 `YYYY-MM-DD.md`를 전수 조사하여 오늘(D-0)과 어제(D-1)를 제외한 모든 과거 노트를 즉시 삭제함.
