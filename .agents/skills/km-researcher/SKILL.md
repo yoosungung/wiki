@@ -10,6 +10,9 @@ description: 연구 주제 관리 문서를 분석하여 지식 탐색을 자동
 
 ## 📋 WORKFLOW
 
+### 0. PRE_SYNCHRONIZATION (Git Pull)
+- 작업을 시작하기 전에 반드시 `git pull` (필요 시 `git pull --rebase`)을 먼저 수행하여 원격 저장소의 최신 지식을 로컬로 반영함.
+
 ### 1. TASK_PARSING
 - `연구_주제_관리.md`에서 활성 연구 과제(`[ ]`)와 `최근 수집일`을 파악함.
 - 관련 위키 MOC에서 검색 전략(키워드, 채널)을 로드함.
@@ -30,6 +33,9 @@ description: 연구 주제 관리 문서를 분석하여 지식 탐색을 자동
 ### 5. CLEANUP
 - 파일명 형식 `YYYY-MM-DD.md`를 전수 조사하여 오늘(D-0)과 어제(D-1)를 제외한 모든 과거 노트를 즉시 삭제함.
 - 수집 및 합성이 완료된 `raw/` 폴더 내의 모든 원본 파일(`Untitled.md` 및 표준 `YYYY-MM-DD-제목.md` 포함)을 즉시 삭제하여 폴더를 비움.
+
+### 6. POST_SYNCHRONIZATION (Git Push)
+- 모든 탐색, 수집, 합성 및 클린업이 완료된 뒤 변경 사항을 스테이징(`git add .`) 및 커밋(`git commit -m "..."`)하고 `git push`를 통해 원격 저장소에 공유함. 충돌 발생 시 원격의 내용을 병합하여 최종 푸시함.
 
 ## ⚠️ CONSTRAINTS
 - 모든 보고와 로그는 **KM_LOG_AGENT_v1** 형식을 준수하여 `log.md`와 동기화함.
