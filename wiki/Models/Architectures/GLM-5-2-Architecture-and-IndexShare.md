@@ -1,11 +1,8 @@
 ---
 title: "GLM-5.2 Architecture and IndexShare Optimization"
-related_raw: ["[[raw/2026-06-23-linkedin-sebastianraschka-glm-5-2-release.md]]"]
-tags: ['models', 'architecture', 'moe', 'glm-5', 'long-context', 'attention-mechanisms']
-type: "wiki"
-status: "published"
-last_updated: "2026-06-23"
-updated: "2026-06-23"
+last_updated: "2026-07-13"
+updated: "2026-07-13"
+related_raw: ["[[raw/2026-06-23-linkedin-sebastianraschka-glm-5-2-release.md]]", "[[raw/2026-07-13-colibri-inference-engine-glm-744b.md]]"]
 ---
 
 # GLM-5.2 아키텍처 및 IndexShare 가속 기술 분석
@@ -37,7 +34,14 @@ GLM-5.2는 대량의 활성 파라미터와 기가바이트급 컨텍스트를 �
 ## 4. 의의 및 적용 분야
 GLM-5.2는 DSA와 IndexShare의 통합으로 긴 문맥의 히스토리를 필요로 하는 **자율형 소프트웨어 엔지니어링 에이전트(Agentic Coding)** 및 복잡한 대용량 소스코드 리포지토리 분석 작업에서 오픈소스 진영 최상위권의 경제성 및 정확도 지표를 제공합니다.
 
-## 5. 연결 문서 (Internal Links)
+## 5. Colibrì: 744B 모델의 로컬 CPU 서빙 기술
+초대형 744B MoE 모델인 GLM-5.2를 일반 소비자용 CPU 및 RAM(25GB)에서 구동할 수 있도록 설계된 오픈소스 C 기반 추론 엔진 **Colibrì**가 개발되었습니다.
+- **디스크 스트리밍 (Disk Streaming)**: 모델 전체(~370GB+)를 RAM에 로드할 수 없으므로, Dense Layer(Attention, Embeddings, Shared Experts 등 약 17B, 9.9GB)만 RAM에 상주시키고, 나머지 21,504개의 Routed Experts는 NVMe SSD에 저장한 뒤 토큰 생성 시에 필요한 Expert만 실시간 스트리밍(On-demand Loading)하여 연산합니다.
+- **의존성 제로 (Zero Dependencies)**: Python 런타임이나 CUDA 등의 무거운 패키지 없이 단일 C 파일(`c/glm.c`)과 GCC/OpenMP만으로 빌드되어 가볍고 독립적인 구조를 지닙니다.
+- **LRU 캐시 활용**: NVMe SSD 입출력 지연을 줄이기 위해 빈번하게 활성화되는 전문가 텐서들을 RAM에 임시 유지하는 LRU(Least Recently Used) 캐시 메커니즘을 내장하고 있습니다.
+- **실전적 의의**: CPU 구동에 따른 속도 제한(0.05~0.1 tok/s)이 존재하나, Speculative Decoding(MTP) 및 캐시 최적화 연동을 통해 일반 인프라에서도 주권 MoE(Sovereign MoE) 모델을 독립 가동할 수 있는 가능성을 열었습니다.
+
+## 6. 연결 문서 (Internal Links)
 - [[wiki/Models/Architectures/MoE 모델 분석.md|MoE (Mixture of Experts) 모델 분석]]
 - [[wiki/Models/Architectures/Recent-LLM-Architecture-Developments.md|최신 LLM 아키텍처 동향]]
 - [[wiki/Models/Architectures/DeepSeek-V2, GPT-4 수준의 추론 능력을 갖춘 오픈소스 LLM.md|DeepSeek-V2 및 MLA 분석]]

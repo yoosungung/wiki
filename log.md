@@ -1,6 +1,10 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-07-13 | RESEARCH | Web | 6 | Codex custom skills, Vibe Coding/Claude Code loops, Mamba/GDN context compression, RAG limits vs Context Engineering, Colibrì CPU MoE engine, loop-engineering repo |
+| 2026-07-13 | INGEST | raw/ | 6 | 6개 신규 원천(jyoung105, eordax, kiwoong-yeom, sadik-mohammad, colibri, loop-engineering) 수집 및 표준화 완료 |
+| 2026-07-13 | SYNTHESIZE | wiki/ | 5 | 5개 위키(Claude-Code-Codex-Token-Optimization, Recent-LLM-Architecture-Developments, Supermemory-Architecture-and-MCP, GLM-5-2-Architecture-and-IndexShare, 루프-엔지니어링-패러다임-및-시스템-안전) 합성 및 연구_주제_관리.md 비고 업데이트 완료 |
+| 2026-07-13 | LINT | Root / wiki | ALL | 2026-07-13 데일리 노트 생성, index.md 갱신 검토, D-2 이전 데일리 노트 삭제 및 raw/ 폴더 정리 완료 |
 | 2026-07-12 | RESEARCH | Web | 3 | PM: Furiosa DP scoring 가중치·virtual prefix cache, Supermemory `:6767`/CLI/context, WebLLM 3W·OPFS 탐색 완료 |
 | 2026-07-12 | INGEST | raw/ | 3 | PM: Furiosa DP routing, Supermemory local/MCP, WebLLM 3W 원천 3건 수집 |
 | 2026-07-12 | SYNTHESIZE | wiki/ | 3 | PM: 프리오사 RNGD·Supermemory MCP·WebGPU/WebLLM 위키 증분 합성 및 연구_주제_관리.md 비고 갱신 |

@@ -1,14 +1,16 @@
 ---
 title: "Claude Code 및 Codex 토큰 최적화 가이드"
 related_raw: [
-  "[[Claude Code 및 Codex 설정 변경으로 토큰을 절약하는 방법.md]]",
-  "[[raw/andrej-karpathy-skillsREADME.md at main · forrestchangandrej-karpathy-skills.md]]"
+  "[[Claude Code 및 Codex 설정 변경으로 토큰을 절약하는 방🇧ᅥᆸ.md]]",
+  "[[raw/andrej-karpathy-skillsREADME.md at main · forrestchangandrej-karpathy-skills.md]]",
+  "[[raw/2026-07-13-jyoung105-codex-future-slide-skill.md]]",
+  "[[raw/2026-07-13-eordax-vibe-coding-claude-code.md]]"
 ]
-tags: ["Agents", "Coding", "Optimization", "Claude_Code", "Codex", "Opus_4.7"]
+tags: ["Agents", "Coding", "Optimization", "Claude_Code", "Codex", "Opus_4.7", "Vibe_Coding"]
 type: "wiki"
 status: "published"
-last_updated: "2026-04-22"
-updated: "2026-04-22"
+last_updated: "2026-07-13"
+updated: "2026-07-13"
 ---
 
 # Claude Code 및 Codex 토큰 최적화 및 효율 향상 가이드
@@ -47,11 +49,20 @@ Claude Opus 4.7 출시와 함께 토크나이저 업데이트 및 리즈닝(Reas
 - **`WEB_SEARCH = "DISABLED"`**: 로컬 작업 시 웹 검색 도구 호출을 방지합니다.
 - **`tool_output_token_limit`**: 개별 도구 출력 저장량을 조절하여 세션 팽창을 방지합니다.
 
-## 5. 공통 팁
+### Codex 스킬 최적화 및 커스텀 스킬 추가 (`~/.codex/skills`)
+빌더들은 Codex 및 에이전트 환경의 설정을 변경하여 성능을 극대화하고 토큰 소모량을 제한하는 전략을 취하고 있습니다.
+- **npx skills add**: `npx skills add <github-url>`을 사용하여 외부에서 정교하게 작성된 커스텀 스킬을 추가할 수 있습니다. 예를 들어, Lee Jae-young이 개발한 `future-slide-skill`은 슬라이드 생성 단계를 세부적으로 쪼개어 기획-프롬프트-이미지-디자인을 나누어 처리함으로써 한 번에 긴 프롬프트를 처리할 때의 환각과 토큰 낭비를 원천 방어합니다. 스킬 추가 후 에이전트를 재시작하여 적용합니다.
+
+## 5. 바이브 코딩(Vibe Coding)과 자율 에이전트의 통제
+AWS의 Eduardo Ordax가 주장한 바와 같이, 개발 패러다임이 단순 코드 제안(Copilot)에서 자율 코딩 에이전트(Claude Code 등)로 전환되면서 '바이브 코딩'이 대두되고 있습니다.
+- **시스템 설계와 오케스트레이션**: 개발자는 이제 세부 코드를 일일이 타이핑하는 대신, 에이전트가 Git 작업 공간에서 격리된 브랜치나 컨테이너(MXC 등) 내에 자율 진입하여 빌드와 테스트를 실행하고 코드를 정밀 수정할 수 있도록 외곽 제어 루프(Harness)를 디자인하는 능력이 중요해집니다.
+- **바이브 코딩의 생산성**: 단순 프롬프팅을 탈피하여, 에이전트가 POSIX 도구를 활용해 프로젝트 전반을 자율 탐색(Navigation over Retrieval)하게 하고 이를 통제 및 가드하는 프레임워크 설계가 병행되어야 합니다.
+
+## 6. 공통 팁
 - **Attribution 제거**: `attribution.commit` 및 `pr` 설정을 비워 Git 로그나 PR에 붙는 자동 텍스트를 제거합니다.
 - **마크다운 문서 직접 참조**: Anthropic/OpenAI 문서 URL 뒤에 `.md`를 붙여 에이전트가 마크다운 형식으로 직접 읽게 하면 정보 추출 효율이 높아집니다.
 
-## 관련 문서
+## 7. 관련 문서
 - [[wiki/Agents/Coding-and-Engineering/Claude-Code-Agentic-CLI-Update.md|Claude Code: 자율형 에이전트 CLI 도구의 진화]]
 - [[wiki/Agents/Frameworks/Claude-Code-Agentic-Workflows.md|Claude Code 에이전틱 워크플로우]]
 - [[wiki/Engineering/Development-Environment/000_Dev-Env-MOC.md|개발 환경 구성 MOC]]

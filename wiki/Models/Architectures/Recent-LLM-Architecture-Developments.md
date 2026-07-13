@@ -1,7 +1,9 @@
 ---
-related_raw: ["[[raw/Recent Developments in LLM Architectures KV Sharing, mHC, and Compressed Attention.md]]"]
-tags: ["#LLM", "#Architecture", "#Gemma4", "#DeepSeekV4", "#ZAYA1"]
+related_raw: ["[[raw/Recent Developments in LLM Architectures KV Sharing, mHC, and Compressed Attention.md]]", "[[raw/2026-07-13-kiwoong-yeom-recurrent-mamba-gdn-compression.md]]"]
+tags: ["#LLM", "#Architecture", "#Gemma4", "#DeepSeekV4", "#ZAYA1", "#Mamba", "#GDN"]
 date: "2026-05-31"
+last_updated: "2026-07-13"
+updated: "2026-07-13"
 ---
 
 # 최신 LLM 아키텍처 트렌드 (2026): 효율성과 긴 컨텍스트
@@ -27,6 +29,11 @@ date: "2026-05-31"
 
 ### D. Laguna XS.2 (Poolside)
 - **Layer-wise Attention Budgeting**: 레이어별로 어텐션 헤드 수를 다르게 설정하여 중요한 레이어에 연산 자원을 집중하고, 슬라이딩 윈도우 레이어와 글로벌 어텐션 레이어를 혼합함.
+
+### E. Mamba & Gated Delta Net (GDN) (순환 상태 압축)
+- **KV 캐시 극복**: 전통적인 Transformer의 문맥 길이에 따른 KV 캐시의 제곱(Quadratic) 증가 문제를 해결하기 위해, 입력 히스토리를 고정된 크기의 '상태(State)' 매트릭스로 순차적으로 압축함.
+- **선형 어텐션 및 게이팅**: Gated DeltaNet(GDN) 등 linear attention 변형 메커니즘을 적용하여 정보의 점진적 감쇠와 선택적 쓰기(Write)/지우기(Erase)를 제어하여 무한 문맥(Infinite Context)에 가까운 처리를 실현함.
+- **하이브리드화 트렌드**: 최근에는 정교한 정보 회상(Recall)을 위해 Attention 레이어와 고정 상태 전송 효율이 높은 Mamba/GDN 레이어를 결합한 하이브리드 아키텍처가 대두되어 모바일 등 VRAM 극도로 제한적인 스마트폰/온디바이스 서빙의 대안으로 부상함.
 
 ## 3. 결론 및 전망
 - **트랜스포머의 진화**: 기본 구조는 유지하되 내부 모듈(Attention, Residual, Embedding)이 고도로 정밀하게 튜닝되고 있음.
