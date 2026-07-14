@@ -1,6 +1,7 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-07-14 | LINT | Root / skills | 3 | log.md 유지기간 정책 문서화: append-only(자동 삭제 없음), 데일리 D-0/D-1·raw/ 합성 후 삭제와 대비 (#282) |
 | 2026-07-14 | RESEARCH | Web | 6 | LiteRT-LM, WASM 3.0 Memory64, Rebellions SqueezeBits 인수, Furiosa 2nm Stork, AI PC 3사 에이전틱 구도, Supermemory 메모리 지형 조사 완료 |
 | 2026-07-14 | SYNTHESIZE | wiki/ | 5 | 5개 위키(스마트폰 LLM 서빙, 리벨리온 최적화, 프리오사 RNGD 최적화, 온디바이스 AI PC, Supermemory MCP) 합성 및 연구_주제_관리.md 비고 갱신 완료 |
 | 2026-07-14 | LINT | Root / wiki | ALL | 2026-07-14 데일리 노트 생성, index.md 갱신 검토, 과거 데일리 노트(2026-07-12) 삭제 및 raw/ 폴더 정리 완료 |

@@ -25,7 +25,9 @@ description: 지식 베이스의 구조적 무결성을 점검하고 `index.md`,
 ### 3. LOG_ENTRY (log.md) - 필수 수행
 - 수행된 모든 작업을 **KM_LOG_AGENT_v1** 테이블 형식으로 기록함.
 - `DATE | ACTION | SCOPE | FILES | SUMMARY` 형식을 엄격히 준수하여 `log.md` 하단에 추가함.
+- **`log.md`는 append-only 누적 원장**: 기간이 지났다는 이유로 과거 행을 삭제·prune하지 않음. (데일리 노트·`raw/` 클린업과 별개)
 
 ## ⚠️ CONSTRAINTS
 - 모든 내부 링크는 `[[wiki/Category/Sub/Filename.md]]` 형태의 전체 상대 경로를 권장함.
 - 설명이나 수식어는 배제하고 데이터 중심(Data-centric)으로 작성함.
+- `log.md` 자동 삭제는 수행하지 않음.
