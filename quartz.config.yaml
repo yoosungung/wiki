@@ -13,6 +13,7 @@ configuration:
     - templates
     - .obsidian
     - AGENTS.md
+    - projects
   theme:
     fontOrigin: googleFonts
     cdnCaching: true
