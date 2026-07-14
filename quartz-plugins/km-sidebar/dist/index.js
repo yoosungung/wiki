@@ -35,9 +35,9 @@ const CLIENT_SCRIPT = `
     return clampWidth(parseInt(raw, 10));
   }
 
-  function setExplorerTitles(root) {
+  function setTruncatedTitles(root) {
     const scope = root || document;
-    scope.querySelectorAll(".explorer-content a, .folder-container div > a").forEach((el) => {
+    scope.querySelectorAll(".explorer-content a, .folder-container div > a, .backlinks ul li > a").forEach((el) => {
       const text = el.textContent?.trim();
       if (text) el.setAttribute("title", text);
     });
@@ -89,7 +89,7 @@ const CLIENT_SCRIPT = `
 
   function boot() {
     initResize();
-    setExplorerTitles(document);
+    setTruncatedTitles(document);
   }
 
   if (document.readyState === "loading") {
@@ -99,7 +99,7 @@ const CLIENT_SCRIPT = `
   }
 
   document.addEventListener("nav", () => {
-    setExplorerTitles(document);
+    setTruncatedTitles(document);
     initResize();
   });
 })();
