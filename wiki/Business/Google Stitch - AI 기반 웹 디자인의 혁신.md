@@ -49,4 +49,4 @@ Stitch는 스타트업의 빠른 MVP 제작, 개발자의 UI 프로토타입 구
 *   [[wiki/Models/Reasoning-and-Cognition/LLM 학습 패러다임]]
 *   [[wiki/Agents/Frameworks/2026년 AI 에이전트 트렌드]]
 *   [[wiki/Agents/Frameworks/MCP/AI-에이전트-개발-트렌드-MCP에서-Skills로]]
-*   [[wiki/Engineering/AI-Native-Engineering/Claude Code 개발자 Boris의 효율적인 AI 활용 팁]]
+*   [[wiki/Engineering/AI-Native-Engineering/Claude Code 개발자 Boris의 효율적인 AI 활용 팁]]

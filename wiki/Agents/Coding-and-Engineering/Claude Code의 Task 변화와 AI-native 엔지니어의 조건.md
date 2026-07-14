@@ -48,4 +48,4 @@ Swarm을 효과적으로 활용하기 위한 세 가지 접근 방식은 다음�
 *   [[wiki/Agents/Coding-and-Engineering/Anthropic의 코딩 AI 에이전트, 치명적인 사이버 공격에 직면]]
 *   [[wiki/Agents/Coding-and-Engineering/Claude_Code_on_the_web]]
 *   [[wiki/Agents/Memory-and-Cognition/Claude-Mem 지속적인 메모리 압축 시스템]]
-*   [[wiki/Engineering/AI-Native-Engineering/Claude Code 개발자 Boris의 효율적인 AI 활용 팁]]
+*   [[wiki/Engineering/AI-Native-Engineering/Claude Code 개발자 Boris의 효율적인 AI 활용 팁]]

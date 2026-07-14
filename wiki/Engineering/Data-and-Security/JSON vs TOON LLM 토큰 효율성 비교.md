@@ -1,6 +1,6 @@
 ---
 title: "JSON vs TOON LLM 토큰 효율성 비교"
-related_raw: ["[[wiki/Engineering/Data-and-Security/JSON vs TOON LLM 토큰 효율성 비교.md]]"]
+related_raw: ["[[wiki/Engineering/Data-and-Security/JSON vs TOON LLM 토큰 효율성 비교.md]]"]
 tags: ['wiki', 'ai_core', 'ai_ml_development', 'ai_data_formats']
 type: "wiki"
 status: "published"

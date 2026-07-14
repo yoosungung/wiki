@@ -9,7 +9,7 @@
 - [[wiki/Business/2026년-로봇-공학-예측.md]]
 - [[wiki/Business/AI 에이전트를 활용한 마케팅 혁신 - SafetyCulture 사례.md]]
 - [[wiki/Business/AI 전문 외주 개발사.md]]
-- [[wiki/Business/AI시대, 스타트업이 살아남기 위한 사고의 틀.md]]
+- [[wiki/Business/AI시대, 스타트업이 살아남기 위한 사고의 틀.md]]
 - [[wiki/Business/Allibee-Legal-AI-Reasoning.md]]
 - [[wiki/Business/Allibee-Smarter-Legal-Agent.md]]
 - [[wiki/Business/Amazon_automation.md]]

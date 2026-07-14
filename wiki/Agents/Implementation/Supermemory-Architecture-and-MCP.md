@@ -3,8 +3,8 @@ title: "Supermemory: 에이전트 네이티브 메모리 시스템 및 MCP 아�
 tags: ["Agents", "Implementation", "Memory", "Supermemory", "MCP", "SMFS", "Cloudflare"]
 type: "wiki"
 status: "published"
-last_updated: "2026-07-13"
-updated: "2026-07-13"
+last_updated: "2026-07-14"
+updated: "2026-07-14"
 related_raw: ["[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]", "[[2026-07-12-supermemory-local-6767-cli-mcp-context.md]]", "[[raw/2026-07-13-sadik-mohammad-rag-systems-limitations.md]]", "[[2026-07-13-supermemory-openclaw-claude-plugins.md]]"]
 ---
 
@@ -139,6 +139,27 @@ export SUPERMEMORY_CC_API_KEY=sm_...
 - **Reasoned recall**: 매 턴 Claude가 검색 필요 여부를 판단한 뒤에만 자동 검색(권한 프롬프트 없음) → 플랜 사용량·노이즈 제어.
 - Team vs personal: `.claude/.supermemory-claude/config.json`의 `repoContainerTag` / `personalContainerTag`.
 - 구 플러그인명 `claude-supermemory` → `supermemory` 리네임으로 in-place 업데이트 불가; marketplace update 후 재설치.
+
+---
+
+## 4. 2026년 에이전틱 메모리 인프라 지형도 및 거버넌스 (2026-07-14 업데이트)
+
+2026년 AI 생태계는 대용량 컨텍스트 윈도우를 단순 무차별적으로 채우는 "Prompt Stuffing" 관성에서 탈피하여, 에이전트의 효율성과 정합성을 통제하는 **'거버넌스형 메모리 인프라(Governed Memory Infrastructure)'** 구조로 완전히 수렴하였습니다.
+
+### 📊 주요 오픈소스 AI 메모리 엔진 및 플랫폼 비교
+
+| 솔루션 / 도구 | 핵심 아키텍처 특징 | 주요 용도 및 권장 환경 |
+| :--- | :--- | :--- |
+| **Mem0** | 전용 메모리 플랫폼 | 애플리케이션 레벨의 간편한 사용자 개인화 및 개발자 친화적인 SDK 적용 |
+| **Supermemory** | 시맨틱 그래프 + MCP 결합 | 자가 호스팅(Self-hosting)이 유연하고, sub-300ms 초저지연을 제공하는 이식성 높은 다중 플랫폼용 컨텍스트 엔진 |
+| **Zep** | 시간 인지형 지식 그래프 (Temporal) | 시간에 따른 사실 관계 진화와 시계열 문맥 추적이 중요한 중장기 프로젝트 |
+| **Letta** (구 MemGPT) | 에이전트 자율 관리 런타임 | 에이전트가 직접 L1/L2 메모리 영역을 제어하고 수정하는 상시 자율 에이전트 런타임 |
+| **Cognee** | 그래프 기반 지식 검색 | 정형/비정형 문서의 그래프 데이터 파이프라인 생성 및 관계 추적 분석 |
+
+### 🔑 메모리 거버넌스의 3대 설계 방향성
+1. **의미적 사실 추출 (Fact Extraction)**: 단순 대화 텍스트 chunking 대신, 의미 단위의 핵심 사실을 정제하고 중복을 제거하여 의미적 무결성을 유지합니다.
+2. **시계열적 추론 및 망각 (Temporal Reasoning & Auto-decay)**: 시간이 경과함에 따라 불필요하거나 모순되는 구 정보를 동적으로 무효화하여 컨텍스트 노이즈를 극소화합니다.
+3. **MCP를 통한 크로스 툴 이식성 (Cross-Tool Portability)**: 하나의 코딩 에이전트나 IDE(예: Cursor)에서 획득한 지식 컨텍스트를 MCP 서버를 경유하여 타 도구(예: Claude Code, CLI)로 원활하게 동기화해 단절 현상을 예방합니다.
 
 ---
 **관련 문서**:

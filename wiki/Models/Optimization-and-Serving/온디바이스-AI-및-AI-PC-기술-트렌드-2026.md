@@ -3,8 +3,8 @@ title: "온디바이스 AI 및 AI PC 기술 트렌드 (2026)"
 tags: ["On-Device", "AI-PC", "NPU", "Lunar-Lake", "Strix-Point", "Copilot+", "Agentic-AI"]
 type: "wiki"
 status: "published"
-last_updated: "2026-07-13"
-updated: "2026-07-13"
+last_updated: "2026-07-14"
+updated: "2026-07-14"
 related_raw: ["[[2026-06-15-On-Device-AI-PC-Trends-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-on_device_ai_pc_agentic_trends.md]]", "[[2026-06-28-on_device_ai_trends_and_agentic_ai_2026.md]]", "[[2026-06-30-on_device_ai_trends_intel_amd_nvidia.md]]", "[[2026-07-01-on-device-ai-pc-hardware-trends.md]]", "[[2026-07-07-on-device-ai-trends-2026-ryzen-ai-max-panther-lake-rtx-spark.md]]", "[[2026-07-11-on_device_ai_pc_trends_strix_halo_panther_lake_rtx_spark.md]]", "[[2026-07-12-on-device-ai-pc-ryzen-ai-halo-npu-reality.md]]", "[[2026-07-13-ryzen-ai-halo-developer-center-bkc.md]]"]
 ---
 
@@ -60,6 +60,14 @@ Microsoft의 Copilot+ 업데이트는 AI 성능의 가시화와 범용성에 초
 - **Playbooks**: n8n 등 에이전틱 툴 설치, 네트워크 경유 메트릭·원격 VS Code/Jupyter/터미널.
 - 타사 Strix Halo 미니 PC 대비 가치: 동일 Max+ 395라도 큐레이션 OS·지속 지원이 AI 개발 온보딩 비용을 낮춤.
 - 클러스터: DGX Spark식 QSFP(ConnectX-7) 없음 → **10GbE** 기반 클러스터링으로 우회.
+
+## 4.2 실리콘 3사의 에이전틱 지향점 (2026-07-14 업데이트)
+
+- **이종 가속기 분산 아키텍처**: 
+  - **AMD Ryzen AI Max 300 (Strix Halo)**: 50 TOPS XDNA 2 NPU와 40 RDNA 3.5 CU의 고성능 iGPU(플랫폼 총 125 TOPS)를 결합하여 로컬 멀티 에이전트 오프로딩 및 30B 이상 거대 로컬 모델의 독자 실행 구도를 구현했습니다.
+  - **Intel Panther Lake**: 18A 공정으로 제작되어 최대 50 NPU TOPS(NPU 5) 및 Xe3 GPU를 매핑, 평상시의 저전력 백그라운드 AI 모니터링은 NPU로, 고비용 생성형 계산은 GPU로 태스크를 분리해 전력 효율성과 컴퓨팅 퍼포먼스를 동시에 달성하는 아키텍처를 전개하고 있습니다.
+  - **NVIDIA RTX Spark**: Grace CPU와 Blackwell RTX GPU를 단일 기판에 병합하고 128GB Unified Memory를 탑재하여 FP4 연산 기준 1 Petaflop의 로컬 AI 성능을 제공합니다. 이는 기존의 OS와 앱 구조를 대화형/자율형 에이전트 컴퓨팅 환경으로 패러다임 전환을 이끄는 핵심 동력입니다.
+- **Unified Memory 가치 격상**: 에이전틱 워크로드의 상시 자율 구동과 멀티턴 대화 상태 유지를 위해 128GB~192GB급 통합 메모리(RAM-VRAM) 아키텍처가 단순 가속기 연산 성능(TOPS)보다 더 중요한 하드웨어 지표로 평가받고 있습니다.
 
 ## 5. 향후 과제
 - **RAM 증설의 압박**: 로컬 LLM 및 에이전트의 멀티태스킹을 위해 **32GB RAM**이 최소 사양으로 요구되고 있습니다.

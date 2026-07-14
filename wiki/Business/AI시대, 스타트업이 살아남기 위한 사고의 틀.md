@@ -1,6 +1,6 @@
 ---
 title: "AI시대, 스타트업이 살아남기 위한 사고의 틀"
-related_raw: ["[[wiki/Business/AI시대, 스타트업이 살아남기 위한 사고의 틀.md]]"]
+related_raw: ["[[wiki/Business/AI시대, 스타트업이 살아남기 위한 사고의 틀.md]]"]
 tags: ['wiki', 'business_and_misc', 'business']
 type: "wiki"
 status: "published"

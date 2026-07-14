@@ -42,4 +42,4 @@ Superpowers는 AI 기반 코딩 에이전트의 역할을 단순한 코드 생�
 *   [[wiki/Agents/Frameworks/Langchain Open Deep Research 아키텍처 가이드]]
 *   [[wiki/Agents/Coding-and-Engineering/Claude Code의 Task 변화와 AI-native 엔지니어의 조건]]
 *   [[wiki/Engineering/AI-Native-Engineering/AI 기반 코딩의 실제 사례 - Cursor와 OpenAI]]
-*   [[wiki/Engineering/AI-Native-Engineering/Claude Code 개발자 Boris의 효율적인 AI 활용 팁]]
+*   [[wiki/Engineering/AI-Native-Engineering/Claude Code 개발자 Boris의 효율적인 AI 활용 팁]]

@@ -1,6 +1,6 @@
 ---
 title: "Claude Code 개발자 Boris의 효율적인 AI 활용 팁"
-related_raw: ["[[wiki/Engineering/AI-Native-Engineering/Claude Code 개발자 Boris의 효율적인 AI 활용 팁.md]]"]
+related_raw: ["[[wiki/Engineering/AI-Native-Engineering/Claude Code 개발자 Boris의 효율적인 AI 활용 팁.md]]"]
 tags: ['wiki', 'engineering_and_infra', 'ai_development']
 type: "wiki"
 status: "published"

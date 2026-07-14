@@ -29,5 +29,5 @@ updated: "2026-04-19"
 - [[wiki/Business/Allibee-Smarter-Legal-Agent]]
 - [[wiki/Business/Allibee-Legal-AI-Reasoning]]
 - [[Archive/law-agent/idea]]
-- [[wiki/Business/AI시대, 스타트업이 살아남기 위한 사고의 틀]]
+- [[wiki/Business/AI시대, 스타트업이 살아남기 위한 사고의 틀]]
 - [[wiki/Business/The State of AI Global Survey 2025]]
