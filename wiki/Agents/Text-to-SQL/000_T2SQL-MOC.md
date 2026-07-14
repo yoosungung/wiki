@@ -3,8 +3,8 @@ title: "000_T2SQL-MOC (Text-to-SQL Map of Content)"
 tags: ["T2SQL", "MOC", "Analytics", "Semantic-Layer"]
 type: "wiki"
 status: "published"
-last_updated: "2026-04-26"
-updated: "2026-04-26"
+last_updated: "2026-07-14"
+updated: "2026-07-14"
 ---
 
 # 📊 Text-to-SQL (T2SQL) MOC
@@ -12,7 +12,9 @@ updated: "2026-04-26"
 T2SQL은 자연어 질의를 SQL로 변환하여 데이터베이스에서 직접 인사이트를 도출하는 기술입니다. 2026년 현재, 단순한 쿼리 생성을 넘어 비즈니스 맥락을 이해하는 **에이전틱 분석(Agentic Analytics)**으로 진화하고 있습니다.
 
 ## 🌟 핵심 아키텍처 및 전략
+- [[wiki/Agents/Text-to-SQL/AV-SQL-Agentic-Views-Spider-2-0|AV-SQL Agentic Views]] - *CTE 기반 스키마 프루닝과 실행 검증*
 - [[wiki/Agents/Text-to-SQL/Agentic-Semantic-Layer|에이전틱 시맨틱 레이어 (Agentic Semantic Layer)]] - *핵심 거버넌스 및 신뢰성 확보*
+- [[wiki/Engineering/Data-and-Security/OSI-Open-Semantic-Interchange|Apache Ossie(구 OSI)]] - *시맨틱 모델 교환 명세*
 - [[wiki/Agents/Text-to-SQL/ThoughtSpot-Spotter-Semantics|ThoughtSpot Spotter Semantics]] - *업계 선도 기술 사례*
 - [[wiki/Agents/Text-to-SQL/Metadata-RAG|Metadata RAG (Schema Pruning)]] - *대규모 스키마 대응 전략*
 - [[wiki/Agents/Text-to-SQL/Semantic-Layer-DeepAgent-Filesystem|Filesystem 기반 세만틱 레이어 구축 가이드]]

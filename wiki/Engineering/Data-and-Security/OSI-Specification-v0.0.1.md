@@ -1,12 +1,20 @@
 ---
-title: "OSI (Open Semantic Interchange) 기술 명세 v1.0"
-tags: ["OSI", "Specification", "Semantic Layer", "YAML", "Metadata"]
+title: "Apache Ossie 코어 메타데이터 명세 0.1.1"
+tags: ["OSI", "Apache Ossie", "Specification", "Semantic Layer", "YAML", "Metadata"]
 related_wiki: ["[[wiki/Engineering/Data-and-Security/OSI-Open-Semantic-Interchange.md]]"]
+related_raw: ["[[raw/2026-07-14-Apache-Ossie-명세.md]]"]
+type: "wiki"
+status: "published"
+last_updated: "2026-07-14"
+updated: "2026-07-14"
 ---
 
-# OSI - Core Metadata Specification
+# Apache Ossie - Core Metadata Specification
 
-**Version:** 0.1.1
+**안정 버전:** 0.1.1
+**개발 버전:** 0.2.0.dev0 (미출시 초안)
+
+이 문서의 상세 스키마는 안정 버전 0.1.1을 기준으로 합니다. 현재 `main` 브랜치의 0.2.0.dev0은 0.2.0 릴리스 전에 변경될 수 있으므로 프로덕션 계약으로 사용하지 않습니다.
 
 ## Goals
 
@@ -555,6 +563,7 @@ ai_context:
 
 ## Version History
 
+- **0.2.0.dev0** (Unreleased): 변경 가능한 다음 마이너 버전 초안
 - **0.1.1** (2025-12-11): Initial release
   - Core semantic model structure
   - Support for datasets, relationships, fields, and metrics

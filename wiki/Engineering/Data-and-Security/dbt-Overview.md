@@ -1,3 +1,13 @@
+---
+title: "dbt (data build tool) 개요"
+tags: ["dbt", "ELT", "Semantic Layer", "Apache Ossie"]
+type: "wiki"
+status: "published"
+related_raw: ["[[raw/2026-07-14-Apache-Ossie-명세.md]]"]
+last_updated: "2026-07-14"
+updated: "2026-07-14"
+---
+
 # dbt (data build tool) 개요
 
 dbt(data build tool)는 현대 데이터 스택(Modern Data Stack)에서 데이터 변환(Transformation)을 담당하는 오픈소스 도구입니다. ELT(Extract, Load, Transform) 파이프라인에서 'T'에 집중하여, SQL을 이용해 효율적이고 안정적인 데이터 변환을 수행할 수 있게 돕습니다.
@@ -22,7 +32,7 @@ dbt는 단순한 변환 도구를 넘어 **시맨틱 레이어**로서의 역할
 
 - **MetricFlow**: 비즈니스 지표(예: 매출, 이탈률)를 코드 기반으로 중앙에서 정의하여 데이터 일관성을 유지합니다.
 - **Text-to-SQL 에이전트 연동**: AI가 복잡한 SQL을 직접 생성하는 대신, dbt에 정의된 표준화된 메트릭을 호출하게 함으로써 **정확도를 획기적으로 향상**(최대 300%)시킬 수 있습니다.
-- **OSI (Open Semantic Interchange)**: dbt Labs는 업계 표준 시맨틱 규격인 OSI v1.0을 주도하며 생태계를 확장하고 있습니다.
+- **Apache Ossie(구 OSI)**: dbt를 포함한 데이터 도구 간 시맨틱 모델 교환을 지향합니다. 최신 안정 명세는 0.1.1이며, 현재 개발 명세 0.2.0.dev0은 프로덕션 호환성을 보장하지 않습니다.
 
 ## 5. KM 프로젝트 내 관련 링크
 - [[wiki/Engineering/Data-and-Security/OSI-Open-Semantic-Interchange|OSI (Open Semantic Interchange)]]
