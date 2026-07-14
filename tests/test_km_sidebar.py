@@ -40,6 +40,25 @@ class KmSidebarStyleTest(unittest.TestCase):
         self.assertIn("--km-sidebar-width", css)
         self.assertIn(".km-sidebar-handle", css)
 
+    def test_backlinks_single_line_ellipsis(self):
+        """백링크 제목도 Explorer와 같이 1줄 말줄임으로 표시한다 (#283)."""
+        css = SIDEBAR_CSS.read_text()
+        self.assertIn(".backlinks", css)
+        self.assertRegex(
+            css,
+            r"\.backlinks[^{]*\{[^}]*min-width:\s*0",
+        )
+        # 링크에 nowrap + ellipsis가 있어야 2줄 이상 줄바꿈이 막힌다
+        self.assertIn(".backlinks ul", css)
+        self.assertRegex(
+            css,
+            r"\.backlinks\s+ul[^\{]*a[^{]*\{[^}]*white-space:\s*nowrap",
+        )
+        self.assertRegex(
+            css,
+            r"\.backlinks\s+ul[^\{]*a[^{]*\{[^}]*text-overflow:\s*ellipsis",
+        )
+
 
 class QuartzConfigTest(unittest.TestCase):
     def test_footer_disabled_and_km_sidebar_plugin(self):

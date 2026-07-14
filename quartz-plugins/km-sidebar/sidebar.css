@@ -65,3 +65,18 @@
 .km-sidebar-handle:hover {
   background: var(--lightgray);
 }
+
+/* 백링크: Explorer와 동일하게 1줄 말줄임 (#283) */
+.backlinks {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.backlinks ul li > a {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+  max-width: 100%;
+}
