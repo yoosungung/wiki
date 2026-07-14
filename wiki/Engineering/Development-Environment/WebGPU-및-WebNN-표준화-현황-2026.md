@@ -3,9 +3,9 @@ title: "WebGPU 및 WebNN 표준화 현황 (2026)"
 tags: ["Engineering", "Development-Environment", "WebGPU", "WebNN", "W3C", "Standardization"]
 type: "wiki"
 status: "published"
-last_updated: "2026-07-12"
-updated: "2026-07-12"
-related_raw: ["[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-07-01-webgpu-webnn-wasm3-webmcp.md]]", "[[2026-07-10-web-inference-wasm-3.0.md]]", "[[2026-07-11-webgpu_wasm_3_0_webnn_webllm_browser_serving.md]]", "[[2026-07-12-webllm-3w-opfs-json-workers.md]]"]
+last_updated: "2026-07-13"
+updated: "2026-07-13"
+related_raw: ["[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-07-01-webgpu-webnn-wasm3-webmcp.md]]", "[[2026-07-10-web-inference-wasm-3.0.md]]", "[[2026-07-11-webgpu_wasm_3_0_webnn_webllm_browser_serving.md]]", "[[2026-07-12-webllm-3w-opfs-json-workers.md]]", "[[2026-07-13-litert-lm-swift-js-session-api.md]]"]
 ---
 
 # 🌐 WebGPU 및 WebNN 표준화 현황 (2026)
@@ -65,6 +65,12 @@ WebLLM/Transformers.js와 병행 평가 시, llama.cpp 생태계 사용자는 Ll
 - **캐시**: IndexedDB에 더해 **OPFS(Origin Private File System)**에 가중치를 저장해 재방문 로드를 단축.
 - **운영**: 다중 WebLLM 인스턴스는 브라우저 메모리 고갈 위험 → 모델 전환 시 engine terminate/reinit 권장.
 - 데모: [chat.webllm.ai](https://chat.webllm.ai/) · 3W 참고: [Mozilla.ai](https://blog.mozilla.ai/3w-for-in-browser-ai-webllm-wasm-webworkers/)
+
+## 7. WebLLM v0.2.84 · LiteRT-LM.js 병행 (2026-07-13 PM)
+
+- npm [`@mlc-ai/web-llm@0.2.84`](https://www.npmjs.com/package/@mlc-ai/web-llm) (2026-05-27): 0.2.83 이후 패치 라인. OpenAI 호환·WebGPU·WebWorker 패턴 유지.
+- 병행 스택: Google **`@litert-lm/core`** 는 `.litertlm` + WebGPU로 Gemma 계열 온디바이스 파이프라인을 브라우저에 직접 올린다 (M4 Max ~76 tok/s decode 보고). WebLLM(MLC/TVM 커널) vs LiteRT-LM.js(Gemma Edge 스택)를 모델·배포 포맷 기준으로 선택.
+- 실무: 범용 HF/GGUF·멀티모델 → WebLLM; Gemma 4 Edge Gallery 정렬·MTP/세션 API 공유 → LiteRT-LM.js.
 
 ---
 **관련 문서**:

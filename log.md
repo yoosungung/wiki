@@ -1,6 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-07-13 | RESEARCH | Web | 3 | PM: LiteRT-LM Swift/JS session API, Supermemory OpenClaw·Claude plugins, Ryzen AI Halo Developer Center/BKC |
+| 2026-07-13 | INGEST | raw/ | 3 | PM: litert-lm-swift-js-session-api, supermemory-openclaw-claude-plugins, ryzen-ai-halo-developer-center-bkc |
+| 2026-07-13 | SYNTHESIZE | wiki/ | 4 | PM: 스마트폰 LLM 서빙·Supermemory·온디바이스 AI PC·WebGPU/WebLLM 위키 증분 및 연구_주제_관리.md 충돌 복구 |
+| 2026-07-13 | LINT | Root / wiki | ALL | PM: 데일리 SYNTHESIZED_WIKI 위키링크 갱신, raw/ 정리, log 동기화 |
+| 2026-07-13 | LINT | Daily | 3 | SYNTHESIZED_WIKI backtick 경로를 [[wiki/...]] 클릭 링크로 전환 (2026-07-12/13), km-researcher 스킬·회귀 테스트 추가 |
 | 2026-07-13 | RESEARCH | Web | 6 | Codex custom skills, Vibe Coding/Claude Code loops, Mamba/GDN context compression, RAG limits vs Context Engineering, Colibrì CPU MoE engine, loop-engineering repo |
 | 2026-07-13 | INGEST | raw/ | 6 | 6개 신규 원천(jyoung105, eordax, kiwoong-yeom, sadik-mohammad, colibri, loop-engineering) 수집 및 표준화 완료 |
 | 2026-07-13 | SYNTHESIZE | wiki/ | 5 | 5개 위키(Claude-Code-Codex-Token-Optimization, Recent-LLM-Architecture-Developments, Supermemory-Architecture-and-MCP, GLM-5-2-Architecture-and-IndexShare, 루프-엔지니어링-패러다임-및-시스템-안전) 합성 및 연구_주제_관리.md 비고 업데이트 완료 |
