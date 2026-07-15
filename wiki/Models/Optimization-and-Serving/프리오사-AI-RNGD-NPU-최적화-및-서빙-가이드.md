@@ -1,9 +1,9 @@
 ---
 title: "프리오사 AI RNGD NPU 최적화 및 서빙 가이드 (2026)"
 tags: ["FuriosaAI", "RNGD", "Renegade", "NPU", "Inference", "vLLM", "HBM3"]
-last_updated: "2026-07-14"
-updated: "2026-07-14"
-related_raw: ["[[2026-06-16-Research-Synthesis-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-furiosa_rngd_npu_serving_optimization.md]]", "[[2026-06-28-furiosa_rngd_npu_llm_serving_optimization.md]]", "[[2026-06-30-furiosa_rngd_furiosa_llm.md]]", "[[2026-07-01-furiosa-rngd-npu-hbm3-inference.md]]", "[[2026-07-07-furiosa-rngd-prefix-aware-dp-router.md]]", "[[2026-07-11-furiosa_rngd_npu_tcp_prefix_aware_router.md]]", "[[2026-07-12-furiosa-sdk-dp-routing-scoring-weights.md]]"]
+last_updated: "2026-07-15"
+updated: "2026-07-15"
+related_raw: ["[[2026-06-16-Research-Synthesis-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-furiosa_rngd_npu_serving_optimization.md]]", "[[2026-06-28-furiosa_rngd_npu_llm_serving_optimization.md]]", "[[2026-06-30-furiosa_rngd_furiosa_llm.md]]", "[[2026-07-01-furiosa-rngd-npu-hbm3-inference.md]]", "[[2026-07-07-furiosa-rngd-prefix-aware-dp-router.md]]", "[[2026-07-11-furiosa_rngd_npu_tcp_prefix_aware_router.md]]", "[[2026-07-12-furiosa-sdk-dp-routing-scoring-weights.md]]", "[[2026-07-15-samsung-sds-furiosa-npuaas-launch.md]]"]
 ---
 
 # 🚀 프리오사 AI RNGD NPU 최적화 및 서빙 가이드 (2026)
@@ -89,8 +89,8 @@ furiosa-llm serve <model> --data-parallel-size 2 \
 ## 5. 상용화 및 클라우드 (NPUaaS)
 
 - **Mass Production**: **2026년 1월 양산 시작**. 현재 NXT RNGD 서버 및 PCIe 카드 글로벌 공급 중.
-- **Samsung Cloud Platform (SCP)**: **2026년 7월** RNGD 기반 **NPU-as-a-Service (NPUaaS)** 공식 런칭 확정. 국내 최초의 NPU 인프라 서비스로, 클라우드 스토리지 및 네트워킹과 통합된 유연한 구성을 제공.
-- **차세대(3rd Gen) 가속기**: 2026년 5월 브로드컴(Broadcom)과 칩렛 기반의 3세대 가속기 개발 협업 발표.
+- **Samsung SDS NPUaaS 상용 런칭 확정 (2026-07-15 업데이트)**: 삼성SDS가 **2026년 7월 16일** RNGD 기반 **NPU-as-a-Service (NPUaaS)**를 정식 출시합니다(7월 14일 K-NPU Tech Wave 발표, 최정진 부사장). 이는 국산 NPU 하드웨어의 **첫 대규모 상용 배포** 사례로, 고객은 **1·2·4·8장 단위 가속기 카드 구독** 구성을 선택할 수 있습니다. 삼성SDS **상암(서울)·동탄(경기) 데이터센터**에 RNGD를 배치하며 초기 단계에서 점진 확장합니다.
+- **차세대(3rd Gen) 가속기**: 2026년 5월 브로드컴(Broadcom)과 칩렛 기반의 3세대 가속기 개발 협업 발표. CRO 강지훈에 따르면 3세대는 **Renegade 대비 10~30배 연산 능력**을 목표로 이미 개발 중이며, **이르면 2027년 말 양산** 예정입니다(LLM·에이전틱 AI·CCTV 분석·데이터센터/온프레미스 타깃).
 
 ### 글로벌 진출 및 생산 스케일업 (2026-07-14 업데이트)
 - **생산 스케일업 및 차세대 "Stork"**: 에이전틱 AI 추론 수요 급증에 대처하기 위해 2027년까지 RNGD NPU 카드를 **40,000~50,000대 규모로 생산 능력을 확장**할 계획입니다. 동시에 NVIDIA 추론용 dGPU 제품군에 대항해 극강의 토큰당 비용 효율을 보장하는 **2nm 공정 기반 3세대 NPU "Stork"(황새)** 개발에 전력을 다하고 있습니다.

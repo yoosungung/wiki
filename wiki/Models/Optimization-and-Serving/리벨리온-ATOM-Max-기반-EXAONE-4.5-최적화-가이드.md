@@ -1,9 +1,9 @@
 ---
 title: "리벨리온 ATOM-Max 기반 EXAONE 4.5 최적화 가이드 (2026)"
 tags: ["Rebellions", "ATOM-Max", "EXAONE4.5", "NPU", "Optimization", "vLLM", "PhysicalAI"]
-last_updated: "2026-07-14"
-updated: "2026-07-14"
-related_raw: ["[[2026-06-04-Rebellions-ATOM-Max-EXAONE-4.5-Research.md]]", "[[2026-06-05-Rebellions-vLLM-EXAONE-Speculative-MoE-Update.md]]", "[[2026-06-07-Rebellions-ATOM-Max-vLLM-EXAONE-4.5-Update.md]]", "[[2026-06-09-Rebellions-NPU-EXAONE-4.5-Physical-AI-Update.md]]", "[[2026-06-11-Rebellions-Atom-Rebel-EXAONE-4.5-Research.md]]", "[[2026-06-12-Rebellions-ATOM-Max-EXAONE-4.5-Update.md]]", "[[2026-06-15-Rebellions-EXAONE-Physical-AI-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-rebellions_atom_max_exaone_optimization.md]]", "[[2026-06-28-rebellions_atom_max_exaone_4_5_optimization.md]]", "[[2026-06-30-rebellions_atom_max_exaone_4_5.md]]", "[[2026-07-01-vllm-rbln-exaone-4-5-atom-max.md]]", "[[2026-07-07-exaone-4.5-vllm-rbln-atom-max-optimization.md]]", "[[2026-07-11-rebellions_atom_max_exaone_4_5_vllm_rbln.md]]", "[[2026-07-12-rbln-sdk-0.11-vllm-exaone-gemma4.md]]"]
+last_updated: "2026-07-15"
+updated: "2026-07-15"
+related_raw: ["[[2026-06-04-Rebellions-ATOM-Max-EXAONE-4.5-Research.md]]", "[[2026-06-05-Rebellions-vLLM-EXAONE-Speculative-MoE-Update.md]]", "[[2026-06-07-Rebellions-ATOM-Max-vLLM-EXAONE-4.5-Update.md]]", "[[2026-06-09-Rebellions-NPU-EXAONE-4.5-Physical-AI-Update.md]]", "[[2026-06-11-Rebellions-Atom-Rebel-EXAONE-4.5-Research.md]]", "[[2026-06-12-Rebellions-ATOM-Max-EXAONE-4.5-Update.md]]", "[[2026-06-15-Rebellions-EXAONE-Physical-AI-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-rebellions_atom_max_exaone_optimization.md]]", "[[2026-06-28-rebellions_atom_max_exaone_4_5_optimization.md]]", "[[2026-06-30-rebellions_atom_max_exaone_4_5.md]]", "[[2026-07-01-vllm-rbln-exaone-4-5-atom-max.md]]", "[[2026-07-07-exaone-4.5-vllm-rbln-atom-max-optimization.md]]", "[[2026-07-11-rebellions_atom_max_exaone_4_5_vllm_rbln.md]]", "[[2026-07-12-rbln-sdk-0.11-vllm-exaone-gemma4.md]]", "[[2026-07-15-litert-lm-v0110-windows-rebellions-torchdynamo.md]]"]
 ---
 
 # 🚀 리벨리온 ATOM-Max 기반 EXAONE 4.5 최적화 가이드 (2026)
@@ -87,6 +87,7 @@ uv pip install vllm-rbln --extra-index-url https://wheels.vllm.ai/0.22.0/cpu --t
 
 - **SqueezeBits 인수**: Rebellions는 2026년 6~7월 중 AI 최적화 및 추론 연산 전문 기술 기업인 SqueezeBits를 성공적으로 인수하였습니다. 이를 통해 하드웨어 단에 머무르지 않고, 소프트웨어 최적화 툴킷과 고속 추론엔진 컴파일러 부문의 내재적 역량을 배가하여 vLLM-RBLN 및 SDK 성능 튜닝 고도화를 이루어냈습니다.
 - **랙 스케일 인프라 생태계 확장**: GIGABYTE의 서버 자회사 Giga Computing과의 파트너십(MOU) 체결 및 SKT와의 RebelRack/RebelPOD 솔루션 고도화를 기반으로, 단일 칩 공급 수준을 넘어서 대규모 데이터센터 서버 랙 단위 통합 NPU 스택 구축 및 글로벌 유통 채널 확보에 속도를 내고 있습니다.
+- **vllm-rbln TorchDynamo 전환 (2026-07-15 업데이트)**: SqueezeBits 기술 블로그에 따르면, 기존 `vllm-rbln`은 RBLN Compiler를 통한 **외부 export 단계**(vLLM 코드 실행 전 별도 변환)를 거쳤습니다. 향후에는 RBLN 컴파일러의 `torch.compile` 지원을 활용한 **TorchDynamo 기반 통합**으로 전환하여, 외부 변환 파이프라인 없이 PyTorch 코드에서 곧바로 NPU 실행이 이뤄지도록 모델링·컴파일 단계를 일원화합니다. 이로써 vLLM의 신규 기능(structured output, prefix caching 등)을 전용 export 파이프라인 없이 즉시 흡수할 수 있습니다.
 
 ## 5. 실전 최적화 체크리스트
 

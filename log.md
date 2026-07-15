@@ -239,3 +239,6 @@
 | 2026-07-14 | RESEARCH | 연구_주제_관리.md | 7 | 활성 과제 공식 웹·저장소 재탐색; AV-SQL 구현 및 OSI→Apache Ossie 전환 확인 |
 | 2026-07-14 | SYNTHESIZE | wiki/Agents, wiki/Engineering | 8 | AV-SQL 실행 검증 경로 보강, Ossie 0.1.1 안정판·0.2.0.dev0 초안 구분, 관련 MOC·문서 정정 |
 | 2026-07-14 | LINT | Root / wiki/ | ALL | index.md 구조·파일 수 최신 상태 확인; 테스트 15건 통과; 전체 진단 899 dead links·116 orphan notes |
+| 2026-07-15 | INGEST | raw/ | 2 | 삼성SDS RNGD NPUaaS 상용 런칭·3세대 NPU, LiteRT-LM v0.11.0 Windows, Rebellions TorchDynamo 원천 수집 |
+| 2026-07-15 | RESEARCH | 연구_주제_관리.md | 7 | 활성 과제 재탐색; 신규 사실 3건(삼성SDS NPUaaS 7/16, vllm-rbln TorchDynamo, LiteRT-LM v0.11.0 Windows) 확인 |
+| 2026-07-15 | SYNTHESIZE | wiki/Models/Optimization-and-Serving | 3 | Furiosa NPUaaS 상용화·3세대, Rebellions vllm-rbln TorchDynamo 전환, LiteRT-LM Windows 네이티브 CLI 반영 |

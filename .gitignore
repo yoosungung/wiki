@@ -9,6 +9,9 @@ Thumbs.db
 __pycache__/
 *.pyc
 
+# Python virtual environment
+.venv/
+
 # Local backup archives
 *.zip
 *.tar.gz
