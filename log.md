@@ -5,6 +5,22 @@
 | 2026-07-16 | INGEST | raw/ | 3 | vllm-rbln-v0.11.1a7, litert-lm-v0.14.0, furiosa-npuaas-launch-day-broadcom-stork |
 | 2026-07-16 | SYNTHESIZE | wiki/ | 3 | 리벨리온 EXAONE·스마트폰 LLM 서빙·프리오사 RNGD 위키 증분 및 연구_주제_관리.md 비고 갱신 |
 | 2026-07-16 | LINT | Root / wiki | ALL | 2026-07-16 데일리 노트 생성, D-2(2026-07-14) 삭제, raw/ 정리 |
+| 2026-07-16 | INGEST | raw/ | 3 | LiteRT-LM Gemma4 MTP 최적화, Supermemory AI 메모리 레이어, AV-SQL 시맨틱 레이어 수집 완료 |
+| 2026-07-16 | SYNTHESIZE | wiki/ | 3 | 스마트폰 LLM 서빙, Supermemory MCP, AV-SQL Spider 2.0 위키 증분 합성 완료 |
+| 2026-07-16 | LINT | Root / wiki | ALL | index.md 날짜 갱신 및 fix_wiki_links.py 실행 검증, log.md 동기화 완료 |
+| 2026-07-16 | LINT | 연구_주제_관리.md | 1 | 자율 수행 MAS 오케스트레이션 연구 키워드 보강 (Block 전환 사례 키워드 추가) |
+| 2026-07-16 | RESEARCH | Web | 2 | Block의 3,500명 엔지니어링 에이전트 전환 여정(Maturity Model, AI-Ready Repo) 분석 완료 |
+| 2026-07-16 | INGEST | raw/ | 1 | raw/2026-07-16-agentic-engineering-organizations-block-case-study.md (Block 에이전트 전환) 수집 완료 |
+| 2026-07-16 | SYNTHESIZE | wiki/ | 1 | 에이전트-기반-엔지니어링-조직-전환-및-성숙도-모델.md 위키 합성 및 MOC 연결 완료 |
+| 2026-07-16 | LINT | Root / wiki | ALL | index.md 파일 개수 및 log.md 동기화 완료 |
+| 2026-07-16 | RESEARCH | Web | 1 | 자율수행 멀티 에이전트 시스템(MAS) 오케스트레이션 및 보안 샌드박싱 SOTA 분석 완료 |
+| 2026-07-16 | INGEST | raw/ | 1 | raw/2026-07-16-autonomous-multi-agent-orchestration-research.md (자율수행 MAS 격리) 수집 완료 |
+| 2026-07-16 | SYNTHESIZE | wiki/ | 1 | 자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md 위키 합성 및 000_Multi-Agent-and-Orchestration-MOC.md 업데이트 완료 |
+| 2026-07-16 | LINT | Root / wiki | ALL | 연구_주제_관리.md에 자율수행멀티에이전트 주제 추가 및 index.md 개수 갱신, raw/ 정리 완료 |
+| 2026-07-16 | RESEARCH | Web | 7 | LiteRT-LM, WebGPU/Wasm3.0 Memory64, Rebellions ATOM-Max, Furiosa RNGD, AI PC 2026 Trends, Supermemory MCP 4.0, AV-SQL OSI/MCP SOTA 분석 완료 |
+| 2026-07-16 | INGEST | raw/ | 1 | raw/2026-07-16-av-sql-osi-mcp-integration-research.md (AV-SQL 시맨틱 레이어 통합) 수집 완료 |
+| 2026-07-16 | SYNTHESIZE | wiki/ | 1 | AV-SQL-Agentic-Views-Spider-2-0.md 위키 합성 및 연구_주제_관리.md 최종 업데이트 갱신 완료 |
+| 2026-07-16 | LINT | Root / wiki | ALL | 2026-07-16 데일리 노트 생성, index.md 갱신, 과거 데일리(2026-07-13, 2026-07-14) 삭제 및 raw/ 폴더 정리 완료 |
 | 2026-07-14 | LINT | Root / skills | 3 | log.md 유지기간 정책 문서화: append-only(자동 삭제 없음), 데일리 D-0/D-1·raw/ 합성 후 삭제와 대비 (#282) |
 | 2026-07-14 | RESEARCH | Web | 6 | LiteRT-LM, WASM 3.0 Memory64, Rebellions SqueezeBits 인수, Furiosa 2nm Stork, AI PC 3사 에이전틱 구도, Supermemory 메모리 지형 조사 완료 |
 | 2026-07-14 | SYNTHESIZE | wiki/ | 5 | 5개 위키(스마트폰 LLM 서빙, 리벨리온 최적화, 프리오사 RNGD 최적화, 온디바이스 AI PC, Supermemory MCP) 합성 및 연구_주제_관리.md 비고 갱신 완료 |
