@@ -1,6 +1,6 @@
 ---
 title: "AV-SQL: Agentic Views를 통한 Text-to-SQL 혁신 및 시맨틱 레이어 통합"
-related_raw: ["[[wiki/Agents/Text-to-SQL/2026-04-20-T2SQL-Trends-Update.md]]", "[[2026-07-16-av-sql-osi-mcp-integration-research.md]]"]
+related_raw: ["[[wiki/Agents/Text-to-SQL/2026-04-20-T2SQL-Trends-Update.md]]", "[[2026-07-16-av-sql-osi-mcp-integration-research.md]]", "[[2026-07-16-av_sql_semantic_layer_text_to_sql_research.md]]"]
 tags: ["wiki", "Agents", "Text-to-SQL", "OSI", "MCP", "Snowflake"]
 type: "wiki"
 status: "published"
@@ -24,11 +24,12 @@ AV-SQL은 3단계 에이전트 파이프라인을 통해 복잡한 쿼리를 분
     *   **Generator**: 계획에 따라 최종 SQL을 합성합니다.
     *   **Revisor**: SQL을 실제 DB에서 실행하고, 오류 발생 시 피드백을 통해 쿼리를 수정(Self-Correction)합니다.
 
-## OSI v1.0 및 Snowflake MCP 통합 (2026-07-16 업데이트)
+## OSI v1.0 (Apache Ossie) 및 Snowflake MCP 통합 (2026-07-16 업데이트)
 대규모 엔터프라이즈 환경에서의 정확도 한계를 극복하기 위해, AV-SQL 아키텍처에 시맨틱 거버넌스가 결합되었습니다.
 
-1. **OSI v1.0 `ai_context` 기반 CTE 가이드**:
-   - `ai_context` 필드에 정의된 자연어 지침(`instructions`), 유의어 매핑(`synonyms`), Few-shot 질의-쿼리 쌍(`examples`)을 **View Generator Agent**의 프롬프트 컨텍스트에 직접 주입합니다.
+1. **OSI v1.0 (Apache Ossie) `ai_context` 기반 CTE 가이드**:
+   - **Open Semantic Interchange (OSI)** 규격은 최근 **Apache Ossie (Incubating)**로 정식 명명되어 시맨틱 메타데이터 교환의 표준 사양으로 정착되었습니다.
+   - 모델 정의 내 핵심 필드인 `ai_context`에 명시된 자연어 지침(`instructions`), 유의어 매핑(`synonyms`), Few-shot 질의-쿼리 쌍(`examples`)을 **View Generator Agent**의 프롬프트 컨텍스트에 직접 주입합니다.
    - 이를 통해 에이전트가 비즈니스 규칙(예: 순매출 계산 시 환불 금액 차감 필터링 등)을 선제적으로 반영한 CTE(Agentic Views)를 생성하도록 보장하여 스키마 링킹 및 비즈니스 로직 오류를 **90% 이상 차단**합니다.
 2. **Snowflake Intelligence MCP 연동**:
    - Snowflake의 Managed MCP Server를 경유하여 데이터 카탈로그 및 Cortex Analyst의 시맨틱 분석 결과를 실시간 검색(Recall)합니다.
