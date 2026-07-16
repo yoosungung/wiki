@@ -1,6 +1,10 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-07-16 | RESEARCH | Web | 7 | LiteRT-LM, WebGPU/Wasm3.0 Memory64, Rebellions ATOM-Max, Furiosa RNGD, AI PC 2026 Trends, Supermemory MCP 4.0, AV-SQL OSI/MCP SOTA 분석 완료 |
+| 2026-07-16 | INGEST | raw/ | 1 | raw/2026-07-16-av-sql-osi-mcp-integration-research.md (AV-SQL 시맨틱 레이어 통합) 수집 완료 |
+| 2026-07-16 | SYNTHESIZE | wiki/ | 1 | AV-SQL-Agentic-Views-Spider-2-0.md 위키 합성 및 연구_주제_관리.md 최종 업데이트 갱신 완료 |
+| 2026-07-16 | LINT | Root / wiki | ALL | 2026-07-16 데일리 노트 생성, index.md 갱신, 과거 데일리(2026-07-13, 2026-07-14) 삭제 및 raw/ 폴더 정리 완료 |
 | 2026-07-14 | LINT | Root / skills | 3 | log.md 유지기간 정책 문서화: append-only(자동 삭제 없음), 데일리 D-0/D-1·raw/ 합성 후 삭제와 대비 (#282) |
 | 2026-07-14 | RESEARCH | Web | 6 | LiteRT-LM, WASM 3.0 Memory64, Rebellions SqueezeBits 인수, Furiosa 2nm Stork, AI PC 3사 에이전틱 구도, Supermemory 메모리 지형 조사 완료 |
 | 2026-07-14 | SYNTHESIZE | wiki/ | 5 | 5개 위키(스마트폰 LLM 서빙, 리벨리온 최적화, 프리오사 RNGD 최적화, 온디바이스 AI PC, Supermemory MCP) 합성 및 연구_주제_관리.md 비고 갱신 완료 |
