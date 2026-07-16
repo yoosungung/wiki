@@ -3,9 +3,9 @@ title: "Agentic Semantic Layer: AI 에이전트를 위한 지능형 데이터 �
 tags: ["Architecture", "Semantic-Layer", "T2SQL", "Agentic-AI"]
 type: "wiki"
 status: "published"
-last_updated: "2026-04-28"
-updated: "2026-04-28"
-related_raw: ["[[raw/2026-04-22-semantic-layer-standards-osi-mcp-research.md]]", "[[raw/2026-04-26-OSI-v1-Updates.md]]", "[[raw/2026-04-28-OSI-v1-ai-context-Standard.md]]"]
+last_updated: "2026-07-14"
+updated: "2026-07-14"
+related_raw: ["[[raw/2026-07-14-AV-SQL-논문-및-구현.md]]", "[[raw/2026-07-14-Apache-Ossie-명세.md]]"]
 ---
 
 # 에이전틱 시맨틱 레이어 (Agentic Semantic Layer)
@@ -17,8 +17,8 @@ related_raw: ["[[raw/2026-04-22-semantic-layer-standards-osi-mcp-research.md]]",
 ### 1. 에이전트 백본(Backbone)으로의 전환
 시맨틱 레이어는 더 이상 BI 도구의 부속물이 아닙니다. 에이전트가 원시 테이블에 직접 접근하여 발생하는 '환각(Hallucination)'을 원천 차단하고, 정의된 지표(Metrics)를 바탕으로 정확한 판단을 내리게 하는 에이전트의 **지식 기반(Knowledge Base)** 역할을 수행합니다.
 
-### 2. OSI (Open Semantic Interchange) 표준 확산
-**Snowflake, ThoughtSpot, Salesforce, dbt Labs, Looker** 등이 주도하는 **OSI 표준**의 도입으로 데이터 사일로가 해결되었습니다. 2026년 1월 27일 공식 발표된 **OSI v1.0 사양**(Apache 2.0 라이선스)은 벤더 중립적인 시맨틱 모델 표준을 제공합니다.
+### 2. OSI에서 Apache Ossie로의 전환
+Open Semantic Interchange(OSI)는 현재 **Apache Ossie**로 이전되었습니다. 최신 안정 명세는 **0.1.1**이며, `main` 브랜치의 **0.2.0.dev0**은 변경 가능한 미출시 초안입니다. 따라서 “OSI v1.0이 확정됐다”는 기존 기록은 사실과 다르며, 프로덕션에서는 안정 버전을 고정하고 명세 검증을 CI에 포함해야 합니다.
 - **`ai_context` 필드**: AI 에이전트가 데이터 구조와 비즈니스 맥락을 더 잘 이해할 수 있도록 돕는 설명적 메타데이터를 표준화했습니다.
     - **`instructions`**: 에이전트를 위한 자연어 실행 가이드.
     - **`synonyms`**: 사용자가 질문 시 사용할 수 있는 다양한 유의어 매핑.
@@ -41,7 +41,7 @@ semantic_model:
             instructions: "세금이 포함된 금액이며 배송비는 제외된 수치입니다."
 ```
 
-- **효과**: 에이전트는 도구와 플랫폼에 구애받지 않고 시맨틱 컨텍스트를 공유하며 협업할 수 있는 '상호운용성'을 확보하게 되었습니다. (GitHub: `open-semantic-interchange/OSI`)
+- **효과**: 동일한 시맨틱 컨텍스트를 여러 도구가 교환할 수 있는 공통 형식을 제공합니다. 실제 상호운용성은 각 도구의 변환기 지원 범위와 명세 버전에 따라 달라집니다. (GitHub: `apache/ossie`)
 
 ### 3. 자율형 시맨틱 레이어 생성 (Autonomous Generation)
 에이전트가 원시 스키마와 과거 질의 패턴을 분석하여 스스로 시맨틱 모델을 구축하는 **'자율형 데이터 엔지니어링'**이 일반화되었습니다. 에이전트는 새로운 지표를 제안하고, 인간의 승인을 거쳐 Git에 자동으로 PR(Pull Request)을 생성합니다.
@@ -75,10 +75,17 @@ Anthropic이 발표하고 Google, Microsoft, OpenAI가 참여하는 **MCP**가 A
 ### 3. 지능형 스키마 프루닝 (Schema Pruning)
 - **Hierarchical Discovery**: 수천 개의 테이블 중 질문과 관련된 테이블/컬럼 정의 및 비즈니스 용어집만 동적으로 선별하여 컨텍스트 윈도우를 최적화합니다.
 - **메타데이터 RAG**: 지식 그래프를 활용하여 질문의 의도와 가장 유사한 데이터 소스를 탐색합니다.
+- **실행 가능한 중간 표현**: [[wiki/Agents/Text-to-SQL/AV-SQL-Agentic-Views-Spider-2-0.md|AV-SQL]]처럼 선별한 스키마를 CTE로 만들고 중간 단계에서 실행 검증하면 최종 SQL 이전에 스키마 연결 오류를 격리할 수 있습니다.
 
 ### 4. 보안 및 거버넌스
 - **Control Point**: 시맨틱 레이어가 에이전트의 데이터 접근 제어 지점 역할을 수행합니다.
 - **Row/Column Level Security**: 사용자의 권한에 따라 보여줄 수 있는 데이터 범위를 자동으로 제어하여 안전한 분석 환경을 제공합니다.
+
+### 5. 명세 검증 파이프라인
+1. 안정 명세 버전을 저장소에 고정합니다.
+2. `core-spec/osi-schema.json` 또는 `core-spec/spec.yaml`로 시맨틱 모델을 검증합니다.
+3. 변환 전후의 `ai_context`, 관계, 다중 SQL 방언 표현 손실을 회귀 테스트합니다.
+4. 미출시 `0.2.0.dev0`을 시험할 때는 별도 브랜치에서 `validation/validate.py`를 실행하고 안정 모델과 분리합니다.
 
 ## 📂 구현 패턴
 
@@ -98,3 +105,4 @@ Anthropic이 발표하고 Google, Microsoft, OpenAI가 참여하는 **MCP**가 A
 - [[wiki/Agents/Text-to-SQL/T2SQL-Benchmarks-2026]]
 - [[wiki/Agents/Text-to-SQL/Metadata-RAG]]
 - [[wiki/Agents/Text-to-SQL/Semantic-Layer-DeepAgent-Filesystem]]
+- [[wiki/Engineering/Data-and-Security/OSI-Open-Semantic-Interchange.md]]

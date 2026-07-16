@@ -1,9 +1,9 @@
 ---
 title: "리벨리온 ATOM-Max 기반 EXAONE 4.5 최적화 가이드 (2026)"
 tags: ["Rebellions", "ATOM-Max", "EXAONE4.5", "NPU", "Optimization", "vLLM", "PhysicalAI"]
-last_updated: "2026-07-14"
-updated: "2026-07-14"
-related_raw: ["[[2026-06-04-Rebellions-ATOM-Max-EXAONE-4.5-Research.md]]", "[[2026-06-05-Rebellions-vLLM-EXAONE-Speculative-MoE-Update.md]]", "[[2026-06-07-Rebellions-ATOM-Max-vLLM-EXAONE-4.5-Update.md]]", "[[2026-06-09-Rebellions-NPU-EXAONE-4.5-Physical-AI-Update.md]]", "[[2026-06-11-Rebellions-Atom-Rebel-EXAONE-4.5-Research.md]]", "[[2026-06-12-Rebellions-ATOM-Max-EXAONE-4.5-Update.md]]", "[[2026-06-15-Rebellions-EXAONE-Physical-AI-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-rebellions_atom_max_exaone_optimization.md]]", "[[2026-06-28-rebellions_atom_max_exaone_4_5_optimization.md]]", "[[2026-06-30-rebellions_atom_max_exaone_4_5.md]]", "[[2026-07-01-vllm-rbln-exaone-4-5-atom-max.md]]", "[[2026-07-07-exaone-4.5-vllm-rbln-atom-max-optimization.md]]", "[[2026-07-11-rebellions_atom_max_exaone_4_5_vllm_rbln.md]]", "[[2026-07-12-rbln-sdk-0.11-vllm-exaone-gemma4.md]]"]
+last_updated: "2026-07-16"
+updated: "2026-07-16"
+related_raw: ["[[2026-06-04-Rebellions-ATOM-Max-EXAONE-4.5-Research.md]]", "[[2026-06-05-Rebellions-vLLM-EXAONE-Speculative-MoE-Update.md]]", "[[2026-06-07-Rebellions-ATOM-Max-vLLM-EXAONE-4.5-Update.md]]", "[[2026-06-09-Rebellions-NPU-EXAONE-4.5-Physical-AI-Update.md]]", "[[2026-06-11-Rebellions-Atom-Rebel-EXAONE-4.5-Research.md]]", "[[2026-06-12-Rebellions-ATOM-Max-EXAONE-4.5-Update.md]]", "[[2026-06-15-Rebellions-EXAONE-Physical-AI-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-rebellions_atom_max_exaone_optimization.md]]", "[[2026-06-28-rebellions_atom_max_exaone_4_5_optimization.md]]", "[[2026-06-30-rebellions_atom_max_exaone_4_5.md]]", "[[2026-07-01-vllm-rbln-exaone-4-5-atom-max.md]]", "[[2026-07-07-exaone-4.5-vllm-rbln-atom-max-optimization.md]]", "[[2026-07-11-rebellions_atom_max_exaone_4_5_vllm_rbln.md]]", "[[2026-07-12-rbln-sdk-0.11-vllm-exaone-gemma4.md]]", "[[2026-07-15-litert-lm-v0110-windows-rebellions-torchdynamo.md]]", "[[2026-07-16-vllm-rbln-v0.11.1a7-request-reordering-dtensor-mtp.md]]"]
 ---
 
 # 🚀 리벨리온 ATOM-Max 기반 EXAONE 4.5 최적화 가이드 (2026)
@@ -87,12 +87,34 @@ uv pip install vllm-rbln --extra-index-url https://wheels.vllm.ai/0.22.0/cpu --t
 
 - **SqueezeBits 인수**: Rebellions는 2026년 6~7월 중 AI 최적화 및 추론 연산 전문 기술 기업인 SqueezeBits를 성공적으로 인수하였습니다. 이를 통해 하드웨어 단에 머무르지 않고, 소프트웨어 최적화 툴킷과 고속 추론엔진 컴파일러 부문의 내재적 역량을 배가하여 vLLM-RBLN 및 SDK 성능 튜닝 고도화를 이루어냈습니다.
 - **랙 스케일 인프라 생태계 확장**: GIGABYTE의 서버 자회사 Giga Computing과의 파트너십(MOU) 체결 및 SKT와의 RebelRack/RebelPOD 솔루션 고도화를 기반으로, 단일 칩 공급 수준을 넘어서 대규모 데이터센터 서버 랙 단위 통합 NPU 스택 구축 및 글로벌 유통 채널 확보에 속도를 내고 있습니다.
+- **vllm-rbln TorchDynamo 전환 (2026-07-15 업데이트)**: SqueezeBits 기술 블로그에 따르면, 기존 `vllm-rbln`은 RBLN Compiler를 통한 **외부 export 단계**(vLLM 코드 실행 전 별도 변환)를 거쳤습니다. 향후에는 RBLN 컴파일러의 `torch.compile` 지원을 활용한 **TorchDynamo 기반 통합**으로 전환하여, 외부 변환 파이프라인 없이 PyTorch 코드에서 곧바로 NPU 실행이 이뤄지도록 모델링·컴파일 단계를 일원화합니다. 이로써 vLLM의 신규 기능(structured output, prefix caching 등)을 전용 export 파이프라인 없이 즉시 흡수할 수 있습니다.
+
+## 4.3 vLLM-RBLN v0.11.1a7 (2026-07-16 업데이트)
+
+[v0.11.1a7](https://github.com/RBLN-SW/vllm-rbln/releases/tag/v0.11.1a7) prerelease(2026-07-16 게시)가 optimum 경로와 speculative decode 경로를 동시에 보강했습니다.
+
+| 영역 | 변경 | 구현 함의 |
+| :--- | :--- | :--- |
+| **Request reordering** | optimum-compiled 모델에서 request-reordering 활성화 ([#596](https://github.com/RBLN-SW/vllm-rbln/pull/596)) | continuous batching 시 대기열 재정렬로 처리량·테일 레이턴시 개선 가능. A/B로 p95/p99를 반드시 측정 |
+| **DeepSeekV3 MTP + DTensor** | `deepseekv3-mtp`에 DTensor 지원 ([#775](https://github.com/RBLN-SW/vllm-rbln/pull/775)) | 멀티 디바이스 MoE/MTP 실험 시 텐서 병렬 경로 검증 대상 |
+| **Spec-decode 보정** | cross-DP no-spec 경로에서 prefill을 `query_len` scrub에서 제외 ([#759](https://github.com/RBLN-SW/vllm-rbln/pull/759)) | DP+speculative decoding 혼합 시 prefill 길이 왜곡 버그 완화 |
+| **Metrics** | outlier-removed mean → **latency percentiles** ([#769](https://github.com/RBLN-SW/vllm-rbln/pull/769)) | SLO는 p50/p95/p99 기준으로 재정의 |
+| **의존성** | `rebel-compiler` 선언 + `uv.lock` ([#749](https://github.com/RBLN-SW/vllm-rbln/pull/749)), optimum 컴파일에 `hf_config` 전달 ([#643](https://github.com/RBLN-SW/vllm-rbln/pull/643)) | 재현 가능한 lockfile 기반 설치, Transformers v5 설정 누락 방지 |
+
+```bash
+# prerelease 검증 (프로덕션은 안정판 0.11.0 유지 권장)
+uv pip install "vllm-rbln==0.11.1a7" \
+  --extra-index-url https://wheels.vllm.ai/0.22.0/cpu --torch-backend cpu
+```
+
+참고: 안정판 문서의 `torch.compile` 네이티브 통합은 여전히 진행 중이며, a7은 그 과도기의 optimum/자동컴파일 병행 경로 개선입니다. ([vLLM RBLN docs](https://docs.rbln.ai/latest/software/model_serving/vllm_support/vllm-rbln.html))
 
 ## 5. 실전 최적화 체크리스트
 
 1.  **모델 컴파일**: SDK v0.11.0+에서는 vLLM API 경로의 자동 컴파일을 우선 사용. 레거시 AOT가 필요하면 `optimum-cli`로 Transformers v5 호환 재컴파일.
 2.  **병렬화 최적화**: 33B 모델의 경우 8개 이상의 ATOM-Max 칩을 활용한 Tensor Parallelism(TP) 설정 권장. `VLLM_RBLN_NUM_DEVICES_PER_LOCAL_RANK`로 디바이스 수 지정.
 3.  **Physical AI 연동**: LG 로봇 KAPEX 등 물리적 하드웨어와의 실시간 추론 연동 테스트 수행.
+4.  **a7 검증 항목**: optimum 경로 request-reordering on/off + percentile 메트릭으로 p95 비교; DeepSeekV3 MTP는 단일 카드 후 DTensor로 확대.
 
 ---
 **관련 프로젝트**:

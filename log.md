@@ -1,6 +1,10 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-07-16 | RESEARCH | Web | 7 | vllm-rbln 0.11.1a7, LiteRT-LM 0.14.0, Furiosa NPUaaS 당일·Broadcom Stork, AV-SQL/Ossie·Supermemory·AI PC·브라우저 재탐색 |
+| 2026-07-16 | INGEST | raw/ | 3 | vllm-rbln-v0.11.1a7, litert-lm-v0.14.0, furiosa-npuaas-launch-day-broadcom-stork |
+| 2026-07-16 | SYNTHESIZE | wiki/ | 3 | 리벨리온 EXAONE·스마트폰 LLM 서빙·프리오사 RNGD 위키 증분 및 연구_주제_관리.md 비고 갱신 |
+| 2026-07-16 | LINT | Root / wiki | ALL | 2026-07-16 데일리 노트 생성, D-2(2026-07-14) 삭제, raw/ 정리 |
 | 2026-07-16 | INGEST | raw/ | 3 | LiteRT-LM Gemma4 MTP 최적화, Supermemory AI 메모리 레이어, AV-SQL 시맨틱 레이어 수집 완료 |
 | 2026-07-16 | SYNTHESIZE | wiki/ | 3 | 스마트폰 LLM 서빙, Supermemory MCP, AV-SQL Spider 2.0 위키 증분 합성 완료 |
 | 2026-07-16 | LINT | Root / wiki | ALL | index.md 날짜 갱신 및 fix_wiki_links.py 실행 검증, log.md 동기화 완료 |
@@ -248,3 +252,13 @@
     - Created: [[wiki/RAG/DEO-RAG-BigQuery-Gemini.md]], [[wiki/Models/Architectures/World-Models-Analysis.md]], [[wiki/Models/Architectures/CCNets-Causal-Relationships.md]], [[wiki/Models/Reasoning-and-Cognition/Multi-hop-Reasoning-Strategies.md]], [[wiki/Models/Small-Models/GLiNER-Lightweight-Entity-Extraction.md]], [[wiki/Engineering/Infrastructure-and-DevOps/LangChain-Token-Cost-Attribution.md]]
 
 - [2026-05-08] 연구 주제 아카이브: T2SQL, OSI, Political_Eval 주제 종료 및 projects/Archive로 이동 완료.
+
+| DATE | ACTION | SCOPE | FILES | SUMMARY |
+| :--- | :--- | :--- | :--- | :--- |
+| 2026-07-14 | INGEST | raw/ | 2 | AV-SQL 논문·공식 구현과 Apache Ossie 코어 명세 원천 수집 |
+| 2026-07-14 | RESEARCH | 연구_주제_관리.md | 7 | 활성 과제 공식 웹·저장소 재탐색; AV-SQL 구현 및 OSI→Apache Ossie 전환 확인 |
+| 2026-07-14 | SYNTHESIZE | wiki/Agents, wiki/Engineering | 8 | AV-SQL 실행 검증 경로 보강, Ossie 0.1.1 안정판·0.2.0.dev0 초안 구분, 관련 MOC·문서 정정 |
+| 2026-07-14 | LINT | Root / wiki/ | ALL | index.md 구조·파일 수 최신 상태 확인; 테스트 15건 통과; 전체 진단 899 dead links·116 orphan notes |
+| 2026-07-15 | INGEST | raw/ | 2 | 삼성SDS RNGD NPUaaS 상용 런칭·3세대 NPU, LiteRT-LM v0.11.0 Windows, Rebellions TorchDynamo 원천 수집 |
+| 2026-07-15 | RESEARCH | 연구_주제_관리.md | 7 | 활성 과제 재탐색; 신규 사실 3건(삼성SDS NPUaaS 7/16, vllm-rbln TorchDynamo, LiteRT-LM v0.11.0 Windows) 확인 |
+| 2026-07-15 | SYNTHESIZE | wiki/Models/Optimization-and-Serving | 3 | Furiosa NPUaaS 상용화·3세대, Rebellions vllm-rbln TorchDynamo 전환, LiteRT-LM Windows 네이티브 CLI 반영 |

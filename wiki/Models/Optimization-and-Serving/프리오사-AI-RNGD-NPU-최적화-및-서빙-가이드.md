@@ -1,9 +1,9 @@
 ---
 title: "프리오사 AI RNGD NPU 최적화 및 서빙 가이드 (2026)"
 tags: ["FuriosaAI", "RNGD", "Renegade", "NPU", "Inference", "vLLM", "HBM3"]
-last_updated: "2026-07-14"
-updated: "2026-07-14"
-related_raw: ["[[2026-06-16-Research-Synthesis-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-furiosa_rngd_npu_serving_optimization.md]]", "[[2026-06-28-furiosa_rngd_npu_llm_serving_optimization.md]]", "[[2026-06-30-furiosa_rngd_furiosa_llm.md]]", "[[2026-07-01-furiosa-rngd-npu-hbm3-inference.md]]", "[[2026-07-07-furiosa-rngd-prefix-aware-dp-router.md]]", "[[2026-07-11-furiosa_rngd_npu_tcp_prefix_aware_router.md]]", "[[2026-07-12-furiosa-sdk-dp-routing-scoring-weights.md]]"]
+last_updated: "2026-07-16"
+updated: "2026-07-16"
+related_raw: ["[[2026-06-16-Research-Synthesis-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-furiosa_rngd_npu_serving_optimization.md]]", "[[2026-06-28-furiosa_rngd_npu_llm_serving_optimization.md]]", "[[2026-06-30-furiosa_rngd_furiosa_llm.md]]", "[[2026-07-01-furiosa-rngd-npu-hbm3-inference.md]]", "[[2026-07-07-furiosa-rngd-prefix-aware-dp-router.md]]", "[[2026-07-11-furiosa_rngd_npu_tcp_prefix_aware_router.md]]", "[[2026-07-12-furiosa-sdk-dp-routing-scoring-weights.md]]", "[[2026-07-15-samsung-sds-furiosa-npuaas-launch.md]]", "[[2026-07-16-furiosa-npuaas-launch-day-broadcom-stork.md]]"]
 ---
 
 # 🚀 프리오사 AI RNGD NPU 최적화 및 서빙 가이드 (2026)
@@ -89,8 +89,9 @@ furiosa-llm serve <model> --data-parallel-size 2 \
 ## 5. 상용화 및 클라우드 (NPUaaS)
 
 - **Mass Production**: **2026년 1월 양산 시작**. 현재 NXT RNGD 서버 및 PCIe 카드 글로벌 공급 중.
-- **Samsung Cloud Platform (SCP)**: **2026년 7월** RNGD 기반 **NPU-as-a-Service (NPUaaS)** 공식 런칭 확정. 국내 최초의 NPU 인프라 서비스로, 클라우드 스토리지 및 네트워킹과 통합된 유연한 구성을 제공.
-- **차세대(3rd Gen) 가속기**: 2026년 5월 브로드컴(Broadcom)과 칩렛 기반의 3세대 가속기 개발 협업 발표.
+- **Samsung SDS NPUaaS 상용 런칭 (2026-07-16 당일 확인)**: 삼성SDS가 **2026-07-16** RNGD 기반 **NPU-as-a-Service (NPUaaS)**를 정식 출시했습니다(7월 14일 K-NPU Tech Wave 발표, 최정진 부사장). 국산 NPU의 **첫 대규모 상용 클라우드 배포**로, 고객은 학습·추론·서버리스 AI 워크로드를 **1·2·4·8장 카드 구독**으로 선택합니다. **상암(서울)·동탄(경기)** DC에 배치하며 연말까지 단계 확장합니다. ([The Elec](https://www.thelec.net/news/articleView.html?idxno=12245))
+- **차세대(3rd Gen / Stork) + Broadcom (2026-07-16 보강)**: 2026-05-27 Furiosa–Broadcom 파트너십으로 TCP를 **랙 스케일 scale-up 추론 플랫폼**으로 확장합니다. Broadcom 측은 XPU IP·**Ethernet scale-up/fabric 스위치**·패키징을 제공하고, 3세대는 **2nm compute die + HBM4/4E 멀티다이 SoC**를 목표로 합니다. ([Furiosa 블로그](https://furiosa.ai/blog/furiosaai-partners-with-broadcom-to-build-next-generation-inference-platform-for-the-agentic-era))
+  - **일정 모순 기록**: K-NPU 발언은 **이르면 2027년 말 양산**, DCD 등 보도는 **2028 H1 샘플링**을 언급합니다. 로드맵 인용 시 두 출처를 병기하고, 조달·PoC 일정은 Furiosa 공식 업데이트로 재확인합니다.
 
 ### 글로벌 진출 및 생산 스케일업 (2026-07-14 업데이트)
 - **생산 스케일업 및 차세대 "Stork"**: 에이전틱 AI 추론 수요 급증에 대처하기 위해 2027년까지 RNGD NPU 카드를 **40,000~50,000대 규모로 생산 능력을 확장**할 계획입니다. 동시에 NVIDIA 추론용 dGPU 제품군에 대항해 극강의 토큰당 비용 효율을 보장하는 **2nm 공정 기반 3세대 NPU "Stork"(황새)** 개발에 전력을 다하고 있습니다.
