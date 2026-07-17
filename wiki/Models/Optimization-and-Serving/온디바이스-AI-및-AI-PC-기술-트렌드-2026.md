@@ -3,9 +3,9 @@ title: "온디바이스 AI 및 AI PC 기술 트렌드 (2026)"
 tags: ["On-Device", "AI-PC", "NPU", "Lunar-Lake", "Strix-Point", "Copilot+", "Agentic-AI"]
 type: "wiki"
 status: "published"
-last_updated: "2026-07-14"
-updated: "2026-07-14"
-related_raw: ["[[2026-06-15-On-Device-AI-PC-Trends-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-on_device_ai_pc_agentic_trends.md]]", "[[2026-06-28-on_device_ai_trends_and_agentic_ai_2026.md]]", "[[2026-06-30-on_device_ai_trends_intel_amd_nvidia.md]]", "[[2026-07-01-on-device-ai-pc-hardware-trends.md]]", "[[2026-07-07-on-device-ai-trends-2026-ryzen-ai-max-panther-lake-rtx-spark.md]]", "[[2026-07-11-on_device_ai_pc_trends_strix_halo_panther_lake_rtx_spark.md]]", "[[2026-07-12-on-device-ai-pc-ryzen-ai-halo-npu-reality.md]]", "[[2026-07-13-ryzen-ai-halo-developer-center-bkc.md]]"]
+last_updated: "2026-07-17"
+updated: "2026-07-17"
+related_raw: ["[[2026-06-15-On-Device-AI-PC-Trends-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-on_device_ai_pc_agentic_trends.md]]", "[[2026-06-28-on_device_ai_trends_and_agentic_ai_2026.md]]", "[[2026-06-30-on_device_ai_trends_intel_amd_nvidia.md]]", "[[2026-07-01-on-device-ai-pc-hardware-trends.md]]", "[[2026-07-07-on-device-ai-trends-2026-ryzen-ai-max-panther-lake-rtx-spark.md]]", "[[2026-07-11-on_device_ai_pc_trends_strix_halo_panther_lake_rtx_spark.md]]", "[[2026-07-12-on-device-ai-pc-ryzen-ai-halo-npu-reality.md]]", "[[2026-07-13-ryzen-ai-halo-developer-center-bkc.md]]", "[[2026-07-17-ryzen-ai-halo-phoronix-shipping.md]]"]
 ---
 
 # 💻 온디바이스 AI 및 AI PC 기술 트렌드 (2026)
@@ -60,6 +60,13 @@ Microsoft의 Copilot+ 업데이트는 AI 성능의 가시화와 범용성에 초
 - **Playbooks**: n8n 등 에이전틱 툴 설치, 네트워크 경유 메트릭·원격 VS Code/Jupyter/터미널.
 - 타사 Strix Halo 미니 PC 대비 가치: 동일 Max+ 395라도 큐레이션 OS·지속 지원이 AI 개발 온보딩 비용을 낮춤.
 - 클러스터: DGX Spark식 QSFP(ConnectX-7) 없음 → **10GbE** 기반 클러스터링으로 우회.
+
+### Phoronix 출하 확인 · 폼팩터 (2026-07-17 업데이트)
+[Phoronix](https://www.phoronix.com/review/amd-ryzen-ai-halo)가 독립 Linux 리뷰와 함께 **정식 출하 시작**을 확인했습니다.
+- 섀시: **150×150×45 mm**, **<1.2 kg**, TDP **120 W**.
+- I/O: USB-C×3(PD), **10 GbE**, Wi‑Fi 7, BT 5.4, HDMI **2.1b** 단일(전용 DP 없음, USB-C→DP 가능), **2TB** PCIe Gen5 NVMe.
+- 소프트웨어: Debian계 **AMD Ryzen AI Developer Platform**이 단순 Ubuntu+ROCm 이미지 이상이라는 점을 재확인.
+- 출하 SKU는 Max+ 395(Strix Halo); Gorgon Halo(Max 400)는 후속.
 
 ## 4.2 실리콘 3사의 에이전틱 지향점 (2026-07-14 업데이트)
 

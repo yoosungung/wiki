@@ -1,6 +1,10 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-07-17 | RESEARCH | Web | 7 | Ossie CLI #151, LiteRT-LM Swift/NPU seqlen, Ryzen AI Halo Phoronix 출하; vllm-rbln·Furiosa·Supermemory·브라우저 재확인 |
+| 2026-07-17 | INGEST | raw/ | 3 | ossie-cli-scaffold, litert-lm-swift-decoding-controls-npu-seqlen, ryzen-ai-halo-phoronix-shipping |
+| 2026-07-17 | SYNTHESIZE | wiki/ | 3 | AV-SQL Ossie CLI·스마트폰 LiteRT·온디바이스 AI PC Halo 폼팩터 증분 |
+| 2026-07-17 | LINT | Root / wiki | ALL | 2026-07-17 데일리 생성, D-2(2026-07-15) 삭제, raw/ 정리, 연구_주제_관리·index 날짜 갱신 |
 | 2026-07-16 | RESEARCH | Web | 7 | vllm-rbln 0.11.1a7, LiteRT-LM 0.14.0, Furiosa NPUaaS 당일·Broadcom Stork, AV-SQL/Ossie·Supermemory·AI PC·브라우저 재탐색 |
 | 2026-07-16 | INGEST | raw/ | 3 | vllm-rbln-v0.11.1a7, litert-lm-v0.14.0, furiosa-npuaas-launch-day-broadcom-stork |
 | 2026-07-16 | SYNTHESIZE | wiki/ | 3 | 리벨리온 EXAONE·스마트폰 LLM 서빙·프리오사 RNGD 위키 증분 및 연구_주제_관리.md 비고 갱신 |

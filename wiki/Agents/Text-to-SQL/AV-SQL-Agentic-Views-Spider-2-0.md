@@ -1,11 +1,11 @@
 ---
 title: "AV-SQL: Agentic Views를 통한 Text-to-SQL 혁신 및 시맨틱 레이어 통합"
-related_raw: ["[[raw/2026-07-14-AV-SQL-논문-및-구현.md]]", "[[wiki/Agents/Text-to-SQL/2026-04-20-T2SQL-Trends-Update.md]]", "[[2026-07-16-av-sql-osi-mcp-integration-research.md]]", "[[2026-07-16-av_sql_semantic_layer_text_to_sql_research.md]]"]
+related_raw: ["[[raw/2026-07-14-AV-SQL-논문-및-구현.md]]", "[[wiki/Agents/Text-to-SQL/2026-04-20-T2SQL-Trends-Update.md]]", "[[2026-07-16-av-sql-osi-mcp-integration-research.md]]", "[[2026-07-16-av_sql_semantic_layer_text_to_sql_research.md]]", "[[2026-07-17-apache-ossie-cli-scaffold.md]]"]
 tags: ["wiki", "Agents", "Text-to-SQL", "OSI", "MCP", "Snowflake", "slm_for_text-to-sql_and_schema_linking"]
 type: "wiki"
 status: "published"
-last_updated: "2026-07-16"
-updated: "2026-07-16"
+last_updated: "2026-07-17"
+updated: "2026-07-17"
 ---
 
 # AV-SQL: Agentic Views를 통한 Text-to-SQL 혁신
@@ -44,6 +44,26 @@ AV-SQL은 3단계 에이전트 파이프라인을 통해 복잡한 쿼리를 분
    - Snowflake의 Managed MCP Server를 경유하여 데이터 카탈로그 및 Cortex Analyst의 시맨틱 분석 결과를 실시간 검색(Recall)할 수 있습니다.
    - MCP API를 통해 자주 활용되는 검증된 SQL 패턴을 동적으로 획득하면 Revisor Agent의 자율 디버깅 및 자가 수정(Self-Correction) 루프를 보강할 수 있습니다.
 
+## Apache Ossie CLI scaffold (2026-07-17 업데이트)
+
+[apache/ossie#151](https://github.com/apache/ossie/pull/151)이 2026-07-17에 병합되어 Go/Cobra 기반 **`ossie` CLI** 골격이 `cli/`에 추가되었습니다. 명령 본체는 아직 stub(`not yet implemented`)이지만, AV-SQL·시맨틱 레이어 파이프라인에 붙일 플래그 표면이 확정되었습니다.
+
+```bash
+# 플랫폼 → Ossie (또는 역방향). 플러그인 발견/타임아웃/입력 크기 제한 포함
+ossie convert --from dbt --input ./semantic.yaml -o ./ossie-output
+ossie convert --to gooddata --input ./model.ossie.yaml
+
+# YAML/JSON 검증 (구현 예정). --strict 시 warning→error
+ossie validate --strict --output json ./models/*.yaml
+
+# 벤더 변환 플러그인 생명주기 (list/install/remove stub)
+ossie plugin list
+```
+
+- **후속 PR 스택**: #154 플러그인 객체, #155 호출 프로토콜, #156 레지스트리, #158 `convert` 구현.
+- **같은 날**: semantido 벤더 등록(#207), orionbelt 컨버터 round-trip 견고화(#206).
+- **AV-SQL 적용 아이디어**: View Generator 전에 `ossie validate`로 `ai_context` 스키마를 게이트하고, `ossie convert --from <bi>`로 사내 시맨틱을 Ossie로 정규화한 뒤 CTE 프롬프트에 주입한다.
+
 ## 성능 (Performance Metrics)
 AV-SQL은 특히 현실 세계의 대규모 스키마 환경에서 탁월한 성능을 입증했습니다:
 
@@ -61,6 +81,8 @@ AV-SQL은 특히 현실 세계의 대규모 스키마 환경에서 탁월한 성
 - [GitHub Repository: pminhtam/AV-SQL](https://github.com/pminhtam/AV-SQL)
 - [[wiki/Agents/Text-to-SQL/T2SQL-Benchmarks-2026.md|Spider 2.0 및 T2SQL 벤치마크]]
 - [Open Semantic Interchange (OSI) Specification v1.0](https://github.com/open-semantic-interchange/OSI)
+- [Apache Ossie CLI scaffold PR #151](https://github.com/apache/ossie/pull/151)
+- [Apache Ossie (incubating)](https://ossie.apache.org/)
 - Snowflake Managed MCP Server documentation
 
 ## 관련 노트 (Related Notes)
