@@ -1,6 +1,10 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-07-18 | RESEARCH | Web | 7 | LiteRT-LM SuppressTokens/CLI help, Ossie DuckDB·semantido OPEN PR, Supermemory v0.0.5 embeddings; vllm-rbln·Furiosa·Halo·MAS 재확인 |
+| 2026-07-18 | INGEST | raw/ | 3 | litert-lm-swift-suppress-tokens-cli-help, apache-ossie-duckdb-semantido-converters, supermemory-server-v0.0.5-pluggable-embeddings |
+| 2026-07-18 | SYNTHESIZE | wiki/ | 3 | 스마트폰 LiteRT·AV-SQL Ossie 컨버터·Supermemory pluggable embeddings 증분 |
+| 2026-07-18 | LINT | Root / wiki | ALL | 2026-07-18 데일리 생성, D-2(2026-07-16) 삭제, raw/ 정리, 연구_주제_관리 날짜 갱신 |
 | 2026-07-17 | RESEARCH | Web | 7 | Ossie CLI #151, LiteRT-LM Swift/NPU seqlen, Ryzen AI Halo Phoronix 출하; vllm-rbln·Furiosa·Supermemory·브라우저 재확인 |
 | 2026-07-17 | INGEST | raw/ | 3 | ossie-cli-scaffold, litert-lm-swift-decoding-controls-npu-seqlen, ryzen-ai-halo-phoronix-shipping |
 | 2026-07-17 | SYNTHESIZE | wiki/ | 3 | AV-SQL Ossie CLI·스마트폰 LiteRT·온디바이스 AI PC Halo 폼팩터 증분 |

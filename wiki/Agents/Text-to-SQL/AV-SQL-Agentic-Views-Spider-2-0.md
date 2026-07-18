@@ -1,11 +1,11 @@
 ---
 title: "AV-SQL: Agentic Views를 통한 Text-to-SQL 혁신 및 시맨틱 레이어 통합"
-related_raw: ["[[raw/2026-07-14-AV-SQL-논문-및-구현.md]]", "[[wiki/Agents/Text-to-SQL/2026-04-20-T2SQL-Trends-Update.md]]", "[[2026-07-16-av-sql-osi-mcp-integration-research.md]]", "[[2026-07-16-av_sql_semantic_layer_text_to_sql_research.md]]", "[[2026-07-17-apache-ossie-cli-scaffold.md]]"]
+related_raw: ["[[raw/2026-07-14-AV-SQL-논문-및-구현.md]]", "[[wiki/Agents/Text-to-SQL/2026-04-20-T2SQL-Trends-Update.md]]", "[[2026-07-16-av-sql-osi-mcp-integration-research.md]]", "[[2026-07-16-av_sql_semantic_layer_text_to_sql_research.md]]", "[[2026-07-17-apache-ossie-cli-scaffold.md]]", "[[2026-07-18-apache-ossie-duckdb-semantido-converters.md]]"]
 tags: ["wiki", "Agents", "Text-to-SQL", "OSI", "MCP", "Snowflake", "slm_for_text-to-sql_and_schema_linking"]
 type: "wiki"
 status: "published"
-last_updated: "2026-07-17"
-updated: "2026-07-17"
+last_updated: "2026-07-18"
+updated: "2026-07-18"
 ---
 
 # AV-SQL: Agentic Views를 통한 Text-to-SQL 혁신
@@ -64,6 +64,31 @@ ossie plugin list
 - **같은 날**: semantido 벤더 등록(#207), orionbelt 컨버터 round-trip 견고화(#206).
 - **AV-SQL 적용 아이디어**: View Generator 전에 `ossie validate`로 `ai_context` 스키마를 게이트하고, `ossie convert --from <bi>`로 사내 시맨틱을 Ossie로 정규화한 뒤 CTE 프롬프트에 주입한다.
 
+## Apache Ossie 컨버터 확장 (2026-07-18, OPEN PR)
+
+CLI scaffold(#151) 이후 **허브-스포크 컨버터** 쪽으로 기여가 이어지고 있습니다. 아래는 2026-07-18 기준 **미병합(OPEN)** 이지만 AV-SQL/`ai_context` 파이프라인 설계에 바로 참고할 수 있는 표면입니다.
+
+### DuckDB 양방향 컨버터 — [PR #229](https://github.com/apache/ossie/pull/229)
+
+1. **Dialect**: `DUCKDB`를 `osi-schema.json` / `spec.yaml` / Python `OSIDialect`에 등록하고, `validation/validate.py`에서 sqlglot `duckdb`로 매핑.
+2. **Export**: Ossie → DuckDB SQL(데이터셋당 view, `COMMENT ON`, relationship 기반 metric view). `DUCKDB` 우선, 없으면 `ANSI_SQL`+경고.
+3. **Import**: DuckDB/`md:`(MotherDuck) → Ossie YAML(`information_schema` + `duckdb_constraints()` → PK/UK/FK·relationship).
+4. **CLI**: `ossie-duckdb export|import` + in-memory DuckDB round-trip pytest.
+
+```bash
+# 개념 예시 (PR #229 병합·플러그인 등록 후)
+ossie-duckdb export --input ./model.ossie.yaml -o ./duckdb_views.sql
+ossie-duckdb import --connection "md:my_db" -o ./imported.ossie.yaml
+```
+
+### semantido ↔ Ossie — [PR #230](https://github.com/apache/ossie/pull/230)
+
+- **Forward**: SQLAlchemy `@semantic_table` 모듈 import → semantido sync → typed `apache-ossie` 객체로 YAML emit.
+- **Reverse**: Ossie 문서 → `@semantic_table` 장식 Python 모듈 코드 생성.
+- 파일↔파일 변환기와 달리 **실행 중 Python 모델이 SoT**.
+
+**AV-SQL 적용**: MotherDuck/임베디드 DuckDB에 적재된 시맨틱을 Ossie로 끌어와 View Generator의 `ai_context`에 주입하거나, 코드 네이티브 semantido 레이어를 Ossie로 정규화한 뒤 CTE 프롬프트에 넣는 경로를 모니터링한다. (병합 전이라 프로덕션 고정은 보류)
+
 ## 성능 (Performance Metrics)
 AV-SQL은 특히 현실 세계의 대규모 스키마 환경에서 탁월한 성능을 입증했습니다:
 
@@ -82,6 +107,8 @@ AV-SQL은 특히 현실 세계의 대규모 스키마 환경에서 탁월한 성
 - [[wiki/Agents/Text-to-SQL/T2SQL-Benchmarks-2026.md|Spider 2.0 및 T2SQL 벤치마크]]
 - [Open Semantic Interchange (OSI) Specification v1.0](https://github.com/open-semantic-interchange/OSI)
 - [Apache Ossie CLI scaffold PR #151](https://github.com/apache/ossie/pull/151)
+- [Apache Ossie DuckDB converter PR #229](https://github.com/apache/ossie/pull/229) (OPEN)
+- [Apache Ossie semantido converter PR #230](https://github.com/apache/ossie/pull/230) (OPEN)
 - [Apache Ossie (incubating)](https://ossie.apache.org/)
 - Snowflake Managed MCP Server documentation
 
