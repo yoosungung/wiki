@@ -1,9 +1,9 @@
 ---
 title: "리벨리온 ATOM-Max 기반 EXAONE 4.5 최적화 가이드 (2026)"
 tags: ["Rebellions", "ATOM-Max", "EXAONE4.5", "NPU", "Optimization", "vLLM", "PhysicalAI"]
-last_updated: "2026-07-16"
-updated: "2026-07-16"
-related_raw: ["[[2026-06-04-Rebellions-ATOM-Max-EXAONE-4.5-Research.md]]", "[[2026-06-05-Rebellions-vLLM-EXAONE-Speculative-MoE-Update.md]]", "[[2026-06-07-Rebellions-ATOM-Max-vLLM-EXAONE-4.5-Update.md]]", "[[2026-06-09-Rebellions-NPU-EXAONE-4.5-Physical-AI-Update.md]]", "[[2026-06-11-Rebellions-Atom-Rebel-EXAONE-4.5-Research.md]]", "[[2026-06-12-Rebellions-ATOM-Max-EXAONE-4.5-Update.md]]", "[[2026-06-15-Rebellions-EXAONE-Physical-AI-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-rebellions_atom_max_exaone_optimization.md]]", "[[2026-06-28-rebellions_atom_max_exaone_4_5_optimization.md]]", "[[2026-06-30-rebellions_atom_max_exaone_4_5.md]]", "[[2026-07-01-vllm-rbln-exaone-4-5-atom-max.md]]", "[[2026-07-07-exaone-4.5-vllm-rbln-atom-max-optimization.md]]", "[[2026-07-11-rebellions_atom_max_exaone_4_5_vllm_rbln.md]]", "[[2026-07-12-rbln-sdk-0.11-vllm-exaone-gemma4.md]]", "[[2026-07-15-litert-lm-v0110-windows-rebellions-torchdynamo.md]]", "[[2026-07-16-vllm-rbln-v0.11.1a7-request-reordering-dtensor-mtp.md]]"]
+last_updated: "2026-07-20"
+updated: "2026-07-20"
+related_raw: ["[[2026-07-20-vllm-rbln-v0.11.1a8.md]]", "[[2026-06-04-Rebellions-ATOM-Max-EXAONE-4.5-Research.md]]", "[[2026-06-05-Rebellions-vLLM-EXAONE-Speculative-MoE-Update.md]]", "[[2026-06-07-Rebellions-ATOM-Max-vLLM-EXAONE-4.5-Update.md]]", "[[2026-06-09-Rebellions-NPU-EXAONE-4.5-Physical-AI-Update.md]]", "[[2026-06-11-Rebellions-Atom-Rebel-EXAONE-4.5-Research.md]]", "[[2026-06-12-Rebellions-ATOM-Max-EXAONE-4.5-Update.md]]", "[[2026-06-15-Rebellions-EXAONE-Physical-AI-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-rebellions_atom_max_exaone_optimization.md]]", "[[2026-06-28-rebellions_atom_max_exaone_4_5_optimization.md]]", "[[2026-06-30-rebellions_atom_max_exaone_4_5.md]]", "[[2026-07-01-vllm-rbln-exaone-4-5-atom-max.md]]", "[[2026-07-07-exaone-4.5-vllm-rbln-atom-max-optimization.md]]", "[[2026-07-11-rebellions_atom_max_exaone_4_5_vllm_rbln.md]]", "[[2026-07-12-rbln-sdk-0.11-vllm-exaone-gemma4.md]]", "[[2026-07-15-litert-lm-v0110-windows-rebellions-torchdynamo.md]]", "[[2026-07-16-vllm-rbln-v0.11.1a7-request-reordering-dtensor-mtp.md]]"]
 ---
 
 # 🚀 리벨리온 ATOM-Max 기반 EXAONE 4.5 최적화 가이드 (2026)
@@ -109,12 +109,30 @@ uv pip install "vllm-rbln==0.11.1a7" \
 
 참고: 안정판 문서의 `torch.compile` 네이티브 통합은 여전히 진행 중이며, a7은 그 과도기의 optimum/자동컴파일 병행 경로 개선입니다. ([vLLM RBLN docs](https://docs.rbln.ai/latest/software/model_serving/vllm_support/vllm-rbln.html))
 
+## 4.4 vLLM-RBLN v0.11.1a8 (2026-07-20 업데이트)
+
+[v0.11.1a8](https://github.com/RBLN-SW/vllm-rbln/releases/tag/v0.11.1a8) prerelease(2026-07-20 게시)가 speculative decoding·KV 이벤트·LoRA/pooling을 vLLM 0.18 라인에 맞춥니다.
+
+| 영역 | 변경 | 구현 함의 |
+| :--- | :--- | :--- |
+| **KV events** | sub-block 단위 KV cache 이벤트 emit ([#553](https://github.com/RBLN-SW/vllm-rbln/pull/553)) | prefix/스펙 디코드 관측·라우팅에 finer-grained 신호 |
+| **Spec memory** | draft 모델 메모리를 speculative decoding 예산에 반영 ([#546](https://github.com/RBLN-SW/vllm-rbln/pull/546)) | MTP/spec 사용 시 OOM·스케줄 과대추정 방지 |
+| **Chunked prefill + spec** | chunked prefill과 speculative decoding 동시 경로 수정 ([#554](https://github.com/RBLN-SW/vllm-rbln/pull/554)) | 긴 프롬프트+투기 디코드 혼합 워크로드 검증 대상 |
+| **KV connector** | spec decoding 시 connector double-finalize 방지 ([#575](https://github.com/RBLN-SW/vllm-rbln/pull/575)) | 분산 KV 커넥터 안정성 |
+| **LoRA / Pooling** | vLLM 0.18.0 LoRA·PoolingMetadata 정렬 ([#504](https://github.com/RBLN-SW/vllm-rbln/pull/504), [#582](https://github.com/RBLN-SW/vllm-rbln/pull/582)) | 어댑터·임베딩 서빙 회귀 테스트 필수 |
+| **의존성** | `torch-rbln` → **0.3.0rc2** ([#793](https://github.com/RBLN-SW/vllm-rbln/pull/793)) | 설치 핀을 a8과 함께 갱신 |
+
+```bash
+uv pip install "vllm-rbln==0.11.1a8" \
+  --extra-index-url https://wheels.vllm.ai/0.22.0/cpu --torch-backend cpu
+```
+
 ## 5. 실전 최적화 체크리스트
 
 1.  **모델 컴파일**: SDK v0.11.0+에서는 vLLM API 경로의 자동 컴파일을 우선 사용. 레거시 AOT가 필요하면 `optimum-cli`로 Transformers v5 호환 재컴파일.
 2.  **병렬화 최적화**: 33B 모델의 경우 8개 이상의 ATOM-Max 칩을 활용한 Tensor Parallelism(TP) 설정 권장. `VLLM_RBLN_NUM_DEVICES_PER_LOCAL_RANK`로 디바이스 수 지정.
 3.  **Physical AI 연동**: LG 로봇 KAPEX 등 물리적 하드웨어와의 실시간 추론 연동 테스트 수행.
-4.  **a7 검증 항목**: optimum 경로 request-reordering on/off + percentile 메트릭으로 p95 비교; DeepSeekV3 MTP는 단일 카드 후 DTensor로 확대.
+4.  **a7/a8 검증 항목**: optimum request-reordering + percentile 메트릭; a8에서는 **chunked prefill×spec**과 draft 메모리 반영 후 VRAM/peak 재측정.
 
 ---
 **관련 프로젝트**:

@@ -1,6 +1,10 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-07-20 | RESEARCH | Web | 7 | LiteRT-LM OpenAI model-string backend(#2911), vllm-rbln v0.11.1a8, Ossie #233+#224 MERGED; Supermemory·Furiosa·Halo·MAS 재확인 |
+| 2026-07-20 | INGEST | raw/ | 3 | litert-lm-openai-handler-backend-maxtokens, vllm-rbln-v0.11.1a8, apache-ossie-databricks-snowflake-merged |
+| 2026-07-20 | SYNTHESIZE | wiki/ | 3 | 스마트폰 LiteRT OpenAI handler·리벨리온 a8·AV-SQL Ossie Databricks/Snowflake 증분 |
+| 2026-07-20 | LINT | Root / wiki | ALL | 2026-07-20 데일리 생성, D-2(2026-07-18) 삭제, raw/ 정리, 연구_주제_관리 날짜 갱신 |
 | 2026-07-19 | RESEARCH | Web | 7 | LiteRT-LM LFM2 VL vision(#2688), Supermemory v0.0.6 Windows, Ossie Snowflake quoted IDs(#233); vllm-rbln·Furiosa·Halo·MAS 재확인 |
 | 2026-07-19 | INGEST | raw/ | 3 | litert-lm-vision-encoder-lfm2, supermemory-server-v0.0.6-windows, apache-ossie-snowflake-quoted-identifiers |
 | 2026-07-19 | SYNTHESIZE | wiki/ | 3 | 스마트폰 LiteRT vision·Supermemory Windows·AV-SQL Ossie Snowflake 식별자 증분 |
