@@ -3,9 +3,9 @@ title: "Supermemory: 에이전트 네이티브 메모리 시스템 및 MCP 아�
 tags: ["Agents", "Implementation", "Memory", "Supermemory", "MCP", "SMFS", "Cloudflare"]
 type: "wiki"
 status: "published"
-last_updated: "2026-07-16"
-updated: "2026-07-16"
-related_raw: ["[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]", "[[2026-07-12-supermemory-local-6767-cli-mcp-context.md]]", "[[raw/2026-07-13-sadik-mohammad-rag-systems-limitations.md]]", "[[2026-07-13-supermemory-openclaw-claude-plugins.md]]", "[[2026-07-16-supermemory_ai_memory_layer_analysis.md]]"]
+last_updated: "2026-07-19"
+updated: "2026-07-19"
+related_raw: ["[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]", "[[2026-07-12-supermemory-local-6767-cli-mcp-context.md]]", "[[raw/2026-07-13-sadik-mohammad-rag-systems-limitations.md]]", "[[2026-07-13-supermemory-openclaw-claude-plugins.md]]", "[[2026-07-16-supermemory_ai_memory_layer_analysis.md]]", "[[2026-07-18-supermemory-server-v0.0.5-pluggable-embeddings.md]]", "[[2026-07-19-supermemory-server-v0.0.6-windows.md]]"]
 ---
 
 # 🧠 Supermemory: 에이전트 네이티브 메모리 시스템
@@ -139,6 +139,38 @@ export SUPERMEMORY_CC_API_KEY=sm_...
 - **Reasoned recall**: 매 턴 Claude가 검색 필요 여부를 판단한 뒤에만 자동 검색(권한 프롬프트 없음) → 플랜 사용량·노이즈 제어.
 - Team vs personal: `.claude/.supermemory-claude/config.json`의 `repoContainerTag` / `personalContainerTag`.
 - 구 플러그인명 `claude-supermemory` → `supermemory` 리네임으로 in-place 업데이트 불가; marketplace update 후 재설치.
+
+### 🔌 Self-hosted Pluggable Embeddings (server-v0.0.5, 2026-07-10)
+
+[server-v0.0.5](https://github.com/supermemoryai/supermemory/releases/tag/server-v0.0.5)는 셀프호스트 임베딩을 교체 가능하게 만듭니다.
+
+- **기본**: 로컬 ONNX
+- **원격**: OpenAI / OpenAI-compatible / Google — 환경변수 `SUPERMEMORY_EMBEDDING_*`
+- **잠금**: 최초 부팅 피커 + `embedding-plan.json`에 플랜 고정
+- **안전 업그레이드**: lock 없는 기존 스토어는 legacy `local · Xenova/bge-base-en-v1.5 · 768d`로 가정. **동일 차원** 모델 전환만 허용(혼재 벡터 방지, fail-fast)
+
+```bash
+curl -fsSL https://supermemory.ai/install | bash
+supermemory-server upgrade
+# 예: OpenAI-compatible 원격 임베딩 (환경변수명은 릴리스 노트 SUPERMEMORY_EMBEDDING_* 계열)
+# export SUPERMEMORY_EMBEDDING_PROVIDER=openai
+# export SUPERMEMORY_EMBEDDING_API_KEY=...
+```
+
+KM 적용: 야간 린트/로컬 MCP(`:6767`)에서 사내 임베딩 엔드포인트로 바꿔도 기존 768d 스토어와 차원을 맞추면 재인덱싱 없이 전환 가능. 차원 변경 시에는 스토어 재구축이 필요.
+
+### 🪟 Windows Self-Host Binary (server-v0.0.6, 2026-07-19)
+
+[server-v0.0.6](https://github.com/supermemoryai/supermemory/releases/tag/server-v0.0.6)은 셀프호스트 바이너리에 **`supermemory-server-windows-x64.exe`**를 추가합니다. 기존 Darwin(arm64/x64)·Linux(arm64/x64)에 Windows x64가 합쳐져 데스크톱 OS 3종에서 동일 `:6767` 로컬 스택을 올릴 수 있습니다.
+
+```powershell
+# Windows: 릴리스 에셋에서 exe 다운로드 후 실행 (install.sh는 Unix용)
+# https://github.com/supermemoryai/supermemory/releases/tag/server-v0.0.6
+.\supermemory-server-windows-x64.exe
+# 기본 Memory API: http://localhost:6767
+```
+
+KM/에이전트 적용: Windows 개발 머신에서도 Linux/macOS와 같은 pluggable embeddings(`SUPERMEMORY_EMBEDDING_*`)·MCP 로컬 경로를 공유할 수 있습니다. v0.0.5의 임베딩 lock 규칙은 그대로 따릅니다.
 
 ---
 

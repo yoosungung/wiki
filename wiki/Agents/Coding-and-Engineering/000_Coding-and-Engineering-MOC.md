@@ -18,4 +18,3 @@
 - [[wiki/Agents/Coding-and-Engineering/Headroom-컨텍스트-압축-및-캐시-정렬.md]]
 - [[wiki/Agents/Coding-and-Engineering/OpenWiki-코드베이스-에이전트-문서화-CLI.md]]
 - [[wiki/Agents/Coding-and-Engineering/에이전트-기반-엔지니어링-조직-전환-및-성숙도-모델.md]]
-
