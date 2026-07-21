@@ -3,9 +3,9 @@ title: "Supermemory: 에이전트 네이티브 메모리 시스템 및 MCP 아�
 tags: ["Agents", "Implementation", "Memory", "Supermemory", "MCP", "SMFS", "Cloudflare"]
 type: "wiki"
 status: "published"
-last_updated: "2026-07-19"
-updated: "2026-07-19"
-related_raw: ["[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]", "[[2026-07-12-supermemory-local-6767-cli-mcp-context.md]]", "[[raw/2026-07-13-sadik-mohammad-rag-systems-limitations.md]]", "[[2026-07-13-supermemory-openclaw-claude-plugins.md]]", "[[2026-07-16-supermemory_ai_memory_layer_analysis.md]]", "[[2026-07-18-supermemory-server-v0.0.5-pluggable-embeddings.md]]", "[[2026-07-19-supermemory-server-v0.0.6-windows.md]]"]
+last_updated: "2026-07-21"
+updated: "2026-07-21"
+related_raw: ["[[2026-07-21-supermemory-mcp-tool-safety-annotations.md]]", "[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]", "[[2026-07-12-supermemory-local-6767-cli-mcp-context.md]]", "[[raw/2026-07-13-sadik-mohammad-rag-systems-limitations.md]]", "[[2026-07-13-supermemory-openclaw-claude-plugins.md]]", "[[2026-07-16-supermemory_ai_memory_layer_analysis.md]]", "[[2026-07-18-supermemory-server-v0.0.5-pluggable-embeddings.md]]", "[[2026-07-19-supermemory-server-v0.0.6-windows.md]]"]
 ---
 
 # 🧠 Supermemory: 에이전트 네이티브 메모리 시스템
@@ -171,6 +171,24 @@ KM 적용: 야간 린트/로컬 MCP(`:6767`)에서 사내 임베딩 엔드포인
 ```
 
 KM/에이전트 적용: Windows 개발 머신에서도 Linux/macOS와 같은 pluggable embeddings(`SUPERMEMORY_EMBEDDING_*`)·MCP 로컬 경로를 공유할 수 있습니다. v0.0.5의 임베딩 lock 규칙은 그대로 따릅니다.
+
+### 🛡️ MCP Tool Safety Annotations (ChatGPT hosts, 2026-07-21)
+
+[PR #1330](https://github.com/supermemoryai/supermemory/pull/1330)이 MCP `tools/list`에 **tool annotations**를 붙입니다. ChatGPT 등 호스트가 읽기 전용 도구를 보수적으로 차단하던 문제를 완화합니다.
+
+| 힌트 프로필 | 도구 | 의미 |
+| :--- | :--- | :--- |
+| **destructive / mutating** | `memory` (save/forget) | `readOnlyHint=false`, forget 경로 포함 |
+| **read-only · idempotent** | `recall`, `listMemories`, `listProjects`, `whoAmI`, `memory-graph`, `fetch-graph-data` | 목록·검색·프로필 조회 안전 |
+
+```text
+# 호스트(ChatGPT) 재연결 후 tools/list 재조회
+# - listMemories / recall → readOnlyHint=true 기대
+# - memory → destructiveHint=true 기대
+# 프로덕션 메타데이터가 안 바뀌면 앱 remove→re-add 필요
+```
+
+**적용 팁**: KM/에이전트 하네스에서도 MCP 클라이언트가 annotations를 존중하면 `listMemories`를 자동 approve 후보로 두고, `memory`만 확인 프롬프트를 유지할 수 있다.
 
 ---
 
