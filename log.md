@@ -1,6 +1,10 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-07-22 | RESEARCH | Web | 7 | LiteRT-LM thinking·config·AttentionMaskPolicy, Supermemory Company Brain GA(#1342), Ossie WisdomAI(#239)·plugins(#154); vllm-rbln a9·Furiosa·Halo·MAS 재확인 |
+| 2026-07-22 | INGEST | raw/ | 3 | litert-lm-thinking-config-attention-mask, supermemory-company-brain-open-signup, apache-ossie-wisdomai-converter-plugins |
+| 2026-07-22 | SYNTHESIZE | wiki/ | 3 | 스마트폰 LiteRT thinking·Supermemory Company Brain·AV-SQL Ossie WisdomAI 증분 |
+| 2026-07-22 | LINT | Root / wiki | ALL | 2026-07-22 데일리 생성, D-2(2026-07-20) 삭제, raw/ 정리, 연구_주제_관리 날짜 갱신 |
 | 2026-07-21 | RESEARCH | Web | 7 | LiteRT-LM ringbuffer·GPU flags·state(#2930/#2915/#2825), vllm-rbln v0.11.1a9, Supermemory MCP annotations(#1330); Furiosa·Halo·Ossie UV·MAS 재확인 |
 | 2026-07-21 | INGEST | raw/ | 3 | litert-lm-ringbuffer-gpu-flags, vllm-rbln-v0.11.1a9, supermemory-mcp-tool-safety-annotations |
 | 2026-07-21 | SYNTHESIZE | wiki/ | 3 | 스마트폰 LiteRT ringbuffer·리벨리온 a9·Supermemory MCP annotations 증분 |

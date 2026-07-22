@@ -1,11 +1,11 @@
 ---
 title: "AV-SQL: Agentic Views를 통한 Text-to-SQL 혁신 및 시맨틱 레이어 통합"
-related_raw: ["[[2026-07-20-apache-ossie-databricks-snowflake-merged.md]]", "[[raw/2026-07-14-AV-SQL-논문-및-구현.md]]", "[[wiki/Agents/Text-to-SQL/2026-04-20-T2SQL-Trends-Update.md]]", "[[2026-07-16-av-sql-osi-mcp-integration-research.md]]", "[[2026-07-16-av_sql_semantic_layer_text_to_sql_research.md]]", "[[2026-07-17-apache-ossie-cli-scaffold.md]]", "[[2026-07-18-apache-ossie-duckdb-semantido-converters.md]]", "[[2026-07-19-apache-ossie-snowflake-quoted-identifiers.md]]"]
+related_raw: ["[[2026-07-22-apache-ossie-wisdomai-converter-plugins.md]]", "[[2026-07-20-apache-ossie-databricks-snowflake-merged.md]]", "[[raw/2026-07-14-AV-SQL-논문-및-구현.md]]", "[[wiki/Agents/Text-to-SQL/2026-04-20-T2SQL-Trends-Update.md]]", "[[2026-07-16-av-sql-osi-mcp-integration-research.md]]", "[[2026-07-16-av_sql_semantic_layer_text_to_sql_research.md]]", "[[2026-07-17-apache-ossie-cli-scaffold.md]]", "[[2026-07-18-apache-ossie-duckdb-semantido-converters.md]]", "[[2026-07-19-apache-ossie-snowflake-quoted-identifiers.md]]"]
 tags: ["wiki", "Agents", "Text-to-SQL", "OSI", "MCP", "Snowflake", "slm_for_text-to-sql_and_schema_linking"]
 type: "wiki"
 status: "published"
-last_updated: "2026-07-20"
-updated: "2026-07-20"
+last_updated: "2026-07-22"
+updated: "2026-07-22"
 ---
 
 # AV-SQL: Agentic Views를 통한 Text-to-SQL 혁신
@@ -114,6 +114,21 @@ ossie-databricks import --input ./metric_view.yaml -o ./imported.ossie.yaml
 - **설계**: fact `source` + nested `joins` 트리, flattened `dimensions`/`measures`. Metric-View-only 기능(filter, window, format, parameters, materialization 등)은 `custom_extensions[DATABRICKS]`에 보존 → **MV → Ossie → MV lossless**.
 - **AV-SQL 적용**: Databricks 카탈로그 시맨틱을 Ossie로 정규화한 뒤 View Generator `ai_context`에 주입하는 경로를 실험할 수 있다. DuckDB(#229)·semantido(#230)는 여전히 OPEN.
 
+### WisdomAI domain converter — [PR #239](https://github.com/apache/ossie/pull/239) (2026-07-22, **MERGED**)
+
+WisdomAI `exportDomain`/`importDomain` JSON(format `1.0`) ↔ Ossie YAML **양방향** 컨버터(`converters/wisdom`). `WISDOM` vendor/`OSIVendor` 등록, BigQuery는 `BIGQUERY` 방언(백틱 식별자).
+
+```bash
+ossie-wisdom wisdom-to-osi -i domain-export.json -o semantic_model.yaml
+ossie-wisdom osi-to-wisdom -i semantic_model.yaml -o domain-export.json
+```
+
+- **Import**: `domainSystemInstructions`+knowledge → 모델급 `ai_context`; 테이블/컬럼/formula/relationship/measure → datasets·fields·relationships·metrics.
+- **Export**: round-trip 안정(합성 fixture·실 Snowflake/BigQuery 도메인에서 `validation/validate.py` 통과, OSI→wisdom→OSI byte-identical YAML).
+- **CLI plugins (#154)**: `plugin.yaml` 정의 + 설치 플러그인 **목록**만(설치/변환 호출은 미포함). Solid(#240) 참여 조직 추가.
+
+**AV-SQL 적용**: WisdomAI 도메인을 Ossie로 끌어와 View Generator `ai_context`에 주입하는 경로가 Databricks(#224)·Snowflake(#233)에 이어 실전 진입. BI 시맨틱 → Ossie → agentic CTE 파이프라인을 표준화할 때 `ossie-wisdom`을 첫 스포크로 쓸 수 있다.
+
 ## 성능 (Performance Metrics)
 AV-SQL은 특히 현실 세계의 대규모 스키마 환경에서 탁월한 성능을 입증했습니다:
 
@@ -136,6 +151,8 @@ AV-SQL은 특히 현실 세계의 대규모 스키마 환경에서 탁월한 성
 - [Apache Ossie semantido converter PR #230](https://github.com/apache/ossie/pull/230) (OPEN)
 - [Apache Ossie Snowflake quoted identifiers PR #233](https://github.com/apache/ossie/pull/233) (MERGED)
 - [Apache Ossie Databricks Unity Catalog Metric View converter PR #224](https://github.com/apache/ossie/pull/224) (MERGED)
+- [Apache Ossie WisdomAI domain converter PR #239](https://github.com/apache/ossie/pull/239) (MERGED)
+- [Apache Ossie CLI plugin objects PR #154](https://github.com/apache/ossie/pull/154) (MERGED)
 - [Apache Ossie (incubating)](https://ossie.apache.org/)
 - Snowflake Managed MCP Server documentation
 
