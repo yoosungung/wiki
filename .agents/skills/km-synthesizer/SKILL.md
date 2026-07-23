@@ -22,8 +22,9 @@ description: `raw/` 데이터를 분석하여 `wiki/` 5대 핵심 카테고리 �
 - `raw/` 문서를 읽고 핵심 엔티티, 데이터, 인사이트를 추출함.
 
 ### 2. KNOWLEDGE_MAPPING
-- `index.md`를 참조하여 가장 적합한 `wiki/Category/Sub/` 경로를 결정함.
-- 기존 노트를 검색하여 업데이트(`replace`) 또는 신규 생성(`write_file`) 여부를 결정함.
+- `index.md`를 참조하고, 필요 시 `wiki/` 전역 검색으로 관련 노트를 **전부** 식별함. 한 `raw/`는 단일 노트가 아니라 관련 entity/concept/요약 페이지 여러 개를 갱신할 수 있음.
+- project·연구 과제의 지정 노트는 우선 타깃일 뿐 유일 타깃이 아님. 적합한 기존 노트가 없으면 `TARGET_STRUCTURE`에 맞춰 **신규 생성**함.
+- 기존 노트를 검색하여 업데이트(`replace`) 또는 신규 생성(`write_file`) 여부를 결정함. 이미 동일 claim이 반영된 경우만 스킵하고 `log.md`에 `ALREADY_COVERED`로 기록함(내용 폐기 아님).
 
 ### 3. AGENT_EDITING
 - **FRONTMATTER**: `related_raw: ["[[파일명.md]]"]` 및 `tags` 업데이트.
@@ -35,11 +36,12 @@ description: `raw/` 데이터를 분석하여 `wiki/` 5대 핵심 카테고리 �
 - `log.md`에 `SYNTHESIZE` 액션을 기록함.
 
 ### 5. CLEANUP
-- 합성이 성공적으로 완료되고 로그가 기록된 후, 사용된 원본 `raw/` 파일을 삭제함.
+- 해당 `raw/`의 핵심 claim이 관련 `wiki/` 노트(기존·신규)에 모두 매핑·반영되고 `log.md`에 `SYNTHESIZE`(또는 `ALREADY_COVERED`)가 기록된 뒤에만 원본 `raw/` 파일을 삭제함. 미매핑 claim이 남으면 삭제하지 않음.
 
 ## ⚠️ CONSTRAINTS
 - 단순 요약이 아닌 **지식의 상호 연결**에 집중함.
 - 파일명에 공백이나 특수문자가 포함된 경우 정확히 매칭함 (NFC 정규화 준수).
+- **부분 합성 금지**: 지정 노트 한곳에만 넣고 나머지 사실을 버리는 흐름을 금지함. ingest된 `raw/`는 관련 노트 전체에 소진함.
 
 ## 🛠️ TECHNICAL_CONCRETENESS (기술적 구체성 원칙)
 - 위키 작성 시 단순 뉴스나 현황 나열을 지양하고, **"향후 실제 개발 및 구현에 즉시 참고할 수 있는 구체적인 설계 아이디어, 시스템 구조/방법론, API 스펙 및 CLI 예시"**를 반드시 포함함.
