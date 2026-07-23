@@ -1,9 +1,9 @@
 ---
 title: "리벨리온 ATOM-Max 기반 EXAONE 4.5 최적화 가이드 (2026)"
 tags: ["Rebellions", "ATOM-Max", "EXAONE4.5", "NPU", "Optimization", "vLLM", "PhysicalAI"]
-last_updated: "2026-07-20"
-updated: "2026-07-20"
-related_raw: ["[[2026-07-20-vllm-rbln-v0.11.1a8.md]]", "[[2026-06-04-Rebellions-ATOM-Max-EXAONE-4.5-Research.md]]", "[[2026-06-05-Rebellions-vLLM-EXAONE-Speculative-MoE-Update.md]]", "[[2026-06-07-Rebellions-ATOM-Max-vLLM-EXAONE-4.5-Update.md]]", "[[2026-06-09-Rebellions-NPU-EXAONE-4.5-Physical-AI-Update.md]]", "[[2026-06-11-Rebellions-Atom-Rebel-EXAONE-4.5-Research.md]]", "[[2026-06-12-Rebellions-ATOM-Max-EXAONE-4.5-Update.md]]", "[[2026-06-15-Rebellions-EXAONE-Physical-AI-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-rebellions_atom_max_exaone_optimization.md]]", "[[2026-06-28-rebellions_atom_max_exaone_4_5_optimization.md]]", "[[2026-06-30-rebellions_atom_max_exaone_4_5.md]]", "[[2026-07-01-vllm-rbln-exaone-4-5-atom-max.md]]", "[[2026-07-07-exaone-4.5-vllm-rbln-atom-max-optimization.md]]", "[[2026-07-11-rebellions_atom_max_exaone_4_5_vllm_rbln.md]]", "[[2026-07-12-rbln-sdk-0.11-vllm-exaone-gemma4.md]]", "[[2026-07-15-litert-lm-v0110-windows-rebellions-torchdynamo.md]]", "[[2026-07-16-vllm-rbln-v0.11.1a7-request-reordering-dtensor-mtp.md]]"]
+last_updated: "2026-07-21"
+updated: "2026-07-21"
+related_raw: ["[[2026-07-21-vllm-rbln-v0.11.1a9.md]]", "[[2026-07-20-vllm-rbln-v0.11.1a8.md]]", "[[2026-06-04-Rebellions-ATOM-Max-EXAONE-4.5-Research.md]]", "[[2026-06-05-Rebellions-vLLM-EXAONE-Speculative-MoE-Update.md]]", "[[2026-06-07-Rebellions-ATOM-Max-vLLM-EXAONE-4.5-Update.md]]", "[[2026-06-09-Rebellions-NPU-EXAONE-4.5-Physical-AI-Update.md]]", "[[2026-06-11-Rebellions-Atom-Rebel-EXAONE-4.5-Research.md]]", "[[2026-06-12-Rebellions-ATOM-Max-EXAONE-4.5-Update.md]]", "[[2026-06-15-Rebellions-EXAONE-Physical-AI-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-rebellions_atom_max_exaone_optimization.md]]", "[[2026-06-28-rebellions_atom_max_exaone_4_5_optimization.md]]", "[[2026-06-30-rebellions_atom_max_exaone_4_5.md]]", "[[2026-07-01-vllm-rbln-exaone-4-5-atom-max.md]]", "[[2026-07-07-exaone-4.5-vllm-rbln-atom-max-optimization.md]]", "[[2026-07-11-rebellions_atom_max_exaone_4_5_vllm_rbln.md]]", "[[2026-07-12-rbln-sdk-0.11-vllm-exaone-gemma4.md]]", "[[2026-07-15-litert-lm-v0110-windows-rebellions-torchdynamo.md]]", "[[2026-07-16-vllm-rbln-v0.11.1a7-request-reordering-dtensor-mtp.md]]"]
 ---
 
 # 🚀 리벨리온 ATOM-Max 기반 EXAONE 4.5 최적화 가이드 (2026)
@@ -127,12 +127,29 @@ uv pip install "vllm-rbln==0.11.1a8" \
   --extra-index-url https://wheels.vllm.ai/0.22.0/cpu --torch-backend cpu
 ```
 
+## 4.5 vLLM-RBLN v0.11.1a9 (2026-07-21 업데이트)
+
+[v0.11.1a9](https://github.com/RBLN-SW/vllm-rbln/releases/tag/v0.11.1a9) prerelease(2026-07-21 게시)는 a8 위 sampler·MTP 컴파일 경로 수정입니다.
+
+| 영역 | 변경 | 구현 함의 |
+| :--- | :--- | :--- |
+| **Sampler recompile** | 샘플러 redundant recompilation 제거 ([#797](https://github.com/RBLN-SW/vllm-rbln/pull/797)) | 디코드 루프 재컴파일 오버헤드 축소 |
+| **Caching sampler** | caching sampler 비활성 ([#798](https://github.com/RBLN-SW/vllm-rbln/pull/798)) | 캐시된 샘플러 경로 정합성 이슈 회피 |
+| **MTP weights** | MTP/drafter setup 후·compile 전 weights `contiguous()` ([#804](https://github.com/RBLN-SW/vllm-rbln/pull/804)) | drafter 연결 후 non-contiguous 텐서로 인한 컴파일 실패 방지 |
+
+```bash
+uv pip install "vllm-rbln==0.11.1a9" \
+  --extra-index-url https://wheels.vllm.ai/0.22.0/cpu --torch-backend cpu
+```
+
+**적용 팁**: EXAONE 4.5 + speculative MoE/MTP를 a8에서 검증 중이었다면 a9로 올려 sampler latency와 drafter compile 성공률을 재측정한다.
+
 ## 5. 실전 최적화 체크리스트
 
 1.  **모델 컴파일**: SDK v0.11.0+에서는 vLLM API 경로의 자동 컴파일을 우선 사용. 레거시 AOT가 필요하면 `optimum-cli`로 Transformers v5 호환 재컴파일.
 2.  **병렬화 최적화**: 33B 모델의 경우 8개 이상의 ATOM-Max 칩을 활용한 Tensor Parallelism(TP) 설정 권장. `VLLM_RBLN_NUM_DEVICES_PER_LOCAL_RANK`로 디바이스 수 지정.
 3.  **Physical AI 연동**: LG 로봇 KAPEX 등 물리적 하드웨어와의 실시간 추론 연동 테스트 수행.
-4.  **a7/a8 검증 항목**: optimum request-reordering + percentile 메트릭; a8에서는 **chunked prefill×spec**과 draft 메모리 반영 후 VRAM/peak 재측정.
+4.  **a7/a8/a9 검증 항목**: a8 chunked prefill×spec·draft 메모리; a9에서는 **MTP contiguous weights**와 sampler 비캐시 경로에서 tok/s·컴파일 성공률 재측정.
 
 ---
 **관련 프로젝트**:

@@ -1,6 +1,10 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-07-21 | RESEARCH | Web | 7 | LiteRT-LM ringbuffer·GPU flags·state(#2930/#2915/#2825), vllm-rbln v0.11.1a9, Supermemory MCP annotations(#1330); Furiosa·Halo·Ossie UV·MAS 재확인 |
+| 2026-07-21 | INGEST | raw/ | 3 | litert-lm-ringbuffer-gpu-flags, vllm-rbln-v0.11.1a9, supermemory-mcp-tool-safety-annotations |
+| 2026-07-21 | SYNTHESIZE | wiki/ | 3 | 스마트폰 LiteRT ringbuffer·리벨리온 a9·Supermemory MCP annotations 증분 |
+| 2026-07-21 | LINT | Root / wiki | ALL | 2026-07-21 데일리 생성, D-2(2026-07-19) 삭제, raw/ 정리, 연구_주제_관리 날짜 갱신 |
 | 2026-07-20 | RESEARCH | Web | 7 | LiteRT-LM OpenAI model-string backend(#2911), vllm-rbln v0.11.1a8, Ossie #233+#224 MERGED; Supermemory·Furiosa·Halo·MAS 재확인 |
 | 2026-07-20 | INGEST | raw/ | 3 | litert-lm-openai-handler-backend-maxtokens, vllm-rbln-v0.11.1a8, apache-ossie-databricks-snowflake-merged |
 | 2026-07-20 | SYNTHESIZE | wiki/ | 3 | 스마트폰 LiteRT OpenAI handler·리벨리온 a8·AV-SQL Ossie Databricks/Snowflake 증분 |
