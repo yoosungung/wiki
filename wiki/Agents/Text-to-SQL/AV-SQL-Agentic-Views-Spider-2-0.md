@@ -1,11 +1,11 @@
 ---
 title: "AV-SQL: Agentic Views를 통한 Text-to-SQL 혁신 및 시맨틱 레이어 통합"
-related_raw: ["[[2026-07-22-apache-ossie-wisdomai-converter-plugins.md]]", "[[2026-07-20-apache-ossie-databricks-snowflake-merged.md]]", "[[raw/2026-07-14-AV-SQL-논문-및-구현.md]]", "[[wiki/Agents/Text-to-SQL/2026-04-20-T2SQL-Trends-Update.md]]", "[[2026-07-16-av-sql-osi-mcp-integration-research.md]]", "[[2026-07-16-av_sql_semantic_layer_text_to_sql_research.md]]", "[[2026-07-17-apache-ossie-cli-scaffold.md]]", "[[2026-07-18-apache-ossie-duckdb-semantido-converters.md]]", "[[2026-07-19-apache-ossie-snowflake-quoted-identifiers.md]]"]
+related_raw: ["[[2026-07-23-apache-ossie-plugin-invocation.md]]", "[[2026-07-22-apache-ossie-wisdomai-converter-plugins.md]]", "[[2026-07-20-apache-ossie-databricks-snowflake-merged.md]]", "[[raw/2026-07-14-AV-SQL-논문-및-구현.md]]", "[[wiki/Agents/Text-to-SQL/2026-04-20-T2SQL-Trends-Update.md]]", "[[2026-07-16-av-sql-osi-mcp-integration-research.md]]", "[[2026-07-16-av_sql_semantic_layer_text_to_sql_research.md]]", "[[2026-07-17-apache-ossie-cli-scaffold.md]]", "[[2026-07-18-apache-ossie-duckdb-semantido-converters.md]]", "[[2026-07-19-apache-ossie-snowflake-quoted-identifiers.md]]"]
 tags: ["wiki", "Agents", "Text-to-SQL", "OSI", "MCP", "Snowflake", "slm_for_text-to-sql_and_schema_linking"]
 type: "wiki"
 status: "published"
-last_updated: "2026-07-22"
-updated: "2026-07-22"
+last_updated: "2026-07-23"
+updated: "2026-07-23"
 ---
 
 # AV-SQL: Agentic Views를 통한 Text-to-SQL 혁신
@@ -128,6 +128,22 @@ ossie-wisdom osi-to-wisdom -i semantic_model.yaml -o domain-export.json
 - **CLI plugins (#154)**: `plugin.yaml` 정의 + 설치 플러그인 **목록**만(설치/변환 호출은 미포함). Solid(#240) 참여 조직 추가.
 
 **AV-SQL 적용**: WisdomAI 도메인을 Ossie로 끌어와 View Generator `ai_context`에 주입하는 경로가 Databricks(#224)·Snowflake(#233)에 이어 실전 진입. BI 시맨틱 → Ossie → agentic CTE 파이프라인을 표준화할 때 `ossie-wisdom`을 첫 스포크로 쓸 수 있다.
+
+### CLI plugin invocation protocol — [PR #155](https://github.com/apache/ossie/pull/155) (2026-07-23, **MERGED**)
+
+#154 목록 레이어 위에 **stdin/stdout JSON 호출 프로토콜**이 병합되었습니다 (`cli/internal/plugin/invoke.go`).
+
+```go
+// Request  → plugin stdin
+// Response ← plugin stdout ({files, issues?})
+Invoke(ctx, pluginDir, invoke, req, pluginStderr) (*Response, error)
+```
+
+- **Envelope**: `Request.Files` / `Response.Files` + optional `Issue{severity,message,path}`.
+- **계약**: nil `Files` → `{}`로 정규화; `Issues`는 Go error가 아님(호출자가 severity로 exit 결정); timeout은 `ctx.Err()`로 판별.
+- **스택**: #154 list → **#155 Invoke** → #156 registry → #158 `convert`.
+
+**AV-SQL 적용**: `ossie convert`가 플러그인 서브프로세스를 호출할 때 View Generator 전처리에서 Wisdom/Databricks/Snowflake 스포크를 동일 envelope로 묶을 수 있다. 플러그인 `error` severity를 게이트로 쓰면 잘못된 `ai_context` YAML이 CTE 단계로 흘러가는 것을 막을 수 있다.
 
 ## 성능 (Performance Metrics)
 AV-SQL은 특히 현실 세계의 대규모 스키마 환경에서 탁월한 성능을 입증했습니다:

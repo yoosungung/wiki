@@ -3,9 +3,9 @@ title: "Supermemory: 에이전트 네이티브 메모리 시스템 및 MCP 아�
 tags: ["Agents", "Implementation", "Memory", "Supermemory", "MCP", "SMFS", "Cloudflare"]
 type: "wiki"
 status: "published"
-last_updated: "2026-07-22"
-updated: "2026-07-22"
-related_raw: ["[[2026-07-22-supermemory-company-brain-open-signup.md]]", "[[2026-07-21-supermemory-mcp-tool-safety-annotations.md]]", "[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]", "[[2026-07-12-supermemory-local-6767-cli-mcp-context.md]]", "[[raw/2026-07-13-sadik-mohammad-rag-systems-limitations.md]]", "[[2026-07-13-supermemory-openclaw-claude-plugins.md]]", "[[2026-07-16-supermemory_ai_memory_layer_analysis.md]]", "[[2026-07-18-supermemory-server-v0.0.5-pluggable-embeddings.md]]", "[[2026-07-19-supermemory-server-v0.0.6-windows.md]]"]
+last_updated: "2026-07-23"
+updated: "2026-07-23"
+related_raw: ["[[2026-07-23-supermemory-agents-memory-workspace.md]]", "[[2026-07-22-supermemory-company-brain-open-signup.md]]", "[[2026-07-21-supermemory-mcp-tool-safety-annotations.md]]", "[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]", "[[2026-07-12-supermemory-local-6767-cli-mcp-context.md]]", "[[raw/2026-07-13-sadik-mohammad-rag-systems-limitations.md]]", "[[2026-07-13-supermemory-openclaw-claude-plugins.md]]", "[[2026-07-16-supermemory_ai_memory_layer_analysis.md]]", "[[2026-07-18-supermemory-server-v0.0.5-pluggable-embeddings.md]]", "[[2026-07-19-supermemory-server-v0.0.6-windows.md]]"]
 ---
 
 # 🧠 Supermemory: 에이전트 네이티브 메모리 시스템
@@ -195,6 +195,27 @@ KM/에이전트 적용: Windows 개발 머신에서도 Linux/macOS와 같은 plu
 [PR #1342](https://github.com/supermemoryai/supermemory/pull/1342)이 **Company Brain(Team mode) 가입 게이트를 제거**했습니다. `company-brain-beta` PostHog 플래그·초대 전용 카드·팀 가입 시 `brainMode: "personal"`로 조용히 다운그레이드하던 로직을 없애고, 도메인 확인 단계에 personal workspace로 돌아가는 링크를 추가했습니다(ENG-1106).
 
 **적용 팁**: KM/조직 메모리를 Team mode로 올릴 때 초대 대기가 필요 없다. Slack-first `/brain` 온보딩(#1310) 후 Scale trial 부착(#1313) 경로를 그대로 쓰면 된다. 개인 워크스페이스가 필요하면 도메인 확인 화면의 "Use a personal workspace instead"를 사용한다.
+
+### 🧩 Agents 공유 메모리 워크스페이스 (2026-07-23)
+
+[PR #1290](https://github.com/supermemoryai/supermemory/pull/1290)이 **Claude Code·Codex 컨테이너를 프로젝트 단위로 Agents 아래에 그룹핑**합니다. 에이전트 attribution을 유지하면서 Claude Code / Codex 소스 필터를 추가하고, 프로젝트 전용 라벨(+ Supermemory 로고)을 표시합니다.
+
+**컨테이너 태그 패턴** (`agent-space.ts`):
+
+| kind | 예시 패턴 |
+| :--- | :--- |
+| `canonical-project` | `repo_<slug>__<16hex>` |
+| `personal` | `user_project_<hex>` |
+| `project` | `repo_<slug>` |
+| legacy | `codex_user_*`, `claudecode_project_*`, `codex_project_*` |
+
+```ts
+// 소스 필터 → MCP/플러그인 source 값
+"claude-code" → ["claude-code", "claude-code-plugin"]
+"codex"       → ["codex"]
+```
+
+**적용 팁**: KM에서 Claude Code와 Codex가 같은 레포를 만질 때 `repo_*` 태그로 메모리를 묶고, UI/검색에서 Agents 필터로 소스를 분리한다. `x-sm-project`와 함께 쓰면 Team Brain + 에이전트 하네스별 뷰가 동시에 유지된다.
 
 ---
 
