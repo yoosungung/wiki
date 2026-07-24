@@ -3,9 +3,9 @@ title: "리벨리온 ATOM-Max NPU 및 vLLM-RBLN 최신 동향 (2026)"
 tags: ["Models", "Optimization", "Serving", "NPU", "Rebellions", "vLLM-RBLN", "EXAONE"]
 type: "wiki"
 status: "published"
-last_updated: "2026-06-01"
-updated: "2026-06-01"
-related_raw: ["[[2026-06-01-Rebellions-NPU-Update.md]]"]
+last_updated: "2026-07-24"
+updated: "2026-07-24"
+related_raw: ["[[2026-07-24-vllm-rbln-v0.11.2.dev0.md]]", "[[2026-06-01-Rebellions-NPU-Update.md]]"]
 ---
 
 # 리벨리온 ATOM-Max NPU 및 vLLM-RBLN 최신 동향 (2026)
@@ -34,6 +34,12 @@ vLLM-RBLN 플러그인은 2026년 상반기 업데이트를 통해 vLLM 에코�
     - **Continuous Batching**: 처리 대기 중인 요청을 동적으로 배치에 추가하여 처리량을 높입니다.
     - **Prefix Caching**: 반복되는 시스템 프롬프트나 컨텍스트를 캐싱하여 Prefill 속도를 단축합니다.
 - **모델 지원 범위**: Llama-3 70B와 같은 거대 모델뿐만 아니라 **Qwen-MoE**, **LG EXAONE 3.5** 등 최신 모델에 최적화된 서빙 런타임을 제공합니다.
+
+### v0.11.2.dev0 (2026-07-24)
+- metrics_v2: worker latency `mean|p50|p90|p99` (#811)
+- 디바이스별 기본 `prefill_chunk_size`: ATOM 128 / REBEL 512 (#801)
+- vision-encoder `rbln_overrides` (#827)
+- 상세 체크리스트: [[wiki/Models/Optimization-and-Serving/리벨리온-ATOM-Max-기반-EXAONE-4.5-최적화-가이드.md]]
 
 ## 3. 엔터프라이즈 및 클라우드 생태계
 - **Red Hat OpenShift AI 지원**: 2026년 5월부터 Red Hat OpenShift AI에서 공식 인증된 컨테이너 이미지와 `vLLM RBLN ServingRuntime`을 제공하여 기업용 AI 인프라 배포가 용이해졌습니다.

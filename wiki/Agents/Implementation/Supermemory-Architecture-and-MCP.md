@@ -3,9 +3,9 @@ title: "Supermemory: 에이전트 네이티브 메모리 시스템 및 MCP 아�
 tags: ["Agents", "Implementation", "Memory", "Supermemory", "MCP", "SMFS", "Cloudflare"]
 type: "wiki"
 status: "published"
-last_updated: "2026-07-23"
-updated: "2026-07-23"
-related_raw: ["[[2026-07-23-supermemory-agents-memory-workspace.md]]", "[[2026-07-22-supermemory-company-brain-open-signup.md]]", "[[2026-07-21-supermemory-mcp-tool-safety-annotations.md]]", "[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]", "[[2026-07-12-supermemory-local-6767-cli-mcp-context.md]]", "[[raw/2026-07-13-sadik-mohammad-rag-systems-limitations.md]]", "[[2026-07-13-supermemory-openclaw-claude-plugins.md]]", "[[2026-07-16-supermemory_ai_memory_layer_analysis.md]]", "[[2026-07-18-supermemory-server-v0.0.5-pluggable-embeddings.md]]", "[[2026-07-19-supermemory-server-v0.0.6-windows.md]]"]
+last_updated: "2026-07-24"
+updated: "2026-07-24"
+related_raw: ["[[2026-07-24-supermemory-mcp-scope-opencode.md]]", "[[2026-07-23-supermemory-agents-memory-workspace.md]]", "[[2026-07-22-supermemory-company-brain-open-signup.md]]", "[[2026-07-21-supermemory-mcp-tool-safety-annotations.md]]", "[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]", "[[2026-07-12-supermemory-local-6767-cli-mcp-context.md]]", "[[raw/2026-07-13-sadik-mohammad-rag-systems-limitations.md]]", "[[2026-07-13-supermemory-openclaw-claude-plugins.md]]", "[[2026-07-16-supermemory_ai_memory_layer_analysis.md]]", "[[2026-07-18-supermemory-server-v0.0.5-pluggable-embeddings.md]]", "[[2026-07-19-supermemory-server-v0.0.6-windows.md]]"]
 ---
 
 # 🧠 Supermemory: 에이전트 네이티브 메모리 시스템
@@ -216,6 +216,20 @@ KM/에이전트 적용: Windows 개발 머신에서도 Linux/macOS와 같은 plu
 ```
 
 **적용 팁**: KM에서 Claude Code와 Codex가 같은 레포를 만질 때 `repo_*` 태그로 메모리를 묶고, UI/검색에서 Agents 필터로 소스를 분리한다. `x-sm-project`와 함께 쓰면 Team Brain + 에이전트 하네스별 뷰가 동시에 유지된다.
+
+### 🔓 MCP unscoped recall 스코프 수정 + OpenCode Agents (2026-07-24)
+
+1. **[#1357](https://github.com/supermemoryai/supermemory/pull/1357)** — unscoped `recall`이 `sm_project_default`를 강제해, 다른 org space만 읽을 수 있는 호출자에게 **오해성 403**이 나던 버그 수정. search API가 caller의 **readable scope**를 선택하고, 구체 스코프가 없으면 profile enrichment를 건너뛴다.
+2. **[#1354](https://github.com/supermemoryai/supermemory/pull/1354)** — **OpenCode** 컨테이너를 Agents 워크스페이스에 그룹핑(Claude Code/Codex에 이어). 소스 필터 추가, 빈 agent pill 숨김.
+
+```ts
+// Agents 소스 필터 확장 (#1290 + #1354)
+"claude-code" → ["claude-code", "claude-code-plugin"]
+"codex"       → ["codex"]
+"opencode"    → ["opencode"]  // Agents space grouping
+```
+
+**적용 팁**: 멀티 테넌트 MCP에서 unscoped recall 403이 나오면 클라이언트 권한보다 스코프 강제 여부를 먼저 의한다. OpenCode 하네스는 Claude Code/Codex와 동일하게 Agents 필터·`repo_*` 태그로 KM 메모리를 공유한다.
 
 ---
 

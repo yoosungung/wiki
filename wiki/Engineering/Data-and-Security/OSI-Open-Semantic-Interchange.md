@@ -1,9 +1,9 @@
 ---
 title: "OSI (Open Semantic Interchange)"
 tags: ["OSI", "Apache Ossie", "Semantic Layer", "Agent", "MCP", "Data"]
-last_updated: "2026-07-14"
-updated: "2026-07-14"
-related_raw: ["[[raw/2026-07-14-Apache-Ossie-명세.md]]"]
+last_updated: "2026-07-24"
+updated: "2026-07-24"
+related_raw: ["[[raw/2026-07-24-apache-ossie-schema-ontology-flatten.md]]", "[[raw/2026-07-14-Apache-Ossie-명세.md]]"]
 ---
 
 # OSI (Open Semantic Interchange)
@@ -38,6 +38,19 @@ Ossie 명세는 YAML/JSON 기반이며, `ai_context` 필드로 LLM에 자연어 
 - 프로덕션 모델은 안정판 0.1.1 스키마에 고정합니다.
 - `core-spec/osi-schema.json`, `core-spec/spec.yaml`, `validation/validate.py`로 커밋 전 검증합니다.
 - 0.2.0.dev0 시험 모델은 안정 모델과 분리하고, 변환 전후 `ai_context`와 관계 정의의 손실을 검사합니다.
+
+### 2026-07-24: 예시↔스키마 정합 · Ontology flatten
+- **[PR #209](https://github.com/apache/ossie/pull/209)**: core-spec 예시가 `osi-schema.json`/`validate.py`를 통과하도록 수정(`datasets` minItems, `expression.dialects`, top-level `version: 0.2.0.dev0`, flat `primary_key`).
+- **[PR #257](https://github.com/apache/ossie/pull/257)**: ontology `concept`를 nested object가 아닌 **문자열 필드**로 flatten. exporter/컨버터는 새 문법을 따라야 한다.
+
+```yaml
+ontology:
+  - concept: Employee
+    type: EntityType
+    extends: [Person]
+```
+
+AV-SQL/에이전트 파이프라인 연계는 [[wiki/Agents/Text-to-SQL/AV-SQL-Agentic-Views-Spider-2-0.md]].
 
 ## 4. 에이전트 문맥 공유 (Agentic Enterprise)
 Ossie는 에이전트가 사용할 시맨틱 계층의 교환 형식을 지향합니다. 다만 0.x 단계이므로 지원 변환기와 플랫폼별 구현 범위를 확인해야 합니다.

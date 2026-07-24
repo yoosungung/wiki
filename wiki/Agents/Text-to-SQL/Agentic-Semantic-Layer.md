@@ -3,9 +3,9 @@ title: "Agentic Semantic Layer: AI 에이전트를 위한 지능형 데이터 �
 tags: ["Architecture", "Semantic-Layer", "T2SQL", "Agentic-AI"]
 type: "wiki"
 status: "published"
-last_updated: "2026-07-14"
-updated: "2026-07-14"
-related_raw: ["[[raw/2026-07-14-AV-SQL-논문-및-구현.md]]", "[[raw/2026-07-14-Apache-Ossie-명세.md]]"]
+last_updated: "2026-07-24"
+updated: "2026-07-24"
+related_raw: ["[[raw/2026-07-24-apache-ossie-schema-ontology-flatten.md]]", "[[raw/2026-07-14-AV-SQL-논문-및-구현.md]]", "[[raw/2026-07-14-Apache-Ossie-명세.md]]"]
 ---
 
 # 에이전틱 시맨틱 레이어 (Agentic Semantic Layer)
@@ -42,6 +42,7 @@ semantic_model:
 ```
 
 - **효과**: 동일한 시맨틱 컨텍스트를 여러 도구가 교환할 수 있는 공통 형식을 제공합니다. 실제 상호운용성은 각 도구의 변환기 지원 범위와 명세 버전에 따라 달라집니다. (GitHub: `apache/ossie`)
+- **2026-07-24**: core-spec 예시가 `osi-schema.json`을 통과하도록 정합([#209](https://github.com/apache/ossie/pull/209)); ontology `concept` flatten([#257](https://github.com/apache/ossie/pull/257)). 에이전트 exporter는 flatten 문법 + `validate.py` CI를 기본으로 한다. 상세: [[wiki/Engineering/Data-and-Security/OSI-Open-Semantic-Interchange.md]], [[wiki/Agents/Text-to-SQL/AV-SQL-Agentic-Views-Spider-2-0.md]].
 
 ### 3. 자율형 시맨틱 레이어 생성 (Autonomous Generation)
 에이전트가 원시 스키마와 과거 질의 패턴을 분석하여 스스로 시맨틱 모델을 구축하는 **'자율형 데이터 엔지니어링'**이 일반화되었습니다. 에이전트는 새로운 지표를 제안하고, 인간의 승인을 거쳐 Git에 자동으로 PR(Pull Request)을 생성합니다.

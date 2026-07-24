@@ -1,6 +1,10 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-07-24 | RESEARCH | Web | 7 | LiteRT YNNPACK/activation/KV-prefill, vllm-rbln v0.11.2.dev0, Supermemory #1357/#1354, Ossie #209/#257, OpenClaw Workboard; Furiosa·Halo·WebLLM ALREADY_COVERED |
+| 2026-07-24 | INGEST | raw/ | 5 | litert-lm-ynnpack-activation-kv-prefill, vllm-rbln-v0.11.2.dev0, supermemory-mcp-scope-opencode, apache-ossie-schema-ontology-flatten, openclaw-workboard-orchestration |
+| 2026-07-24 | SYNTHESIZE | wiki/ | 8 | 스마트폰 LiteRT·리벨리온 EXAONE/동향·Supermemory·AV-SQL·Agentic-Semantic·OSI·MAS Workboard 증분 |
+| 2026-07-24 | LINT | Root / wiki | ALL | 2026-07-24 데일리 PM 갱신, raw/ 정리, 연구_주제_관리 비고 갱신 |
 | 2026-07-24 | RESEARCH | Web | 9 | Giskard OSS, Hands-On AI, MemoHarness, LMSYS Miles OPD, Anakin.io, Karpathy Prompting, Sionic AI, Chonkie, Kimi K3 |
 | 2026-07-24 | INGEST | raw/ | 9 | giskard-oss, hands-on-ai-engineering, memoharness, lmsys-opd-miles, anakin-scraping-api, karpathy-prompting, sionic-ai-embeddings, chonkie-tablechunker, kimi-k3-moe |
 | 2026-07-24 | SYNTHESIZE | wiki/ | 9 | Giskard, Hands-On AI, MemoHarness, Miles OPD, Anakin API, Karpathy 2026, Comsat-Embed, TableChunker, Kimi K3 MoE 신규 및 증분 |
