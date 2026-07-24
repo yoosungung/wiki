@@ -1,11 +1,11 @@
 ---
 title: "안드레 카파시 영감: Claude Code 및 CLAUDE.md 지침"
-related_raw: ["[[andrej-karpathy-skillsREADME.md at main · forrestchangandrej-karpathy-skills.md]]", "[[AI 코딩 에이전트를 통제하는 65줄의 원칙.md]]"]
+related_raw: ["[[andrej-karpathy-skillsREADME.md at main · forrestchangandrej-karpathy-skills.md]]", "[[AI 코딩 에이전트를 통제하는 65줄의 원칙.md]]", "[[2026-07-24-andrej-karpathy-prompting-workflow.md]]"]
 tags: ["Engineering", "AI-Native", "Claude_Code", "CLAUDE_md", "Karpathy", "Prompt_Engineering"]
 type: "wiki"
 status: "published"
-last_updated: "2026-05-15"
-updated: "2026-05-15"
+last_updated: "2026-07-24"
+updated: "2026-07-24"
 ---
 
 # Karpathy-Inspired Claude Code & CLAUDE.md 지침
@@ -35,6 +35,14 @@ updated: "2026-05-15"
 ## 3. 65줄의 마법: 왜 효과적인가?
 AI는 코딩 능력이 부족한 것이 아니라, **브레이크 없이 너무 빠르게 달리는 것**이 문제입니다. `CLAUDE.md`는 AI가 과하게 추측하고 고치는 습관을 제어하는 '브레이크' 역할을 합니다. 에이전트에게 더 많은 자유를 주는 것이 아니라, 더 좁고 명확한 경계를 세워주는 것이 품질을 높이는 비결입니다.
 
+## 4. 2026 추가 방법론: 자율 실험 시스템 및 장문 프롬프팅
+카파시가 2026년 들어 추가적으로 제시한 프롬프팅 및 에이전트 엔지니어링 워크플로우 통찰입니다:
+
+### 1) 장문 음성 프롬프팅 (Long-form Verbal Prompting)
+- 정형화된 정교한 문장을 작성하려 고민하기보다는, **자신의 아이디어, 요구 사항, 주변 컨텍스트를 5~10분 정도 끊임없이 말하듯 입력(Ramble)**하는 것이 효과적입니다. LLM은 이 거친 언어 덤프 속에서 의도를 높은 정확도로 추출하여 체계적인 작업 명세(Spec)를 도출할 수 있습니다. 이는 컨텍스트 엔지니어링의 일환으로 활용됩니다.
+
+### 2) 개발 대상의 전환: 자율 실험 루프 (Autoresearch)
+- 개발자가 직접 코드를 작성하거나 프롬프트를 입력해 코드를 얻는 방식을 넘어, **에이전트가 스스로 가설을 세우고, 코드를 작성해 빌드/테스트하며, 결과를 학습 및 분석하는 자율 실행 루프(예: Autoresearch Framework)**를 빌드하는 데 집중합니다. 개발자의 역할은 '코드 작성자'가 아닌 '실험 및 평가 시스템의 조율자/디렉터'로 점진적 전환됩니다.
 
 ## 관련 문서
 - [[wiki/Engineering/AI-Native-Engineering/Claude-Code-Next-Gen-Coding-Agent.md|Claude Code: 차세대 코딩 에이전트 분석]]

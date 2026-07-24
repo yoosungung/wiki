@@ -1,6 +1,10 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-07-24 | RESEARCH | Web | 9 | Giskard OSS, Hands-On AI, MemoHarness, LMSYS Miles OPD, Anakin.io, Karpathy Prompting, Sionic AI, Chonkie, Kimi K3 |
+| 2026-07-24 | INGEST | raw/ | 9 | giskard-oss, hands-on-ai-engineering, memoharness, lmsys-opd-miles, anakin-scraping-api, karpathy-prompting, sionic-ai-embeddings, chonkie-tablechunker, kimi-k3-moe |
+| 2026-07-24 | SYNTHESIZE | wiki/ | 9 | Giskard, Hands-On AI, MemoHarness, Miles OPD, Anakin API, Karpathy 2026, Comsat-Embed, TableChunker, Kimi K3 MoE 신규 및 증분 |
+| 2026-07-24 | LINT | Root / wiki | ALL | 2026-07-24 데일리 생성, D-2(2026-07-22) 삭제, raw/ 정리, index.md 파일 개수 최신화, 연구_주제_관리 날짜 갱신 |
 | 2026-07-23 | RESEARCH | Web | 7 | LiteRT-LM ASR Async(42d10355), vllm-rbln v0.11.1a11, Supermemory Agents(#1290), Ossie Invoke(#155); Furiosa·Halo·MAS 재확인 |
 | 2026-07-23 | INGEST | raw/ | 4 | litert-lm-asr-async-api, vllm-rbln-v0.11.1a11, supermemory-agents-memory-workspace, apache-ossie-plugin-invocation |
 | 2026-07-23 | SYNTHESIZE | wiki/ | 4 | 스마트폰 LiteRT ASR·리벨리온 a11·Supermemory Agents·AV-SQL Ossie Invoke 증분 |
