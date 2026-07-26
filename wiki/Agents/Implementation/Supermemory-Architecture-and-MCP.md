@@ -3,9 +3,9 @@ title: "Supermemory: 에이전트 네이티브 메모리 시스템 및 MCP 아�
 tags: ["Agents", "Implementation", "Memory", "Supermemory", "MCP", "SMFS", "Cloudflare"]
 type: "wiki"
 status: "published"
-last_updated: "2026-07-25"
-updated: "2026-07-25"
-related_raw: ["[[2026-07-25-supermemory-cursor-agents-company-brain.md]]", "[[2026-07-24-supermemory-mcp-scope-opencode.md]]", "[[2026-07-23-supermemory-agents-memory-workspace.md]]", "[[2026-07-22-supermemory-company-brain-open-signup.md]]", "[[2026-07-21-supermemory-mcp-tool-safety-annotations.md]]", "[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]", "[[2026-07-12-supermemory-local-6767-cli-mcp-context.md]]", "[[raw/2026-07-13-sadik-mohammad-rag-systems-limitations.md]]", "[[2026-07-13-supermemory-openclaw-claude-plugins.md]]", "[[2026-07-16-supermemory_ai_memory_layer_analysis.md]]", "[[2026-07-18-supermemory-server-v0.0.5-pluggable-embeddings.md]]", "[[2026-07-19-supermemory-server-v0.0.6-windows.md]]"]
+last_updated: "2026-07-26"
+updated: "2026-07-26"
+related_raw: ["[[2026-07-26-supermemory-chatgpt-mcp-setup.md]]", "[[2026-07-25-supermemory-cursor-agents-company-brain.md]]", "[[2026-07-24-supermemory-mcp-scope-opencode.md]]", "[[2026-07-23-supermemory-agents-memory-workspace.md]]", "[[2026-07-22-supermemory-company-brain-open-signup.md]]", "[[2026-07-21-supermemory-mcp-tool-safety-annotations.md]]", "[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]", "[[2026-07-12-supermemory-local-6767-cli-mcp-context.md]]", "[[raw/2026-07-13-sadik-mohammad-rag-systems-limitations.md]]", "[[2026-07-13-supermemory-openclaw-claude-plugins.md]]", "[[2026-07-16-supermemory_ai_memory_layer_analysis.md]]", "[[2026-07-18-supermemory-server-v0.0.5-pluggable-embeddings.md]]", "[[2026-07-19-supermemory-server-v0.0.6-windows.md]]"]
 ---
 
 # 🧠 Supermemory: 에이전트 네이티브 메모리 시스템
@@ -246,6 +246,26 @@ KM/에이전트 적용: Windows 개발 머신에서도 Linux/macOS와 같은 plu
 ```
 
 **적용 팁**: KM을 Cursor·Claude Code·OpenCode가 같이 쓸 때 Agents에서 `cursor` 필터로 소스 attribution을 분리하고, Company Brain 공유 링크는 org 브랜딩이 나오는지 한 번 확인한다.
+
+### 🔌 ChatGPT MCP 설치 경로·플랜 게이트 (2026-07-26)
+
+[PR #1358](https://github.com/supermemoryai/supermemory/pull/1358)이 Connect AI / MCP 모달의 ChatGPT 수동 설치 안내를 갱신했습니다.
+
+| 항목 | 이전 | 현재 (#1358) |
+| :--- | :--- | :--- |
+| Developer mode | Settings → Apps → Advanced settings | **Settings → Security and Login** (하단) |
+| 앱 생성 | “Create an app and paste MCP URL” | **https://chatgpt.com/plugins** |
+| 플랜 | (없음) | **Write-capable custom MCP apps = Business & Enterprise only** |
+
+```text
+# ChatGPT ↔ Supermemory MCP (운영 체크리스트)
+1. ChatGPT → Settings → Security and Login → Developer mode ON
+2. https://chatgpt.com/plugins 에서 MCP URL 등록 + OAuth
+3. 쓰기 도구(memory 등)가 필요하면 Business/Enterprise 플랜 확인
+4. Free/Plus에서는 read-only 또는 호스트 차단 가능 → 로컬 MCP/API 키로 대체
+```
+
+**적용 팁**: KM을 ChatGPT 커스텀 MCP로 붙일 때 쓰기(`memory`)가 막히면 플랜 게이트를 먼저 의한다. Cursor/Claude Code OAuth 경로는 이 UI 변경과 무관하다.
 
 ---
 
