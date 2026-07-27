@@ -7,6 +7,7 @@
 - [[wiki/Models/Small-Models/Google Gemma 4 출시 및 Gemma 3와의 성능 비교 분석.md]]
 - [[wiki/Models/Small-Models/Google Research - Small Models, Big Results - 큰 모델은 필요없다, 데이터 중심 AI가 다시 온다.md]]
 - [[wiki/Models/Small-Models/Google-Gemini-3.md]]
+- [[wiki/Models/Small-Models/HuggingFace-Smol-Course.md]]
 - [[wiki/Models/Small-Models/LFM2.5-ColBERT.md]]
 - [[wiki/Models/Small-Models/LFM2.5-Embedding.md]]
 - [[wiki/Models/Small-Models/Microsoft-Fara-7B.md]]

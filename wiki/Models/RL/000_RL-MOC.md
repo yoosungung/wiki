@@ -16,6 +16,7 @@
 - [[wiki/Models/RL/NVIDIA GDPO: 다중 보상 RL의 GRPO 결함 해결.md]]
 - [[wiki/Models/RL/Neural-World-Models-Robotic-Planning-2026.md]]
 - [[wiki/Models/RL/OpenAI-Sora-Shutdown-Robot-Pivot.md]]
+- [[wiki/Models/RL/OpenPipe-ART-Agent-Reinforcement-Trainer.md]]
 - [[wiki/Models/RL/Parlant.md]]
 - [[wiki/Models/RL/RL-학습의-한계.md]]
 - [[wiki/Models/RL/RLHF.md]]

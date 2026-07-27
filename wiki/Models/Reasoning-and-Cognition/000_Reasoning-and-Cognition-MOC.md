@@ -27,6 +27,7 @@
 - [[wiki/Models/Reasoning-and-Cognition/NextLat-잠재-공간-세계-모델-2026.md]]
 - [[wiki/Models/Reasoning-and-Cognition/Perplexity at Work.md]]
 - [[wiki/Models/Reasoning-and-Cognition/Sionic AI STORM Parse.md]]
+- [[wiki/Models/Reasoning-and-Cognition/SFT-vs-RL-Compositional-Generalization.md]]
 - [[wiki/Models/Reasoning-and-Cognition/The Missing Layer of AGI - From Pattern Alchemy to Coordination Physics.md]]
 - [[wiki/Models/Reasoning-and-Cognition/Why LLM models are not good at RAG.md]]
 - [[wiki/Models/Reasoning-and-Cognition/합성 정신병리학 (Synthetic Psychopathology)의 등장.md]]

@@ -10,3 +10,4 @@
 - [[wiki/Models/Small-Models/000_Small-Models-MOC.md|Small-Models]]
 
 ## 📄 Documents
+- [[wiki/Models/Study-Resources.md]]

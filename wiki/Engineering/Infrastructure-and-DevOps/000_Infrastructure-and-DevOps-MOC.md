@@ -8,6 +8,7 @@
 - [[wiki/Engineering/Infrastructure-and-DevOps/Airflow-Common-AI-Provider.md]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/DGX Spark.md]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/DGX Spark에서의 VLM 파인튜닝.md]]
+- [[wiki/Engineering/Infrastructure-and-DevOps/Free-Infrastructure-Services-for-Developers.md]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/Google_Quantum_Echoes.md]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/Harness-MCP-for-DevOps.md]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/How-to-run-llms-with-docker.md]]

@@ -2,6 +2,7 @@
 
 ## 📄 Documents
 - [[wiki/Models/Optimization-and-Serving/2026-GPU-Inference-Benchmark-and-FinOps.md]]
+- [[wiki/Models/Optimization-and-Serving/Adaptive-Inference-Routing-Fastino-Pioneer.md]]
 - [[wiki/Models/Optimization-and-Serving/Browser-AI-Inference-MOC.md]]
 - [[wiki/Models/Optimization-and-Serving/Continuous-Batching.md]]
 - [[wiki/Models/Optimization-and-Serving/DFlash-병렬-추측-디코딩-및-SGLang-V2-가속.md]]
@@ -16,6 +17,7 @@
 - [[wiki/Models/Optimization-and-Serving/LLM-Model-Compilation.md]]
 - [[wiki/Models/Optimization-and-Serving/Llama-4-Performance-and-Optimization.md]]
 - [[wiki/Models/Optimization-and-Serving/Native-Attention.md]]
+- [[wiki/Models/Optimization-and-Serving/Neuromorphic-In-Memory-Computing-China.md]]
 - [[wiki/Models/Optimization-and-Serving/OpenGuardrails_LLM_앱_보호_오픈소스_AI_보안_플랫폼.md]]
 - [[wiki/Models/Optimization-and-Serving/PagedAttention.md]]
 - [[wiki/Models/Optimization-and-Serving/Quantization-Techniques-NPU.md]]
