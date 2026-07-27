@@ -6,6 +6,7 @@
 ## 📄 Documents
 - [[wiki/Engineering/AI-Native-Engineering/2026-04-09-Claude-Cursor-News.md]]
 - [[wiki/Engineering/AI-Native-Engineering/2026-04-09-Devin-Update.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Agentic-Software-Factory.md]]
 - [[wiki/Engineering/AI-Native-Engineering/AI 기반 코딩의 실제 사례 - Cursor와 OpenAI.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Claude Code 개발자 Boris의 효율적인 AI 활용 팁.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Claude-Code-Karpathy-Guidelines.md]]
