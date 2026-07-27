@@ -1,6 +1,10 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-07-27 | RESEARCH | Web | 7 | LiteRT audio embeddings/state metadata/embedding builder, OpenClaw route bindings/#114574/grep naming; Supermemory·vllm-rbln·Ossie·Furiosa·Halo·WebLLM ALREADY_COVERED |
+| 2026-07-27 | INGEST | raw/ | 2 | litert-lm-audio-embeddings-state-metadata, openclaw-route-bindings-grep-naming-harness |
+| 2026-07-27 | SYNTHESIZE | wiki/ | 3 | 스마트폰 LiteRT audio/state·MAS OpenClaw route bindings/naming/harness·OpenClaw-HyperAgent 증분 |
+| 2026-07-27 | LINT | Root / wiki | ALL | 2026-07-27 데일리 갱신, raw/ 정리, 연구_주제_관리 비고 갱신, index META 날짜 |
 | 2026-07-26 | RESEARCH | Web | 7 | Supermemory ChatGPT MCP #1358, OpenClaw #113883/#113906/#114121/#114152; LiteRT·vllm-rbln·Ossie·Furiosa·Halo·WebLLM ALREADY_COVERED |
 | 2026-07-26 | INGEST | raw/ | 2 | supermemory-chatgpt-mcp-setup, openclaw-session-urls-oauth-resume |
 | 2026-07-26 | SYNTHESIZE | wiki/ | 3 | Supermemory ChatGPT MCP·MAS OpenClaw path/OAuth/resume·OpenClaw-HyperAgent 증분 |
