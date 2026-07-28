@@ -30,5 +30,6 @@
 - [[wiki/Models/Reasoning-and-Cognition/SFT-vs-RL-Compositional-Generalization.md]]
 - [[wiki/Models/Reasoning-and-Cognition/The Missing Layer of AGI - From Pattern Alchemy to Coordination Physics.md]]
 - [[wiki/Models/Reasoning-and-Cognition/Why LLM models are not good at RAG.md]]
+- [[wiki/Models/Reasoning-and-Cognition/추론-LLM-추론-노력-제어-및-스케일링.md]]
 - [[wiki/Models/Reasoning-and-Cognition/합성 정신병리학 (Synthetic Psychopathology)의 등장.md]]
 - [[wiki/Models/Reasoning-and-Cognition/하버드 AI 논문 - 누가 사람을 평가할 자격이 있는가?.md]]

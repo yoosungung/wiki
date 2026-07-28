@@ -7,6 +7,7 @@
 - [[wiki/Models/Architectures/DeepSeek-V2, GPT-4 수준의 추론 능력을 갖춘 오픈소스 LLM.md]]
 - [[wiki/Models/Architectures/GLM-5-2-Architecture-and-IndexShare.md]]
 - [[wiki/Models/Architectures/Gated-Attention.md]]
+- [[wiki/Models/Architectures/Inkling-975B-MoE-Model.md]]
 - [[wiki/Models/Architectures/LLM 아키텍처 비교.md]]
 - [[wiki/Models/Architectures/LeWorldModel-JEPA.md]]
 - [[wiki/Models/Architectures/Lottery Ticket Hypothesis와 LLM.md]]

@@ -1,11 +1,11 @@
 ---
 title: "Kimi K3: 2.8조 파라미터 희소 혼합 전문가(Sparse MoE) 모델 아키텍처"
-related_raw: ["[[2026-07-24-kimi-k3-mixture-of-experts.md]]"]
+related_raw: ["[[2026-07-24-kimi-k3-mixture-of-experts.md]]", "[[raw/2026-07-28-kimi_delta_attention_efficient_attention_architecture.md]]"]
 tags: ["Models", "Architectures", "MoE", "Kimi", "Moonshot-AI", "Long-Context"]
 type: "wiki"
 status: "published"
-last_updated: "2026-07-24"
-updated: "2026-07-24"
+last_updated: "2026-07-28"
+updated: "2026-07-28"
 ---
 
 # Kimi K3: 2.8조 파라미터 희소 혼합 전문가(Sparse MoE) 모델 아키텍처
@@ -15,10 +15,15 @@ updated: "2026-07-24"
 
 ## 2. 핵심 아키텍처 혁신
 
-### 1) Kimi Delta Attention 및 AttnRes (Attention Residuals)
-초장문(Long-context) 처리 시 기존의 표준 Dot-Product Attention은 시퀀스 길이에 따라 연산 복잡도와 메모리 요구량이 제곱($O(N^2)$)으로 증가하는 치명적인 한계를 가집니다. Kimi K3는 이를 해결하기 위해 두 가지 핵심 메커니즘을 적용했습니다:
-- **Kimi Delta Attention:** 입력 토큰 간의 연산을 선형 시간 복잡도($O(N)$)로 압축하는 고유한 선형 어텐션 방식입니다.
-- **AttnRes (Attention Residuals):** 선형 어텐션 과정에서 발생하는 정보 유실 및 로컬/디테일 정보의 붕괴를 보정하기 위해, 잔차 연결(Residual Connection) 형태로 고정밀 어텐션 스코어의 핵심 성분만 우회 결합시킵니다. 이로써 연산 속도는 대폭 늘리면서도 초장문 추론 성능 저하를 차단합니다.
+### 1) Kimi Delta Attention (KDA) 및 AttnRes (Attention Residuals)
+초장문(Long-context) 처리 시 기존의 표준 Softmax Attention은 매 토큰 생성 시마다 이전 KV 캐시 전체를 다시 탐색해야 하므로 $O(N^2)$ 연산 복잡도와 심각한 메모리 병목을 유발합니다. Kimi K3는 이를 극복하기 위해 **KDA**와 **AttnRes**의 하이브리드 어텐션 설계를 도입하였습니다:
+- **Kimi Delta Attention (KDA)**: 
+  - **기술적 기반**: KDA는 **Gated DeltaNet(arXiv:2510.26692)** 구조를 활용한 선형 어텐션(Linear Attention) 아키텍처입니다.
+  - **작동 원리**: 입력 히스토리를 고정된 크기의 상태(State) 매트릭스 전이 행렬로 상시 압축하며, 새로운 정보가 들어올 때 캐시를 append하는 대신 고정 상태 메모리에 delta-correction을 통해 덮어쓰기(overwrite)를 수행하여 디코딩 속도를 비약적으로 향상시킵니다.
+  - **KV 캐시 감소**: 일반 어텐션 대비 **KV 캐시 VRAM 점유율을 최대 75% 절감**하여 constant-cost decoding을 실현하였습니다.
+- **하이브리드 레이어 패턴**: Kimi K3는 모든 레이어에 KDA를 쓰지 않고, **3개 레이어는 KDA**를 적용해 연산 비용을 축소하고, **1개 레이어는 Gated MLA(Multi-Head Latent Attention)**를 적용해 글로벌 지식 회상(Recall) 정밀도를 완벽히 보장하는 3:1 하이브리드 패턴을 활용합니다.
+- **AttnRes (Attention Residuals)**: 선형 어텐션 과정에서 발생하는 정보의 점진적 감쇠 및 정보 유실을 보정하기 위해, 고정밀 어텐션 스코어의 핵심 성분만 잔차 연결(Residual Connection) 구조로 우회 보완시킵니다.
+- **생태계 지원**: Moonshot AI는 높은 연산 가속을 위해 GPU용 커널인 **FlashKDA**를 오픈소스로 공개하였으며, serving 프레임워크인 **vLLM**에서도 공식 구동이 지원됩니다.
 
 ### 2) 100만 토큰 (1M Context Window) 컨텍스트 지원
 Kimi K3는 Delta Attention 스택 덕분에 모델 구동 시 그래픽 메모리(VRAM) 병목을 회피하여 **최대 1,000,000 토큰(1M tokens)**의 입력 범위를 온전히 지원합니다. 이는 책 여러 권 분량의 자료나 전체 코드베이스 프로젝트 리포지토리를 한 번에 주입하여 즉각적인 다중 파일 검색 및 추론을 가능하게 합니다.

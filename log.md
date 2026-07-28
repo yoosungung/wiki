@@ -316,3 +316,7 @@
 | 2026-07-27 | LINT | wiki/ | ALL | 비표준 raw 파일 17개 삭제 완료 및 위키 정합성 점검 |
 | 2026-07-27 | INGEST | raw/ | 1 | 자율형 소프트웨어 팩토리 구축 및 인간 작업 자동화 연구 데이터 표준화 수집 |
 | 2026-07-27 | SYNTHESIZE | wiki/Engineering/AI-Native-Engineering | 1 | 에이전트 네이티브 소프트웨어 팩토리(Agentic Software Factory) 아키텍처 및 자동화 방안 위키 합성 및 MOC/Index 최신화 |
+| 2026-07-28 | RESEARCH | Web | 8 | 8개 활성 연구 과제 관련 최신 릴리스 및 SOTA 논문 검색 수행; vllm-rbln·Furiosa·Supermemory ALREADY_COVERED |
+| 2026-07-28 | INGEST | raw/ | 12 | 수집된 12개 비표준 raw 파일을 YYYY-MM-DD-제목_slug.md 형식으로 표준화 및 메타데이터 주입 |
+| 2026-07-28 | SYNTHESIZE | wiki/ | 10 | 수집된 지식을 5대 카테고리(하네스 핸드북, 하네스 이펙트, Graph-PRefLexOR, 추론 노력 제어, Inkling, OptiLLM, RAGFlow, Alook)에 합성 및 관련 MOC 4개 파일 최신화 |
+| 2026-07-28 | LINT | wiki/ | ALL | 2026-07-28 데일리 생성, D-2(2026-07-26) 삭제, index.md 파일 개수 최신화, fix_wiki_links.py 실행 및 raw/ 정리 |

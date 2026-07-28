@@ -1,8 +1,8 @@
 ---
 title: SFT와 RL의 역할 분담을 통한 LLM 추론 일반화 극대화 전략
-last_updated: "2026-07-27"
-updated: "2026-07-27"
-related_raw: ["[[2026-07-27-understanding_compositional_generalization_in_lm_reasoning.md]]"]
+last_updated: "2026-07-28"
+updated: "2026-07-28"
+related_raw: ["[[2026-07-27-understanding_compositional_generalization_in_lm_reasoning.md]]", "[[raw/2026-07-28-linkedin_post_kiwoong_yeom_compositional_generalization.md]]"]
 tags: [Reasoning, RL, SFT, Compositional-Generalization, Post-Training]
 ---
 
