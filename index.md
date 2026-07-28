@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-07-28 (km-researcher Inkling/Harness) | Root: wiki/
+[META] Updated: 2026-07-28 (km-researcher PM LiteRT/vllm-rbln/OpenClaw) | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]

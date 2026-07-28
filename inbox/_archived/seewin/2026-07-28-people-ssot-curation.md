@@ -3,7 +3,7 @@ id: inbox-seewin-people-ssot-curation-2026-07-28
 agent: seewin
 ticket_id: cron-people-ssot-2026-07-28
 updated: 2026-07-28
-status: inbox
+status: archived
 sources:
   - cron:people-ssot-curation
   - https://www.yna.co.kr/view/AKR20260708092900001

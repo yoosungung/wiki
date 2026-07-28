@@ -3,9 +3,9 @@ title: "Supermemory: 에이전트 네이티브 메모리 시스템 및 MCP 아�
 tags: ["Agents", "Implementation", "Memory", "Supermemory", "MCP", "SMFS", "Cloudflare"]
 type: "wiki"
 status: "published"
-last_updated: "2026-07-26"
-updated: "2026-07-26"
-related_raw: ["[[2026-07-26-supermemory-chatgpt-mcp-setup.md]]", "[[2026-07-25-supermemory-cursor-agents-company-brain.md]]", "[[2026-07-24-supermemory-mcp-scope-opencode.md]]", "[[2026-07-23-supermemory-agents-memory-workspace.md]]", "[[2026-07-22-supermemory-company-brain-open-signup.md]]", "[[2026-07-21-supermemory-mcp-tool-safety-annotations.md]]", "[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]", "[[2026-07-12-supermemory-local-6767-cli-mcp-context.md]]", "[[raw/2026-07-13-sadik-mohammad-rag-systems-limitations.md]]", "[[2026-07-13-supermemory-openclaw-claude-plugins.md]]", "[[2026-07-16-supermemory_ai_memory_layer_analysis.md]]", "[[2026-07-18-supermemory-server-v0.0.5-pluggable-embeddings.md]]", "[[2026-07-19-supermemory-server-v0.0.6-windows.md]]"]
+last_updated: "2026-07-28"
+updated: "2026-07-28"
+related_raw: ["[[2026-07-28-supermemory-company-brain-custom-mcp.md]]", "[[2026-07-26-supermemory-chatgpt-mcp-setup.md]]", "[[2026-07-25-supermemory-cursor-agents-company-brain.md]]", "[[2026-07-24-supermemory-mcp-scope-opencode.md]]", "[[2026-07-23-supermemory-agents-memory-workspace.md]]", "[[2026-07-22-supermemory-company-brain-open-signup.md]]", "[[2026-07-21-supermemory-mcp-tool-safety-annotations.md]]", "[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]", "[[2026-07-12-supermemory-local-6767-cli-mcp-context.md]]", "[[raw/2026-07-13-sadik-mohammad-rag-systems-limitations.md]]", "[[2026-07-13-supermemory-openclaw-claude-plugins.md]]", "[[2026-07-16-supermemory_ai_memory_layer_analysis.md]]", "[[2026-07-18-supermemory-server-v0.0.5-pluggable-embeddings.md]]", "[[2026-07-19-supermemory-server-v0.0.6-windows.md]]"]
 ---
 
 # 🧠 Supermemory: 에이전트 네이티브 메모리 시스템
@@ -266,6 +266,21 @@ KM/에이전트 적용: Windows 개발 머신에서도 Linux/macOS와 같은 plu
 ```
 
 **적용 팁**: KM을 ChatGPT 커스텀 MCP로 붙일 때 쓰기(`memory`)가 막히면 플랜 게이트를 먼저 의한다. Cursor/Claude Code OAuth 경로는 이 UI 변경과 무관하다.
+
+### Company Brain CTA · custom MCP 개방 (2026-07-28)
+
+1. **Personal → Company Brain 온보딩** ([#1370](https://github.com/supermemoryai/supermemory/pull/1370)): org에 Company Brain이 없는 personal-brain 사용자에게 대시보드 헤더 dismissible 카드 + 프로필 메뉴 상시 엔트리로 팀 온보딩 CTA. `?mode=team`으로 personal-domain 이메일이 personal onboarding으로 빗나가지 않게 함.
+2. **Custom MCP for all CB users** ([#1371](https://github.com/supermemoryai/supermemory/pull/1371)): **Add custom MCP**를 `@supermemory.com` staff 게이트에서 해제 — Company Brain 사용자 전원에게 노출. 실패는 API 응답 기준; non-CB 가드·personal custom MCP 흐름은 유지.
+3. **Workspace 선택 수정** ([#1372](https://github.com/supermemoryai/supermemory/pull/1372)) · Nova connector setup cards ([#1071](https://github.com/supermemoryai/supermemory/pull/1071)).
+
+```text
+# Company Brain + custom MCP (운영)
+1. Personal 대시보드 CTA 또는 Profile → Company Brain 온보딩 (?mode=team)
+2. Company Brain 워크스페이스에서 Add custom MCP → MCP URL/OAuth
+3. 연결 실패 시 staff-only 메시지 대신 API 에러 본문 확인 (#1371)
+```
+
+**적용 팁**: 조직 KM을 Company Brain에 올릴 때 personal 사용자에게 CTA가 보이는지·커스텀 MCP가 staff 없이 등록되는지 회귀한다. 워크스페이스 전환 버그는 #1372 이후 재확인.
 
 ---
 

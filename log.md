@@ -1,6 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-07-28 | INBOX_DRAIN | inbox/seewin | 1 | people-ssot-curation → `_archived/seewin` (정치 위키 병합 금지·tech vault 비적합, promote 생략) |
+| 2026-07-28 | RESEARCH | Web/GitHub | 7 | LiteRT EmbeddingEngine/AudioSource, vllm-rbln 0.11.2a0/a1, Supermemory CB CTA/custom MCP, OpenClaw watched-session/sandbox, Ossie AI disclosure/Polaris JDK17; Furiosa NPUaaS·WebLLM/Halo ALREADY_COVERED |
+| 2026-07-28 | INGEST | raw/ | 5 | litert-lm-embedding-engine-audio-file-source, vllm-rbln-v0.11.2a0-a1, supermemory-company-brain-custom-mcp, openclaw-watched-session-sandbox-network, apache-ossie-ai-disclosures-polaris-java17 |
+| 2026-07-28 | SYNTHESIZE | wiki/ | 6 | 스마트폰 LiteRT EmbeddingEngine, 리벨리온 EXAONE/동향 a0/a1, Supermemory CB, MAS OpenClaw watched/sandbox, OpenClaw-HyperAgent, AV-SQL Ossie |
+| 2026-07-28 | LINT | Root / wiki | ALL | 데일리 PM 갱신, raw/ 합성 후 삭제, 연구_주제_관리 비고, index META |
 | 2026-07-27 | RESEARCH | Web | 7 | LiteRT audio embeddings/state metadata/embedding builder, OpenClaw route bindings/#114574/grep naming; Supermemory·vllm-rbln·Ossie·Furiosa·Halo·WebLLM ALREADY_COVERED |
 | 2026-07-27 | INGEST | raw/ | 2 | litert-lm-audio-embeddings-state-metadata, openclaw-route-bindings-grep-naming-harness |
 | 2026-07-27 | SYNTHESIZE | wiki/ | 3 | 스마트폰 LiteRT audio/state·MAS OpenClaw route bindings/naming/harness·OpenClaw-HyperAgent 증분 |
