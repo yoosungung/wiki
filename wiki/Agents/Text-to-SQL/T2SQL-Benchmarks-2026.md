@@ -3,8 +3,8 @@ title: "T2SQL 벤치마크 2026: 엔터프라이즈 데이터 분석 성능 평�
 tags: ["T2SQL", "Benchmark", "Spider-2.0", "BIRD", "Evaluations"]
 type: "wiki"
 status: "published"
-last_updated: "2026-05-08"
-updated: "2026-05-08"
+last_updated: "2026-07-29"
+updated: "2026-07-29"
 related_raw: ["[[raw/2026-04-28-Spider-2-0-SOTA-Updates.md]]", "[[raw/2026-04-29-Spider2-OSI-Updates.md]]", "[[raw/2026-05-08-daily-research-data.md]]"]
 ---
 
@@ -51,6 +51,15 @@ BIRD-Critic 환경에서 최적의 성능을 내도록 설계되었으며, 복�
 - **Execution Correctness (EX)**: 쿼리의 문법적 정확도보다 실제 실행 결과값의 일치 여부를 핵심 지표로 삼습니다.
 - **R-VES (Relative Value Estimation Score)**: 쿼리의 실행 효율성(Execution efficiency)까지 고려하여 점수를 산출합니다.
 
+## 🧪 nl2sql 제품 품질 게이트 (Spider2-Lite local*, 2026-07-29)
+
+제품 레포 `spider2-eval`의 채점 정본도 동일하게 **EX/exec_result**(예측 SQL 실행 결과 ↔ gold CSV)이며 SQL 문자열 일치가 아니다.
+
+- 스모크 instance: `local008`(Baseball), `local022`(IPL) — `QUALITY_SMOKE_INSTANCE_IDS`
+- Preflight: `spider2-load-pg` → `spider2-opik-upload-exec` → `spider2-opik check` → `gold-sql` + `--instance-ids`
+- `--task agent`는 AC만 고정(구현 후속). UI Playwright와 축 분리.
+- 상세 canonical: [[wiki/Agents/Text-to-SQL/Spider2-Quality-Gate-nl2sql.md]]
+
 ## 💡 AX1센터 R&D 시사점
 - **평가 체계 전환**: 단순 Accuracy를 넘어 **Execution Correctness** 중심의 평가 체계(BIRD-Verified 기반)로의 완전 전환이 필요합니다.
 - **데이터 정제 루프**: 인간 피드백 대신 실행 결과 기반의 자율 검증(RLVR) 루프 구축이 필수적입니다.
@@ -59,4 +68,5 @@ BIRD-Critic 환경에서 최적의 성능을 내도록 설계되었으며, 복�
 ## 🔗 관련 문서
 - [[wiki/Agents/Text-to-SQL/ThoughtSpot-Spotter-Semantics]]
 - [[wiki/Agents/Text-to-SQL/Agentic-Semantic-Layer]]
+- [[wiki/Agents/Text-to-SQL/Spider2-Quality-Gate-nl2sql.md]]
 - [[wiki/Agents/Frameworks/Evaluations/000_Evaluations-MOC]]

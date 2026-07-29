@@ -20,6 +20,7 @@
 - [[wiki/Agents/Text-to-SQL/Snowflake-AI-Stack-Analysis.md]]
 - [[wiki/Agents/Text-to-SQL/Snowflake-Arctic-Text2SQL-R1.md]]
 - [[wiki/Agents/Text-to-SQL/T2SQL-Benchmarks-2026.md]]
+- [[wiki/Agents/Text-to-SQL/Spider2-Quality-Gate-nl2sql.md]]
 - [[wiki/Agents/Text-to-SQL/Text-to-SQL-Reasoning-2026.md]]
 - [[wiki/Agents/Text-to-SQL/ThoughtSpot-Spotter-Semantics.md]]
 - [[wiki/Agents/Text-to-SQL/WrenAI-Generative-BI-Agent.md]]

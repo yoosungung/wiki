@@ -1,7 +1,7 @@
 ---
 title: 에이전트 네이티브 소프트웨어 팩토리(Agentic Software Factory) 아키텍처 및 자동화 방안
-last_updated: "2026-07-27"
-updated: "2026-07-27"
+last_updated: "2026-07-29"
+updated: "2026-07-29"
 related_raw: ["[[2026-07-27-agentic_software_factory_and_automation.md]]"]
 tags: [Engineering, AI-Native-Engineering, Software-Factory, Developer-Agent, SDLC-Automation]
 ---
@@ -65,6 +65,9 @@ AI 스크럼 마스터 에이전트는 기획 실행 상태의 정합성을 감�
 매번 실행할 때마다 전체 DOM을 고비용 외부 API 모델에 송신하는 방식은 파이프라인 지연과 비용 파산을 초래합니다.
 - **초반 탐색/시나리오 정립 단계**: 고비용 모델을 배치해 뼈대 플레이라이트 코드를 도출 및 고정.
 - **드리프트/회귀 테스트 단계**: 단순 컴파일 검증을 수행하다가, 검증 실패 및 화면 변경 드리프트가 포착되는 시점에만 에이전트 지능을 부분 가동(하이브리드 아키텍처).
+
+### nl2sql Playwright UI 스모크 (2026-07-29)
+제품 레포는 `.factory/quality.yaml` `e2e:` → `frontend/e2e/*.spec.ts`, `npm run test:e2e`(vite webServer, backend/LLM 불필요). `page.route`로 `/api/metadata/fs` mock. Pod IPv6 CDN 실패 시 apt chromium + `PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1`. 상세: [[wiki/Engineering/AI-Native-Engineering/nl2sql-Playwright-E2E-Smoke.md]]. Spider2 EX 게이트와 축 분리: [[wiki/Agents/Text-to-SQL/Spider2-Quality-Gate-nl2sql.md]].
 
 ---
 

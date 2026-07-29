@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-07-29 (org-wiki layout: INDEX.md + inbox/{agent}/) | Root: wiki/
+[META] Updated: 2026-07-29 (inbox drain Spider2/Playwright + research LiteRT/vllm-rbln/Supermemory/OpenClaw/Ossie) | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -49,9 +49,9 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
-- wiki/Agents/ (235 files)
+- wiki/Agents/ (236 files)
     - Multi-Agent-and-Orchestration: 18 files
-    - Text-to-SQL: 26 files
+    - Text-to-SQL: 27 files
     - Evaluations: 9 files
     - Memory-and-Cognition: 23 files
     - Robotics-and-VLA: 21 files
@@ -68,12 +68,12 @@
     - Reasoning-and-Cognition: 34 files
     - RL: 40 files
 - wiki/RAG/ (66 files)
-- wiki/Engineering/ (99 files)
+- wiki/Engineering/ (100 files)
     - Data-and-Security: 13 files
     - Prompt-Engineering: 12 files
     - Infrastructure-and-DevOps: 28 files
     - Development-Environment: 17 files
-    - AI-Native-Engineering: 27 files
+    - AI-Native-Engineering: 28 files
 - wiki/Business/ (39 files)
     - Recommendation Systems: 7 files
     - Trends: 9 files

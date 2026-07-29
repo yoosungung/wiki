@@ -1,6 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-07-29 | INBOX_DRAIN | inbox/{nl2sql,pm,qa,ta} | 5 | Spider2 quality gate·Playwright → wiki canonical + git rm |
+| 2026-07-29 | RESEARCH | Web/GitHub | 8 | LiteRT OpenCL/NPU UAF, vllm-rbln 0.11.2a2, Supermemory CB proactivity/Nova, OpenClaw hooks/MCP proto, Ossie Java21; Furiosa·WebLLM/Halo·On-Device Trends ALREADY_COVERED |
+| 2026-07-29 | INGEST | raw/ | 5 | litert-lm-opencl-gpu-input-npu-uaf, vllm-rbln-v0.11.2a2, supermemory-company-brain-proactivity-nova, openclaw-hooks-mcp-proto-multi-account, apache-ossie-java21 |
+| 2026-07-29 | SYNTHESIZE | wiki/ | 11 | Spider2-Quality-Gate, Playwright E2E, T2SQL-Benchmarks, LiteRT/스마트폰, 리벨리온 동향·EXAONE, Supermemory, MAS OpenClaw, HyperAgent, AV-SQL Ossie, Agentic-Software-Factory |
+| 2026-07-29 | LINT | Root / wiki | ALL | 데일리 생성, D-2(2026-07-27) 삭제, raw/ 합성 후 삭제, 연구_주제_관리·INDEX META |
 | 2026-07-29 | LAYOUT | Root / inbox / Quartz | ALL | org-wiki: index.md→INDEX.md, inbox/{pm,km,ta,qa,aa,sw-factory,nl2sql}/, Quartz·deploy에서 inbox·raw 제외, _archived 제거 (ticket #30) |
 | 2026-07-28 | INBOX_DRAIN | inbox/seewin | 1 | people-ssot-curation → `_archived/seewin` (정치 위키 병합 금지·tech vault 비적합, promote 생략) |
 | 2026-07-28 | RESEARCH | Web/GitHub | 7 | LiteRT EmbeddingEngine/AudioSource, vllm-rbln 0.11.2a0/a1, Supermemory CB CTA/custom MCP, OpenClaw watched-session/sandbox, Ossie AI disclosure/Polaris JDK17; Furiosa NPUaaS·WebLLM/Halo ALREADY_COVERED |

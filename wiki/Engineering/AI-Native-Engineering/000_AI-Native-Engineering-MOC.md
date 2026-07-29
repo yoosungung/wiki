@@ -24,4 +24,5 @@
 - [[wiki/Engineering/AI-Native-Engineering/Devin-Enterprise-OpenClaw-Cursor3-Agent-Orchestration.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Devin-OpenHands-Plandex-Update-2026-04-09.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Graphify-Codebase-Knowledge-Graph.md]]
+- [[wiki/Engineering/AI-Native-Engineering/nl2sql-Playwright-E2E-Smoke.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Sim_노코드_AI_에이전트_워크플로우_플랫폼.md]]

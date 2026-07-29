@@ -3,9 +3,9 @@ title: "리벨리온 ATOM-Max NPU 및 vLLM-RBLN 최신 동향 (2026)"
 tags: ["Models", "Optimization", "Serving", "NPU", "Rebellions", "vLLM-RBLN", "EXAONE"]
 type: "wiki"
 status: "published"
-last_updated: "2026-07-28"
-updated: "2026-07-28"
-related_raw: ["[[2026-07-28-vllm-rbln-v0.11.2a0-a1.md]]", "[[2026-07-24-vllm-rbln-v0.11.2.dev0.md]]", "[[2026-06-01-Rebellions-NPU-Update.md]]"]
+last_updated: "2026-07-29"
+updated: "2026-07-29"
+related_raw: ["[[2026-07-29-vllm-rbln-v0.11.2a2.md]]", "[[2026-07-28-vllm-rbln-v0.11.2a0-a1.md]]", "[[2026-07-24-vllm-rbln-v0.11.2.dev0.md]]", "[[2026-06-01-Rebellions-NPU-Update.md]]"]
 ---
 
 # 리벨리온 ATOM-Max NPU 및 vLLM-RBLN 최신 동향 (2026)
@@ -46,6 +46,12 @@ vLLM-RBLN 플러그인은 2026년 상반기 업데이트를 통해 vLLM 에코�
 - DeepSeek MTP를 device-tensor 경로에서 활성화 (#821)
 - pooling/encoder compile config에서 `memory_budget` 제거 (#825)
 - 설치: `uv pip install "vllm-rbln==0.11.2a1"` — 상세 [[wiki/Models/Optimization-and-Serving/리벨리온-ATOM-Max-기반-EXAONE-4.5-최적화-가이드.md]]
+
+### v0.11.2a2 (2026-07-29)
+- grammar bitmask를 **CPU**에서 적용 (#844) — structured-output/constrained decoding
+- optimum: non-fp32 dtype 허용 (#800); `optimum-rbln==0.11.1a5` (#848); rebel-compiler bump (#847)
+- **Qwen3.5**를 optimum model path에 추가 (#795)
+- 설치: `uv pip install "vllm-rbln==0.11.2a2"` — 상세 [[wiki/Models/Optimization-and-Serving/리벨리온-ATOM-Max-기반-EXAONE-4.5-최적화-가이드.md]]
 
 ## 3. 엔터프라이즈 및 클라우드 생태계
 - **Red Hat OpenShift AI 지원**: 2026년 5월부터 Red Hat OpenShift AI에서 공식 인증된 컨테이너 이미지와 `vLLM RBLN ServingRuntime`을 제공하여 기업용 AI 인프라 배포가 용이해졌습니다.

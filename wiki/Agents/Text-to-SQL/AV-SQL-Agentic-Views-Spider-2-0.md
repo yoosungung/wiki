@@ -1,11 +1,11 @@
 ---
 title: "AV-SQL: Agentic Views를 통한 Text-to-SQL 혁신 및 시맨틱 레이어 통합"
-related_raw: ["[[2026-07-28-apache-ossie-ai-disclosures-polaris-java17.md]]", "[[2026-07-24-apache-ossie-schema-ontology-flatten.md]]", "[[2026-07-23-apache-ossie-plugin-invocation.md]]", "[[2026-07-22-apache-ossie-wisdomai-converter-plugins.md]]", "[[2026-07-20-apache-ossie-databricks-snowflake-merged.md]]", "[[raw/2026-07-14-AV-SQL-논문-및-구현.md]]", "[[wiki/Agents/Text-to-SQL/2026-04-20-T2SQL-Trends-Update.md]]", "[[2026-07-16-av-sql-osi-mcp-integration-research.md]]", "[[2026-07-16-av_sql_semantic_layer_text_to_sql_research.md]]", "[[2026-07-17-apache-ossie-cli-scaffold.md]]", "[[2026-07-18-apache-ossie-duckdb-semantido-converters.md]]", "[[2026-07-19-apache-ossie-snowflake-quoted-identifiers.md]]"]
+related_raw: ["[[2026-07-29-apache-ossie-java21.md]]", "[[2026-07-28-apache-ossie-ai-disclosures-polaris-java17.md]]", "[[2026-07-24-apache-ossie-schema-ontology-flatten.md]]", "[[2026-07-23-apache-ossie-plugin-invocation.md]]", "[[2026-07-22-apache-ossie-wisdomai-converter-plugins.md]]", "[[2026-07-20-apache-ossie-databricks-snowflake-merged.md]]", "[[raw/2026-07-14-AV-SQL-논문-및-구현.md]]", "[[wiki/Agents/Text-to-SQL/2026-04-20-T2SQL-Trends-Update.md]]", "[[2026-07-16-av-sql-osi-mcp-integration-research.md]]", "[[2026-07-16-av_sql_semantic_layer_text_to_sql_research.md]]", "[[2026-07-17-apache-ossie-cli-scaffold.md]]", "[[2026-07-18-apache-ossie-duckdb-semantido-converters.md]]", "[[2026-07-19-apache-ossie-snowflake-quoted-identifiers.md]]"]
 tags: ["wiki", "Agents", "Text-to-SQL", "OSI", "MCP", "Snowflake", "slm_for_text-to-sql_and_schema_linking"]
 type: "wiki"
 status: "published"
-last_updated: "2026-07-28"
-updated: "2026-07-28"
+last_updated: "2026-07-29"
+updated: "2026-07-29"
 ---
 
 # AV-SQL: Agentic Views를 통한 Text-to-SQL 혁신
@@ -164,6 +164,13 @@ ontology:
 2. **[#278](https://github.com/apache/ossie/pull/278)**: Polaris converter Java **11 → 17**. Omni pytest/CI path 정리(#263/#276).
 
 **AV-SQL 적용**: `ai_context` 스키마 자체는 불변. 컨버터/스포크 PR은 AI disclosure 정책 준수. Polaris 카탈로그 연동 빌드는 JDK 17+ 필요.
+
+### Polaris / converter Java 21 — [#283](https://github.com/apache/ossie/pull/283) (2026-07-29)
+
+- **[#283](https://github.com/apache/ossie/pull/283)**: Java **17 → 21** 상향 (전일 #278의 11→17에 이은 후속).
+- Docs typo만 (#284).
+
+**AV-SQL 적용**: Polaris converter CI/로컬 빌드는 **JDK 21**을 기준으로 맞춘다. 시맨틱 YAML·`ai_context` 계약은 불변.
 
 
 **AV-SQL 적용**: View Generator가 Ossie YAML을 생성·검증할 때 문서 예시를 그대로 복사하면 스키마 실패하던 함정이 제거된다. 온톨로지 스포크를 `ai_context`에 주입할 때는 flatten 문법으로 맞춘 뒤 `validate.py`를 CI 게이트로 둔다. 상세는 [[wiki/Engineering/Data-and-Security/OSI-Open-Semantic-Interchange.md]].
