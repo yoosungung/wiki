@@ -73,7 +73,7 @@ def run():
             if sd_total > 0:
                 content += f"    - {sd}: {sd_total} files\n"
 
-    with open(os.path.join(VAULT_ROOT, "index.md"), 'w', encoding='utf-8') as f:
+    with open(os.path.join(VAULT_ROOT, "INDEX.md"), 'w', encoding='utf-8') as f:
         f.write(content)
 
 if __name__ == "__main__":

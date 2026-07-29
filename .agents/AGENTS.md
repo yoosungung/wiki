@@ -25,6 +25,6 @@
 | km-ingestor | `.agents/skills/km-ingestor/SKILL.md` | 외부 정보를 `raw/`에 저장·메타데이터 표준화 |
 | km-synthesizer | `.agents/skills/km-synthesizer/SKILL.md` | `raw/` → `wiki/` 지식 합성 |
 | km-researcher | `.agents/skills/km-researcher/SKILL.md` | `연구_주제_관리.md` 기반 자동 탐색 |
-| km-linter | `.agents/skills/km-linter/SKILL.md` | 구조 무결성 점검, `index.md`/`log.md` 갱신 |
+| km-linter | `.agents/skills/km-linter/SKILL.md` | 구조 무결성 점검, `INDEX.md`/`log.md` 갱신 |
 
 상세 운영 원칙·Obsidian CLI 가이드는 루트 [`AGENTS.md`](../AGENTS.md)를 참조하세요.

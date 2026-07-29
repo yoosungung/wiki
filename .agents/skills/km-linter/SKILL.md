@@ -1,6 +1,6 @@
 ---
 name: km-linter
-description: 지식 베이스의 구조적 무결성을 점검하고 `index.md`, `log.md`를 Agent-Centric v1 포맷으로 최신화합니다.
+description: 지식 베이스의 구조적 무결성을 점검하고 `INDEX.md`, `log.md`를 Agent-Centric v1 포맷으로 최신화합니다.
 ---
 
 # KM_LINTER_AGENT_v1
@@ -16,8 +16,8 @@ description: 지식 베이스의 구조적 무결성을 점검하고 `index.md`,
 - **PATH_SYNC**: 파일 이동으로 인해 발생한 잘못된 경로 링크를 `fix_wiki_links.py` 로직을 사용하여 현재 실제 경로로 자동 수정함.
 - **DATE_SYNC**: GitHub Pages 빌드 시 날짜 왜곡(빌드 날짜로 초기화되는 현상)을 방지하기 위해, frontmatter에 `last_updated` 필드 값을 기반으로 한 `updated` 필드가 올바르게 입력되어 있는지 점검하고 일치시킴.
 
-### 2. INDEX_REFRESH (index.md) - 필수 수행
-- `index.md`를 **KM_INDEX_AGENT_v1** 포맷으로 **무조건 최신화**함.
+### 2. INDEX_REFRESH (INDEX.md) - 필수 수행
+- `INDEX.md`를 **KM_INDEX_AGENT_v1** 포맷으로 **무조건 최신화**함.
 - `📂 CATEGORIES_MOC`: 모든 핵심 MOC 파일 링크 최신 상태 유지.
 - `🌲 DIRECTORY_MAPPING`: `wiki/` 내의 신규 폴더 및 구조적 변화를 전수 반영.
 - `📌 KEY_FILE_LIST`: 카테고리별 파일 개수 및 상태 요약 데이터 갱신.

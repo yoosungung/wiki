@@ -1,6 +1,7 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-07-29 | LAYOUT | Root / inbox / Quartz | ALL | org-wiki: index.md→INDEX.md, inbox/{pm,km,ta,qa,aa,sw-factory,nl2sql}/, Quartz·deploy에서 inbox·raw 제외, _archived 제거 (ticket #30) |
 | 2026-07-28 | INBOX_DRAIN | inbox/seewin | 1 | people-ssot-curation → `_archived/seewin` (정치 위키 병합 금지·tech vault 비적합, promote 생략) |
 | 2026-07-28 | RESEARCH | Web/GitHub | 7 | LiteRT EmbeddingEngine/AudioSource, vllm-rbln 0.11.2a0/a1, Supermemory CB CTA/custom MCP, OpenClaw watched-session/sandbox, Ossie AI disclosure/Polaris JDK17; Furiosa NPUaaS·WebLLM/Halo ALREADY_COVERED |
 | 2026-07-28 | INGEST | raw/ | 5 | litert-lm-embedding-engine-audio-file-source, vllm-rbln-v0.11.2a0-a1, supermemory-company-brain-custom-mcp, openclaw-watched-session-sandbox-network, apache-ossie-ai-disclosures-polaris-java17 |

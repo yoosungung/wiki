@@ -5,7 +5,7 @@
 ## 프로젝트 개요
 
 - **목적**: 다양한 주제에 관한 기술 문서, 연구 자료, 아이디어 및 지식의 체계적 관리와 축적.
-- **구조**: `raw/`(원본), `wiki/`(합성/요약), `assets/`(첨부파일) 3계층 구조를 기본으로 합니다.
+- **구조**: `wiki/`(canonical 본문), `INDEX.md`(카탈로그), `inbox/{agent}/`(기여 원료), `raw/`(선택 원천), `assets/`(첨부). Quartz는 `wiki/` 본문을 게시하며 `inbox/`·`raw/`는 제외한다.
 
 ## 개발 및 사용 원칙
 
@@ -19,7 +19,7 @@
 이 저장소는 단순한 메모 보관함이 아닌, AI 에이전트와 협력하여 구축하는 **지능형 위키**를 지향합니다.
 
 ### 1. 3계층 아키텍처
-- **원천 소스 (Raw Sources)**: 기사, 논문, 데이터 등 불변의 진실의 원천 (`raw/` 폴더).
+- **원천 소스 (Raw Sources)**: 기사, 논문, 데이터 등 불변의 진실의 원천 (`raw/` 폴더). 에이전트 기여 원료는 `inbox/{agent}/` (promote 후 `git rm`, `inbox/_archived/` 없음).
 - **위키 (The Wiki)**: 에이전트가 작성/수정하는 마크다운 파일군 (`wiki/` 폴더).
 - **스키마 (The Schema)**: 위키 구조와 운영 규칙을 정의한 문서 (현재 이 파일).
 
@@ -30,7 +30,7 @@
 - **모순 관리**: 새로운 정보가 기존 내용과 충돌할 경우 이를 기록하고 합성을 시도합니다.
 
 ### 3. 인덱싱 및 로깅 (관리 자동화)
-- **`index.md`**: 위키의 모든 항목을 카테고리별 분류한 콘텐츠 카탈로그.
+- **`INDEX.md`**: 위키의 모든 항목을 카테고리별 분류한 콘텐츠 카탈로그 (org-wiki 정본).
 - **`log.md`**: 수집(Ingest), 쿼리, 린트 작업의 연대순 기록.
 
 ### 4. 정기적 상태 점검 (Lint)
@@ -45,6 +45,7 @@
 | **`log.md`** | 무기한 누적 (append-only) | **자동 삭제 없음**. 에이전트는 행만 추가하며, 기간으로 prune하지 않음. |
 | **데일리 노트** (`YYYY-MM-DD.md`) | D-0(오늘)·D-1(어제)만 유지 | D-2 이전 파일은 린트/리서치 CLEANUP 시 삭제 |
 | **`raw/`** | 합성 완료까지 | 관련 wiki 노트에 claim 전부 매핑·로그 기록 후 원본 삭제 (미매핑 시 유지) |
+| **`inbox/{agent}/`** | promote까지 | canonical `wiki/` 반영 후 **`git rm`** (아카이브 폴더 없음) |
 | **`wiki/`** | 영구 (지식 본체) | 일상적 자동 삭제 없음 |
 
 ※ Git 히스토리에는 과거 버전이 남을 수 있으나, 공개 Quartz 사이트는 현재 워킹트리의 `log.md` 전체를 그대로 게시합니다.
@@ -60,7 +61,7 @@
 | km-ingestor | `.agents/skills/km-ingestor/SKILL.md` | 외부 정보를 `raw/`에 저장·메타데이터 표준화 |
 | km-synthesizer | `.agents/skills/km-synthesizer/SKILL.md` | `raw/` → `wiki/` 지식 합성 |
 | km-researcher | `.agents/skills/km-researcher/SKILL.md` | `연구_주제_관리.md` 기반 자동 탐색 |
-| km-linter | `.agents/skills/km-linter/SKILL.md` | 구조 무결성 점검, `index.md`/`log.md` 갱신 |
+| km-linter | `.agents/skills/km-linter/SKILL.md` | 구조 무결성 점검, `INDEX.md`/`log.md` 갱신 |
 
 ### Cursor 도구 매핑
 - 웹 검색: `WebSearch`

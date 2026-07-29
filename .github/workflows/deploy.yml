@@ -50,9 +50,14 @@ jobs:
           # Empty default Quartz content
           rm -rf quartz-build/content/*
           
-          # Copy user's markdown files to quartz content directory
-          # Exclude git, github, and quartz-build folder itself
-          rsync -av --exclude='.git' --exclude='.github' --exclude='quartz-build' ./ quartz-build/content/
+          # Copy vault into Quartz content; do not publish inbox/ or raw/ (wiki body only)
+          rsync -av \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='quartz-build' \
+            --exclude='inbox' \
+            --exclude='raw' \
+            ./ quartz-build/content/
 
       - name: Configure Quartz
         run: |

@@ -8,7 +8,7 @@ from vault_paths import find_vault_root
 
 VAULT_ROOT = find_vault_root(__file__)
 WIKI_DIR = os.path.join(VAULT_ROOT, "wiki")
-INDEX_FILE = os.path.join(VAULT_ROOT, "index.md")
+INDEX_FILE = os.path.join(VAULT_ROOT, "INDEX.md")
 
 def normalize(s):
     return unicodedata.normalize('NFC', s)
