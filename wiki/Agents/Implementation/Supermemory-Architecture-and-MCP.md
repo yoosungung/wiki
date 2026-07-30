@@ -3,8 +3,8 @@ title: "Supermemory: 에이전트 네이티브 메모리 시스템 및 MCP 아�
 tags: ["Agents", "Implementation", "Memory", "Supermemory", "MCP", "SMFS", "Cloudflare"]
 type: "wiki"
 status: "published"
-last_updated: "2026-07-29"
-updated: "2026-07-29"
+last_updated: "2026-07-30"
+updated: "2026-07-30"
 related_raw: ["[[2026-07-29-supermemory-company-brain-proactivity-nova.md]]", "[[2026-07-28-supermemory-company-brain-custom-mcp.md]]", "[[2026-07-26-supermemory-chatgpt-mcp-setup.md]]", "[[2026-07-25-supermemory-cursor-agents-company-brain.md]]", "[[2026-07-24-supermemory-mcp-scope-opencode.md]]", "[[2026-07-23-supermemory-agents-memory-workspace.md]]", "[[2026-07-22-supermemory-company-brain-open-signup.md]]", "[[2026-07-21-supermemory-mcp-tool-safety-annotations.md]]", "[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]", "[[2026-07-12-supermemory-local-6767-cli-mcp-context.md]]", "[[raw/2026-07-13-sadik-mohammad-rag-systems-limitations.md]]", "[[2026-07-13-supermemory-openclaw-claude-plugins.md]]", "[[2026-07-16-supermemory_ai_memory_layer_analysis.md]]", "[[2026-07-18-supermemory-server-v0.0.5-pluggable-embeddings.md]]", "[[2026-07-19-supermemory-server-v0.0.6-windows.md]]"]
 ---
 
@@ -294,6 +294,21 @@ KM/에이전트 적용: Windows 개발 머신에서도 Linux/macOS와 같은 plu
 ```
 
 **적용 팁**: KM 야간 에이전트가 CB를 쓸 때 proactivity를 off/manual로 두고 배치 창에서만 켜는 정책을 문서화한다. Nova 프롬프트는 프로젝트 스코프(`x-sm-project`)와 충돌하지 않게 짧게 유지한다.
+
+### SpaceState DO · /configure routes · proactivity picker (2026-07-30)
+
+1. **SpaceState Durable Object** ([#1376](https://github.com/supermemoryai/supermemory/pull/1376)): Cloudflare Workers에 `SpaceState` DO 등록 — 스페이스(프로젝트) 단위 상태 sticky 세션.
+2. **Configure 실라우트** ([#1378](https://github.com/supermemoryai/supermemory/pull/1378)): Configure 섹션을 `/configure` 하위 실라우트로 분리 — 딥링크·에이전트 내비게이션 가능.
+3. **Proactivity exceptions 채널 검색** ([#1377](https://github.com/supermemoryai/supermemory/pull/1377)): proactivity 예외 피커에서 채널 검색.
+
+```text
+# CB / MCP 운영
+1. SpaceState DO 배포 후 스페이스 전환·재연결이 sticky 한지 확인
+2. /configure/* 딥링크로 설정 화면 직접 진입 (에이전트 UI 자동화)
+3. Proactivity exceptions에 채널 검색으로 제외 목록 유지
+```
+
+**적용 팁**: KM 에이전트가 Company Brain 설정을 자동화할 때 `/configure` 경로를 고정하고, SpaceState sticky 실패 시 DO 재등록(#1376)을 점검한다.
 
 ---
 

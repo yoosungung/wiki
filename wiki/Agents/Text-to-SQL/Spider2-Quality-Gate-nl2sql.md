@@ -3,9 +3,9 @@ id: spider2-quality-gate-nl2sql
 title: "Spider2-Lite → nl2sql 품질 게이트 (스모크·preflight)"
 status: canonical
 owner: km
-updated: "2026-07-29"
-last_updated: "2026-07-29"
-review_after: "2026-08-29"
+updated: "2026-07-30"
+last_updated: "2026-07-30"
+review_after: "2026-08-30"
 sources:
   - ticket:32
   - ticket:37
@@ -82,11 +82,32 @@ OPIK_URL_OVERRIDE=http://opik-frontend.opik.svc.cluster.local:5173/api
 
 NodePort / `*.k8s-test`는 hosts 주입 없이는 쓰지 말 것. 상세는 k8s-test README Opik 섹션.
 
+### 5.1 Verified preflight (2026-07-30, #37 / ticket #32)
+
+- Dataset `spider2-lite-local-exec`가 삭제된 Opik project id에 orphan되면 → 프로젝트 `nl2sql` 재생성 후 `spider2-opik-upload-exec`(135 items).
+- 검증: `spider2-opik check` OK; `gold-sql` smoke `local008,local022` → `spider2_exec_match` avg **1.0** / pass_rate **1.0**.
+
+```bash
+# in-cluster (sw-factory runner)
+export PGHOST=postgresql.postgres.svc.cluster.local
+export PGPORT=5432
+export OPIK_URL_OVERRIDE=http://opik-frontend.opik.svc.cluster.local:5173/api
+spider2-opik check
+# gold-sql --instance-ids local008,local022  → pass_rate 1.0
+```
+
 ## 6. 최소 완료선 (품질 테스트 "준비")
 
 1. 스모크 instance set 문서화 (본 §3)
-2. preflight(`check` / `gold-sql`) 재현 (본 §4)
+2. preflight(`check` / `gold-sql`) 재현 (본 §4) — **2026-07-30 실측 완료**
 3. agent 배선 AC (구현 제외)
+
+## 7. PR#17 머지 게이트 (ticket #32, 2026-07-30)
+
+- Option A 문서 범위(#37 preflight·gold-sql smoke)는 **수용**.
+- [nl2sql PR#17](https://github.com/yoosungung/nl2sql/pull/17) 머지 조건: GitHub CI **`backend` + `mcp` 모두 green**.
+- mcp Clippy green만으로는 부족; **Test step** 실패/미완료 시 docs-only 선머지 불가.
+- 이전 mcp failure run `30438020133`: Test exit 101 → nl2sql이 로그 기반 수정 후 green 보고·@pm 재멘션.
 
 ## 🔗 관련 문서
 

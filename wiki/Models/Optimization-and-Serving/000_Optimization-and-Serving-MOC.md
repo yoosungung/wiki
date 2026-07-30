@@ -43,3 +43,4 @@
 - [[wiki/Models/Optimization-and-Serving/스마트폰-환경의-LLM-서빙-기술-2026.md]]
 - [[wiki/Models/Optimization-and-Serving/온디바이스-AI-및-AI-PC-기술-트렌드-2026.md]]
 - [[wiki/Models/Optimization-and-Serving/프리오사-AI-RNGD-NPU-최적화-및-서빙-가이드.md]]
+- [[wiki/Models/Optimization-and-Serving/SGLang-gemma4-llm-serving-cluster-ops.md]]

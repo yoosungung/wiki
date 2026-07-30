@@ -26,3 +26,4 @@
 - [[wiki/Engineering/Infrastructure-and-DevOps/Web-Inference-Prerequisites.md]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/airflow.md]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/k8s에서 letsencrypt 인증서.md]]
+- [[wiki/Engineering/Infrastructure-and-DevOps/path-graph-Argo-ImagePullBackOff-runbook.md]]

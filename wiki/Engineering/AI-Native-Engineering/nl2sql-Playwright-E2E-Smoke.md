@@ -3,11 +3,12 @@ id: nl2sql-playwright-e2e-smoke
 title: "nl2sql frontend Playwright UI 스모크"
 status: canonical
 owner: km
-updated: "2026-07-29"
-last_updated: "2026-07-29"
-review_after: "2026-08-29"
+updated: "2026-07-30"
+last_updated: "2026-07-30"
+review_after: "2026-08-30"
 sources:
   - ticket:31
+  - https://github.com/yoosungung/nl2sql/pull/18
   - https://playwright.dev/docs/best-practices
 tags: ["Engineering", "AI-Native", "Playwright", "nl2sql", "E2E", "Quality"]
 type: "wiki"
@@ -41,6 +42,13 @@ Pod에서 Playwright 브라우저 CDN이 IPv6 `ENETUNREACH`일 때:
 PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
 PLAYWRIGHT_CHROMIUM_PATH=/usr/bin/chromium
 ```
+
+## PR#18 머지 (ticket #31, 2026-07-30)
+
+- Option A (Playwright UI smoke + `quality.yaml`) merged: [`1da8b2c`](https://github.com/yoosungung/nl2sql/commit/1da8b2c3d9865de03287079ef41e63b8bbd2c5d6) / [PR#18](https://github.com/yoosungung/nl2sql/pull/18).
+- PR review/merge는 **pm-owned**; Waiting for Approval → Eric은 일상 PR closeout 오라우팅.
+- CI `backend`(Ruff) / `mcp`(Clippy)는 PR에서 red였으나 **main 선재**(미터치 경로 Ruff import-sort 36건). frontend-only PR이 도입한 회귀 아님. merge 시점 branch-protection required-checks 관찰 없음.
+- Follow-up: main CI green(ruff --fix / clippy)을 강제하려면 **별도 티켓**.
 
 ## 🔗 관련 문서
 

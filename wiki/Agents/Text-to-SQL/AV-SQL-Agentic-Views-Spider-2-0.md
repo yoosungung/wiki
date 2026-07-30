@@ -4,8 +4,8 @@ related_raw: ["[[2026-07-29-apache-ossie-java21.md]]", "[[2026-07-28-apache-ossi
 tags: ["wiki", "Agents", "Text-to-SQL", "OSI", "MCP", "Snowflake", "slm_for_text-to-sql_and_schema_linking"]
 type: "wiki"
 status: "published"
-last_updated: "2026-07-29"
-updated: "2026-07-29"
+last_updated: "2026-07-30"
+updated: "2026-07-30"
 ---
 
 # AV-SQL: Agentic Views를 통한 Text-to-SQL 혁신
@@ -171,6 +171,19 @@ ontology:
 - Docs typo만 (#284).
 
 **AV-SQL 적용**: Polaris converter CI/로컬 빌드는 **JDK 21**을 기준으로 맞춘다. 시맨틱 YAML·`ai_context` 계약은 불변.
+
+### NVIDIA GSF bidirectional converter — [#247](https://github.com/apache/ossie/pull/247) (2026-07-30)
+
+- **[#247](https://github.com/apache/ossie/pull/247)** (`9ffc3be`): hub-and-spoke Ossie converters에 **NVIDIA GSF** 양방향 시맨틱 모델 변환기 추가.
+- AV-SQL/`ai_context` 에이전트가 GSF 카탈로그·메트릭을 Ossie YAML로 들여오거나 내보낼 때 스포크 경로로 사용.
+
+```bash
+# Ossie hub ←→ NVIDIA GSF (개념)
+# converter CLI/모듈: NVIDIA_GSF bidirectional (#247)
+# 로컬: JDK 21 + ossie converter 테스트 스위트
+```
+
+**적용 팁**: NL2SQL 시맨틱 레이어를 GSF 소스와 동기화할 때 point-to-point 변환 대신 Ossie hub를 경유한다.
 
 
 **AV-SQL 적용**: View Generator가 Ossie YAML을 생성·검증할 때 문서 예시를 그대로 복사하면 스키마 실패하던 함정이 제거된다. 온톨로지 스포크를 `ai_context`에 주입할 때는 flatten 문법으로 맞춘 뒤 `validate.py`를 CI 게이트로 둔다. 상세는 [[wiki/Engineering/Data-and-Security/OSI-Open-Semantic-Interchange.md]].

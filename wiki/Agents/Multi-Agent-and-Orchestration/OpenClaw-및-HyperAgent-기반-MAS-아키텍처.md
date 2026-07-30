@@ -3,9 +3,9 @@ title: "OpenClaw 및 HyperAgent 기반 MAS 아키텍처 (2026)"
 tags: ["Agents", "MAS", "OpenClaw", "HyperAgent", "Orchestration", "TaskFlow"]
 type: "wiki"
 status: "published"
-last_updated: "2026-07-29"
-updated: "2026-07-29"
-related_raw: ["[[2026-07-29-openclaw-hooks-mcp-proto-multi-account.md]]", "[[2026-07-28-openclaw-watched-session-sandbox-network.md]]", "[[2026-07-27-openclaw-route-bindings-grep-naming-harness.md]]", "[[2026-07-26-openclaw-session-urls-oauth-resume.md]]", "[[2026-06-12-Autonomous-Agents-OpenClaw-HyperAgent-Update.md]]", "[[2026-06-15-Autonomous-Agents-OpenClaw-HyperAgent-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]"]
+last_updated: "2026-07-30"
+updated: "2026-07-30"
+related_raw: ["[[2026-07-30-openclaw-session-memory-flush.md]]", "[[2026-07-29-openclaw-hooks-mcp-proto-multi-account.md]]", "[[2026-07-28-openclaw-watched-session-sandbox-network.md]]", "[[2026-07-27-openclaw-route-bindings-grep-naming-harness.md]]", "[[2026-07-26-openclaw-session-urls-oauth-resume.md]]", "[[2026-06-12-Autonomous-Agents-OpenClaw-HyperAgent-Update.md]]", "[[2026-06-15-Autonomous-Agents-OpenClaw-HyperAgent-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]"]
 ---
 
 # 🤖 OpenClaw 및 HyperAgent 기반 MAS 아키텍처 (2026)
@@ -15,6 +15,7 @@ related_raw: ["[[2026-07-29-openclaw-hooks-mcp-proto-multi-account.md]]", "[[202
 ## 1. OpenClaw AI Agent Framework
 OpenClaw는 LLM을 로컬 하드웨어에서 동작하는 "자율 운영자(Autonomous Operator)"로 변환하는 선도적인 오픈소스 오케스트레이션 레이어입니다.
 
+- **Session memory flush / gateway list (2026-07-30)**: 부모 recovery와 memory flush 생명주기 분리(#116198), retained subagent history 하에서도 `sessions_list` 응답성(#116533), startup stall·WS heartbeat. 상세는 [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md]].
 - **Watched-session / sandbox browser (2026-07-28)**: ambient watched group/topic을 모델에 명시(#114835), Docker `network=none` 브라우저 사이드카 거부·`doctor --fix`(#115250), warm turn·session 바인딩. 상세는 [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md]].
 - **Multi-account hooks / MCP `__proto__` (2026-07-29)**: hook delivery 계정 스코프 보존(#116095), MCP 서버명 `__proto__` 거부(#116112), Gateway backoff. 상세 동일.
 - **Route bindings / naming / harness (2026-07-27)**: gateway message route bindings를 shared dedupe에서 context WeakMap으로 격리(`DEDUPE_MAX*4` 별칭 보존), `AGENTS.md` grep-discoverability(2–3단어 export·`utils/` 금지), GPT-5.6 coding harness 오버헤드 감소(#114574). 상세는 [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md]].
