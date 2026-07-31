@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-07-30 (inbox drain Spider2/Playwright/path-graph/SGLang + research LiteRT/vllm-rbln/Supermemory/OpenClaw/Ossie) | Root: wiki/
+[META] Updated: 2026-07-31 (wiki 합성 정책·Playwright 패턴 일반화 #51) | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -73,7 +73,7 @@
     - Prompt-Engineering: 12 files
     - Infrastructure-and-DevOps: 28 files
     - Development-Environment: 17 files
-    - AI-Native-Engineering: 28 files
+    - AI-Native-Engineering: 29 files
 - wiki/Business/ (39 files)
     - Recommendation Systems: 7 files
     - Trends: 9 files

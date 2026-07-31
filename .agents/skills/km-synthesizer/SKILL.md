@@ -43,6 +43,22 @@ description: `raw/` 데이터를 분석하여 `wiki/` 5대 핵심 카테고리 �
 - 파일명에 공백이나 특수문자가 포함된 경우 정확히 매칭함 (NFC 정규화 준수).
 - **부분 합성 금지**: 지정 노트 한곳에만 넣고 나머지 사실을 버리는 흐름을 금지함. ingest된 `raw/`는 관련 노트 전체에 소진함.
 
+## ♻️ REUSABLE_KNOWLEDGE (재사용 지식 우선)
+- inbox/`raw`의 사실은 **이후 유사 상황에서 바로 참고할 패턴·절차·함정·명령**으로 재서술함.
+- 일회성 이벤트 로그(“오늘 머지됨”, “CI red”, “담당 라우팅”)는 본문에 올리지 않음. 재사용 claim만 atomic 페이지에 남김.
+- 제품명·티켓 맥락은 **예시 한 줄**로만 두고, 제목·요지는 패턴 단위로 분리함.
+- 정본 정책: [[wiki/Engineering/AI-Native-Engineering/Wiki-Synthesis-Policy.md]]
+
+## 🧭 GENERALIZED_PATH (폴더·제목 = 검색 키)
+- 경로·파일명·`title`은 **검색·백링크 키**다. 제품코드·날짜·PR/티켓 번호를 제목/슬러그에 넣지 않음.
+- 권장: `Concept-or-Pattern-Name.md` (Pascal/kebab, 공백·특수문자 최소화). 예: `Playwright-Frontend-UI-Smoke-Pattern.md` (X: `nl2sql-Playwright-E2E-Smoke.md`).
+- 5대 카테고리 + 기존 서브폴더에 맞추고, 일회성 이벤트용 폴더를 만들지 않음.
+
+## 🚫 EXCLUDE_PROGRESS (진행 정보 비합성)
+- **제외**: 내부 `PR#N`, `티켓#N`/`ticket:N` 진행·머지/리뷰 상태, CI red/green 스냅샷, assignee·Waiting for Approval 라우팅, “pm-owned” 등 워크플로 메타.
+- **허용**: 업스트림 OSS의 **기능 근거**로서의 PR/이슈 URL(예: LiteRT `pull/2688`) — 단, 머지 의식·담당자 서사 없이 스펙/API 변화만 요약.
+- frontmatter `sources`에 `ticket:N`을 lineage로 남기는 것은 가능하나, **본문 서술에 티켓/PR 진행을 복제하지 않음**.
+
 ## 🛠️ TECHNICAL_CONCRETENESS (기술적 구체성 원칙)
 - 위키 작성 시 단순 뉴스나 현황 나열을 지양하고, **"향후 실제 개발 및 구현에 즉시 참고할 수 있는 구체적인 설계 아이디어, 시스템 구조/방법론, API 스펙 및 CLI 예시"**를 반드시 포함함.
 - 오픈소스 프로젝트, 표준 규격의 경우 **공식 GitHub 리포지토리, 공식 문서(docs), 원천 연구 논문(arXiv 등)의 실 작동 참고 링크(Reference Links)**를 위키 본문에 명시함.

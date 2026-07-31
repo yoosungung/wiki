@@ -51,13 +51,13 @@ BIRD-Critic 환경에서 최적의 성능을 내도록 설계되었으며, 복�
 - **Execution Correctness (EX)**: 쿼리의 문법적 정확도보다 실제 실행 결과값의 일치 여부를 핵심 지표로 삼습니다.
 - **R-VES (Relative Value Estimation Score)**: 쿼리의 실행 효율성(Execution efficiency)까지 고려하여 점수를 산출합니다.
 
-## 🧪 nl2sql 제품 품질 게이트 (Spider2-Lite local*, 2026-07-29 → verified 2026-07-30)
+## 🧪 제품 품질 게이트 패턴 (Spider2-Lite local* EX)
 
-제품 레포 `spider2-eval`의 채점 정본도 동일하게 **EX/exec_result**(예측 SQL 실행 결과 ↔ gold CSV)이며 SQL 문자열 일치가 아니다.
+제품 레포 `spider2-eval`형 채점 정본도 동일하게 **EX/exec_result**(예측 SQL 실행 결과 ↔ gold CSV)이며 SQL 문자열 일치가 아니다.
 
-- 스모크 instance: `local008`(Baseball), `local022`(IPL) — `QUALITY_SMOKE_INSTANCE_IDS`
+- 스모크 instance 예: `local008`(Baseball), `local022`(IPL) — `QUALITY_SMOKE_INSTANCE_IDS`
 - Preflight: `spider2-load-pg` → `spider2-opik-upload-exec` → `spider2-opik check` → `gold-sql` + `--instance-ids`
-- **2026-07-30 실측**: in-cluster FQDN + Opik project `nl2sql` 재생성 후 `gold-sql` smoke pass_rate **1.0**. PR#17 머지는 `backend`+`mcp` Test green 필요.
+- in-cluster에서는 short DNS 대신 ClusterIP FQDN을 쓰고, Opik 프로젝트·데이터셋 정합 후 `gold-sql` 스모크로 pass_rate를 확인한다.
 - `--task agent`는 AC만 고정(구현 후속). UI Playwright와 축 분리.
 - 상세 canonical: [[wiki/Agents/Text-to-SQL/Spider2-Quality-Gate-nl2sql.md]]
 

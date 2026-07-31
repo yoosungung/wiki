@@ -1,8 +1,10 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
+| :--- | :--- | :--- | :--- | :--- |
 | 2026-07-31 | RESEARCH | Web/GitHub | 16 | olmocr, LMCache, Eric Dong prompt tweaking/AgentEval, ICLR 25 AR-Diffusion, Kimi K3 Unsloth, Inkling-Small, NOOA, pi-shaped CL, PyLate multi-vector, self-improving loops, HF breach, Poolside Laguna S 2.1, Solar-Open similarity dispute |
 | 2026-07-31 | INGEST | raw/ | 16 | allenai-olmocr, lmcache-kv-cache, eric-dong-manual-prompt/agent-evaluation, kiwoong-yeom-autoregressive-diffusion/self-improving/neural-procedural, kimi-k3-raises-bar/local-inference, thinking-machines-inkling-small, nvidia-oo-agents, poolside-laguna, sovereignai-pi-shaped, amelie-chatelain-multi-vector, aravind-srinivas-hf, ko-suk-hyun-upstage |
 | 2026-07-31 | SYNTHESIZE | wiki/ | 18 | olmocr, LMCache, Prompt-to-Context transition, AR-Diffusion hybrid, Kimi K3 Unsloth, Inkling/Inkling-Small MoE, NOOA agent, AgentEval, pi-shaped CL, PyLate search, Self-improving agents, HF security, Laguna S 2.1, Upstage Solar similarity updates |
+| 2026-07-31 | POLICY | wiki/Engineering + skills | 6 | 합성 재사용·일반화·EXCLUDE_PROGRESS 규칙 (#51); Playwright 페이지 rename·스크럽 |
 | 2026-07-31 | LINT | Root / wiki | ALL | 데일리 생성, D-2(2026-07-29) 삭제, raw/ 합성 후 삭제, 연구_주제_관리·INDEX META |
 | 2026-07-30 | INBOX_DRAIN | inbox/{nl2sql,pm,ta} | 8 | Spider2 preflight·PR17 hold·Playwright PR18·path-graph Argo·SGLang 31b → wiki + git rm |
 | 2026-07-30 | RESEARCH | Web/GitHub | 8 | LiteRT ASR/SessionRestore/NPU lock, vllm-rbln 0.11.2a3, Supermemory SpaceState/configure, OpenClaw memory flush, Ossie GSF; Furiosa·WebLLM/Halo·On-Device ALREADY_COVERED |
@@ -10,7 +12,6 @@
 | 2026-07-30 | SYNTHESIZE | wiki/ | 12 | Spider2/Playwright/path-graph/SGLang ops, LiteRT·리벨리온·Supermemory·MAS OpenClaw·AV-SQL Ossie GSF |
 | 2026-07-30 | LINT | Root / wiki | ALL | 데일리 생성, D-2(2026-07-28) 삭제, raw/ 합성 후 삭제, 연구_주제_관리·INDEX META |
 | 2026-07-30 | BLOCKER | Leantime MCP | 0 | MCP discovery/auth unavailable in runner — ticket Done/New 미반영 |
-| :--- | :--- | :--- | :--- | :--- |
 | 2026-07-29 | INBOX_DRAIN | inbox/{nl2sql,pm,qa,ta} | 5 | Spider2 quality gate·Playwright → wiki canonical + git rm |
 | 2026-07-29 | RESEARCH | Web/GitHub | 8 | LiteRT OpenCL/NPU UAF, vllm-rbln 0.11.2a2, Supermemory CB proactivity/Nova, OpenClaw hooks/MCP proto, Ossie Java21; Furiosa·WebLLM/Halo·On-Device Trends ALREADY_COVERED |
 | 2026-07-29 | INGEST | raw/ | 5 | litert-lm-opencl-gpu-input-npu-uaf, vllm-rbln-v0.11.2a2, supermemory-company-brain-proactivity-nova, openclaw-hooks-mcp-proto-multi-account, apache-ossie-java21 |
