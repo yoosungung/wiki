@@ -3,8 +3,8 @@ title: "Supermemory: 에이전트 네이티브 메모리 시스템 및 MCP 아�
 tags: ["Agents", "Implementation", "Memory", "Supermemory", "MCP", "SMFS", "Cloudflare"]
 type: "wiki"
 status: "published"
-last_updated: "2026-07-30"
-updated: "2026-07-30"
+last_updated: "2026-07-31"
+updated: "2026-07-31"
 related_raw: ["[[2026-07-29-supermemory-company-brain-proactivity-nova.md]]", "[[2026-07-28-supermemory-company-brain-custom-mcp.md]]", "[[2026-07-26-supermemory-chatgpt-mcp-setup.md]]", "[[2026-07-25-supermemory-cursor-agents-company-brain.md]]", "[[2026-07-24-supermemory-mcp-scope-opencode.md]]", "[[2026-07-23-supermemory-agents-memory-workspace.md]]", "[[2026-07-22-supermemory-company-brain-open-signup.md]]", "[[2026-07-21-supermemory-mcp-tool-safety-annotations.md]]", "[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]", "[[2026-07-12-supermemory-local-6767-cli-mcp-context.md]]", "[[raw/2026-07-13-sadik-mohammad-rag-systems-limitations.md]]", "[[2026-07-13-supermemory-openclaw-claude-plugins.md]]", "[[2026-07-16-supermemory_ai_memory_layer_analysis.md]]", "[[2026-07-18-supermemory-server-v0.0.5-pluggable-embeddings.md]]", "[[2026-07-19-supermemory-server-v0.0.6-windows.md]]"]
 ---
 
@@ -52,6 +52,29 @@ graph TD
 *   시간 경과에 따라 호출되지 않는 메모리의 가중치를 조절하는 **시간 감쇠(Time-decay) 알고리즘**을 도입하여 컨텍스트 창의 오염을 방지합니다.
 *   **사용자 프로필 동적 진화 및 자동 망각**: 사용자의 개발 선호도, 코딩 스타일, 진행 프로젝트 맥락을 지속적으로 업데이트하며 프로필을 실시간 갱신합니다. 시간이 지나 모순되거나 만료된 사실은 자동 망각(Auto-forgetting/Auto-decay) 처리하여 지식의 정합성을 보장합니다.
 *   **만료 정책 및 명시적 망각**: Time-to-Live(TTL) 정책을 통해 수명이 다한 임시 정보를 자동 파기하며, 새로운 정보 유입 시 충돌하는 구 정보는 `isLatest` 마크로 무효화(Trace는 보존)합니다. 사용자는 명시적으로 삭제(forget) 명령을 내릴 수 있고, 기본 쿼리에서 제거되나 감사 목적으로 우회 복구가 가능합니다.
+
+### 3.1 Graph Memory 엣지 · Dreaming 모드 (공식 개념 정본)
+
+Documents(원본)와 Memories(추출 사실)를 분리한다. 새 사실은 기존 노드에 세 가지 관계로만 붙는다 ([Graph memory](https://supermemory.ai/docs/concepts/graph-memory)):
+
+| 관계 | 의미 | 검색 |
+| :--- | :--- | :--- |
+| **Updates** | 이전 사실을 대체 (`isLatest`) | 최신만 |
+| **Extends** | 상세 추가, 양쪽 유효 | 둘 다 |
+| **Derives** | 명시되지 않은 추론 | relatedMemories |
+
+- **Dreaming 기본값 `dynamic`**: 관련 문서를 묶어 세션 단위로 그래프 갱신 — 대화에 안정 `customId`를 유지할 때 품질↑.
+- **`dreaming: "instant"`**: 문서 단독 즉시 그래프 반영(데모·add 직후 search). 추가 연산 비용.
+- **자동 망각**: 시간 만료 임시 사실 · Updates 모순 해소 · 잡음 필터. 명시 `memory(action:"forget")`는 MCP/API.
+
+```typescript
+await client.add({ content: "...", containerTag: "user_123" /* + dreaming */ });
+const results = await client.search({
+  q: "where does Alex work?",
+  containerTag: "user_123",
+  include: { relatedMemories: true },
+});
+```
 
 ### 4) Atomic Memory Generation (원자적 기억 생성)
 *   일반적인 Chunking과 달리 의미가 완성된 **'원자적 메모리(Atomic Memories)'** 단위로 문서를 분해하여 저장하며, 중복 감지기(Duplicate Detector)를 활용해 유사도 85-95% 이상의 중복 정보가 유입될 경우 자동 병합 및 스킵합니다.

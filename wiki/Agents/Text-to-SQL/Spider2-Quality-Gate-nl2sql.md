@@ -3,12 +3,13 @@ id: spider2-quality-gate-nl2sql
 title: "Spider2-Lite → nl2sql 품질 게이트 (스모크·preflight)"
 status: canonical
 owner: km
-updated: "2026-07-30"
-last_updated: "2026-07-30"
+updated: "2026-07-31"
+last_updated: "2026-07-31"
 review_after: "2026-08-30"
 sources:
   - ticket:32
   - ticket:37
+  - ticket:38
   - wiki/Agents/Text-to-SQL/T2SQL-Benchmarks-2026.md
   - https://github.com/xlang-ai/Spider2/tree/main/spider2-lite/evaluation_suite
   - https://github.com/nodal-data/spider2-claude-code
@@ -58,6 +59,17 @@ spider2-opik check
 
 - 이 repo `spider2-eval`은 PG 적재·Opik Dataset·`--task gold-sql`까지 있음.
 - `--task agent`는 DESIGN §7 AC만 고정; `tasks.py` 미배선 → 구현은 후속.
+
+### 4.1 `--task agent` AC (스펙 고정)
+
+정본은 DESIGN §7. 구현은 별도 티켓.
+
+| 항목 | AC |
+| :--- | :--- |
+| 출력 | `task_outputs["output"]` = Postgres SQL |
+| 채점 | scorer는 **exec_result** (문자열 일치 아님) |
+| CLI 미배선 | `--task agent` → **exit 2** (`test_cli_agent_ac`) |
+| 호출 경로 후보 | 백엔드 `POST /chat`, 또는 MCP `execute_select_query` 직전 SQL |
 
 ## 5. In-cluster 엔드포인트
 

@@ -25,5 +25,7 @@
 - [[wiki/Engineering/AI-Native-Engineering/Devin-OpenHands-Plandex-Update-2026-04-09.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Graphify-Codebase-Knowledge-Graph.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Playwright-Frontend-UI-Smoke-Pattern.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Parent-Done-Requires-Closed-Subtasks.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Sessionless-MCP-Status-Label-Cache-Poison.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Wiki-Synthesis-Policy.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Sim_노코드_AI_에이전트_워크플로우_플랫폼.md]]

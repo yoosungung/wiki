@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-07-31 | Root: wiki/
+[META] Updated: 2026-07-31 (inbox drain·LiteRT/Supermemory·SDLC/K8s 패턴) | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]

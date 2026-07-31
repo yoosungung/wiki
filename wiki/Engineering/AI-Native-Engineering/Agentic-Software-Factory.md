@@ -2,6 +2,7 @@
 title: 에이전트 네이티브 소프트웨어 팩토리(Agentic Software Factory) 아키텍처 및 자동화 방안
 last_updated: "2026-07-31"
 updated: "2026-07-31"
+id: agentic-software-factory
 related_raw: ["[[2026-07-27-agentic_software_factory_and_automation.md]]"]
 tags: [Engineering, AI-Native-Engineering, Software-Factory, Developer-Agent, SDLC-Automation]
 ---
@@ -69,6 +70,11 @@ AI 스크럼 마스터 에이전트는 기획 실행 상태의 정합성을 감�
 ### Playwright 프론트엔드 UI 스모크 (백엔드 없이)
 제품 레포는 `.factory/quality.yaml` `e2e:` → `frontend/e2e/*.spec.ts`, `npm run test:e2e`(vite webServer, backend/LLM 불필요). `page.route`로 `/api/metadata/fs` mock. Pod IPv6 CDN 실패 시 apt chromium + `PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1`. 상세: [[wiki/Engineering/AI-Native-Engineering/Playwright-Frontend-UI-Smoke-Pattern.md]]. Spider2 EX 게이트와 축 분리: [[wiki/Agents/Text-to-SQL/Spider2-Quality-Gate-nl2sql.md]].
 
+### SDLC 게이트·보드 함정 (팩토리 운영)
+- **Parent Done**: 자식이 모두 Done/Archived인지 하드 게이트 — [[wiki/Engineering/AI-Native-Engineering/Parent-Done-Requires-Closed-Subtasks.md]]
+- **세션리스 MCP 캐시 오염**: status labels는 projectId resolve-before-cache — [[wiki/Engineering/AI-Native-Engineering/Sessionless-MCP-Status-Label-Cache-Poison.md]]
+- **PAT 쓰기 프로브**: REST `permissions.push`만으로 ship-ready 판정 금지 — [[wiki/Engineering/Infrastructure-and-DevOps/GitHub-Fine-Grained-PAT-Contents-Write-Probe.md]]
+
 ---
 
 ## 4. 멀티 에이전트 기반 PR(Pull Request) 코드 리뷰
@@ -99,3 +105,6 @@ AI 스크럼 마스터 에이전트는 기획 실행 상태의 정합성을 감�
 - 에이전트 하네스 설계 및 자율 예외 수정: [[wiki/Agents/Frameworks/Strands-Agents-Harness-SDK.md]]
 - 에이전트 다단계 피드백 루프 평가 및 Harbor: [[wiki/Agents/Evaluations/Deep-Agents-Benchmarking-Methodology.md]]
 - 적응형 추론 모델 라우팅 기술: [[wiki/Models/Optimization-and-Serving/Adaptive-Inference-Routing-Fastino-Pioneer.md]]
+- Parent Done 게이트: [[wiki/Engineering/AI-Native-Engineering/Parent-Done-Requires-Closed-Subtasks.md]]
+- MCP status 캐시 오염: [[wiki/Engineering/AI-Native-Engineering/Sessionless-MCP-Status-Label-Cache-Poison.md]]
+- Wiki 합성 정책: [[wiki/Engineering/AI-Native-Engineering/Wiki-Synthesis-Policy.md]]

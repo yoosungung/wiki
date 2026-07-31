@@ -1,6 +1,10 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-07-31 | INBOX_DRAIN | inbox/{aa,nl2sql,pm,qa,sw-factory,ta} | 31 | 재사용 패턴→wiki 6신설+갱신; PR/티켓 진행 EXCLUDE_PROGRESS 후 git rm |
+| 2026-07-31 | RESEARCH | Web/GitHub | 3 | LiteRT-LM 07-31 commits; Supermemory graph-memory docs; Google MTP blog ALREADY_COVERED |
+| 2026-07-31 | SYNTHESIZE | wiki/ | 11 | Parent-Done·MCP cache poison·PAT probe·Helm CM·Secret/CM·Test/Prod paths; Spider2 agent AC; LiteRT; Supermemory; path-graph hygiene; Factory MOC |
+| 2026-07-31 | LINT | Root / wiki | ALL | 데일리·연구_주제·INDEX META; inbox empty |
 | 2026-07-31 | RESEARCH | Web/GitHub | 16 | olmocr, LMCache, Eric Dong prompt tweaking/AgentEval, ICLR 25 AR-Diffusion, Kimi K3 Unsloth, Inkling-Small, NOOA, pi-shaped CL, PyLate multi-vector, self-improving loops, HF breach, Poolside Laguna S 2.1, Solar-Open similarity dispute |
 | 2026-07-31 | INGEST | raw/ | 16 | allenai-olmocr, lmcache-kv-cache, eric-dong-manual-prompt/agent-evaluation, kiwoong-yeom-autoregressive-diffusion/self-improving/neural-procedural, kimi-k3-raises-bar/local-inference, thinking-machines-inkling-small, nvidia-oo-agents, poolside-laguna, sovereignai-pi-shaped, amelie-chatelain-multi-vector, aravind-srinivas-hf, ko-suk-hyun-upstage |
 | 2026-07-31 | SYNTHESIZE | wiki/ | 18 | olmocr, LMCache, Prompt-to-Context transition, AR-Diffusion hybrid, Kimi K3 Unsloth, Inkling/Inkling-Small MoE, NOOA agent, AgentEval, pi-shaped CL, PyLate search, Self-improving agents, HF security, Laguna S 2.1, Upstage Solar similarity updates |
