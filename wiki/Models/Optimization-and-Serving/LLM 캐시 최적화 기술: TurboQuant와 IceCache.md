@@ -1,17 +1,17 @@
 ---
-title: "LLM 캐시 최적화 기술: TurboQuant와 IceCache"
-related_raw: ["[[wiki/Models/Optimization-and-Serving/LLM 캐시 최적화 기술: TurboQuant와 IceCache.md]]"]
+title: "LLM 캐시 최적화 기술: TurboQuant, IceCache, LMCache"
+related_raw: ["[[wiki/Models/Optimization-and-Serving/LLM 캐시 최적화 기술: TurboQuant와 IceCache.md]]", "[[2026-07-31-lmcache-kv-cache-sharing.md]]"]
 tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'llm_cache']
 type: "wiki"
 status: "published"
-last_updated: "2026-04-19"
-updated: "2026-04-19"
+last_updated: "2026-07-31"
+updated: "2026-07-31"
 ---
 
-# LLM 캐시 최적화 기술: TurboQuant와 IceCache
+# LLM 캐시 최적화 기술: TurboQuant, IceCache, LMCache
 
 ## 개요
-LLM의 컨텍스트 윈도우가 수백만 토큰으로 확장됨에 따라 KV 캐시 관리가 성능의 핵심 병목이 되고 있습니다. 2026년 4월 현재, 이를 해결하기 위한 고효율 양자화 및 지능형 관리 기술이 도입되었습니다.
+LLM의 컨텍스트 윈도우가 수백만 토큰으로 확장됨에 따라 KV 캐시 관리가 성능의 핵심 병목이 되고 있습니다. 2026년 현재, 이를 해결하기 위한 고효율 양자화, 지능형 관리 및 오프로딩/공유 분산 캐시 기술이 도입되었습니다.
 
 ## 주요 기술
 ### 1. Google TurboQuant
@@ -23,7 +23,11 @@ LLM의 컨텍스트 윈도우가 수백만 토큰으로 확장됨에 따라 KV �
 - **기능:** 긴 시퀀스 처리를 위한 지능형 KV 캐시 관리 시스템입니다.
 - **방식:** 단순한 방출(Eviction)이 아닌 정교한 토큰 선택 알고리즘을 통해 성능 저하를 방지하며 메모리를 관리합니다.
 
-### 3. Gravitee 4.11 시맨틱 캐시
+### 3. LMCache (2026-07-31 수집)
+- **기능:** GPU VRAM에 국한되어 있던 KV 캐시를 CPU 메모리, 로컬 NVMe SSD, 혹은 Redis나 S3 같은 원격 분산 저장소로 오프로드하고 복수의 추론 노드가 공유할 수 있게 하는 분산 캐시 관리 레이어입니다.
+- **효과:** RAG 및 에이전트 다중 질의에서 첫 번째 토큰 생성 시간(TTFT)을 극적으로 절감합니다.
+
+### 4. Gravitee 4.11 시맨틱 캐시
 - **기능:** API 게이트웨이 수준에서 의미적으로 유사한 프롬프트를 식별하여 캐시된 응답을 재사용합니다.
 - **효과:** 벡터 임베딩을 활용하여 비용을 40~90% 절감합니다.
 
@@ -33,9 +37,11 @@ LLM의 컨텍스트 윈도우가 수백만 토큰으로 확장됨에 따라 KV �
 
 ---
 ## 관련 문서
+- [[wiki/Models/Optimization-and-Serving/LMCache-KV-Cache-Management-Layer.md]] — LMCache 기술 상세 및 연동 구조.
 - [[Resources/Agents and Systems/LLM Agent & Deep Agents/LLM Cache/LLM Cache.md]] (생성 예정)
 
 ## 출처
 - [1] remio.ai - TurboQuant Technical Deep Dive
 - [2] arxiv.org - IceCache: Memory-efficient KV Cache Management
-- [3] gravitee.io - Semantic Caching in API Gateways
+- [3] github.com/LMCache/LMCache - LMCache: KV Cache Sharing Layer
+- [4] gravitee.io - Semantic Caching in API Gateways

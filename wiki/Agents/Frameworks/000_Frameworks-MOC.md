@@ -24,6 +24,7 @@
 - [[wiki/Agents/Frameworks/Kotaemon.md]]
 - [[wiki/Agents/Frameworks/LangChain/LangChain-Deep-Agents.md]]
 - [[wiki/Agents/Frameworks/Langchain Open Deep Research 아키텍처 가이드.md]]
+- [[wiki/Agents/Frameworks/NVIDIA-Object-Oriented-Agents-NOOA.md]]
 - [[wiki/Agents/Frameworks/PI-Agent-Framework.md]]
 - [[wiki/Agents/Frameworks/OpenWorker-Agentic-AI.md]]
 - [[wiki/Agents/Frameworks/Rig-Rust-AI-Agent-Framework.md]]

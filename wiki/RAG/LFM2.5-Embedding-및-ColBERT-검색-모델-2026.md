@@ -1,6 +1,8 @@
 ---
-related_raw: ["[[2026-06-25-LFM2.5_Embedding_and_ColBERT_350M.md]]"]
+related_raw: ["[[2026-06-25-LFM2.5_Embedding_and_ColBERT_350M.md]]", "[[2026-07-31-amelie-chatelain-multi-vector-search-late-interaction.md]]"]
 tags: ["#wiki", "Embedding", "ColBERT", "LFM2.5", "Agentic-Edge", "Tool-Selection"]
+last_updated: "2026-07-31"
+updated: "2026-07-31"
 ---
 
 # LFM2.5 Embedding 및 ColBERT 고성능 검색 모델
@@ -20,5 +22,6 @@ LFM2.5-350M(28T 토큰 사전 학습 Causal Decoder)을 기반으로 Bidirection
 - **ColBERT** 모델을 툴 인덱서로 활용하여, 사용자 프롬프트를 분석한 뒤 151개의 후보 도구 중 가장 관련도가 높은 **상위 5개의 도구**만을 정확히 실시간 필터링하여 에이전트 컨텍스트에 주입합니다. 이를 통해 API 호출 토큰을 획기적으로 세이브하고 에이전트 최종 성공률을 향상시킬 수 있습니다.
 
 ## 🔗 연결된 문서
+- [[wiki/RAG/Multi-Vector-Search-and-Late-Interaction-PyLate.md]] — 지연 상호작용 및 다중 벡터 검색 원리.
 - [[wiki/RAG/Anthropic-Contextual-Retrieval.md]] — 컨텍스트 유실을 막기 위한 또 다른 고도화 검색 기법.
 - [[wiki/RAG/000_RAG-MOC.md]]

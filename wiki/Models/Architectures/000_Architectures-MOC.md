@@ -1,6 +1,7 @@
 # Architectures MOC
 
 ## 📄 Documents
+- [[wiki/Models/Architectures/Autoregressive-Diffusion-Hybrid-LLM.md]]
 - [[wiki/Models/Architectures/BigQuery의 AI 시대에 맞춰 재해석된 SQL.md]]
 - [[wiki/Models/Architectures/Building-LLMs-from-Scratch-PyTorch.md]]
 - [[wiki/Models/Architectures/CCNets-Causal-Relationships.md]]
@@ -8,6 +9,7 @@
 - [[wiki/Models/Architectures/GLM-5-2-Architecture-and-IndexShare.md]]
 - [[wiki/Models/Architectures/Gated-Attention.md]]
 - [[wiki/Models/Architectures/Inkling-975B-MoE-Model.md]]
+- [[wiki/Models/Architectures/Kimi-K3-Sparse-MoE-Model.md]]
 - [[wiki/Models/Architectures/LLM 아키텍처 비교.md]]
 - [[wiki/Models/Architectures/LeWorldModel-JEPA.md]]
 - [[wiki/Models/Architectures/Lottery Ticket Hypothesis와 LLM.md]]

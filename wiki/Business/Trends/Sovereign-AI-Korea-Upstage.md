@@ -1,8 +1,10 @@
 ---
 title: "한국의 소버린 AI 전략과 업스테이지 $400M 투자 분석"
-related_raw: ["[[2026-05-12-Upstage_Sovereign_AI_Funding_Report.md]]"]
+related_raw: ["[[2026-05-12-Upstage_Sovereign_AI_Funding_Report.md]]", "[[2026-07-31-ko-suk-hyun-upstage-solar-open-glm-controversy.md]]"]
 tags: ["Business/Trends", "Sovereign-AI", "Upstage", "Funding", "Korea"]
 date: "2026-05-12"
+last_updated: "2026-07-31"
+updated: "2026-07-31"
 ---
 
 # 한국의 소버린 AI 전략: 업스테이지와 리벨리온을 중심으로
@@ -37,9 +39,11 @@ date: "2026-05-12"
 
 ## 5. 시사점
 - **정책적 과제**: 모델 및 인프라 투자 이후, 데이터 큐레이션 및 합성 데이터 생성을 위한 '데이터 트랙' 예산 편성이 필수적임.
+- **모델 출처성(Provenance) 및 신뢰성**: 업스테이지 Solar 100B와 Zhipu GLM-4.5-Air 간의 유사성 공방 사례(고석현 Sionic AI CEO의 의혹 제기 후 업스테이지의 증명 및 고석현 CEO 공식 사과로 해소)는 단순 코사인 유사도 스코어 비교를 넘어 모델 가중치의 독자성과 소스코드의 기원을 투명하게 검증하는 표준 세션이 요구됨을 보여줍니다.
 - **엔터프라이즈 전략**: 기업들은 LLM 도입 시 도메인 데이터의 품질과 라이선스 확보를 최우선 순위로 두어야 함.
 
 ---
 **관련 문서**:
+- [[wiki/Business/Korea_Sovereign_AI_and_Upstage.md]]
 - [[wiki/Models/Optimization-and-Serving/Rebellions-NPU-LLM-Serving.md]]
 - [[wiki/Agents/Frameworks/2026년 AI 에이전트 트렌드.md]]

@@ -2,7 +2,9 @@
 title: "한국 소버린 AI 동향과 데이터 품질의 중요성: 업스테이지 펀딩 사례"
 date: "2026-05-08"
 tags: ["Sovereign-AI", "Upstage", "Data-Quality", "Business"]
-related_raw: ["[[raw/2026-05-08-upstage-national-fund.md]]"]
+related_raw: ["[[raw/2026-05-08-upstage-national-fund.md]]", "[[2026-07-31-ko-suk-hyun-upstage-solar-open-glm-controversy.md]]"]
+last_updated: "2026-07-31"
+updated: "2026-07-31"
 ---
 
 # 한국 소버린 AI 동향과 데이터 품질의 중요성: 업스테이지 펀딩 사례
@@ -21,8 +23,14 @@ related_raw: ["[[raw/2026-05-08-upstage-national-fund.md]]"]
 - **품질이 크기를 이긴다**: DataComp-LM, FineWeb, Nemotron-4 등의 연구에 따르면, 고품질 데이터 큐레이션은 모델 학습에 필요한 컴퓨팅 자원을 40% 이상 절감할 수 있습니다. 4억 달러의 펀딩 효율성은 결국 데이터를 얼마나 잘 필터링하고 합성 데이터(Synthetic Data)를 생성해 내느냐에 좌우됩니다.
 - 한국어 필터링은 영어 필터의 번역으로 해결되지 않으며, 별도의 한국어 특화 인프라와 품질 회귀 모델(Quality Regression Model) 구축이 필수적입니다.
 
+## 3. 모델 가중치 정합성 및 소버린 AI 신뢰도 논란 (2026-07-31 추가)
+- **GLM 유사성 의혹**: 2026년 1월, Sionic AI의 CEO 고석현(Ko Suk-hyun)은 업스테이지가 개발 중인 Solar Open 100B 모델이 중국 ZhipuAI의 GLM-4.5-Air 모델과 96.8%의 LayerNorm 코사인 유사도를 나타내고 소스코드 내 저작권 마커가 동일하다는 가중치 유사성 의혹을 제기했습니다.
+- **업스테이지의 소명과 사과**: 업스테이지는 즉시 실시간 검증 세션을 열어 상세한 실험 과정과 모델 개발 가중치 로그를 공개하여 오리지널리티를 소명했습니다. 이에 고석현 CEO는 단순히 레이어놈 코사인 유사도 측면만 보고 weight 카피를 단정한 기술적 성급함을 인정하고 공식 사과하면서 논란이 매듭지어졌습니다.
+- **시사점**: 소버린 AI 훈련 생태계 내에서 '원천 모델 가중치의 독자적 출처(Provenance)' 확보와, 오픈소스 파생 모델 간의 공정한 평가 기준 정립이 중요함을 입증한 사례입니다.
+
 결론적으로 자본은 국경을 넘을 수 있지만, 해당 언어의 고유한 코퍼스와 품질 감지 인프라는 국경을 넘을 수 없으므로, 소버린 AI의 성공은 철저히 **데이터 주권(Data Sovereignty)**에 의해 결정됩니다.
 
 관련 문서:
+- [[wiki/Business/Trends/Sovereign-AI-Korea-Upstage.md]]
 - [[wiki/Agents/Frameworks/2026년 AI 에이전트 트렌드.md]]
 - [[wiki/Models/Optimization-and-Serving/Rebellions_ATOM_Max_NPU_Serving.md]]
