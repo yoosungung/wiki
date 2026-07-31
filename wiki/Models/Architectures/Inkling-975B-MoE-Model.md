@@ -1,9 +1,9 @@
 ---
-title: "Inkling: 975B Sparse MoE 오픈소스 대규모 언어 모델 아키텍처"
-last_updated: "2026-07-28"
-updated: "2026-07-28"
-related_raw: ["[[raw/2026-07-28-thinking_machines_lab_inkling_975b_moe.md]]", "[[raw/2026-07-28-sebastian_raschka_notable_open_weight_models.md]]"]
-tags: [Models, Architectures, MoE, Inkling, Thinking-Machines-Lab, Open-Source-LLM]
+title: "Inkling 및 Inkling-Small: Thinking Machines Lab의 Sparse MoE 아키텍처"
+last_updated: "2026-07-31"
+updated: "2026-07-31"
+related_raw: ["[[raw/2026-07-28-thinking_machines_lab_inkling_975b_moe.md]]", "[[raw/2026-07-28-sebastian_raschka_notable_open_weight_models.md]]", "[[2026-07-31-thinking-machines-inkling-small-release.md]]"]
+tags: [Models, Architectures, MoE, Inkling, Inkling-Small, Thinking-Machines-Lab, Open-Source-LLM]
 ---
 
 # Inkling: 975B Sparse MoE 오픈소스 대규모 언어 모델 아키텍처
@@ -53,12 +53,22 @@ Inkling의 훈련 효율성을 극적으로 올릴 수 있었던 핵심 요인 �
 
 ---
 
-## 4. 실무 개발자를 위한 가이드
+## 4. Inkling-Small 모델의 출시 (2026-07-30 추가)
+
+Thinking Machines Lab은 플래그십 모델의 성능을 준수하게 유지하면서 배포 비용을 획기적으로 낮춘 **Inkling-Small** 모델을 2026년 7월 30일에 추가 릴리스했습니다.
+- **아키텍처 스펙**: 총 **2,760억 파라미터 (276B Parameters)** 규모이며, 토큰당 **12B 파라미터가 활성화**되는 Sparse MoE 구조입니다.
+- **성능적 특징**: 플래그십 대비 약 3배 경량화되었음에도 불구하고, 대다수의 코딩 및 복합 추론 벤치마크에서 플래그십 Inkling (975B) 모델의 초기 버전과 대등하거나 더 뛰어난 효율적 성과를 기록했습니다.
+- **조정 가능한 생각 노력 (Controllable Thinking Effort)**: 사용자가 추론 시간 및 연산 비용 대비 답변의 품질 밸런스를 조절할 수 있는 '생각 노력량 제어' 기능을 네이티브 지원합니다.
+- **배포 및 통합**: BF16, FP8, MXFP8, NVFP4 등 최신 수치 표현 방식을 폭넓게 지원하여 로컬 단일 서버에서도 고속 구동이 용이합니다.
+
+---
+
+## 5. 실무 개발자를 위한 가이드
 
 1.  **Thinking Machines Lab의 Tinker API**:
-    - 자체 API 플랫폼인 **Tinker**를 통해 Inkling 모델의 커스텀 파인튜닝을 지원하므로, 특수 도메인(예: 보안, 법률) 데이터 기반의 에이전트 전용 모델로 경량 정렬하기 용이합니다.
+    - 자체 API 플랫폼인 **Tinker**를 통해 Inkling 및 Inkling-Small 모델의 커스텀 파인튜닝을 지원하므로, 특수 도메인(예: 보안, 법률) 데이터 기반의 에이전트 전용 모델로 경량 정렬하기 용이합니다.
 2.  **VRAM 및 서빙 하드웨어 요구사항**:
-    - 총 975B 파라미터 규모이므로, FP8 양자화 적용 시에도 수백 GB의 VRAM이 요구됩니다. 로컬 환경에서 구동 시 NVIDIA RTX Spark / DGX Spark 등 UMA(통합 메모리) 대역폭이 높은 하드웨어 인프라 구성이 강제됩니다.
+    - 총 975B 파라미터 규모인 Inkling의 경우 FP8 양자화 적용 시에도 수백 GB의 VRAM이 요구되어 NVIDIA RTX Spark 등 특화 시스템이 권장되나, **Inkling-Small (276B)**은 FP8 양자화 상태에서 보다 컴팩트한 VRAM 점유를 보여 멀티 GPU 워크스테이션 환경에서도 로컬 단독 구동이 수월합니다.
 
 ---
 
@@ -66,4 +76,4 @@ Inkling의 훈련 효율성을 극적으로 올릴 수 있었던 핵심 요인 �
 - 모델 아키텍처 MOC: [[wiki/Models/Architectures/000_Architectures-MOC.md]]
 - 최신 아키텍처 동향: [[wiki/Models/Architectures/Recent-LLM-Architecture-Developments.md]]
 - [[wiki/Models/000_Models-MOC.md]]
-- [[index.md]]
+- [[INDEX.md]]

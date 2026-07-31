@@ -41,6 +41,7 @@
 - [[wiki/RAG/Mem0-Mem-Long-term-Memory.md]]
 - [[wiki/RAG/Mem0-Zep-Hybrid-Memory-KG-RAG.md]]
 - [[wiki/RAG/Meta-REFRAG.md]]
+- [[wiki/RAG/Multi-Vector-Search-and-Late-Interaction-PyLate.md]]
 - [[wiki/RAG/OpenDataLoader-PDF-Parser.md]]
 - [[wiki/RAG/OpenWiki-OKF-Codebase-Documentation.md]]
 - [[wiki/RAG/PageIndex-Vectorless-Reasoning-RAG.md]]

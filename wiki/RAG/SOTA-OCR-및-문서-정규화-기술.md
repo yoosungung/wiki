@@ -1,6 +1,8 @@
 ---
-related_raw: ["[[2026-06-25-Baidu_Unlimited_OCR_R-SWA_and_SOTA_OCR.md]]"]
+related_raw: ["[[2026-06-25-Baidu_Unlimited_OCR_R-SWA_and_SOTA_OCR.md]]", "[[2026-07-31-allenai-olmocr-pdf-linearization-toolkit.md]]"]
 tags: ["#wiki", "OCR", "Unlimited-OCR", "R-SWA", "Agentic-RAG", "Data-Normalization"]
+last_updated: "2026-07-31"
+updated: "2026-07-31"
 ---
 
 # SOTA OCR 모델 및 에이전트 RAG 문서 정규화
@@ -9,6 +11,7 @@ tags: ["#wiki", "OCR", "Unlimited-OCR", "R-SWA", "Agentic-RAG", "Data-Normalizat
 
 ## 1. 최신 OCR 기술 동향
 - **Baidu Unlimited OCR**: DeepSeek OCR을 기반으로 학습된 3B 규모의 모델로, **R-SWA (Reference Sliding Window Attention)** 기법을 최초로 도입했습니다. 이를 통해 페이지 한계를 넘어선 초장문 및 복잡한 레이아웃의 문서를 소실 없이 정확하게 텍스트로 복원해 냅니다.
+- **olmocr (AI2)**: VLM(olmOCR-2-7B-1025) 기반의 오픈소스 PDF 선형화 툴킷으로, 표와 수식 및 자연스러운 읽기 순서를 보존한 채 고속으로 마크다운 변환을 수행하며 AWS S3 클러스터 연동을 지원합니다.
 - **Mistral OCR 4**: 상용 고성능 문서 레이아웃 분석 및 문자 추출 API로, 고정밀 표(Table) 파싱과 다국어 처리에 강점을 가집니다.
 - **Chandra 2 (Datalab)**: 오픈소스 SOTA 라인업으로, 셀프 호스팅 및 API 활용이 용이하여 기업 내부 데이터의 프라이버시를 지키면서 고속 정규화 처리가 가능합니다.
 
@@ -18,5 +21,6 @@ OCR 모델의 성능을 객관적으로 판별하기 위해 다음과 같은 현
 2. **OmniDocBench (Shanghai AI Lab)**: 논문, 특허, 사업 계획서 등 구조 분석 능력을 다각도로 검증하는 표준 벤치마크.
 
 ## 🔗 연결된 문서
+- [[wiki/RAG/olmocr-pdf-linearization-toolkit.md]] — AI2의 VLM 기반 PDF-to-Text 데이터 선형화 오픈소스.
 - [[wiki/RAG/OpenDataLoader-PDF-Parser.md]] — PDF 내 Bounding Box 좌표 및 구조 추출 라이브러리.
 - [[wiki/RAG/omniparse-멀티포맷-데이터-정규화-파이프라인.md]] — 오디오, 비디오, 스캔 문서를 일괄 가공해 주는 omniparse 기술.
