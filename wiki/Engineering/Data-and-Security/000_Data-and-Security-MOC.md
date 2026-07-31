@@ -4,6 +4,7 @@
 - [[wiki/Engineering/Data-and-Security/Azure-DevOps-MCP-Vulnerability-CVE-2026-32211.md]]
 - [[wiki/Engineering/Data-and-Security/Brave_Prompt_Injection.md]]
 - [[wiki/Engineering/Data-and-Security/Claude-Code-Security-Guardrail-Bypass-LayerX.md]]
+- [[wiki/Engineering/Data-and-Security/Hugging-Face-Cyber-Breach-and-OSAA-Security.md]]
 - [[wiki/Engineering/Data-and-Security/JSON vs TOON LLM 토큰 효율성 비교.md]]
 - [[wiki/Engineering/Data-and-Security/OSI-Open-Semantic-Interchange.md]]
 - [[wiki/Engineering/Data-and-Security/OSI-Specification-v0.0.1.md]]

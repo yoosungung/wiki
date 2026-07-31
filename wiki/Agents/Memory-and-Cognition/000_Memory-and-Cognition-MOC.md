@@ -16,5 +16,6 @@
 - [[wiki/Agents/Memory-and-Cognition/Mem0-vs-Cognee-vs-QMD-Comparison.md]]
 - [[wiki/Agents/Memory-and-Cognition/Mem0.md]]
 - [[wiki/Agents/Memory-and-Cognition/Memory.md]]
+- [[wiki/Agents/Memory-and-Cognition/Neural-Procedural-Memory-for-Implicit-Agent-Action.md]]
 - [[wiki/Agents/Memory-and-Cognition/OpenMemory.md]]
 - [[wiki/Agents/Memory-and-Cognition/에이전트-메모리-레이어-설계-및-LangSmith-분석.md]]

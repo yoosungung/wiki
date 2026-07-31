@@ -33,6 +33,7 @@
 - [[wiki/Models/SFT/OpenAI o1 추론 스케일링 및 2026년 최신 동향.md]]
 - [[wiki/Models/SFT/Optimizer.md]]
 - [[wiki/Models/SFT/PEFT-Options.md]]
+- [[wiki/Models/SFT/pi-shaped-Continual-Learning-Sovereign-AI.md]]
 - [[wiki/Models/SFT/Pack sequences.md]]
 - [[wiki/Models/SFT/Resize token embeddings.md]]
 - [[wiki/Models/SFT/RoPE.md]]

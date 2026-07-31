@@ -1,8 +1,8 @@
 ---
 title: Diffusion Language Models (dLLM) 아키텍처 및 연구 동향
-last_updated: "2026-07-27"
-updated: "2026-07-27"
-related_raw: ["[[2026-07-27-icml_2026_best_diffusion_llm_papers.md]]"]
+last_updated: "2026-07-31"
+updated: "2026-07-31"
+related_raw: ["[[2026-07-27-icml_2026_best_diffusion_llm_papers.md]]", "[[2026-07-31-kiwoong-yeom-autoregressive-diffusion-hybrid-llm.md]]"]
 tags: [Models, Architectures, Diffusion-LLM, dLLM, ICML-2026]
 ---
 
@@ -57,5 +57,6 @@ tags: [Models, Architectures, Diffusion-LLM, dLLM, ICML-2026]
 
 ---
 ## 🔗 관련 문서 링크
+- [[wiki/Models/Architectures/Autoregressive-Diffusion-Hybrid-LLM.md]] — AR과 Diffusion의 장점을 결합한 하이브리드 언어 모델.
 - SFT와 RL의 중복 없는 학습 전략: [[wiki/Models/Reasoning-and-Cognition/SFT-vs-RL-Compositional-Generalization.md]]
 - 적응형 추론 미들웨어 설계: [[wiki/Models/Optimization-and-Serving/Adaptive-Inference-Routing-Fastino-Pioneer.md]]

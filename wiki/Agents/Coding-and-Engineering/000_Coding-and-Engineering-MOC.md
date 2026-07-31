@@ -12,6 +12,7 @@
 - [[wiki/Agents/Coding-and-Engineering/HuggingFace-ml-intern-Autonomous-ML-Engineer.md]]
 - [[wiki/Agents/Coding-and-Engineering/fastcampus-ai-agent-vibecoding.md]]
 - [[wiki/Agents/Coding-and-Engineering/langchain-code.md]]
+- [[wiki/Agents/Coding-and-Engineering/Poolside-Laguna-S-2.1-Agentic-Coding-Model.md]]
 - [[wiki/Agents/Coding-and-Engineering/루프-엔지니어링-패러다임-및-시스템-안전.md]]
 - [[wiki/Agents/Coding-and-Engineering/코딩-에이전트-하네스-엔지니어링-가이드.md]]
 - [[wiki/Agents/Coding-and-Engineering/roborev-AI-코드-리뷰-에이전트.md]]

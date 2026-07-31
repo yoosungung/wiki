@@ -1,11 +1,11 @@
 ---
 title: "Kimi K3: 2.8조 파라미터 희소 혼합 전문가(Sparse MoE) 모델 아키텍처"
-related_raw: ["[[2026-07-24-kimi-k3-mixture-of-experts.md]]", "[[raw/2026-07-28-kimi_delta_attention_efficient_attention_architecture.md]]"]
+related_raw: ["[[2026-07-24-kimi-k3-mixture-of-experts.md]]", "[[raw/2026-07-28-kimi_delta_attention_efficient_attention_architecture.md]]", "[[2026-07-31-kimi-k3-raises-bar-open-source-moe.md]]", "[[2026-07-31-kimi-k3-local-inference-unsloth.md]]"]
 tags: ["Models", "Architectures", "MoE", "Kimi", "Moonshot-AI", "Long-Context"]
 type: "wiki"
 status: "published"
-last_updated: "2026-07-28"
-updated: "2026-07-28"
+last_updated: "2026-07-31"
+updated: "2026-07-31"
 ---
 
 # Kimi K3: 2.8조 파라미터 희소 혼합 전문가(Sparse MoE) 모델 아키텍처
@@ -31,6 +31,10 @@ Kimi K3는 Delta Attention 스택 덕분에 모델 구동 시 그래픽 메모�
 ## 3. 타깃 에이전트 성능 최적화
 Moonshot AI는 Kimi K3를 단순 질의응답을 넘어 **장기 계획(Long-horizon Planning)과 코드베이스 자율 탐색(Repository Navigation)에 특화**되도록 사후 포스트 트레이닝(Post-training)을 진행했습니다.
 - **도구 호출 및 오케스트레이션:** 복잡한 개발 시나리오에서 수십 단계의 API 호출 및 파일 읽기/쓰기를 오류 없이 자율적으로 수행하는 멀티 에이전트 시스템(MAS)의 조율자(Orchestrator) 모델로 활용하기에 이상적입니다.
+
+## 4. 로컬 실행 및 미세조정 (Local Inference & Fine-tuning)
+- **Unsloth 연동 가속**: **Unsloth** 프레임워크의 최적화 Triton 커널을 기반으로 Kimi K3 MoE 모델의 로컬 미세조정(Fine-tuning) 및 추론이 지원됩니다. 이를 통해 학습 속도가 최대 2.5배 가속되며 메모리 사용량이 극적으로 절감됩니다.
+- **양자화 배포**: 허깅페이스(Hugging Face)를 통해 배포된 4-bit (INT4) 및 8-bit (FP8) 양자화 가중치를 활용하여 단일 또는 듀얼 GPU 워크스테이션 환경에서도 100만 토큰 컨텍스트를 안정적으로 로드하여 가동할 수 있습니다.
 
 ## 관련 문서
 - [[wiki/Models/Architectures/000_Architectures-MOC.md|모델 아키텍처 MOC]]
