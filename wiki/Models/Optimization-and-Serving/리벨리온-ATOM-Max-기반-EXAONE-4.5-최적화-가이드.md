@@ -1,8 +1,8 @@
 ---
 title: "리벨리온 ATOM-Max 기반 EXAONE 4.5 최적화 가이드 (2026)"
 tags: ["Rebellions", "ATOM-Max", "EXAONE4.5", "NPU", "Optimization", "vLLM", "PhysicalAI"]
-last_updated: "2026-07-30"
-updated: "2026-07-30"
+last_updated: "2026-08-01"
+updated: "2026-08-01"
 related_raw: ["[[2026-07-30-vllm-rbln-v0.11.2a3.md]]", "[[2026-07-29-vllm-rbln-v0.11.2a2.md]]", "[[2026-07-28-vllm-rbln-v0.11.2a0-a1.md]]", "[[2026-07-24-vllm-rbln-v0.11.2.dev0.md]]", "[[2026-07-23-vllm-rbln-v0.11.1a11.md]]", "[[2026-07-21-vllm-rbln-v0.11.1a9.md]]", "[[2026-07-20-vllm-rbln-v0.11.1a8.md]]", "[[2026-06-04-Rebellions-ATOM-Max-EXAONE-4.5-Research.md]]", "[[2026-06-05-Rebellions-vLLM-EXAONE-Speculative-MoE-Update.md]]", "[[2026-06-07-Rebellions-ATOM-Max-vLLM-EXAONE-4.5-Update.md]]", "[[2026-06-09-Rebellions-NPU-EXAONE-4.5-Physical-AI-Update.md]]", "[[2026-06-11-Rebellions-Atom-Rebel-EXAONE-4.5-Research.md]]", "[[2026-06-12-Rebellions-ATOM-Max-EXAONE-4.5-Update.md]]", "[[2026-06-15-Rebellions-EXAONE-Physical-AI-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-rebellions_atom_max_exaone_optimization.md]]", "[[2026-06-28-rebellions_atom_max_exaone_4_5_optimization.md]]", "[[2026-06-30-rebellions_atom_max_exaone_4_5.md]]", "[[2026-07-01-vllm-rbln-exaone-4-5-atom-max.md]]", "[[2026-07-07-exaone-4.5-vllm-rbln-atom-max-optimization.md]]", "[[2026-07-11-rebellions_atom_max_exaone_4_5_vllm_rbln.md]]", "[[2026-07-12-rbln-sdk-0.11-vllm-exaone-gemma4.md]]", "[[2026-07-15-litert-lm-v0110-windows-rebellions-torchdynamo.md]]", "[[2026-07-16-vllm-rbln-v0.11.1a7-request-reordering-dtensor-mtp.md]]"]
 ---
 
@@ -235,12 +235,46 @@ uv pip install "vllm-rbln==0.11.2a3" \
 
 **적용 팁**: a2→a3 업그레이드 후 tok/s 벤치 전에 warmup backlog drain(#852)이 반영됐는지 확인하고, optimum-rbln이 rc0인지 `pip show`로 핀을 검증한다.
 
+## 4.11 vLLM-RBLN v0.11.2a4 · stable v0.11.1 (2026-07-31 / 합성 2026-08-01)
+
+### v0.11.2a4
+[v0.11.2a4](https://github.com/RBLN-SW/vllm-rbln/releases/tag/v0.11.2a4) — MLA APC KV 인덱스 수정 + optimum rc1.
+
+| 항목 | 내용 | 의미 |
+| :--- | :--- | :--- |
+| **APC×MLA** | `#859` KV copy 시 kv cache indexing 수정 | MLA 모델 Automatic Prefix Caching 경로의 캐시 복사 버그 |
+| **dtype revert** | `#862` non-fp32 dtype 허용 되돌림 | a2(#800) 완화 후 회귀 — native dtype은 신중히 |
+| **optimum-rbln** | `#863` **0.11.1rc1** | a3 rc0 → rc1 핀 |
+
+```bash
+uv pip install "vllm-rbln==0.11.2a4" \
+  --extra-index-url https://wheels.vllm.ai/0.22.0/cpu --torch-backend cpu
+```
+
+### Stable v0.11.1
+[v0.11.1](https://github.com/RBLN-SW/vllm-rbln/releases/tag/v0.11.1) — 프로덕션 핀 후보. 재사용 claim:
+
+- **w8a8** linear & MoE (#807)
+- **멀티모달 APC** (#803)
+- **DP×MTP** chunked prefill 데드락 회피 (#792); MTP/drafter 후 weights contiguous (#804)
+- `gpu_memory_utilization` → compile-time KV `memory_budget` (#810)
+- sampler cache 비활성·재컴파일 제거 (#798/#797); empty `rbln_config` cache-hash 제외 (#822)
+- ATOM/REBEL `prefill_chunk_size` 기본값 (#801); vision-encoder `rbln_overrides` (#827)
+- deps: **torch-rbln 0.3.0**, **optimum-rbln 0.11.1**
+
+```bash
+uv pip install "vllm-rbln==0.11.1" \
+  --extra-index-url https://wheels.vllm.ai/0.22.0/cpu --torch-backend cpu
+```
+
+**적용 팁**: EXAONE/MLA 서빙은 a4(#859) 이후 APC hit율·정합성을 재측정한다. 프로덕션은 `v0.11.1` 핀 + torch-rbln 0.3.0을 맞추고, DP+MTP는 #792 회귀를 체크리스트에 넣는다.
+
 ## 5. 실전 최적화 체크리스트
 
 1.  **모델 컴파일**: SDK v0.11.0+에서는 vLLM API 경로의 자동 컴파일을 우선 사용. 레거시 AOT가 필요하면 `optimum-cli`로 Transformers v5 호환 재컴파일.
 2.  **병렬화 최적화**: 33B 모델의 경우 8개 이상의 ATOM-Max 칩을 활용한 Tensor Parallelism(TP) 설정 권장. `VLLM_RBLN_NUM_DEVICES_PER_LOCAL_RANK`로 디바이스 수 지정.
 3.  **Physical AI 연동**: LG 로봇 KAPEX 등 물리적 하드웨어와의 실시간 추론 연동 테스트 수행.
-4.  **a7~a2 검증 항목**: a8 chunked prefill×spec; a9 MTP contiguous weights; a11 DP×MTP·w8a8 MoE·APC; **dev0 metrics_v2 · ATOM/REBEL prefill · vision overrides**; **a0/a1 dtensor default · DeepSeek MTP**; **a2 grammar CPU bitmask · Qwen3.5 · optimum-rbln a5**.
+4.  **a7~a4 / 0.11.1 검증**: a8 chunked prefill×spec; a9 MTP contiguous; a11 DP×MTP·w8a8·APC; **a2 grammar CPU**; **a3 optimum rc0**; **a4 MLA APC KV index · optimum rc1**; **stable 0.11.1 멀티모달 APC·w8a8·torch-rbln 0.3.0**.
 
 ---
 **관련 프로젝트**:

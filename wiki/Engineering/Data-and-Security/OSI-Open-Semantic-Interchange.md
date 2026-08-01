@@ -1,8 +1,8 @@
 ---
 title: "OSI (Open Semantic Interchange)"
 tags: ["OSI", "Apache Ossie", "Semantic Layer", "Agent", "MCP", "Data"]
-last_updated: "2026-07-24"
-updated: "2026-07-24"
+last_updated: "2026-08-01"
+updated: "2026-08-01"
 related_raw: ["[[raw/2026-07-24-apache-ossie-schema-ontology-flatten.md]]", "[[raw/2026-07-14-Apache-Ossie-명세.md]]"]
 ---
 
@@ -51,6 +51,14 @@ ontology:
 ```
 
 AV-SQL/에이전트 파이프라인 연계는 [[wiki/Agents/Text-to-SQL/AV-SQL-Agentic-Views-Spider-2-0.md]].
+
+### dbt 컨버터: SUM_BOOLEAN + qualified columns (2026-07-31)
+
+`SUM_BOOLEAN` 메트릭이 `schema.table.col`처럼 **qualified column**을 참조할 때, 렌더된 `CASE`를 split 하면 dataset 해석이 깨진다. [#292](https://github.com/apache/ossie/pull/292)는 파싱된 SQL expression에서 qualifier를 읽고 multipart dataset qualifier를 보존한다. 회귀: `converters/dbt` pytest 99 passed.
+
+```bash
+cd converters/dbt && uv run pytest
+```
 
 ## 4. 에이전트 문맥 공유 (Agentic Enterprise)
 Ossie는 에이전트가 사용할 시맨틱 계층의 교환 형식을 지향합니다. 다만 0.x 단계이므로 지원 변환기와 플랫폼별 구현 범위를 확인해야 합니다.

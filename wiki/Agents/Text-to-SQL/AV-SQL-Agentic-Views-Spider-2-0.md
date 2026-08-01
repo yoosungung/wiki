@@ -4,8 +4,8 @@ related_raw: ["[[2026-07-29-apache-ossie-java21.md]]", "[[2026-07-28-apache-ossi
 tags: ["wiki", "Agents", "Text-to-SQL", "OSI", "MCP", "Snowflake", "slm_for_text-to-sql_and_schema_linking"]
 type: "wiki"
 status: "published"
-last_updated: "2026-07-30"
-updated: "2026-07-30"
+last_updated: "2026-08-01"
+updated: "2026-08-01"
 ---
 
 # AV-SQL: Agentic Views를 통한 Text-to-SQL 혁신
@@ -185,6 +185,19 @@ ontology:
 
 **적용 팁**: NL2SQL 시맨틱 레이어를 GSF 소스와 동기화할 때 point-to-point 변환 대신 Ossie hub를 경유한다.
 
+### dbt SUM_BOOLEAN qualified columns — [#292](https://github.com/apache/ossie/pull/292) (2026-07-31)
+
+- **문제**: `SUM_BOOLEAN` 메트릭이 **qualified column**(multipart dataset qualifier)을 참조할 때, 렌더된 `CASE`를 split 하면 dataset 해석이 깨짐.
+- **수정**: 파싱된 SQL expression에서 dataset qualifier를 읽고, multipart qualifier를 보존 (`01058aa`).
+- **검증**: `cd converters/dbt && uv run pytest` → 99 passed.
+
+```bash
+cd converters/dbt && uv run pytest
+# SUM_BOOLEAN + schema.table.col 형태 메트릭 → Ossie YAML 왕복 후 ai_context 주입
+```
+
+**AV-SQL 적용**: dbt 시맨틱 → Ossie hub → View Generator `ai_context` 경로에서 boolean 집계 메트릭이 있으면 #292 이후 컨버터로 재생성한다. 상세는 [[wiki/Engineering/Data-and-Security/OSI-Open-Semantic-Interchange.md]].
+
 
 **AV-SQL 적용**: View Generator가 Ossie YAML을 생성·검증할 때 문서 예시를 그대로 복사하면 스키마 실패하던 함정이 제거된다. 온톨로지 스포크를 `ai_context`에 주입할 때는 flatten 문법으로 맞춘 뒤 `validate.py`를 CI 게이트로 둔다. 상세는 [[wiki/Engineering/Data-and-Security/OSI-Open-Semantic-Interchange.md]].
 
@@ -212,6 +225,8 @@ AV-SQL은 특히 현실 세계의 대규모 스키마 환경에서 탁월한 성
 - [Apache Ossie Databricks Unity Catalog Metric View converter PR #224](https://github.com/apache/ossie/pull/224) (MERGED)
 - [Apache Ossie WisdomAI domain converter PR #239](https://github.com/apache/ossie/pull/239) (MERGED)
 - [Apache Ossie CLI plugin objects PR #154](https://github.com/apache/ossie/pull/154) (MERGED)
+- [Apache Ossie NVIDIA GSF converter PR #247](https://github.com/apache/ossie/pull/247) (MERGED)
+- [Apache Ossie dbt SUM_BOOLEAN qualified columns PR #292](https://github.com/apache/ossie/pull/292) (MERGED)
 - [Apache Ossie (incubating)](https://ossie.apache.org/)
 - Snowflake Managed MCP Server documentation
 

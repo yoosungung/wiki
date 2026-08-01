@@ -1,6 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-01 | INBOX_DRAIN | inbox/* | 0 | empty no-op (`.gitkeep` only) |
+| 2026-08-01 | RESEARCH | Web/GitHub | 7 | LiteRT AsrEngine/ringbuffer; vllm-rbln a4+0.11.1; Ossie #292; Supermemory MCP #1394/#1395; OpenClaw #117587; Furiosa/WebLLM/Halo ALREADY_COVERED |
+| 2026-08-01 | INGEST | raw/ | 5 | litert-asr-ringbuffer, vllm-rbln-a4-0111, ossie-sum-boolean, supermemory-mcp-contracts, openclaw-plugin-bundle |
+| 2026-08-01 | SYNTHESIZE | wiki/ | 8 | 스마트폰 LiteRT; 리벨리온 EXAONE/동향; AV-SQL·OSI; Supermemory MCP; OpenClaw MAS |
+| 2026-08-01 | LINT | Root / wiki | ALL | 데일리 생성, D-2(2026-07-30) 삭제, raw/ 합성 후 삭제, 연구_주제·INDEX META |
 | 2026-07-31 | INBOX_DRAIN | inbox/{aa,nl2sql,pm,qa,sw-factory,ta} | 31 | 재사용 패턴→wiki 6신설+갱신; PR/티켓 진행 EXCLUDE_PROGRESS 후 git rm |
 | 2026-07-31 | RESEARCH | Web/GitHub | 3 | LiteRT-LM 07-31 commits; Supermemory graph-memory docs; Google MTP blog ALREADY_COVERED |
 | 2026-07-31 | SYNTHESIZE | wiki/ | 11 | Parent-Done·MCP cache poison·PAT probe·Helm CM·Secret/CM·Test/Prod paths; Spider2 agent AC; LiteRT; Supermemory; path-graph hygiene; Factory MOC |
