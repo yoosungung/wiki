@@ -3,12 +3,13 @@ id: sglang-gemma4-llm-serving-cluster-ops
 title: "SGLang Gemma4 llm-serving 클러스터 운영 (12b/31b)"
 status: canonical
 owner: km
-updated: "2026-07-30"
-last_updated: "2026-07-30"
-review_after: "2026-08-30"
+updated: "2026-08-02"
+last_updated: "2026-08-02"
+review_after: "2026-11-02"
 sources:
   - ticket:42
   - kubectl:llm-serving
+  - schedule:ta-k8s-daily
 tags: ["Models", "Serving", "SGLang", "Kubernetes", "Gemma4", "GPU"]
 type: "wiki"
 ---
@@ -44,8 +45,15 @@ kubectl delete deployment sglang-gemma4-31b -n llm-serving
 
 31b를 다시 올릴 때는 12b 스케일을 먼저 줄이거나 노드 GPU를 늘린다.
 
+## 일일 점검 기준선
+
+- 기본 점유: `sglang` 계열 복제본이 노드 allocatable GPU를 **전량 Ready**로 쓰는 상태를 정상으로 본다(예: 2 GPU → 2/2).
+- 같은 클러스터의 **의도적 scale-0** Deploy(예: 프록시 풀)가 empty endpoints여도 GPU 서빙 Ready와 무관하면 사고로 올리지 않는다 — [[wiki/Engineering/Infrastructure-and-DevOps/K8s-Intentional-Scale-Zero-Empty-Endpoints.md]].
+- 노드 `DiskPressure`/`MemoryPressure`/`PIDPressure`=False를 GPU Ready와 함께 확인한다.
+
 ## 🔗 관련 문서
 
 - [[wiki/Models/Optimization-and-Serving/SGLang LLM 서빙 프레임워크 리뷰.md]]
 - [[wiki/Models/Optimization-and-Serving/000_Optimization-and-Serving-MOC.md]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/path-graph-Argo-ImagePullBackOff-runbook.md]]
+- [[wiki/Engineering/Infrastructure-and-DevOps/K8s-Intentional-Scale-Zero-Empty-Endpoints.md]]

@@ -3,9 +3,9 @@ title: "Supermemory: 에이전트 네이티브 메모리 시스템 및 MCP 아�
 tags: ["Agents", "Implementation", "Memory", "Supermemory", "MCP", "SMFS", "Cloudflare"]
 type: "wiki"
 status: "published"
-last_updated: "2026-08-01"
-updated: "2026-08-01"
-related_raw: ["[[2026-07-29-supermemory-company-brain-proactivity-nova.md]]", "[[2026-07-28-supermemory-company-brain-custom-mcp.md]]", "[[2026-07-26-supermemory-chatgpt-mcp-setup.md]]", "[[2026-07-25-supermemory-cursor-agents-company-brain.md]]", "[[2026-07-24-supermemory-mcp-scope-opencode.md]]", "[[2026-07-23-supermemory-agents-memory-workspace.md]]", "[[2026-07-22-supermemory-company-brain-open-signup.md]]", "[[2026-07-21-supermemory-mcp-tool-safety-annotations.md]]", "[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]", "[[2026-07-12-supermemory-local-6767-cli-mcp-context.md]]", "[[raw/2026-07-13-sadik-mohammad-rag-systems-limitations.md]]", "[[2026-07-13-supermemory-openclaw-claude-plugins.md]]", "[[2026-07-16-supermemory_ai_memory_layer_analysis.md]]", "[[2026-07-18-supermemory-server-v0.0.5-pluggable-embeddings.md]]", "[[2026-07-19-supermemory-server-v0.0.6-windows.md]]"]
+last_updated: "2026-08-02"
+updated: "2026-08-02"
+related_raw: ["[[2026-08-02-supermemory-company-brain-skills.md]]", "[[2026-07-29-supermemory-company-brain-proactivity-nova.md]]", "[[2026-07-28-supermemory-company-brain-custom-mcp.md]]", "[[2026-07-26-supermemory-chatgpt-mcp-setup.md]]", "[[2026-07-25-supermemory-cursor-agents-company-brain.md]]", "[[2026-07-24-supermemory-mcp-scope-opencode.md]]", "[[2026-07-23-supermemory-agents-memory-workspace.md]]", "[[2026-07-22-supermemory-company-brain-open-signup.md]]", "[[2026-07-21-supermemory-mcp-tool-safety-annotations.md]]", "[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]", "[[2026-07-12-supermemory-local-6767-cli-mcp-context.md]]", "[[raw/2026-07-13-sadik-mohammad-rag-systems-limitations.md]]", "[[2026-07-13-supermemory-openclaw-claude-plugins.md]]", "[[2026-07-16-supermemory_ai_memory_layer_analysis.md]]", "[[2026-07-18-supermemory-server-v0.0.5-pluggable-embeddings.md]]", "[[2026-07-19-supermemory-server-v0.0.6-windows.md]]"]
 ---
 
 # 🧠 Supermemory: 에이전트 네이티브 메모리 시스템
@@ -346,6 +346,21 @@ KM/에이전트 적용: Windows 개발 머신에서도 Linux/macOS와 같은 plu
 ```
 
 **적용 팁**: Cursor/Claude MCP에 Supermemory를 붙일 때 그래프 위젯이 빈 화면이면 #1394 widget domain·hash를 먼저 확인한다. OAuth 실패는 #1395 validation flow와 일반 로그인 경로를 구분해 재시도한다.
+
+### Company Brain Skills · trial visibility (2026-08-02)
+
+1. **Skills settings** ([#1322](https://github.com/supermemoryai/supermemory/pull/1322) / [`f14cdd7`](https://github.com/supermemoryai/supermemory/commit/f14cdd7)): Company Brain **Skills** UI — **Org-wide** / **Personal** 섹션 분리, Markdown 업로드 autofill, 스코프별 생성·편집, **approval**, 서버 구동 permissions. 백엔드 하네스: `supermemoryai/mono#2611`.
+2. **Trial visibility + setup timeline** ([#1384](https://github.com/supermemoryai/supermemory/pull/1384) / [`a787041`](https://github.com/supermemoryai/supermemory/commit/a787041)): 헤더 trial days pill(Autumn 우선·org metadata fallback); Brain home 타임라인 카드(`/brain/overview` milestones); onboarding Slack/헤더 trial copy. **`/brain/connections` → `/brain/overview`**.
+
+```text
+# Company Brain Skills / trial 운영
+1. Org Skills = admin create + approval; Personal = member private playbook
+2. Markdown 업로드 → autofill 후 스코프(Org/Personal) 확인
+3. Brain home이 /brain/overview만 치는지(구 connections fetch 제거) 회귀
+4. Trial pill 일수가 Autumn vs org metadata 중 어느 소스인지 확인
+```
+
+**적용 팁**: 조직 KM playbook을 Company Brain Skills로 올릴 때 Org 스코프+approval 경로를 쓰고, Personal과 섞지 않는다. 트라이얼 UI가 비면 `/brain/overview`와 Autumn 메타를 먼저 본다.
 
 ---
 

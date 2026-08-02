@@ -1,6 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-02 | INBOX_DRAIN | inbox/ta | 1 | ta-k8s-daily → scale-0/empty-endpoints 패턴 + path-graph·SGLang 갱신 후 git rm |
+| 2026-08-02 | RESEARCH | Web/GitHub | 6 | LiteRT SWA ringbuffer mask; SM CB Skills/trial; OpenClaw cron/auth/telegram; vllm-rbln/Ossie/Furiosa ALREADY_COVERED |
+| 2026-08-02 | INGEST | raw/ | 3 | litert-swa-ringbuffer, supermemory-cb-skills, openclaw-cron-announce-auth |
+| 2026-08-02 | SYNTHESIZE | wiki/ | 7 | K8s scale-0 신설; path-graph·SGLang; 스마트폰 LiteRT; Supermemory CB; OpenClaw MAS×2 |
+| 2026-08-02 | LINT | Root / wiki | ALL | 데일리 생성, D-2(2026-07-31) 삭제, raw/ 합성 후 삭제, 연구_주제·INDEX META |
 | 2026-08-01 | INBOX_DRAIN | inbox/* | 0 | empty no-op (`.gitkeep` only) |
 | 2026-08-01 | RESEARCH | Web/GitHub | 7 | LiteRT AsrEngine/ringbuffer; vllm-rbln a4+0.11.1; Ossie #292; Supermemory MCP #1394/#1395; OpenClaw #117587; Furiosa/WebLLM/Halo ALREADY_COVERED |
 | 2026-08-01 | INGEST | raw/ | 5 | litert-asr-ringbuffer, vllm-rbln-a4-0111, ossie-sum-boolean, supermemory-mcp-contracts, openclaw-plugin-bundle |
