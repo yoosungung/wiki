@@ -1,6 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-03 | INBOX_DRAIN | inbox/{aa,qa,ta} | 4 | quality.yaml gate-skip 패턴 신설; k8s scale-0/path-graph 재확인 후 git rm |
+| 2026-08-03 | RESEARCH | Web/GitHub | 5 | LiteRT C API/engine-lite·CPU4·audio soft tokens; vllm-rbln a5; OpenClaw gateway health/MMS; SM/Ossie/Furiosa ALREADY_COVERED |
+| 2026-08-03 | INGEST | raw/ | 3 | litert-capi-audio, vllm-rbln-a5, openclaw-gateway-mms |
+| 2026-08-03 | SYNTHESIZE | wiki/ | 9 | Tenant-Quality-Yaml-Gate-Skip; Factory/MOC; K8s×2; 스마트폰 LiteRT; 리벨리온×2; OpenClaw MAS×2 |
+| 2026-08-03 | LINT | Root / wiki | ALL | 데일리 생성, D-2(2026-08-01) 삭제, raw/ 합성 후 삭제, 연구_주제·INDEX META |
 | 2026-08-02 | INBOX_DRAIN | inbox/ta | 1 | ta-k8s-daily → scale-0/empty-endpoints 패턴 + path-graph·SGLang 갱신 후 git rm |
 | 2026-08-02 | RESEARCH | Web/GitHub | 6 | LiteRT SWA ringbuffer mask; SM CB Skills/trial; OpenClaw cron/auth/telegram; vllm-rbln/Ossie/Furiosa ALREADY_COVERED |
 | 2026-08-02 | INGEST | raw/ | 3 | litert-swa-ringbuffer, supermemory-cb-skills, openclaw-cron-announce-auth |

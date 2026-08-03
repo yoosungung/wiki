@@ -1,7 +1,7 @@
 ---
 title: 에이전트 네이티브 소프트웨어 팩토리(Agentic Software Factory) 아키텍처 및 자동화 방안
-last_updated: "2026-07-31"
-updated: "2026-07-31"
+last_updated: "2026-08-03"
+updated: "2026-08-03"
 id: agentic-software-factory
 related_raw: ["[[2026-07-27-agentic_software_factory_and_automation.md]]"]
 tags: [Engineering, AI-Native-Engineering, Software-Factory, Developer-Agent, SDLC-Automation]
@@ -72,6 +72,7 @@ AI 스크럼 마스터 에이전트는 기획 실행 상태의 정합성을 감�
 
 ### SDLC 게이트·보드 함정 (팩토리 운영)
 - **Parent Done**: 자식이 모두 Done/Archived인지 하드 게이트 — [[wiki/Engineering/AI-Native-Engineering/Parent-Done-Requires-Closed-Subtasks.md]]
+- **quality.yaml 게이트 skip**: `clean_code`/`bulk_api`/`opik`/`load` 키 없으면 skip(사유)·NF 미생성 — [[wiki/Engineering/AI-Native-Engineering/Tenant-Quality-Yaml-Gate-Skip-Pattern.md]]
 - **세션리스 MCP 캐시 오염**: status labels는 projectId resolve-before-cache — [[wiki/Engineering/AI-Native-Engineering/Sessionless-MCP-Status-Label-Cache-Poison.md]]
 - **PAT 쓰기 프로브**: REST `permissions.push`만으로 ship-ready 판정 금지 — [[wiki/Engineering/Infrastructure-and-DevOps/GitHub-Fine-Grained-PAT-Contents-Write-Probe.md]]
 
@@ -106,5 +107,6 @@ AI 스크럼 마스터 에이전트는 기획 실행 상태의 정합성을 감�
 - 에이전트 다단계 피드백 루프 평가 및 Harbor: [[wiki/Agents/Evaluations/Deep-Agents-Benchmarking-Methodology.md]]
 - 적응형 추론 모델 라우팅 기술: [[wiki/Models/Optimization-and-Serving/Adaptive-Inference-Routing-Fastino-Pioneer.md]]
 - Parent Done 게이트: [[wiki/Engineering/AI-Native-Engineering/Parent-Done-Requires-Closed-Subtasks.md]]
+- quality.yaml 게이트 skip: [[wiki/Engineering/AI-Native-Engineering/Tenant-Quality-Yaml-Gate-Skip-Pattern.md]]
 - MCP status 캐시 오염: [[wiki/Engineering/AI-Native-Engineering/Sessionless-MCP-Status-Label-Cache-Poison.md]]
 - Wiki 합성 정책: [[wiki/Engineering/AI-Native-Engineering/Wiki-Synthesis-Policy.md]]

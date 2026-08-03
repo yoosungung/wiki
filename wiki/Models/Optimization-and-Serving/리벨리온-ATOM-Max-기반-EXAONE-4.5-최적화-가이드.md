@@ -269,12 +269,29 @@ uv pip install "vllm-rbln==0.11.1" \
 
 **적용 팁**: EXAONE/MLA 서빙은 a4(#859) 이후 APC hit율·정합성을 재측정한다. 프로덕션은 `v0.11.1` 핀 + torch-rbln 0.3.0을 맞추고, DP+MTP는 #792 회귀를 체크리스트에 넣는다.
 
+## 4.12 vLLM-RBLN v0.11.2a5 (2026-08-03)
+
+[v0.11.2a5](https://github.com/RBLN-SW/vllm-rbln/releases/tag/v0.11.2a5) — attention device buffer 재사용 + deps 핀.
+
+| 항목 | 내용 | 재사용 claim |
+| :--- | :--- | :--- |
+| **attention perf** | [#860](https://github.com/RBLN-SW/vllm-rbln/pull/860) step마다 device buffer 할당 대신 **reuse** | 긴 컨텍스트·고배치에서 allocator churn·TTFT jitter 감소 기대 — 업그레이드 후 tok/s·메모리 피크 재측정 |
+| **optimum-rbln** | [#871](https://github.com/RBLN-SW/vllm-rbln/pull/871) **0.11.1** | stable 0.11.1 라인과 동일 핀 |
+| **torch-rbln** | [#874](https://github.com/RBLN-SW/vllm-rbln/pull/874) **0.3.0** | a4/0.11.1과 동일 major |
+
+```bash
+uv pip install "vllm-rbln==0.11.2a5" \
+  --extra-index-url https://wheels.vllm.ai/0.22.0/cpu --torch-backend cpu
+```
+
+**적용 팁**: a4→a5는 기능보다 allocator 경로 변경이 핵심이므로, EXAONE/MLA 벤치는 warmup 이후 steady tok/s와 NPU 메모리 피크를 같이 본다. 프로덕션 핀은 여전히 `v0.11.1` 후보, 프리릴리즈 추적은 `0.11.2a5`.
+
 ## 5. 실전 최적화 체크리스트
 
 1.  **모델 컴파일**: SDK v0.11.0+에서는 vLLM API 경로의 자동 컴파일을 우선 사용. 레거시 AOT가 필요하면 `optimum-cli`로 Transformers v5 호환 재컴파일.
 2.  **병렬화 최적화**: 33B 모델의 경우 8개 이상의 ATOM-Max 칩을 활용한 Tensor Parallelism(TP) 설정 권장. `VLLM_RBLN_NUM_DEVICES_PER_LOCAL_RANK`로 디바이스 수 지정.
 3.  **Physical AI 연동**: LG 로봇 KAPEX 등 물리적 하드웨어와의 실시간 추론 연동 테스트 수행.
-4.  **a7~a4 / 0.11.1 검증**: a8 chunked prefill×spec; a9 MTP contiguous; a11 DP×MTP·w8a8·APC; **a2 grammar CPU**; **a3 optimum rc0**; **a4 MLA APC KV index · optimum rc1**; **stable 0.11.1 멀티모달 APC·w8a8·torch-rbln 0.3.0**.
+4.  **a7~a5 / 0.11.1 검증**: a8 chunked prefill×spec; a9 MTP contiguous; a11 DP×MTP·w8a8·APC; **a2 grammar CPU**; **a3 optimum rc0**; **a4 MLA APC KV index · optimum rc1**; **a5 attention buffer reuse · optimum 0.11.1**; **stable 0.11.1 멀티모달 APC·w8a8·torch-rbln 0.3.0**.
 
 ---
 **관련 프로젝트**:

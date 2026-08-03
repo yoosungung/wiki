@@ -3,9 +3,9 @@ id: path-graph-argo-imagepullbackoff-runbook
 title: "path-graph stale Argo Workflow ImagePullBackOff 런북"
 status: canonical
 owner: km
-updated: "2026-08-02"
-last_updated: "2026-08-02"
-review_after: "2026-11-02"
+updated: "2026-08-03"
+last_updated: "2026-08-03"
+review_after: "2026-11-03"
 sources:
   - ticket:41
   - https://github.com/yoosungung/k8s-test/pull/1
@@ -49,6 +49,8 @@ kubectl get pods -n path-graph   # ImagePullBackOff=0, filestash 1/1
 ImagePullBackOff가 0이어도 **Failed/Error/Succeeded terminal Workflow CR**이 수십 건 남을 수 있다(사용자 영향 없음). 정리 시에도 **Pod가 아니라 Workflow 단위 delete**. Running만 남기거나 일괄 `kubectl delete workflow -n path-graph --field-selector=status.phase!=Running` 계열로 정리.
 
 **재확인 (일일 점검 패턴)**: filestash Ready·ImagePullBackOff=0인 상태에서도 terminal Workflow CR이 다수 남는 것은 정상 잔여로 본다. 일일 리포트에서 “abnormal pods”와 분리하고, 정리는 여전히 Workflow-delete. 의도적 scale-0 empty endpoints와 함께 판별: [[wiki/Engineering/Infrastructure-and-DevOps/K8s-Intentional-Scale-Zero-Empty-Endpoints.md]].
+
+**재확인 (2026-08-03)**: filestash 1/1·ImagePullBackOff=0·Warning events 없음; terminal Error/Failed/Succeeded Workflow CR만 잔존 → 위생 대상일 뿐 incident 아님. 점검은 read-only kubectl 유지.
 
 ## 🔗 관련 문서
 
