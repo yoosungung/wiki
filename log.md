@@ -1,6 +1,7 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-04 | LINT | wiki/ Mermaid | 3+test | ticket 109: 노드 라벨 선두 N. → quoted ["N. …"] (Unsupported markdown: list); 회귀 테스트 추가 |
 | 2026-08-03 | INBOX_DRAIN | inbox/{aa,qa,ta} | 4 | quality.yaml gate-skip 패턴 신설; k8s scale-0/path-graph 재확인 후 git rm |
 | 2026-08-03 | RESEARCH | Web/GitHub | 5 | LiteRT C API/engine-lite·CPU4·audio soft tokens; vllm-rbln a5; OpenClaw gateway health/MMS; SM/Ossie/Furiosa ALREADY_COVERED |
 | 2026-08-03 | INGEST | raw/ | 3 | litert-capi-audio, vllm-rbln-a5, openclaw-gateway-mms |

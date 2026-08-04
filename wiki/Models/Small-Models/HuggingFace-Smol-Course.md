@@ -16,10 +16,10 @@ tags: [Small-Models, Optimization, SFT, Preference-Alignment, Hugging-Face]
 
 ```mermaid
 flowchart LR
-    Base[Base SLM: 1B-8B] --> SFT[1. Instruction Tuning: SFTTrainer]
+    Base[Base SLM: 1B-8B] --> SFT["1. Instruction Tuning: SFTTrainer"]
     SFT --> PEFT[PEFT 적용: LoRA / QLoRA 어댑터 결합]
-    PEFT --> Preference[2. Preference Alignment: DPOTrainer / ORPOTrainer]
-    Preference --> Eval[3. Evaluation: LM-Eval-Harness / 커스텀 벤치마크]
+    PEFT --> Preference["2. Preference Alignment: DPOTrainer / ORPOTrainer"]
+    Preference --> Eval["3. Evaluation: LM-Eval-Harness / 커스텀 벤치마크"]
 ```
 
 ## 2. 3대 핵심 학습 및 정렬 방법론
