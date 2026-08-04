@@ -17,9 +17,9 @@ tags: [Engineering, AI-Native-Engineering, Software-Factory, Developer-Agent, SD
 
 ```mermaid
 graph TD
-    Intake["1. 인테이크 레이어: 자연어 명세 압축 및 표준화"] --> Orchestrator["2. 오케스트레이터: 상태/이력 중앙 공유 및 동시성 제어"]
-    Orchestrator --> Execution["3. 실행 레이어: 코드 생성 / E2E 테스트 실행"]
-    Execution --> Control["4. 제어 레이어: 실시간 카나리 모니터링 / 롤백 판단"]
+    Intake["1: 인테이크 레이어: 자연어 명세 압축 및 표준화"] --> Orchestrator["2: 오케스트레이터: 상태/이력 중앙 공유 및 동시성 제어"]
+    Orchestrator --> Execution["3: 실행 레이어: 코드 생성 / E2E 테스트 실행"]
+    Execution --> Control["4: 제어 레이어: 실시간 카나리 모니터링 / 롤백 판단"]
     Control -->|역환류| Intake
 ```
 

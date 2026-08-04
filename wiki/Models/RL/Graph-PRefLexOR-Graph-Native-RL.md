@@ -28,10 +28,10 @@ tags: [Reasoning, RL, GRPO, Graph-Native, Scientific-Discovery, Materials-Scienc
 
 ```mermaid
 graph LR
-    Brain["1. 개념 도출"] --> Sketch["2. 관계 정의"]
-    Sketch --> JSON["3. JSON 그래프 작성"]
-    JSON --> Pattern["4. 패턴 추출"]
-    Pattern --> Hypothesis["5. 가설 합성"]
+    Brain["1: 개념 도출"] --> Sketch["2: 관계 정의"]
+    Sketch --> JSON["3: JSON 그래프 작성"]
+    JSON --> Pattern["4: 패턴 추출"]
+    Pattern --> Hypothesis["5: 가설 합성"]
 ```
 
 ---
