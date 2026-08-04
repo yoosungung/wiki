@@ -3,12 +3,14 @@ id: test-overlay-vs-release-package-deploy-paths
 title: "Test Overlay vs Release Package 배포 축 분리"
 status: canonical
 owner: km
-updated: "2026-07-31"
-last_updated: "2026-07-31"
-review_after: "2026-10-31"
+updated: "2026-08-04"
+last_updated: "2026-08-04"
+review_after: "2026-11-04"
 sources:
   - ticket:59
   - ticket:61
+  - ticket:116
+  - ticket:60
 tags: ["Infrastructure", "DevOps", "Kubernetes", "GHCR", "CD", "RBAC"]
 type: "wiki"
 ---
@@ -44,6 +46,14 @@ kubectl auth can-i create secret -n <ns> --as=system:serviceaccount:<ns>:<sa>
 kubectl auth can-i create ingress -n <ns> --as=system:serviceaccount:<ns>:<sa>
 ```
 
+## Overlay 재적용 함정 (공유 Secret)
+
+`apply.sh`가 Secret을 **재생성**하면 기존 `MCP_SHARED_TOKEN`(또는 동등 shared secret)이 바뀌어 backend↔mcp가 깨질 수 있다. 토큰이 이미 있으면 **보존**하고 idempotent `-k` apply만 한다. Service 스모크 포트는 문서의 containerPort(예: 8080/8800)를 쓴다 — `80` 가정 금지.
+
+## GHCR publish ACL
+
+Actions `packages: write`만으로 부족할 수 있다 — [[wiki/Engineering/Infrastructure-and-DevOps/GHCR-Actions-Package-Write-ACL.md]].
+
 ## Doc smoke
 
 배포 문서 마커 + `kubectl` client dry-run을 스크립트로 고정한다 (예: `verify-deploy-docs.sh`).
@@ -51,5 +61,7 @@ kubectl auth can-i create ingress -n <ns> --as=system:serviceaccount:<ns>:<sa>
 ## 🔗 관련 문서
 
 - [[wiki/Engineering/Infrastructure-and-DevOps/K8s-Secret-vs-ConfigMap-Deploy-Hardening.md]]
+- [[wiki/Engineering/Infrastructure-and-DevOps/GHCR-Actions-Package-Write-ACL.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Playwright-Frontend-UI-Smoke-Pattern.md]]
+- [[wiki/Engineering/AI-Native-Engineering/In-Process-ASGI-Load-Harness-Pattern.md]]
 - [[wiki/Models/Optimization-and-Serving/SGLang-gemma4-llm-serving-cluster-ops.md]]

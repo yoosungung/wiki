@@ -3,9 +3,9 @@ title: "리벨리온 ATOM-Max NPU 및 vLLM-RBLN 최신 동향 (2026)"
 tags: ["Models", "Optimization", "Serving", "NPU", "Rebellions", "vLLM-RBLN", "EXAONE"]
 type: "wiki"
 status: "published"
-last_updated: "2026-08-03"
-updated: "2026-08-03"
-related_raw: ["[[2026-08-03-vllm-rbln-v0.11.2a5.md]]", "[[2026-08-01-vllm-rbln-v0.11.2a4-v0.11.1.md]]", "[[2026-07-30-vllm-rbln-v0.11.2a3.md]]", "[[2026-07-29-vllm-rbln-v0.11.2a2.md]]", "[[2026-07-28-vllm-rbln-v0.11.2a0-a1.md]]", "[[2026-07-24-vllm-rbln-v0.11.2.dev0.md]]", "[[2026-06-01-Rebellions-NPU-Update.md]]"]
+last_updated: "2026-08-04"
+updated: "2026-08-04"
+related_raw: ["[[2026-08-04-vllm-rbln-v0.11.2a7.md]]", "[[2026-08-03-vllm-rbln-v0.11.2a5.md]]", "[[2026-08-01-vllm-rbln-v0.11.2a4-v0.11.1.md]]", "[[2026-07-30-vllm-rbln-v0.11.2a3.md]]", "[[2026-07-29-vllm-rbln-v0.11.2a2.md]]", "[[2026-07-28-vllm-rbln-v0.11.2a0-a1.md]]", "[[2026-07-24-vllm-rbln-v0.11.2.dev0.md]]", "[[2026-06-01-Rebellions-NPU-Update.md]]"]
 ---
 
 # 리벨리온 ATOM-Max NPU 및 vLLM-RBLN 최신 동향 (2026)
@@ -68,6 +68,17 @@ vLLM-RBLN 플러그인은 2026년 상반기 업데이트를 통해 vLLM 에코�
 - **perf(attention)**: step마다 device buffer 할당 대신 **재사용** ([#860](https://github.com/RBLN-SW/vllm-rbln/pull/860))
 - deps: `optimum-rbln==0.11.1`([#871](https://github.com/RBLN-SW/vllm-rbln/pull/871)), `torch-rbln` **0.3.0**([#874](https://github.com/RBLN-SW/vllm-rbln/pull/874))
 - 설치: `uv pip install "vllm-rbln==0.11.2a5"` — 상세 [[wiki/Models/Optimization-and-Serving/리벨리온-ATOM-Max-기반-EXAONE-4.5-최적화-가이드.md]]
+
+### v0.11.2a6 / v0.11.2a7 (2026-08-04)
+- **a6**: custom-op 등록을 `rebel-compiler`로 defer(+fallback) ([#845](https://github.com/RBLN-SW/vllm-rbln/pull/845)); CODEOWNERS
+- **a7**: `vllm` **0.24.0** bump ([#829](https://github.com/RBLN-SW/vllm-rbln/pull/829)); optimum 테스트 `tests/optimum` 통합([#861](https://github.com/RBLN-SW/vllm-rbln/pull/861))
+- 설치: `uv pip install "vllm-rbln==0.11.2a7"` — wheels index는 릴리스 노트 `vllm` 버전과 맞출 것
+
+```bash
+uv pip install "vllm-rbln==0.11.2a7" \
+  --extra-index-url https://wheels.vllm.ai/0.24.0/cpu \
+  --torch-backend cpu
+```
 
 ## 3. 엔터프라이즈 및 클라우드 생태계
 - **Red Hat OpenShift AI 지원**: 2026년 5월부터 Red Hat OpenShift AI에서 공식 인증된 컨테이너 이미지와 `vLLM RBLN ServingRuntime`을 제공하여 기업용 AI 인프라 배포가 용이해졌습니다.

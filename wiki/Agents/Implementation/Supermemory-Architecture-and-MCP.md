@@ -3,8 +3,8 @@ title: "Supermemory: 에이전트 네이티브 메모리 시스템 및 MCP 아�
 tags: ["Agents", "Implementation", "Memory", "Supermemory", "MCP", "SMFS", "Cloudflare"]
 type: "wiki"
 status: "published"
-last_updated: "2026-08-02"
-updated: "2026-08-02"
+last_updated: "2026-08-04"
+updated: "2026-08-04"
 related_raw: ["[[2026-08-02-supermemory-company-brain-skills.md]]", "[[2026-07-29-supermemory-company-brain-proactivity-nova.md]]", "[[2026-07-28-supermemory-company-brain-custom-mcp.md]]", "[[2026-07-26-supermemory-chatgpt-mcp-setup.md]]", "[[2026-07-25-supermemory-cursor-agents-company-brain.md]]", "[[2026-07-24-supermemory-mcp-scope-opencode.md]]", "[[2026-07-23-supermemory-agents-memory-workspace.md]]", "[[2026-07-22-supermemory-company-brain-open-signup.md]]", "[[2026-07-21-supermemory-mcp-tool-safety-annotations.md]]", "[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]", "[[2026-07-12-supermemory-local-6767-cli-mcp-context.md]]", "[[raw/2026-07-13-sadik-mohammad-rag-systems-limitations.md]]", "[[2026-07-13-supermemory-openclaw-claude-plugins.md]]", "[[2026-07-16-supermemory_ai_memory_layer_analysis.md]]", "[[2026-07-18-supermemory-server-v0.0.5-pluggable-embeddings.md]]", "[[2026-07-19-supermemory-server-v0.0.6-windows.md]]"]
 ---
 
@@ -361,6 +361,20 @@ KM/에이전트 적용: Windows 개발 머신에서도 Linux/macOS와 같은 plu
 ```
 
 **적용 팁**: 조직 KM playbook을 Company Brain Skills로 올릴 때 Org 스코프+approval 경로를 쓰고, Personal과 섞지 않는다. 트라이얼 UI가 비면 `/brain/overview`와 Autumn 메타를 먼저 본다.
+
+### MCP docs · graph/file upload fixes (2026-08-04)
+
+1. **MCP docs refresh** ([#1408](https://github.com/supermemoryai/supermemory/pull/1408)): revamped tool/space/widget/OAuth 흐름 — ChatGPT Web 스크린샷 가이드(light/dark), overview·setup·tools·spaces·widget 갱신, manual JSON config는 dropdown.
+2. **MCP graph + file uploads** ([#1397](https://github.com/supermemoryai/supermemory/pull/1397)): 그래프·파일 업로드 경로 수정.
+
+```text
+# MCP 클라이언트 온보딩
+1. ChatGPT Web 가이드의 light/dark 스크린샷이 현재 호스트 UI와 맞는지
+2. widget/space/OAuth 문서 경로가 로컬 MCP docs route와 일치하는지
+3. 파일 업로드→그래프 반영이 #1397 이후 빌드에서 재현되는지
+```
+
+**적용 팁**: MCP 연결 문서를 에이전트 온보딩에 붙일 때 #1408 이후 docs를 쓰고, 그래프 위젯 빈 화면은 #1394 domain/hash와 #1397 upload 경로를 순서대로 본다.
 
 ---
 

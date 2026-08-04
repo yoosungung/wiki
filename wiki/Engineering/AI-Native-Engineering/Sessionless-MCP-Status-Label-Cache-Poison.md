@@ -3,9 +3,9 @@ id: sessionless-mcp-status-label-cache-poison
 title: "세션리스 MCP 상태 라벨 캐시 오염"
 status: canonical
 owner: km
-updated: "2026-07-31"
-last_updated: "2026-07-31"
-review_after: "2026-10-31"
+updated: "2026-08-04"
+last_updated: "2026-08-04"
+review_after: "2026-11-04"
 sources:
   - ticket:60
 tags: ["Engineering", "AI-Native", "MCP", "Cache", "Kanban", "Leantime"]
@@ -44,7 +44,12 @@ resolve projectId  →  cache key = f"projectsettings.{id}.ticketlabels"  →  t
 - 빈 키 poison이 남아 있어도, 세션 project가 잡힌 `getStateLabels(null)`이 커스텀 라벨 집합을 반환하는지 확인.
 - MCP 도구에 `project_id`를 넘긴 뒤 Kanban flip이 멈추는지 확인.
 
+## 잔여: MCP 서버 import 스키
+
+앱 캐시 수정과 별개로, 에이전트 이미지의 stdio MCP가 `McpError`/`MCPError` 스키로 import 실패할 수 있다. Kanban AC 검증은 JSON-RPC Bearer + `projectId`로 가능 — [[wiki/Engineering/AI-Native-Engineering/MCP-Python-Package-Skew-Import-Failure.md]].
+
 ## 🔗 관련 문서
 
 - [[wiki/Engineering/AI-Native-Engineering/Agentic-Software-Factory.md]]
+- [[wiki/Engineering/AI-Native-Engineering/MCP-Python-Package-Skew-Import-Failure.md]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/Helm-App-Patch-ConfigMap-Persistence.md]]

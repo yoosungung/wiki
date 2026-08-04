@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-08-03 (inbox quality.yaml gate skip·ta-k8s ALREADY_COVERED·LiteRT C API/audio soft tokens·vllm-rbln a5·OpenClaw gateway health/MMS) | Root: wiki/
+[META] Updated: 2026-08-04 (inbox drain 44·Mermaid/load/clean_code/MCP-skew/pub-gate/GHCR ACL·Spider2 weekly soft·LiteRT 0.15/0.16·vllm-rbln a7·OpenClaw /tools) | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]

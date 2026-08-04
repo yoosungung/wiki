@@ -3,13 +3,18 @@ id: spider2-quality-gate-nl2sql
 title: "Spider2-Lite → nl2sql 품질 게이트 (스모크·preflight)"
 status: canonical
 owner: km
-updated: "2026-07-31"
-last_updated: "2026-07-31"
-review_after: "2026-08-30"
+updated: "2026-08-04"
+last_updated: "2026-08-04"
+review_after: "2026-11-04"
 sources:
   - ticket:32
   - ticket:37
   - ticket:38
+  - ticket:117
+  - ticket:118
+  - ticket:121
+  - ticket:122
+  - ticket:123
   - wiki/Agents/Text-to-SQL/T2SQL-Benchmarks-2026.md
   - https://github.com/xlang-ai/Spider2/tree/main/spider2-lite/evaluation_suite
   - https://github.com/nodal-data/spider2-claude-code
@@ -31,9 +36,9 @@ nl2sql 제품의 Spider2-Lite local* 품질 게이트 준비 스펙. UI Playwrig
 
 ## 2. 스코프 (스펙/AC)
 
-- 스모크 set 문서화 + preflight 재현 + agent 배선 **스펙/AC만**.
-- agent 구현(`--task agent`)은 후속.
-- 1차 스모크 instance는 **2건**. 외부 smoke도 `--limit` 소수(예: 3) 관행. DESIGN에 ~10 확장 경로만 남김.
+- 스모크 set + preflight + **주간 `opik.command` 배선**.
+- 단계(Option A): **P0** gold-sql 주간 hard → **P1** `--task agent` chat SSE → **P2** ~10 local* opt-in(후속).
+- 1차 스모크 instance는 **2건** (`local008`,`local022`). FakeAgent는 EX 품질에 쓰지 않는다.
 
 ## 3. 스모크 instance set
 
@@ -57,19 +62,30 @@ spider2-opik check
 #    + --instance-ids local008,local022
 ```
 
-- 이 repo `spider2-eval`은 PG 적재·Opik Dataset·`--task gold-sql`까지 있음.
-- `--task agent`는 DESIGN §7 AC만 고정; `tasks.py` 미배선 → 구현은 후속.
+- 이 repo `spider2-eval`은 PG 적재·Opik Dataset·`--task gold-sql`·`--task agent`(path A)까지 있음.
 
-### 4.1 `--task agent` AC (스펙 고정)
-
-정본은 DESIGN §7. 구현은 별도 티켓.
+### 4.1 `--task agent` = chat SSE path A
 
 | 항목 | AC |
 | :--- | :--- |
-| 출력 | `task_outputs["output"]` = Postgres SQL |
+| 출력 | `task_outputs["output"]` = `POST /api/chat` SSE의 **마지막 non-empty** `event: sql`의 `sql` |
 | 채점 | scorer는 **exec_result** (문자열 일치 아님) |
-| CLI 미배선 | `--task agent` → **exit 2** (`test_cli_agent_ac`) |
-| 호출 경로 후보 | 백엔드 `POST /chat`, 또는 MCP `execute_select_query` 직전 SQL |
+| 미적중 | `output=""` · 루프 계속(실험 abort 금지) |
+| Runner env | `SPIDER2_AGENT_BASE_URL`, `SPIDER2_AGENT_TIMEOUT_SEC`(기본 120), `SPIDER2_AGENT_AUTH_USER`+`SPIDER2_AGENT_AUTH_EMAIL` → `X-Forwarded-*` |
+| Auth 함정 | test overlay에 `NL2SQL_DEV_*` 없으면 헤더 누락 → chat **401** → 빈 SQL |
+
+경로 B(MCP-only)는 제품 chat 경로와 어긋나 비채택.
+
+### 4.2 주간 soft wrapper
+
+```bash
+# quality.yaml opik.command 개념
+cd spider2-eval && uv run spider2-opik weekly
+# = check → gold-sql hard → agent soft(non-blocking; SPIDER2_AGENT_BASE_URL 있을 때만)
+```
+
+- gold-sql hard 실패 → wrapper non-zero(NF).
+- agent soft 실패 → 로그만, gold hard OK면 exit 0. pass_rate floor는 후속.
 
 ## 5. In-cluster 엔드포인트
 

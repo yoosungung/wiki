@@ -1,6 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-04 | INBOX_DRAIN | inbox/* | 44 | 재사용 패턴 6신설+Spider2/quality/overlay/PAT/MCP 갱신; EXCLUDE_PROGRESS·ta-k8s ALREADY_COVERED 후 git rm |
+| 2026-08-04 | RESEARCH | Web/GitHub | 4 | LiteRT v0.15/0.16 Apple FM·js AutoToolChat; vllm-rbln a6/a7 vLLM0.24; SM MCP docs#1408; OpenClaw /tools#119306; Furiosa/WebLLM/Halo/Ossie ALREADY_COVERED |
+| 2026-08-04 | INGEST | raw/ | 4 | litert-v015-v016, vllm-rbln-a7, supermemory-mcp-docs, openclaw-tools-inventory |
+| 2026-08-04 | SYNTHESIZE | wiki/ | 14+ | Mermaid/Load/CleanCode/MCP-skew/PubGate/GHCR; Spider2 soft weekly; LiteRT·RBLN·SM·OpenClaw MAS |
+| 2026-08-04 | LINT | Root / wiki | ALL | 데일리 생성, D-2(2026-08-02) 삭제, raw/ 합성 후 삭제, 연구_주제·INDEX META |
 | 2026-08-04 | LINT | wiki/ Mermaid | 3+test | ticket 109: 노드 라벨 선두 N. → quoted ["N. …"] (Unsupported markdown: list); 회귀 테스트 추가 |
 | 2026-08-03 | INBOX_DRAIN | inbox/{aa,qa,ta} | 4 | quality.yaml gate-skip 패턴 신설; k8s scale-0/path-graph 재확인 후 git rm |
 | 2026-08-03 | RESEARCH | Web/GitHub | 5 | LiteRT C API/engine-lite·CPU4·audio soft tokens; vllm-rbln a5; OpenClaw gateway health/MMS; SM/Ossie/Furiosa ALREADY_COVERED |
