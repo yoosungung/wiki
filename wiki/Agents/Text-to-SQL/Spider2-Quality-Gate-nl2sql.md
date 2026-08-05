@@ -3,9 +3,9 @@ id: spider2-quality-gate-nl2sql
 title: "Spider2-Lite → nl2sql 품질 게이트 (스모크·preflight)"
 status: canonical
 owner: km
-updated: "2026-08-04"
-last_updated: "2026-08-04"
-review_after: "2026-11-04"
+updated: "2026-08-05"
+last_updated: "2026-08-05"
+review_after: "2026-11-05"
 sources:
   - ticket:32
   - ticket:37
@@ -15,6 +15,7 @@ sources:
   - ticket:121
   - ticket:122
   - ticket:123
+  - ticket:172
   - wiki/Agents/Text-to-SQL/T2SQL-Benchmarks-2026.md
   - https://github.com/xlang-ai/Spider2/tree/main/spider2-lite/evaluation_suite
   - https://github.com/nodal-data/spider2-claude-code
@@ -124,16 +125,36 @@ spider2-opik check
 # gold-sql --instance-ids local008,local022  → pass_rate 1.0
 ```
 
-## 6. 최소 완료선 (품질 테스트 "준비")
+## 6. gold-sql vs `--task agent`
+
+| 축 | 용도 | 함정 |
+| :--- | :--- | :--- |
+| `gold-sql` | PG exec_result 베이스라인·주간 hard | 제품 chat 경로를 대체하지 않음 |
+| `--task agent` | chat SSE path A → 마지막 `event: sql` | runner checkout이 agent 구현 이전이면 exit-2 stub; “미구현” 문구는 **checkout SHA**와 함께 쓸 것 |
+
+제품 EX AC는 agent 축. gold-sql만 돌린 보고는 baseline으로 명시한다.
+
+## 7. Runner env·MDL PVC (pass_rate>0 전제)
+
+- QA/agent runner에 `MCP_POSTGRES_URL`(또는 동등)와 Spider2 lite 경로가 없으면 `spider2-opik check`가 실패한다. SA가 secret get 불가하면 **ephemeral PVC seed** 또는 STS `envFrom`/shared secret이 필요.
+- Opik: `OPIK_URL_OVERRIDE=http://opik-frontend.opik.svc.cluster.local:5173/api`, dataset `spider2-lite-local-exec`(135).
+- 메타데이터 PVC에 모델 0개(빈 manifest)면 `search_tables` 공허 → analyst hang. Baseball/IPL 등 스모크 DB용 `*.model.json`을 backend·mcp 메타데이터 HEAD에 **동일 commit**으로 맞춘다(`/admin/sync`가 remote 없으면 tree 복사).
+- MCP Host 403은 토큰보다 allowlist일 수 있음 — [[wiki/Engineering/Infrastructure-and-DevOps/MCP-Host-Allowlist-DNS-Rebinding.md]].
+- 16K overflow / no-sql hang — [[wiki/Engineering/AI-Native-Engineering/LLM-Tool-Payload-Context-Trim.md]], [[wiki/Engineering/AI-Native-Engineering/Agent-SSE-Failfast-and-Tool-Flood-Guard.md]].
+
+## 8. 최소 완료선 (품질 테스트 "준비")
 
 1. 스모크 instance set 문서화 (본 §3)
 2. preflight(`check` / `gold-sql`) 재현 (본 §4)
-3. agent 배선 AC (구현 제외)
+3. agent 배선 AC + runner env + MDL seed (본 §4.1·§7)
 
 ## 🔗 관련 문서
 
 - [[wiki/Agents/Text-to-SQL/T2SQL-Benchmarks-2026.md]]
 - [[wiki/Agents/Text-to-SQL/AV-SQL-Agentic-Views-Spider-2-0.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Playwright-Frontend-UI-Smoke-Pattern.md]]
+- [[wiki/Engineering/AI-Native-Engineering/LLM-Tool-Payload-Context-Trim.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Agent-SSE-Failfast-and-Tool-Flood-Guard.md]]
+- [[wiki/Engineering/Infrastructure-and-DevOps/MCP-Host-Allowlist-DNS-Rebinding.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Agentic-Software-Factory.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Wiki-Synthesis-Policy.md]]

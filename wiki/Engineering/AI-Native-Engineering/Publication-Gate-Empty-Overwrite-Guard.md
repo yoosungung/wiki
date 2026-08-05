@@ -3,12 +3,13 @@ id: publication-gate-empty-overwrite-guard
 title: "퍼블리시 게이트 + 빈 산출물 덮어쓰기 금지"
 status: canonical
 owner: km
-updated: "2026-08-04"
-last_updated: "2026-08-04"
-review_after: "2026-11-04"
+updated: "2026-08-05"
+last_updated: "2026-08-05"
+review_after: "2026-11-05"
 sources:
   - schedule:publication-safety
   - schedule:issue-radar
+  - ticket:167
 tags: ["Engineering", "AI-Native", "Publish", "Safety", "Git"]
 type: "wiki"
 ---
@@ -25,7 +26,7 @@ python agent/publication_gate.py --base origin/main
 # exit 0 = PASS, exit 2 / PUBLICATION HOLD = hold (push 금지)
 ```
 
-게이트 PASS 후에도 git push 403이면 **자격 증명/ACL 문제** — [[wiki/Engineering/Infrastructure-and-DevOps/GitHub-Fine-Grained-PAT-Contents-Write-Probe.md]].
+게이트 PASS 후에도 git push 403이면 **자격 증명/ACL 문제** — [[wiki/Engineering/Infrastructure-and-DevOps/GitHub-Fine-Grained-PAT-Contents-Write-Probe.md]] (remote 임베디드 PAT vs env `GH_TOKEN` 불일치 포함).
 
 ## 2) Empty overwrite guard
 

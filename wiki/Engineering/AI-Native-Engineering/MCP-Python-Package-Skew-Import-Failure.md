@@ -3,12 +3,13 @@ id: mcp-python-package-skew-import-failure
 title: "MCP Python 패키지 스키: import 실패와 JSON-RPC fallback"
 status: canonical
 owner: km
-updated: "2026-08-04"
-last_updated: "2026-08-04"
-review_after: "2026-11-04"
+updated: "2026-08-05"
+last_updated: "2026-08-05"
+review_after: "2026-11-05"
 sources:
   - ticket:112
   - ticket:60
+  - ticket:172
 tags: ["Engineering", "AI-Native", "MCP", "Python", "Packaging"]
 type: "wiki"
 ---
@@ -24,6 +25,7 @@ type: "wiki"
 | `pydantic_settings` ImportError | venv에 `pydantic-settings` 미핀 |
 | `McpError` vs `MCPError` | `fastmcp`가 `mcp.shared.exceptions.McpError`를 기대하는데 설치된 `mcp`는 `MCPError`만 export |
 | PATH에 서버 바이너리 없음 | `/opt/.../bin/<server>` 미심볼릭 → discovery만 실패(설치와 별개) |
+| `streamablehttp_client` ImportError | 앱 Docker가 lock 없이 `mcp` 2.x 해상 — [[wiki/Engineering/AI-Native-Engineering/MCP-Uv-Lock-Streamable-HTTP-Migrate.md]] |
 
 ## 운영 규칙
 
@@ -33,6 +35,7 @@ type: "wiki"
 
 ## 🔗 관련 문서
 
+- [[wiki/Engineering/AI-Native-Engineering/MCP-Uv-Lock-Streamable-HTTP-Migrate.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Sessionless-MCP-Status-Label-Cache-Poison.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Tenant-Quality-Yaml-Gate-Skip-Pattern.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Agentic-Software-Factory.md]]

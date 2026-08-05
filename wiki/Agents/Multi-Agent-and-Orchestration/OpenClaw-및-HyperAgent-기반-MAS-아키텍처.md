@@ -3,8 +3,8 @@ title: "OpenClaw 및 HyperAgent 기반 MAS 아키텍처 (2026)"
 tags: ["Agents", "MAS", "OpenClaw", "HyperAgent", "Orchestration", "TaskFlow"]
 type: "wiki"
 status: "published"
-last_updated: "2026-08-04"
-updated: "2026-08-04"
+last_updated: "2026-08-05"
+updated: "2026-08-05"
 related_raw: ["[[2026-07-30-openclaw-session-memory-flush.md]]", "[[2026-07-29-openclaw-hooks-mcp-proto-multi-account.md]]", "[[2026-07-28-openclaw-watched-session-sandbox-network.md]]", "[[2026-07-27-openclaw-route-bindings-grep-naming-harness.md]]", "[[2026-07-26-openclaw-session-urls-oauth-resume.md]]", "[[2026-06-12-Autonomous-Agents-OpenClaw-HyperAgent-Update.md]]", "[[2026-06-15-Autonomous-Agents-OpenClaw-HyperAgent-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]"]
 ---
 
@@ -16,6 +16,7 @@ related_raw: ["[[2026-07-30-openclaw-session-memory-flush.md]]", "[[2026-07-29-o
 OpenClaw는 LLM을 로컬 하드웨어에서 동작하는 "자율 운영자(Autonomous Operator)"로 변환하는 선도적인 오픈소스 오케스트레이션 레이어입니다.
 
 - **Dynamic model `/tools` inventory (2026-08-04)**: `/tools`가 prepared runtime model context publish/borrow **전**에 resolve해 임시 inventory failure — [#119306](https://github.com/openclaw/openclaw/pull/119306). 상세는 [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md]].
+- **Steering / auth cooldown (2026-08-05)**: active run steering(#119594), credential-only key cooldown(#119147). 상세 동일.
 - **Gateway health auth / MMS TimeoutError (2026-08-03)**: `openclaw gateway health --token`(#118996), MMS stall→`TimeoutError` 재시도(#119002). 상세는 [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md]].
 - **Cron announce / Codex auth / Telegram preamble (2026-08-02)**: 멀티 채널 isolated announce 생성 게이트(#118272), Codex 마이그레이션 시 선택 OAuth 유지(#118205), Telegram CLI tool 중 pre-tool 텍스트 보존. 상세는 [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md]].
 - **Session memory flush / gateway list (2026-07-30)**: 부모 recovery와 memory flush 생명주기 분리(#116198), retained subagent history 하에서도 `sessions_list` 응답성(#116533), startup stall·WS heartbeat. 상세는 [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md]].

@@ -3,15 +3,16 @@ id: tenant-quality-yaml-gate-skip-pattern
 title: "테넌트 quality.yaml 게이트 키 누락 시 skip (NF 미생성)"
 status: canonical
 owner: km
-updated: "2026-08-04"
-last_updated: "2026-08-04"
-review_after: "2026-11-04"
+updated: "2026-08-05"
+last_updated: "2026-08-05"
+review_after: "2026-11-05"
 sources:
   - ticket:85
   - ticket:86
   - ticket:83
   - ticket:99
   - ticket:113
+  - ticket:172
   - schedule:aa-clean-weekly
   - schedule:qa-bulk-weekly
   - schedule:ta-load-weekly
@@ -40,7 +41,7 @@ type: "wiki"
 | bulk_api | `bulk_api` (endpoints/command) | skip + 사유, NF 없음 |
 | opik | `opik:` (project_name/dataset/command) | skip; fail/regression만 NF — Spider2 weekly는 [[wiki/Agents/Text-to-SQL/Spider2-Quality-Gate-nl2sql.md]] |
 | load | `load.command` (test env) | skip + 사유; **실패만** NF — chat SSE 하네스 [[wiki/Engineering/AI-Native-Engineering/In-Process-ASGI-Load-Harness-Pattern.md]] |
-| security | `security.command` | 키 없으면 mechanical skip; AA는 live+diff 리뷰로 대체 가능 |
+| security | `security.command` | 키 없으면 mechanical skip; AA는 **scoped manual review**(auth/Host/secret surface delta만)로 대체 — 없는 SAST를 발명하지 않음 |
 | e2e (참고) | `e2e:` | UI 스모크 축 — [[wiki/Engineering/AI-Native-Engineering/Playwright-Frontend-UI-Smoke-Pattern.md]] |
 
 ```yaml

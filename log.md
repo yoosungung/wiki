@@ -1,6 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-05 | INBOX_DRAIN | inbox/* | 53 | 패턴 8신설+Spider2/MCP-skew/overlay/PAT/quality/pub-gate 갱신; PR진행·ta-k8s ALREADY_COVERED 후 git rm |
+| 2026-08-05 | RESEARCH | Web/GitHub | 3 | LiteRT Qwen3-TTS·reasoning_content·KV prefill; OpenClaw steering#119594·auth#119147; SM MCP#1419; Furiosa2026.3·LiteRT0.15·vllm-rbln a7 ALREADY_COVERED |
+| 2026-08-05 | INGEST | raw/ | 3 | litert-qwen3-tts-reasoning, openclaw-steering-auth, supermemory-mcp-api-key-headers |
+| 2026-08-05 | SYNTHESIZE | wiki/ | 12+ | Host-allowlist·uv.lock·context-trim·SSE failfast·setsid·title-sync·zombie·active-ticket; Spider2§6–8; LiteRT·OpenClaw MAS·SM |
+| 2026-08-05 | LINT | Root / wiki | ALL | 데일리 생성, D-2(2026-08-03) 삭제, raw/ 합성 후 삭제, 연구_주제·INDEX META |
 | 2026-08-04 | INBOX_DRAIN | inbox/* | 44 | 재사용 패턴 6신설+Spider2/quality/overlay/PAT/MCP 갱신; EXCLUDE_PROGRESS·ta-k8s ALREADY_COVERED 후 git rm |
 | 2026-08-04 | RESEARCH | Web/GitHub | 4 | LiteRT v0.15/0.16 Apple FM·js AutoToolChat; vllm-rbln a6/a7 vLLM0.24; SM MCP docs#1408; OpenClaw /tools#119306; Furiosa/WebLLM/Halo/Ossie ALREADY_COVERED |
 | 2026-08-04 | INGEST | raw/ | 4 | litert-v015-v016, vllm-rbln-a7, supermemory-mcp-docs, openclaw-tools-inventory |

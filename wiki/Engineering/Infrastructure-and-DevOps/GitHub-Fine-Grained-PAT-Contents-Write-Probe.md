@@ -3,11 +3,12 @@ id: github-fine-grained-pat-contents-write-probe
 title: "Fine-grained PAT: permissions.push ≠ Contents Write"
 status: canonical
 owner: km
-updated: "2026-08-04"
-last_updated: "2026-08-04"
-review_after: "2026-11-04"
+updated: "2026-08-05"
+last_updated: "2026-08-05"
+review_after: "2026-11-05"
 sources:
   - ticket:50
+  - ticket:167
   - https://docs.github.com/rest/git/refs#create-a-reference
 tags: ["Infrastructure", "DevOps", "GitHub", "PAT", "RBAC"]
 type: "wiki"
@@ -40,6 +41,10 @@ gh api -X POST repos/<owner>/<repo>/git/refs -f ref=refs/heads/probe -f sha=<sha
 ## 교차 소유 레포
 
 토큰 identity가 **다른 owner** 레포에 Contents Write가 없으면 동일하게 403이다. 퍼블리시 게이트 PASS와 push 성공을 혼동하지 않는다 — [[wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md]].
+
+## remote URL 임베디드 PAT ≠ 런타임 `GH_TOKEN`
+
+`git remote`에 박힌 토큰(receive-pack 403)과 환경변수 `GH_TOKEN`(다른 identity, 쓰기 OK)이 **불일치**할 수 있다. 진단 시 `git remote -v` identity와 `gh api user` / env 토큰을 분리한다. 게이트 PASS 후 push만 실패하면 이 축을 먼저 본다.
 
 ## 적용 팁
 

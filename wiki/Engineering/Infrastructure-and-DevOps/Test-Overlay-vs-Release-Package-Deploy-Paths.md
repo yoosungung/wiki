@@ -3,14 +3,16 @@ id: test-overlay-vs-release-package-deploy-paths
 title: "Test Overlay vs Release Package 배포 축 분리"
 status: canonical
 owner: km
-updated: "2026-08-04"
-last_updated: "2026-08-04"
-review_after: "2026-11-04"
+updated: "2026-08-05"
+last_updated: "2026-08-05"
+review_after: "2026-11-05"
 sources:
   - ticket:59
   - ticket:61
   - ticket:116
   - ticket:60
+  - ticket:172
+  - ticket:176
 tags: ["Infrastructure", "DevOps", "Kubernetes", "GHCR", "CD", "RBAC"]
 type: "wiki"
 ---
@@ -58,10 +60,17 @@ Actions `packages: write`만으로 부족할 수 있다 — [[wiki/Engineering/I
 
 배포 문서 마커 + `kubectl` client dry-run을 스크립트로 고정한다 (예: `verify-deploy-docs.sh`).
 
+## Live pin ↔ Git overlay sha drift
+
+수동 upload 후 `publish-releases`가 **같은 tag asset을 덮어쓰면** live initContainer sha와 overlay `patch-*-binary.yaml` pin이 어긋난다. Live Host-200이어도 git↔live 정합용 re-pin PR이 필요할 수 있다 — 라이브 블로커와 혼동하지 않는다.
+
+MCP Host allowlist 롤아웃 순서는 [[wiki/Engineering/Infrastructure-and-DevOps/MCP-Host-Allowlist-DNS-Rebinding.md]].
+
 ## 🔗 관련 문서
 
 - [[wiki/Engineering/Infrastructure-and-DevOps/K8s-Secret-vs-ConfigMap-Deploy-Hardening.md]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/GHCR-Actions-Package-Write-ACL.md]]
+- [[wiki/Engineering/Infrastructure-and-DevOps/MCP-Host-Allowlist-DNS-Rebinding.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Playwright-Frontend-UI-Smoke-Pattern.md]]
 - [[wiki/Engineering/AI-Native-Engineering/In-Process-ASGI-Load-Harness-Pattern.md]]
 - [[wiki/Models/Optimization-and-Serving/SGLang-gemma4-llm-serving-cluster-ops.md]]

@@ -3,8 +3,8 @@ title: "Supermemory: 에이전트 네이티브 메모리 시스템 및 MCP 아�
 tags: ["Agents", "Implementation", "Memory", "Supermemory", "MCP", "SMFS", "Cloudflare"]
 type: "wiki"
 status: "published"
-last_updated: "2026-08-04"
-updated: "2026-08-04"
+last_updated: "2026-08-05"
+updated: "2026-08-05"
 related_raw: ["[[2026-08-02-supermemory-company-brain-skills.md]]", "[[2026-07-29-supermemory-company-brain-proactivity-nova.md]]", "[[2026-07-28-supermemory-company-brain-custom-mcp.md]]", "[[2026-07-26-supermemory-chatgpt-mcp-setup.md]]", "[[2026-07-25-supermemory-cursor-agents-company-brain.md]]", "[[2026-07-24-supermemory-mcp-scope-opencode.md]]", "[[2026-07-23-supermemory-agents-memory-workspace.md]]", "[[2026-07-22-supermemory-company-brain-open-signup.md]]", "[[2026-07-21-supermemory-mcp-tool-safety-annotations.md]]", "[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]", "[[2026-07-12-supermemory-local-6767-cli-mcp-context.md]]", "[[raw/2026-07-13-sadik-mohammad-rag-systems-limitations.md]]", "[[2026-07-13-supermemory-openclaw-claude-plugins.md]]", "[[2026-07-16-supermemory_ai_memory_layer_analysis.md]]", "[[2026-07-18-supermemory-server-v0.0.5-pluggable-embeddings.md]]", "[[2026-07-19-supermemory-server-v0.0.6-windows.md]]"]
 ---
 
@@ -375,6 +375,27 @@ KM/에이전트 적용: Windows 개발 머신에서도 Linux/macOS와 같은 plu
 ```
 
 **적용 팁**: MCP 연결 문서를 에이전트 온보딩에 붙일 때 #1408 이후 docs를 쓰고, 그래프 위젯 빈 화면은 #1394 domain/hash와 #1397 upload 경로를 순서대로 본다.
+
+### Custom MCP dialog: API key + extra headers (2026-08-05)
+
+1. **Custom MCP UI** ([#1419](https://github.com/supermemoryai/supermemory/pull/1419)): 웹 다이얼로그에서 **API key**와 **extra headers**를 직접 설정 — JSON-only 편집 없이 `Authorization: Bearer sm_…`, `x-sm-project` 등 주입.
+2. **Company Brain skills surface** ([#1412](https://github.com/supermemoryai/supermemory/pull/1412)): CB에서 만든 skills를 UI에 노출.
+
+```json
+{
+  "mcpServers": {
+    "supermemory": {
+      "url": "https://mcp.supermemory.ai/mcp",
+      "headers": {
+        "Authorization": "Bearer sm_...",
+        "x-sm-project": "your-project-id"
+      }
+    }
+  }
+}
+```
+
+**적용 팁**: OAuth 대신 키 경로를 쓸 때 #1419 UI로 헤더를 넣고, 프로젝트 스코프는 `x-sm-project`를 동일 다이얼로그에서 고정한다.
 
 ---
 
