@@ -9,8 +9,7 @@ sources:
   - ticket:212
 ---
 
-# Catch-up: #238 → @ta assignee-runtime-check
+# Catch-up: #238 runtime-check cancelled (candidate alive)
 
-- Assigned open to pm: none (Done-only). Unanswered @pm triage on #238 already answered at 03:11Z; spend-alert New orphans skipped after Eric archived #212 (projectId=1 misconfig).
-- Actionable: #238 candidate silent after timeboxes → escalate `assignee-runtime-check` to ta (Pod/runner logs only).
-- Do not re-run Pass AB from PM/TA on this ladder step.
+- Assigned open to pm: none. Spend-alert New orphans skipped (Eric archived #212 — projectId=1 misconfig).
+- Posted `@ta assignee-runtime-check` after silent timeboxes; same minute candidate #789 reported alive + ConfigMap-reseed hypothesis → cancel TA check; keep In Progress on candidate for launcher TDD + Pass AB evidence.
