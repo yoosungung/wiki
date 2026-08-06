@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-08-05 (inbox drain 53·MCP Host/uv.lock/context-trim/SSE failfast/setsid/title-sync/zombie-recovery·LiteRT Qwen3-TTS·OpenClaw steering·SM #1419) | Root: wiki/
+[META] Updated: 2026-08-06 (inbox drain 60·GHA-PR-only/CreatedByMe/bridge-uid/zombie-PID/roadmap-H2/GH-intake/spend/VSCode-core·Furiosa-apps·SGLang40k/OpikTracer) | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -49,17 +49,17 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
-- wiki/Agents/ (236 files)
+- wiki/Agents/ (242 files)
     - Multi-Agent-and-Orchestration: 18 files
     - Text-to-SQL: 27 files
-    - Evaluations: 9 files
-    - Memory-and-Cognition: 23 files
+    - Evaluations: 10 files
+    - Memory-and-Cognition: 24 files
     - Robotics-and-VLA: 21 files
     - Implementation: 41 files
-    - Coding-and-Engineering: 20 files
-    - Self-Evolving: 10 files
-    - Frameworks: 66 files
-- wiki/Models/ (226 files)
+    - Coding-and-Engineering: 22 files
+    - Self-Evolving: 11 files
+    - Frameworks: 67 files
+- wiki/Models/ (230 files)
     - Optimization-and-Serving: 44 files
     - Architectures: 28 files
     - Small-Models: 18 files
@@ -68,12 +68,12 @@
     - Reasoning-and-Cognition: 34 files
     - RL: 40 files
 - wiki/RAG/ (66 files)
-- wiki/Engineering/ (109 files)
-    - Data-and-Security: 13 files
+- wiki/Engineering/ (132 files)
+    - Data-and-Security: 14 files
     - Prompt-Engineering: 12 files
-    - Infrastructure-and-DevOps: 31 files
+    - Infrastructure-and-DevOps: 38 files
     - Development-Environment: 17 files
-    - AI-Native-Engineering: 36 files
+    - AI-Native-Engineering: 49 files
 - wiki/Business/ (39 files)
     - Recommendation Systems: 7 files
     - Trends: 9 files

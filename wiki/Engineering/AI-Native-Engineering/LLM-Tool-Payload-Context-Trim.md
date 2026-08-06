@@ -3,9 +3,9 @@ id: llm-tool-payload-context-trim
 title: "LLM 도구 페이로드 컨텍스트 트림 (작은 context 모델)"
 status: canonical
 owner: km
-updated: "2026-08-05"
-last_updated: "2026-08-05"
-review_after: "2026-11-05"
+updated: "2026-08-06"
+last_updated: "2026-08-06"
+review_after: "2026-11-06"
 sources:
   - ticket:172
 tags: ["Engineering", "AI-Native", "LLM", "Context", "Agents"]
@@ -26,6 +26,17 @@ type: "wiki"
 | 도구 호출 폭주 | FS/편집 도구 제외·recursion 상한 — [[wiki/Engineering/AI-Native-Engineering/Agent-SSE-Failfast-and-Tool-Flood-Guard.md]] |
 
 함수명은 제품별(`slim_describe_for_llm` 등)이나 요지는 **“도구 JSON을 모델 context 예산 안으로”**.
+
+### search vs describe 역할 분리 (필수)
+
+FS 도구를 제외해도 **search가 describe급 요약**(valueDomain members·expression·relation fluff)을 실으면 candidate 1건만으로 16K를 넘긴다.
+
+| 도구 | 페이로드 요지 |
+| :--- | :--- |
+| **search** | candidate-compact: columns≤~20, relations≤~8; `valueDomain`/`expression`/그래프 fluff **드롭** |
+| **describe** | 열거·도메인·표현식은 여기서만(기존 trim 상한 유지) |
+
+스모크: short Q에서 flood=no + SSE `sql`\|`error`+`done`. 서빙 context만 올리는 것은 2차 — [[wiki/Models/Optimization-and-Serving/SGLang-gemma4-llm-serving-cluster-ops.md]].
 
 ## 운영 쪽 대안
 

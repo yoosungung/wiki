@@ -3,9 +3,9 @@ id: publication-gate-empty-overwrite-guard
 title: "퍼블리시 게이트 + 빈 산출물 덮어쓰기 금지"
 status: canonical
 owner: km
-updated: "2026-08-05"
-last_updated: "2026-08-05"
-review_after: "2026-11-05"
+updated: "2026-08-06"
+last_updated: "2026-08-06"
+review_after: "2026-11-06"
 sources:
   - schedule:publication-safety
   - schedule:issue-radar
@@ -40,6 +40,12 @@ python agent/publication_gate.py --base origin/main
 1. 게이트 스크립트가 CI/스케줄 **push 직전**에 있는가?
 2. “변경 없음 / 빈 결과”와 “안전한 갱신”을 구분하는가?
 3. push 실패를 게이트 실패와 혼동하지 않는가?
+
+## 분기·스택 운영
+
+- 로컬 `main`이 미공개 Pass 스택으로 `origin/main`과 diverge면, curation/radar 잡은 **`origin/main`에 detach → 작업 → `push HEAD:main` → 로컬 스택 checkout**으로 보존한다. dirty leftover `agent/cron/` WIP가 이미 PR로 들어갔으면 ff-only pull 전에 정리.
+- yaml↔wiki orphan 0을 유지하려면 stub yaml 추가 시 **최소 wiki stub도 같이 seed**.
+- 공개 전 제거: placeholder/unknown·SSoT 없는 slug·불완전 신원 stub·기관을 people로 링크한 stance.
 
 ## 🔗 관련 문서
 

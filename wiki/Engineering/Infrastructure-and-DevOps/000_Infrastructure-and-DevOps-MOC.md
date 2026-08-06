@@ -35,3 +35,4 @@
 - [[wiki/Engineering/Infrastructure-and-DevOps/Test-Overlay-vs-Release-Package-Deploy-Paths.md]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/MCP-Host-Allowlist-DNS-Rebinding.md]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/PVC-Nonexec-Script-Setsid-Bash.md]]
+- [[wiki/Engineering/Infrastructure-and-DevOps/Cron-Monitor-Zombie-PID-Check.md]]

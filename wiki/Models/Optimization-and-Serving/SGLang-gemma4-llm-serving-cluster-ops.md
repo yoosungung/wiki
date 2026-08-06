@@ -3,9 +3,9 @@ id: sglang-gemma4-llm-serving-cluster-ops
 title: "SGLang Gemma4 llm-serving 클러스터 운영 (12b/31b)"
 status: canonical
 owner: km
-updated: "2026-08-02"
-last_updated: "2026-08-02"
-review_after: "2026-11-02"
+updated: "2026-08-06"
+last_updated: "2026-08-06"
+review_after: "2026-11-06"
 sources:
   - ticket:42
   - kubectl:llm-serving
@@ -50,6 +50,23 @@ kubectl delete deployment sglang-gemma4-31b -n llm-serving
 - 기본 점유: `sglang` 계열 복제본이 노드 allocatable GPU를 **전량 Ready**로 쓰는 상태를 정상으로 본다(예: 2 GPU → 2/2).
 - 같은 클러스터의 **의도적 scale-0** Deploy(예: 프록시 풀)가 empty endpoints여도 GPU 서빙 Ready와 무관하면 사고로 올리지 않는다 — [[wiki/Engineering/Infrastructure-and-DevOps/K8s-Intentional-Scale-Zero-Empty-Endpoints.md]].
 - 노드 `DiskPressure`/`MemoryPressure`/`PIDPressure`=False를 GPU Ready와 함께 확인한다.
+
+## Context length 사다리 (12b / 1×4090)
+
+API `max_model_len`은 **SGLang `--context-length`**가 결정한다(모델 카드 상한과 혼동 금지).
+
+| 단계 | args | 관측 요지 |
+| :--- | :--- | :--- |
+| 16K | `--context-length 16384` | 에이전트 도구 페이로드 overflow의 전형적 상한 |
+| 32K | `32768`, `mem-fraction-static 0.75` | 16K BadRequest 해소; KV pool≈35k면 **64K 불가** |
+| 40K | `40960` + **`--kv-cache-dtype fp8_e4m3`** | `max_total_num_tokens`가 context 이상으로 확보될 때만 |
+
+```bash
+# 개념: length만 올리면 KV pool < context → 실패. fp8로 capacity 확보 후 검증
+# verify: max_model_len == 목표, smoke prompt_tokens>~18k without BadRequest
+```
+
+fp8는 **용량/정밀도 트레이드오프**이지 새 listen/auth surface가 아니다. 제품 쪽 트림과 병행 — [[wiki/Engineering/AI-Native-Engineering/LLM-Tool-Payload-Context-Trim.md]].
 
 ## 🔗 관련 문서
 

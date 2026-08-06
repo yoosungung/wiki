@@ -3,9 +3,9 @@ id: spider2-quality-gate-nl2sql
 title: "Spider2-Lite → nl2sql 품질 게이트 (스모크·preflight)"
 status: canonical
 owner: km
-updated: "2026-08-05"
-last_updated: "2026-08-05"
-review_after: "2026-11-05"
+updated: "2026-08-06"
+last_updated: "2026-08-06"
+review_after: "2026-11-06"
 sources:
   - ticket:32
   - ticket:37
@@ -141,6 +141,28 @@ spider2-opik check
 - 메타데이터 PVC에 모델 0개(빈 manifest)면 `search_tables` 공허 → analyst hang. Baseball/IPL 등 스모크 DB용 `*.model.json`을 backend·mcp 메타데이터 HEAD에 **동일 commit**으로 맞춘다(`/admin/sync`가 remote 없으면 tree 복사).
 - MCP Host 403은 토큰보다 allowlist일 수 있음 — [[wiki/Engineering/Infrastructure-and-DevOps/MCP-Host-Allowlist-DNS-Rebinding.md]].
 - 16K overflow / no-sql hang — [[wiki/Engineering/AI-Native-Engineering/LLM-Tool-Payload-Context-Trim.md]], [[wiki/Engineering/AI-Native-Engineering/Agent-SSE-Failfast-and-Tool-Flood-Guard.md]].
+
+### 7.1 Backend OpikTracer (LangGraph) vs eval-runner
+
+제품 chat SSE의 LangGraph `OpikTracer`(tags 예: `nl2sql`/`deepagents`)는 **backend ConfigMap에 `OPIK_URL_OVERRIDE`(+ `OPIK_WORKSPACE`)**가 있어야 켠다. eval-runner `evaluation_task` 트레이스와 **축이 다름**.
+
+```yaml
+# test overlay ConfigMap patch (개념) — bearer는 Secret, CM에 넣지 않음
+OPIK_URL_OVERRIDE: "http://opik-frontend.opik.svc.cluster.local:5173/api"
+OPIK_WORKSPACE: "default"
+```
+
+`kubectl apply -k …/overlays/test`가 patch에 키를 없으면 **live inject를 지운다** → tenant `patch-configmap-*.yaml`에 영속화.
+
+### 7.2 Context-retest 스모크 게이트 (EX soft)
+
+서빙 context 상향 재검증 티켓의 **hard gate**:
+
+1. smoke window에 context BadRequest/overflow **0**
+2. SSE 단말 `sql` **또는** `error`+`done`(hang 금지)
+3. Opik experiment(+ 가능하면 backend Trace) 존재
+
+`pass_rate`/`warehouse_sql` null은 **EX soft(non-blocking)** — Full EX와 혼동하지 않는다. UI Playwright CDN 차단은 env blocker로 분리 — [[wiki/Engineering/AI-Native-Engineering/Playwright-Frontend-UI-Smoke-Pattern.md]].
 
 ## 8. 최소 완료선 (품질 테스트 "준비")
 

@@ -97,6 +97,20 @@ furiosa-llm serve <model> --data-parallel-size 2 \
 - **생산 스케일업 및 차세대 "Stork"**: 에이전틱 AI 추론 수요 급증에 대처하기 위해 2027년까지 RNGD NPU 카드를 **40,000~50,000대 규모로 생산 능력을 확장**할 계획입니다. 동시에 NVIDIA 추론용 dGPU 제품군에 대항해 극강의 토큰당 비용 효율을 보장하는 **2nm 공정 기반 3세대 NPU "Stork"(황새)** 개발에 전력을 다하고 있습니다.
 - **유럽 엔터프라이즈 개척**: 포르투갈 리스본에 유럽 본부 성격의 플래그십 사무실을 개설하고, Equinix 리스본 데이터센터에 RNGD 서버 인프라를 실전 구축하여 유럽 데이터센터와 기업향 NPU 시장 공략에 본격 돌입했습니다.
 
+## 6. furiosa-apps 레퍼런스 (2026-08-06)
+
+[`furiosa-ai/furiosa-apps`](https://github.com/furiosa-ai/furiosa-apps)는 Furiosa-LLM 위 E2E 샘플 모음이다. 에이전트/제품 연동 시 참고 경로:
+
+| 앱 | 용도 |
+| :--- | :--- |
+| Benchmark | RNGD 성능·정확도 |
+| Chat Playground | 실시간 추론 메트릭 챗 |
+| Coding Agent | OpenCode 터미널 코딩 보조 + 웹 단위테스트 생성 |
+| LLM Assistant | **OpenClaw 에이전트 플랫폼 통합**, 멀티에이전트 뉴스, 금융 센티먼트 |
+| RAG | embedding·reranker·generation 파이프라인 |
+
+프리컴파일 HF FXB 예: EXAONE-4.0-32B-FP8 / Qwen3-32B-FP8(4×RNGD), Llama-3.1-8B·Qwen3-Embedding/Reranker(1×). 서빙은 `furiosa-llm serve <model>` — [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md]].
+
 ---
 **관련 문서**:
 - [[wiki/Models/Optimization-and-Serving/000_Optimization-and-Serving-MOC]]

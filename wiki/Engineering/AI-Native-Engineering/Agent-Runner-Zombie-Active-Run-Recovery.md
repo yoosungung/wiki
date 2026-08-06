@@ -3,9 +3,9 @@ id: agent-runner-zombie-active-run-recovery
 title: "Agent-runner: zombie active_run 복구 (R1–R5)"
 status: canonical
 owner: km
-updated: "2026-08-05"
-last_updated: "2026-08-05"
-review_after: "2026-11-05"
+updated: "2026-08-06"
+last_updated: "2026-08-06"
+review_after: "2026-11-06"
 sources:
   - ticket:197
   - ticket:199
@@ -23,6 +23,7 @@ SDK 워커 프로세스가 죽은 뒤에도 `POST /sessions/{id}/prompt`가 영�
 
 - 부모 `busyAgents`는 promise reject 시 클리어될 수 있으나, Cursor local agent에 **미종료 run**이 남으면 `Agent.resume`+`send`가 “already has active run”.
 - HTTP 방언은 유지: **202 accepted / 409 skipped_active_run**. 복구는 parent/pool 내부 + `session.recover` 로그.
+- **정상 mutex**: Pod Ready이고 `run.started`가 살아 있는데 `session.prompt.skipped reason=active_run`만 보이면 **zombie이 아님** — `session.recover`/재시작을 중복하지 말고 assignee가 현재 run을 마치게 둔다. zombie는 crash 후 skip만 누적·`run.background.failed` 패턴일 때.
 
 ## Recovery 요지 (DESIGN)
 

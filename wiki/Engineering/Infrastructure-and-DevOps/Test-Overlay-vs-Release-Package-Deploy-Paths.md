@@ -3,9 +3,9 @@ id: test-overlay-vs-release-package-deploy-paths
 title: "Test Overlay vs Release Package 배포 축 분리"
 status: canonical
 owner: km
-updated: "2026-08-05"
-last_updated: "2026-08-05"
-review_after: "2026-11-05"
+updated: "2026-08-06"
+last_updated: "2026-08-06"
+review_after: "2026-11-06"
 sources:
   - ticket:59
   - ticket:61
@@ -51,6 +51,8 @@ kubectl auth can-i create ingress -n <ns> --as=system:serviceaccount:<ns>:<sa>
 ## Overlay 재적용 함정 (공유 Secret)
 
 `apply.sh`가 Secret을 **재생성**하면 기존 `MCP_SHARED_TOKEN`(또는 동등 shared secret)이 바뀌어 backend↔mcp가 깨질 수 있다. 토큰이 이미 있으면 **보존**하고 idempotent `-k` apply만 한다. Service 스모크 포트는 문서의 containerPort(예: 8080/8800)를 쓴다 — `80` 가정 금지.
+
+레지스트리 `…/healthz` 호스트가 DNS에 없으면 **in-cluster Service FQDN**(예: `backend.ns.svc.cluster.local:8080`의 `/api/health`·`/api/ready`)으로 검증한다. backend-only 델타면 mcp deploy·MDL PVC reseed를 생략할 수 있다.
 
 ## GHCR publish ACL
 

@@ -1,6 +1,10 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-06 | INBOX_DRAIN | inbox/* | 60 | 패턴 8신설+Spider2/OpikTracer/SGLang40k/PVC·SSE·PubGate·quality 갱신; dual-loop·PR진행·ta-k8s EXCLUDE/ALREADY_COVERED 후 git rm |
+| 2026-08-06 | RESEARCH | Web/GitHub | 1 | furiosa-apps OpenClaw/Coding/RAG 레퍼런스→프리오사 가이드; LiteRT v0.15·Furiosa2026.3·SM MCP ALREADY_COVERED |
+| 2026-08-06 | SYNTHESIZE | wiki/ | 16+ | GHA-PR-only·CreatedByMe·bridge-uid·zombie-PID·roadmap-H2·GH-intake·spend·VSCode-core; trim/Spider2/SGLang/PVC/runner/pub/overlay |
+| 2026-08-06 | LINT | Root / wiki | ALL | 데일리 생성, D-2(2026-08-04) 삭제, 연구_주제·INDEX META |
 | 2026-08-05 | INBOX_DRAIN | inbox/* | 53 | 패턴 8신설+Spider2/MCP-skew/overlay/PAT/quality/pub-gate 갱신; PR진행·ta-k8s ALREADY_COVERED 후 git rm |
 | 2026-08-05 | RESEARCH | Web/GitHub | 3 | LiteRT Qwen3-TTS·reasoning_content·KV prefill; OpenClaw steering#119594·auth#119147; SM MCP#1419; Furiosa2026.3·LiteRT0.15·vllm-rbln a7 ALREADY_COVERED |
 | 2026-08-05 | INGEST | raw/ | 3 | litert-qwen3-tts-reasoning, openclaw-steering-auth, supermemory-mcp-api-key-headers |
