@@ -3,9 +3,9 @@ id: spider2-quality-gate-nl2sql
 title: "Spider2-Lite → nl2sql 품질 게이트 (스모크·preflight)"
 status: canonical
 owner: km
-updated: "2026-08-06"
-last_updated: "2026-08-06"
-review_after: "2026-11-06"
+updated: "2026-08-07"
+last_updated: "2026-08-07"
+review_after: "2026-11-07"
 sources:
   - ticket:32
   - ticket:37
@@ -163,6 +163,18 @@ OPIK_WORKSPACE: "default"
 3. Opik experiment(+ 가능하면 backend Trace) 존재
 
 `pass_rate`/`warehouse_sql` null은 **EX soft(non-blocking)** — Full EX와 혼동하지 않는다. UI Playwright CDN 차단은 env blocker로 분리 — [[wiki/Engineering/AI-Native-Engineering/Playwright-Frontend-UI-Smoke-Pattern.md]].
+
+### 7.3 Full EX soft report (local* 전수)
+
+장시간 agent Full EX는 **detach + nf-progress heartbeat**로 세션을 유지하고, 완료 후 soft 보고만 한다.
+
+| 관찰 | 해석 |
+| :--- | :--- |
+| Gate: BadRequest/overflow/flood/429 = 0 · SQL-or-error+done | hard OK (context/serving) |
+| `pass_rate(soft)=0` · fail reason `empty SQL` / `warehouse_sql` null | **agent 출력 SQL 공허** — soft report-only; 제품 hard gate로 승격하지 않음 |
+| Opik `evaluation_task` + backend LangGraph tags | eval-runner vs product tracer 축 분리(§7.1) |
+
+Full EX를 스모크 hard와 섞지 않는다. pass_rate floor는 인간 결정 전까지 non-blocking.
 
 ## 8. 최소 완료선 (품질 테스트 "준비")
 

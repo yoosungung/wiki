@@ -3,9 +3,9 @@ id: spend-alert-human-approval-triage
 title: "Spend alert: 인간 Approval로 모으고 임계·부하 결정"
 status: canonical
 owner: km
-updated: "2026-08-06"
-last_updated: "2026-08-06"
-review_after: "2026-11-06"
+updated: "2026-08-07"
+last_updated: "2026-08-07"
+review_after: "2026-11-07"
 sources:
   - ticket:212
   - schedule:spend-alert

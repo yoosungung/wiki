@@ -3,9 +3,9 @@ id: publication-gate-empty-overwrite-guard
 title: "퍼블리시 게이트 + 빈 산출물 덮어쓰기 금지"
 status: canonical
 owner: km
-updated: "2026-08-06"
-last_updated: "2026-08-06"
-review_after: "2026-11-06"
+updated: "2026-08-07"
+last_updated: "2026-08-07"
+review_after: "2026-11-07"
 sources:
   - schedule:publication-safety
   - schedule:issue-radar
@@ -43,8 +43,9 @@ python agent/publication_gate.py --base origin/main
 
 ## 분기·스택 운영
 
-- 로컬 `main`이 미공개 Pass 스택으로 `origin/main`과 diverge면, curation/radar 잡은 **`origin/main`에 detach → 작업 → `push HEAD:main` → 로컬 스택 checkout**으로 보존한다. dirty leftover `agent/cron/` WIP가 이미 PR로 들어갔으면 ff-only pull 전에 정리.
+- 로컬 `main`이 미공개 Pass 스택으로 `origin/main`과 diverge면, curation/radar 잡은 **`origin/main`에 detach → 작업 → `push HEAD:main` → 로컬 스택 checkout**으로 보존한다. Pass 스택을 curation에 ff-only merge하지 않는다. dirty leftover `agent/cron/` WIP가 이미 PR로 들어갔으면 ff-only pull 전에 정리. preserve branch는 백업일 뿐 ship 경로가 아니다.
 - yaml↔wiki orphan 0을 유지하려면 stub yaml 추가 시 **최소 wiki stub도 같이 seed**.
+- **게이트 PASS ≠ content-safe**: `/people/unknown`, org-as-person stance, 역할·신원 오인 stub는 추가 strip. people promote는 allowlisted 공식/프로필 URL(≥1)이 있을 때만; 애매한 기자·동명이인은 hold.
 - 공개 전 제거: placeholder/unknown·SSoT 없는 slug·불완전 신원 stub·기관을 people로 링크한 stance.
 
 ## 🔗 관련 문서

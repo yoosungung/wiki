@@ -45,5 +45,6 @@
 - [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Github-Issue-Leantime-Intake-Empty-Skip.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Spend-Alert-Human-Approval-Triage.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Soft-TTD-In-Process-Replay-Sandbox.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Wiki-Synthesis-Policy.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Sim_노코드_AI_에이전트_워크플로우_플랫폼.md]]

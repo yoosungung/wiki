@@ -3,9 +3,9 @@ id: test-overlay-vs-release-package-deploy-paths
 title: "Test Overlay vs Release Package 배포 축 분리"
 status: canonical
 owner: km
-updated: "2026-08-06"
-last_updated: "2026-08-06"
-review_after: "2026-11-06"
+updated: "2026-08-07"
+last_updated: "2026-08-07"
+review_after: "2026-11-07"
 sources:
   - ticket:59
   - ticket:61
@@ -29,6 +29,8 @@ type: "wiki"
 | **Prod package** | Release assets + GHCR 이미지/바이너리 publish | `publish-releases` workflow, 패키지 레포 — **반드시 클러스터 apply는 아님** |
 
 테넌트 레지스트리(`tenant_cd`)가 비어 있으면 workflow_dispatch CD 경로가 없다 → 해당 티켓의 **prod_* = N/A**가 정상이다.
+
+팩토리 **플러그인-only** 테스트 배포는 `tenant_cd`가 아니라 install 스크립트(예: ConfigMap + initContainer + `rollout restart deploy/…`)일 수 있다. 재설치 시 live `bridge.json`(에이전트 user id)을 **샘플로 덮지 말고** 기존 CM에서 보존한다. 스모크는 in-cluster Service FQDN(예: `favicon.ico` 200)을 쓰고, 외부 Host 302와 혼동하지 않는다.
 
 ## GHCR private → releases 바이너리
 

@@ -1,6 +1,10 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-07 | INBOX_DRAIN | inbox/* | 23 | Soft-TTD 신설+CreatedByMe/PVC-shim/PubGate/Overlay/Spider2§7.3/Playwright-HTMX 갱신; GH-intake·spend·pm-checkpoint EXCLUDE/ALREADY_COVERED 후 git rm |
+| 2026-08-07 | RESEARCH | Web/GitHub | 2 | Furiosa 2026.4.0b9 fxb build·TP고정; LiteRT v0.15·SM MCP forget ALREADY_COVERED |
+| 2026-08-07 | SYNTHESIZE | wiki/ | 9+ | Soft-TTD; CreatedByMe/PVC/PubGate/Overlay/Spider2/Playwright/Github/Spend; 프리오사§7 fxb build |
+| 2026-08-07 | LINT | Root / wiki | ALL | 데일리 생성, D-2(2026-08-05) 삭제, 연구_주제·INDEX META |
 | 2026-08-06 | INBOX_DRAIN | inbox/* | 60 | 패턴 8신설+Spider2/OpikTracer/SGLang40k/PVC·SSE·PubGate·quality 갱신; dual-loop·PR진행·ta-k8s EXCLUDE/ALREADY_COVERED 후 git rm |
 | 2026-08-06 | RESEARCH | Web/GitHub | 1 | furiosa-apps OpenClaw/Coding/RAG 레퍼런스→프리오사 가이드; LiteRT v0.15·Furiosa2026.3·SM MCP ALREADY_COVERED |
 | 2026-08-06 | SYNTHESIZE | wiki/ | 16+ | GHA-PR-only·CreatedByMe·bridge-uid·zombie-PID·roadmap-H2·GH-intake·spend·VSCode-core; trim/Spider2/SGLang/PVC/runner/pub/overlay |

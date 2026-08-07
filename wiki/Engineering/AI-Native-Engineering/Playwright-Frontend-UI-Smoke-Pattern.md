@@ -3,8 +3,8 @@ id: playwright-frontend-ui-smoke-pattern
 title: "Playwright 프론트엔드 UI 스모크 패턴 (백엔드 없이)"
 status: canonical
 owner: km
-updated: "2026-07-31"
-last_updated: "2026-07-31"
+updated: "2026-08-07"
+last_updated: "2026-08-07"
 review_after: "2026-10-31"
 sources:
   - ticket:51
@@ -50,6 +50,8 @@ PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
 PLAYWRIGHT_CHROMIUM_PATH=/usr/bin/chromium
 ```
 
+Chromium 설치·다운로드가 불가하면 **동일 템플릿의 HTMX/SSR partial** + 배포 아티팩트 정적 검증으로 UI-equivalent 증거를 남긴다(브라우저 E2E 대체, 별 축 명시).
+
 ## 적용 팁
 
 - frontend-only 변경이면 e2e 축만 게이트하고, 미터치 백엔드 CI red는 **별 축**으로 다룬다.
@@ -59,4 +61,5 @@ PLAYWRIGHT_CHROMIUM_PATH=/usr/bin/chromium
 
 - [[wiki/Engineering/AI-Native-Engineering/Wiki-Synthesis-Policy.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Agentic-Software-Factory.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Created-By-Me-Terminal-Status-Order.md]]
 - [[wiki/Agents/Text-to-SQL/Spider2-Quality-Gate-nl2sql.md]]

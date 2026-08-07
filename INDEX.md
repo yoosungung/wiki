@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-08-06 (inbox drain 60·GHA-PR-only/CreatedByMe/bridge-uid/zombie-PID/roadmap-H2/GH-intake/spend/VSCode-core·Furiosa-apps·SGLang40k/OpikTracer) | Root: wiki/
+[META] Updated: 2026-08-07 (inbox drain 23·Soft-TTD/CreatedByMe/PVC-shim/PubGate/Overlay/Spider2-FullEX/Playwright-HTMX·Furiosa fxb-build 2026.4b9) | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -68,12 +68,12 @@
     - Reasoning-and-Cognition: 34 files
     - RL: 40 files
 - wiki/RAG/ (66 files)
-- wiki/Engineering/ (132 files)
+- wiki/Engineering/ (133 files)
     - Data-and-Security: 14 files
     - Prompt-Engineering: 12 files
     - Infrastructure-and-DevOps: 38 files
     - Development-Environment: 17 files
-    - AI-Native-Engineering: 49 files
+    - AI-Native-Engineering: 50 files
 - wiki/Business/ (39 files)
     - Recommendation Systems: 7 files
     - Trends: 9 files
