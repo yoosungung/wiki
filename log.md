@@ -1,6 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-08 | INBOX_DRAIN | inbox/{aa,pm,candidate} | 6 | PubGate people/radar/meta-build 갱신; GH-intake open0 ALREADY_COVERED; people SSOT 정치본문 EXCLUDE 후 git rm |
+| 2026-08-08 | RESEARCH | Web/GitHub | 2 | vllm-rbln v0.11.2a8; SM forget-matching ids; LiteRT v0.15·Furiosa 2026.4b9 ALREADY_COVERED |
+| 2026-08-08 | INGEST | raw/ | 2 | vllm-rbln-v0.11.2a8, supermemory-forget-matching-ids |
+| 2026-08-08 | SYNTHESIZE | wiki/ | 5 | PubGate; GH-intake; 리벨리온 동향·EXAONE a8; Supermemory forget-ids |
+| 2026-08-08 | LINT | Root / wiki | ALL | 데일리 생성, D-2(2026-08-06) 삭제, raw/ 합성 후 삭제, 연구_주제·INDEX META |
 | 2026-08-07 | INBOX_DRAIN | inbox/* | 23 | Soft-TTD 신설+CreatedByMe/PVC-shim/PubGate/Overlay/Spider2§7.3/Playwright-HTMX 갱신; GH-intake·spend·pm-checkpoint EXCLUDE/ALREADY_COVERED 후 git rm |
 | 2026-08-07 | RESEARCH | Web/GitHub | 2 | Furiosa 2026.4.0b9 fxb build·TP고정; LiteRT v0.15·SM MCP forget ALREADY_COVERED |
 | 2026-08-07 | SYNTHESIZE | wiki/ | 9+ | Soft-TTD; CreatedByMe/PVC/PubGate/Overlay/Spider2/Playwright/Github/Spend; 프리오사§7 fxb build |

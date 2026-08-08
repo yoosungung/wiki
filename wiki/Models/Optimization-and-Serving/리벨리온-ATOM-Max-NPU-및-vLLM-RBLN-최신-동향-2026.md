@@ -3,9 +3,9 @@ title: "리벨리온 ATOM-Max NPU 및 vLLM-RBLN 최신 동향 (2026)"
 tags: ["Models", "Optimization", "Serving", "NPU", "Rebellions", "vLLM-RBLN", "EXAONE"]
 type: "wiki"
 status: "published"
-last_updated: "2026-08-04"
-updated: "2026-08-04"
-related_raw: ["[[2026-08-04-vllm-rbln-v0.11.2a7.md]]", "[[2026-08-03-vllm-rbln-v0.11.2a5.md]]", "[[2026-08-01-vllm-rbln-v0.11.2a4-v0.11.1.md]]", "[[2026-07-30-vllm-rbln-v0.11.2a3.md]]", "[[2026-07-29-vllm-rbln-v0.11.2a2.md]]", "[[2026-07-28-vllm-rbln-v0.11.2a0-a1.md]]", "[[2026-07-24-vllm-rbln-v0.11.2.dev0.md]]", "[[2026-06-01-Rebellions-NPU-Update.md]]"]
+last_updated: "2026-08-08"
+updated: "2026-08-08"
+related_raw: ["[[2026-08-08-vllm-rbln-v0.11.2a8.md]]", "[[2026-08-04-vllm-rbln-v0.11.2a7.md]]", "[[2026-08-03-vllm-rbln-v0.11.2a5.md]]", "[[2026-08-01-vllm-rbln-v0.11.2a4-v0.11.1.md]]", "[[2026-07-30-vllm-rbln-v0.11.2a3.md]]", "[[2026-07-29-vllm-rbln-v0.11.2a2.md]]", "[[2026-07-28-vllm-rbln-v0.11.2a0-a1.md]]", "[[2026-07-24-vllm-rbln-v0.11.2.dev0.md]]", "[[2026-06-01-Rebellions-NPU-Update.md]]"]
 ---
 
 # 리벨리온 ATOM-Max NPU 및 vLLM-RBLN 최신 동향 (2026)
@@ -76,6 +76,21 @@ vLLM-RBLN 플러그인은 2026년 상반기 업데이트를 통해 vLLM 에코�
 
 ```bash
 uv pip install "vllm-rbln==0.11.2a7" \
+  --extra-index-url https://wheels.vllm.ai/0.24.0/cpu \
+  --torch-backend cpu
+```
+
+### v0.11.2a8 (2026-08-06)
+- **sampler**: greedy one-hot을 softmax해 near-uniform이 되지 않도록 수정 ([#881](https://github.com/RBLN-SW/vllm-rbln/pull/881))
+- **multimodal**: 입력 의존 `rbln_config` 하드코딩 제거 ([#834](https://github.com/RBLN-SW/vllm-rbln/pull/834))
+- **specdec**: `SuffixDecodingProposer.propose`에 `num_speculative_tokens` 전달 ([#893](https://github.com/RBLN-SW/vllm-rbln/pull/893))
+- **dtensor**: rejection sampler dtensor ([#816](https://github.com/RBLN-SW/vllm-rbln/pull/816)); MTP+dtensor recompile ([#895](https://github.com/RBLN-SW/vllm-rbln/pull/895))
+- **DP**: dummy decode batch를 DP-agreed bucket에 pad ([#894](https://github.com/RBLN-SW/vllm-rbln/pull/894))
+- **compiler**: rebel-compiler `0.11.2.dev158+gbaabdcac.prod` ([#892](https://github.com/RBLN-SW/vllm-rbln/pull/892)); native-path tests (`tests/native`, [#887](https://github.com/RBLN-SW/vllm-rbln/pull/887))
+- 설치: `uv pip install "vllm-rbln==0.11.2a8"` — a7과 동일하게 wheels index를 `vllm` 핀에 맞춤
+
+```bash
+uv pip install "vllm-rbln==0.11.2a8" \
   --extra-index-url https://wheels.vllm.ai/0.24.0/cpu \
   --torch-backend cpu
 ```

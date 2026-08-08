@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-08-07 (inbox drain 23·Soft-TTD/CreatedByMe/PVC-shim/PubGate/Overlay/Spider2-FullEX/Playwright-HTMX·Furiosa fxb-build 2026.4b9) | Root: wiki/
+[META] Updated: 2026-08-08 (inbox drain 6·PubGate/GH-intake; vllm-rbln a8·SM forget-ids; LiteRT/Furiosa ALREADY_COVERED) | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
