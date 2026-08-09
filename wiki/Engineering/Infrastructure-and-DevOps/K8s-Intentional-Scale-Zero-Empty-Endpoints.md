@@ -3,11 +3,12 @@ id: k8s-intentional-scale-zero-empty-endpoints
 title: "K8s 의도적 scale-0와 empty endpoints 판별"
 status: canonical
 owner: km
-updated: "2026-08-03"
-last_updated: "2026-08-03"
-review_after: "2026-11-03"
+updated: "2026-08-09"
+last_updated: "2026-08-09"
+review_after: "2026-11-09"
 sources:
   - schedule:ta-k8s-daily
+  - inbox:ta/2026-08-09-k8s-daily-report
   - inbox:ta/2026-08-03-ta-k8s-daily
   - inbox:ta/2026-08-02-ta-k8s-daily
 tags: ["Infrastructure", "DevOps", "Kubernetes", "SRE", "HealthCheck"]
@@ -56,6 +57,7 @@ kubectl get nodes -o custom-columns=NAME:.metadata.name,READY:.status.conditions
 - GPU 서빙 NS에서 주 워크로드 Ready(예: 2/2)인데, 같은 클러스터의 프록시 Deploy가 `replicas: 0`이면 empty endpoints는 허용.
 - 신규 NS가 Running·PVC Bound이면 “새 NS” 자체는 사고가 아니다. CrashLoop/Pending만 올린다.
 - **재확인 (2026-08-03)**: 노드 Pressure=False·CrashLoop/ImagePull=0·PVC Bound인 날에도 런타임 프록시 Deploy `replicas=0` → empty endpoints는 allowlist에 두고 abnormal에서 제외. path-graph terminal Workflow CR 잔존도 사고 아님 — [[wiki/Engineering/Infrastructure-and-DevOps/path-graph-Argo-ImagePullBackOff-runbook.md]].
+- **재확인 (2026-08-09)**: `runtime/pgbouncer-{ro,rw}` intentional scale-0(endpoints empty) + GPU 서빙 Ready + Warning/CrashLoop=0이면 Incident 없음. TEI 등 보조 Ready 워크로드는 GPU 점유와 독립적으로 정상 기준선에 포함할 수 있다.
 
 ## 🔗 관련 문서
 

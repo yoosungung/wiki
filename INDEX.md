@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-08-08 (inbox drain 6·PubGate/GH-intake; vllm-rbln a8·SM forget-ids; LiteRT/Furiosa ALREADY_COVERED) | Root: wiki/
+[META] Updated: 2026-08-09 (inbox drain 7·PubGate/GH/k8s; LiteRT CachedSession·OpenClaw retention; vllm/Furiosa/SM ALREADY_COVERED) | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]

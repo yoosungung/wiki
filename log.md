@@ -1,6 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-09 | INBOX_DRAIN | inbox/{aa,pm,candidate,ta} | 7 | PubGate today-중립·people URL 규칙 재확인; GH-intake open0 ALREADY_COVERED; k8s scale-0+TEI; people 정치본문 EXCLUDE 후 git rm |
+| 2026-08-09 | RESEARCH | Web/GitHub | 2 | LiteRT CachedSession Reset/Clone/TextScoring·external MTP weights; OpenClaw #121178/#121250; vllm-rbln a8·Furiosa·SM·LiteRT v0.15 ALREADY_COVERED |
+| 2026-08-09 | INGEST | raw/ | 2 | litert-lm-cached-session-reset-clone-score, openclaw-subagent-retention-plugin-generation |
+| 2026-08-09 | SYNTHESIZE | wiki/ | 6 | PubGate; GH-intake; k8s scale-0; SGLang TEI; LiteRT CachedSession; OpenClaw retention |
+| 2026-08-09 | LINT | Root / wiki | ALL | 데일리 생성, D-2(2026-08-07) 삭제, raw/ 합성 후 삭제, 연구_주제·INDEX META |
 | 2026-08-08 | INBOX_DRAIN | inbox/{aa,pm,candidate} | 6 | PubGate people/radar/meta-build 갱신; GH-intake open0 ALREADY_COVERED; people SSOT 정치본문 EXCLUDE 후 git rm |
 | 2026-08-08 | RESEARCH | Web/GitHub | 2 | vllm-rbln v0.11.2a8; SM forget-matching ids; LiteRT v0.15·Furiosa 2026.4b9 ALREADY_COVERED |
 | 2026-08-08 | INGEST | raw/ | 2 | vllm-rbln-v0.11.2a8, supermemory-forget-matching-ids |
