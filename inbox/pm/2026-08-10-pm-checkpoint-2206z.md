@@ -8,10 +8,11 @@ sources:
   - ticket:391
   - ticket:458
   - schedule:pm-checkpoint
+  - https://github.com/yoosungung/codingland/pull/4
 ---
 
-# pm-checkpoint 22:06Z
+# pm-checkpoint 22:08Z
 
-- Flow-active: #391 Deploying Test/ta (step2 live; #1560 <30m → no re-mention) + #458 In Progress/codingland (handoff #1564 ~4m → SLA skip).
-- Boards: #1161 edit Skipped; #458 board create Skipped. actionable add_comment=0/5.
-- OOS: Blocked #428; Review/QA/DeployProd/Approval=0; New=42 Done=372.
+- #391 Deploying Test/ta: Skipped step2 live (#1560 <30m dup-suppress); board #1161 upsert.
+- #458: concurrent Review merge closeout #1567 (PR#4 MERGED 30931ee; core 56 passed locally re-verified); board #1566 upsert Skipped post-merge <30m; remaining host Gate UI → codingland In Progress.
+- actionable add_comment this run=0/5. OOS: Blocked #428; Review/QA/DeployProd/Approval=0.
