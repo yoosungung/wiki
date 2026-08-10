@@ -1,11 +1,11 @@
 ---
 id: inbox-candidate-2026-08-10-people-ssot-curation
 agent: candidate
-ticket_id: pending
+ticket_id: 452
 updated: 2026-08-10
 status: inbox
 sources:
-  - ticket:people-ssot-2026-08-10
+  - ticket:452
   - https://www.yna.co.kr/view/AKR20250409149100054
   - https://www.newsis.com/view/NISX20260805_0003737630
   - https://www.gukjenews.com/news/articleView.html?idxno=3658857
