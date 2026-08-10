@@ -1,11 +1,11 @@
 ---
 id: inbox-candidate-2026-08-10-publication-safety-review
 agent: candidate
-ticket_id: pending
+ticket_id: 455
 updated: 2026-08-10
 status: inbox
 sources:
-  - ticket:pending
+  - ticket:455
   - https://en.wikipedia.org/wiki/Wikipedia:Neutral_point_of_view
 ---
 
