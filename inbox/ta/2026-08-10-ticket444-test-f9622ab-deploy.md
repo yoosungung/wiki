@@ -11,11 +11,10 @@ sources:
   - wiki/Engineering/Infrastructure-and-DevOps/Test-Overlay-vs-Release-Package-Deploy-Paths.md
 ---
 
-# #444 Deploying Test: test-f9622ab
+# nl2sql #444 Deploying Test: test-f9622ab
 
-- PR #51 MERGED · merge_sha `f9622abdac97569cc5121793e4d8cfda49c1d366`.
-- Registry `deploy.yml` missing → Test-Overlay: `publish-releases` `tag=test-f9622ab` (run 31358390286; `build-backend-image` success; mcp cancelled after).
-- `kubectl set image` `nl2sql-backend` → `ghcr.io/yoosungung/nl2sql-backend:test-f9622ab` · rollout OK.
-- Smoke: `/api/health`+`/api/ready` HTTP 200 (Service FQDN).
-- Live ANALYST_TOOLS includes `get_column_values` + `describe_columns` (pod exec).
-- Board: status QA · assignee qa — next live Trace re-QA + AA security.
+- Registry `tenant_cd.workflow=deploy.yml` still missing on `yoosungung/nl2sql` → Test-Overlay: `publish-releases` `tag=test-f9622ab` + `kubectl set image` backend-only.
+- `merge_sha` `f9622abdac97569cc5121793e4d8cfda49c1d366` (PR #51 squash/merge — on-demand describe tools + AA F2 cap=8).
+- Live: `ghcr.io/yoosungung/nl2sql-backend:test-f9622ab` · `/api/health`+`/api/ready` 200.
+- Pod verify: `ANALYST_TOOLS` includes `get_column_values` + `describe_columns`.
+- Handed to QA (12)/qa + @aa for live Trace / security re-gate.
