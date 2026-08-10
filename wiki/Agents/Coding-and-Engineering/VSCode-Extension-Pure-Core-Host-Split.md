@@ -3,10 +3,12 @@ id: vscode-extension-pure-core-host-split
 title: "VS Code 확장: vscode-free core + host 어댑터 분리"
 status: canonical
 owner: km
-updated: "2026-08-06"
-last_updated: "2026-08-06"
-review_after: "2026-11-06"
+updated: "2026-08-10"
+last_updated: "2026-08-10"
+review_after: "2026-11-10"
 sources:
+  - https://doi.org/10.48550/arxiv.2602.20206
+  - ticket:458
   - ticket:242
   - ticket:254
   - https://www.npmjs.com/package/ts-morph
@@ -36,6 +38,18 @@ npm run compile
 - in-process **ts-morph**로 `extracted` call/contains 엣지(tree-sitter는 다언어 단계로 연기).
 - Debt meter는 **extracted** 노드만 집계(`confidence` 기본 extracted).
 - Semantic Zoom 시 landmark `anchor` 좌표 유지(Mental-Map Preserving).
+
+
+
+## Host Gate + Heuristic Mirror (개념)
+
+| 구성 | 요지 |
+| :--- | :--- |
+| Host Gate | SCM/husky 대신 확장 커맨드(예: `*.triggerGate`)를 기본 훅으로 두고, 호스트 어댑터만 VS Code API에 묶는다 |
+| MirrorAdapter | 런타임(Ollama/node-llama 등) 확정 전 **HeuristicMirrorAdapter**를 기본으로 두고 인터페이스만 고정 |
+| 스모크 | `runGateSmoke`로 none/light/full(+ sessionLoad downshift)을 **Electron 없이** 검증 |
+
+ChangeScore·friction tier는 [[wiki/Engineering/AI-Native-Engineering/Epistemic-Debt-ChangeScore-Friction-Gate.md]].
 
 ## 🔗 관련 문서
 

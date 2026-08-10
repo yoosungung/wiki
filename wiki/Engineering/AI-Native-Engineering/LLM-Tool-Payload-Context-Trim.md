@@ -3,10 +3,12 @@ id: llm-tool-payload-context-trim
 title: "LLM 도구 페이로드 컨텍스트 트림 (작은 context 모델)"
 status: canonical
 owner: km
-updated: "2026-08-06"
-last_updated: "2026-08-06"
-review_after: "2026-11-06"
+updated: "2026-08-10"
+last_updated: "2026-08-10"
+review_after: "2026-11-10"
 sources:
+  - ticket:391
+  - ticket:444
   - ticket:172
 tags: ["Engineering", "AI-Native", "LLM", "Context", "Agents"]
 type: "wiki"
@@ -48,8 +50,27 @@ FS 도구를 제외해도 **search가 describe급 요약**(valueDomain members·
 2. SSE에 tool 호출은 있으나 LLM BadRequest인가?
 3. 트림 배포 후 동일 스모크에서 overflow가 사라졌는가? (그다음 hang/no-sql은 fail-fast 축)
 
+
+
+## 온디맨드 describe (슬림 1차 + Enum 후속)
+
+대용량 `describe_table`(Enum/valueDomain 포함)이 고정 `max_model_len`(예: 40960)을 넘기면 BadRequest → SQL 미방출로 이어진다. **서빙 context 재튜닝이 1차 목표가 아닐 때** 제품 쪽 패턴:
+
+| 단계 | 도구/필드 | 요지 |
+| :--- | :--- | :--- |
+| 1차 | `describe_table` | 컬럼명·타입·`hasValueDomain`만. 컬럼>N이면 `columnNames`(+`columnsWithValueDomain`) |
+| 온디맨드 | `get_column_values` / `describe_columns` | Enum members·소수 컬럼 상세만 |
+| 예산 | `DESCRIBE_JSON_CHARS_MAX` · `SEARCH_JSON_CHARS_MAX` · `MULTI_TURN_TOOL_CHARS_MAX` | 단발뿐 아니라 **멀티턴 누적** envelope도 캡 |
+
+MCP 표면은 얇게 유지하고(예: search/describe/execute), 온디맨드는 backend analyst tool로 흡수해도 된다. 채점 축은 [[wiki/Agents/Text-to-SQL/Spider2-Quality-Gate-nl2sql.md]].
+
+### 멀티턴 누적 함정
+
+라운드마다 describe 12k를 허용하면 3~4턴에 context를 다시 넘긴다. 스모크에서 overflow가 사라졌다가 재발하면 **단발 캡이 아니라 envelope 합**을 의심한다.
+
 ## 🔗 관련 문서
 
 - [[wiki/Engineering/AI-Native-Engineering/Agent-SSE-Failfast-and-Tool-Flood-Guard.md]]
+- [[wiki/Engineering/AI-Native-Engineering/On-Demand-Schema-Describe-Tools.md]]
 - [[wiki/Agents/Text-to-SQL/Spider2-Quality-Gate-nl2sql.md]]
 - [[wiki/Engineering/Prompt-Engineering/Context-Engineering-Sessions-and-Memory.md]]

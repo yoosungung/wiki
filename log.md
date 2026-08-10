@@ -1,6 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-10 | INBOX_DRAIN | inbox/* | 147 | OnDemandDescribe·ChangeScore·SSE warehouse/tool_result·Spider2§7.4·SGLang drift·PubGate/GH/quality 갱신; pm-checkpoint·PR/QA 진행 EXCLUDE 후 git rm |
+| 2026-08-10 | RESEARCH | Web/GitHub | 1 | OpenClaw managed-worktrees+#106224 cleanup limits; LiteRT MTP·Furiosa 2026.4b9·vllm-rbln a8 ALREADY_COVERED |
+| 2026-08-10 | INGEST | raw/ | 1 | openclaw-managed-worktrees-cleanup-limits |
+| 2026-08-10 | SYNTHESIZE | wiki/ | 12+ | On-Demand-Describe·ChangeScore 신설; SSE/Trim/Spider2/Tenant/SGLang/PubGate/VSCode/Playwright/OpenClaw MAS |
+| 2026-08-10 | LINT | Root / wiki | ALL | 데일리 생성, D-2(2026-08-08) 삭제, raw/ 합성 후 삭제, 연구_주제·INDEX META |
 | 2026-08-09 | INBOX_DRAIN | inbox/{aa,pm,candidate,ta} | 7 | PubGate today-중립·people URL 규칙 재확인; GH-intake open0 ALREADY_COVERED; k8s scale-0+TEI; people 정치본문 EXCLUDE 후 git rm |
 | 2026-08-09 | RESEARCH | Web/GitHub | 2 | LiteRT CachedSession Reset/Clone/TextScoring·external MTP weights; OpenClaw #121178/#121250; vllm-rbln a8·Furiosa·SM·LiteRT v0.15 ALREADY_COVERED |
 | 2026-08-09 | INGEST | raw/ | 2 | litert-lm-cached-session-reset-clone-score, openclaw-subagent-retention-plugin-generation |

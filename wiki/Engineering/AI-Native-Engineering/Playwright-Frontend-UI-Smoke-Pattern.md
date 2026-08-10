@@ -3,8 +3,8 @@ id: playwright-frontend-ui-smoke-pattern
 title: "Playwright 프론트엔드 UI 스모크 패턴 (백엔드 없이)"
 status: canonical
 owner: km
-updated: "2026-08-07"
-last_updated: "2026-08-07"
+updated: "2026-08-10"
+last_updated: "2026-08-10"
 review_after: "2026-10-31"
 sources:
   - ticket:51
@@ -56,6 +56,11 @@ Chromium 설치·다운로드가 불가하면 **동일 템플릿의 HTMX/SSR par
 
 - frontend-only 변경이면 e2e 축만 게이트하고, 미터치 백엔드 CI red는 **별 축**으로 다룬다.
 - 제품 예시(nl2sql): 동일 패턴을 `frontend/e2e`에 적용. 팩토리 맥락: [[wiki/Engineering/AI-Native-Engineering/Agentic-Software-Factory.md]].
+
+
+## 스코프 경계
+
+UI Playwright는 shell/nav/list 스모크다. backend SSE 필드(예: `tool_result.ok`) 행위는 **unit/`test_chat*.py`**가 정본 — E2E green만으로 SSE 계약 완료로 보지 않는다.
 
 ## 🔗 관련 문서
 

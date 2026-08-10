@@ -3,10 +3,11 @@ id: tenant-quality-yaml-gate-skip-pattern
 title: "테넌트 quality.yaml 게이트 키 누락 시 skip (NF 미생성)"
 status: canonical
 owner: km
-updated: "2026-08-06"
-last_updated: "2026-08-06"
-review_after: "2026-11-05"
+updated: "2026-08-10"
+last_updated: "2026-08-10"
+review_after: "2026-11-10"
 sources:
+  - ticket:414
   - ticket:85
   - ticket:86
   - ticket:83
@@ -74,6 +75,8 @@ type: "wiki"
 - 새 테넌트 온보딩 체크리스트에 “quality.yaml에 돌릴 게이트 키를 명시했는가?”를 넣는다. 키 없이 스케줄만 켜면 영구 skip이다.
 - 주간 리포트 문구는 `skip(사유)`와 `NF=0`을 분리해 적어, “안 돌림”과 “통과”를 구분한다.
 - `clean_code`는 CI backend 3단과 맞출 것 — [[wiki/Engineering/AI-Native-Engineering/Quality-Yaml-Clean-Code-CI-Align.md]].
+
+- clean_code 스멜 티켓화: mechanical green 이후 High/Med만 제품 티켓. **인프라 list/parse 실패를 `[]`로 삼키면** `manifest_missing` false-pass — loader는 `repo_list_failed`/`invalid_json` 등으로 단락(short-circuit)할 것.
 - `load` chat SSE는 [[wiki/Engineering/AI-Native-Engineering/In-Process-ASGI-Load-Harness-Pattern.md]].
 
 ## 🔗 관련 문서

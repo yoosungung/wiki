@@ -3,10 +3,12 @@ id: spider2-quality-gate-nl2sql
 title: "Spider2-Lite → nl2sql 품질 게이트 (스모크·preflight)"
 status: canonical
 owner: km
-updated: "2026-08-07"
-last_updated: "2026-08-07"
-review_after: "2026-11-07"
+updated: "2026-08-10"
+last_updated: "2026-08-10"
+review_after: "2026-11-10"
 sources:
+  - ticket:428
+  - ticket:391
   - ticket:32
   - ticket:37
   - ticket:38
@@ -86,7 +88,8 @@ cd spider2-eval && uv run spider2-opik weekly
 ```
 
 - gold-sql hard 실패 → wrapper non-zero(NF).
-- agent soft 실패 → 로그만, gold hard OK면 exit 0. pass_rate floor는 후속.
+- agent soft 실패 → 로그만, gold hard OK면 exit 0.
+- **함정**: `spider2-opik run`/`weekly`가 agent `pass_rate=0`이어도 exit 0이면 주간 하드 게이트가 안 닫힌다. 제품 AC는 soft→hard 승격 시 **pass_rate floor + empty-SQL count**를 별도 assert하거나 wrapper non-zero로 승격한다.
 
 ## 5. In-cluster 엔드포인트
 
@@ -176,6 +179,21 @@ OPIK_WORKSPACE: "default"
 
 Full EX를 스모크 hard와 섞지 않는다. pass_rate floor는 인간 결정 전까지 non-blocking.
 
+
+
+## 7.4 Agent EX hard 승격 체크리스트 (empty SQL / wrong schema)
+
+스모크 `local008`(Baseball)·`local022`(IPL)에서 soft `empty SQL`/`pass_rate=0`을 제품 hard로 올릴 때:
+
+1. **스키마 힌트**: Opik item `schema`를 chat에 `[Spider2 schema: …]`로 prefix — 질문만으로는 도메인 모호.
+2. **schema-scoped search**: soft 프롬프트만으로는 keyword가 타 DB 모델을 끌어온다 → `search_tables.schema` 하드 핀(+ ContextVar 전달).
+3. **페이로드 트림·온디맨드 describe**: [[wiki/Engineering/AI-Native-Engineering/LLM-Tool-Payload-Context-Trim.md]], [[wiki/Engineering/AI-Native-Engineering/On-Demand-Schema-Describe-Tools.md]].
+4. **SSE warehouse 진실성**: [[wiki/Engineering/AI-Native-Engineering/Agent-SSE-Failfast-and-Tool-Flood-Guard.md]] — unwrap·stash·warehouse-only.
+5. **DB GRANT**: runner 역할에 Spider2 스키마 `USAGE/SELECT` 없으면 check/exec가 왜곡된다.
+6. **주간 wrapper**: gold hard OK + agent pass_rate=0 → NF를 열려면 exit 코드를 맞출 것(§4.2 함정).
+
+UI Playwright는 LLM/SQL EX를 대체하지 않는다 — [[wiki/Engineering/AI-Native-Engineering/Playwright-Frontend-UI-Smoke-Pattern.md]].
+
 ## 8. 최소 완료선 (품질 테스트 "준비")
 
 1. 스모크 instance set 문서화 (본 §3)
@@ -189,6 +207,7 @@ Full EX를 스모크 hard와 섞지 않는다. pass_rate floor는 인간 결정 
 - [[wiki/Engineering/AI-Native-Engineering/Playwright-Frontend-UI-Smoke-Pattern.md]]
 - [[wiki/Engineering/AI-Native-Engineering/LLM-Tool-Payload-Context-Trim.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Agent-SSE-Failfast-and-Tool-Flood-Guard.md]]
+- [[wiki/Engineering/AI-Native-Engineering/On-Demand-Schema-Describe-Tools.md]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/MCP-Host-Allowlist-DNS-Rebinding.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Agentic-Software-Factory.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Wiki-Synthesis-Policy.md]]

@@ -3,10 +3,11 @@ id: publication-gate-empty-overwrite-guard
 title: "퍼블리시 게이트 + 빈 산출물 덮어쓰기 금지"
 status: canonical
 owner: km
-updated: "2026-08-09"
-last_updated: "2026-08-09"
-review_after: "2026-11-09"
+updated: "2026-08-10"
+last_updated: "2026-08-10"
+review_after: "2026-11-10"
 sources:
+  - ticket:474
   - schedule:publication-safety
   - schedule:issue-radar
   - ticket:167
@@ -54,7 +55,7 @@ python agent/publication_gate.py --base origin/main
 - **게이트 PASS ≠ content-safe**: `/people/unknown`, org-as-person stance, 역할·신원 오인 stub는 추가 strip. people promote는 allowlisted 공식/프로필 URL(≥1)이 있을 때만; 애매한 기자·동명이인·역할 불일치·비인물(학교 등)은 hold.
 - 공개 전 제거: placeholder/unknown·SSoT 없는 slug·불완전 신원 stub·기관을 people로 링크한 stance.
 - meta/stub+stance만 갱신하는 잡에서 사이트 빌드 바이너리(예: Hugo)가 없으면 **빌드를 스킵**해도 된다 — 게이트·pytest가 정본이다.
-- issue-radar → today 발행: empty-overwrite guard 통과 후에만 공개 큐 파일을 커밋하고, 캐시 타임스탬프를 남긴다.
+- issue-radar → today 발행: empty-overwrite guard 통과 후에만 공개 큐(`today.yaml` 등)를 커밋·push하고, **승인 티켓은 만들지 않는다**. 캐시 타임스탬프를 남긴다.
 - **공개 today 큐는 중립만**: 내부 승인 상태·스케줄/도구명을 노출하지 않는다. 후보·이슈 큐 페이로드만 게시한다.
 
 ## 🔗 관련 문서

@@ -3,10 +3,11 @@ id: sglang-gemma4-llm-serving-cluster-ops
 title: "SGLang Gemma4 llm-serving 클러스터 운영 (12b/31b)"
 status: canonical
 owner: km
-updated: "2026-08-09"
-last_updated: "2026-08-09"
-review_after: "2026-11-06"
+updated: "2026-08-10"
+last_updated: "2026-08-10"
+review_after: "2026-11-10"
 sources:
+  - ticket:426
   - ticket:42
   - kubectl:llm-serving
   - schedule:ta-k8s-daily
@@ -68,6 +69,19 @@ API `max_model_len`은 **SGLang `--context-length`**가 결정한다(모델 카�
 ```
 
 fp8는 **용량/정밀도 트레이드오프**이지 새 listen/auth surface가 아니다. 제품 쪽 트림과 병행 — [[wiki/Engineering/AI-Native-Engineering/LLM-Tool-Payload-Context-Trim.md]].
+
+
+
+## Git vs live drift (context/fp8)
+
+live Deployment가 이미 `40960`+`fp8_e4m3`인데 git manifest가 `32768`로 남으면 **클러스터 재롤아웃이 아니라 git sync**가 정본이다.
+
+```bash
+# 개념: manifest args + verify-sglang.sh MIN=목표 + README를 live와 맞춤
+# live 이미 목표면 kubectl rollout 불필요 — drift만 닫는다
+```
+
+길이만 올리는 PR은 KV pool < context면 실패한다. 사다리 표(§ Context length)와 [[wiki/Engineering/AI-Native-Engineering/LLM-Tool-Payload-Context-Trim.md]]를 함께 본다.
 
 ## 🔗 관련 문서
 
