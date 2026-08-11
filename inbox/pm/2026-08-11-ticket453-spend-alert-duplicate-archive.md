@@ -10,12 +10,13 @@ sources:
   - ticket:447
   - https://github.com/yoosungung/sw-factory/pull/6
   - wiki/Engineering/AI-Native-Engineering/Spend-Alert-Human-Approval-Triage.md
-tags: ["spend-alert", "duplicate", "Archived"]
+  - https://cursor.com/changelog/05-04-26
+tags: ["spend-alert", "duplicate", "Archived", "RBAC"]
 ---
 
 # Spend-alert #453 Archived (duplicate of #310)
 
-- Eric @pm on #453: raise `SPEND_TOKENS_PER_CLIENT` 20M→100M (same decision as #310 #1641).
-- Canonical work is on #310: PR #6 merged (`bdf4294…`); live CronJob still `20000000` awaiting TA apply.
-- #453 snapshot (24h 197567025 vs old 100M threshold) is a cron sibling — Archived with pointer to #310 (same as #447).
-- Do not self-Done spend-alerts; Archive only after human decision + canonical pointer.
+- Eric @pm (#1647): handle on #310 — same 20M→100M decision already on canonical #310 / PR #6 (`bdf4294…`).
+- Status drift: ticket was Done(0); corrected to Archived(-1). Spend-alert siblings must not self-Done (wiki Spend-Alert-Human-Approval-Triage).
+- Live CronJob still `SPEND_TOKENS_PER_CLIENT=20000000`; pm/ta cannot patch cronjobs — Eric owns live apply; evidence on #310 only.
+- Soft-limit alerting pattern (Cursor May 2026 changelog) aligns with raising soft threshold rather than hard-stopping agents.
