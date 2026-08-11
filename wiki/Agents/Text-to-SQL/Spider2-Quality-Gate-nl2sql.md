@@ -3,9 +3,9 @@ id: spider2-quality-gate-nl2sql
 title: "Spider2-Lite → nl2sql 품질 게이트 (스모크·preflight)"
 status: canonical
 owner: km
-updated: "2026-08-10"
-last_updated: "2026-08-10"
-review_after: "2026-11-10"
+updated: "2026-08-11"
+last_updated: "2026-08-11"
+review_after: "2026-11-11"
 sources:
   - ticket:428
   - ticket:391
@@ -188,9 +188,12 @@ Full EX를 스모크 hard와 섞지 않는다. pass_rate floor는 인간 결정 
 1. **스키마 힌트**: Opik item `schema`를 chat에 `[Spider2 schema: …]`로 prefix — 질문만으로는 도메인 모호.
 2. **schema-scoped search**: soft 프롬프트만으로는 keyword가 타 DB 모델을 끌어온다 → `search_tables.schema` 하드 핀(+ ContextVar 전달).
 3. **페이로드 트림·온디맨드 describe**: [[wiki/Engineering/AI-Native-Engineering/LLM-Tool-Payload-Context-Trim.md]], [[wiki/Engineering/AI-Native-Engineering/On-Demand-Schema-Describe-Tools.md]].
-4. **SSE warehouse 진실성**: [[wiki/Engineering/AI-Native-Engineering/Agent-SSE-Failfast-and-Tool-Flood-Guard.md]] — unwrap·stash·warehouse-only.
-5. **DB GRANT**: runner 역할에 Spider2 스키마 `USAGE/SELECT` 없으면 check/exec가 왜곡된다.
-6. **주간 wrapper**: gold hard OK + agent pass_rate=0 → NF를 열려면 exit 코드를 맞출 것(§4.2 함정).
+4. **SSE warehouse 진실성**: [[wiki/Engineering/AI-Native-Engineering/Agent-SSE-Failfast-and-Tool-Flood-Guard.md]] — unwrap·stash·warehouse-only·stash lifetime·abort emit.
+5. **invent / incomplete SQL 금지**: MDL에 없는 테이블명 invent 차단; SELECT-without-FROM은 fixture 전용; compound invent + FROM-clause retry 프롬프트 금지.
+6. **task-guard**: 빈 `task({})`·silent stop에 EnsureAnalystTaskMiddleware로 analyst 경로 강제.
+7. **채점 입력**: Execute SSE에 MDL invent fallback 넣지 않음 — warehouse-shaped SQL만 채점.
+8. **DB GRANT**: runner 역할에 Spider2 스키마 `USAGE/SELECT` 없으면 check/exec가 왜곡된다.
+9. **주간 wrapper**: gold hard OK + agent pass_rate=0 → NF를 열려면 exit 코드를 맞출 것(§4.2 함정).
 
 UI Playwright는 LLM/SQL EX를 대체하지 않는다 — [[wiki/Engineering/AI-Native-Engineering/Playwright-Frontend-UI-Smoke-Pattern.md]].
 

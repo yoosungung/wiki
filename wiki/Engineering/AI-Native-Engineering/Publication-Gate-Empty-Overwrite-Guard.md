@@ -3,9 +3,9 @@ id: publication-gate-empty-overwrite-guard
 title: "퍼블리시 게이트 + 빈 산출물 덮어쓰기 금지"
 status: canonical
 owner: km
-updated: "2026-08-10"
-last_updated: "2026-08-10"
-review_after: "2026-11-10"
+updated: "2026-08-11"
+last_updated: "2026-08-11"
+review_after: "2026-11-11"
 sources:
   - ticket:474
   - schedule:publication-safety

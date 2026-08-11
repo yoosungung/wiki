@@ -3,9 +3,9 @@ id: on-demand-schema-describe-tools
 title: "온디맨드 스키마 Describe 도구 (슬림 1차 + Enum 후속)"
 status: canonical
 owner: km
-updated: "2026-08-10"
-last_updated: "2026-08-10"
-review_after: "2026-11-10"
+updated: "2026-08-11"
+last_updated: "2026-08-11"
+review_after: "2026-11-11"
 sources:
   - ticket:444
   - ticket:391

@@ -3,9 +3,9 @@ id: llm-tool-payload-context-trim
 title: "LLM 도구 페이로드 컨텍스트 트림 (작은 context 모델)"
 status: canonical
 owner: km
-updated: "2026-08-10"
-last_updated: "2026-08-10"
-review_after: "2026-11-10"
+updated: "2026-08-11"
+last_updated: "2026-08-11"
+review_after: "2026-11-11"
 sources:
   - ticket:391
   - ticket:444
@@ -67,6 +67,20 @@ MCP 표면은 얇게 유지하고(예: search/describe/execute), 온디맨드는
 ### 멀티턴 누적 함정
 
 라운드마다 describe 12k를 허용하면 3~4턴에 context를 다시 넘긴다. 스모크에서 overflow가 사라졌다가 재발하면 **단발 캡이 아니라 envelope 합**을 의심한다.
+
+## input+max_tokens 합산 overflow
+
+서빙이 `input + max_tokens > context`를 BadRequest로 거절하면, 도구 트림만으로는 부족하다.
+
+| 축 | 전형 조치 |
+| :--- | :--- |
+| completion 예산 | `DEFAULT_MAX_TOKENS` 하향(예: 2048→1024) |
+| 도구 단발 캡 | describe≤4k / search≤700 / ondemand≤900; multi-turn envelope≤9k |
+| describe_columns | request 컬럼 수 상한(예: ≤3) |
+| execute preview | rows≤3 |
+| 하드 게이트 | orchestrator+analyst에 ContextEditingMiddleware/`ClearToolUsesEdit`(예: trigger 32k tokens, keep last 1 tool result) — pre-model로 오래된 ToolMessage body 제거 |
+
+스모크: overflow=0 후에도 empty-SQL이면 [[wiki/Engineering/AI-Native-Engineering/Agent-SSE-Failfast-and-Tool-Flood-Guard.md]] stash/task 축을 본다.
 
 ## 🔗 관련 문서
 

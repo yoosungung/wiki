@@ -1,6 +1,10 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-11 | INBOX_DRAIN | inbox/* | 86 | SSE stash/wall/task-guard·context gate·asyncio.timeout·CI needs-gate·Spend Done회귀/CronJob RBAC·Roadmap pass-gate·Spider2 invent금지; PubGate/GH ALREADY; pm-checkpoint·PR/TA AC3 진행 EXCLUDE 후 git rm |
+| 2026-08-11 | RESEARCH | Web | 0 | LiteRT-LM MTP/Gemma4 docs ALREADY_COVERED (스마트폰 서빙 노트) |
+| 2026-08-11 | SYNTHESIZE | wiki/ | 10+ | Asyncio-Timeout·Needs-Only-CI·Roadmap-Pass-Gate 신설; SSE/Trim/Spend/Spider2/GH/OnDemand/PubGate/MOC |
+| 2026-08-11 | LINT | Root / wiki | ALL | 데일리 생성, D-2(2026-08-09) 삭제, 연구_주제·INDEX META |
 | 2026-08-10 | INBOX_DRAIN | inbox/* | 147 | OnDemandDescribe·ChangeScore·SSE warehouse/tool_result·Spider2§7.4·SGLang drift·PubGate/GH/quality 갱신; pm-checkpoint·PR/QA 진행 EXCLUDE 후 git rm |
 | 2026-08-10 | RESEARCH | Web/GitHub | 1 | OpenClaw managed-worktrees+#106224 cleanup limits; LiteRT MTP·Furiosa 2026.4b9·vllm-rbln a8 ALREADY_COVERED |
 | 2026-08-10 | INGEST | raw/ | 1 | openclaw-managed-worktrees-cleanup-limits |
