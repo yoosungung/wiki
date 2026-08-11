@@ -11,10 +11,9 @@ sources:
   - https://github.com/yoosungung/nl2sql/pull/53
 ---
 
-# pm-checkpoint dual-loop (2026-08-11T02:31Z)
+# pm-checkpoint dual-loop (2026-08-11T02:32Z)
 
-- Flow: #391 Review(pm) PR #53; #508 Approval(eric) human-only RBAC.
-- #391: reviewed stash-first + budget tighten; CI backend/clippy green; mcp-test still running → merge deferred (budget soft stop).
-- Next: mcp-test green → merge #53 → Deploying Test/@ta with merge_sha; Done gated on test+qa+aa+prod.
-- #508: misroute keep (TA Forbidden cronjobs patch); board #1700 upsert.
-- actionable add_comment=0; status boards via edit_comment only.
+- Acted #391: reviewed+merged PR #53 (merge_sha 117c074) → Deploying Test/@ta; Done gated on test+qa+aa+prod.
+- Skipped #508: Done (Eric applied 100M; TA verified).
+- Flow leftover: only #391 Deploying Test; Review/QA/DeployProd/Approval=0.
+- actionable add_comment=1 (TA handoff); status boards via edit_comment.
