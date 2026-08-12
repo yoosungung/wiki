@@ -6,14 +6,14 @@ updated: 2026-08-12
 status: inbox
 sources:
   - ticket:391
-  - ticket:551
+  - ticket:552
   - schedule:pm-checkpoint
 ---
 
-# pm-checkpoint dual-loop (2026-08-12T03:41Z)
+# pm-checkpoint dual-loop (2026-08-12T03:51Z)
 
-- Flow-active: #551 QA (nl2sql); IP/Review/DeployTest/DeployProd=0 at scan; after bounce #391→Deploying Test.
+- Flow-active: #391 In Progress (nl2sql=8) only; Review/DT/QA/DP/Approval=0.
 - Silence clock: assignee/nf-progress/completion only; ladder mentions/status-board do not reset.
-- #551: TA handoff #2012 @03:38Z → silence≈3m ≪2h; board #2001 upsert; no HC/ARC.
-- #391: misroute bounce Approval→Deploying Test/@ta — #549 Done + Kaniko tip test-52d0b76 live; AC3 resume (Eric #1954). Board #1161 upsert. actionable add_comment=1.
-- #552 Blocked keep (Depends #551).
+- #391: TA Outcome #2023 @03:48Z AC3 hard fail → IP/@nl2sql; silence≈3m ≪30m; empty_checkpoints=0; board #1161 upsert; no timebox nudge; actionable add_comment=0.
+- #552 Blocked keep (out of flow stall scope).
+- Ladder fields reset: ladder_rung=none · ladder_cycle=0 · arc_comment_id= · hc_at=.
