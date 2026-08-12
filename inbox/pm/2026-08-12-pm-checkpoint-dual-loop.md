@@ -10,10 +10,9 @@ sources:
   - schedule:pm-checkpoint
 ---
 
-# pm-checkpoint dual-loop (2026-08-12T03:51Z)
+# pm-checkpoint dual-loop (2026-08-12T04:06Z)
 
-- Flow-active: #391 In Progress (nl2sql=8) only; Review/DT/QA/DP/Approval=0.
+- Flow-active: #391 Deploying Test (ta); IP/Review/QA/DeployProd/Approval=0.
 - Silence clock: assignee/nf-progress/completion only; ladder mentions/status-board do not reset.
-- #391: TA Outcome #2023 @03:48Z AC3 hard fail → IP/@nl2sql; silence≈3m ≪30m; empty_checkpoints=0; board #1161 upsert; no timebox nudge; actionable add_comment=0.
-- #552 Blocked keep (out of flow stall scope).
-- Ladder fields reset: ladder_rung=none · ladder_cycle=0 · arc_comment_id= · hc_at=.
+- #391: ta nf-progress #2038 @04:05:29Z (tip test-ef665d6 / PR#64) → silence≈1m ≪2h; board #1161 upsert; no HC/ARC.
+- #552 Blocked keep (depends #549). actionable add_comment=0.
