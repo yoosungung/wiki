@@ -3,9 +3,9 @@ id: agent-sse-failfast-and-tool-flood-guard
 title: "Agent SSE fail-fast·도구 폭주 가드"
 status: canonical
 owner: km
-updated: "2026-08-11"
-last_updated: "2026-08-11"
-review_after: "2026-11-11"
+updated: "2026-08-12"
+last_updated: "2026-08-12"
+review_after: "2026-11-12"
 sources:
   - ticket:416
   - ticket:415
@@ -65,8 +65,20 @@ OpenAI/호환 HarnessProfile에서 `edit_file`/`write_file`/`execute` 등 **FS·
 | 함정 | 조치 |
 | :--- | :--- |
 | idle StreamChunkTimeout | `DEFAULT_STREAM_CHUNK_TIMEOUT_S`를 클라이언트 SLA보다 짧게(예: 60 < 120) |
-| `number is infinity` BadRequest | execute LLM preview에 `sanitize_json_numbers`; search/describe/ondemand float sanitize |
+| wall chat_stream_timeout | 동일 Task에서 `asyncio.timeout` — [[wiki/Engineering/AI-Native-Engineering/Asyncio-Timeout-Same-Context-Streaming.md]]; 클라이언트 SLA보다 짧게(예: 110 < 120) |
+| `number is infinity` BadRequest | `sanitize_json_numbers`가 `numbers.Real` 커버; rows만이 아니라 columns/error dict·ToolMessage/`Command`·**다음 턴 message history·tool_call args**(numpy-like 포함)까지 `sanitize_message_for_llm` / middleware `wrap_model_call` |
+| warehouse stash race | nested execute가 parent `on_tool_end` 없이 stash하면 TimeoutError 채점과 경합 → `_to_sse` 틱마다 eager-emit scorable stash |
 | MCP `decimal` unparse | Arrow `decimal`/`numeric` → Decimal128(38,10) + 스키마 vocab |
+
+## Force middleware (explore hang / empty SQL)
+
+| 가드 | 요지 |
+| :--- | :--- |
+| ForceAnalyst / wrap_model_call | schema-hint 시 orchestrator hang·empty stop 전에 `task(analyst)` 강제; analyst-done 턴은 모델 호출 유지 |
+| ForceExecuteSelect | nonempty search+describe(또는 explore 예산 초과) → tools=`execute_select_query` only + `tool_choice=required`; empty catalog는 skip |
+| NonFiniteToolMiddleware | orchestrator+analyst에 장착; tool output·model messages 양방향 sanitize |
+
+`max_model_len` 재튜닝과 혼동하지 않는다 — empty-SQL/Infinity는 sanitize·force·stash 축으로 먼저 닫는다.
 
 ContextVar-safe wall timeout은 [[wiki/Engineering/AI-Native-Engineering/Asyncio-Timeout-Same-Context-Streaming.md]].
 

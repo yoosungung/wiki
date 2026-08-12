@@ -3,9 +3,9 @@ id: vscode-extension-pure-core-host-split
 title: "VS Code 확장: vscode-free core + host 어댑터 분리"
 status: canonical
 owner: km
-updated: "2026-08-10"
-last_updated: "2026-08-10"
-review_after: "2026-11-10"
+updated: "2026-08-12"
+last_updated: "2026-08-12"
+review_after: "2026-11-12"
 sources:
   - https://doi.org/10.48550/arxiv.2602.20206
   - ticket:458
@@ -30,8 +30,11 @@ Foam 스타일: **`extension/core`는 vscode-free**(Jest만), **`extension/host`
 ```bash
 # extension/ 기준
 npm test          # core ~초 단위
-npm run compile
+npm run compile   # core → host (fresh sync 후 dist/out wipe 대비)
+npm run test:vscode  # Extension Host QA — compile core-first 필수
 ```
+
+Host E2E 게이트·CDN fallback·xvfb는 [[wiki/Engineering/AI-Native-Engineering/VSCode-Extension-Host-QA-Gate.md]]. Cloud Mirror 옵트인·Sanitizer는 [[wiki/Engineering/AI-Native-Engineering/Extension-Sanitizer-Cloud-Mirror-OptIn.md]].
 
 ## TS/JS AST 추출
 

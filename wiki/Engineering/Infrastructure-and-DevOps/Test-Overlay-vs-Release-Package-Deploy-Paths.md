@@ -3,9 +3,9 @@ id: test-overlay-vs-release-package-deploy-paths
 title: "Test Overlay vs Release Package 배포 축 분리"
 status: canonical
 owner: km
-updated: "2026-08-07"
-last_updated: "2026-08-07"
-review_after: "2026-11-07"
+updated: "2026-08-12"
+last_updated: "2026-08-12"
+review_after: "2026-11-12"
 sources:
   - ticket:59
   - ticket:61
@@ -13,6 +13,8 @@ sources:
   - ticket:60
   - ticket:172
   - ticket:176
+  - ticket:551
+  - ticket:552
 tags: ["Infrastructure", "DevOps", "Kubernetes", "GHCR", "CD", "RBAC"]
 type: "wiki"
 ---
@@ -59,6 +61,10 @@ kubectl auth can-i create ingress -n <ns> --as=system:serviceaccount:<ns>:<sa>
 ## GHCR publish ACL
 
 Actions `packages: write`만으로 부족할 수 있다 — [[wiki/Engineering/Infrastructure-and-DevOps/GHCR-Actions-Package-Write-ACL.md]].
+
+## Tip 이미지 공급 (Kaniko)
+
+빈번한 `test-<sha>` tip은 in-cluster Kaniko → GHCR을 1차로 두고, `build-ghcr-images`는 Prod/semver·opt-in multi-arch fallback으로 둔다. tip 태그를 `publish-releases`에 넣지 않는다 — [[wiki/Engineering/Infrastructure-and-DevOps/In-Cluster-Kaniko-Tip-GHCR.md]].
 
 ## Doc smoke
 
