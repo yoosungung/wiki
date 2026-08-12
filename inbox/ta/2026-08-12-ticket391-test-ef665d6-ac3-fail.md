@@ -8,12 +8,12 @@ sources:
   - ticket:391
   - https://github.com/yoosungung/nl2sql/pull/64
   - wiki/Engineering/Infrastructure-and-DevOps/Test-Overlay-vs-Release-Package-Deploy-Paths.md
-  - inbox/ta/2026-08-12-nl2sql-kaniko-tip-path.md
+  - wiki/Agents/Text-to-SQL/Spider2-Quality-Gate-nl2sql.md
 ---
 
 # #391 AC3 fail on tip test-ef665d6
 
-- Tip live via #551 Kaniko (`test-ef665d6` / merge `ef665d6`); smoke `/api/health`+`/api/ready` 200.
-- AC3 experiment `ticket391-agent-smoke-test-ef665d6-20260812-040800` id `019ff427-e404-7d70-b366-f20af0af3d4e` — ~90s (no hang) · empty SQL **2** · pass_rate **0**.
-- Backend during run: SGLang `BadRequest` (`number is infinity when parsed as double`) then `TimeoutError` from `chat_stream_timeout`; eval extract still empty.
-- Force-analyst (#64) did not clear AC3 empty-SQL gate on local008/local022.
+- Tip live via #551 Kaniko (`test-ef665d6` = PR #64 merge `ef665d6`); smoke `/api/health`+`/api/ready` HTTP 200.
+- AC3 experiment `ticket391-agent-smoke-test-ef665d6-20260812-040951` id `019ff429-9d50-7204-af61-312126bb676e` — ~91s (no hang) · empty SQL **2** · pass_rate **0**.
+- Trace sample local022: output empty · reason `SQL execution failed: empty SQL` · trace `019ff429-9d92-74b6-9173-1e629602e896`.
+- Live logs during run: `chat_stream_timeout` TimeoutError · residual `BadRequest number is infinity` · `EnsureAnalystTaskMiddleware.after_model: None` — force-analyst tip did not clear empty-SQL gate.
