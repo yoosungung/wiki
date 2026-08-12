@@ -10,9 +10,10 @@ sources:
   - schedule:pm-checkpoint
 ---
 
-# pm-checkpoint: #563 Deploying Test within SLA
+# pm-checkpoint: #563 Deploying Test health-check
 
-- Flow-active only #563 (Deploying Test / assignee ta); Approval/misroute empty.
-- Silence clock = assignee evidence only; last ta Outcome #2152 @ 08:39Z → ~1.95h (<2h HC ~10:39Z).
-- Status board upsert via edit_comment #2142; 0 actionable add_comment this run.
-- Note: nl2sql#71 MERGED; #72 OPEN CONFLICTING (HTTP_USER naming) — does not reset silence.
+- Flow-active only #563 (Deploying Test / assignee ta); IP/Review/QA/DeployProd=0; Approval/misroute empty.
+- Silence clock = assignee evidence only; last ta Outcome #2152 @ 08:39Z → ~2.2h (≥2h HC).
+- Acted: one @ta health-check add_comment #2802; board #2142 upsert ladder_rung=hc ladder_cycle=1 hc_at=2026-08-12T10:51Z.
+- Next run: ≥1h after hc_at with no assignee evidence → skip ARC (assignee=ta) → dead-by-timeout → terminal Approval + admin.
+- Note: nl2sql#71 MERGED; #72 OPEN CONFLICTING — does not reset silence; TA should not wait on #72.
