@@ -9,10 +9,9 @@ sources:
   - https://github.com/yoosungung/nl2sql/pull/71
 ---
 
-# nl2sql metadata ↔ git-http: oauth2 username mismatch
+# nl2sql metadata ↔ git-http: prefer configurable HTTP username
 
-- Live test CM remotes can point at `http://git-http-server.git.svc:80/git/nl2sql-metadata.git` (no URL creds).
-- Secret tokens `METADATA_GIT_PUSH_TOKEN` / `MCP_GIT_PULL_TOKEN` match test default `gitpassword`.
-- App code hardcodes basic-auth user `oauth2` (GitLab deploy-token convention); git-http htpasswd only has user `git` → `oauth2:gitpassword` returns HTTP 401.
-- PVC origin with URL-embedded `git:…` works for manual fetch/push; mcp `ensure_origin` overwrites that URL from CM on bootstrap — do not restart with remotes+tokens until htpasswd has `oauth2` or product username is `git`.
-- Bare repo needed both `refs/heads/master` and `refs/heads/main` when `METADATA_GIT_BRANCH=main`.
+- Decision (pm #2149): do not wait on htpasswd `oauth2` alias; align app to username `git`.
+- PR #71 adds `METADATA_GIT_HTTP_USERNAME` / `MCP_GIT_HTTP_USERNAME` (default `oauth2`); test overlay sets `git`.
+- Live CM remotes + username keys patched; do not restart until new image with code lands (old binaries ignore username env; oauth2 would still 401).
+- Bare repo has both `main` and `master` at same tip.
