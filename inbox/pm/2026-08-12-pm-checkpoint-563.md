@@ -12,6 +12,6 @@ sources:
 # pm-checkpoint: #563 Deploying Test within SLA
 
 - Flow-active only #563 (Deploying Test / assignee ta); Approval/misroute empty.
-- Silence clock = assignee evidence only; last ta Outcome #2152 @ 08:39Z → ~1.45h (<2h HC).
-- Status board upsert via edit_comment; no actionable add_comment this run.
+- Silence clock = assignee evidence only; last ta Outcome #2152 @ 08:39Z → ~1.7h (<2h HC ~10:39Z).
+- Status board upsert via edit_comment #2142; 0 actionable add_comment this run.
 - Note: nl2sql#71 MERGED; #72 still OPEN (HTTP_USER naming) — does not reset silence.
