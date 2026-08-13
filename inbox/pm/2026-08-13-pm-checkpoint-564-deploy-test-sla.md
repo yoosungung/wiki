@@ -10,9 +10,9 @@ sources:
   - ARCHITECTURE.md
 ---
 
-# pm-checkpoint 2026-08-13T02:57Z
+# pm-checkpoint 2026-08-13T02:59Z
 
 - Flow-active top-level: only #564 Deploying Test (nl2sql/ta); IP/Review/QA/Prod=0; Approval=0; misroute=0.
-- #564: nl2sql#77 MERGED (merge_sha 7f519f2…) · handoff #3203/#3204 @ta tip rebuild past test-500a8c6; silence ≈3m ≪2h → no HC/ARC; status-board #3109 upsert; ladder_cycle=0.
+- #564: silence ≈4m since merge handoff #3203/#3204 ≪2h → classification within_sla_deploy_test_await_ta_tip; no HC/ARC; status-board #3109 upsert; ladder_cycle=0.
 - Skip: New=35 · Done≈576; no other dual-loop lanes.
 - Actionable add_comment this run: 0 (status-board edit only).
