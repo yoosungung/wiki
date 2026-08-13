@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-08-12 (inbox drain 77·VSCode Host QA/Sanitizer-Mirror/Kaniko tip/Git-HTTP user/SSE force+∞sanitize/sessionLoad mid; LiteRT MTP ALREADY) | Root: wiki/
+[META] Updated: 2026-08-13 (inbox drain 164·tip-binary/PVC-resync/MDL-only/search-shortcol/single-master/refSql/FS-blocked-by; Furiosa b11; LiteRT MTP ALREADY) | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -49,9 +49,9 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
-- wiki/Agents/ (242 files)
+- wiki/Agents/ (248 files)
     - Multi-Agent-and-Orchestration: 18 files
-    - Text-to-SQL: 27 files
+    - Text-to-SQL: 33 files
     - Evaluations: 10 files
     - Memory-and-Cognition: 24 files
     - Robotics-and-VLA: 21 files
@@ -60,20 +60,20 @@
     - Self-Evolving: 11 files
     - Frameworks: 67 files
 - wiki/Models/ (230 files)
-    - Optimization-and-Serving: 44 files
-    - Architectures: 28 files
+    - Optimization-and-Serving: 46 files
+    - Architectures: 29 files
     - Small-Models: 18 files
-    - SFT: 50 files
+    - SFT: 51 files
     - Multimodal-and-Vision: 10 files
     - Reasoning-and-Cognition: 34 files
     - RL: 40 files
-- wiki/RAG/ (66 files)
-- wiki/Engineering/ (142 files)
+- wiki/RAG/ (68 files)
+- wiki/Engineering/ (149 files)
     - Data-and-Security: 14 files
     - Prompt-Engineering: 12 files
-    - Infrastructure-and-DevOps: 40 files
+    - Infrastructure-and-DevOps: 43 files
     - Development-Environment: 17 files
-    - AI-Native-Engineering: 55 files
+    - AI-Native-Engineering: 61 files
 - wiki/Business/ (39 files)
     - Recommendation Systems: 7 files
     - Trends: 9 files

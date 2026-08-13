@@ -3,8 +3,8 @@ id: parent-done-requires-closed-subtasks
 title: "Parent Done은 닫힌 하위 태스크를 요구한다"
 status: canonical
 owner: km
-updated: "2026-07-31"
-last_updated: "2026-07-31"
+updated: "2026-08-13"
+last_updated: "2026-08-13"
 review_after: "2026-10-31"
 sources:
   - ticket:50
@@ -37,6 +37,8 @@ BEFORE parent → Done:
 ## 적용 팁
 
 - 제품 예: Leantime 서브태스크([공식 문서](https://support.leantime.io/en/article/subtasking-with-leantime-6l9nmw/)) — cascade 없음 → 에이전트/PM 스킬이 게이트를 소유한다.
+- FS 선행을 `dependingTicketId`에 넣지 않는다 — [[wiki/Engineering/AI-Native-Engineering/FS-Blocked-By-Vs-Parent-Link.md]].
+- 부모 작업이 Done인데 `type=milestone`만 New로 남으면 위생 Done — [[wiki/Engineering/AI-Native-Engineering/Orphan-Milestone-Close-After-Children-Done.md]].
 - mid-flow 자식 상태 갱신 체크리스트만으로는 부족하다. **Hard gate + pytest**를 한 쌍으로 둔다.
 
 ## 🔗 관련 문서

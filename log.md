@@ -1,6 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-13 | INBOX_DRAIN | inbox/* | 164 | tip-binary/RWO-Recreate/PVC-resync·MDL-only/search-shortcol/single-master/grain-join/refSql/schema-parallel·stash autofill/god-split/exit≠pass_rate/FS-blocked-by/orphan-milestone; GH/PubGate/Kaniko/Git-HTTP ALREADY; pm-checkpoint·PR/QA/AA/TA 진행 EXCLUDE 후 git rm |
+| 2026-08-13 | RESEARCH | Web | 1 | Furiosa-LLM 2026.4.0b11 Quick Start 핀; LiteRT MTP/Gemma4·vllm-rbln a8 ALREADY_COVERED |
+| 2026-08-13 | INGEST | raw/ | 1 | furiosa-llm-2026-4-0b11 |
+| 2026-08-13 | SYNTHESIZE | wiki/ | 13+ | 신설 13 + SSE/Kaniko/Git-HTTP/Overlay/Spider2/Roadmap/Furiosa b11/SM MCP Apps/MOC/INDEX |
+| 2026-08-13 | LINT | Root / wiki | ALL | 데일리 생성, D-2(2026-08-11) 삭제, raw 합성 후 삭제, 연구_주제·INDEX META |
 | 2026-08-12 | INBOX_DRAIN | inbox/* | 77 | VSCode Host QA·Sanitizer/Mirror opt-in·Kaniko tip GHCR·Git-HTTP username·SSE force/∞sanitize·sessionLoad mid; GH/PubGate ALREADY; pm-checkpoint·PR/AC3 진행 EXCLUDE 후 git rm |
 | 2026-08-12 | RESEARCH | Web | 0 | LiteRT-LM MTP/Gemma4·NPU SoC docs ALREADY_COVERED (스마트폰 서빙 노트) |
 | 2026-08-12 | SYNTHESIZE | wiki/ | 12+ | Host-QA·Sanitizer-Mirror·Kaniko-Tip·Git-HTTP-User 신설; ChangeScore/SSE/VSCode-core/Overlay/GHCR/MOC/GH/PubGate |

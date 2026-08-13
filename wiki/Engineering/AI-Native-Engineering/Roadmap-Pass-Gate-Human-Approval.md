@@ -3,8 +3,8 @@ id: roadmap-pass-gate-human-approval
 title: "ROADMAP pass-gate: 인간 Approval 후 다음 마일스톤"
 status: canonical
 owner: km
-updated: "2026-08-11"
-last_updated: "2026-08-11"
+updated: "2026-08-13"
+last_updated: "2026-08-13"
 review_after: "2026-11-11"
 sources:
   - ticket:516
@@ -26,6 +26,6 @@ type: "wiki"
 ## 🔗 관련 문서
 
 - [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]]
-- [[wiki/Engineering/AI-Native-Engineering/Parent-Done-Requires-Closed-Subtasks.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Orphan-Milestone-Close-After-Children-Done.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Spend-Alert-Human-Approval-Triage.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Agentic-Software-Factory.md]]

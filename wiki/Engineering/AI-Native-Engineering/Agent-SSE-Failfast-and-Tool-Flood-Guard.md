@@ -3,8 +3,8 @@ id: agent-sse-failfast-and-tool-flood-guard
 title: "Agent SSE fail-fast·도구 폭주 가드"
 status: canonical
 owner: km
-updated: "2026-08-12"
-last_updated: "2026-08-12"
+updated: "2026-08-13"
+last_updated: "2026-08-13"
 review_after: "2026-11-12"
 sources:
   - ticket:416
@@ -76,9 +76,11 @@ OpenAI/호환 HarnessProfile에서 `edit_file`/`write_file`/`execute` 등 **FS·
 | :--- | :--- |
 | ForceAnalyst / wrap_model_call | schema-hint 시 orchestrator hang·empty stop 전에 `task(analyst)` 강제; analyst-done 턴은 모델 호출 유지 |
 | ForceExecuteSelect | nonempty search+describe(또는 explore 예산 초과) → tools=`execute_select_query` only + `tool_choice=required`; empty catalog는 skip |
+| ForceExecute `response_format=None` | structured-output을 강제하면 로컬 EX가 execute를 건너뛰고 empty SQL. 강제 execute 턴은 schema를 끈다 |
 | NonFiniteToolMiddleware | orchestrator+analyst에 장착; tool output·model messages 양방향 sanitize |
+| AnalystResponse stash autofill | `warehouse_sql required` 파싱 실패여도 `peek_execute_for_sse`로 채움. ToolMessage JSON unwrap. **pop은 sql SSE emit 성공 후만**. stash에 warehouse가 없으면(mdl_translation_error) autofill 불가 — [[wiki/Agents/Text-to-SQL/Semantic-View-Single-Master.md]] |
 
-`max_model_len` 재튜닝과 혼동하지 않는다 — empty-SQL/Infinity는 sanitize·force·stash 축으로 먼저 닫는다.
+`max_model_len` 재튜닝과 혼동하지 않는다 — empty-SQL/Infinity는 sanitize·force·stash 축으로 먼저 닫는다. god-module로 stash+slim+sanitize가 한 파일에 모이면 쪼갠다 — [[wiki/Engineering/AI-Native-Engineering/Smell-Agglomeration-Module-Split.md]].
 
 ContextVar-safe wall timeout은 [[wiki/Engineering/AI-Native-Engineering/Asyncio-Timeout-Same-Context-Streaming.md]].
 
@@ -87,4 +89,5 @@ ContextVar-safe wall timeout은 [[wiki/Engineering/AI-Native-Engineering/Asyncio
 - [[wiki/Engineering/AI-Native-Engineering/LLM-Tool-Payload-Context-Trim.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Asyncio-Timeout-Same-Context-Streaming.md]]
 - [[wiki/Agents/Text-to-SQL/Spider2-Quality-Gate-nl2sql.md]]
-- [[wiki/Engineering/AI-Native-Engineering/In-Process-ASGI-Load-Harness-Pattern.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Smell-Agglomeration-Module-Split.md]]
+- [[wiki/Agents/Text-to-SQL/Semantic-View-Single-Master.md]]

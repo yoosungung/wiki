@@ -3,8 +3,8 @@ id: spider2-quality-gate-nl2sql
 title: "Spider2-Lite → nl2sql 품질 게이트 (스모크·preflight)"
 status: canonical
 owner: km
-updated: "2026-08-11"
-last_updated: "2026-08-11"
+updated: "2026-08-13"
+last_updated: "2026-08-13"
 review_after: "2026-11-11"
 sources:
   - ticket:428
@@ -193,9 +193,14 @@ Full EX를 스모크 hard와 섞지 않는다. pass_rate floor는 인간 결정 
 6. **task-guard**: 빈 `task({})`·silent stop에 EnsureAnalystTaskMiddleware로 analyst 경로 강제.
 7. **채점 입력**: Execute SSE에 MDL invent fallback 넣지 않음 — warehouse-shaped SQL만 채점.
 8. **DB GRANT**: runner 역할에 Spider2 스키마 `USAGE/SELECT` 없으면 check/exec가 왜곡된다.
-9. **주간 wrapper**: gold hard OK + agent pass_rate=0 → NF를 열려면 exit 코드를 맞출 것(§4.2 함정).
+9. **주간 wrapper**: gold hard OK + agent pass_rate=0 → NF를 열려면 exit 코드를 맞출 것(§4.2 함정). [[wiki/Engineering/AI-Native-Engineering/Soft-Gate-Exit-Code-vs-Pass-Rate.md]]
+10. **카탈로그 tip 갭**: PG에 스키마가 있어도 tip `*.model.json`이 없으면 `search_tables` 0 → empty_sql. vocab Boy Scout + metadata git push 후 MCP PVC SHA 확인 — [[wiki/Engineering/Infrastructure-and-DevOps/Metadata-Git-PVC-Resync.md]].
+11. **부분 seed**: `pit_stops=0`인데 `lap_times`만 채워진 상태. SQLite PK NULL이 PG NOT NULL에 막히면 surgical UPDATE 후 COPY. 소스 zip은 앱 PVC에 있을 수 있음(ephemeral checkout과 혼동 금지).
+12. **live 판정**: `/readyz`가 SPA HTML을 주면 tip-live가 아님. `/api/health` + chat SSE. 스코어보드 JSON에 `instance_id`가 없으면 Opik item에서 재구성.
 
 UI Playwright는 LLM/SQL EX를 대체하지 않는다 — [[wiki/Engineering/AI-Native-Engineering/Playwright-Frontend-UI-Smoke-Pattern.md]].
+
+도메인 규칙은 프롬프트가 아니라 MDL — [[wiki/Agents/Text-to-SQL/MDL-Only-Domain-Knowledge.md]]. grain/조인 — [[wiki/Agents/Text-to-SQL/Composite-Grain-Join-Keys.md]]. 마스터 1개 — [[wiki/Agents/Text-to-SQL/Semantic-View-Single-Master.md]]. mismatch seal — [[wiki/Agents/Text-to-SQL/RefSql-Seal-for-EX-Mismatch.md]].
 
 ## 8. 최소 완료선 (품질 테스트 "준비")
 
@@ -213,4 +218,11 @@ UI Playwright는 LLM/SQL EX를 대체하지 않는다 — [[wiki/Engineering/AI-
 - [[wiki/Engineering/AI-Native-Engineering/On-Demand-Schema-Describe-Tools.md]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/MCP-Host-Allowlist-DNS-Rebinding.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Agentic-Software-Factory.md]]
-- [[wiki/Engineering/AI-Native-Engineering/Wiki-Synthesis-Policy.md]]
+- [[wiki/Agents/Text-to-SQL/MDL-Only-Domain-Knowledge.md]]
+- [[wiki/Agents/Text-to-SQL/MCP-Search-Short-Column-Reverse-Match.md]]
+- [[wiki/Agents/Text-to-SQL/Semantic-View-Single-Master.md]]
+- [[wiki/Agents/Text-to-SQL/Composite-Grain-Join-Keys.md]]
+- [[wiki/Agents/Text-to-SQL/RefSql-Seal-for-EX-Mismatch.md]]
+- [[wiki/Agents/Text-to-SQL/Schema-Disjoint-Metadata-Parallel.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Soft-Gate-Exit-Code-vs-Pass-Rate.md]]
+- [[wiki/Engineering/Infrastructure-and-DevOps/Metadata-Git-PVC-Resync.md]]

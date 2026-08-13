@@ -3,8 +3,8 @@ id: github-issue-leantime-intake-empty-skip
 title: "GH issue→Leantime intake: open 0이면 explicit skip"
 status: canonical
 owner: km
-updated: "2026-08-12"
-last_updated: "2026-08-12"
+updated: "2026-08-13"
+last_updated: "2026-08-13"
 review_after: "2026-11-12"
 sources:
   - schedule:github-issue-check

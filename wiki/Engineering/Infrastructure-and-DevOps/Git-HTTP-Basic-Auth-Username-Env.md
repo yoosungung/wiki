@@ -3,8 +3,8 @@ id: git-http-basic-auth-username-env
 title: "Git HTTP basic-auth username을 env로 분리"
 status: canonical
 owner: km
-updated: "2026-08-12"
-last_updated: "2026-08-12"
+updated: "2026-08-13"
+last_updated: "2026-08-13"
 review_after: "2026-11-12"
 sources:
   - ticket:564
@@ -32,6 +32,8 @@ test overlay: git + http://git-http-server.<ns>.svc:80/git/<repo>.git
 2. 구 바이너리가 여전히 `oauth2`로 fetch → CrashLoop
 
 **순서**: 이미지/ConfigMap(username=`git`) 라이브 확인 → 그다음 restart.
+
+퍼블리시 바이너리(예: `v0.1.x`)가 username env를 **아직 안 읽으면** CM에 `*_USERNAME=git`이 있어도 libgit2 Http(34)/auth replay가 난다. 임시: Secret이 credential-less remote를 `git:token@host` URL-userinfo로 덮어쓴다. 장기: username-aware 바이너리로 롤. tip 이미지와 바이너리 핀을 섞지 않는다 — [[wiki/Engineering/Infrastructure-and-DevOps/Tip-Roll-Keep-Published-Binary.md]].
 
 ## 🔗 관련 문서
 

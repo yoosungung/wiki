@@ -1,9 +1,9 @@
 ---
 title: "프리오사 AI RNGD NPU 최적화 및 서빙 가이드 (2026)"
 tags: ["FuriosaAI", "RNGD", "Renegade", "NPU", "Inference", "vLLM", "HBM3"]
-last_updated: "2026-08-07"
-updated: "2026-08-07"
-related_raw: ["[[2026-06-16-Research-Synthesis-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-furiosa_rngd_npu_serving_optimization.md]]", "[[2026-06-28-furiosa_rngd_npu_llm_serving_optimization.md]]", "[[2026-06-30-furiosa_rngd_furiosa_llm.md]]", "[[2026-07-01-furiosa-rngd-npu-hbm3-inference.md]]", "[[2026-07-07-furiosa-rngd-prefix-aware-dp-router.md]]", "[[2026-07-11-furiosa_rngd_npu_tcp_prefix_aware_router.md]]", "[[2026-07-12-furiosa-sdk-dp-routing-scoring-weights.md]]", "[[2026-07-15-samsung-sds-furiosa-npuaas-launch.md]]", "[[2026-07-16-furiosa-npuaas-launch-day-broadcom-stork.md]]"]
+last_updated: "2026-08-13"
+updated: "2026-08-13"
+related_raw: ["[[2026-08-13-furiosa-llm-2026-4-0b11.md]]", "[[2026-06-16-Research-Synthesis-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-furiosa_rngd_npu_serving_optimization.md]]", "[[2026-06-28-furiosa_rngd_npu_llm_serving_optimization.md]]", "[[2026-06-30-furiosa_rngd_furiosa_llm.md]]", "[[2026-07-01-furiosa-rngd-npu-hbm3-inference.md]]", "[[2026-07-07-furiosa-rngd-prefix-aware-dp-router.md]]", "[[2026-07-11-furiosa_rngd_npu_tcp_prefix_aware_router.md]]", "[[2026-07-12-furiosa-sdk-dp-routing-scoring-weights.md]]", "[[2026-07-15-samsung-sds-furiosa-npuaas-launch.md]]", "[[2026-07-16-furiosa-npuaas-launch-day-broadcom-stork.md]]"]
 ---
 
 # 🚀 프리오사 AI RNGD NPU 최적화 및 서빙 가이드 (2026)
@@ -111,13 +111,12 @@ furiosa-llm serve <model> --data-parallel-size 2 \
 
 프리컴파일 HF FXB 예: EXAONE-4.0-32B-FP8 / Qwen3-32B-FP8(4×RNGD), Llama-3.1-8B·Qwen3-Embedding/Reranker(1×). 서빙은 `furiosa-llm serve <model>` — [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md]].
 
-## 7. SDK 2026.4.0b9: `fxb build` 정본 경로 (2026-08-07)
+## 7. SDK 2026.4.0b11: `fxb build` 정본 경로 (2026-08-13)
 
-[2026.4.0b9 docs](https://developer.furiosa.ai/v2026.4.0/en/furiosa_llm/fxb.html) 기준, 신규 컴파일은 **FXB-only** `fxb build`를 쓴다. `ArtifactBuilder` / `furiosa-llm build`는 legacy(하위호환).
+[2026.4.0 docs](https://developer.furiosa.ai/v2026.4.0/en/get_started/furiosa_llm.html) 기준 문서 핀은 **2026.4.0b11**. 신규 컴파일은 **FXB-only** `fxb build`. `ArtifactBuilder` / `furiosa-llm build`는 legacy.
 
 ```bash
-# prerelease 예
-uv pip install --prerelease=allow --torch-backend=auto furiosa-llm==2026.4.0b9
+uv pip install --prerelease=allow --torch-backend=auto furiosa-llm==2026.4.0b11
 
 fxb build Qwen/Qwen3-8B-FP8 qwen3-8b-fp8.fxb
 fxb build Qwen/Qwen3-8B-FP8 qwen3-8b-test.fxb --dry-run

@@ -3,8 +3,8 @@ id: test-overlay-vs-release-package-deploy-paths
 title: "Test Overlay vs Release Package 배포 축 분리"
 status: canonical
 owner: km
-updated: "2026-08-12"
-last_updated: "2026-08-12"
+updated: "2026-08-13"
+last_updated: "2026-08-13"
 review_after: "2026-11-12"
 sources:
   - ticket:59
@@ -64,7 +64,7 @@ Actions `packages: write`만으로 부족할 수 있다 — [[wiki/Engineering/I
 
 ## Tip 이미지 공급 (Kaniko)
 
-빈번한 `test-<sha>` tip은 in-cluster Kaniko → GHCR을 1차로 두고, `build-ghcr-images`는 Prod/semver·opt-in multi-arch fallback으로 둔다. tip 태그를 `publish-releases`에 넣지 않는다 — [[wiki/Engineering/Infrastructure-and-DevOps/In-Cluster-Kaniko-Tip-GHCR.md]].
+빈번한 `test-<sha>` tip은 in-cluster Kaniko → GHCR을 1차로 두고, `build-ghcr-images`는 Prod/semver·opt-in multi-arch fallback으로 둔다. tip 태그를 `publish-releases`에 넣지 않는다 — [[wiki/Engineering/Infrastructure-and-DevOps/In-Cluster-Kaniko-Tip-GHCR.md]]. initContainer 바이너리 URL을 `test-*`로 바꾸면 404 — [[wiki/Engineering/Infrastructure-and-DevOps/Tip-Roll-Keep-Published-Binary.md]]. RWO 메타데이터 PVC는 Recreate — [[wiki/Engineering/Infrastructure-and-DevOps/RWO-PVC-Recreate-Deploy-Strategy.md]].
 
 ## Doc smoke
 

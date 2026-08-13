@@ -3,8 +3,8 @@ id: in-cluster-kaniko-tip-ghcr
 title: "In-cluster Kaniko tip → GHCR (vs Actions build-ghcr)"
 status: canonical
 owner: km
-updated: "2026-08-12"
-last_updated: "2026-08-12"
+updated: "2026-08-13"
+last_updated: "2026-08-13"
 review_after: "2026-11-12"
 sources:
   - ticket:551
@@ -43,7 +43,11 @@ Prod package ≠ 공유 클러스터 apply — [[wiki/Engineering/Infrastructure
 
 ## Multi-arch
 
-Prod/Apple Silicon용 backend `amd64+arm64`는 **opt-in** `workflow_dispatch`/native matrix. tip은 amd64-default로 QEMU 지연을 피한다. 증거: `docker buildx imagetools inspect ghcr.io/<owner>/<img>:<tag>`.
+Prod/Apple Silicon용 backend `amd64+arm64`는 **opt-in** (`backend_multi_arch=true` → `linux/amd64,linux/arm64`, QEMU on ubuntu-latest). tip 기본은 `linux/amd64`. sidecar/MCP 이미지는 multi-arch 비목표(amd64). 증거: `docker buildx imagetools inspect ghcr.io/<owner>/<img>:<tag>`.
+
+## SHA ref 체크아웃
+
+스톡 스크립트가 `git clone --branch <ref>`이면 **커밋 SHA**는 실패한다. one-shot Job은 `git fetch origin <sha> && git checkout <sha>`. backend-only 델타면 MCP Kaniko Job을 생략하고 퍼블리시 바이너리 핀은 유지 — [[wiki/Engineering/Infrastructure-and-DevOps/Tip-Roll-Keep-Published-Binary.md]].
 
 ## AA 스코프
 
@@ -53,4 +57,5 @@ Prod/Apple Silicon용 backend `amd64+arm64`는 **opt-in** `workflow_dispatch`/na
 
 - [[wiki/Engineering/Infrastructure-and-DevOps/GHCR-Actions-Package-Write-ACL.md]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/Test-Overlay-vs-Release-Package-Deploy-Paths.md]]
+- [[wiki/Engineering/Infrastructure-and-DevOps/Tip-Roll-Keep-Published-Binary.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Tenant-Quality-Yaml-Gate-Skip-Pattern.md]]
