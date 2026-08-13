@@ -10,9 +10,10 @@ sources:
   - ARCHITECTURE.md
 ---
 
-# pm-checkpoint 2026-08-13T02:42Z
+# pm-checkpoint 2026-08-13T02:44Z
 
-- Flow-active: only #564 In Progress @nl2sql (post QA #3181 fail bounce / PM #3182).
-- Silence ≈3m since bounce ≪30m → within_sla; empty_ip_checkpoints=0; no HC/ARC; no actionable add_comment.
-- Status-board #3109 upsert (lane IP). Review/DT/QA/DP top-level=0; Approval misroute=0.
-- Evidence snapshot: tip test-500a8c6 / merge_sha 500a8c6… · empty_sql=0 · pass_rate=0 · aa:pass stands; Done blocked on AC2.
+- Flow-active: only #564 In Progress (nl2sql); Review/DT/QA/DP=0; Approval=0.
+- Silence clock: assignee/nf-progress/completion only; ladder mentions/status-board do not reset.
+- #564: silence ≈5m since QA-fail bounce #3182 ≪30m → within_sla; empty_ip_checkpoints=0; no HC/ARC; board #3109 upsert only; actionable add_comment=0.
+- Misroute sweep: no Waiting for Approval / Eric-assignee open candidates.
+- Skip: Done≈all other; Blocked=0.
