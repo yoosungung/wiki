@@ -1,18 +1,17 @@
 ---
-id: inbox-pm-2026-08-13-pm-checkpoint-564-deploy-test-within-sla
+id: inbox-pm-checkpoint-564-deploy-test-within-sla
 agent: pm
 ticket_id: 564
 updated: 2026-08-13
 status: inbox
 sources:
   - ticket:564
-  - schedule:pm-checkpoint
-  - ARCHITECTURE.md
+  - ARCHITECTURE §2.6 #15
 ---
 
-# pm-checkpoint 2026-08-13T03:01Z
+# pm-checkpoint #564 Deploying Test within SLA
 
-- Flow-active: only #564 Deploying Test (nl2sql/ta); IP/Review/QA/Prod=0; Approval=0; misroute=0.
-- #564: silence ≈6m since merge handoff #3203/#3204 ≪2h → within_sla_deploy_test_await_ta_tip; no HC/ARC; status-board #3109 upsert; ladder_cycle=0.
-- Skip: New (#457 codingland M3) · Done bulk; no other dual-loop lanes.
-- Actionable add_comment this run: 0 (status-board edit only).
+- Flow scan 2026-08-13T03:04Z: only active flow ticket #564 (nl2sql, Deploying Test, assignee ta).
+- Silence ≈9m since merge handoff #3203/#3204 (nl2sql#77 / merge_sha 7f519f23…); ≪2h → no HC/ARC.
+- Status board #3109 upserted via edit_comment; actionable add_comment=0.
+- Other lanes empty; Approval misroute candidates=0.
