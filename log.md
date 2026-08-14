@@ -1,6 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-14 | INBOX_DRAIN | inbox/* | 120 | refSql-unparser/CAST/vocab-isolate/single-master pizza-traffic-legislation·postgres-cgroup·hugo-new-tab·homonym-URL·product≠metadata SHA; GH-issue-skip/PubGate/H2-gate ALREADY; pm-checkpoint·PR/QA intake 진행 EXCLUDE 후 git rm |
+| 2026-08-14 | RESEARCH | Web | 1 | LiteRT-LM v0.16.0 C API prebuilts + experimental YNNPACK; Furiosa 2026.4.0b11 ALREADY_COVERED |
+| 2026-08-14 | INGEST | raw/ | 1 | litert-lm-v0.16.0-c-api-ynnpack (합성 후 삭제) |
+| 2026-08-14 | SYNTHESIZE | wiki/ | 3+ | RefSql-Unparser·Shared-Postgres-Cgroup·Hugo-New-Tab 신설; RefSql/MDL/Search/PVC/TipRoll/Spider2/PubGate/LiteRT v0.16 |
+| 2026-08-14 | LINT | Root / wiki | ALL | 데일리 생성, D-2(2026-08-12) 삭제, raw 합성 후 삭제, 연구_주제·INDEX META |
 | 2026-08-13 | INBOX_DRAIN | inbox/* | 164 | tip-binary/RWO-Recreate/PVC-resync·MDL-only/search-shortcol/single-master/grain-join/refSql/schema-parallel·stash autofill/god-split/exit≠pass_rate/FS-blocked-by/orphan-milestone; GH/PubGate/Kaniko/Git-HTTP ALREADY; pm-checkpoint·PR/QA/AA/TA 진행 EXCLUDE 후 git rm |
 | 2026-08-13 | RESEARCH | Web | 1 | Furiosa-LLM 2026.4.0b11 Quick Start 핀; LiteRT MTP/Gemma4·vllm-rbln a8 ALREADY_COVERED |
 | 2026-08-13 | INGEST | raw/ | 1 | furiosa-llm-2026-4-0b11 |

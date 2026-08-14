@@ -3,9 +3,9 @@ id: spider2-quality-gate-nl2sql
 title: "Spider2-Lite → nl2sql 품질 게이트 (스모크·preflight)"
 status: canonical
 owner: km
-updated: "2026-08-13"
-last_updated: "2026-08-13"
-review_after: "2026-11-11"
+updated: "2026-08-14"
+last_updated: "2026-08-14"
+review_after: "2026-11-14"
 sources:
   - ticket:428
   - ticket:391
@@ -179,6 +179,10 @@ OPIK_WORKSPACE: "default"
 
 Full EX를 스모크 hard와 섞지 않는다. pass_rate floor는 인간 결정 전까지 non-blocking.
 
+**2-instance agent EX ≠ Full EX.** `localA,localB` pass_rate=1.0 은 그 두 instance 증거일 뿐 전수 peek/mismatch를 증명하지 않는다. on-request `spider2-opik scoreboard` 는 주간 canary가 아니다(detach + `nf-progress`). CLI `scoreboard-*.json`에 `instance_id`가 없으면 Opik `experiment.get_items()`로 재구성한다. 스코어보드는 **tip live chat SSE** (metadata PVC SHA)이지 러너 checkout/제품 merge SHA가 아니다.
+
+공유 Postgres가 Full EX 중 연결을 끊으면 cgroup limit을 먼저 본다 — [[wiki/Engineering/Infrastructure-and-DevOps/Shared-Postgres-Cgroup-Limit-vs-Statement-Timeout.md]].
+
 
 
 ## 7.4 Agent EX hard 승격 체크리스트 (empty SQL / wrong schema)
@@ -194,7 +198,7 @@ Full EX를 스모크 hard와 섞지 않는다. pass_rate floor는 인간 결정 
 7. **채점 입력**: Execute SSE에 MDL invent fallback 넣지 않음 — warehouse-shaped SQL만 채점.
 8. **DB GRANT**: runner 역할에 Spider2 스키마 `USAGE/SELECT` 없으면 check/exec가 왜곡된다.
 9. **주간 wrapper**: gold hard OK + agent pass_rate=0 → NF를 열려면 exit 코드를 맞출 것(§4.2 함정). [[wiki/Engineering/AI-Native-Engineering/Soft-Gate-Exit-Code-vs-Pass-Rate.md]]
-10. **카탈로그 tip 갭**: PG에 스키마가 있어도 tip `*.model.json`이 없으면 `search_tables` 0 → empty_sql. vocab Boy Scout + metadata git push 후 MCP PVC SHA 확인 — [[wiki/Engineering/Infrastructure-and-DevOps/Metadata-Git-PVC-Resync.md]].
+10. **카탈로그 tip 갭**: PG에 스키마가 있어도 tip `*.model.json`이 없으면 `search_tables` 0 → empty_sql. 파일이 있어도 **영문 질문 vocab이 한국어-only description에 없으면** 같은 증상. vocab Boy Scout + metadata git push 후 MCP PVC SHA 확인 — [[wiki/Engineering/Infrastructure-and-DevOps/Metadata-Git-PVC-Resync.md]].
 11. **부분 seed**: `pit_stops=0`인데 `lap_times`만 채워진 상태. SQLite PK NULL이 PG NOT NULL에 막히면 surgical UPDATE 후 COPY. 소스 zip은 앱 PVC에 있을 수 있음(ephemeral checkout과 혼동 금지).
 12. **live 판정**: `/readyz`가 SPA HTML을 주면 tip-live가 아님. `/api/health` + chat SSE. 스코어보드 JSON에 `instance_id`가 없으면 Opik item에서 재구성.
 
@@ -226,3 +230,5 @@ UI Playwright는 LLM/SQL EX를 대체하지 않는다 — [[wiki/Engineering/AI-
 - [[wiki/Agents/Text-to-SQL/Schema-Disjoint-Metadata-Parallel.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Soft-Gate-Exit-Code-vs-Pass-Rate.md]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/Metadata-Git-PVC-Resync.md]]
+- [[wiki/Engineering/Infrastructure-and-DevOps/Shared-Postgres-Cgroup-Limit-vs-Statement-Timeout.md]]
+- [[wiki/Agents/Text-to-SQL/RefSql-Unparser-Identifier-Quoting.md]]

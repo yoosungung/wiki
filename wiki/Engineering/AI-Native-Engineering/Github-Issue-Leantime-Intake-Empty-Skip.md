@@ -3,9 +3,9 @@ id: github-issue-leantime-intake-empty-skip
 title: "GH issue→Leantime intake: open 0이면 explicit skip"
 status: canonical
 owner: km
-updated: "2026-08-13"
-last_updated: "2026-08-13"
-review_after: "2026-11-12"
+updated: "2026-08-14"
+last_updated: "2026-08-14"
+review_after: "2026-11-14"
 sources:
   - schedule:github-issue-check
   - ticket:279
@@ -39,6 +39,7 @@ type: "wiki"
 
 - 이미 closed된 과거 이슈를 QA 버그로 재오픈하지 않는다.
 - MCP discovery 실패 시 JSON-RPC fallback으로 seal 가능 — [[wiki/Engineering/AI-Native-Engineering/Tenant-Quality-Yaml-Gate-Skip-Pattern.md]].
+- 레지스트리 JSON이 없어도 **직전 클라이언트 맵을 재사용**해 open=0 skip을 남긴다. 맵 부재를 실패로 올리지 않는다.
 
 ## 🔗 관련 문서
 

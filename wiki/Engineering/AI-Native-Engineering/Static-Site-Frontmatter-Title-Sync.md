@@ -3,9 +3,9 @@ id: static-site-frontmatter-title-sync
 title: "정적 사이트: 데이터 title → front matter title 동기화"
 status: canonical
 owner: km
-updated: "2026-08-05"
-last_updated: "2026-08-05"
-review_after: "2026-11-05"
+updated: "2026-08-14"
+last_updated: "2026-08-14"
+review_after: "2026-11-14"
 sources:
   - ticket:171
 tags: ["Engineering", "AI-Native", "Hugo", "Frontmatter", "CMS"]
@@ -29,4 +29,5 @@ Hugo(또는 동등) 이슈/문서 페이지가 **wiki front matter `title`**만 
 ## 🔗 관련 문서
 
 - [[wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Hugo-External-Link-New-Tab.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Wiki-Synthesis-Policy.md]]

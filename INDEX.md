@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-08-13 (inbox drain 164·tip-binary/PVC-resync/MDL-only/search-shortcol/single-master/refSql/FS-blocked-by; Furiosa b11; LiteRT MTP ALREADY) | Root: wiki/
+[META] Updated: 2026-08-14 (inbox drain 120·refSql-unparser/postgres-cgroup/hugo-new-tab; LiteRT v0.16.0 C-API/YNNPACK; Furiosa b11 ALREADY) | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -49,9 +49,9 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
-- wiki/Agents/ (248 files)
+- wiki/Agents/ (249 files)
     - Multi-Agent-and-Orchestration: 18 files
-    - Text-to-SQL: 33 files
+    - Text-to-SQL: 34 files
     - Evaluations: 10 files
     - Memory-and-Cognition: 24 files
     - Robotics-and-VLA: 21 files
@@ -68,12 +68,12 @@
     - Reasoning-and-Cognition: 34 files
     - RL: 40 files
 - wiki/RAG/ (68 files)
-- wiki/Engineering/ (149 files)
+- wiki/Engineering/ (151 files)
     - Data-and-Security: 14 files
     - Prompt-Engineering: 12 files
-    - Infrastructure-and-DevOps: 43 files
+    - Infrastructure-and-DevOps: 44 files
     - Development-Environment: 17 files
-    - AI-Native-Engineering: 61 files
+    - AI-Native-Engineering: 62 files
 - wiki/Business/ (39 files)
     - Recommendation Systems: 7 files
     - Trends: 9 files

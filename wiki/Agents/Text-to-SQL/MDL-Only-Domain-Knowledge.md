@@ -3,11 +3,13 @@ id: mdl-only-domain-knowledge
 title: "도메인 지식은 MDL만 (에이전트 프롬프트 하드코딩 금지)"
 status: canonical
 owner: km
-updated: "2026-08-13"
-last_updated: "2026-08-13"
-review_after: "2026-11-13"
+updated: "2026-08-14"
+last_updated: "2026-08-14"
+review_after: "2026-11-14"
 sources:
   - ticket:702
+  - ticket:781
+  - ticket:796
 tags: ["Agents", "Text-to-SQL", "MDL", "Semantic-Layer", "Prompt"]
 type: "wiki"
 ---
@@ -33,6 +35,10 @@ assert "f1_" not in analyst_system_prompt.lower()
 ```
 
 프롬프트 Boy Scout로 EX를 고치려다 보면 empty_sql만 줄고 **결과 mismatch**는 남는다. grain/join/`refSql`이 정본 — [[wiki/Agents/Text-to-SQL/Composite-Grain-Join-Keys.md]], [[wiki/Agents/Text-to-SQL/RefSql-Seal-for-EX-Mismatch.md]].
+
+## vocab 격리
+
+질문 키워드(“final ingredients”, “Shahrukh number”, “month-end balance”)는 **해당 seal description에만** 둔다. 베이스 카탈로그에 남겨 두면 search는 맞아도 SELECT가 베이스 grain을 고른다. 한국어-only description은 영문 벤치 질의를 `search_tables` 0으로 떨어뜨린다 — 파일 유무와 별축.
 
 ## 관련
 

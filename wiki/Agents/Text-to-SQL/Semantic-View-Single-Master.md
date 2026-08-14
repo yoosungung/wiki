@@ -3,12 +3,15 @@ id: semantic-view-single-master
 title: "시맨틱 뷰는 마스터 테이블 하나"
 status: canonical
 owner: km
-updated: "2026-08-13"
-last_updated: "2026-08-13"
-review_after: "2026-11-13"
+updated: "2026-08-14"
+last_updated: "2026-08-14"
+review_after: "2026-11-14"
 sources:
   - ticket:698
   - ticket:697
+  - ticket:753
+  - ticket:768
+  - ticket:795
 tags: ["Agents", "Text-to-SQL", "MDL", "Semantic-Layer"]
 type: "wiki"
 ---
@@ -22,6 +25,8 @@ type: "wiki"
 - 뷰의 inner FROM은 **grain을 정의하는 마스터 1개** (예: ball-by-ball).
 - 차원 테이블은 관계/조인으로만. 마스터와 grain이 다른 팩트(`player_match` 등)는 같은 뷰에 넣지 않는다.
 - 역할 컬럼은 물리명과 의미를 맞춘다: `player_id`:=`bowler` vs `player_out`(아웃된 타자). 둘을 같은 `player_id`로 덮으면 GROUP BY가 왜곡된다.
+- 같은 오류 모양: 피자 names/recipes/toppings를 한 모델에 미조인 inner로 넣거나, 충돌 case_ids/collisions/parties/victims를 한 collision 모델에 넣는 것. **grain마다 모델을 쪼개고** 차원만 LEFT JOIN.
+- date-dim을 `date = term_start`로 mash하면 에이전트가 window `ORDER BY`를 발명해 `near "ORDER"` sql_exec가 난다. BETWEEN-span은 별 seal.
 
 ```text
 # 개념: 실패 SQL/로그

@@ -3,9 +3,9 @@ id: github-fine-grained-pat-contents-write-probe
 title: "Fine-grained PAT: permissions.push ≠ Contents Write"
 status: canonical
 owner: km
-updated: "2026-08-05"
-last_updated: "2026-08-05"
-review_after: "2026-11-05"
+updated: "2026-08-14"
+last_updated: "2026-08-14"
+review_after: "2026-11-14"
 sources:
   - ticket:50
   - ticket:167
@@ -45,6 +45,8 @@ gh api -X POST repos/<owner>/<repo>/git/refs -f ref=refs/heads/probe -f sha=<sha
 ## remote URL 임베디드 PAT ≠ 런타임 `GH_TOKEN`
 
 `git remote`에 박힌 토큰(receive-pack 403)과 환경변수 `GH_TOKEN`(다른 identity, 쓰기 OK)이 **불일치**할 수 있다. 진단 시 `git remote -v` identity와 `gh api user` / env 토큰을 분리한다. 게이트 PASS 후 push만 실패하면 이 축을 먼저 본다.
+
+`http.extraheader`에 박힌 예전 토큰과 URL 임베디드 토큰이 겹치면 401이 난다. **tenant override를 remote URL에 넣은 한 번의 push**면 충분하다. extraheader를 남긴 채 재시도하지 않는다.
 
 ## 적용 팁
 

@@ -57,5 +57,6 @@
 - [[wiki/Engineering/AI-Native-Engineering/Soft-Gate-Exit-Code-vs-Pass-Rate.md]]
 - [[wiki/Engineering/AI-Native-Engineering/FS-Blocked-By-Vs-Parent-Link.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Orphan-Milestone-Close-After-Children-Done.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Hugo-External-Link-New-Tab.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Wiki-Synthesis-Policy.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Sim_노코드_AI_에이전트_워크플로우_플랫폼.md]]

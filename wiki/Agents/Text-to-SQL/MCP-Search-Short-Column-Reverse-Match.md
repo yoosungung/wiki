@@ -3,9 +3,9 @@ id: mcp-search-short-column-reverse-match
 title: "검색 스코어링: 짧은 컬럼 역매칭을 끈다"
 status: canonical
 owner: km
-updated: "2026-08-13"
-last_updated: "2026-08-13"
-review_after: "2026-11-13"
+updated: "2026-08-14"
+last_updated: "2026-08-14"
+review_after: "2026-11-14"
 sources:
   - ticket:564
 tags: ["Agents", "Text-to-SQL", "MCP", "Search", "Schema"]
@@ -26,6 +26,8 @@ type: "wiki"
 | 다양성 | fact+dimension이 한 묶음에 오도록 token-coverage / `k` 3–4 |
 
 커리어 합 vs 시즌 MAX처럼 **집계 grain 오류**는 검색 랭킹과 별축이다. 검색이 맞아도 analyst가 시즌 row `MAX(g)`를 내면 mismatch — [[wiki/Agents/Text-to-SQL/RefSql-Seal-for-EX-Mismatch.md]].
+
+`SCORE_CAP`에 여러 모델이 같이 걸리면 **알파벳 순**이 1위가 된다. 수입/재료처럼 같은 스키마의 두 seal이 cap에 닿으면, 질문 vocab을 승자 seal에만 두고 회귀 `search_*_catalog`로 순서를 고정한다. agent `k=3` 픽스처가 1위여도 describe/SELECT가 카탈로그 grain을 고를 수 있다.
 
 ## 관련
 

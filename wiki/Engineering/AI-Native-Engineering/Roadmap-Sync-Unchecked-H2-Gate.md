@@ -3,8 +3,8 @@ id: roadmap-sync-unchecked-h2-gate
 title: "ROADMAP sync: ## + 미완료 - [ ] 섹션만 enqueue"
 status: canonical
 owner: km
-updated: "2026-08-13"
-last_updated: "2026-08-13"
+updated: "2026-08-14"
+last_updated: "2026-08-14"
 review_after: "2026-11-06"
 sources:
   - schedule:pm-roadmap-sync

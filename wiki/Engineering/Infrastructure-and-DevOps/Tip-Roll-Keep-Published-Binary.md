@@ -3,11 +3,12 @@ id: tip-roll-keep-published-binary
 title: "Tip 롤에서 퍼블리시 바이너리 핀을 유지한다"
 status: canonical
 owner: km
-updated: "2026-08-13"
-last_updated: "2026-08-13"
-review_after: "2026-11-13"
+updated: "2026-08-14"
+last_updated: "2026-08-14"
+review_after: "2026-11-14"
 sources:
   - ticket:590
+  - ticket:796
 tags: ["Infrastructure", "DevOps", "Kubernetes", "GHCR", "CD", "MCP"]
 type: "wiki"
 ---
@@ -33,6 +34,8 @@ kubectl set image deploy/<app> app=ghcr.io/<org>/<img>:test-<sha>
 ```
 
 backend-only 델타면 sidecar/MCP 이미지·바이너리를 같이 돌리지 않는다. `apply -k` 전량은 live tip 태그를 overlay 기본값으로 덮을 수 있다.
+
+카탈로그 PUT만으로 EX가 안 바뀌는 수정(식별자 인용 등)은 **퍼블리시된 MCP 바이너리**가 실려야 한다. live test mcp는 published semver를 쓰고 `test-*`를 핀하지 않는다 — [[wiki/Agents/Text-to-SQL/RefSql-Unparser-Identifier-Quoting.md]].
 
 ## 관련
 

@@ -26,6 +26,7 @@
 - [[wiki/Agents/Text-to-SQL/Semantic-View-Single-Master.md]]
 - [[wiki/Agents/Text-to-SQL/Composite-Grain-Join-Keys.md]]
 - [[wiki/Agents/Text-to-SQL/RefSql-Seal-for-EX-Mismatch.md]]
+- [[wiki/Agents/Text-to-SQL/RefSql-Unparser-Identifier-Quoting.md]]
 - [[wiki/Agents/Text-to-SQL/Schema-Disjoint-Metadata-Parallel.md]]
 - [[wiki/Agents/Text-to-SQL/Text-to-SQL-Reasoning-2026.md]]
 - [[wiki/Agents/Text-to-SQL/ThoughtSpot-Spotter-Semantics.md]]
