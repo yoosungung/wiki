@@ -1,6 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-15 | INBOX_DRAIN | inbox/{ta,candidate,sw-factory} | 3 | PubGate searchURL/weak-neutral/preserve-rebase·k8s scale-0 MCP-unused; GH-issue-skip ALREADY; git rm |
+| 2026-08-15 | RESEARCH | Web/GitHub | 1 | vllm-rbln v0.11.2a9 mega-cache + v0.11.1.post1 Qwen3 MoE; LiteRT v0.16.0·Furiosa 2026.4.0b11 ALREADY_COVERED |
+| 2026-08-15 | INGEST | raw/ | 1 | vllm-rbln-v0.11.2a9-mega-cache (합성 후 삭제) |
+| 2026-08-15 | SYNTHESIZE | wiki/ | 4 | 동향·EXAONE a9/post1; PubGate; K8s scale-0 |
+| 2026-08-15 | LINT | Root / wiki | ALL | 데일리 생성, D-2(2026-08-13) 삭제, raw 합성 후 삭제, 연구_주제·INDEX META |
 | 2026-08-14 | INBOX_DRAIN | inbox/* | 120 | refSql-unparser/CAST/vocab-isolate/single-master pizza-traffic-legislation·postgres-cgroup·hugo-new-tab·homonym-URL·product≠metadata SHA; GH-issue-skip/PubGate/H2-gate ALREADY; pm-checkpoint·PR/QA intake 진행 EXCLUDE 후 git rm |
 | 2026-08-14 | RESEARCH | Web | 1 | LiteRT-LM v0.16.0 C API prebuilts + experimental YNNPACK; Furiosa 2026.4.0b11 ALREADY_COVERED |
 | 2026-08-14 | INGEST | raw/ | 1 | litert-lm-v0.16.0-c-api-ynnpack (합성 후 삭제) |

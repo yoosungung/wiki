@@ -3,9 +3,9 @@ title: "리벨리온 ATOM-Max NPU 및 vLLM-RBLN 최신 동향 (2026)"
 tags: ["Models", "Optimization", "Serving", "NPU", "Rebellions", "vLLM-RBLN", "EXAONE"]
 type: "wiki"
 status: "published"
-last_updated: "2026-08-08"
-updated: "2026-08-08"
-related_raw: ["[[2026-08-08-vllm-rbln-v0.11.2a8.md]]", "[[2026-08-04-vllm-rbln-v0.11.2a7.md]]", "[[2026-08-03-vllm-rbln-v0.11.2a5.md]]", "[[2026-08-01-vllm-rbln-v0.11.2a4-v0.11.1.md]]", "[[2026-07-30-vllm-rbln-v0.11.2a3.md]]", "[[2026-07-29-vllm-rbln-v0.11.2a2.md]]", "[[2026-07-28-vllm-rbln-v0.11.2a0-a1.md]]", "[[2026-07-24-vllm-rbln-v0.11.2.dev0.md]]", "[[2026-06-01-Rebellions-NPU-Update.md]]"]
+last_updated: "2026-08-15"
+updated: "2026-08-15"
+related_raw: ["[[2026-08-15-vllm-rbln-v0.11.2a9-mega-cache.md]]", "[[2026-08-08-vllm-rbln-v0.11.2a8.md]]", "[[2026-08-04-vllm-rbln-v0.11.2a7.md]]", "[[2026-08-03-vllm-rbln-v0.11.2a5.md]]", "[[2026-08-01-vllm-rbln-v0.11.2a4-v0.11.1.md]]", "[[2026-07-30-vllm-rbln-v0.11.2a3.md]]", "[[2026-07-29-vllm-rbln-v0.11.2a2.md]]", "[[2026-07-28-vllm-rbln-v0.11.2a0-a1.md]]", "[[2026-07-24-vllm-rbln-v0.11.2.dev0.md]]", "[[2026-06-01-Rebellions-NPU-Update.md]]"]
 ---
 
 # 리벨리온 ATOM-Max NPU 및 vLLM-RBLN 최신 동향 (2026)
@@ -93,6 +93,23 @@ uv pip install "vllm-rbln==0.11.2a7" \
 uv pip install "vllm-rbln==0.11.2a8" \
   --extra-index-url https://wheels.vllm.ai/0.24.0/cpu \
   --torch-backend cpu
+```
+
+### v0.11.2a9 (2026-08-12) · v0.11.1.post1 (2026-08-14)
+- **mega-cache** ([#805](https://github.com/RBLN-SW/vllm-rbln/pull/805)): `VLLM_CACHE_ROOT/rbln/<model>/<config_signature>/rank{N}/mega_cache.bin` 원자 번들. warmup(prefill·decode·logits·bucket) 전부 성공한 뒤에만 durable. 중간 실패 시 부분 `.rbln`을 남기지 않음. `config_signature` = vllm_config 해시 + compile env + rebel **major.minor**(patch는 캐시 호환, minor bump는 무효).
+- **디버그 레이어 컷**: `VLLM_RBLN_NUM_HIDDEN_LAYERS=N`으로 앞 N층만 빌드 ([#914](https://github.com/RBLN-SW/vllm-rbln/pull/914)). 번들 키에도 포함해야 함(후속 #917).
+- **Qwen3.5**: `block_size == max_model_len` reject ([#912](https://github.com/RBLN-SW/vllm-rbln/pull/912)).
+- **vLLM 0.24 DP**: worker가 config의 DP device mapping을 읽음 ([#896](https://github.com/RBLN-SW/vllm-rbln/pull/896)). decode 그래프 static output ([#904](https://github.com/RBLN-SW/vllm-rbln/pull/904)). E2E 메트릭은 sampler 호출이 아니라 `execute_model` pass 단위 ([#899](https://github.com/RBLN-SW/vllm-rbln/pull/899)).
+- **deps**: `optimum-rbln==0.11.2a0` ([#890](https://github.com/RBLN-SW/vllm-rbln/pull/890)).
+- **stable post1**: Qwen3 MoE 레지스트리 ([#930](https://github.com/RBLN-SW/vllm-rbln/pull/930) / #916). 프리릴리즈 추적은 a9, 프로덕션 핀은 `0.11.1.post1`.
+- 설치: `uv pip install "vllm-rbln==0.11.2a9"` — a8과 동일하게 wheels index를 `vllm` 0.24.0에 맞춤. 상세 [[wiki/Models/Optimization-and-Serving/리벨리온-ATOM-Max-기반-EXAONE-4.5-최적화-가이드.md]]
+
+```bash
+uv pip install "vllm-rbln==0.11.2a9" \
+  --extra-index-url https://wheels.vllm.ai/0.24.0/cpu \
+  --torch-backend cpu
+# stable line (Qwen3 MoE):
+# uv pip install "vllm-rbln==0.11.1.post1"
 ```
 
 ## 3. 엔터프라이즈 및 클라우드 생태계

@@ -1,9 +1,9 @@
 ---
 title: "리벨리온 ATOM-Max 기반 EXAONE 4.5 최적화 가이드 (2026)"
 tags: ["Rebellions", "ATOM-Max", "EXAONE4.5", "NPU", "Optimization", "vLLM", "PhysicalAI"]
-last_updated: "2026-08-08"
-updated: "2026-08-08"
-related_raw: ["[[2026-08-08-vllm-rbln-v0.11.2a8.md]]", "[[2026-07-30-vllm-rbln-v0.11.2a3.md]]", "[[2026-07-29-vllm-rbln-v0.11.2a2.md]]", "[[2026-07-28-vllm-rbln-v0.11.2a0-a1.md]]", "[[2026-07-24-vllm-rbln-v0.11.2.dev0.md]]", "[[2026-07-23-vllm-rbln-v0.11.1a11.md]]", "[[2026-07-21-vllm-rbln-v0.11.1a9.md]]", "[[2026-07-20-vllm-rbln-v0.11.1a8.md]]", "[[2026-06-04-Rebellions-ATOM-Max-EXAONE-4.5-Research.md]]", "[[2026-06-05-Rebellions-vLLM-EXAONE-Speculative-MoE-Update.md]]", "[[2026-06-07-Rebellions-ATOM-Max-vLLM-EXAONE-4.5-Update.md]]", "[[2026-06-09-Rebellions-NPU-EXAONE-4.5-Physical-AI-Update.md]]", "[[2026-06-11-Rebellions-Atom-Rebel-EXAONE-4.5-Research.md]]", "[[2026-06-12-Rebellions-ATOM-Max-EXAONE-4.5-Update.md]]", "[[2026-06-15-Rebellions-EXAONE-Physical-AI-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-rebellions_atom_max_exaone_optimization.md]]", "[[2026-06-28-rebellions_atom_max_exaone_4_5_optimization.md]]", "[[2026-06-30-rebellions_atom_max_exaone_4_5.md]]", "[[2026-07-01-vllm-rbln-exaone-4-5-atom-max.md]]", "[[2026-07-07-exaone-4.5-vllm-rbln-atom-max-optimization.md]]", "[[2026-07-11-rebellions_atom_max_exaone_4_5_vllm_rbln.md]]", "[[2026-07-12-rbln-sdk-0.11-vllm-exaone-gemma4.md]]", "[[2026-07-15-litert-lm-v0110-windows-rebellions-torchdynamo.md]]", "[[2026-07-16-vllm-rbln-v0.11.1a7-request-reordering-dtensor-mtp.md]]"]
+last_updated: "2026-08-15"
+updated: "2026-08-15"
+related_raw: ["[[2026-08-15-vllm-rbln-v0.11.2a9-mega-cache.md]]", "[[2026-08-08-vllm-rbln-v0.11.2a8.md]]", "[[2026-07-30-vllm-rbln-v0.11.2a3.md]]", "[[2026-07-29-vllm-rbln-v0.11.2a2.md]]", "[[2026-07-28-vllm-rbln-v0.11.2a0-a1.md]]", "[[2026-07-24-vllm-rbln-v0.11.2.dev0.md]]", "[[2026-07-23-vllm-rbln-v0.11.1a11.md]]", "[[2026-07-21-vllm-rbln-v0.11.1a9.md]]", "[[2026-07-20-vllm-rbln-v0.11.1a8.md]]", "[[2026-06-04-Rebellions-ATOM-Max-EXAONE-4.5-Research.md]]", "[[2026-06-05-Rebellions-vLLM-EXAONE-Speculative-MoE-Update.md]]", "[[2026-06-07-Rebellions-ATOM-Max-vLLM-EXAONE-4.5-Update.md]]", "[[2026-06-09-Rebellions-NPU-EXAONE-4.5-Physical-AI-Update.md]]", "[[2026-06-11-Rebellions-Atom-Rebel-EXAONE-4.5-Research.md]]", "[[2026-06-12-Rebellions-ATOM-Max-EXAONE-4.5-Update.md]]", "[[2026-06-15-Rebellions-EXAONE-Physical-AI-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-rebellions_atom_max_exaone_optimization.md]]", "[[2026-06-28-rebellions_atom_max_exaone_4_5_optimization.md]]", "[[2026-06-30-rebellions_atom_max_exaone_4_5.md]]", "[[2026-07-01-vllm-rbln-exaone-4-5-atom-max.md]]", "[[2026-07-07-exaone-4.5-vllm-rbln-atom-max-optimization.md]]", "[[2026-07-11-rebellions_atom_max_exaone_4_5_vllm_rbln.md]]", "[[2026-07-12-rbln-sdk-0.11-vllm-exaone-gemma4.md]]", "[[2026-07-15-litert-lm-v0110-windows-rebellions-torchdynamo.md]]", "[[2026-07-16-vllm-rbln-v0.11.1a7-request-reordering-dtensor-mtp.md]]"]
 ---
 
 # 🚀 리벨리온 ATOM-Max 기반 EXAONE 4.5 최적화 가이드 (2026)
@@ -316,14 +316,40 @@ uv pip install "vllm-rbln==0.11.2a8" \
   --extra-index-url https://wheels.vllm.ai/0.24.0/cpu --torch-backend cpu
 ```
 
-**적용 팁**: EXAONE speculative/DP 벤치는 a8에서 greedy·spec token·DP bucket을 한 세트로 본다. 프로덕션 핀은 `v0.11.1`, 프리릴리즈 추적은 `0.11.2a8`.
+**적용 팁**: EXAONE speculative/DP 벤치는 a8에서 greedy·spec token·DP bucket을 한 세트로 본다. 프로덕션 핀은 `v0.11.1.post1`, 프리릴리즈 추적은 `0.11.2a9`.
+
+## 4.15 vLLM-RBLN v0.11.2a9 · v0.11.1.post1 (합성 2026-08-15)
+
+[v0.11.2a9](https://github.com/RBLN-SW/vllm-rbln/releases/tag/v0.11.2a9) — mega-cache 원자 번들 + vLLM 0.24 DP mapping. [v0.11.1.post1](https://github.com/RBLN-SW/vllm-rbln/releases/tag/v0.11.1.post1) — Qwen3 MoE 레지스트리.
+
+| 항목 | 내용 | 재사용 claim |
+| :--- | :--- | :--- |
+| **mega-cache** | [#805](https://github.com/RBLN-SW/vllm-rbln/pull/805) `mega_cache.bin`은 warmup 전부 성공 후에만 기록 | 중간 실패 후 남은 `.rbln`을 캐시 히트로 쓰지 말 것. 경로 `VLLM_CACHE_ROOT/rbln/<model>/<config_signature>/rank{N}/` |
+| **signature** | vllm_config 해시 + compile env + rebel **major.minor** | 버킷 전략·hidden-layer 컷이 바뀌면 새 디렉터리. patch bump는 재사용, minor는 무효 |
+| **hidden layers** | `VLLM_RBLN_NUM_HIDDEN_LAYERS` ([#914](https://github.com/RBLN-SW/vllm-rbln/pull/914)) | 앞 N층만 빌드(디버그). 번들 키에 포함하지 않으면 잘못된 히트 |
+| **Qwen3.5 block** | `block_size == max_model_len` reject ([#912](https://github.com/RBLN-SW/vllm-rbln/pull/912)) | KV 페이지 크기와 컨텍스트 상한을 같게 두지 말 것 |
+| **DP mapping** | vLLM 0.24 config의 DP device map ([#896](https://github.com/RBLN-SW/vllm-rbln/pull/896)) | a8 pad와 함께 DP 서빙 회귀 |
+| **decode compile** | static output ([#904](https://github.com/RBLN-SW/vllm-rbln/pull/904)) | decode 그래프 재컴파일 비용 감소 |
+| **E2E metrics** | `execute_model` pass 단위 ([#899](https://github.com/RBLN-SW/vllm-rbln/pull/899)) | sampler 호출 횟수로 E2E를 나누지 말 것 |
+| **Qwen3 MoE** | stable post1 [#930](https://github.com/RBLN-SW/vllm-rbln/pull/930) | MoE 서빙은 `0.11.1.post1` 이상 |
+
+```bash
+# 콜드스타트 후 번들만 남는지 확인
+ls ~/.cache/vllm/rbln/*/*/rank0/mega_cache.bin
+# 같은 설정 재기동 → re-compile 스킵 로그
+
+uv pip install "vllm-rbln==0.11.2a9" \
+  --extra-index-url https://wheels.vllm.ai/0.24.0/cpu --torch-backend cpu
+```
+
+**함정**: 워밍업 중 kill → 기존 번들은 그대로(부분 저장 없음). 설정만 바꾸고 같은 경로를 기대하면 안 됨 — signature 디렉터리가 갈라진다.
 
 ## 5. 실전 최적화 체크리스트
 
 1.  **모델 컴파일**: SDK v0.11.0+에서는 vLLM API 경로의 자동 컴파일을 우선 사용. 레거시 AOT가 필요하면 `optimum-cli`로 Transformers v5 호환 재컴파일.
 2.  **병렬화 최적화**: 33B 모델의 경우 8개 이상의 ATOM-Max 칩을 활용한 Tensor Parallelism(TP) 설정 권장. `VLLM_RBLN_NUM_DEVICES_PER_LOCAL_RANK`로 디바이스 수 지정.
 3.  **Physical AI 연동**: LG 로봇 KAPEX 등 물리적 하드웨어와의 실시간 추론 연동 테스트 수행.
-4.  **a8~a5 / 0.11.1 검증**: **a8 greedy·specdec·DP pad·dtensor/MTP**; a7 vLLM 0.24; a5 attention buffer reuse; **stable 0.11.1 멀티모달 APC·w8a8·torch-rbln 0.3.0**.
+4.  **a9~a5 / 0.11.1.post1 검증**: **a9 mega-cache·DP mapping·Qwen3.5 block_size**; a8 greedy·specdec·DP pad·dtensor/MTP; a7 vLLM 0.24; **stable 0.11.1.post1 Qwen3 MoE + 0.11.1 APC/w8a8**.
 
 ---
 **관련 프로젝트**:

@@ -3,11 +3,12 @@ id: publication-gate-empty-overwrite-guard
 title: "퍼블리시 게이트 + 빈 산출물 덮어쓰기 금지"
 status: canonical
 owner: km
-updated: "2026-08-14"
-last_updated: "2026-08-14"
-review_after: "2026-11-14"
+updated: "2026-08-15"
+last_updated: "2026-08-15"
+review_after: "2026-11-15"
 sources:
   - ticket:474
+  - ticket:854
   - schedule:publication-safety
   - schedule:issue-radar
   - ticket:167
@@ -50,7 +51,10 @@ python agent/publication_gate.py --base origin/main
 ## 분기·스택 운영
 
 - 로컬 `main`이 미공개 Pass 스택으로 `origin/main`과 diverge면, curation/radar 잡은 **`origin/main`에 detach → 작업 → `push HEAD:main` → 로컬 스택 checkout**으로 보존한다. Pass 스택을 curation에 ff-only merge하지 않는다. dirty leftover `agent/cron/` WIP가 이미 PR로 들어갔으면 ff-only pull 전에 정리. preserve branch는 백업일 뿐 ship 경로가 아니다.
+- **대안 (스택을 살린 채 ship)**: `git branch agent/pass-stack-preserve-YYYYMMDD`로 백업한 뒤 `origin/main`에 rebase(충돌 0이면 콘텐츠 게이트 → ship). rebase 충돌이 있으면 detach 경로로 되돌린다.
 - Pass 스택 rebase/fixup 후 people slug가 바뀌면 **stance·링크를 remap**하고 깨진/org/unknown stance 라인은 drop한 뒤 게이트를 다시 돌린다.
+- **검색엔진 결과 URL은 allowlist 출처가 아니다** — 게이트 PASS 이후에도 검색 URL 출처는 공개 본문에서 제거한다.
+- **약한 중립(weak-neutral)**: 신원·SSoT가 부족한 stance는 hold만 하지 말고 **drop**. org/unknown·SSoT-없는 slug와 같은 축.
 - yaml↔wiki orphan 0을 유지하려면 stub yaml 추가 시 **최소 wiki stub도 같이 seed**. SSoT 카운트는 `yaml==wiki`로 맞춘다.
 - **게이트 PASS ≠ content-safe**: `/people/unknown`, org-as-person stance, 역할·신원 오인 stub는 추가 strip. people promote는 allowlisted 공식/프로필 URL(≥1)이 있을 때만; wiki-only·비허용 호스트는 부족. 애매한 기자·동명이인·역할 불일치·비인물(학교 등)은 hold.
 - **동명이인 함정**: allowlist 호스트 URL이 **다른 사람**(같은 이름, 다른 직)이면 콘텐츠 안전 실패 — 그 URL을 promote에 붙이지 않는다.

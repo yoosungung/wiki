@@ -3,11 +3,12 @@ id: k8s-intentional-scale-zero-empty-endpoints
 title: "K8s 의도적 scale-0와 empty endpoints 판별"
 status: canonical
 owner: km
-updated: "2026-08-14"
-last_updated: "2026-08-14"
-review_after: "2026-11-09"
+updated: "2026-08-15"
+last_updated: "2026-08-15"
+review_after: "2026-11-15"
 sources:
   - schedule:ta-k8s-daily
+  - inbox:ta/2026-08-15-k8s-daily-report
   - inbox:ta/2026-08-09-k8s-daily-report
   - inbox:ta/2026-08-03-ta-k8s-daily
   - inbox:ta/2026-08-02-ta-k8s-daily
@@ -60,6 +61,8 @@ kubectl get nodes -o custom-columns=NAME:.metadata.name,READY:.status.conditions
 - **재확인 (2026-08-09)**: `runtime/pgbouncer-{ro,rw}` intentional scale-0(endpoints empty) + GPU 서빙 Ready + Warning/CrashLoop=0이면 Incident 없음. TEI 등 보조 Ready 워크로드는 GPU 점유와 독립적으로 정상 기준선에 포함할 수 있다.
 - **Redis ClusterIP 거부 ≠ Redis Down**: 워크로드 루프백 `redis-cli ping`이 PONG이면, 오퍼레이터에서 ClusterIP/pod IP connection refused는 알려진 런타임 정책일 수 있다. 일일 리포트에서 Incident로 올리지 않는다.
 - **Readiness probe flake**: STS 한 번 Unhealthy 후 곧 Ready 1/1 이면 사고로 승격하지 않는다. 공유 Postgres OOM(SIGKILL)과 구분 — [[wiki/Engineering/Infrastructure-and-DevOps/Shared-Postgres-Cgroup-Limit-vs-Statement-Timeout.md]].
+- **재확인 (2026-08-15)**: GPU 서빙 2/2 Ready + `runtime/pgbouncer-{ro,rw}` scale-0 + path-graph filestash 1/1·ImagePullBackOff=0·terminal Workflow CR만 잔존 + 공유 Postgres live limit 4Gi/request 2Gi·SIGKILL 없음이면 Incident 없음.
+- **티켓 불필요면 MCP 미사용**: 조치 가능 장애가 0이면 ticketing MCP discovery 실패를 점검 실패로 올리지 않는다. MCP는 티켓이 필요할 때만.
 
 ## 🔗 관련 문서
 
