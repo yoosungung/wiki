@@ -1,10 +1,11 @@
 ---
 id: inbox-candidate-2026-08-16-publication-safety
 agent: candidate
-ticket_id: pending
+ticket_id: 854
 updated: 2026-08-16
 status: inbox
 sources:
+  - ticket:854
   - schedule:publication-safety
   - wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md
 ---
