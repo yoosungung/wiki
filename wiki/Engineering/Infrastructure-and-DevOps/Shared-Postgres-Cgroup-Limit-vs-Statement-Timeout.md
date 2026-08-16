@@ -3,9 +3,9 @@ id: shared-postgres-cgroup-limit-vs-statement-timeout
 title: "공유 Postgres: cgroup limit vs statement_timeout"
 status: canonical
 owner: km
-updated: "2026-08-14"
-last_updated: "2026-08-14"
-review_after: "2026-11-14"
+updated: "2026-08-16"
+last_updated: "2026-08-16"
+review_after: "2026-11-16"
 sources:
   - ticket:775
 tags: ["Infrastructure", "DevOps", "PostgreSQL", "Kubernetes", "Helm", "OOM"]
@@ -47,6 +47,7 @@ primary:
 
 - 공유 인스턴스의 빈 부가 DB(사용자 테이블 0)를 같은 티켓에서 DROP하지 않는다. 삭제는 별 승인.
 - 노드 여유(requests/limits vs allocatable)를 보고 스케줄 가능한 limit만 올린다.
+- **재확인 (2026-08-16)**: live STS/Pod limit 4Gi / request 2Gi, SIGKILL 로그 없음, metrics ~450Mi이면 cgroup OOM 신호가 아니다. PVC Bound와 함께 일일 기준선에 둔다.
 
 ## 관련
 

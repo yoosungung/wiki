@@ -3,12 +3,14 @@ id: publication-gate-empty-overwrite-guard
 title: "퍼블리시 게이트 + 빈 산출물 덮어쓰기 금지"
 status: canonical
 owner: km
-updated: "2026-08-15"
-last_updated: "2026-08-15"
-review_after: "2026-11-15"
+updated: "2026-08-16"
+last_updated: "2026-08-16"
+review_after: "2026-11-16"
 sources:
   - ticket:474
   - ticket:854
+  - ticket:882
+  - ticket:892
   - schedule:publication-safety
   - schedule:issue-radar
   - ticket:167
@@ -56,10 +58,12 @@ python agent/publication_gate.py --base origin/main
 - **검색엔진 결과 URL은 allowlist 출처가 아니다** — 게이트 PASS 이후에도 검색 URL 출처는 공개 본문에서 제거한다.
 - **약한 중립(weak-neutral)**: 신원·SSoT가 부족한 stance는 hold만 하지 말고 **drop**. org/unknown·SSoT-없는 slug와 같은 축.
 - yaml↔wiki orphan 0을 유지하려면 stub yaml 추가 시 **최소 wiki stub도 같이 seed**. SSoT 카운트는 `yaml==wiki`로 맞춘다.
-- **게이트 PASS ≠ content-safe**: `/people/unknown`, org-as-person stance, 역할·신원 오인 stub는 추가 strip. people promote는 allowlisted 공식/프로필 URL(≥1)이 있을 때만; wiki-only·비허용 호스트는 부족. 애매한 기자·동명이인·역할 불일치·비인물(학교 등)은 hold.
+- **게이트 PASS ≠ content-safe**: `/people/unknown`, org-as-person stance, 이슈 slug를 인물로 쓴 stance, 약한 중립(발언 미확인), 역할·신원 오인 stub는 추가 strip. people promote는 allowlisted 공식/프로필 URL(≥1)이 있을 때만; wiki-only·비허용 호스트는 부족. 애매한 기자·동명이인·역할 불일치·비인물(학교·부처 등)은 hold.
 - **동명이인 함정**: allowlist 호스트 URL이 **다른 사람**(같은 이름, 다른 직)이면 콘텐츠 안전 실패 — 그 URL을 promote에 붙이지 않는다.
+- **직원명단 미기재**: 성명이 직원명단/조직도에 없으면 `go.kr` 등 허용 호스트여도 승격 근거로 쓰지 않는다.
+- **people slug remap**: collapse/접두 규칙(`lee→i`, `park→bak`, `kim→gim`, `jung→jeong`) + `name_ko` 매칭으로 정규화한 뒤 stance·링크를 고친다(예: unknown 김기재 → `gimgijae`).
 - 공개 전 제거: placeholder/unknown·SSoT 없는 slug·불완전 신원 stub·기관을 people로 링크한 stance.
-- Pass D가 people YAML을 추가하면 **최소 wiki stub도 같이 seed**해 yaml↔wiki orphan 0을 유지한다.
+- Pass D가 people YAML을 추가하면 **최소 wiki stub도 같이 seed**해 yaml↔wiki orphan 0을 유지한다. 약한 중립 줄을 drop해도 orphan 0을 깨지 않게 stub를 함께 맞춘다.
 - `http.extraheader` + remote에 박힌 토큰이 401이면, env 토큰을 URL에 넣은 **한 번의 push**로 충분하다 — [[wiki/Engineering/Infrastructure-and-DevOps/GitHub-Fine-Grained-PAT-Contents-Write-Probe.md]].
 - meta/stub+stance만 갱신하는 잡에서 사이트 빌드 바이너리(예: Hugo)가 없으면 **빌드를 스킵**해도 된다 — 게이트·pytest가 정본이다.
 - issue-radar → today 발행: empty-overwrite guard 통과 후에만 공개 큐(`today.yaml` 등)를 커밋·push하고, **승인 티켓은 만들지 않는다**. 캐시 타임스탬프를 남긴다.

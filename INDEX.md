@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-08-15 (inbox drain 3·PubGate searchURL/weak-neutral/preserve-rebase·k8s scale-0 MCP-unused; GH-skip ALREADY; vllm-rbln a9 mega-cache/post1 Qwen3 MoE; LiteRT v0.16·Furiosa b11 ALREADY) | Root: wiki/
+[META] Updated: 2026-08-16 (inbox drain 4·PubGate slug-remap/직원명단·k8s worktree; pm EXCLUDE; OpenClaw v2026.8.1 secret-egress/SQLite-backup; LiteRT/vllm-rbln/Furiosa ALREADY) | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
