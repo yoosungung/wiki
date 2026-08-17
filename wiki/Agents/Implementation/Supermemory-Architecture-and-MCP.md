@@ -3,9 +3,9 @@ title: "Supermemory: 에이전트 네이티브 메모리 시스템 및 MCP 아�
 tags: ["Agents", "Implementation", "Memory", "Supermemory", "MCP", "SMFS", "Cloudflare"]
 type: "wiki"
 status: "published"
-last_updated: "2026-08-13"
-updated: "2026-08-13"
-related_raw: ["[[2026-08-08-supermemory-forget-matching-ids.md]]", "[[2026-08-02-supermemory-company-brain-skills.md]]", "[[2026-07-29-supermemory-company-brain-proactivity-nova.md]]", "[[2026-07-28-supermemory-company-brain-custom-mcp.md]]", "[[2026-07-26-supermemory-chatgpt-mcp-setup.md]]", "[[2026-07-25-supermemory-cursor-agents-company-brain.md]]", "[[2026-07-24-supermemory-mcp-scope-opencode.md]]", "[[2026-07-23-supermemory-agents-memory-workspace.md]]", "[[2026-07-22-supermemory-company-brain-open-signup.md]]", "[[2026-07-21-supermemory-mcp-tool-safety-annotations.md]]", "[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]", "[[2026-07-12-supermemory-local-6767-cli-mcp-context.md]]", "[[raw/2026-07-13-sadik-mohammad-rag-systems-limitations.md]]", "[[2026-07-13-supermemory-openclaw-claude-plugins.md]]", "[[2026-07-16-supermemory_ai_memory_layer_analysis.md]]", "[[2026-07-18-supermemory-server-v0.0.5-pluggable-embeddings.md]]", "[[2026-07-19-supermemory-server-v0.0.6-windows.md]]"]
+last_updated: "2026-08-17"
+updated: "2026-08-17"
+related_raw: ["[[2026-08-17-supermemory-memorybench-skill-pipeline.md]]", "[[2026-08-08-supermemory-forget-matching-ids.md]]", "[[2026-08-02-supermemory-company-brain-skills.md]]", "[[2026-07-29-supermemory-company-brain-proactivity-nova.md]]", "[[2026-07-28-supermemory-company-brain-custom-mcp.md]]", "[[2026-07-26-supermemory-chatgpt-mcp-setup.md]]", "[[2026-07-25-supermemory-cursor-agents-company-brain.md]]", "[[2026-07-24-supermemory-mcp-scope-opencode.md]]", "[[2026-07-23-supermemory-agents-memory-workspace.md]]", "[[2026-07-22-supermemory-company-brain-open-signup.md]]", "[[2026-07-21-supermemory-mcp-tool-safety-annotations.md]]", "[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]", "[[2026-07-12-supermemory-local-6767-cli-mcp-context.md]]", "[[raw/2026-07-13-sadik-mohammad-rag-systems-limitations.md]]", "[[2026-07-13-supermemory-openclaw-claude-plugins.md]]", "[[2026-07-16-supermemory_ai_memory_layer_analysis.md]]", "[[2026-07-18-supermemory-server-v0.0.5-pluggable-embeddings.md]]", "[[2026-07-19-supermemory-server-v0.0.6-windows.md]]"]
 ---
 
 # 🧠 Supermemory: 에이전트 네이티브 메모리 시스템
@@ -124,6 +124,23 @@ const { profile, searchResults } = await client.profile({
 - **`context` prompt vs `recall`**: 대화 시작 시 시스템 주입은 `context`, 특정 질의 검색은 `recall`, 원본 프로필은 `supermemory://profile`
 - **CLI**: memories/documents/profiles/tags/connectors/API keys 터미널 관리
 - **부가**: Instant dreaming, PPTX·오디오(Gemini 2.5 Flash STT) 수집, MemoryBench, Claude Code skill (`npx skills add supermemoryai/skills`), `/v4/profile`
+
+### 3.2 MemoryBench (표준 메모리 벤치 루프)
+
+정본: [MemoryBench overview](https://supermemory.ai/docs/memorybench/overview), repo [`supermemoryai/memorybench`](https://github.com/supermemoryai/memorybench) (MIT).
+
+| 단계 | 의미 |
+| :--- | :--- |
+| `INGEST → SEARCH → ANSWER → EVALUATE → REPORT` | 전 provider 동일 파이프라인; **단계별 checkpoint** — 장시간 ingest·API 실패 시 마지막 완료 단계부터 resume |
+| 내장 벤치 | LoCoMo · LongMemEval · ConvoMem (provider/benchmark/judge 모두 pluggable) |
+| 자체 메모리 채점 | Claude skill `/memorybench` (또는 `npx skills add supermemoryai/memorybench` → `/benchmark-context`): init/ingest/search 발견 → adapter 생성 → 경쟁사와 accuracy/latency/context-token 병렬 보고 |
+
+```bash
+# 프레임워크 CLI 예
+bun run src/index.ts run -p supermemory -b longmemeval -j gpt-4o -r my-run
+```
+
+KM raw 품질 루프에 붙일 때는 `dreaming: instant` 문서 단위 형성 직후 MemoryBench adapter로 야간 스모크를 돌리는 패턴을 우선한다(아이디어 백로그와 정합).
 
 ```json
 {

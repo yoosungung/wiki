@@ -1,6 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-17 | INBOX_DRAIN | inbox/{aa,candidate,pm,qa,ta} | 17 | Actions-budget·Tenant-CD-missing-wf 신설; PubGate/Spider2-tmp/quality/GH-skip; pm-checkpoint EXCLUDE; git rm |
+| 2026-08-17 | RESEARCH | Web/GitHub | 1 | MemoryBench skill·checkpoint pipeline; OpenClaw beta.2·LiteRT v0.16·Furiosa b11·vllm-rbln a9 ALREADY_COVERED |
+| 2026-08-17 | INGEST | raw/ | 1 | supermemory-memorybench-skill-pipeline (합성 후 삭제) |
+| 2026-08-17 | SYNTHESIZE | wiki/ | 8+ | Actions-Budget·Tenant-CD-Missing; PubGate; Spider2§4.3; Overlay link; Supermemory§3.2; MOC/INDEX |
+| 2026-08-17 | LINT | Root / wiki | ALL | 데일리 생성, D-2(2026-08-15) 삭제, raw 합성 후 삭제, 연구_주제·INDEX META |
 | 2026-08-16 | INBOX_DRAIN | inbox/{candidate,pm,ta} | 4 | PubGate slug-remap/직원명단·k8s 재확인+worktree; pm-checkpoint EXCLUDE; git rm |
 | 2026-08-16 | RESEARCH | Web/GitHub | 1 | OpenClaw v2026.8.1-beta.2 secret-egress/SQLite-backup/plugin-provenance; LiteRT v0.16·vllm-rbln a9/post1·Furiosa b11 ALREADY_COVERED |
 | 2026-08-16 | INGEST | raw/ | 1 | openclaw-v2026.8.1-beta.2 (합성 후 삭제) |

@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-08-16 (inbox drain 4·PubGate slug-remap/직원명단·k8s worktree; pm EXCLUDE; OpenClaw v2026.8.1 secret-egress/SQLite-backup; LiteRT/vllm-rbln/Furiosa ALREADY) | Root: wiki/
+[META] Updated: 2026-08-17 (inbox drain 17·Actions-budget/Tenant-CD-missing-wf·PubGate/Spider2-tmp; MemoryBench; LiteRT/OpenClaw/Furiosa/vllm-rbln ALREADY; pm EXCLUDE) | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -68,12 +68,12 @@
     - Reasoning-and-Cognition: 34 files
     - RL: 40 files
 - wiki/RAG/ (68 files)
-- wiki/Engineering/ (151 files)
+- wiki/Engineering/ (153 files)
     - Data-and-Security: 14 files
     - Prompt-Engineering: 12 files
-    - Infrastructure-and-DevOps: 44 files
+    - Infrastructure-and-DevOps: 45 files
     - Development-Environment: 17 files
-    - AI-Native-Engineering: 62 files
+    - AI-Native-Engineering: 63 files
 - wiki/Business/ (39 files)
     - Recommendation Systems: 7 files
     - Trends: 9 files

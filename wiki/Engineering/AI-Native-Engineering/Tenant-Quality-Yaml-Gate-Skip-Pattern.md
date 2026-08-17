@@ -3,9 +3,9 @@ id: tenant-quality-yaml-gate-skip-pattern
 title: "테넌트 quality.yaml 게이트 키 누락 시 skip (NF 미생성)"
 status: canonical
 owner: km
-updated: "2026-08-10"
-last_updated: "2026-08-10"
-review_after: "2026-11-10"
+updated: "2026-08-17"
+last_updated: "2026-08-17"
+review_after: "2026-11-17"
 sources:
   - ticket:414
   - ticket:85

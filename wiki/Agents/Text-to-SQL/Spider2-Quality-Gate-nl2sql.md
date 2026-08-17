@@ -3,12 +3,13 @@ id: spider2-quality-gate-nl2sql
 title: "Spider2-Lite → nl2sql 품질 게이트 (스모크·preflight)"
 status: canonical
 owner: km
-updated: "2026-08-14"
-last_updated: "2026-08-14"
-review_after: "2026-11-14"
+updated: "2026-08-17"
+last_updated: "2026-08-17"
+review_after: "2026-11-17"
 sources:
   - ticket:428
   - ticket:391
+  - ticket:924
   - ticket:32
   - ticket:37
   - ticket:38
@@ -18,6 +19,7 @@ sources:
   - ticket:122
   - ticket:123
   - ticket:172
+  - schedule:qa-bulk-weekly
   - wiki/Agents/Text-to-SQL/T2SQL-Benchmarks-2026.md
   - https://github.com/xlang-ai/Spider2/tree/main/spider2-lite/evaluation_suite
   - https://github.com/nodal-data/spider2-claude-code
@@ -90,6 +92,23 @@ cd spider2-eval && uv run spider2-opik weekly
 - gold-sql hard 실패 → wrapper non-zero(NF).
 - agent soft 실패 → 로그만, gold hard OK면 exit 0.
 - **함정**: `spider2-opik run`/`weekly`가 agent `pass_rate=0`이어도 exit 0이면 주간 하드 게이트가 안 닫힌다. 제품 AC는 soft→hard 승격 시 **pass_rate floor + empty-SQL count**를 별도 assert하거나 wrapper non-zero로 승격한다.
+
+### 4.3 Ephemeral checkout + Spider2 자산 (`.tmp-spider2`)
+
+`tenant-repo-sync` depth-1 clone은 gitignored `spider2-eval/.tmp-spider2`(Spider2-Lite jsonl 등)를 **포함하지 않는다**. 첫 `spider2-opik weekly`/`check`가 `missing …/.tmp-spider2/Spider2/…jsonl`로 hard-fail한다.
+
+```bash
+# 선택 A: 이미 채워진 트리로 심볼릭 링크
+ln -sfn /path/to/populated/.tmp-spider2 \
+  /tmp/tenant-repos/<repo>/spider2-eval/.tmp-spider2
+
+# 선택 B: env로 자산 루트 지정 후 weekly 재시작
+export SPIDER2_TMP_DIR=/path/to/populated/.tmp-spider2
+cd spider2-eval && uv run spider2-opik weekly
+```
+
+- 게이트 키 없음 skip은 [[wiki/Engineering/AI-Native-Engineering/Tenant-Quality-Yaml-Gate-Skip-Pattern.md]] — 본 함정은 **키가 있어 opik을 돌릴 때**만 해당.
+- 앱 PVC에 소스 zip이 있어도 ephemeral checkout과 혼동하지 말 것(§7.4 #11).
 
 ## 5. In-cluster 엔드포인트
 

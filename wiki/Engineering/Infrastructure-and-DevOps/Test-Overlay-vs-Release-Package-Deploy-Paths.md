@@ -3,9 +3,9 @@ id: test-overlay-vs-release-package-deploy-paths
 title: "Test Overlay vs Release Package 배포 축 분리"
 status: canonical
 owner: km
-updated: "2026-08-13"
-last_updated: "2026-08-13"
-review_after: "2026-11-12"
+updated: "2026-08-17"
+last_updated: "2026-08-17"
+review_after: "2026-11-17"
 sources:
   - ticket:59
   - ticket:61
@@ -31,6 +31,8 @@ type: "wiki"
 | **Prod package** | Release assets + GHCR 이미지/바이너리 publish | `publish-releases` workflow, 패키지 레포 — **반드시 클러스터 apply는 아님** |
 
 테넌트 레지스트리(`tenant_cd`)가 비어 있으면 workflow_dispatch CD 경로가 없다 → 해당 티켓의 **prod_* = N/A**가 정상이다.
+
+레지스트리가 `deploy.yml` 등을 가리키는데 제품 default branch에 파일이 없으면 tip 경로로 대체하지 않는다 — [[wiki/Engineering/Infrastructure-and-DevOps/Tenant-CD-Registry-Missing-Workflow.md]].
 
 팩토리 **플러그인-only** 테스트 배포는 `tenant_cd`가 아니라 install 스크립트(예: ConfigMap + initContainer + `rollout restart deploy/…`)일 수 있다. 재설치 시 live `bridge.json`(에이전트 user id)을 **샘플로 덮지 말고** 기존 CM에서 보존한다. 스모크는 in-cluster Service FQDN(예: `favicon.ico` 200)을 쓰고, 외부 Host 302와 혼동하지 않는다.
 
@@ -78,6 +80,7 @@ MCP Host allowlist 롤아웃 순서는 [[wiki/Engineering/Infrastructure-and-Dev
 
 ## 🔗 관련 문서
 
+- [[wiki/Engineering/Infrastructure-and-DevOps/Tenant-CD-Registry-Missing-Workflow.md]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/K8s-Secret-vs-ConfigMap-Deploy-Hardening.md]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/GHCR-Actions-Package-Write-ACL.md]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/MCP-Host-Allowlist-DNS-Rebinding.md]]

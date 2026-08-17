@@ -40,6 +40,7 @@
 - [[wiki/Engineering/AI-Native-Engineering/Agent-Runner-Zombie-Active-Run-Recovery.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Schedule-Outcome-Requires-Active-Ticket.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Actions-Budget-Blocks-CI-Rerun.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Sessionless-MCP-Status-Label-Cache-Poison.md]]
 - [[wiki/Engineering/AI-Native-Engineering/GHA-Workflow-PR-Only-Trigger.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Created-By-Me-Terminal-Status-Order.md]]
