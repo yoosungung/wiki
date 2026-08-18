@@ -3,9 +3,9 @@ id: path-graph-argo-imagepullbackoff-runbook
 title: "path-graph stale Argo Workflow ImagePullBackOff 런북"
 status: canonical
 owner: km
-updated: "2026-08-16"
-last_updated: "2026-08-16"
-review_after: "2026-11-16"
+updated: "2026-08-18"
+last_updated: "2026-08-18"
+review_after: "2026-11-18"
 sources:
   - ticket:41
   - https://github.com/yoosungung/k8s-test/pull/1
@@ -53,6 +53,8 @@ ImagePullBackOff가 0이어도 **Failed/Error/Succeeded terminal Workflow CR**�
 **재확인 (2026-08-03)**: filestash 1/1·ImagePullBackOff=0·Warning events 없음; terminal Error/Failed/Succeeded Workflow CR만 잔존 → 위생 대상일 뿐 incident 아님. 점검은 read-only kubectl 유지.
 
 **재확인 (2026-08-16)**: filestash 1/1·terminal Workflow CR만 잔존 패턴 동일 → incident 아님. scale-0 empty endpoints와 함께 판별: [[wiki/Engineering/Infrastructure-and-DevOps/K8s-Intentional-Scale-Zero-Empty-Endpoints.md]].
+
+**재확인 (2026-08-18)**: filestash 1/1·ImagePullBackOff=0·terminal Error/Failed/Succeeded Workflow CR만 잔존 → 위생, incident 아님. graph storage STS가 Helm 기본(예: 1Gi)보다 낮은 limit(예: 512Mi)이어도 Ready·최근 OOM 없으면 일일 티켓 없음 — live SoR.
 
 ## 🔗 관련 문서
 

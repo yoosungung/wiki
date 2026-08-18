@@ -1,6 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-18 | INBOX_DRAIN | inbox/{candidate,ta} | 4 | PubGate people-SSoT/slug·k8s TEI:8080/Helm-limit; people 정치본문 EXCLUDE; git rm |
+| 2026-08-18 | RESEARCH | Web/docs | 2 | RBLN compiler post1 mimalloc 제거; Supermemory Dynamic Dreaming ≤15분·휴리스틱; LiteRT/OpenClaw/Furiosa/a9 ALREADY_COVERED |
+| 2026-08-18 | INGEST | raw/ | 2 | rbln-sdk-0.11.1-post1-mimalloc · supermemory-dynamic-dreaming-sla (합성 후 삭제) |
+| 2026-08-18 | SYNTHESIZE | wiki/ | 8 | PubGate; K8s scale-0; SGLang TEI; Shared-Postgres; path-graph; Supermemory§3.1; 리벨리온 가이드·동향 |
+| 2026-08-18 | LINT | Root / wiki | ALL | 데일리 생성, D-2(2026-08-16) 삭제, raw 합성 후 삭제, 연구_주제·INDEX META |
 | 2026-08-17 | INBOX_DRAIN | inbox/{aa,candidate,pm,qa,ta} | 17 | Actions-budget·Tenant-CD-missing-wf 신설; PubGate/Spider2-tmp/quality/GH-skip; pm-checkpoint EXCLUDE; git rm |
 | 2026-08-17 | RESEARCH | Web/GitHub | 1 | MemoryBench skill·checkpoint pipeline; OpenClaw beta.2·LiteRT v0.16·Furiosa b11·vllm-rbln a9 ALREADY_COVERED |
 | 2026-08-17 | INGEST | raw/ | 1 | supermemory-memorybench-skill-pipeline (합성 후 삭제) |

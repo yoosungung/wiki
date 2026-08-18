@@ -3,11 +3,12 @@ id: k8s-intentional-scale-zero-empty-endpoints
 title: "K8s 의도적 scale-0와 empty endpoints 판별"
 status: canonical
 owner: km
-updated: "2026-08-16"
-last_updated: "2026-08-16"
-review_after: "2026-11-16"
+updated: "2026-08-18"
+last_updated: "2026-08-18"
+review_after: "2026-11-18"
 sources:
   - schedule:ta-k8s-daily
+  - inbox:ta/2026-08-18-ta-k8s-daily
   - inbox:ta/2026-08-16-k8s-daily-report
   - inbox:ta/2026-08-15-k8s-daily-report
   - inbox:ta/2026-08-09-k8s-daily-report
@@ -64,8 +65,9 @@ kubectl get nodes -o custom-columns=NAME:.metadata.name,READY:.status.conditions
 - **Readiness probe flake**: STS 한 번 Unhealthy 후 곧 Ready 1/1 이면 사고로 승격하지 않는다. 공유 Postgres OOM(SIGKILL)과 구분 — [[wiki/Engineering/Infrastructure-and-DevOps/Shared-Postgres-Cgroup-Limit-vs-Statement-Timeout.md]].
 - **재확인 (2026-08-15)**: GPU 서빙 2/2 Ready + `runtime/pgbouncer-{ro,rw}` scale-0 + path-graph filestash 1/1·ImagePullBackOff=0·terminal Workflow CR만 잔존 + 공유 Postgres live limit 4Gi/request 2Gi·SIGKILL 없음이면 Incident 없음.
 - **재확인 (2026-08-16)**: 노드 Pressure=False·Warning/CrashLoop/Pending=0 + `runtime/pgbouncer-{ro,rw}` scale-0 + GPU `sglang-gemma4-12b` 2/2·`bge-m3-tei` 1/1 + Postgres live 4Gi/2Gi·SIGKILL 없음 + filestash 1/1·terminal Workflow CR만 잔존이면 Incident 없음.
+- **재확인 (2026-08-18)**: 동일 기준선 + TEI health는 Service 포트 **:8080** (기본 :80 타임아웃은 포트 오탐, 사고 아님) + graph DB STS가 Helm 기본 limit보다 낮아도 Ready·최근 OOM 없으면 일일 티켓 없음 — [[wiki/Models/Optimization-and-Serving/SGLang-gemma4-llm-serving-cluster-ops.md]].
 - **티켓 불필요면 MCP 미사용**: 조치 가능 장애가 0이면 ticketing MCP discovery 실패를 점검 실패로 올리지 않는다. MCP는 티켓이 필요할 때만.
-- **점검 worktree ≠ git 정본**: 로컬 checkout이 feature 브랜치여도 **live 클러스터**가 점검 기준이다. `git pull origin main`을 생략해도 되고, repo drift를 Incident로 올리지 않는다.
+- **점검 worktree ≠ git 정본**: 로컬 checkout이 feature 브랜치여도 **live 클러스터**가 점검 기준(SoR)이다. `git pull origin main`을 생략해도 되고, repo drift를 Incident로 올리지 않는다. 점검 시 kubectl mutate 없음.
 
 ## 🔗 관련 문서
 

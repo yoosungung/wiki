@@ -3,9 +3,9 @@ title: "리벨리온 ATOM-Max NPU 및 vLLM-RBLN 최신 동향 (2026)"
 tags: ["Models", "Optimization", "Serving", "NPU", "Rebellions", "vLLM-RBLN", "EXAONE"]
 type: "wiki"
 status: "published"
-last_updated: "2026-08-15"
-updated: "2026-08-15"
-related_raw: ["[[2026-08-15-vllm-rbln-v0.11.2a9-mega-cache.md]]", "[[2026-08-08-vllm-rbln-v0.11.2a8.md]]", "[[2026-08-04-vllm-rbln-v0.11.2a7.md]]", "[[2026-08-03-vllm-rbln-v0.11.2a5.md]]", "[[2026-08-01-vllm-rbln-v0.11.2a4-v0.11.1.md]]", "[[2026-07-30-vllm-rbln-v0.11.2a3.md]]", "[[2026-07-29-vllm-rbln-v0.11.2a2.md]]", "[[2026-07-28-vllm-rbln-v0.11.2a0-a1.md]]", "[[2026-07-24-vllm-rbln-v0.11.2.dev0.md]]", "[[2026-06-01-Rebellions-NPU-Update.md]]"]
+last_updated: "2026-08-18"
+updated: "2026-08-18"
+related_raw: ["[[2026-08-18-rbln-sdk-0.11.1-post1-mimalloc.md]]", "[[2026-08-15-vllm-rbln-v0.11.2a9-mega-cache.md]]", "[[2026-08-08-vllm-rbln-v0.11.2a8.md]]", "[[2026-08-04-vllm-rbln-v0.11.2a7.md]]", "[[2026-08-03-vllm-rbln-v0.11.2a5.md]]", "[[2026-08-01-vllm-rbln-v0.11.2a4-v0.11.1.md]]", "[[2026-07-30-vllm-rbln-v0.11.2a3.md]]", "[[2026-07-29-vllm-rbln-v0.11.2a2.md]]", "[[2026-07-28-vllm-rbln-v0.11.2a0-a1.md]]", "[[2026-07-24-vllm-rbln-v0.11.2.dev0.md]]", "[[2026-06-01-Rebellions-NPU-Update.md]]"]
 ---
 
 # 리벨리온 ATOM-Max NPU 및 vLLM-RBLN 최신 동향 (2026)
@@ -102,6 +102,7 @@ uv pip install "vllm-rbln==0.11.2a8" \
 - **vLLM 0.24 DP**: worker가 config의 DP device mapping을 읽음 ([#896](https://github.com/RBLN-SW/vllm-rbln/pull/896)). decode 그래프 static output ([#904](https://github.com/RBLN-SW/vllm-rbln/pull/904)). E2E 메트릭은 sampler 호출이 아니라 `execute_model` pass 단위 ([#899](https://github.com/RBLN-SW/vllm-rbln/pull/899)).
 - **deps**: `optimum-rbln==0.11.2a0` ([#890](https://github.com/RBLN-SW/vllm-rbln/pull/890)).
 - **stable post1**: Qwen3 MoE 레지스트리 ([#930](https://github.com/RBLN-SW/vllm-rbln/pull/930) / #916). 프리릴리즈 추적은 a9, 프로덕션 핀은 `0.11.1.post1`.
+- **SDK packaging mimalloc**: `rebel-compiler==0.11.1.post1`가 `v0.11.1` 휠에 묶여 자동 로드되던 mimalloc을 제거 — 간헐적 수치 불일치·NaN 완화 ([release note](https://docs.rbln.ai/latest/supports/release_note.html) SDK `2026.07.31.0`).
 - 설치: `uv pip install "vllm-rbln==0.11.2a9"` — a8과 동일하게 wheels index를 `vllm` 0.24.0에 맞춤. 상세 [[wiki/Models/Optimization-and-Serving/리벨리온-ATOM-Max-기반-EXAONE-4.5-최적화-가이드.md]]
 
 ```bash

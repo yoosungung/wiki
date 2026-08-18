@@ -3,9 +3,9 @@ id: sglang-gemma4-llm-serving-cluster-ops
 title: "SGLang Gemma4 llm-serving 클러스터 운영 (12b/31b)"
 status: canonical
 owner: km
-updated: "2026-08-16"
-last_updated: "2026-08-16"
-review_after: "2026-11-16"
+updated: "2026-08-18"
+last_updated: "2026-08-18"
+review_after: "2026-11-18"
 sources:
   - ticket:426
   - ticket:42
@@ -51,7 +51,8 @@ kubectl delete deployment sglang-gemma4-31b -n llm-serving
 - 기본 점유: `sglang` 계열 복제본이 노드 allocatable GPU를 **전량 Ready**로 쓰는 상태를 정상으로 본다(예: 2 GPU → 2/2).
 - 같은 클러스터의 **의도적 scale-0** Deploy(예: 프록시 풀)가 empty endpoints여도 GPU 서빙 Ready와 무관하면 사고로 올리지 않는다 — [[wiki/Engineering/Infrastructure-and-DevOps/K8s-Intentional-Scale-Zero-Empty-Endpoints.md]].
 - 노드 `DiskPressure`/`MemoryPressure`/`PIDPressure`=False를 GPU Ready와 함께 확인한다.
-- 보조 추론 서비스(예: TEI) Ready는 GPU 전량 점유와 병행 가능한 정상 신호로 본다(2026-08-09·2026-08-16 재확인: `bge-m3-tei` 1/1 + `sglang-gemma4-12b` 2/2).
+- 보조 추론 서비스(예: TEI) Ready는 GPU 전량 점유와 병행 가능한 정상 신호로 본다(2026-08-09·2026-08-16·2026-08-18 재확인: `bge-m3-tei` 1/1 + `sglang-gemma4-12b` 2/2; `/v1/models` 200).
+- **TEI health 포트 오탐**: ClusterIP health는 컨테이너/Service listen 포트(예: **:8080**)로 확인한다. 관례적 `:80` 타임아웃만으로 Down/Incident로 올리지 않는다.
 
 ## Context length 사다리 (12b / 1×4090)
 

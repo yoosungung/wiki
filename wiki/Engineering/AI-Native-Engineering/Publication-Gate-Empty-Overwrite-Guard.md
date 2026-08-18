@@ -3,9 +3,9 @@ id: publication-gate-empty-overwrite-guard
 title: "퍼블리시 게이트 + 빈 산출물 덮어쓰기 금지"
 status: canonical
 owner: km
-updated: "2026-08-17"
-last_updated: "2026-08-17"
-review_after: "2026-11-17"
+updated: "2026-08-18"
+last_updated: "2026-08-18"
+review_after: "2026-11-18"
 sources:
   - ticket:474
   - ticket:854
@@ -13,6 +13,7 @@ sources:
   - ticket:892
   - ticket:929
   - ticket:940
+  - ticket:966
   - schedule:publication-safety
   - schedule:issue-radar
   - ticket:167
@@ -60,10 +61,12 @@ python agent/publication_gate.py --base origin/main
 - **검색엔진 결과 URL은 allowlist 출처가 아니다** — 게이트 PASS 이후에도 검색 URL 출처는 공개 본문에서 제거한다.
 - **약한 중립(weak-neutral)**: 신원·SSoT가 부족한 stance는 hold만 하지 말고 **drop**. org/unknown·SSoT-없는 slug와 같은 축.
 - yaml↔wiki orphan 0을 유지하려면 stub yaml 추가 시 **최소 wiki stub도 같이 seed**. SSoT 카운트는 `yaml==wiki`로 맞춘다.
-- **게이트 PASS ≠ content-safe**: `/people/unknown`, org-as-person stance, 이슈 slug를 인물로 쓴 stance, 약한 중립(발언 미확인), 역할·신원 오인 stub는 추가 strip. people promote는 allowlisted 공식/프로필 URL(≥1)이 있을 때만; wiki-only·비허용 호스트는 부족. 애매한 기자·동명이인·역할 불일치·비인물(학교·부처 등)은 hold.
-- **동명이인 함정**: allowlist 호스트 URL이 **다른 사람**(같은 이름, 다른 직)이면 콘텐츠 안전 실패 — 그 URL을 promote에 붙이지 않는다.
-- **직원명단 미기재**: 성명이 직원명단/조직도에 없으면 `go.kr` 등 허용 호스트여도 승격 근거로 쓰지 않는다.
-- **people slug remap**: collapse/접두 규칙(`lee→i`, `park→bak`, `kim→gim`, `jung→jeong`) + `name_ko` 매칭으로 정규화한 뒤 stance·링크를 고친다(예: unknown 김기재 → `gimgijae`). **로마자 비정규 slug**도 같은 축 — 로마자만 보고 유지하지 말고 `name_ko`로 remap.
+- **게이트 PASS ≠ content-safe**: `/people/unknown`, org-as-person stance, 이슈 slug를 인물로 쓴 stance, 약한 중립(발언 미확인), 역할·신원 오인 stub는 추가 strip. people promote는 allowlisted 공식/프로필 URL(≥1)이 있을 때만; wiki-only·비허용 호스트·검색 URL·직원명단 미기재 go.kr는 부족. 애매한 기자·통신원·특파원·동명이인·역할 불일치·비인물(학교·부처 등)은 hold.
+- **stub→curated 승격 축**: allowlist URL이 **같은 사람·같은 직**을 가리킬 때만. 역할 라벨이 틀린 stub(예: 「위원장」인데 실제는 연구위원)는 역할을 정정한 뒤 승격하거나 hold.
+- **동명이인 함정**: allowlist 호스트 URL이 **다른 사람**(같은 이름, 다른 직/기관)이면 콘텐츠 안전 실패 — 그 URL을 promote에 붙이지 않는다. 기초의원·명단 URL만으로 승격하지 않는다.
+- **직원명단 미기재**: 성명이 직원명단/조직도에 없으면 `go.kr` 등 허용 호스트여도 승격 근거로 쓰지 않는다. 직위만 있고 이름이 없는 페이지도 동일.
+- **목표 미달 ≠ 강제 승격**: 잔여 stub가 목표 구간(예: 20–30) 아래여도 안전 출처가 없으면 부족 보고로 끝낸다. 정치 인물 본문은 org-wiki에 합성하지 않는다(후보 제품 vault 정본).
+- **people slug remap**: collapse/접두 규칙(`lee→i`, `park→bak`, `kim→gim`, `jung→jeong`) + `name_ko` 매칭으로 정규화한 뒤 stance·링크를 고친다(예: unknown 김기재 → `gimgijae`). **로마자 비정규 slug**도 같은 축 — 로마자만 보고 유지하지 말고 `name_ko`로 remap(예: `yuhyoshang`→`yu-hyo-sang`, `lee-man-hee`→`i-man-hui`). `pending` 같은 placeholder slug는 실명 slug로 remap하거나 drop.
 - **stance 링크는 yaml+wiki 동시 존재 필수**: 한쪽에만 있으면 orphan/깨진 링크. remap·drop 후 yaml↔wiki orphan 0을 재확인한다.
 - 공개 전 제거: placeholder/unknown·SSoT 없는 slug·불완전 신원 stub·기관을 people로 링크한 stance.
 - Pass D가 people YAML을 추가하면 **최소 wiki stub도 같이 seed**해 yaml↔wiki orphan 0을 유지한다. 약한 중립 줄을 drop해도 orphan 0을 깨지 않게 stub를 함께 맞춘다.
