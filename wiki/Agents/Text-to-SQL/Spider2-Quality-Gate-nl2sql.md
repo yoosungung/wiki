@@ -3,9 +3,9 @@ id: spider2-quality-gate-nl2sql
 title: "Spider2-Lite → nl2sql 품질 게이트 (스모크·preflight)"
 status: canonical
 owner: km
-updated: "2026-08-17"
-last_updated: "2026-08-17"
-review_after: "2026-11-17"
+updated: "2026-08-19"
+last_updated: "2026-08-19"
+review_after: "2026-11-19"
 sources:
   - ticket:428
   - ticket:391
@@ -198,9 +198,26 @@ OPIK_WORKSPACE: "default"
 
 Full EX를 스모크 hard와 섞지 않는다. pass_rate floor는 인간 결정 전까지 non-blocking.
 
-**2-instance agent EX ≠ Full EX.** `localA,localB` pass_rate=1.0 은 그 두 instance 증거일 뿐 전수 peek/mismatch를 증명하지 않는다. on-request `spider2-opik scoreboard` 는 주간 canary가 아니다(detach + `nf-progress`). CLI `scoreboard-*.json`에 `instance_id`가 없으면 Opik `experiment.get_items()`로 재구성한다. 스코어보드는 **tip live chat SSE** (metadata PVC SHA)이지 러너 checkout/제품 merge SHA가 아니다.
+**2-instance agent EX ≠ Full EX.** `localA,localB` pass_rate=1.0 은 그 두 instance 증거일 뿐 전수 peek/mismatch를 증명하지 않는다. on-request `spider2-opik scoreboard` 는 주간 canary가 아니다(detach + `nf-progress`). CLI `scoreboard-*.json`에 `instance_id`가 없으면 Opik `experiment.get_items()`로 재구성한다. 스코어보드는 **tip live chat SSE** (metadata PVC SHA)이지 러너 checkout/제품 merge SHA가 아니다. live tip `meta_ref`와 `tenant-repo-sync` checkout SHA가 어긋나도 정상 — 채점 축은 tip chat이다.
 
 공유 Postgres가 Full EX 중 연결을 끊으면 cgroup limit을 먼저 본다 — [[wiki/Engineering/Infrastructure-and-DevOps/Shared-Postgres-Cgroup-Limit-vs-Statement-Timeout.md]].
+
+### 7.3.1 Full EX SSE IncompleteRead · task_threads
+
+Opik evaluate 기본 `task_threads=16` + urllib SSE `resp.read()`가 `http.client.IncompleteRead`를 내면, `chat_predict_sql`에서 미포획 시 **스코어보드 전체가 abort**되어 report JSON/`feedback_scores`가 없다. 계약: 네트워크/스트림 오류 → `output=""` 후 루프 계속(§4.1 미적중과 동일).
+
+```bash
+# on-request Full EX 개념
+cd spider2-eval && \
+  SPIDER2_AGENT_BASE_URL=http://<backend>.svc.cluster.local:8080 \
+  SPIDER2_SCOREBOARD_TASK_THREADS=2 \
+  uv run spider2-opik scoreboard
+# IncompleteRead/HTTPException → output="" continue; detach + tqdm 로그를 heartbeat로
+# nf-progress.json 이 evaluate 끝날 때까지 done=0 이어도 abort로 보지 않음
+```
+
+- 완화: `IncompleteRead`/`HTTPException` catch + `SPIDER2_SCOREBOARD_TASK_THREADS=2`(또는 낮은 동시성).
+- `.tmp-spider2` 심볼릭 링크는 §4.3을 먼저 맞춘다.
 
 
 

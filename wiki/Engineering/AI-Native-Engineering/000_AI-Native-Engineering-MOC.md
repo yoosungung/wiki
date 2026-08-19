@@ -25,6 +25,7 @@
 - [[wiki/Engineering/AI-Native-Engineering/Devin-OpenHands-Plandex-Update-2026-04-09.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Graphify-Codebase-Knowledge-Graph.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Playwright-Frontend-UI-Smoke-Pattern.md]]
+- [[wiki/Engineering/AI-Native-Engineering/List-Api-Corrupt-Payload-Head-Error.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Parent-Done-Requires-Closed-Subtasks.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Tenant-Quality-Yaml-Gate-Skip-Pattern.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Quality-Yaml-Clean-Code-CI-Align.md]]

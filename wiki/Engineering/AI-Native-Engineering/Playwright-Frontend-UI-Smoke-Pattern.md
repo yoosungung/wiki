@@ -3,8 +3,8 @@ id: playwright-frontend-ui-smoke-pattern
 title: "Playwright 프론트엔드 UI 스모크 패턴 (백엔드 없이)"
 status: canonical
 owner: km
-updated: "2026-08-10"
-last_updated: "2026-08-10"
+updated: "2026-08-19"
+last_updated: "2026-08-19"
 review_after: "2026-10-31"
 sources:
   - ticket:51
@@ -55,6 +55,7 @@ Chromium 설치·다운로드가 불가하면 **동일 템플릿의 HTMX/SSR par
 ## 적용 팁
 
 - frontend-only 변경이면 e2e 축만 게이트하고, 미터치 백엔드 CI red는 **별 축**으로 다룬다.
+- `playwright.config`가 `127.0.0.1:5173` + `webServer`로 고정된 Vite+route-mock 스위트면 **클러스터 Ingress E2E를 발명하지 않는다**. `E2E_BASE_URL` 배선 전까지 local mock이 정본이다.
 - 제품 예시(nl2sql): 동일 패턴을 `frontend/e2e`에 적용. 팩토리 맥락: [[wiki/Engineering/AI-Native-Engineering/Agentic-Software-Factory.md]].
 
 

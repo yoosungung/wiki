@@ -3,9 +3,9 @@ id: tenant-cd-registry-missing-workflow
 title: "tenant_cd 레지스트리 workflow 부재 시 대체 CD 금지"
 status: canonical
 owner: km
-updated: "2026-08-17"
-last_updated: "2026-08-17"
-review_after: "2026-11-17"
+updated: "2026-08-19"
+last_updated: "2026-08-19"
+review_after: "2026-11-19"
 sources:
   - ticket:918
   - ticket:920
@@ -37,8 +37,9 @@ gh workflow run deploy.yml --repo <owner/repo> -f image_tag=test-<sha>
 
 1. `gh workflow run <registry.workflow>` 실패(파일 없음) → **대체 workflow를 발명하지 않음**.
 2. tip 이미지 빌드/오버레이 문서가 있어도 registry `workflow`·`image_input`과 키가 다르면 **동일 CD로 취급하지 않음**.
-3. 해소: (a) 제품에 registry와 맞는 `workflow_dispatch` 추가, 또는 (b) registry를 실제 존재하는 워크플로/input으로 정정 — 둘 다 인간/플랫폼 결정.
-4. Deploying Test는 계약 정합 전까지 Blocked 유지. dual-loop `test_*`는 계약 수정 후에만.
+3. 해소: (a) 제품에 registry와 맞는 `workflow_dispatch` 추가, 또는 (b) registry를 실제 존재하는 워크플로/input으로 정정, 또는 (c) 인간이 **tip-path**를 registry 옵션으로 명시 — 셋 다 인간/플랫폼 결정. 에이전트가 (c)를 임의로 고르지 않는다.
+4. (c) tip-path가 확정되면 Deploying Test 증거는 Kaniko/`build-ghcr` + tip_roll + smoke이며, `prod.mode=package_manual`이면 Deploying Prod를 열지 않는다 — [[wiki/Engineering/Infrastructure-and-DevOps/Test-Overlay-vs-Release-Package-Deploy-Paths.md]].
+5. Deploying Test는 계약 정합 전까지 Blocked 유지. dual-loop `test_*`는 계약 수정 후에만.
 
 ## 적용 체크
 

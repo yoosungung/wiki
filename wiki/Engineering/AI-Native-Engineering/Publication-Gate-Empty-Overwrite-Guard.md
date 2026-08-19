@@ -3,9 +3,9 @@ id: publication-gate-empty-overwrite-guard
 title: "퍼블리시 게이트 + 빈 산출물 덮어쓰기 금지"
 status: canonical
 owner: km
-updated: "2026-08-18"
-last_updated: "2026-08-18"
-review_after: "2026-11-18"
+updated: "2026-08-19"
+last_updated: "2026-08-19"
+review_after: "2026-11-19"
 sources:
   - ticket:474
   - ticket:854
@@ -14,6 +14,8 @@ sources:
   - ticket:929
   - ticket:940
   - ticket:966
+  - ticket:1007
+  - ticket:1030
   - schedule:publication-safety
   - schedule:issue-radar
   - ticket:167
@@ -22,6 +24,8 @@ sources:
   - ticket:357
   - ticket:367
   - ticket:368
+  - schedule:publication-safety-0300-kst
+
 tags: ["Engineering", "AI-Native", "Publish", "Safety", "Git"]
 type: "wiki"
 ---
@@ -72,8 +76,10 @@ python agent/publication_gate.py --base origin/main
 - Pass D가 people YAML을 추가하면 **최소 wiki stub도 같이 seed**해 yaml↔wiki orphan 0을 유지한다. 약한 중립 줄을 drop해도 orphan 0을 깨지 않게 stub를 함께 맞춘다.
 - `http.extraheader` + remote에 박힌 토큰이 401이면, env 토큰을 URL에 넣은 **한 번의 push**로 충분하다 — [[wiki/Engineering/Infrastructure-and-DevOps/GitHub-Fine-Grained-PAT-Contents-Write-Probe.md]].
 - meta/stub+stance만 갱신하는 잡에서 사이트 빌드 바이너리(예: Hugo)가 없으면 **빌드를 스킵**해도 된다 — 게이트·pytest가 정본이다.
-- issue-radar → today 발행: empty-overwrite guard 통과 후에만 공개 큐(`today.yaml` 등)를 커밋·push하고, **승인 티켓은 만들지 않는다**. 캐시 타임스탬프를 남긴다.
+- issue-radar → today 발행: empty-overwrite guard 통과 후에만 공개 큐(`today.yaml` 등)를 커밋·push하고, **승인 티켓은 만들지 않는다**. 커밋 범위는 공개 큐 파일만(캐시/리포트 MD 제외). 스케줄 보고는 제품 프로젝트 Done 티켓으로만 남긴다.
 - **공개 today 큐는 중립만**: 내부 승인 상태·스케줄/도구명을 노출하지 않는다. 후보·이슈 큐 페이로드만 게시한다.
+- publication-safety 잡은 push 직전·직후 `publication_gate.py --base origin/main` PASS를 남기고, Pass 스택은 preserve 브랜치 또는 detach 경로로 다룬다(§분기·스택 운영).
+
 
 ## 🔗 관련 문서
 

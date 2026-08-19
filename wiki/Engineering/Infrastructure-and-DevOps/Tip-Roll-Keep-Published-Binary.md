@@ -3,9 +3,9 @@ id: tip-roll-keep-published-binary
 title: "Tip 롤에서 퍼블리시 바이너리 핀을 유지한다"
 status: canonical
 owner: km
-updated: "2026-08-14"
-last_updated: "2026-08-14"
-review_after: "2026-11-14"
+updated: "2026-08-19"
+last_updated: "2026-08-19"
+review_after: "2026-11-19"
 sources:
   - ticket:590
   - ticket:796
@@ -28,12 +28,13 @@ type: "wiki"
 
 ```bash
 # 개념: tip은 이미지 태그만. 바이너리 핀은 overlay git 값 유지
-kubectl set image deploy/<app> app=ghcr.io/<org>/<img>:test-<sha>
+# set image 대상은 **container 이름**(예: backend) — Deployment 이름과 혼동 금지
+kubectl set image deploy/<deploy> <container>=ghcr.io/<org>/<img>:test-<sha>
 # mcp-binary / patch-*-binary.yaml 은 v* 핀 그대로
 # 복구: overlay 재적용 (git pin이 이미 vX.Y.Z면 URL만 되돌림)
 ```
 
-backend-only 델타면 sidecar/MCP 이미지·바이너리를 같이 돌리지 않는다. `apply -k` 전량은 live tip 태그를 overlay 기본값으로 덮을 수 있다.
+backend-only 델타면 sidecar/MCP 이미지·바이너리를 같이 돌리지 않는다(퍼블리시 바이너리 URL을 tip으로 rewrite하면 Init:Error). `apply -k` 전량은 live tip 태그를 overlay 기본값으로 덮을 수 있다. Recreate 롤아웃 중 구 Pod terminating이면 ClusterIP 스모크가 잠깐 실패할 수 있으니 podIP/`/healthz`로 재시도한다.
 
 카탈로그 PUT만으로 EX가 안 바뀌는 수정(식별자 인용 등)은 **퍼블리시된 MCP 바이너리**가 실려야 한다. live test mcp는 published semver를 쓰고 `test-*`를 핀하지 않는다 — [[wiki/Agents/Text-to-SQL/RefSql-Unparser-Identifier-Quoting.md]].
 

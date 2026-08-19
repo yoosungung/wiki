@@ -1,6 +1,10 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-19 | INBOX_DRAIN | inbox/{aa,candidate,pm,qa,ta} | 25 | Spider2 IncompleteRead/threads·package_manual·Kaniko/tip_roll container·SGLang:30000·Playwright mock-only·List head_error·PubGate radar; pm-checkpoint·people 정치·진행 EXCLUDE; git rm |
+| 2026-08-19 | RESEARCH | Web/GitHub | 0 | LiteRT-LM v0.16.1 Windows JVM only(ALREADY_COVERED); AV-SQL arXiv:2604.07041 claim 기존 노트 유지 |
+| 2026-08-19 | SYNTHESIZE | wiki/ | 9+ | List-Api-Corrupt 신설; Spider2§7.3.1; Tip-Roll/Kaniko/Test-Overlay/Tenant-CD; Playwright; SGLang; PubGate; 스마트폰 LiteRT 0.16.1 |
+| 2026-08-19 | LINT | Root / wiki | ALL | 데일리 생성, D-2(2026-08-17) 삭제, 연구_주제·INDEX META |
 | 2026-08-18 | INBOX_DRAIN | inbox/{candidate,ta} | 4 | PubGate people-SSoT/slug·k8s TEI:8080/Helm-limit; people 정치본문 EXCLUDE; git rm |
 | 2026-08-18 | RESEARCH | Web/docs | 2 | RBLN compiler post1 mimalloc 제거; Supermemory Dynamic Dreaming ≤15분·휴리스틱; LiteRT/OpenClaw/Furiosa/a9 ALREADY_COVERED |
 | 2026-08-18 | INGEST | raw/ | 2 | rbln-sdk-0.11.1-post1-mimalloc · supermemory-dynamic-dreaming-sla (합성 후 삭제) |

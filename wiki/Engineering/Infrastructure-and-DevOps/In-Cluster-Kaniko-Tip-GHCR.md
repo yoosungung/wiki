@@ -3,9 +3,9 @@ id: in-cluster-kaniko-tip-ghcr
 title: "In-cluster Kaniko tip → GHCR (vs Actions build-ghcr)"
 status: canonical
 owner: km
-updated: "2026-08-13"
-last_updated: "2026-08-13"
-review_after: "2026-11-12"
+updated: "2026-08-19"
+last_updated: "2026-08-19"
+review_after: "2026-11-19"
 sources:
   - ticket:551
   - ticket:552
@@ -47,7 +47,7 @@ Prod/Apple Silicon용 backend `amd64+arm64`는 **opt-in** (`backend_multi_arch=t
 
 ## SHA ref 체크아웃
 
-스톡 스크립트가 `git clone --branch <ref>`이면 **커밋 SHA**는 실패한다. one-shot Job은 `git fetch origin <sha> && git checkout <sha>`. backend-only 델타면 MCP Kaniko Job을 생략하고 퍼블리시 바이너리 핀은 유지 — [[wiki/Engineering/Infrastructure-and-DevOps/Tip-Roll-Keep-Published-Binary.md]].
+스톡 스크립트가 `git clone --branch <ref>`이면 **커밋 SHA를 `--branch`에 넣으면 Init:Error**다. tip Job의 git-ref는 **브랜치명**(예: `main`)을 쓰고, 태그만 `test-<short_sha>`로 맞춘다. one-shot이 특정 커밋을 강제해야 하면 `git fetch origin <sha> && git checkout <sha>`. backend-only 델타면 MCP Kaniko Job을 생략하고 퍼블리시 바이너리 핀은 유지 — [[wiki/Engineering/Infrastructure-and-DevOps/Tip-Roll-Keep-Published-Binary.md]].
 
 ## AA 스코프
 
