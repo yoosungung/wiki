@@ -1,10 +1,11 @@
 ---
 id: inbox-candidate-2026-08-21-publication-safety-03kst
 agent: candidate
-ticket_id: pending
+ticket_id: 1069
 updated: 2026-08-21
 status: inbox
 sources:
+  - ticket:1069
   - schedule:publication-safety-0300-kst
   - wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md
 ---
