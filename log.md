@@ -1,6 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-20 | INBOX_DRAIN | inbox/{candidate,nl2sql,pm,qa,ta} | 13 | Intent-Pass·Persona-Bundle·L0-Goals 신설; Single-Master/Grain/refSql/SCORE_CAP/Actions-budget/PVC/Spider2§7.4; people·PubGate·pm-checkpoint·티켓진행 EXCLUDE; git rm |
+| 2026-08-20 | RESEARCH | Web/GitHub | 2 | vllm-rbln v0.11.2a10/a11; Furiosa-LLM docs 2026.4.0b13; LiteRT v0.16.1 ALREADY_COVERED |
+| 2026-08-20 | INGEST | raw/ | 2 | vllm-rbln-a10-a11 · furiosa-b13 (합성 후 삭제) |
+| 2026-08-20 | SYNTHESIZE | wiki/ | 12+ | Intent-Pass/Persona-Bundle/L0-Goals; Text-to-SQL×5; Actions-budget; PVC; 리벨리온 동향·EXAONE§4.16; 프리오사§7 b13 |
+| 2026-08-20 | LINT | Root / wiki | ALL | 데일리 생성, D-2(2026-08-18) 삭제, 연구_주제·INDEX META |
 | 2026-08-19 | INBOX_DRAIN | inbox/{aa,candidate,pm,qa,ta} | 25 | Spider2 IncompleteRead/threads·package_manual·Kaniko/tip_roll container·SGLang:30000·Playwright mock-only·List head_error·PubGate radar; pm-checkpoint·people 정치·진행 EXCLUDE; git rm |
 | 2026-08-19 | RESEARCH | Web/GitHub | 0 | LiteRT-LM v0.16.1 Windows JVM only(ALREADY_COVERED); AV-SQL arXiv:2604.07041 claim 기존 노트 유지 |
 | 2026-08-19 | SYNTHESIZE | wiki/ | 9+ | List-Api-Corrupt 신설; Spider2§7.3.1; Tip-Roll/Kaniko/Test-Overlay/Tenant-CD; Playwright; SGLang; PubGate; 스마트폰 LiteRT 0.16.1 |

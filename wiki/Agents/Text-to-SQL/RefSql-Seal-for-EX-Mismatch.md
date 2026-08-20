@@ -3,9 +3,9 @@ id: refsql-seal-for-ex-mismatch
 title: "EX mismatch는 refSql seal로 고정한다"
 status: canonical
 owner: km
-updated: "2026-08-14"
-last_updated: "2026-08-14"
-review_after: "2026-11-14"
+updated: "2026-08-20"
+last_updated: "2026-08-20"
+review_after: "2026-11-20"
 sources:
   - ticket:689
   - ticket:699
@@ -16,6 +16,8 @@ sources:
   - ticket:782
   - ticket:783
   - ticket:789
+  - ticket:1051
+  - ticket:1048
 tags: ["Agents", "Text-to-SQL", "MDL", "refSql", "Evaluation"]
 type: "wiki"
 ---
@@ -35,6 +37,8 @@ type: "wiki"
 | 볼링 SR vs 배팅 SR | 같은 `strike_rate` 이름이 다른 분모(legal balls vs batsman_scored) | 볼링 카드는 legal balls(와이드/노볼 제외), 0-wicket 행 포함 |
 | 검색 1위인데 SELECT가 카탈로그 | describe가 topping/cast grain을 고르면 seal을 안 탐 | vocab을 seal에만 두고 베이스 description에서 격리 |
 | 모델명이 warehouse FROM에 누출 | `relation "…_event" does not exist` | 물리 테이블명만 FROM. MDL 이름은 검색 키 |
+| Dec-31 임기/리텐션 | `date_dim` span이 1999에서 끊김 | `(start_year+N)\|\|'-12-31' BETWEEN term_start AND term_end` — year-20 dim row 요구 금지 |
+| 가상 warehouse 관계 invent | `city_legislation_city` 같은 비실재 관계 | 물리 `cities` + `cities_countries` 등 실제 테이블만 |
 
 ## 적용
 

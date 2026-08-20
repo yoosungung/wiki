@@ -3,20 +3,22 @@ id: metadata-git-pvc-resync
 title: "메타데이터 Git PVC 재동기화 (브랜치·sparse·지연)"
 status: canonical
 owner: km
-updated: "2026-08-14"
-last_updated: "2026-08-14"
-review_after: "2026-11-14"
+updated: "2026-08-20"
+last_updated: "2026-08-20"
+review_after: "2026-11-20"
 sources:
   - ticket:689
   - ticket:752
   - ticket:753
+  - ticket:1047
+  - ticket:1048
 tags: ["Infrastructure", "DevOps", "Git", "Kubernetes", "PVC", "MCP"]
 type: "wiki"
 ---
 
 # 메타데이터 Git PVC 재동기화 (브랜치·sparse·지연)
 
-앱이 메타데이터를 **in-cluster git-http + PVC worktree**에 두면, push 성공 ≠ 검색/카탈로그 반영이다. 에이전트 EX·search는 **MCP(또는 catalog sidecar) tip SHA**를 본다.
+앱이 메타데이터를 **in-cluster git-http + PVC worktree**에 두면, push 성공 ≠ 검색/카탈로그 반영이다. 에이전트 EX·search는 **MCP(또는 catalog sidecar) tip SHA**를 본다. **제품 git 픽스처 ≠ live catalog** — tip EX는 metadata git seed + `/admin/sync` `status=ok`가 필요하다.
 
 ## 증상 → 원인
 
@@ -41,7 +43,7 @@ kubectl scale deploy/<backend> <mcp> --replicas=1
 
 ## 제품 SHA ≠ 메타데이터 SHA
 
-제품 레포 merge SHA로 PVC를 다시 클론하지 않는다. 카탈로그는 **metadata git** `origin/main` 이다. MCP `/ready` HEAD가 뒤처져도 chat이 backend ref를 lazy-fetch할 수 있다 — `/ready` 지연 ≠ search 미반영 증거. `/admin/sync` `status=ok` 와 MCP PVC SHA가 `refs/heads/main` 과 같은지 본다.
+제품 레포 merge SHA로 PVC를 다시 클론하지 않는다. 카탈로그는 **metadata git** `origin/main` 이다. MCP `/ready` HEAD가 뒤처져도 chat이 backend `meta_ref`를 lazy-fetch할 수 있다 — `/ready` 지연 ≠ search 미반영 증거. 라이브 증거는 `/admin/sync` `status=ok` + chat `meta_ref`(및 MCP PVC SHA ↔ `refs/heads/main`)다.
 
 `test-*` 이미지 롤과 init 바이너리 URL을 섞지 않는다 — [[wiki/Engineering/Infrastructure-and-DevOps/Tip-Roll-Keep-Published-Binary.md]].
 

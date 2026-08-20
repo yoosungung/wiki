@@ -3,9 +3,9 @@ title: "리벨리온 ATOM-Max NPU 및 vLLM-RBLN 최신 동향 (2026)"
 tags: ["Models", "Optimization", "Serving", "NPU", "Rebellions", "vLLM-RBLN", "EXAONE"]
 type: "wiki"
 status: "published"
-last_updated: "2026-08-18"
-updated: "2026-08-18"
-related_raw: ["[[2026-08-18-rbln-sdk-0.11.1-post1-mimalloc.md]]", "[[2026-08-15-vllm-rbln-v0.11.2a9-mega-cache.md]]", "[[2026-08-08-vllm-rbln-v0.11.2a8.md]]", "[[2026-08-04-vllm-rbln-v0.11.2a7.md]]", "[[2026-08-03-vllm-rbln-v0.11.2a5.md]]", "[[2026-08-01-vllm-rbln-v0.11.2a4-v0.11.1.md]]", "[[2026-07-30-vllm-rbln-v0.11.2a3.md]]", "[[2026-07-29-vllm-rbln-v0.11.2a2.md]]", "[[2026-07-28-vllm-rbln-v0.11.2a0-a1.md]]", "[[2026-07-24-vllm-rbln-v0.11.2.dev0.md]]", "[[2026-06-01-Rebellions-NPU-Update.md]]"]
+last_updated: "2026-08-20"
+updated: "2026-08-20"
+related_raw: ["[[2026-08-20-vllm-rbln-v0.11.2a10-a11.md]]", "[[2026-08-18-rbln-sdk-0.11.1-post1-mimalloc.md]]", "[[2026-08-15-vllm-rbln-v0.11.2a9-mega-cache.md]]", "[[2026-08-08-vllm-rbln-v0.11.2a8.md]]", "[[2026-08-04-vllm-rbln-v0.11.2a7.md]]", "[[2026-08-03-vllm-rbln-v0.11.2a5.md]]", "[[2026-08-01-vllm-rbln-v0.11.2a4-v0.11.1.md]]", "[[2026-07-30-vllm-rbln-v0.11.2a3.md]]", "[[2026-07-29-vllm-rbln-v0.11.2a2.md]]", "[[2026-07-28-vllm-rbln-v0.11.2a0-a1.md]]", "[[2026-07-24-vllm-rbln-v0.11.2.dev0.md]]", "[[2026-06-01-Rebellions-NPU-Update.md]]"]
 ---
 
 # 리벨리온 ATOM-Max NPU 및 vLLM-RBLN 최신 동향 (2026)
@@ -111,6 +111,20 @@ uv pip install "vllm-rbln==0.11.2a9" \
   --torch-backend cpu
 # stable line (Qwen3 MoE):
 # uv pip install "vllm-rbln==0.11.1.post1"
+```
+
+### v0.11.2a10 · v0.11.2a11 (2026-08-19)
+- **mega-cache 키 완성**: `VLLM_RBLN_NUM_HIDDEN_LAYERS`([#917](https://github.com/RBLN-SW/vllm-rbln/pull/917)) + warm-up graph set([#926](https://github.com/RBLN-SW/vllm-rbln/pull/926))를 번들 키에 포함 — a9 디버그 레이어 컷의 잘못된 캐시 히트 방지.
+- **Qwen3 MoE 레지스트리** 프리릴리즈 경로([#916](https://github.com/RBLN-SW/vllm-rbln/pull/916)); **Qwen3-Reranker** score API([#846](https://github.com/RBLN-SW/vllm-rbln/pull/846)) + chat template 계약([#854](https://github.com/RBLN-SW/vllm-rbln/pull/854)).
+- **PP**: refactored scheduler/runner에 pipeline parallelism([#900](https://github.com/RBLN-SW/vllm-rbln/pull/900)); nixl KV handshake `(pp_rank, tp_rank)`([#924](https://github.com/RBLN-SW/vllm-rbln/pull/924)).
+- **sampler**: temperature를 compiled top-k/top-p 그래프 안에 적용([#921](https://github.com/RBLN-SW/vllm-rbln/pull/921)); sampled ids int32([#919](https://github.com/RBLN-SW/vllm-rbln/pull/919)); logits-processor dtype=model dtype([#927](https://github.com/RBLN-SW/vllm-rbln/pull/927)).
+- **deps**: `optimum-rbln==0.11.2a1`([#925](https://github.com/RBLN-SW/vllm-rbln/pull/925)). custom-op 정의는 vllm-rbln 소유분 drop([#908](https://github.com/RBLN-SW/vllm-rbln/pull/908)).
+- 설치: `uv pip install "vllm-rbln==0.11.2a11"` — wheels index는 `vllm` 0.24.0 핀 유지. 상세 [[wiki/Models/Optimization-and-Serving/리벨리온-ATOM-Max-기반-EXAONE-4.5-최적화-가이드.md]]
+
+```bash
+uv pip install "vllm-rbln==0.11.2a11" \
+  --extra-index-url https://wheels.vllm.ai/0.24.0/cpu \
+  --torch-backend cpu
 ```
 
 ## 3. 엔터프라이즈 및 클라우드 생태계

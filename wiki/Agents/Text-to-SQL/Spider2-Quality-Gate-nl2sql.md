@@ -3,8 +3,8 @@ id: spider2-quality-gate-nl2sql
 title: "Spider2-Lite → nl2sql 품질 게이트 (스모크·preflight)"
 status: canonical
 owner: km
-updated: "2026-08-19"
-last_updated: "2026-08-19"
+updated: "2026-08-20"
+last_updated: "2026-08-20"
 review_after: "2026-11-19"
 sources:
   - ticket:428
@@ -237,6 +237,7 @@ cd spider2-eval && \
 10. **카탈로그 tip 갭**: PG에 스키마가 있어도 tip `*.model.json`이 없으면 `search_tables` 0 → empty_sql. 파일이 있어도 **영문 질문 vocab이 한국어-only description에 없으면** 같은 증상. vocab Boy Scout + metadata git push 후 MCP PVC SHA 확인 — [[wiki/Engineering/Infrastructure-and-DevOps/Metadata-Git-PVC-Resync.md]].
 11. **부분 seed**: `pit_stops=0`인데 `lap_times`만 채워진 상태. SQLite PK NULL이 PG NOT NULL에 막히면 surgical UPDATE 후 COPY. 소스 zip은 앱 PVC에 있을 수 있음(ephemeral checkout과 혼동 금지).
 12. **live 판정**: `/readyz`가 SPA HTML을 주면 tip-live가 아님. `/api/health` + chat SSE. 스코어보드 JSON에 `instance_id`가 없으면 Opik item에서 재구성.
+13. **잔여 클러스터 우선순위**: Full EX residual이 empty_sql / sql_exec / result_mismatch로 갈리면 각각 tip vocab·grain/`refSql`·seal 축으로 나눈다 — [[wiki/Agents/Text-to-SQL/Semantic-View-Single-Master.md]], [[wiki/Agents/Text-to-SQL/RefSql-Seal-for-EX-Mismatch.md]]. 수치 스냅샷은 위키에 두지 않는다.
 
 UI Playwright는 LLM/SQL EX를 대체하지 않는다 — [[wiki/Engineering/AI-Native-Engineering/Playwright-Frontend-UI-Smoke-Pattern.md]].
 
