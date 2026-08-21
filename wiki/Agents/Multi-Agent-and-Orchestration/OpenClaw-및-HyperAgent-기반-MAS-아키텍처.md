@@ -55,6 +55,8 @@ HyperAgent는 단순한 대행을 넘어 에이전트 스스로의 성능을 개
         - **Guardian Pattern**: 다층 검증 아키텍처로, OpenAI Codex의 가디언 리뷰와 연동하여 에이전트의 실행 권한을 동적으로 제어.
         - **Review Packet**: 정책 범위를 벗어난 명령 발생 시, 명령/인자/환경 정보를 포함한 '리뷰 패킷'을 생성하여 Auto-Reviewer 모델에 위임.
         - **Risk Scoring**: 0-100 scale의 실시간 리스크 점수화. 저위험 명령은 자동 승인하고 임계값을 넘는 고위험 작업만 인간에게 라우팅.
+        - **`tools.exec.mode` (2026-08-22)**: `deny|allowlist|ask|auto|full`로 정규화. `auto`는 Guardian/native auto-review와 동일 축 — 상세 [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md]] §2.15 Task Flow.
+- **OpenClaw Task Flow (2026-08-22)**: background task 위 내구성 멀티스텝(managed/mirrored). CLI `openclaw tasks flow list|show|cancel`. 정본 동일 §2.15.
 - **Zero-Trust Security**: 에이전트 간 모든 데이터 핸드오프에 디지털 서명과 감사를 적용하는 아키텍처가 표준으로 자리 잡음.
 - **God Model의 종말**: 단일 거대 모델 대신 **Supervisor-Worker** 구조의 MAS 선호.
 - **상호운용성 표준**: MCP(Model Context Protocol) 및 A2A(Agent-to-Agent) 프로토콜을 통한 벤더 간 에이전트 협업.
