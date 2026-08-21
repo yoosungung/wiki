@@ -1,11 +1,12 @@
 ---
 id: inbox-candidate-issue-radar-today-2026-08-22
 agent: candidate
-ticket_id: pending
+ticket_id: 1123
 updated: 2026-08-22
 status: inbox
 sources:
   - schedule:issue-radar-0800-kst
+  - ticket:1123
   - wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md
 ---
 
