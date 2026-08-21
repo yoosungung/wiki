@@ -3,9 +3,9 @@ title: "리벨리온 ATOM-Max NPU 및 vLLM-RBLN 최신 동향 (2026)"
 tags: ["Models", "Optimization", "Serving", "NPU", "Rebellions", "vLLM-RBLN", "EXAONE"]
 type: "wiki"
 status: "published"
-last_updated: "2026-08-20"
-updated: "2026-08-20"
-related_raw: ["[[2026-08-20-vllm-rbln-v0.11.2a10-a11.md]]", "[[2026-08-18-rbln-sdk-0.11.1-post1-mimalloc.md]]", "[[2026-08-15-vllm-rbln-v0.11.2a9-mega-cache.md]]", "[[2026-08-08-vllm-rbln-v0.11.2a8.md]]", "[[2026-08-04-vllm-rbln-v0.11.2a7.md]]", "[[2026-08-03-vllm-rbln-v0.11.2a5.md]]", "[[2026-08-01-vllm-rbln-v0.11.2a4-v0.11.1.md]]", "[[2026-07-30-vllm-rbln-v0.11.2a3.md]]", "[[2026-07-29-vllm-rbln-v0.11.2a2.md]]", "[[2026-07-28-vllm-rbln-v0.11.2a0-a1.md]]", "[[2026-07-24-vllm-rbln-v0.11.2.dev0.md]]", "[[2026-06-01-Rebellions-NPU-Update.md]]"]
+last_updated: "2026-08-22"
+updated: "2026-08-22"
+related_raw: ["[[2026-08-22-vllm-rbln-v0.11.3.dev0.md]]", "[[2026-08-20-vllm-rbln-v0.11.2a10-a11.md]]", "[[2026-08-18-rbln-sdk-0.11.1-post1-mimalloc.md]]", "[[2026-08-15-vllm-rbln-v0.11.2a9-mega-cache.md]]", "[[2026-08-08-vllm-rbln-v0.11.2a8.md]]", "[[2026-08-04-vllm-rbln-v0.11.2a7.md]]", "[[2026-08-03-vllm-rbln-v0.11.2a5.md]]", "[[2026-08-01-vllm-rbln-v0.11.2a4-v0.11.1.md]]", "[[2026-07-30-vllm-rbln-v0.11.2a3.md]]", "[[2026-07-29-vllm-rbln-v0.11.2a2.md]]", "[[2026-07-28-vllm-rbln-v0.11.2a0-a1.md]]", "[[2026-07-24-vllm-rbln-v0.11.2.dev0.md]]", "[[2026-06-01-Rebellions-NPU-Update.md]]"]
 ---
 
 # 리벨리온 ATOM-Max NPU 및 vLLM-RBLN 최신 동향 (2026)
@@ -123,6 +123,18 @@ uv pip install "vllm-rbln==0.11.2a9" \
 
 ```bash
 uv pip install "vllm-rbln==0.11.2a11" \
+  --extra-index-url https://wheels.vllm.ai/0.24.0/cpu \
+  --torch-backend cpu
+```
+
+### v0.11.3.dev0 (2026-08-21)
+- **NIXL PP KV transfer**: prefill/decode KV-cache 전송에 pipeline parallelism([#901](https://github.com/RBLN-SW/vllm-rbln/pull/901)).
+- **EAGLE drafting** overhead 감소([#945](https://github.com/RBLN-SW/vllm-rbln/pull/945)); **chiplet별 KV available memory**([#870](https://github.com/RBLN-SW/vllm-rbln/pull/870)).
+- **안정화**: DP warm-up 끝 rendezvous([#955](https://github.com/RBLN-SW/vllm-rbln/pull/955)); MoE replicated shared expert를 TP `all_reduce` 밖([#960](https://github.com/RBLN-SW/vllm-rbln/pull/960)); `logprob_token_ids` 준수([#879](https://github.com/RBLN-SW/vllm-rbln/pull/879)); forked weight-loader override 제거([#947](https://github.com/RBLN-SW/vllm-rbln/pull/947)).
+- 설치: `uv pip install "vllm-rbln==0.11.3.dev0"` — wheels index `vllm` 0.24.0 유지. stable 핀은 `0.11.1.post1`. 상세 [[wiki/Models/Optimization-and-Serving/리벨리온-ATOM-Max-기반-EXAONE-4.5-최적화-가이드.md]]
+
+```bash
+uv pip install "vllm-rbln==0.11.3.dev0" \
   --extra-index-url https://wheels.vllm.ai/0.24.0/cpu \
   --torch-backend cpu
 ```

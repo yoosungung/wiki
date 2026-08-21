@@ -1,6 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-22 | INBOX_DRAIN | inbox/{candidate,ta} | 4 | people·radar·pub-safety 스케줄/진행 EXCLUDE; GH open=0 skip+MCP fallback ALREADY_COVERED(PubGate/GH-skip); git rm |
+| 2026-08-22 | RESEARCH | Web/GitHub | 2 | vllm-rbln v0.11.3.dev0; OpenClaw Task Flow docs + tools.exec.mode; LiteRT v0.16.1·Furiosa b13 ALREADY_COVERED |
+| 2026-08-22 | INGEST | raw/ | 2 | vllm-rbln-0.11.3.dev0 · openclaw-task-flow (합성 후 삭제) |
+| 2026-08-22 | SYNTHESIZE | wiki/ | 3+ | EXAONE§4.17·동향.dev0; MAS§2.15 Task Flow/exec.mode |
+| 2026-08-22 | LINT | Root / wiki | ALL | 데일리 생성, D-2(2026-08-19·20) 삭제, 연구_주제·INDEX META |
 | 2026-08-20 | INBOX_DRAIN | inbox/{candidate,nl2sql,pm,qa,ta} | 13 | Intent-Pass·Persona-Bundle·L0-Goals 신설; Single-Master/Grain/refSql/SCORE_CAP/Actions-budget/PVC/Spider2§7.4; people·PubGate·pm-checkpoint·티켓진행 EXCLUDE; git rm |
 | 2026-08-20 | RESEARCH | Web/GitHub | 2 | vllm-rbln v0.11.2a10/a11; Furiosa-LLM docs 2026.4.0b13; LiteRT v0.16.1 ALREADY_COVERED |
 | 2026-08-20 | INGEST | raw/ | 2 | vllm-rbln-a10-a11 · furiosa-b13 (합성 후 삭제) |

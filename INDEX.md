@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-08-20 (inbox drain 13·Intent-Pass/Persona-Bundle/L0-Goals; vllm-rbln a11·Furiosa b13; LiteRT ALREADY) | Root: wiki/
+[META] Updated: 2026-08-22 (inbox drain 4 EXCLUDE/ALREADY; vllm-rbln 0.11.3.dev0·OpenClaw Task Flow; LiteRT/Furiosa ALREADY) | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
