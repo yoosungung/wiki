@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-08-22 (inbox drain 4 EXCLUDE/ALREADY; vllm-rbln 0.11.3.dev0·OpenClaw Task Flow; LiteRT/Furiosa ALREADY) | Root: wiki/
+[META] Updated: 2026-08-22 (inbox drain ta-k8s-daily; kubelet eviction wiki 신설) | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]

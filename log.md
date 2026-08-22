@@ -1,6 +1,10 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-22 | INBOX_DRAIN | inbox/ta | 1 | ta-k8s-daily 2026-08-22 → K8s scale-0·SGLang 재확인; git rm |
+| 2026-08-22 | RESEARCH | Web | 1 | kubelet node pressure/eviction (k8s.guide); Supermemory MCP v3 ALREADY_COVERED |
+| 2026-08-22 | INGEST | raw/ | 1 | kubelet-node-pressure-eviction (합성 후 삭제) |
+| 2026-08-22 | SYNTHESIZE | wiki/ | 3 | K8s-Kubelet-Node-Pressure-Eviction 신설; scale-0·SGLang 08-22 재확인 |
 | 2026-08-22 | INBOX_DRAIN | inbox/{candidate,ta} | 4 | people·radar·pub-safety 스케줄/진행 EXCLUDE; GH open=0 skip+MCP fallback ALREADY_COVERED(PubGate/GH-skip); git rm |
 | 2026-08-22 | RESEARCH | Web/GitHub | 2 | vllm-rbln v0.11.3.dev0; OpenClaw Task Flow docs + tools.exec.mode; LiteRT v0.16.1·Furiosa b13 ALREADY_COVERED |
 | 2026-08-22 | INGEST | raw/ | 2 | vllm-rbln-0.11.3.dev0 · openclaw-task-flow (합성 후 삭제) |
