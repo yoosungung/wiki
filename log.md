@@ -1,6 +1,9 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-23 | CLEANUP | raw/ | 11 | Removed synthesized raw files (8 standardized and 3 non-standardized Untitled files) |
+| 2026-08-23 | SYNTHESIZE | wiki/ | 8+ | Integrated 8 topics: MoE models (ReMoE, AoE, RFMoE, LatentMoE) updated, BM25 RAG limit, AI Agent Chart, Liner Actions MCP, Claude Code DevOps, DeepSeek V4 cost, OCR to AI worker, SFT vs RL |
+| 2026-08-23 | INGEST | raw/ | 8 | Ingested Untitled files to standardized raw files: MoE variants, Chart generation, Liner Actions, Claude Code, DeepSeek V4 Flash, OCR to AI worker |
 | 2026-08-22 | INBOX_DRAIN | inbox/ta | 1 | ta-k8s-daily 2026-08-22 → K8s scale-0·SGLang 재확인; git rm |
 | 2026-08-22 | RESEARCH | Web | 1 | kubelet node pressure/eviction (k8s.guide); Supermemory MCP v3 ALREADY_COVERED |
 | 2026-08-22 | INGEST | raw/ | 1 | kubelet-node-pressure-eviction (합성 후 삭제) |
