@@ -1,9 +1,9 @@
 ---
 title: "OSI (Open Semantic Interchange)"
 tags: ["OSI", "Apache Ossie", "Semantic Layer", "Agent", "MCP", "Data"]
-last_updated: "2026-08-01"
-updated: "2026-08-01"
-related_raw: ["[[raw/2026-07-24-apache-ossie-schema-ontology-flatten.md]]", "[[raw/2026-07-14-Apache-Ossie-명세.md]]"]
+last_updated: "2026-08-23"
+updated: "2026-08-23"
+related_raw: ["[[2026-08-23-apache-ossie-ai-context-spec141.md]]", "[[raw/2026-07-24-apache-ossie-schema-ontology-flatten.md]]", "[[raw/2026-07-14-Apache-Ossie-명세.md]]"]
 ---
 
 # OSI (Open Semantic Interchange)
@@ -51,6 +51,12 @@ ontology:
 ```
 
 AV-SQL/에이전트 파이프라인 연계는 [[wiki/Agents/Text-to-SQL/AV-SQL-Agentic-Views-Spider-2-0.md]].
+
+### 2026-08-23: `ai_context` 스펙 불일치 (#141) · Kyvos 생태계
+
+- **[Issue #141](https://github.com/apache/ossie/issues/141)** (open): `core-spec/spec.yaml` 은 `ai_context: string` 만 기술하지만 `osi-schema.json`·canonical 예시는 **string 또는 structured object** (`instructions`, `synonyms`, `examples`) 를 허용. 구현·컨버터 작성 시 **JSON 스키마 + 예시** 를 정본으로 두고 `spec.yaml` 단순 string 표기는 오해 소지가 있다.
+- 제안 수정: `spec.yaml` 네 곳 갱신 + relationship 섹션 `ai_context` 추가, 버전 **0.2.0.dev0** 유지(동작 명확화).
+- **Kyvos** 가 2026-08-12 Apache Ossie 생태계에 합류([ossie.apache.org](https://ossie.apache.org/)).
 
 ### dbt 컨버터: SUM_BOOLEAN + qualified columns (2026-07-31)
 

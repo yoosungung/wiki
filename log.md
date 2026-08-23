@@ -1,7 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
-| 2026-08-23 | SYNTHESIZE | wiki/ | 68 | Bulk synthesized remaining raw files into wiki categories |
+| 2026-08-23 | INBOX_DRAIN | inbox/ | 0 | pending inbox 없음 (no-op) |
+| 2026-08-23 | RESEARCH | Web | 2 | Panther Lake NPU5 실측 LLM; Ossie ai_context #141·Kyvos |
+| 2026-08-23 | INGEST | raw/ | 2 | panther-lake-npu5-realworld · ossie-ai-context-spec141 |
+| 2026-08-23 | SYNTHESIZE | wiki/ | 3 | 온디바이스-AI §5 Panther Lake 실측; OSI #141·Kyvos; AV-SQL ai_context 정합 |
+| 2026-08-23 | CLEANUP | raw/ | 2 | 합성 후 raw 삭제 |
 | 2026-08-23 | CLEANUP | raw/ | 68 | Removed bulk synthesized raw files |
 | 2026-08-23 | CLEANUP | raw/ | 11 | Removed synthesized raw files (8 standardized and 3 non-standardized Untitled files) |
 | 2026-08-23 | SYNTHESIZE | wiki/ | 8+ | Integrated 8 topics: MoE models (ReMoE, AoE, RFMoE, LatentMoE) updated, BM25 RAG limit, AI Agent Chart, Liner Actions MCP, Claude Code DevOps, DeepSeek V4 cost, OCR to AI worker, SFT vs RL |

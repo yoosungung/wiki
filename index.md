@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-08-23 (inbox drain bulk raw synthesis) | Root: wiki/
+[META] Updated: 2026-08-23 (km-wiki night: Panther Lake·Ossie #141) | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]

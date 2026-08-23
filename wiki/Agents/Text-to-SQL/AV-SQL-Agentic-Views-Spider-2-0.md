@@ -1,11 +1,8 @@
 ---
 title: "AV-SQL: Agentic Views를 통한 Text-to-SQL 혁신 및 시맨틱 레이어 통합"
-related_raw: ["[[2026-07-29-apache-ossie-java21.md]]", "[[2026-07-28-apache-ossie-ai-disclosures-polaris-java17.md]]", "[[2026-07-24-apache-ossie-schema-ontology-flatten.md]]", "[[2026-07-23-apache-ossie-plugin-invocation.md]]", "[[2026-07-22-apache-ossie-wisdomai-converter-plugins.md]]", "[[2026-07-20-apache-ossie-databricks-snowflake-merged.md]]", "[[raw/2026-07-14-AV-SQL-논문-및-구현.md]]", "[[wiki/Agents/Text-to-SQL/2026-04-20-T2SQL-Trends-Update.md]]", "[[2026-07-16-av-sql-osi-mcp-integration-research.md]]", "[[2026-07-16-av_sql_semantic_layer_text_to_sql_research.md]]", "[[2026-07-17-apache-ossie-cli-scaffold.md]]", "[[2026-07-18-apache-ossie-duckdb-semantido-converters.md]]", "[[2026-07-19-apache-ossie-snowflake-quoted-identifiers.md]]"]
-tags: ["wiki", "Agents", "Text-to-SQL", "OSI", "MCP", "Snowflake", "slm_for_text-to-sql_and_schema_linking"]
-type: "wiki"
-status: "published"
-last_updated: "2026-08-01"
-updated: "2026-08-01"
+last_updated: "2026-08-23"
+updated: "2026-08-23"
+related_raw: ["[[2026-08-23-apache-ossie-ai-context-spec141.md]]", "[[2026-07-29-apache-ossie-java21.md]]", "[[2026-07-28-apache-ossie-ai-disclosures-polaris-java17.md]]", "[[2026-07-24-apache-ossie-schema-ontology-flatten.md]]", "[[2026-07-23-apache-ossie-plugin-invocation.md]]", "[[2026-07-22-apache-ossie-wisdomai-converter-plugins.md]]", "[[2026-07-20-apache-ossie-databricks-snowflake-merged.md]]", "[[raw/2026-07-14-AV-SQL-논문-및-구현.md]]", "[[wiki/Agents/Text-to-SQL/2026-04-20-T2SQL-Trends-Update.md]]", "[[2026-07-16-av-sql-osi-mcp-integration-research.md]]", "[[2026-07-16-av_sql_semantic_layer_text_to_sql_research.md]]", "[[2026-07-17-apache-ossie-cli-scaffold.md]]", "[[2026-07-18-apache-ossie-duckdb-semantido-converters.md]]", "[[2026-07-19-apache-ossie-snowflake-quoted-identifiers.md]]"]
 ---
 
 # AV-SQL: Agentic Views를 통한 Text-to-SQL 혁신
@@ -63,6 +60,10 @@ ossie plugin list
 - **후속 PR 스택**: #154 플러그인 객체, #155 호출 프로토콜, #156 레지스트리, #158 `convert` 구현.
 - **같은 날**: semantido 벤더 등록(#207), orionbelt 컨버터 round-trip 견고화(#206).
 - **AV-SQL 적용 아이디어**: View Generator 전에 `ossie validate`로 `ai_context` 스키마를 게이트하고, `ossie convert --from <bi>`로 사내 시맨틱을 Ossie로 정규화한 뒤 CTE 프롬프트에 주입한다.
+
+## Apache Ossie `ai_context` 스펙 정합 (#141, 2026-08-23)
+
+[apache/ossie#141](https://github.com/apache/ossie/issues/141)은 `core-spec/spec.yaml` 이 `ai_context: string` 만 기술하는 반면 JSON 스키마·canonical 예시는 **structured object** (`instructions`, `synonyms`, `examples`) 를 허용한다는 불일치를 추적한다. AV-SQL View Generator에 Ossie 메타데이터를 주입할 때는 **`osi-schema.json` + 예시** 를 정본으로 삼고, `spec.yaml` 의 단순 string 표기만으로 파서를 구현하지 않는다. 상세: [[wiki/Engineering/Data-and-Security/OSI-Open-Semantic-Interchange.md]].
 
 ## Apache Ossie 컨버터 확장 (2026-07-18, OPEN PR)
 
