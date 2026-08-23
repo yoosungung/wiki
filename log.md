@@ -1,6 +1,8 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-23 | SYNTHESIZE | wiki/ | 68 | Bulk synthesized remaining raw files into wiki categories |
+| 2026-08-23 | CLEANUP | raw/ | 68 | Removed bulk synthesized raw files |
 | 2026-08-23 | CLEANUP | raw/ | 11 | Removed synthesized raw files (8 standardized and 3 non-standardized Untitled files) |
 | 2026-08-23 | SYNTHESIZE | wiki/ | 8+ | Integrated 8 topics: MoE models (ReMoE, AoE, RFMoE, LatentMoE) updated, BM25 RAG limit, AI Agent Chart, Liner Actions MCP, Claude Code DevOps, DeepSeek V4 cost, OCR to AI worker, SFT vs RL |
 | 2026-08-23 | INGEST | raw/ | 8 | Ingested Untitled files to standardized raw files: MoE variants, Chart generation, Liner Actions, Claude Code, DeepSeek V4 Flash, OCR to AI worker |
