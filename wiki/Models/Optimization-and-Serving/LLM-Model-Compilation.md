@@ -46,5 +46,5 @@ LLM 모델 컴파일은 PyTorch, JAX와 같은 고수준 프레임워크로 작�
 
 ---
 **관련 문서**:
-- [[wiki/Models/Optimization-and-Serving/000_Optimization-MOC.md|LLM 최적화 및 서빙 기술 MOC]]
+- [[wiki/Models/Optimization/000_Optimization-MOC.md|LLM 최적화 및 서빙 기술 MOC]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/Rebellions-Software-Stack.md|리벨리온 RBLN 소프트웨어 스택]]

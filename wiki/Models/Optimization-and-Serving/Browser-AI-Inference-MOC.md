@@ -49,5 +49,5 @@ related_raw: [
 - **오프라인 동작**: 네트워크 연결 없이도 AI 기능 수행 가능.
 
 ## 관련 문서
-- [[wiki/Models/Optimization-and-Serving/000_Optimization-MOC.md|Optimization MOC]]
+- [[wiki/Models/Optimization/000_Optimization-MOC.md|Optimization MOC]]
 - [[wiki/Engineering/Development-Environment/Cross-Platform-Browser-AI.md|크로스 플랫폼 브라우저 AI 개발 환경]]

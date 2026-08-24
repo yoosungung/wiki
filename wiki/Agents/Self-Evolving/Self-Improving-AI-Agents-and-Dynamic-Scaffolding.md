@@ -32,4 +32,4 @@ type: "wiki"
 ## 🔗 연결된 문서
 - [[wiki/Agents/Self-Evolving/000_Self-Evolving-MOC.md]]
 - [[wiki/Agents/Self-Evolving/Hyperagents-Self-Evolving-AI.md]]
-- [[wiki/Agents/Self-Evolving/SkillOpt-Self-Evolving-Agent-Skills.md]]
+- [[wiki/Agents/Frameworks/SkillOpt-Self-Evolving-Agent-Skills.md]]

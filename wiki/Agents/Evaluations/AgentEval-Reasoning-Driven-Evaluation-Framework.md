@@ -33,6 +33,6 @@ AgentEval은 단순 오답 여부뿐만 아니라 다음과 같은 고차원적 
 - **도구 도달률 및 안전성**: 시스템 예외나 가드레일에 부딪히지 않고 최종 목표에 올바르게 도달한 경로 효율성.
 
 ## 🔗 연결된 문서
-- [[wiki/Agents/Evaluations/000_Evaluations-MOC.md]]
+- [[wiki/Agents/Frameworks/Evaluations/000_Evaluations-MOC.md]]
 - [[wiki/Agents/Evaluations/Deep-Agent-Evaluation-Framework.md]]
 - [[wiki/Engineering/Prompt-Engineering/프롬프트 엔지니어링에서 컨텍스트 엔지니어링으로의 전환.md]]

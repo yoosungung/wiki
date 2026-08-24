@@ -1,6 +1,6 @@
 ---
 title: "Blog"
-related_raw: ["[[raw/Blog.md]]"]
+related_raw: ["[[wiki/RAG/Blog.md]]"]
 tags: ['#inbox']
 type: "wiki"
 status: "published"

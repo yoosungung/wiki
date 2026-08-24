@@ -460,3 +460,9 @@
 | 2026-07-28 | INGEST | raw/ | 12 | 수집된 12개 비표준 raw 파일을 YYYY-MM-DD-제목_slug.md 형식으로 표준화 및 메타데이터 주입 |
 | 2026-07-28 | SYNTHESIZE | wiki/ | 10 | 수집된 지식을 5대 카테고리(하네스 핸드북, 하네스 이펙트, Graph-PRefLexOR, 추론 노력 제어, Inkling, OptiLLM, RAGFlow, Alook)에 합성 및 관련 MOC 4개 파일 최신화 |
 | 2026-07-28 | LINT | wiki/ | ALL | 2026-07-28 데일리 생성, D-2(2026-07-26) 삭제, index.md 파일 개수 최신화, fix_wiki_links.py 실행 및 raw/ 정리 |
+| 2026-08-24 | INGEST | raw/ | 8 | Standardized raw files: 2026-08-24-bernie-sanders-ai-pause-letter.md, 2026-08-24-recent-llm-agents-papers-2026-q3.md, 2026-08-24-active-inference-context-acquisition-ai-agents.md, 2026-08-24-claude-code-setup-agentic-engineering.md, 2026-08-24-claude-academy-courses.md, 2026-08-24-recirculation-inference-time-recurrence.md, 2026-08-24-pipecat-multimodal-voice-agent-framework.md, 2026-08-24-weekly-ai-trends-qwen3-deepseek-harness-grokbot.md |
+| 2026-08-24 | INGEST | raw/ | 4 | Standardized remaining raw files: 2026-08-24-llm-router-open-source-query-routing.md, 2026-08-24-nvidia-skillspector-agent-skills-security.md, 2026-08-24-colibri-cpu-moe-engine-local-inference.md, 2026-08-24-agentenv-distributed-microvm-agent-environments.md |
+| 2026-08-24 | RESEARCH | 연구_주제_관리.md | 8 | 8개 활성 연구 과제 관련 최신 릴리스 및 논문 검색 수행 |
+| 2026-08-24 | SYNTHESIZE | wiki/ | 11 | Integrated 12 topics into 11 wiki files (9 new, 2 updated) |
+| 2026-08-24 | CLEANUP | raw/ | 12 | Removed synthesized raw files |
+| 2026-08-24 | LINT | wiki/ | ALL | 데일리 생성, D-2(2026-08-22.md) 삭제, auto_moc & update_index 실행, fix_wiki_links.py를 통해 링크 수정 |

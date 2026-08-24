@@ -2,6 +2,8 @@
 
 ## 📄 Documents
 - [[wiki/Agents/Implementation/AI OS.md]]
+- [[wiki/Agents/Implementation/AI-Agent-Chart-Generation-Automation.md]]
+- [[wiki/Agents/Implementation/AI는-정말-아무것도-느끼지-못하는가-Feat-Sentient-AI.md]]
 - [[wiki/Agents/Implementation/Agent-Lightning.md]]
 - [[wiki/Agents/Implementation/Agent0.md]]
 - [[wiki/Agents/Implementation/AgentFS-Architecture-and-SQLite-Filesystem.md]]
@@ -14,6 +16,7 @@
 - [[wiki/Agents/Implementation/Deep-Agents-Sandbox.md]]
 - [[wiki/Agents/Implementation/Enterprise-Voice-AI-System.md]]
 - [[wiki/Agents/Implementation/Event-Deep-Research.md]]
+- [[wiki/Agents/Implementation/FDE-대비-AI-엔지니어-및-객체-중심-에이전트-거버넌스.md]]
 - [[wiki/Agents/Implementation/IBM_CUGA.md]]
 - [[wiki/Agents/Implementation/Inter-Agent-Context-Sharing-OSI-MCP.md]]
 - [[wiki/Agents/Implementation/K-EXAONE_Agentic_Capabilities.md]]
@@ -25,6 +28,9 @@
 - [[wiki/Agents/Implementation/Model-Native-Agentic-AI.md]]
 - [[wiki/Agents/Implementation/Neural-Computers.md]]
 - [[wiki/Agents/Implementation/Open Notebook.md]]
+- [[wiki/Agents/Implementation/OpenWiki-makes-it-easier-than-ever-to-explore-your-wiki-with-openwiki-visualize
+
+Point-it-at-your-wiki-and-every-doc-becomes-a-node-in-a-graph-you-can-click-through-with-a-markdown-reader-open-side.md]]
 - [[wiki/Agents/Implementation/Programmatic-Tool-Calling-Agent.md]]
 - [[wiki/Agents/Implementation/RADIUS-Survey-Simulation.md]]
 - [[wiki/Agents/Implementation/RunAgent.md]]
@@ -38,5 +44,6 @@
 - [[wiki/Agents/Implementation/deepagents.md]]
 - [[wiki/Agents/Implementation/my-adk-python-samples.md]]
 - [[wiki/Agents/Implementation/open-agent-builder.md]]
-- [[wiki/Agents/Implementation/FDE-대비-AI-엔지니어-및-객체-중심-에이전트-거버넌스.md]]
+- [[wiki/Agents/Implementation/앤스로픽스캔들-제프리엡스타인-실리콘밸리의위선-agi의어머니-ai-인공지능-anthropicscanda.md]]
+- [[wiki/Agents/Implementation/인공지능자의식-앤스로픽-ai내성-클로드오퍼스-ai-인공지능-aiintrospection-anthropic-claudeopus-aiconsciousness.md]]
 - [[wiki/Agents/Implementation/프로덕션-AI-에이전트-아키텍처-7대-계층.md]]

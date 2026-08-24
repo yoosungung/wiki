@@ -45,5 +45,5 @@ related_raw: ["[[raw/2026-05-13-Best-GPU-for-AI-Inference-2026-Spheron.md]]"]
    - 관리 비용 및 TCO(총 소유 비용) 측면에서 유연한 클라우드 리소스 활용이 유리해지는 추세.
 
 ## 관련 문서
-- [[wiki/Models/Optimization-and-Serving/000_Optimization-MOC.md|Optimization MOC]]
+- [[wiki/Models/Optimization/000_Optimization-MOC.md|Optimization MOC]]
 - [[wiki/Models/Optimization-and-Serving/Quantization-Techniques-NPU.md|NPU 최적화 양자화]]
