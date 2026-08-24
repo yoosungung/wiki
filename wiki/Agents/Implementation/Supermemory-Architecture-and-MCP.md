@@ -3,9 +3,9 @@ title: "Supermemory: 에이전트 네이티브 메모리 시스템 및 MCP 아�
 tags: ["Agents", "Implementation", "Memory", "Supermemory", "MCP", "SMFS", "Cloudflare"]
 type: "wiki"
 status: "published"
-last_updated: "2026-08-18"
-updated: "2026-08-18"
-related_raw: ["[[2026-08-18-supermemory-dynamic-dreaming-sla.md]]", "[[2026-08-17-supermemory-memorybench-skill-pipeline.md]]", "[[2026-08-08-supermemory-forget-matching-ids.md]]", "[[2026-08-02-supermemory-company-brain-skills.md]]", "[[2026-07-29-supermemory-company-brain-proactivity-nova.md]]", "[[2026-07-28-supermemory-company-brain-custom-mcp.md]]", "[[2026-07-26-supermemory-chatgpt-mcp-setup.md]]", "[[2026-07-25-supermemory-cursor-agents-company-brain.md]]", "[[2026-07-24-supermemory-mcp-scope-opencode.md]]", "[[2026-07-23-supermemory-agents-memory-workspace.md]]", "[[2026-07-22-supermemory-company-brain-open-signup.md]]", "[[2026-07-21-supermemory-mcp-tool-safety-annotations.md]]", "[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]", "[[2026-07-12-supermemory-local-6767-cli-mcp-context.md]]", "[[raw/2026-07-13-sadik-mohammad-rag-systems-limitations.md]]", "[[2026-07-13-supermemory-openclaw-claude-plugins.md]]", "[[2026-07-16-supermemory_ai_memory_layer_analysis.md]]", "[[2026-07-18-supermemory-server-v0.0.5-pluggable-embeddings.md]]", "[[2026-07-19-supermemory-server-v0.0.6-windows.md]]"]
+last_updated: "2026-08-24"
+updated: "2026-08-24"
+related_raw: ["[[2026-08-24-supermemory-team-mcp-permissions.md]]", "[[2026-08-24-supermemory-python-sdk-profile-dedupe.md]]", "[[2026-08-18-supermemory-dynamic-dreaming-sla.md]]", "[[2026-08-17-supermemory-memorybench-skill-pipeline.md]]", "[[2026-08-08-supermemory-forget-matching-ids.md]]", "[[2026-08-02-supermemory-company-brain-skills.md]]", "[[2026-07-29-supermemory-company-brain-proactivity-nova.md]]", "[[2026-07-28-supermemory-company-brain-custom-mcp.md]]", "[[2026-07-26-supermemory-chatgpt-mcp-setup.md]]", "[[2026-07-25-supermemory-cursor-agents-company-brain.md]]", "[[2026-07-24-supermemory-mcp-scope-opencode.md]]", "[[2026-07-23-supermemory-agents-memory-workspace.md]]", "[[2026-07-22-supermemory-company-brain-open-signup.md]]", "[[2026-07-21-supermemory-mcp-tool-safety-annotations.md]]", "[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]", "[[2026-07-12-supermemory-local-6767-cli-mcp-context.md]]", "[[raw/2026-07-13-sadik-mohammad-rag-systems-limitations.md]]", "[[2026-07-13-supermemory-openclaw-claude-plugins.md]]", "[[2026-07-16-supermemory_ai_memory_layer_analysis.md]]", "[[2026-07-18-supermemory-server-v0.0.5-pluggable-embeddings.md]]", "[[2026-07-19-supermemory-server-v0.0.6-windows.md]]"]
 ---
 
 # 🧠 Supermemory: 에이전트 네이티브 메모리 시스템
@@ -435,6 +435,71 @@ KM/에이전트 적용: Windows 개발 머신에서도 Linux/macOS와 같은 plu
 ```
 
 **적용 팁**: MCP `memory(action:"forget")`는 eventually-consistent·best-effort. 벌크·감사용 삭제는 API `forget-matching`의 **bound preview→ids apply**를 쓴다.
+
+### Team MCP server · cross-editor shared context (2026-08-24)
+
+[Changelog](https://supermemory.ai/changelog/) · [repo](https://github.com/supermemoryai/supermemory) — 업데이트된 **오픈소스 MCP 서버**가 팀 권한과 멀티 에디터 공유 컨텍스트를 정식 지원한다.
+
+| 항목 | 내용 |
+| :--- | :--- |
+| **Team permissions** | 워크스페이스 단위 권한 제어 — 수동 ACL 없이 팀이 동일 지식 베이스를 공유 |
+| **Cross-editor sync** | Claude · Cursor · Codex · OpenCode에서 **동일 shared context** — 에디터 전환 시 메모리 단절 방지 |
+| **Self-host / audit** | MCP 연결 전체를 감사·커스터마이즈·셀프호스트 가능 |
+
+```json
+{
+  "mcpServers": {
+    "supermemory": {
+      "url": "https://mcp.supermemory.ai/mcp",
+      "headers": {
+        "Authorization": "Bearer sm_...",
+        "x-sm-project": "team-project-id"
+      }
+    }
+  }
+}
+```
+
+**v3 API 정본** (changelog 2026-08):
+
+```bash
+# 문서 ingest
+curl -X POST https://api.supermemory.ai/v3/documents \
+  -H "Authorization: Bearer $SM_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"content":"...", "containerTag":"user_123"}'
+
+# 하이브리드 검색
+curl -X POST https://api.supermemory.ai/v3/search \
+  -H "Authorization: Bearer $SM_API_KEY" \
+  -d '{"q":"...", "containerTag":"user_123"}'
+```
+
+- OpenAPI: https://supermemory.ai/openapi.json · MCP server card: https://supermemory.ai/.well-known/mcp/server-card.json
+
+**적용 팁**: KM 멀티 에이전트(Cursor+Claude Code+Codex)가 같은 `repo_*`/`x-sm-project`를 쓸 때 team MCP로 권한을 묶고, Agents 소스 필터(#1290·#1354·#1361)와 함께 attribution만 분리한다. 디버깅은 MCP 클라이언트 UI보다 **v3/documents + v3/search HTTP**로 먼저 재현한다([[apidog Supermemory API 가이드](https://apidog.com/blog/supermemory-api/)] 참고).
+
+### Python SDK profile deduplication (commit 42f308b, 2026-08-18)
+
+[42f308b](https://github.com/supermemoryai/supermemory/commit/42f308b224c768afd64e6bd77048ecee9183eb4f) — Python SDK에 **cross-source profile deduplication**을 포팅.
+
+| 규칙 | 내용 |
+| :--- | :--- |
+| **우선순위** | `static` > `dynamic` > `search` (정규화된 profile 블록) |
+| **치환** | 요청당 **owned memory block 1개** — 이전 블록을 **누적하지 않고 교체** |
+| **동시성** | dedup은 **request-local**(공유 상태 없음) — 병렬 요청에서도 안전 |
+
+영향 패키지: `agent-framework-python` · `openai-sdk-python` · `pipecat-sdk-python` middleware/utils.
+
+```python
+# Pipecat / OpenAI SDK / Agent Framework 경로 공통 패턴
+# 동일 요청에서 static+dynamic+search profile이 겹치면 highest-priority만 주입
+from supermemory_openai.middleware import SupermemoryMiddleware  # 예시 경로
+
+# containerTag 격리 + dedupe는 SDK가 per-request 처리 — 앱 레벨 이중 주입 금지
+```
+
+**적용 팁**: LangGraph·Pipecat·OpenAI Agents에 Supermemory middleware를 **중첩**하면 profile 블록이 다시 쌓일 수 있다 — 한 SDK 경로만 선택. KM 야간 배치는 `containerTag`를 에이전트/프로젝트별로 고정하고 HTTP API로 ingest→search 검증 후 MCP에 연결한다.
 
 ---
 

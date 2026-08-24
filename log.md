@@ -1,6 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-24 | INBOX_DRAIN | inbox/qa | 1 | qa-bulk-weekly ALREADY_COVERED(gate skip·SPIDER2_TMP_DIR·opik weekly); 진행 EXCLUDE; git rm |
+| 2026-08-24 | RESEARCH | Web | 2 | Supermemory team MCP permissions·cross-editor sync; Python SDK profile dedupe 42f308b |
+| 2026-08-24 | INGEST | raw/ | 2 | supermemory-team-mcp-permissions · supermemory-python-sdk-profile-dedupe |
+| 2026-08-24 | SYNTHESIZE | wiki/ | 1 | Supermemory-Architecture §team MCP·v3 API·SDK dedupe |
+| 2026-08-24 | CLEANUP | raw/ | 2 | 합성 후 raw 삭제 |
 | 2026-08-23 | INBOX_DRAIN | inbox/ | 0 | pending inbox 없음 (no-op) |
 | 2026-08-23 | RESEARCH | Web | 2 | Panther Lake NPU5 실측 LLM; Ossie ai_context #141·Kyvos |
 | 2026-08-23 | INGEST | raw/ | 2 | panther-lake-npu5-realworld · ossie-ai-context-spec141 |
