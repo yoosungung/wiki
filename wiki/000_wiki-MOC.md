@@ -8,4 +8,3 @@
 - [[wiki/RAG/000_RAG-MOC.md|RAG]]
 
 ## 📄 Documents
-- [[wiki/2026-08-23.md]]

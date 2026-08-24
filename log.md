@@ -466,3 +466,4 @@
 | 2026-08-24 | SYNTHESIZE | wiki/ | 11 | Integrated 12 topics into 11 wiki files (9 new, 2 updated) |
 | 2026-08-24 | CLEANUP | raw/ | 12 | Removed synthesized raw files |
 | 2026-08-24 | LINT | wiki/ | ALL | 데일리 생성, D-2(2026-08-22.md) 삭제, auto_moc & update_index 실행, fix_wiki_links.py를 통해 링크 수정 |
+| 2026-08-24 | SYNTHESIZE | wiki/Engineering/AI-Native-Engineering | 1 | Semantica 의사결정 출처 추적 및 에이전트 거버넌스(MIT, 1.9k) 한국어 번역 합성 및 구버전 영어 파일 삭제 |
