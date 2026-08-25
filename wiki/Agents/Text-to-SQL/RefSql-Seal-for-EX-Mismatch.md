@@ -3,8 +3,8 @@ id: refsql-seal-for-ex-mismatch
 title: "EX mismatch는 refSql seal로 고정한다"
 status: canonical
 owner: km
-updated: "2026-08-20"
-last_updated: "2026-08-20"
+updated: "2026-08-25"
+last_updated: "2026-08-25"
 review_after: "2026-11-20"
 sources:
   - ticket:689
@@ -18,6 +18,9 @@ sources:
   - ticket:789
   - ticket:1051
   - ticket:1048
+  - ticket:1050
+  - ticket:1269
+  - ticket:1268
 tags: ["Agents", "Text-to-SQL", "MDL", "refSql", "Evaluation"]
 type: "wiki"
 ---
@@ -39,6 +42,14 @@ type: "wiki"
 | 모델명이 warehouse FROM에 누출 | `relation "…_event" does not exist` | 물리 테이블명만 FROM. MDL 이름은 검색 키 |
 | Dec-31 임기/리텐션 | `date_dim` span이 1999에서 끊김 | `(start_year+N)\|\|'-12-31' BETWEEN term_start AND term_end` — year-20 dim row 요구 금지 |
 | 가상 warehouse 관계 invent | `city_legislation_city` 같은 비실재 관계 | 물리 `cities` + `cities_countries` 등 실제 테이블만 |
+| `highest daily` vs `30d monthly avg` | 모델명 충돌로 인한 diversity-search collision | `highest daily balance month sum` 과 같이 질문 속 고유 토큰을 반영한 고유 모델명(seal) 지정 |
+| `ROUND((week_date-june15)/7)+1` 버킷 | delta_weeks 버킷 계산식 복잡성으로 인한 mismatch | `percentage_change = ((after/before)-1)*100` 및 week_date 기반 round bucket CTE |
+| `attribute_impact` 12-week | 12주 윈도우 offset 비교 및 attribute 컬럼 unpivot 복잡성 | 12-week window 및 `MIN(avg_pct)` demo 집계 전용 seal |
+| `picking_line` JOIN (not FIFO) | inventory 재고로부터 FIFO를 재계산하려 하여 mismatch | `picking_line` JOIN `locations` 기반 refSql 맵핑 (FIFO 재계산 금지) |
+| recursive packaging CTE | packaging contains 상하관계의 recursive CTE 구현 누락 | contains_id가 없는 root packaging에서 출발하는 recursive CTE |
+| `/detail` 연속 방문 및 정규화 | 단순히 `path='/detail'`만 필터링하여 오차 발생 | `option='detail'` 필터링 및 `/detail`+`/detail/`→`/detail`, 빈 경로→`/` 정규화 적용 |
+| unsold track duration | InvoiceLine LEFT JOIN 누락으로 판매되지 않은 트랙 누락 | short/medium 분류 시 `LEFT JOIN InvoiceLine`으로 unsold 트랙의 min duration 포함 |
+| PG point/JSON Haversine | PG `point` 좌표 및 JSON `(city::jsonb)->>'en'` 파싱, Haversine 공식 오차 | `point(lon,lat)` 좌표 추출 및 JSON text casting, `6371*2*ASIN(SQRT(...))` 계산식 적용 |
 
 ## 적용
 

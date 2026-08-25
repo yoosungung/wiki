@@ -3,8 +3,8 @@ id: metadata-git-pvc-resync
 title: "메타데이터 Git PVC 재동기화 (브랜치·sparse·지연)"
 status: canonical
 owner: km
-updated: "2026-08-20"
-last_updated: "2026-08-20"
+updated: "2026-08-25"
+last_updated: "2026-08-25"
 review_after: "2026-11-20"
 sources:
   - ticket:689
@@ -12,6 +12,7 @@ sources:
   - ticket:753
   - ticket:1047
   - ticket:1048
+  - ticket:1050
 tags: ["Infrastructure", "DevOps", "Git", "Kubernetes", "PVC", "MCP"]
 type: "wiki"
 ---
@@ -40,6 +41,21 @@ kubectl scale deploy/<backend> <mcp> --replicas=1
 ```
 
 인증 401과 혼동하지 않는다 — [[wiki/Engineering/Infrastructure-and-DevOps/Git-HTTP-Basic-Auth-Username-Env.md]]. RWO면 scale 0이 Recreate보다 안전하다 — [[wiki/Engineering/Infrastructure-and-DevOps/RWO-PVC-Recreate-Deploy-Strategy.md]].
+
+## 콘솔 API를 통한 메타데이터 미러링 (kubectl exec 불가 시)
+
+에이전트 SA(Service Account) 권한 문제로 `pods/exec`를 호출할 수 없거나 `nl2sql-secrets`에 직접 접근할 수 없을 때, 백엔드 콘솔 API를 활용하여 라이브 카탈로그를 시딩(seed)할 수 있다.
+
+- **인증 방식**: `X-Forwarded-User` 및 `X-Forwarded-Email` 헤더를 주입하여 인증 장벽을 통과한다.
+- **업로드 및 검증 API 절차**:
+  1. `POST /api/metadata/fs/validate` 호출을 통해 전체 유효성 검증을 먼저 통과시킨다.
+  2. `PUT /api/metadata/fs/{path}` API에 `base_sha`와 변경할 `body` 내용을 전송하여 카탈로그 파일을 원격 PVC에 직접 갱신한다.
+- **동기화 확인 (Live Evidence)**:
+  - PUT 응답값의 `sync.status=ok` 및 `/api/admin/metadata/push-status` 조회 결과 내 `last_good_ref` 값의 갱신 여부로 확인한다. (제품 merge SHA와 metadata git SHA는 다를 수 있음)
+- **라이브 데이터 보존 (Rich Grains 보호)**:
+  - 더 세부적인 설정이 적용된 풍부한 라이브 그레인(예: live `bank_sales_trading_shopping_cart`)을 얇은 mcp fixture로 덮어쓰지 말아야 한다.
+  - 추가/업데이트 시에는 seal `*.model.json` 및 누락된 그레인 정보만 타겟하여 수정한다.
+
 
 ## 제품 SHA ≠ 메타데이터 SHA
 

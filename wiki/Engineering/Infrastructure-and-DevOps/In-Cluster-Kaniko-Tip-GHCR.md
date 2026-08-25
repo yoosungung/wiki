@@ -3,12 +3,13 @@ id: in-cluster-kaniko-tip-ghcr
 title: "In-cluster Kaniko tip → GHCR (vs Actions build-ghcr)"
 status: canonical
 owner: km
-updated: "2026-08-19"
-last_updated: "2026-08-19"
+updated: "2026-08-25"
+last_updated: "2026-08-25"
 review_after: "2026-11-19"
 sources:
   - ticket:551
   - ticket:552
+  - ticket:1050
   - https://github.com/GoogleContainerTools/kaniko
 tags: ["Infrastructure", "DevOps", "Kaniko", "GHCR", "Kubernetes", "CD"]
 type: "wiki"
@@ -52,6 +53,20 @@ Prod/Apple Silicon용 backend `amd64+arm64`는 **opt-in** (`backend_multi_arch=t
 ## AA 스코프
 
 `quality.yaml`에 `security.command` 없으면 mechanical skip + Kaniko/Secret 경로 수동 리뷰. ConfigMap에 API 키 잔여는 **사전 존재 Forbidden 패턴**으로 NF follow-up — tip 게이트 fail과 분리.
+
+## Backend tip_roll 배포 및 RBAC
+
+테넌트 환경에서 백엔드 변경 사양을 클러스터에 반영할 때, Deployment 패치와 권한 분리에 관한 규칙.
+
+1. **Kaniko 빌드 및 롤 권한**:
+   - TA SA (`cursor-agent-test-ns-write` 등) 권한은 `nl2sql` 네임스페이스 내에서 Jobs를 생성/삭제하고 Deployments를 패치할 수 있는 RBAC 권한이 필요하다.
+   - 동기화된 테넌트 체크아웃에서 `./deploy/scripts/build-tip-images-kaniko.sh test-<short> main` 을 실행하여 `test-<short>` 이미지 빌드를 수행한다.
+2. **`tip_roll` 제한 (mcp 핀 보호)**:
+   - 빌드가 완료되면 **백엔드만** 해당 `ghcr.io/yoosungung/nl2sql-backend:test-<short>` 이미지로 롤링 업데이트를 수행한다.
+   - **mcp Deployment는 `test-*` 이미지로 덮어쓰지 말 것** (Init:Error 위험 및 verify.md 오동작 방지). mcp는 이전의 안정적인 팁 핀(prior tip pin) 상태로 둔다.
+3. **완료 게이트 (Done Gate)**:
+   - 해당 기능 구현(Done)의 배포 게이트 완료 조건은 제품의 팁 이미지 SHA가 병합 커밋(예: PR #115의 `53a45e1`)을 포함하는 상태여야 한다. (메타데이터 git head의 SHA와는 무관함)
+   - `/api/ready` 가 200 성공 응답을 주어야 배포 완료로 판단한다.
 
 ## 🔗 관련 문서
 

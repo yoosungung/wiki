@@ -1,6 +1,9 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-25 | INBOX_DRAIN | inbox/ | 14 | Mismatch-seal·PVC-resync·Kaniko-tip-roll 갱신; checkpoint·진행 Exclude; git rm |
+| 2026-08-25 | SYNTHESIZE | wiki/ | 3 | RefSql-Seal·Metadata-Resync·Kaniko-Tip 위키 증분 합성 완료 |
+| 2026-08-25 | LINT | Root / wiki | ALL | 데일리 생성, D-2(2026-08-23) 삭제, INDEX META 날짜 갱신, log.md 동기화 완료 |
 | 2026-08-24 | INBOX_DRAIN | inbox/qa | 1 | qa-bulk-weekly ALREADY_COVERED(gate skip·SPIDER2_TMP_DIR·opik weekly); 진행 EXCLUDE; git rm |
 | 2026-08-24 | RESEARCH | Web | 2 | Supermemory team MCP permissions·cross-editor sync; Python SDK profile dedupe 42f308b |
 | 2026-08-24 | INGEST | raw/ | 2 | supermemory-team-mcp-permissions · supermemory-python-sdk-profile-dedupe |
