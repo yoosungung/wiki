@@ -46,6 +46,18 @@ Prod package ≠ 공유 클러스터 apply — [[wiki/Engineering/Infrastructure
 
 Prod/Apple Silicon용 backend `amd64+arm64`는 **opt-in** (`backend_multi_arch=true` → `linux/amd64,linux/arm64`, QEMU on ubuntu-latest). tip 기본은 `linux/amd64`. sidecar/MCP 이미지는 multi-arch 비목표(amd64). 증거: `docker buildx imagetools inspect ghcr.io/<owner>/<img>:<tag>`.
 
+## `build-ghcr-images` fallback 함정
+
+`build-ghcr-images.yml`에 **`environment` workflow input이 없다**. `inputs.environment`를 넣으면 GitHub API **HTTP 422**다. metadata-only 델타는 tip 이미지 재빌드 없이 FS PUT만으로 충분할 수 있다. backend-only tip이 필요하면:
+
+```bash
+gh workflow run build-ghcr-images.yml \
+  -f tag=test-<shortsha> \
+  -f backend_multi_arch=false
+```
+
+이후 `kubectl set image` tip roll — mcp Deployment 핀은 유지한다.
+
 ## SHA ref 체크아웃
 
 스톡 스크립트가 `git clone --branch <ref>`이면 **커밋 SHA를 `--branch`에 넣으면 Init:Error**다. tip Job의 git-ref는 **브랜치명**(예: `main`)을 쓰고, 태그만 `test-<short_sha>`로 맞춘다. one-shot이 특정 커밋을 강제해야 하면 `git fetch origin <sha> && git checkout <sha>`. backend-only 델타면 MCP Kaniko Job을 생략하고 퍼블리시 바이너리 핀은 유지 — [[wiki/Engineering/Infrastructure-and-DevOps/Tip-Roll-Keep-Published-Binary.md]].

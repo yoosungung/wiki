@@ -1,7 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
-| 2026-08-25 | INBOX_DRAIN | inbox/ | 14 | Mismatch-seal·PVC-resync·Kaniko-tip-roll 갱신; checkpoint·진행 Exclude; git rm |
+| 2026-08-25 | INBOX_DRAIN | inbox/ | 48 | Stacked-Seal-PR·Metadata-SSE·Kaniko-422 갱신; pm-checkpoint·qa/aa 진행 EXCLUDE; git rm |
+| 2026-08-25 | RESEARCH | Web | 1 | Supermemory MCP 4.0 tool surface (search_memory/add_memory/listMemories); LiteRT MTP ALREADY_COVERED |
+| 2026-08-25 | INGEST | raw/ | 1 | supermemory-mcp-v4-tool-surface |
+| 2026-08-25 | SYNTHESIZE | wiki/ | 4 | Stacked-Seal-PR-Conflict·Metadata-Resync·Kaniko-422·Supermemory§MCP4 |
+| 2026-08-25 | CLEANUP | raw/ | 1 | 합성 후 raw 삭제 |
 | 2026-08-25 | SYNTHESIZE | wiki/ | 3 | RefSql-Seal·Metadata-Resync·Kaniko-Tip 위키 증분 합성 완료 |
 | 2026-08-25 | LINT | Root / wiki | ALL | 데일리 생성, D-2(2026-08-23) 삭제, INDEX META 날짜 갱신, log.md 동기화 완료 |
 | 2026-08-24 | INBOX_DRAIN | inbox/qa | 1 | qa-bulk-weekly ALREADY_COVERED(gate skip·SPIDER2_TMP_DIR·opik weekly); 진행 EXCLUDE; git rm |

@@ -3,9 +3,9 @@ title: "Supermemory: 에이전트 네이티브 메모리 시스템 및 MCP 아�
 tags: ["Agents", "Implementation", "Memory", "Supermemory", "MCP", "SMFS", "Cloudflare"]
 type: "wiki"
 status: "published"
-last_updated: "2026-08-24"
-updated: "2026-08-24"
-related_raw: ["[[2026-08-24-supermemory-team-mcp-permissions.md]]", "[[2026-08-24-supermemory-python-sdk-profile-dedupe.md]]", "[[2026-08-18-supermemory-dynamic-dreaming-sla.md]]", "[[2026-08-17-supermemory-memorybench-skill-pipeline.md]]", "[[2026-08-08-supermemory-forget-matching-ids.md]]", "[[2026-08-02-supermemory-company-brain-skills.md]]", "[[2026-07-29-supermemory-company-brain-proactivity-nova.md]]", "[[2026-07-28-supermemory-company-brain-custom-mcp.md]]", "[[2026-07-26-supermemory-chatgpt-mcp-setup.md]]", "[[2026-07-25-supermemory-cursor-agents-company-brain.md]]", "[[2026-07-24-supermemory-mcp-scope-opencode.md]]", "[[2026-07-23-supermemory-agents-memory-workspace.md]]", "[[2026-07-22-supermemory-company-brain-open-signup.md]]", "[[2026-07-21-supermemory-mcp-tool-safety-annotations.md]]", "[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]", "[[2026-07-12-supermemory-local-6767-cli-mcp-context.md]]", "[[raw/2026-07-13-sadik-mohammad-rag-systems-limitations.md]]", "[[2026-07-13-supermemory-openclaw-claude-plugins.md]]", "[[2026-07-16-supermemory_ai_memory_layer_analysis.md]]", "[[2026-07-18-supermemory-server-v0.0.5-pluggable-embeddings.md]]", "[[2026-07-19-supermemory-server-v0.0.6-windows.md]]"]
+last_updated: "2026-08-25"
+updated: "2026-08-25"
+related_raw: ["[[2026-08-25-supermemory-mcp-v4-tool-surface.md]]", "[[2026-08-24-supermemory-team-mcp-permissions.md]]", "[[2026-08-24-supermemory-python-sdk-profile-dedupe.md]]", "[[2026-08-18-supermemory-dynamic-dreaming-sla.md]]", "[[2026-08-17-supermemory-memorybench-skill-pipeline.md]]", "[[2026-08-08-supermemory-forget-matching-ids.md]]", "[[2026-08-02-supermemory-company-brain-skills.md]]", "[[2026-07-29-supermemory-company-brain-proactivity-nova.md]]", "[[2026-07-28-supermemory-company-brain-custom-mcp.md]]", "[[2026-07-26-supermemory-chatgpt-mcp-setup.md]]", "[[2026-07-25-supermemory-cursor-agents-company-brain.md]]", "[[2026-07-24-supermemory-mcp-scope-opencode.md]]", "[[2026-07-23-supermemory-agents-memory-workspace.md]]", "[[2026-07-22-supermemory-company-brain-open-signup.md]]", "[[2026-07-21-supermemory-mcp-tool-safety-annotations.md]]", "[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]", "[[2026-07-12-supermemory-local-6767-cli-mcp-context.md]]", "[[raw/2026-07-13-sadik-mohammad-rag-systems-limitations.md]]", "[[2026-07-13-supermemory-openclaw-claude-plugins.md]]", "[[2026-07-16-supermemory_ai_memory_layer_analysis.md]]", "[[2026-07-18-supermemory-server-v0.0.5-pluggable-embeddings.md]]", "[[2026-07-19-supermemory-server-v0.0.6-windows.md]]"]
 ---
 
 # 🧠 Supermemory: 에이전트 네이티브 메모리 시스템
@@ -500,6 +500,23 @@ from supermemory_openai.middleware import SupermemoryMiddleware  # 예시 경로
 ```
 
 **적용 팁**: LangGraph·Pipecat·OpenAI Agents에 Supermemory middleware를 **중첩**하면 profile 블록이 다시 쌓일 수 있다 — 한 SDK 경로만 선택. KM 야간 배치는 `containerTag`를 에이전트/프로젝트별로 고정하고 HTTP API로 ingest→search 검증 후 MCP에 연결한다.
+
+### MCP Server 4.0 공식 tool surface (2026-08-25)
+
+[공식 MCP 문서](https://supermemory.ai/docs/supermemory-mcp/mcp) 기준 원격 엔드포인트는 `https://mcp.supermemory.ai/mcp`이다. OAuth가 기본이며 `sm_` API 키를 `Authorization` 헤더에 넣으면 OAuth를 건너뛴다. 프로젝트 스코프는 `x-sm-project` 헤더.
+
+| Tool | 역할 | 핵심 인자 |
+| :--- | :--- | :--- |
+| `search_memory` | 공간 내 시맨틱 회상 | `query`(필수), `includeProfile`, `containerTag` |
+| `add_memory` | 저장·망각 | `content`, `action`(`save` 기본 / `forget`) |
+| `listMemories` | 최근 추출 메모리 목록 | `page`, `limit`, `containerTag` |
+
+- **Prompt `context`**: 인자 없음 — 활성 space 프로필 + 최근 활성 space 최대 3개.
+- **Resources**: `supermemory://profile`, `supermemory://projects`.
+- **로컬**: `supermemory-server` → `http://localhost:6767`, 기본 임베딩 `Xenova/bge-base-en-v1.5`, 데이터 `./.supermemory`.
+- **HTTP API v3**: `POST /v3/add`, `POST /v3/search` — [OpenAPI](https://supermemory.ai/openapi.json).
+
+레거시 클라이언트가 `memory`/`recall` 이름을 쓰면 최신 MCP 4.0 도구명으로 매핑해 호출한다.
 
 ---
 

@@ -5,6 +5,7 @@ status: canonical
 owner: km
 updated: "2026-08-25"
 last_updated: "2026-08-25"
+review_after: "2026-11-25"
 review_after: "2026-11-20"
 sources:
   - ticket:689
@@ -53,8 +54,12 @@ kubectl scale deploy/<backend> <mcp> --replicas=1
 - **동기화 확인 (Live Evidence)**:
   - PUT 응답값의 `sync.status=ok` 및 `/api/admin/metadata/push-status` 조회 결과 내 `last_good_ref` 값의 갱신 여부로 확인한다. (제품 merge SHA와 metadata git SHA는 다를 수 있음)
 - **라이브 데이터 보존 (Rich Grains 보호)**:
-  - 더 세부적인 설정이 적용된 풍부한 라이브 그레인(예: live `bank_sales_trading_shopping_cart`)을 얇은 mcp fixture로 덮어쓰지 말아야 한다.
-  - 추가/업데이트 시에는 seal `*.model.json` 및 누락된 그레인 정보만 타겟하여 수정한다.
+  - 더 세부적인 설정이 적용된 풍부한 라이브 그레인(예: live `complex_oracle_times`, `bowlingleague_bowler_score`, `e_commerce_sale`)을 얇은 mcp fixture로 덮어쓰지 말아야 한다.
+  - 추가/업데이트 시에는 seal `*.model.json` 및 누락된 그레인 정보만 타겟하여 수정한다. `base_sha=null`로 **create**할 때도 기존 rich 모델은 PUT 대상에서 제외한다.
+- **타입 정합 (PG catalog)**:
+  - fixture의 `integer` 컬럼이 live PG `bigint`와 맞지 않으면 validate/PUT 전에 `bigint`로 coerce한다(예: bowlingleague·wwe_match grain).
+- **Live SSE 증거 (AC2)**:
+  - 배포 Done 게이트는 제품 merge SHA가 아니라 live chat SSE에서 `exec_result match` + `meta_ref`가 `/admin/metadata/push-status`의 `last_good_ref`와 일치하는지로 본다.
 
 
 ## 제품 SHA ≠ 메타데이터 SHA
