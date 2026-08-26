@@ -40,5 +40,5 @@ AI 코딩 에이전트(Claude Code 등)와 생성형 AI 기술이 개발 프로�
 
 ## 관련 문서
 - [[wiki/Engineering/AI-Native-Engineering/000_AI-Native-Engineering-MOC.md]]
-- [[wiki/Engineering/AI-Native-Engineering/Claude-Code-and-Cursor-AI-Native-Engineering-에이전트-기반-엔지니어링.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Claude-Code-and-Cursor-AI-Native-Engineering-에이전트-기반-엔지니어링.md]]
 - [[wiki/Agents/Coding-and-Engineering/000_Coding-and-Engineering-MOC.md]]

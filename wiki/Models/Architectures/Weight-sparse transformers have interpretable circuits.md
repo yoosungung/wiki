@@ -20,6 +20,6 @@ updated: "2026-04-19"
 
 ## 관련 노트
 *   Transformer 모델의 구조와 작동 원리
-*   [[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리 - Part 2 - 아키텍처와 구현]]
-*   [[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리 - Part 3 - 심화 학습]]
+*   [[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리 - Part 2 - 아키텍처와 구현]]
+*   [[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리 - Part 3 - 심화 학습]]
 *   Transformer Fine-tuning 옵션

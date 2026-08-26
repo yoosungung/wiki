@@ -1,6 +1,6 @@
 ---
 title: "Langchain_다중_에이전트_아키텍처_선택"
-related_raw: ["[[wiki/Agents/Multi-Agent-and-Orchestration/Langchain_다중_에이전트_아키텍처_선택.md]]"]
+related_raw: ["[[wiki/Agents/Multi-Agent-and-Orchestration/Langchain_다중_에이전트_아키텍처_선택.md]]"]
 tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'multi_agent_orchestration_and_patterns']
 type: "wiki"
 status: "published"

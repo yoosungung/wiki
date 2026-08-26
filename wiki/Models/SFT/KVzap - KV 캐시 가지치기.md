@@ -1,6 +1,6 @@
 ---
 title: "KVzap - KV 캐시 가지치기"
-related_raw: ["[[wiki/Models/SFT/KVzap - KV 캐시 가지치기.md]]"]
+related_raw: ["[[wiki/Models/SFT/KVzap - KV 캐시 가지치기.md]]"]
 tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_concepts']
 type: "wiki"
 status: "published"
@@ -36,12 +36,12 @@ KVzap은 트랜스포머 기반 언어 모델의 KV(Key-Value) 캐시 병목 현
 *   Figure 14: 21개 하위 집합 각각에 대한 Qwen3-32B의 LongBench 결과.
 
 **관련 노트:**
-*   [[wiki/Models/Architectures/LLM 아키텍처 비교]]
-*   [[wiki/Models/Architectures/MoE 모델 분석]]
-*   [[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리 - Part 2 - 아키텍처와 구현]]
+*   [[wiki/Models/Architectures/LLM 아키텍처 비교]]
+*   [[wiki/Models/Architectures/MoE 모델 분석]]
+*   [[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리 - Part 2 - 아키텍처와 구현]]
 *   RoPE (Rotary Position Embedding) Scaling
 *   [[wiki/Models/SFT/LLM_FineTuning_Libraries]]
-*   [[wiki/Models/Reasoning-and-Cognition/LLM 학습 패러다임]]
+*   [[wiki/Models/Reasoning-and-Cognition/LLM 학습 패러다임]]
 *   대규모 언어 모델(LLM)의 추론 성능과 효율성을 동시에 향상시키는 방법
-*   [[wiki/Models/Optimization-and-Serving/LLM Compressor - vllm 모델 최적화 라이브러리]]
+*   [[wiki/Models/Optimization-and-Serving/LLM Compressor - vllm 모델 최적화 라이브러리]]
 *   [[wiki/Models/Small-Models/NVIDIA Nemotron 3]]

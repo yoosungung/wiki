@@ -1,6 +1,6 @@
 ---
 title: "Wayve와 Tesla FSD v14 자율주행 기술 비교 및 시장 확장"
-related_raw: ["[[wiki/Models/RL/Wayve와 Tesla FSD v14 자율주행 기술 비교 및 시장 확장.md]]"]
+related_raw: ["[[wiki/Models/RL/Wayve와 Tesla FSD v14 자율주행 기술 비교 및 시장 확장.md]]"]
 tags: ['wiki', 'agents_and_systems', 'world_models_&_generative_simulation', 'autonomous_driving_wayve_and_tesla_fsd_v13']
 type: "wiki"
 status: "published"

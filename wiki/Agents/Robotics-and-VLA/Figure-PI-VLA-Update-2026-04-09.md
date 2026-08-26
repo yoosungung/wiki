@@ -24,4 +24,4 @@ updated: "2026-04-19"
 ## 관련 노트
 - [[wiki/Agents/Robotics-and-VLA/Figure-03-Helix-VLA-Stack]]
 - [[wiki/Agents/Robotics-and-VLA/Nvidia-Cosmos-VLA-2026]]
-- [[wiki/Agents/Robotics-and-VLA/NVIDIA-Physical-AI-GR00T-Cosmos-물리적-AI-혁신]]
+- [[wiki/Agents/Robotics-and-VLA/NVIDIA-Physical-AI-GR00T-Cosmos-물리적-AI-혁신]]

@@ -1,6 +1,6 @@
 ---
-title: "HKUDSDeepCode "DeepCode Open Agentic Coding (Paper2Code & Text2Web & Text2Backend)""
-related_raw: ["[[raw/HKUDSDeepCode "DeepCode Open Agentic Coding (Paper2Code & Text2Web & Text2Backend)".md]]"]
+title: 'HKUDSDeepCode "DeepCode Open Agentic Coding (Paper2Code & Text2Web & Text2Backend)"'
+related_raw: ['[[raw/HKUDSDeepCode "DeepCode Open Agentic Coding (Paper2Code & Text2Web & Text2Backend)".md]]']
 tags: ['#inbox']
 type: "wiki"
 status: "published"

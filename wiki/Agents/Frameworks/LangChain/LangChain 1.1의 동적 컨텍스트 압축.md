@@ -1,6 +1,6 @@
 ---
 title: "LangChain 1.1의 동적 컨텍스트 압축"
-related_raw: ["[[wiki/Agents/Frameworks/LangChain/LangChain 1.1의 동적 컨텍스트 압축.md]]"]
+related_raw: ["[[wiki/Agents/Frameworks/LangChain/LangChain 1.1의 동적 컨텍스트 압축.md]]"]
 tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'basetech', 'langchain_framework']
 type: "wiki"
 status: "published"

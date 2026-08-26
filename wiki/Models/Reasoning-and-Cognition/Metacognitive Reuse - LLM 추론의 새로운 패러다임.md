@@ -1,6 +1,6 @@
 ---
 title: "Metacognitive Reuse - LLM 추론의 새로운 패러다임"
-related_raw: ["[[wiki/Models/Reasoning-and-Cognition/Metacognitive Reuse - LLM 추론의 새로운 패러다임.md]]"]
+related_raw: ["[[wiki/Models/Reasoning-and-Cognition/Metacognitive Reuse - LLM 추론의 새로운 패러다임.md]]"]
 tags: ['wiki', 'ai_core', 'ai', 'metacognitive_reuse']
 type: "wiki"
 status: "published"
@@ -32,11 +32,11 @@ updated: "2026-04-19"
 
 ## 연관 노트
 
-*   [[wiki/Models/Reasoning-and-Cognition/LLM 학습 패러다임]]
-*   [[wiki/Models/Reasoning-and-Cognition/LLM 추론의 함정 - 생각을 멈춰야 정확해진다]]
+*   [[wiki/Models/Reasoning-and-Cognition/LLM 학습 패러다임]]
+*   [[wiki/Models/Reasoning-and-Cognition/LLM 추론의 함정 - 생각을 멈춰야 정확해진다]]
 *   [[wiki/Models/Reasoning-and-Cognition/LLM_Parallel_Thinking_Parallel-R1]]
 *   [[wiki/Models/Reasoning-and-Cognition/Why LLM models are not good at RAG]]
-*   [[wiki/Models/RL/Self-Evolving Agents - 자가 학습형 AI 에이전트 재훈련 매뉴얼]]
+*   [[wiki/Models/RL/Self-Evolving Agents - 자가 학습형 AI 에이전트 재훈련 매뉴얼]]
 *   [[wiki/Models/Reasoning-and-Cognition/The Missing Layer of AGI - From Pattern Alchemy to Coordination Physics]]
 *   [[wiki/Models/RL/Agent-R1 Training Powerful LLM Agents with End-to-End Reinforcement Learning]]
 *   [[wiki/Engineering/Prompt-Engineering/LLM_Thinking_Time_Prompt_Engineering]]

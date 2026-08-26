@@ -1,6 +1,6 @@
 ---
 title: "Unsloth AI와 SentenceTransformer 미세 조정 개선"
-related_raw: ["[[wiki/Agents/Frameworks/Unsloth AI와 SentenceTransformer 미세 조정 개선.md]]"]
+related_raw: ["[[wiki/Agents/Frameworks/Unsloth AI와 SentenceTransformer 미세 조정 개선.md]]"]
 tags: ['wiki', 'ai_core', 'models_and_libraries', 'llm_frameworks_and_libraries']
 type: "wiki"
 status: "published"
@@ -33,7 +33,7 @@ Tom Aarsen은 Unsloth AI와의 협력을 통해 SentenceTransformer 임베딩 �
 **관련 노트**:
 *   [[wiki/Models/Small-Models/embeddinggemma-google-deepmind-model]]
 *   [[wiki/Models/SFT/NEFTune Alpha]]
-*   [[wiki/Models/SFT/Transformer Fine-tuning 옵션]]
+*   [[wiki/Models/SFT/Transformer Fine-tuning 옵션]]
 *   [[wiki/Models/SFT/Resize token embeddings]]
 *   [[wiki/RAG/Apple_Embedding_Atlas_RAG_Optimization]]
-*   [[wiki/RAG/Weaviate의 MUVERA 인코딩 알고리즘]]
+*   [[wiki/RAG/Weaviate의 MUVERA 인코딩 알고리즘]]

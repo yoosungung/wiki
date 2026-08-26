@@ -1,6 +1,6 @@
 ---
 title: "AI 기반 코딩의 실제 사례 - Cursor와 OpenAI"
-related_raw: ["[[wiki/Engineering/AI-Native-Engineering/AI 기반 코딩의 실제 사례 - Cursor와 OpenAI.md]]"]
+related_raw: ["[[wiki/Engineering/AI-Native-Engineering/AI 기반 코딩의 실제 사례 - Cursor와 OpenAI.md]]"]
 tags: ['wiki', 'engineering_and_infra', 'ai_development']
 type: "wiki"
 status: "published"

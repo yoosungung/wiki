@@ -34,7 +34,7 @@ Qwen3.6-27B는 Alibaba Qwen 팀에서 출시한 최신 밀집형(Dense) 오픈�
 - 모델 크기 대비 뛰어난 성능으로 인해 'Bigger is Better' 패러다임에서 'Efficiency & Accessibility'로의 전환을 상징하는 모델로 평가받는다.
 
 ## 참고 문서
-- [[wiki/Models/Small-Models/Google Gemma 4 출시 및 Gemma 3와의 성능 비교 분석.md]]
+- [[wiki/Models/Small-Models/Google Gemma 4 출시 및 Gemma 3와의 성능 비교 분석.md]]
 - [[wiki/Models/Small-Models/000_Small-Models-MOC.md]]
 
 ---

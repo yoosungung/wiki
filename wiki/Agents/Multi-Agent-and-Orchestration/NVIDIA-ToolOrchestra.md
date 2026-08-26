@@ -35,6 +35,6 @@ ToolOrchestra는 80억(8B) 파라미터의 작은 오케스트레이터 모델�
 
 ---
 ## 관련 노트
-- [[wiki/Agents/Multi-Agent-and-Orchestration/멀티-에이전트-패턴]]
+- [[wiki/Agents/Multi-Agent-and-Orchestration/멀티-에이전트-패턴]]
 - [[wiki/Agents/Robotics-and-VLA/NVIDIA_Physical_AI]]
-- [[wiki/Models/RL/RL-학습의-한계]]
+- [[wiki/Models/RL/RL-학습의-한계]]

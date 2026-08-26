@@ -31,6 +31,6 @@ Unsloth와 Docker를 활용하여 Mac 또는 Windows 환경에서 LLM을 로컬�
 
 *   [[wiki/Engineering/Infrastructure-and-DevOps/KuberbetesPodOperator]]
 *   [[wiki/Engineering/Infrastructure-and-DevOps/DGX Spark]]
-*   [[wiki/Engineering/Infrastructure-and-DevOps/DGX Spark에서의 VLM 파인튜닝]]
+*   [[wiki/Engineering/Infrastructure-and-DevOps/DGX Spark에서의 VLM 파인튜닝]]
 *   [[wiki/Agents/Memory-and-Cognition/OpenMemory]]
 

@@ -51,4 +51,4 @@ Global Brain의 한국 대표인 이경훈님의 LinkedIn 게시물은 빠르게
 *   `https://www.pwc.com/us/en/tech-effect/ai-analytics/ai-predictions.html`
 *   `https://d-a-ch.tistory.com/m/306`
 
-- [[wiki/Business/AI 에이전트를 활용한 마케팅 혁신 - SafetyCulture 사례]]
+- [[wiki/Business/AI 에이전트를 활용한 마케팅 혁신 - SafetyCulture 사례]]

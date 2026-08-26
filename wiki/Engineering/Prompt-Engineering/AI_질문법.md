@@ -1,6 +1,6 @@
 ---
 title: "AI_질문법"
-related_raw: ["[[wiki/Engineering/Prompt-Engineering/AI_질문법.md]]"]
+related_raw: ["[[wiki/Engineering/Prompt-Engineering/AI_질문법.md]]"]
 tags: ['wiki', 'ai_core', 'llm_concepts', 'prompt_engineering']
 type: "wiki"
 status: "published"

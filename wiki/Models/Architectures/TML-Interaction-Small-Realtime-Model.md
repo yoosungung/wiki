@@ -33,6 +33,6 @@ updated: "2026-05-15"
 미라 무라티의 리더십 아래 개발된 이 모델은 AI가 단순히 텍스트를 생성하는 도구를 넘어, 인간과 실시간으로 협업하는 '동료'로서의 역할을 수행하게 할 것으로 기대됩니다. 현재 리서치 프리뷰 단계이며, 2026년 하반기 정식 출시 예정입니다.
 
 ## 관련 문서
-- [[wiki/Models/Architectures/MoE 모델 분석.md|MoE (Mixture-of-Experts) 모델 분석]]
+- [[wiki/Models/Architectures/MoE 모델 분석.md|MoE (Mixture-of-Experts) 모델 분석]]
 - [[wiki/Models/Architectures/000_Architectures-MOC.md|모델 아키텍처 MOC]]
 - [[wiki/Models/Reasoning-and-Cognition/000_Reasoning-and-Cognition-MOC.md|추론 및 인지 MOC]]

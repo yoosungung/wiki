@@ -1,7 +1,7 @@
 ---
 title: DeepTutor_요약
 related_raw:
-  - "[[wiki/Models/Reasoning-and-Cognition/DeepTutor/DeepTutor_요약]]"
+  - "[[wiki/Models/Reasoning-and-Cognition/DeepTutor/DeepTutor_요약]]"
 tags:
   - wiki
   - ai_core

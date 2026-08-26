@@ -66,7 +66,7 @@ graph TD
 ---
 
 ## 🔗 관련 문서 링크
-- o1/DeepSeek 추론 최적화 동향: [[wiki/Models/SFT/OpenAI o1 추론 스케일링 및 2026년 최신 동향.md]]
+- o1/DeepSeek 추론 최적화 동향: [[wiki/Models/SFT/OpenAI o1 추론 스케일링 및 2026년 최신 동향.md]]
 - 하네스 오케스트레이션 비용 제어: [[wiki/Agents/Coding-and-Engineering/하네스-핸드북-및-하네스-이펙트-연구-2026.md]]
 - [[wiki/Models/Reasoning-and-Cognition/000_Reasoning-and-Cognition-MOC.md]]
 - [[index.md]]

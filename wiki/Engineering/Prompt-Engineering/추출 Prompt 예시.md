@@ -1,6 +1,6 @@
 ---
 title: "추출 Prompt 예시"
-related_raw: ["[[wiki/Engineering/Prompt-Engineering/추출 Prompt 예시.md]]"]
+related_raw: ["[[wiki/Engineering/Prompt-Engineering/추출 Prompt 예시.md]]"]
 tags: ['wiki', 'ai_core', 'llm_concepts', 'prompt_engineering']
 type: "wiki"
 status: "published"

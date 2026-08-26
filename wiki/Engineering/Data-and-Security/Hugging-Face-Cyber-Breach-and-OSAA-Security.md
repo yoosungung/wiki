@@ -29,5 +29,5 @@ type: "wiki"
 
 ## 🔗 연결된 문서
 - [[wiki/Engineering/Data-and-Security/000_Data-and-Security-MOC.md]]
-- [[wiki/Models/Optimization-and-Serving/OpenGuardrails_LLM_앱_보호_오픈소스_AI_보안_플랫폼.md]]
+- [[wiki/Models/Optimization-and-Serving/OpenGuardrails_LLM_앱_보호_오픈소스_AI_보안_플랫폼.md]]
 - [[wiki/Models/Architectures/GLM-5-2-Architecture-and-IndexShare.md]]

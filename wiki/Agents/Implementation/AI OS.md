@@ -28,6 +28,6 @@ Renen Hallak은 변화가 느리게 느껴지지만 이미 일어나고 있으�
 
 ## 관련 노트
 
-- [[wiki/Agents/Multi-Agent-and-Orchestration/멀티-에이전트-패턴]]
+- [[wiki/Agents/Multi-Agent-and-Orchestration/멀티-에이전트-패턴]]
 - [[wiki/Agents/Implementation/Computer Use Agents]]
 - [[Archive/AI Agent 구성 (내부 교육용)]]

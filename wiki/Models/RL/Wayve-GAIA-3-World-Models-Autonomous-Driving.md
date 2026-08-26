@@ -28,6 +28,6 @@ updated: "2026-04-19"
 - ![Mapless Driving Visualization](https://example.com/mapless-drive.png) (센서 데이터만으로 도심 사거리를 통과하는 모습)
 
 ### 5. 관련 노트 링크
-- [[wiki/Business/2026년-로봇-공학-예측]]
+- [[wiki/Business/2026년-로봇-공학-예측]]
 - [[wiki/Models/RL/OpenAI-Sora-Shutdown-Robot-Pivot]]
 - [[wiki/Agents/Robotics-and-VLA/NVIDIA-GTC-2026-Physical-AI]]

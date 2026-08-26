@@ -1,6 +1,6 @@
 ---
 title: "AI 시대의 학습법과 커리어 전략"
-related_raw: ["[[wiki/Models/Reasoning-and-Cognition/AI 시대의 학습법과 커리어 전략.md]]"]
+related_raw: ["[[wiki/Models/Reasoning-and-Cognition/AI 시대의 학습법과 커리어 전략.md]]"]
 tags: ['wiki', 'ai_core', 'llm_concepts', 'llm_applications_and_insights']
 type: "wiki"
 status: "published"
@@ -33,5 +33,5 @@ updated: "2026-04-19"
 
 ## 관련 노트
 
-- [[wiki/Engineering/Prompt-Engineering/AI_질문법]]
-- [[wiki/Models/Reasoning-and-Cognition/LLM 학습 경로]]
+- [[wiki/Engineering/Prompt-Engineering/AI_질문법]]
+- [[wiki/Models/Reasoning-and-Cognition/LLM 학습 경로]]

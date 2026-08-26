@@ -32,7 +32,7 @@ DS-STAR는 DABStep, KramaBench, DA-Code와 같은 벤치마크에서 최첨단 �
 ## 링크
 
 *   [[Archive/AI Agent 구성 (내부 교육용)]]
-*   [[wiki/Agents/Multi-Agent-and-Orchestration/멀티-에이전트-패턴]]
+*   [[wiki/Agents/Multi-Agent-and-Orchestration/멀티-에이전트-패턴]]
 *   [[wiki/Models/Reasoning-and-Cognition/Andrej_Karpathy_on_AGI]]
 *   [[wiki/Models/RL/Parlant]]
 *   [[wiki/Agents/Frameworks/Microsoft-Frameworks/Microsoft Agent Framework]]
@@ -42,10 +42,10 @@ DS-STAR는 DABStep, KramaBench, DA-Code와 같은 벤치마크에서 최첨단 �
 *   Resources/LLM-Concepts/LLM 학습 경로
 *   Resources/LLM-Concepts/추출 Prompt 예시
 *   [[wiki/Models/Reasoning-and-Cognition/Why LLM models are not good at RAG]]
-*   [[wiki/Engineering/Prompt-Engineering/메타_프롬프트]]
+*   [[wiki/Engineering/Prompt-Engineering/메타_프롬프트]]
 *   [[wiki/Models/Reasoning-and-Cognition/LLM_Parallel_Thinking_Parallel-R1]]
-*   [[wiki/Engineering/Prompt-Engineering/AI_질문법]]
-*   [[wiki/Engineering/Prompt-Engineering/프롬프트_컨텍스트_엔지니어링]]
+*   [[wiki/Engineering/Prompt-Engineering/AI_질문법]]
+*   [[wiki/Engineering/Prompt-Engineering/프롬프트_컨텍스트_엔지니어링]]
 *   [[wiki/Engineering/Prompt-Engineering/LLM_Thinking_Time_Prompt_Engineering]]
 *   Resources/Knowledge-Graph/상향식 지식 그래프 구축에서 온톨로지 정의
 *   [[wiki/RAG/RAG-Anything - All-in-One RAG System]]

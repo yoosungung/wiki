@@ -1,6 +1,6 @@
 ---
 title: "Sim_노코드_AI_에이전트_워크플로우_플랫폼"
-related_raw: ["[[wiki/Engineering/AI-Native-Engineering/Sim_노코드_AI_에이전트_워크플로우_플랫폼.md]]"]
+related_raw: ["[[wiki/Engineering/AI-Native-Engineering/Sim_노코드_AI_에이전트_워크플로우_플랫폼.md]]"]
 tags: ['wiki', 'engineering_and_infra', 'dev_environment', 'ai_workflow_tools']
 type: "wiki"
 status: "published"

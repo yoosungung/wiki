@@ -1,6 +1,6 @@
 ---
 title: "Airflow DAG 테스트 환경 구축"
-related_raw: ["[[wiki/Engineering/Infrastructure-and-DevOps/Airflow DAG 테스트 환경 구축.md]]"]
+related_raw: ["[[wiki/Engineering/Infrastructure-and-DevOps/Airflow DAG 테스트 환경 구축.md]]"]
 tags: ['wiki', 'engineering_and_infra', 'dev_environment', 'infrastructure_orchestration']
 type: "wiki"
 status: "published"

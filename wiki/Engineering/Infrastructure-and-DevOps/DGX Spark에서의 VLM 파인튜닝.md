@@ -1,6 +1,6 @@
 ---
 title: "DGX Spark에서의 VLM 파인튜닝"
-related_raw: ["[[wiki/Engineering/Infrastructure-and-DevOps/DGX Spark에서의 VLM 파인튜닝.md]]"]
+related_raw: ["[[wiki/Engineering/Infrastructure-and-DevOps/DGX Spark에서의 VLM 파인튜닝.md]]"]
 tags: ['wiki', 'engineering_and_infra', 'ai_development', 'dgx']
 type: "wiki"
 status: "published"

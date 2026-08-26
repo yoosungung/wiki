@@ -35,10 +35,10 @@ MCP는 클라이언트-서버 모델을 기반으로 하며 다음과 같이 구
 - [Builder.io: MCP Servers Implementation Guide](https://builder.io/blog/mcp-implementation)
 
 ## 6. 관련 노트 (Internal Links)
-- [[wiki/Agents/Frameworks/MCP/AI-에이전트-개발-트렌드-MCP에서-Skills로]]
+- [[wiki/Agents/Frameworks/MCP/AI-에이전트-개발-트렌드-MCP에서-Skills로]]
 - [[wiki/Agents/Text-to-SQL/DBHub_MCP_Server]]
 - [[wiki/Agents/Frameworks/MCP/MCP]]
-- [[wiki/Agents/Frameworks/2026년 AI 에이전트 트렌드]]
+- [[wiki/Agents/Frameworks/2026년 AI 에이전트 트렌드]]
 
 ---
 *Last Updated: 2026-03-14*

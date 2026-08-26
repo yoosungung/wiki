@@ -31,5 +31,5 @@ LLM이 직면하는 '어려운 문제'란 단일 문서나 단일 정보만으�
 
 ## 관련 문서
 - [[wiki/Models/Reasoning-and-Cognition/000_Reasoning-and-Cognition-MOC.md|추론 및 인지 MOC]]
-- [[wiki/Models/Reasoning-and-Cognition/LLM 추론의 함정 - 생각을 멈춰야 정확해진다.md|추론 시의 생각 멈추기 전략]]
+- [[wiki/Models/Reasoning-and-Cognition/LLM 추론의 함정 - 생각을 멈춰야 정확해진다.md|추론 시의 생각 멈추기 전략]]
 - [[wiki/RAG/DEO-RAG-BigQuery-Gemini.md|DEO-RAG: 고도화된 RAG 시스템]]

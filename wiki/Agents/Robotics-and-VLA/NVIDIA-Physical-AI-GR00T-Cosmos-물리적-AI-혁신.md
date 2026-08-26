@@ -1,6 +1,6 @@
 ---
 title: "NVIDIA-Physical-AI-GR00T-Cosmos-물리적-AI-혁신"
-related_raw: ["[[wiki/Agents/Robotics-and-VLA/NVIDIA-Physical-AI-GR00T-Cosmos-물리적-AI-혁신.md]]"]
+related_raw: ["[[wiki/Agents/Robotics-and-VLA/NVIDIA-Physical-AI-GR00T-Cosmos-물리적-AI-혁신.md]]"]
 tags: ['wiki', 'agents_and_systems', 'robotics_&_physical_ai_(vla)', 'embodied_ai_google_sima_nvidia_physical_ai']
 type: "wiki"
 status: "published"

@@ -1,6 +1,6 @@
 ---
 title: "torch.optim 알고리즘"
-related_raw: ["[[wiki/Models/SFT/torch.optim 알고리즘.md]]"]
+related_raw: ["[[wiki/Models/SFT/torch.optim 알고리즘.md]]"]
 tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_parameters']
 type: "wiki"
 status: "published"

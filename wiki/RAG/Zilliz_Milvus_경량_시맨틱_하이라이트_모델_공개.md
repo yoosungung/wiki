@@ -1,7 +1,7 @@
 ---
 title: Zilliz_Milvus_경량_시맨틱_하이라이트_모델_공개
 related_raw:
-  - "[[wiki/RAG/Zilliz_Milvus_경량_시맨틱_하이라이트_모델_공개]]"
+  - "[[wiki/RAG/Zilliz_Milvus_경량_시맨틱_하이라이트_모델_공개]]"
 tags:
   - wiki
   - knowledge_and_memory

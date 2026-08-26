@@ -28,6 +28,6 @@ NVIDIA GTC 2026의 핵심 키워드는 **'Physical AI (물리적 AI)'**입니다
 - ![Physical AI Data Factory](https://example.com/ai-factory.png) (데이터 수집-학습-시뮬레이션-배포의 선순환 구조)
 
 ### 5. 관련 노트 링크
-- [[wiki/Business/2026년-로봇-공학-예측]]
+- [[wiki/Business/2026년-로봇-공학-예측]]
 - [[wiki/Agents/Self-Evolving/Self-Evolving-Agents-NVIDIA]]
-- [[wiki/Agents/Frameworks/구글의-Embodied-Agent-SIMA]]
+- [[wiki/Agents/Frameworks/구글의-Embodied-Agent-SIMA]]

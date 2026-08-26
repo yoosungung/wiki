@@ -1,6 +1,6 @@
 ---
 title: "합성 정신병리학 (Synthetic Psychopathology)의 등장"
-related_raw: ["[[wiki/Models/Reasoning-and-Cognition/합성 정신병리학 (Synthetic Psychopathology)의 등장.md]]"]
+related_raw: ["[[wiki/Models/Reasoning-and-Cognition/합성 정신병리학 (Synthetic Psychopathology)의 등장.md]]"]
 tags: ['wiki', 'ai_core', 'llm_concepts', 'llm_applications_and_insights']
 type: "wiki"
 status: "published"

@@ -1,6 +1,6 @@
 ---
 title: "Google Research - Small Models, Big Results - 큰 모델은 필요없다, 데이터 중심 AI가 다시 온다"
-related_raw: ["[[wiki/Models/Small-Models/Google Research - Small Models, Big Results - 큰 모델은 필요없다, 데이터 중심 AI가 다시 온다.md]]"]
+related_raw: ["[[wiki/Models/Small-Models/Google Research - Small Models, Big Results - 큰 모델은 필요없다, 데이터 중심 AI가 다시 온다.md]]"]
 tags: ['wiki', 'ai_core', 'ai', 'small_models_and_data_centric_ai']
 type: "wiki"
 status: "published"
@@ -37,7 +37,7 @@ updated: "2026-04-19"
 **원본 URL**: [LinkedIn Post](https://www.linkedin.com/posts/suk-hyun-k-31ba9b369_google-ai-suaqtztfmqvz-activity-7420601874111836160-s21G?utm_source=share&utm_medium=member_ios&rcm=ACoAADm5eyABU_duDuXv1f9N-6JhXB_iNO6faes)
 
 **관련 노트**:
-*   [[wiki/Models/Reasoning-and-Cognition/Metacognitive Reuse - LLM 추론의 새로운 패러다임]]
-*   [[wiki/Models/Architectures/Lottery Ticket Hypothesis와 LLM]]
+*   [[wiki/Models/Reasoning-and-Cognition/Metacognitive Reuse - LLM 추론의 새로운 패러다임]]
+*   [[wiki/Models/Architectures/Lottery Ticket Hypothesis와 LLM]]
 *   [[Resources/AI Core/AI/AI와 정보이론 - 에피플렉시티]]
-*   [[wiki/Models/Optimization-and-Serving/OpenGuardrails_LLM_앱_보호_오픈소스_AI_보안_플랫폼]]
+*   [[wiki/Models/Optimization-and-Serving/OpenGuardrails_LLM_앱_보호_오픈소스_AI_보안_플랫폼]]

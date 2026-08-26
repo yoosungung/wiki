@@ -1,7 +1,7 @@
 ---
 title: 인간과 AI의 학습 방식 유사점과 차이점
 related_raw:
-  - "[[wiki/Models/Reasoning-and-Cognition/AI Cognition/인간과 AI의 학습 방식 유사점과 차이점]]"
+  - "[[wiki/Models/Reasoning-and-Cognition/AI Cognition/인간과 AI의 학습 방식 유사점과 차이점]]"
 tags:
   - wiki
   - ai_core
@@ -48,11 +48,11 @@ updated: "2026-04-19"
 
 ## 연관 노트
 
-*   [[wiki/Models/Reasoning-and-Cognition/LLM 학습 패러다임]]
+*   [[wiki/Models/Reasoning-and-Cognition/LLM 학습 패러다임]]
 *   [[wiki/Models/Architectures/RoPE-and-NoPE-Multi-Scale-Architecture]]
 *   [[wiki/Models/Reasoning-and-Cognition/Memory-centric-Intelligence]]
-*   [[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리 - Part 2 - 아키텍처와 구현]]
-*   [[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리 - Part 3 - 심화 학습]]
+*   [[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리 - Part 2 - 아키텍처와 구현]]
+*   [[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리 - Part 3 - 심화 학습]]
 *   LLM-Concepts/Transformer 모델의 구조와 작동 원리 - 깊이 이해
 *   [[wiki/RAG/RAG-Best-Practices]]
 *   [[wiki/Models/Reasoning-and-Cognition/Why LLM models are not good at RAG]]

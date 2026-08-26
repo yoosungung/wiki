@@ -1,6 +1,6 @@
 ---
 title: "AI 에이전트 Eval 심층 분석"
-related_raw: ["[[wiki/Agents/Frameworks/Evaluations/AI 에이전트 Eval 심층 분석.md]]"]
+related_raw: ["[[wiki/Agents/Frameworks/Evaluations/AI 에이전트 Eval 심층 분석.md]]"]
 tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'agent_frameworks_and_trends']
 type: "wiki"
 status: "published"

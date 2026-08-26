@@ -1,7 +1,7 @@
 ---
 title: 스탠포드_AI_강의_무료_공개
 related_raw:
-  - "[[wiki/Models/Reasoning-and-Cognition/Stanford AI Courses/스탠포드_AI_강의_무료_공개]]"
+  - "[[wiki/Models/Reasoning-and-Cognition/Stanford AI Courses/스탠포드_AI_강의_무료_공개]]"
 tags:
   - wiki
   - ai_core

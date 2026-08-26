@@ -35,8 +35,8 @@ updated: "2026-04-19"
 
 ## 6. 관련 노트 (Internal Links)
 - [[wiki/Agents/Text-to-SQL/000_T2SQL-MOC]]
-- [[wiki/Models/Architectures/BigQuery의 AI 시대에 맞춰 재해석된 SQL]]
-- [[wiki/Agents/Frameworks/LangChain/LangGraph와 Azure OpenAI 기반 NL2SQL 에이전트]]
+- [[wiki/Models/Architectures/BigQuery의 AI 시대에 맞춰 재해석된 SQL]]
+- [[wiki/Agents/Frameworks/LangChain/LangGraph와 Azure OpenAI 기반 NL2SQL 에이전트]]
 
 ---
 *Last Updated: 2026-03-14*
