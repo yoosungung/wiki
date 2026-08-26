@@ -3,11 +3,13 @@ id: refsql-seal-for-ex-mismatch
 title: "EX mismatch는 refSql seal로 고정한다"
 status: canonical
 owner: km
-updated: "2026-08-25"
-last_updated: "2026-08-25"
+updated: "2026-08-26"
+last_updated: "2026-08-26"
 review_after: "2026-11-20"
 sources:
   - ticket:689
+  - ticket:1326
+  - ticket:1327
   - ticket:699
   - ticket:564
   - ticket:752
@@ -50,6 +52,12 @@ type: "wiki"
 | `/detail` 연속 방문 및 정규화 | 단순히 `path='/detail'`만 필터링하여 오차 발생 | `option='detail'` 필터링 및 `/detail`+`/detail/`→`/detail`, 빈 경로→`/` 정규화 적용 |
 | unsold track duration | InvoiceLine LEFT JOIN 누락으로 판매되지 않은 트랙 누락 | short/medium 분류 시 `LEFT JOIN InvoiceLine`으로 unsold 트랙의 min duration 포함 |
 | PG point/JSON Haversine | PG `point` 좌표 및 JSON `(city::jsonb)->>'en'` 파싱, Haversine 공식 오차 | `point(lon,lat)` 좌표 추출 및 JSON text casting, `6371*2*ASIN(SQRT(...))` 계산식 적용 |
+| `log.activity_log` 중복 row | 동일 `(session,stamp,path,…)`가 ×5/×7 적재; `ORDER BY stamp`만으로 Spider2 gold_a 재현 불가 | VALUES refSql로 gold_a pin; 모델 description에 stamp-tie 비결정성 명시 |
+| `/detail/` trailing slash | landing/exit UNION에서 `/detail/` vs `/detail` 불일치 | `/detail/`→`/detail` 정규화 + `option='detail'` 필터 |
+| 빈 `search_type` | CSV NaN vs SQL `''` — `compare_pandas_table` 실패 | seal에서 empty string을 SQL NULL로; description에 NULL 요구 |
+| tip duplicate rich-grain 모델 | tip-only `weekly_sale`(KO region/platform/demographic)이 fixture 1위 seal보다 rebuild를 가로챔 | tip 중복 삭제·thin; seal명을 질문 vocab+SCORE_CAP 알파(`…attribute_impact_june15_12wk`)로 rename |
+| rolling AVG ~0.1 off lite gold | warehouse AVG가 Spider2 lite CSV와 미세 불일치 | VALUES로 gold_a pin; SELECT-only description |
+| baseline month 이중 필터 | seal이 baseline drop 후 agent가 `WHERE month > MIN(month)` 추가 → 2 rows | VALUES + baseline anchor row; description에 필터 의무화; PG smoke 동일 필터 |
 
 ## 적용
 

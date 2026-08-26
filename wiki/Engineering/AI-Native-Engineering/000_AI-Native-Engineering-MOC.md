@@ -44,6 +44,7 @@
 - [[wiki/Engineering/AI-Native-Engineering/In-Process-ASGI-Load-Harness-Pattern.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Intent-Pass-Diff-First-Merge.md]]
 - [[wiki/Engineering/AI-Native-Engineering/L0-Goals-In-Architecture.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Leantime-Cross-Tenant-Mention-ACL.md]]
 - [[wiki/Engineering/AI-Native-Engineering/List-Api-Corrupt-Payload-Head-Error.md]]
 - [[wiki/Engineering/AI-Native-Engineering/LLM-Tool-Payload-Context-Trim.md]]
 - [[wiki/Engineering/AI-Native-Engineering/MCP-Python-Package-Skew-Import-Failure.md]]

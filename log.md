@@ -1,6 +1,12 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-26 | INBOX_DRAIN | inbox/ | 25 | Leantime-Cross-Tenant-Mention-ACL·RefSql-Seal 증분; pm/nl2sql/qa/ta/aa 진행 EXCLUDE; git rm |
+| 2026-08-26 | RESEARCH | Web | 1 | LiteRT Gemma4 Intel OpenVino Panther/Lunar Lake NPU; MTP 2.2× ALREADY_COVERED |
+| 2026-08-26 | INGEST | raw/ | 1 | litert-lm-gemma4-intel-openvino-npu |
+| 2026-08-26 | SYNTHESIZE | wiki/ | 3 | Leantime-Cross-Tenant-Mention-ACL 신설; RefSql-Seal §log/bank; 스마트폰§Intel OpenVino |
+| 2026-08-26 | CLEANUP | raw/ | 1 | 합성 후 raw 삭제 |
+| 2026-08-26 | LINT | Root / wiki | ALL | 데일리 갱신, D-2(2026-08-24) 삭제, INDEX·연구_주제 META |
 | 2026-08-25 | INBOX_DRAIN | inbox/ | 48 | Stacked-Seal-PR·Metadata-SSE·Kaniko-422 갱신; pm-checkpoint·qa/aa 진행 EXCLUDE; git rm |
 | 2026-08-25 | RESEARCH | Web | 1 | Supermemory MCP 4.0 tool surface (search_memory/add_memory/listMemories); LiteRT MTP ALREADY_COVERED |
 | 2026-08-25 | INGEST | raw/ | 1 | supermemory-mcp-v4-tool-surface |
