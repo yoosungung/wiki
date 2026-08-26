@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-08-22 (inbox drain ta-k8s-daily; kubelet eviction wiki 신설) | Root: wiki/
+[META] Updated: 2026-08-26 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -23,8 +23,9 @@
     - Frameworks: [[wiki/Agents/Frameworks/000_Frameworks-MOC.md]]
 
 ### wiki/Models/
-- Sub: [Optimization-and-Serving, Architectures, Small-Models, SFT, Multimodal-and-Vision, Reasoning-and-Cognition, RL]
+- Sub: [Optimization-and-Serving, Optimization, Architectures, Small-Models, SFT, Multimodal-and-Vision, Reasoning-and-Cognition, RL]
     - Optimization-and-Serving: [[wiki/Models/Optimization-and-Serving/000_Optimization-and-Serving-MOC.md]]
+    - Optimization: [[wiki/Models/Optimization/000_Optimization-MOC.md]]
     - Architectures: [[wiki/Models/Architectures/000_Architectures-MOC.md]]
     - Small-Models: [[wiki/Models/Small-Models/000_Small-Models-MOC.md]]
     - SFT: [[wiki/Models/SFT/000_SFT-MOC.md]]
@@ -36,11 +37,13 @@
 - Sub: []
 
 ### wiki/Engineering/
-- Sub: [Data-and-Security, Prompt-Engineering, Infrastructure-and-DevOps, Development-Environment, AI-Native-Engineering]
+- Sub: [Data-and-Security, Security, Prompt-Engineering, Infrastructure-and-DevOps, Development-Environment, Prompt, AI-Native-Engineering]
     - Data-and-Security: [[wiki/Engineering/Data-and-Security/000_Data-and-Security-MOC.md]]
+    - Security: [[wiki/Engineering/Security/000_Security-MOC.md]]
     - Prompt-Engineering: [[wiki/Engineering/Prompt-Engineering/000_Prompt-Engineering-MOC.md]]
     - Infrastructure-and-DevOps: [[wiki/Engineering/Infrastructure-and-DevOps/000_Infrastructure-and-DevOps-MOC.md]]
     - Development-Environment: [[wiki/Engineering/Development-Environment/000_Development-Environment-MOC.md]]
+    - Prompt: [[wiki/Engineering/Prompt/000_Prompt-MOC.md]]
     - AI-Native-Engineering: [[wiki/Engineering/AI-Native-Engineering/000_AI-Native-Engineering-MOC.md]]
 
 ### wiki/Business/
@@ -49,31 +52,34 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
-- wiki/Agents/ (249 files)
+- wiki/Agents/ (242 files)
     - Multi-Agent-and-Orchestration: 18 files
-    - Text-to-SQL: 34 files
-    - Evaluations: 10 files
-    - Memory-and-Cognition: 24 files
-    - Robotics-and-VLA: 21 files
-    - Implementation: 41 files
-    - Coding-and-Engineering: 22 files
-    - Self-Evolving: 11 files
-    - Frameworks: 67 files
-- wiki/Models/ (230 files)
-    - Optimization-and-Serving: 46 files
-    - Architectures: 29 files
+    - Text-to-SQL: 33 files
+    - Evaluations: 9 files
+    - Memory-and-Cognition: 23 files
+    - Robotics-and-VLA: 20 files
+    - Implementation: 45 files
+    - Coding-and-Engineering: 21 files
+    - Self-Evolving: 10 files
+    - Frameworks: 63 files
+- wiki/Models/ (236 files)
+    - Optimization-and-Serving: 50 files
+    - Optimization: 2 files
+    - Architectures: 31 files
     - Small-Models: 18 files
-    - SFT: 51 files
-    - Multimodal-and-Vision: 10 files
-    - Reasoning-and-Cognition: 34 files
-    - RL: 40 files
-- wiki/RAG/ (68 files)
-- wiki/Engineering/ (157 files)
+    - SFT: 50 files
+    - Multimodal-and-Vision: 9 files
+    - Reasoning-and-Cognition: 31 files
+    - RL: 44 files
+- wiki/RAG/ (105 files)
+- wiki/Engineering/ (173 files)
     - Data-and-Security: 14 files
-    - Prompt-Engineering: 12 files
-    - Infrastructure-and-DevOps: 45 files
-    - Development-Environment: 17 files
-    - AI-Native-Engineering: 67 files
-- wiki/Business/ (39 files)
-    - Recommendation Systems: 7 files
-    - Trends: 9 files
+    - Security: 1 files
+    - Prompt-Engineering: 18 files
+    - Infrastructure-and-DevOps: 47 files
+    - Development-Environment: 21 files
+    - Prompt: 1 files
+    - AI-Native-Engineering: 70 files
+- wiki/Business/ (40 files)
+    - Recommendation Systems: 6 files
+    - Trends: 12 files
