@@ -1,6 +1,6 @@
 ---
 title: "Unsloth AI - GLM-4.7-Flash 로컬 실행 및 미세 조정"
-related_raw: ["[[wiki/Agents/Frameworks/Unsloth AI - GLM-4.7-Flash 로컬 실행 및 미세 조정.md]]"]
+related_raw: ["[[wiki/Agents/Frameworks/Unsloth AI - GLM-4.7-Flash 로컬 실행 및 미세 조정.md]]"]
 tags: ['wiki', 'ai_core', 'models_and_libraries', 'llm_frameworks_and_libraries']
 type: "wiki"
 status: "published"
@@ -27,4 +27,4 @@ Unsloth AI는 또한 GLM-4.7-Flash 모델의 미세 조정(fine-tuning) 기능�
 *   [[wiki/Models/SFT/LLM_FineTuning_Libraries]]
 *   [[wiki/Models/Optimization-and-Serving/oLLM_Lightweight_LLM_Inference_Library]]
 *   [[wiki/Models/SFT/PEFT-Options]]
-*   [[wiki/Models/Reasoning-and-Cognition/LLM 학습 패러다임]]
+*   [[wiki/Models/Reasoning-and-Cognition/LLM 학습 패러다임]]

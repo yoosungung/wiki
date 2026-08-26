@@ -37,4 +37,4 @@ date: "2026-05-12"
 ---
 **관련 문서**:
 - [[wiki/Models/Optimization-and-Serving/Rebellions-NPU-LLM-Serving.md]]
-- [[wiki/Models/Optimization-and-Serving/LLM Compressor - vllm 모델 최적화 라이브러리.md]]
+- [[wiki/Models/Optimization-and-Serving/LLM Compressor - vllm 모델 최적화 라이브러리.md]]

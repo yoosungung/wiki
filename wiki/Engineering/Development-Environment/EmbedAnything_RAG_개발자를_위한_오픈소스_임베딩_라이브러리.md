@@ -1,6 +1,6 @@
 ---
 title: "EmbedAnything_RAG_개발자를_위한_오픈소스_임베딩_라이브러리"
-related_raw: ["[[wiki/Engineering/Development-Environment/EmbedAnything_RAG_개발자를_위한_오픈소스_임베딩_라이브러리.md]]"]
+related_raw: ["[[wiki/Engineering/Development-Environment/EmbedAnything_RAG_개발자를_위한_오픈소스_임베딩_라이브러리.md]]"]
 tags: ['wiki', 'ai_core', 'ai_ml_development', 'embeddings']
 type: "wiki"
 status: "published"

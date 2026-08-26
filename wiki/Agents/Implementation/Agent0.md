@@ -44,6 +44,6 @@ Agent0-VL은 Agent0 패러다임을 다중 모달 추론 작업으로 확장하�
 
 ---
 ## 관련 노트
-- [[wiki/Models/RL/Self-Evolving Agents - 자가 학습형 AI 에이전트 재훈련 매뉴얼]]
-- [[wiki/Engineering/Infrastructure-and-DevOps/DGX Spark에서의 VLM 파인튜닝]]
+- [[wiki/Models/RL/Self-Evolving Agents - 자가 학습형 AI 에이전트 재훈련 매뉴얼]]
+- [[wiki/Engineering/Infrastructure-and-DevOps/DGX Spark에서의 VLM 파인튜닝]]
 - [[wiki/Agents/Robotics-and-VLA/VLA-Adapter - Effective Paradigm for Tiny-Scale VLA Models]]

@@ -1,6 +1,6 @@
 ---
 title: "바이트댄스_멀티모달_AI_에이전트_스택_오픈소스_공개"
-related_raw: ["[[wiki/Agents/Frameworks/바이트댄스_멀티모달_AI_에이전트_스택_오픈소스_공개.md]]"]
+related_raw: ["[[wiki/Agents/Frameworks/바이트댄스_멀티모달_AI_에이전트_스택_오픈소스_공개.md]]"]
 tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'bytedance']
 type: "wiki"
 status: "published"

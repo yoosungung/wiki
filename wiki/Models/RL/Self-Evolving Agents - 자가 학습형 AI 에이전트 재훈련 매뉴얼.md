@@ -1,6 +1,6 @@
 ---
 title: "Self-Evolving Agents - 자가 학습형 AI 에이전트 재훈련 매뉴얼"
-related_raw: ["[[wiki/Models/RL/Self-Evolving Agents - 자가 학습형 AI 에이전트 재훈련 매뉴얼.md]]"]
+related_raw: ["[[wiki/Models/RL/Self-Evolving Agents - 자가 학습형 AI 에이전트 재훈련 매뉴얼.md]]"]
 tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'basetech', 'llm_agent_training_rl']
 type: "wiki"
 status: "published"

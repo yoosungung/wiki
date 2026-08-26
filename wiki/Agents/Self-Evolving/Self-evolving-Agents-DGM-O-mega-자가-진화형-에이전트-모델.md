@@ -1,6 +1,6 @@
 ---
 title: "Self-evolving-Agents-DGM-O-mega-자가-진화형-에이전트-모델"
-related_raw: ["[[wiki/Agents/Self-Evolving/Self-evolving-Agents-DGM-O-mega-자가-진화형-에이전트-모델.md]]"]
+related_raw: ["[[wiki/Agents/Self-Evolving/Self-evolving-Agents-DGM-O-mega-자가-진화형-에이전트-모델.md]]"]
 tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'self_evolving_agents']
 type: "wiki"
 status: "published"
@@ -29,5 +29,5 @@ O-mega의 'Self-evolving Agents DGM(Dynamic Growth Model)'은 에이전트가 �
 ## 관련 링크
 - [[wiki/Agents/Self-Evolving/Hyperagents-Self-Evolving-AI]]
 - [[wiki/Agents/Self-Evolving/OpenSpace-Self-Evolving-Agents]]
-- [[wiki/Models/RL/Self-Evolving Agents - 자가 학습형 AI 에이전트 재훈련 매뉴얼]]
-- [[wiki/Models/Reasoning-and-Cognition/LLM 학습 패러다임]]
+- [[wiki/Models/RL/Self-Evolving Agents - 자가 학습형 AI 에이전트 재훈련 매뉴얼]]
+- [[wiki/Models/Reasoning-and-Cognition/LLM 학습 패러다임]]

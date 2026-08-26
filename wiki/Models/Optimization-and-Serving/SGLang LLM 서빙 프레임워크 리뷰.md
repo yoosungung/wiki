@@ -1,6 +1,6 @@
 ---
 title: "SGLang LLM 서빙 프레임워크 리뷰"
-related_raw: ["[[wiki/Models/Optimization-and-Serving/SGLang LLM 서빙 프레임워크 리뷰.md]]"]
+related_raw: ["[[wiki/Models/Optimization-and-Serving/SGLang LLM 서빙 프레임워크 리뷰.md]]"]
 tags: ['wiki', 'ai_core', 'models_and_libraries', 'llm_optimization_and_serving']
 type: "wiki"
 status: "published"

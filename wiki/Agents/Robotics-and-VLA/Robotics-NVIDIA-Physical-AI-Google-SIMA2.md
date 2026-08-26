@@ -39,4 +39,4 @@ Mobileye가 Mentee Robotics를 인수하며 자율주행 기술과 휴머노이�
 - [[wiki/Models/RL/LeWorldModel-JEPA-2026]]: JEPA 기반 세계 모델과 로봇의 상호작용.
 - [[wiki/Models/RL/OpenAI-Sora-Shutdown-Robot-Pivot]]: Sora 기술을 활용한 로봇용 합성 데이터 팩토리(Synthetic Data Factory) 전략.
 - Resources/Daily-Search-Topics: VLA 모델 및 Embodied AI 관련 연구 키워드.
-- [[wiki/Business/2026년-로봇-공학-예측]]: 로봇 공학 분야의 연간 전망과 기술 로드맵.
+- [[wiki/Business/2026년-로봇-공학-예측]]: 로봇 공학 분야의 연간 전망과 기술 로드맵.

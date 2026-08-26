@@ -1,6 +1,6 @@
 ---
 title: "Gemini 3.0 슬라이드 제작"
-related_raw: ["[[wiki/Models/Reasoning-and-Cognition/Gemini 3.0 슬라이드 제작.md]]"]
+related_raw: ["[[wiki/Models/Reasoning-and-Cognition/Gemini 3.0 슬라이드 제작.md]]"]
 tags: ['wiki', 'ai_core', 'models_and_libraries', 'llm_models']
 type: "wiki"
 status: "published"

@@ -88,7 +88,7 @@ live Deployment가 이미 `40960`+`fp8_e4m3`인데 git manifest가 `32768`로 �
 
 ## 🔗 관련 문서
 
-- [[wiki/Models/Optimization-and-Serving/SGLang LLM 서빙 프레임워크 리뷰.md]]
+- [[wiki/Models/Optimization-and-Serving/SGLang LLM 서빙 프레임워크 리뷰.md]]
 - [[wiki/Models/Optimization-and-Serving/000_Optimization-and-Serving-MOC.md]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/path-graph-Argo-ImagePullBackOff-runbook.md]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/K8s-Intentional-Scale-Zero-Empty-Endpoints.md]]

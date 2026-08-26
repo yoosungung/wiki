@@ -1,6 +1,6 @@
 ---
 title: "Claude Code의 Task 변화와 AI-native 엔지니어의 조건"
-related_raw: ["[[wiki/Agents/Coding-and-Engineering/Claude Code의 Task 변화와 AI-native 엔지니어의 조건.md]]"]
+related_raw: ["[[wiki/Agents/Coding-and-Engineering/Claude Code의 Task 변화와 AI-native 엔지니어의 조건.md]]"]
 tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'multi_agent_orchestration_and_patterns']
 type: "wiki"
 status: "published"
@@ -41,11 +41,11 @@ Swarm을 효과적으로 활용하기 위한 세 가지 접근 방식은 다음�
 *   Swarm의 작동 구조를 확인할 수 있는 gist URL: `https://lnkd.in/gVQtZJbf`
 
 **관련 노트**:
-*   [[wiki/Agents/Multi-Agent-and-Orchestration/Langchain_다중_에이전트_아키텍처_선택]]
+*   [[wiki/Agents/Multi-Agent-and-Orchestration/Langchain_다중_에이전트_아키텍처_선택]]
 *   [[wiki/Agents/Multi-Agent-and-Orchestration/LatentMAS]]
 *   [[wiki/Agents/Multi-Agent-and-Orchestration/Multi-Agent Consensus Alignment]]
 *   [[wiki/Agents/Multi-Agent-and-Orchestration/Multi-Agent Systems - Collaboration, Complexity, and Innovation]]
-*   [[wiki/Agents/Coding-and-Engineering/Anthropic의 코딩 AI 에이전트, 치명적인 사이버 공격에 직면]]
+*   [[wiki/Agents/Coding-and-Engineering/Anthropic의 코딩 AI 에이전트, 치명적인 사이버 공격에 직면]]
 *   [[wiki/Agents/Coding-and-Engineering/Claude_Code_on_the_web]]
-*   [[wiki/Agents/Memory-and-Cognition/Claude-Mem 지속적인 메모리 압축 시스템]]
+*   [[wiki/Agents/Memory-and-Cognition/Claude-Mem 지속적인 메모리 압축 시스템]]
 *   [[wiki/Engineering/AI-Native-Engineering/Claude Code 개발자 Boris의 효율적인 AI 활용 팁]]

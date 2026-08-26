@@ -1,6 +1,6 @@
 ---
 title: "AI-에이전트-개발-트렌드-MCP에서-Skills로"
-related_raw: ["[[wiki/Agents/Frameworks/MCP/AI-에이전트-개발-트렌드-MCP에서-Skills로.md]]"]
+related_raw: ["[[wiki/Agents/Frameworks/MCP/AI-에이전트-개발-트렌드-MCP에서-Skills로.md]]"]
 tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'basetech', 'llm_systems_projects']
 type: "wiki"
 status: "published"

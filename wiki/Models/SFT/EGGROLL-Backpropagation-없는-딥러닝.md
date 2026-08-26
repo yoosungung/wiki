@@ -1,6 +1,6 @@
 ---
 title: "EGGROLL-Backpropagation-없는-딥러닝"
-related_raw: ["[[wiki/Models/SFT/EGGROLL-Backpropagation-없는-딥러닝.md]]"]
+related_raw: ["[[wiki/Models/SFT/EGGROLL-Backpropagation-없는-딥러닝.md]]"]
 tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_concepts']
 type: "wiki"
 status: "published"
@@ -37,4 +37,4 @@ EGGROLL은 '미분 가능성'과 'gradient'라는 딥러닝의 기본 전제를 
 
 ## 관련 노트
 
-- [[wiki/Engineering/Infrastructure-and-DevOps/DGX Spark에서의 VLM 파인튜닝]]
+- [[wiki/Engineering/Infrastructure-and-DevOps/DGX Spark에서의 VLM 파인튜닝]]

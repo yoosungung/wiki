@@ -1,6 +1,6 @@
 ---
 title: "LLM Compressor - vllm 모델 최적화 라이브러리"
-related_raw: ["[[wiki/Models/Optimization-and-Serving/LLM Compressor - vllm 모델 최적화 라이브러리.md]]"]
+related_raw: ["[[wiki/Models/Optimization-and-Serving/LLM Compressor - vllm 모델 최적화 라이브러리.md]]"]
 tags: ['wiki', 'ai_core', 'models_and_libraries', 'llm_optimization_and_serving']
 type: "wiki"
 status: "published"

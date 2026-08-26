@@ -23,6 +23,6 @@ updated: "2026-04-19"
 
 ## 관련 노트
 - [[wiki/Agents/Frameworks/LangChain/LangGraph-Summary-2026]]
-- [[wiki/Agents/Multi-Agent-and-Orchestration/Langchain_다중_에이전트_아키텍처_선택]]
+- [[wiki/Agents/Multi-Agent-and-Orchestration/Langchain_다중_에이전트_아키텍처_선택]]
 - [[Multi Agent Orchestration and Patterns]]
 - [[LangGraph v1.0 and Multi-Agent Design Patterns]]

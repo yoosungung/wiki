@@ -1,6 +1,6 @@
 ---
 title: "Google Gemma 4 출시 및 Gemma 3와의 성능 비교 분석"
-related_raw: ["[[wiki/Models/Small-Models/Google Gemma 4 출시 및 Gemma 3와의 성능 비교 분석.md]]"]
+related_raw: ["[[wiki/Models/Small-Models/Google Gemma 4 출시 및 Gemma 3와의 성능 비교 분석.md]]"]
 tags: ['wiki', 'ai_core', 'ai', 'llms', 'gemma4']
 type: "wiki"
 status: "published"
@@ -29,7 +29,7 @@ Gemma 3가 여전히 저사양 기기나 온디바이스 환경에서 유효한 
 
 ---
 ## 관련 문서
-- [[wiki/Models/Reasoning-and-Cognition/LLM 학습 패러다임.md]]
+- [[wiki/Models/Reasoning-and-Cognition/LLM 학습 패러다임.md]]
 
 ## 출처
 - [1] towardsai.net - Gemma 3 vs Gemma 4 Benchmark Analysis

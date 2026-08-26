@@ -1,6 +1,6 @@
 ---
 title: "LangAlpha 다중 에이전트 AI 주식 분석 도구"
-related_raw: ["[[wiki/Agents/Multi-Agent-and-Orchestration/LangAlpha 다중 에이전트 AI 주식 분석 도구.md]]"]
+related_raw: ["[[wiki/Agents/Multi-Agent-and-Orchestration/LangAlpha 다중 에이전트 AI 주식 분석 도구.md]]"]
 tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'implementations', 'general_llm_agent_projects']
 type: "wiki"
 status: "published"

@@ -1,6 +1,6 @@
 ---
 title: "k8s에서 letsencrypt 인증서"
-related_raw: ["[[wiki/Engineering/Infrastructure-and-DevOps/k8s에서 letsencrypt 인증서.md]]"]
+related_raw: ["[[wiki/Engineering/Infrastructure-and-DevOps/k8s에서 letsencrypt 인증서.md]]"]
 tags: ['wiki', 'engineering_and_infra', 'dev_environment']
 type: "wiki"
 status: "published"

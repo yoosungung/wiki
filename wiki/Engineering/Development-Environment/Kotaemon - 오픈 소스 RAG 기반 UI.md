@@ -1,6 +1,6 @@
 ---
 title: "Kotaemon - 오픈 소스 RAG 기반 UI"
-related_raw: ["[[wiki/Engineering/Development-Environment/Kotaemon - 오픈 소스 RAG 기반 UI.md]]"]
+related_raw: ["[[wiki/Engineering/Development-Environment/Kotaemon - 오픈 소스 RAG 기반 UI.md]]"]
 tags: ['wiki', 'engineering_and_infra', 'dev_environment']
 type: "wiki"
 status: "published"

@@ -1,6 +1,6 @@
 ---
 title: "OpenAI의 AI-Native 엔지니어링 팀 구축 가이드"
-related_raw: ["[[wiki/Business/OpenAI의 AI-Native 엔지니어링 팀 구축 가이드.md]]"]
+related_raw: ["[[wiki/Business/OpenAI의 AI-Native 엔지니어링 팀 구축 가이드.md]]"]
 tags: ['wiki', 'business_and_misc', 'business']
 type: "wiki"
 status: "published"
@@ -37,5 +37,5 @@ OpenAI의 가이드는 AI 코딩 에이전트를 소프트웨어 개발 수명 �
 
 ## 관련 노트
 
-- [[wiki/Business/AI 에이전트를 활용한 마케팅 혁신 - SafetyCulture 사례]]
+- [[wiki/Business/AI 에이전트를 활용한 마케팅 혁신 - SafetyCulture 사례]]
 - [[wiki/Business/AI시대, 스타트업이 살아남기 위한 사고의 틀]]

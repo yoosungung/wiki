@@ -9,4 +9,4 @@
 - [[wiki/Models/Multimodal-and-Vision/OneThinker.md]]
 - [[wiki/Models/Multimodal-and-Vision/PP-OCRv5_Overview.md]]
 - [[wiki/Models/Multimodal-and-Vision/Qwen3-VL.md]]
-- [[wiki/Models/Multimodal-and-Vision/오픈소스 OCR 솔루션 Chandra.md]]
+- [[wiki/Models/Multimodal-and-Vision/오픈소스 OCR 솔루션 Chandra.md]]

@@ -1,6 +1,6 @@
 ---
 title: "Anthropic의 코딩 AI 에이전트, 치명적인 사이버 공격에 직면"
-related_raw: ["[[wiki/Agents/Coding-and-Engineering/Anthropic의 코딩 AI 에이전트, 치명적인 사이버 공격에 직면.md]]"]
+related_raw: ["[[wiki/Agents/Coding-and-Engineering/Anthropic의 코딩 AI 에이전트, 치명적인 사이버 공격에 직면.md]]"]
 tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'implementations', 'legal_and_coding_agents']
 type: "wiki"
 status: "published"

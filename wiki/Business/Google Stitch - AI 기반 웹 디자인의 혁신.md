@@ -1,6 +1,6 @@
 ---
 title: "Google Stitch - AI 기반 웹 디자인의 혁신"
-related_raw: ["[[wiki/Business/Google Stitch - AI 기반 웹 디자인의 혁신.md]]"]
+related_raw: ["[[wiki/Business/Google Stitch - AI 기반 웹 디자인의 혁신.md]]"]
 tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'ui_agents']
 type: "wiki"
 status: "published"
@@ -41,12 +41,12 @@ Stitch는 스타트업의 빠른 MVP 제작, 개발자의 UI 프로토타입 구
 *   Gemini CLI Stitch Extension: `https://lnkd.in/gswmHf9D`
 
 **관련 노트**:
-*   [[wiki/Agents/Frameworks/바이트댄스_멀티모달_AI_에이전트_스택_오픈소스_공개]]
+*   [[wiki/Agents/Frameworks/바이트댄스_멀티모달_AI_에이전트_스택_오픈소스_공개]]
 *   [[wiki/Agents/Robotics-and-VLA/ByteDance_UI-TARS-2_Autonomous_GUI_Agents]]
 *   [[wiki/Agents/Implementation/Computer Use Agents]]
 *   [[wiki/Agents/Implementation/open-agent-builder]]
 *   [[Projects/LinkedIn/현대 AI 멀티에이전트 시스템의 구조와 동작]]
-*   [[wiki/Models/Reasoning-and-Cognition/LLM 학습 패러다임]]
-*   [[wiki/Agents/Frameworks/2026년 AI 에이전트 트렌드]]
-*   [[wiki/Agents/Frameworks/MCP/AI-에이전트-개발-트렌드-MCP에서-Skills로]]
+*   [[wiki/Models/Reasoning-and-Cognition/LLM 학습 패러다임]]
+*   [[wiki/Agents/Frameworks/2026년 AI 에이전트 트렌드]]
+*   [[wiki/Agents/Frameworks/MCP/AI-에이전트-개발-트렌드-MCP에서-Skills로]]
 *   [[wiki/Engineering/AI-Native-Engineering/Claude Code 개발자 Boris의 효율적인 AI 활용 팁]]

@@ -6,7 +6,6 @@ owner: km
 updated: "2026-08-25"
 last_updated: "2026-08-25"
 review_after: "2026-11-25"
-review_after: "2026-11-20"
 sources:
   - ticket:689
   - ticket:752

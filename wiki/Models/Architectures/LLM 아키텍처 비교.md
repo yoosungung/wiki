@@ -1,6 +1,6 @@
 ---
 title: "LLM 아키텍처 비교"
-related_raw: ["[[wiki/Models/Architectures/LLM 아키텍처 비교.md]]"]
+related_raw: ["[[wiki/Models/Architectures/LLM 아키텍처 비교.md]]"]
 tags: ['wiki', 'ai_core', 'llm_concepts', 'llm_architecture_and_technical']
 type: "wiki"
 status: "published"

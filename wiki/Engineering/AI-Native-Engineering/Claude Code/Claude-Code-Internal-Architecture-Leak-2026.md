@@ -32,7 +32,7 @@ updated: "2026-04-19"
 - **원문:** [The Great Claude Code Leak of 2026 (dev.to)](https://dev.to/anthropic/claude-code-leak-analysis)
 - **기존 노트:**
     - [[wiki/Engineering/AI-Native-Engineering/Cursor-3-Agent-First-IDE-Claude-Code-Leak-Capybara.md|Cursor 3와 Claude Code: AI 네이티브 엔지니어링 대격돌]]
-    - [[wiki/Agents/Coding-and-Engineering/Claude Code의 Task 변화와 AI-native 엔지니어의 조건.md|Claude Code의 Task 변화 분석]]
+    - [[wiki/Agents/Coding-and-Engineering/Claude Code의 Task 변화와 AI-native 엔지니어의 조건.md|Claude Code의 Task 변화 분석]]
     - [[wiki/Engineering/AI-Native-Engineering/Claude-Code-Next-Gen-Coding-Agent.md|Claude Code: 차세대 코딩 에이전트]]
 
 **분류:** #ClaudeCode #AICodingAgent #MultiAgent #Anthropic #Architecture

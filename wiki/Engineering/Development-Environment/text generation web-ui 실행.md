@@ -1,6 +1,6 @@
 ---
 title: "text generation web-ui 실행"
-related_raw: ["[[wiki/Engineering/Development-Environment/text generation web-ui 실행.md]]"]
+related_raw: ["[[wiki/Engineering/Development-Environment/text generation web-ui 실행.md]]"]
 tags: ['wiki', 'engineering_and_infra', 'dev_environment', 'dev_setup_guides']
 type: "wiki"
 status: "published"

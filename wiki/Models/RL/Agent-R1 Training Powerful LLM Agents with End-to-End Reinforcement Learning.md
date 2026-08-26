@@ -35,7 +35,7 @@ updated: "2026-04-19"
 
 ## 관련 링크
 
-*   [[wiki/Models/RL/Self-Evolving Agents - 자가 학습형 AI 에이전트 재훈련 매뉴얼]]
+*   [[wiki/Models/RL/Self-Evolving Agents - 자가 학습형 AI 에이전트 재훈련 매뉴얼]]
 *   [[wiki/Agents/Implementation/Model-Native-Agentic-AI]]
 *   [[wiki/Models/RL/RLHF]]
 *   [[wiki/Models/Reasoning-and-Cognition/Andrej_Karpathy_on_AGI]]

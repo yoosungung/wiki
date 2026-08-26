@@ -33,7 +33,7 @@ Unsloth AI에서 출시한 로컬 환경(Windows, Mac, Linux) 기반의 **노코
 
 ## 🔗 관련 링크 (Related Links)
 - **Official Site**: [unsloth.ai](https://unsloth.ai)
-- **기존 노트 연결**: [[wiki/Models/SFT/LLM_FineTuning_Libraries]], Fine-Tuning/Tools/, [[wiki/Models/RL/NVIDIA GDPO: 다중 보상 RL의 GRPO 결함 해결]]
+- **기존 노트 연결**: [[wiki/Models/SFT/LLM_FineTuning_Libraries]], Fine-Tuning/Tools/, [[wiki/Models/RL/NVIDIA GDPO: 다중 보상 RL의 GRPO 결함 해결]]
 
 ---
 *Created on: 2026-03-20*

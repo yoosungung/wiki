@@ -34,5 +34,5 @@ updated: "2026-04-19"
 ## 참고 및 관련 링크
 *   **Original Info**: Google DeepMind & NVIDIA GTC Follow-up (2026.04.02~04.07)
 *   **Related Notes**:
-    *   [[wiki/Agents/Robotics-and-VLA/NVIDIA-Physical-AI-GR00T-Cosmos-물리적-AI-혁신.md|NVIDIA Physical AI 분석]]
+    *   [[wiki/Agents/Robotics-and-VLA/NVIDIA-Physical-AI-GR00T-Cosmos-물리적-AI-혁신.md|NVIDIA Physical AI 분석]]
     *   [[wiki/Models/RL/Sora-Shutdown-Runway-Gen-4.5-GWM-1-World-Models.md|Sora 종료 및 세계 모델의 부상]]

@@ -36,5 +36,5 @@ updated: "2026-04-19"
 *   [[wiki/RAG/GraphRAG]]
 *   Resources/Knowledge-Graph/LLM을 활용한 상향식 지식 그래프 구축
 *   [[Projects/LinkedIn/janusGraph으로 여정]]
-*   [[wiki/Engineering/Infrastructure-and-DevOps/Airflow DAG 테스트 환경 구축]]
+*   [[wiki/Engineering/Infrastructure-and-DevOps/Airflow DAG 테스트 환경 구축]]
 

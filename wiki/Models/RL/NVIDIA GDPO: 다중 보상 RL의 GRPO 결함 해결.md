@@ -1,6 +1,6 @@
 ---
 title: "NVIDIA GDPO: 다중 보상 RL의 GRPO 결함 해결"
-related_raw: ["[[wiki/Models/RL/NVIDIA GDPO: 다중 보상 RL의 GRPO 결함 해결.md]]"]
+related_raw: ["[[wiki/Models/RL/NVIDIA GDPO: 다중 보상 RL의 GRPO 결함 해결.md]]"]
 tags: ['wiki', 'ai_core', 'ai_ml_development']
 type: "wiki"
 status: "published"

@@ -1,6 +1,6 @@
 ---
 title: "트랜스포머 코드 분석 - PyTorch 구현"
-related_raw: ["[[wiki/Models/Architectures/트랜스포머 코드 분석 - PyTorch 구현.md]]"]
+related_raw: ["[[wiki/Models/Architectures/트랜스포머 코드 분석 - PyTorch 구현.md]]"]
 tags: ['wiki', 'ai_core', 'llm_concepts', 'llm_architecture_and_technical']
 type: "wiki"
 status: "published"
@@ -38,9 +38,9 @@ updated: "2026-04-19"
 *   문서 내용에는 실제 이미지 파일에 대한 URL은 없으며, 텍스트 기반의 ASCII 아트만 포함되어 있습니다.
 
 **관련 노트:**
-*   [[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리 - Part 2 - 아키텍처와 구현]]
-*   [[wiki/Models/Architectures/LLM 아키텍처 비교]]
+*   [[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리 - Part 2 - 아키텍처와 구현]]
+*   [[wiki/Models/Architectures/LLM 아키텍처 비교]]
 *   RoPE (Rotary Position Embedding) Scaling
 *   [[wiki/Models/Architectures/Gated-Attention]]
-*   [[wiki/Models/Architectures/MoE 모델 분석]]
-*   [[wiki/Models/Reasoning-and-Cognition/LLM 학습 패러다임]]
+*   [[wiki/Models/Architectures/MoE 모델 분석]]
+*   [[wiki/Models/Reasoning-and-Cognition/LLM 학습 패러다임]]

@@ -1,7 +1,7 @@
 ---
 title: Weaviate의 MUVERA 인코딩 알고리즘
 related_raw:
-  - "[[wiki/RAG/Weaviate의 MUVERA 인코딩 알고리즘]]"
+  - "[[wiki/RAG/Weaviate의 MUVERA 인코딩 알고리즘]]"
 tags:
   - wiki
   - knowledge_and_memory

@@ -1,6 +1,6 @@
 ---
 title: "RL-학습의-한계"
-related_raw: ["[[wiki/Models/RL/RL-학습의-한계.md]]"]
+related_raw: ["[[wiki/Models/RL/RL-학습의-한계.md]]"]
 tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_concepts']
 type: "wiki"
 status: "published"

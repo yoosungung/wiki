@@ -1,5 +1,5 @@
 ---
-title: Mixture-of-Experts(MoE) 라우팅 혁신 기법: ReMoE와 AoE
+title: "Mixture-of-Experts(MoE) 라우팅 혁신 기법: ReMoE와 AoE"
 related_raw: ["[[2026-08-26-moe_routing_innovation_remoe_aoe.md]]"]
 tags: [moe, architectures, routing, optimization]
 last_updated: "2026-08-26"

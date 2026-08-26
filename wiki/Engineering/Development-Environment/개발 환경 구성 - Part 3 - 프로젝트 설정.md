@@ -1,6 +1,6 @@
 ---
 title: "개발 환경 구성 - Part 3 - 프로젝트 설정"
-related_raw: ["[[wiki/Engineering/Development-Environment/개발 환경 구성 - Part 3 - 프로젝트 설정.md]]"]
+related_raw: ["[[wiki/Engineering/Development-Environment/개발 환경 구성 - Part 3 - 프로젝트 설정.md]]"]
 tags: ['wiki', 'engineering_and_infra', 'dev_environment', 'dev_setup_guides']
 type: "wiki"
 status: "published"
@@ -57,5 +57,5 @@ psycopg2-binary 패키지를 예로 들면:
 
 ## 이전
 
-- [[wiki/Engineering/Development-Environment/개발 환경 구성]]
-- [[wiki/Engineering/Development-Environment/개발 환경 구성 - Part 2 - Linux와 Poetry]]
+- [[wiki/Engineering/Development-Environment/개발 환경 구성]]
+- [[wiki/Engineering/Development-Environment/개발 환경 구성 - Part 2 - Linux와 Poetry]]

@@ -29,5 +29,5 @@ LeWM의 안정성을 보장하는 핵심 정규화 기법입니다.
 LeWorldModel은 단순한 구조가 강력한 성능과 안정성을 제공할 수 있음을 입증했습니다. 실시간 제어가 가능하면서도 물리적 이해도가 높은 효율적인 세계 모델의 새로운 표준을 제시하며, 향후 자율적 지능 구현을 위한 핵심 아키텍처로 주목받고 있습니다.
 
 ## 관련 문서
-- [[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리를 깊이 이해.md|Transformer 아키텍처 이해]]
+- [[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리를 깊이 이해.md|Transformer 아키텍처 이해]]
 - [[wiki/Models/Reasoning-and-Cognition/000_Reasoning-and-Cognition-MOC.md|추론 및 인지 MOC]]

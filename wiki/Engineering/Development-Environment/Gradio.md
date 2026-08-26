@@ -24,4 +24,4 @@ Gradio는 높은 트래픽을 처리하기 위한 내장형 큐시스템을 제�
 
 ## 노트 링크
 
-*   [[wiki/Engineering/Development-Environment/text generation web-ui 실행]]
+*   [[wiki/Engineering/Development-Environment/text generation web-ui 실행]]

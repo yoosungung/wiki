@@ -1,14 +1,5 @@
 ---
-title: "There is no single "best" OCR approach. 
-
-Every document extraction architecture is just a compromise between layout awareness, latency, and compute cost.
-
-Over the past year, I built an OCR… | Markus Kuehnle"
-related_raw: ["[[raw/There is no single "best" OCR approach. 
-
-Every document extraction architecture is just a compromise between layout awareness, latency, and compute cost.
-
-Over the past year, I built an OCR… | Markus Kuehnle.md]]"]
+title: 'There is no single "best" OCR approach. Every document extraction architecture is just a compromise between layout awareness, latency, and compute cost. Over the past year, I built an OCR… | Markus Kuehnle'
 tags: ['#inbox']
 type: "wiki"
 status: "published"

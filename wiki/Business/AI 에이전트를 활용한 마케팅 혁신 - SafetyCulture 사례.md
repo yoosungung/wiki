@@ -1,6 +1,6 @@
 ---
 title: "AI 에이전트를 활용한 마케팅 혁신 - SafetyCulture 사례"
-related_raw: ["[[wiki/Business/AI 에이전트를 활용한 마케팅 혁신 - SafetyCulture 사례.md]]"]
+related_raw: ["[[wiki/Business/AI 에이전트를 활용한 마케팅 혁신 - SafetyCulture 사례.md]]"]
 tags: ['wiki', 'business_and_misc', 'business']
 type: "wiki"
 status: "published"
