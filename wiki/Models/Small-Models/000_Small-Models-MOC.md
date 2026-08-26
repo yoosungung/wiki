@@ -2,6 +2,7 @@
 
 ## 📄 Documents
 - [[wiki/Models/Small-Models/DoctoBERT-프랑스어-의료-특화-언어-모델.md]]
+- [[wiki/Models/Small-Models/embeddinggemma-google-deepmind-model.md]]
 - [[wiki/Models/Small-Models/GLiNER-Lightweight-Entity-Extraction.md]]
 - [[wiki/Models/Small-Models/GLiNER2-PII-Detection-Model.md]]
 - [[wiki/Models/Small-Models/Google Gemma 4 출시 및 Gemma 3와의 성능 비교 분석.md]]
@@ -10,6 +11,7 @@
 - [[wiki/Models/Small-Models/HuggingFace-Smol-Course.md]]
 - [[wiki/Models/Small-Models/LFM2.5-ColBERT.md]]
 - [[wiki/Models/Small-Models/LFM2.5-Embedding.md]]
+- [[wiki/Models/Small-Models/Liquid-AI-On-Device-Intelligence-Pipette.md]]
 - [[wiki/Models/Small-Models/Microsoft-Fara-7B.md]]
 - [[wiki/Models/Small-Models/NVIDIA Nemotron 3.md]]
 - [[wiki/Models/Small-Models/Opir-초경량-가드레일-안전-필터-모델.md]]
@@ -17,4 +19,3 @@
 - [[wiki/Models/Small-Models/Sionic-AI-Comsat-Embed-Models.md]]
 - [[wiki/Models/Small-Models/TimesFM-2.5-Google-시계열-파운데이션-모델.md]]
 - [[wiki/Models/Small-Models/VibeThinker-3B-Sina-Weibo-SLM.md]]
-- [[wiki/Models/Small-Models/embeddinggemma-google-deepmind-model.md]]

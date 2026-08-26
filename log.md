@@ -479,3 +479,6 @@
 | 2026-08-24 | CLEANUP | raw/ | 12 | Removed synthesized raw files |
 | 2026-08-24 | LINT | wiki/ | ALL | 데일리 생성, D-2(2026-08-22.md) 삭제, auto_moc & update_index 실행, fix_wiki_links.py를 통해 링크 수정 |
 | 2026-08-24 | SYNTHESIZE | wiki/Engineering/AI-Native-Engineering | 1 | Semantica 의사결정 출처 추적 및 에이전트 거버넌스(MIT, 1.9k) 한국어 번역 합성 및 구버전 영어 파일 삭제 |
+| 2026-08-26 | INGEST | raw/ | 13 | 13개 raw 마크다운 파일들의 표준 파일명 변환 및 메타데이터(YAML frontmatter) 주입 완료 |
+| 2026-08-26 | SYNTHESIZE | wiki/ | 11 | Global-Macro, AI-Engineering-Skills, Building-Multi-Agent-Teams, HF-Infrastructure-RAG, LLM-RL-Post-Training, Liquid-AI-Pipette, MoE-Routing-Innovations, Awesome-DLMs, Voice-Agent-Krisp, Harvey-Vertical-Lab, AgentSysBench-Non-LLM 등 11개 신규 위키 문서 합성 완료 및 MOC 업데이트 |
+| 2026-08-26 | LINT | Root / wiki | ALL | 데일리 생성, INDEX.md META/파일 갯수 갱신, raw/ 합성 후 삭제, 구버전 데일리(2026-08-24.md) 삭제 완료 |

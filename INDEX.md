@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-08-25 | Root: wiki/
+[META] Updated: 2026-08-26 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,34 +52,34 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
-- wiki/Agents/ (239 files)
-    - Multi-Agent-and-Orchestration: 17 files
-    - Text-to-SQL: 32 files
+- wiki/Agents/ (242 files)
+    - Multi-Agent-and-Orchestration: 18 files
+    - Text-to-SQL: 33 files
     - Evaluations: 9 files
     - Memory-and-Cognition: 23 files
     - Robotics-and-VLA: 20 files
-    - Implementation: 44 files
+    - Implementation: 45 files
     - Coding-and-Engineering: 21 files
     - Self-Evolving: 10 files
     - Frameworks: 63 files
-- wiki/Models/ (231 files)
-    - Optimization-and-Serving: 49 files
+- wiki/Models/ (236 files)
+    - Optimization-and-Serving: 50 files
     - Optimization: 2 files
-    - Architectures: 29 files
-    - Small-Models: 17 files
+    - Architectures: 31 files
+    - Small-Models: 18 files
     - SFT: 50 files
     - Multimodal-and-Vision: 9 files
     - Reasoning-and-Cognition: 31 files
-    - RL: 43 files
-- wiki/RAG/ (104 files)
-- wiki/Engineering/ (170 files)
+    - RL: 44 files
+- wiki/RAG/ (105 files)
+- wiki/Engineering/ (173 files)
     - Data-and-Security: 14 files
     - Security: 1 files
     - Prompt-Engineering: 18 files
     - Infrastructure-and-DevOps: 47 files
     - Development-Environment: 21 files
     - Prompt: 1 files
-    - AI-Native-Engineering: 67 files
-- wiki/Business/ (39 files)
+    - AI-Native-Engineering: 70 files
+- wiki/Business/ (40 files)
     - Recommendation Systems: 6 files
-    - Trends: 11 files
+    - Trends: 12 files
