@@ -23,7 +23,7 @@
 - [[wiki/Engineering/AI-Native-Engineering/Claude-Code-Karpathy-Guidelines.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Claude-Code-Next-Gen-Coding-Agent.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Claude-Code-Terminal-Native-Engineering.md]]
-- [[wiki/Engineering/AI-Native-Engineering/Claude-Code-vs-Cursor-2026-Analysis 1.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Claude-Code-vs-Cursor-2026.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Claude-Code-vs-Cursor-2026-Analysis.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Claude-Code-vs-Cursor-Comparison-2026.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Claude-Code-vs-Cursor-Deep-Dive.md]]

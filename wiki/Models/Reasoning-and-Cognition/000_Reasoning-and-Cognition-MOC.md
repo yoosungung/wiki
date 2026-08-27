@@ -25,7 +25,7 @@
 - [[wiki/Models/Reasoning-and-Cognition/Moonshot-AI-Kimi-K2-Thinking.md]]
 - [[wiki/Models/Reasoning-and-Cognition/Multi-hop-Reasoning-Strategies.md]]
 - [[wiki/Models/Reasoning-and-Cognition/NextLat-잠재-공간-세계-모델-2026.md]]
-- [[wiki/Models/Reasoning-and-Cognition/Perplexity at Work.md]]
+- [[wiki/Models/Reasoning-and-Cognition/Perplexity-Enterprise-Search-Engine.md]]
 - [[wiki/Models/Reasoning-and-Cognition/SFT-vs-RL-Compositional-Generalization.md]]
 - [[wiki/Models/Reasoning-and-Cognition/Sionic AI STORM Parse.md]]
 - [[wiki/Models/Reasoning-and-Cognition/The Missing Layer of AGI - From Pattern Alchemy to Coordination Physics.md]]

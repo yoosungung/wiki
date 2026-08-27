@@ -22,7 +22,7 @@ using-open-source-tooling-built-by-Google
 
 The-tooling-to-build-agents-is-quite-mature-so-most-of-the-work-in-shipping-an-agent-isnt.md]]
 - [[wiki/Engineering/Prompt-Engineering/LLM_Thinking_Time_Prompt_Engineering.md]]
-- [[wiki/Engineering/Prompt-Engineering/Liquid-AI-just-released-LFM25-26B.md]]
+- [[wiki/Engineering/Prompt-Engineering/Liquid-AI-LFM-25-26B.md]]
 - [[wiki/Engineering/Prompt-Engineering/Prompt-Decorators.md]]
 - [[wiki/Engineering/Prompt-Engineering/메타_프롬프트.md]]
 - [[wiki/Engineering/Prompt-Engineering/추출 Prompt 예시.md]]
