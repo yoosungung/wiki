@@ -1,10 +1,11 @@
 ---
 id: inbox-candidate-2026-08-28-issue-radar-today
 agent: candidate
-ticket_id: pending
+ticket_id: 1402
 updated: 2026-08-28
 status: inbox
 sources:
+  - ticket:1402
   - schedule:issue-radar-today-0800-kst
   - https://www.yna.co.kr/view/AKR20260827071700001
   - https://www.fnnews.com/news/202608271442375278
