@@ -1,9 +1,9 @@
 ---
 title: "프리오사 AI RNGD NPU 최적화 및 서빙 가이드 (2026)"
 tags: ["FuriosaAI", "RNGD", "Renegade", "NPU", "Inference", "vLLM", "HBM3"]
-last_updated: "2026-08-20"
-updated: "2026-08-20"
-related_raw: ["[[2026-08-20-furiosa-llm-2026.4.0b13.md]]", "[[2026-08-13-furiosa-llm-2026-4-0b11.md]]", "[[2026-06-16-Research-Synthesis-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-furiosa_rngd_npu_serving_optimization.md]]", "[[2026-06-28-furiosa_rngd_npu_llm_serving_optimization.md]]", "[[2026-06-30-furiosa_rngd_furiosa_llm.md]]", "[[2026-07-01-furiosa-rngd-npu-hbm3-inference.md]]", "[[2026-07-07-furiosa-rngd-prefix-aware-dp-router.md]]", "[[2026-07-11-furiosa_rngd_npu_tcp_prefix_aware_router.md]]", "[[2026-07-12-furiosa-sdk-dp-routing-scoring-weights.md]]", "[[2026-07-15-samsung-sds-furiosa-npuaas-launch.md]]", "[[2026-07-16-furiosa-npuaas-launch-day-broadcom-stork.md]]"]
+last_updated: "2026-08-27"
+updated: "2026-08-27"
+related_raw: ["[[2026-08-27-furiosa_rngd_tcp_fxb.md]]", "[[2026-08-20-furiosa-llm-2026.4.0b13.md]]", "[[2026-08-13-furiosa-llm-2026-4-0b11.md]]", "[[2026-06-16-Research-Synthesis-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-furiosa_rngd_npu_serving_optimization.md]]", "[[2026-06-28-furiosa_rngd_npu_llm_serving_optimization.md]]", "[[2026-06-30-furiosa_rngd_furiosa_llm.md]]", "[[2026-07-01-furiosa-rngd-npu-hbm3-inference.md]]", "[[2026-07-07-furiosa-rngd-prefix-aware-dp-router.md]]", "[[2026-07-11-furiosa_rngd_npu_tcp_prefix_aware_router.md]]", "[[2026-07-12-furiosa-sdk-dp-routing-scoring-weights.md]]", "[[2026-07-15-samsung-sds-furiosa-npuaas-launch.md]]", "[[2026-07-16-furiosa-npuaas-launch-day-broadcom-stork.md]]"]
 ---
 
 # 🚀 프리오사 AI RNGD NPU 최적화 및 서빙 가이드 (2026)
@@ -12,7 +12,7 @@ related_raw: ["[[2026-08-20-furiosa-llm-2026.4.0b13.md]]", "[[2026-08-13-furiosa
 
 ## 1. 하드웨어 사양 (RNGD)
 
-- **아키텍처**: **Tensor Contraction Processor (TCP)**. 전통적인 MatMul 대신 트랜스포머의 고차원 텐서 연산을 하드웨어 레벨에서 직접 처리하여 연산 효율 극대화.
+- **아키텍처**: **Tensor Contraction Processor (TCP)**. 전통적으로 고정된 크기의 matrix multiplication에 의존하는 GPU와 달리, 트랜스포머 아키텍처의 고차원 텐서 수축(Tensor Contraction) 연산을 하드웨어 단에서 직접 정의하고 실행하도록 특화하여 연산 장치 활용률과 에너지 효율을 극대화함.
 - **제조 공정**: TSMC 5nm 공정.
 - **메모기**: **48GB HBM3** (일부 72GB HBM3E로 이행 중인 버전 포함), 최대 **1.5 TB/s 대역폭**. 256MB 온칩 SRAM을 결합하여 메모리 대역폭 집약적인 LLM 추론에서 강력한 성능 발휘.
 - **연산 성능**:
@@ -52,7 +52,7 @@ RNGD는 최신 오픈소스 모델들에 대해 최적화된 성능을 제공합
 텐서 수축 연산(TCP 아키텍처 정합)을 1급 원시 타입으로 선언하는 **TCL (Tensor Contraction Language)** eDSL. `@tcl.kernel`로 attention/MoE/vision encoder 블록을 재사용 조합하여 신규 모델 enablement 속도를 획기적으로 단축.
 
 ### FXB (Furiosa Executable Bundle)
-`.fxb` = `manifest.json` + 컴파일 EDF 커널. **Architecture fingerprint**로 fine-tuned 변형 모델에 호환 번들 자동 매칭.
+`.fxb` = `manifest.json` + 컴파일 EDF 커널. 컴파일된 바이너리와 메타데이터가 단일 패키지로 구성되어 수동 컴파일 단계를 생략하고 Hugging Face 등에서 즉시 zero-recompilation 배포가 가능하도록 돕는 자체 이식 아카이브 포맷. **Architecture fingerprint**로 fine-tuned 변형 모델에 호환 번들을 자동으로 매칭함.
 
 ```bash
 fxb download furiosa-ai/Qwen3-8B-FP8

@@ -18,7 +18,7 @@
 - [[wiki/Models/Optimization-and-Serving/KTransformers.md]]
 - [[wiki/Models/Optimization-and-Serving/LLM Compressor - vllm 모델 최적화 라이브러리.md]]
 - [[wiki/Models/Optimization-and-Serving/Llama-4-Performance-and-Optimization.md]]
-- [[wiki/Models/Optimization-and-Serving/LLM Compressor - vllm 모델 최적화 라이브러리.md]]
+- [[wiki/Models/Optimization-and-Serving/LLM Compressor - vllm 모델 최적화 라이브러리.md]]
 
 - [[wiki/Models/Optimization-and-Serving/LLM 캐시 최적화 기술: TurboQuant와 IceCache.md]]
 - [[wiki/Models/Optimization-and-Serving/LLM-Model-Compilation.md]]
@@ -27,7 +27,7 @@
 - [[wiki/Models/Optimization-and-Serving/Neuromorphic-In-Memory-Computing-China.md]]
 - [[wiki/Models/Optimization-and-Serving/OpenGuardrails_LLM_앱_보호_오픈소스_AI_보안_플랫폼.md]]
 - [[wiki/Models/Optimization-and-Serving/oLLM_Lightweight_LLM_Inference_Library.md]]
-- [[wiki/Models/Optimization-and-Serving/OpenGuardrails_LLM_앱_보호_오픈소스_AI_보안_플랫폼.md]]
+- [[wiki/Models/Optimization-and-Serving/OpenGuardrails_LLM_앱_보호_오픈소스_AI_보안_플랫폼.md]]
 
 - [[wiki/Models/Optimization-and-Serving/OptiLLM-추론-프록시-및-테스트-타임-연산-최적화.md]]
 - [[wiki/Models/Optimization-and-Serving/PagedAttention.md]]

@@ -8,8 +8,8 @@
 - [[wiki/Agents/Multi-Agent-and-Orchestration/LangAlpha 다중 에이전트 AI 주식 분석 도구.md]]
 - [[wiki/Agents/Multi-Agent-and-Orchestration/LangGraph-Deep-Agents-Update-2026-04-09.md]]
 - [[wiki/Agents/Multi-Agent-and-Orchestration/Langchain_다중_에이전트_아키텍처_선택.md]]
-- [[wiki/Agents/Multi-Agent-and-Orchestration/LangAlpha 다중 에이전트 AI 주식 분석 도구.md]]
-- [[wiki/Agents/Multi-Agent-and-Orchestration/Langchain_다중_에이전트_아키텍처_선택.md]]
+- [[wiki/Agents/Multi-Agent-and-Orchestration/LangAlpha 다중 에이전트 AI 주식 분석 도구.md]]
+- [[wiki/Agents/Multi-Agent-and-Orchestration/Langchain_다중_에이전트_아키텍처_선택.md]]
 
 - [[wiki/Agents/Multi-Agent-and-Orchestration/LatentMAS.md]]
 - [[wiki/Agents/Multi-Agent-and-Orchestration/MiroFish-Swarm-Intelligence-Simulation.md]]

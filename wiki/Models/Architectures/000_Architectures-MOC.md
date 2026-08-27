@@ -4,7 +4,7 @@
 - [[wiki/Models/Architectures/Autoregressive-Diffusion-Hybrid-LLM.md]]
 - [[wiki/Models/Architectures/BigQuery의 AI 시대에 맞춰 재해석된 SQL.md]]
 - [[wiki/Models/Architectures/Awesome-Diffusion-Language-Models.md]]
-- [[wiki/Models/Architectures/BigQuery의 AI 시대에 맞춰 재해석된 SQL.md]]
+- [[wiki/Models/Architectures/BigQuery의 AI 시대에 맞춰 재해석된 SQL.md]]
 
 - [[wiki/Models/Architectures/Building-LLMs-from-Scratch-PyTorch.md]]
 - [[wiki/Models/Architectures/CCNets-Causal-Relationships.md]]
@@ -20,9 +20,9 @@
 - [[wiki/Models/Architectures/LeWorldModel-JEPA.md]]
 - [[wiki/Models/Architectures/Lottery Ticket Hypothesis와 LLM.md]]
 - [[wiki/Models/Architectures/MoE 모델 분석.md]]
-- [[wiki/Models/Architectures/LLM 아키텍처 비교.md]]
-- [[wiki/Models/Architectures/Lottery Ticket Hypothesis와 LLM.md]]
-- [[wiki/Models/Architectures/MoE 모델 분석.md]]
+- [[wiki/Models/Architectures/LLM 아키텍처 비교.md]]
+- [[wiki/Models/Architectures/Lottery Ticket Hypothesis와 LLM.md]]
+- [[wiki/Models/Architectures/MoE 모델 분석.md]]
 - [[wiki/Models/Architectures/MoE-Routing-Innovations-ReMoE-AoE.md]]
 - [[wiki/Models/Architectures/nanochat을 Transformers로 포팅하기.md]]
 
@@ -39,6 +39,6 @@
 - [[wiki/Models/Architectures/dllm-확산-기반-언어-모델-라이브러리.md]]
 - [[wiki/Models/Architectures/nanochat을 Transformers로 포팅하기.md]]
 - [[wiki/Models/Architectures/트랜스포머 코드 분석 - PyTorch 구현.md]]
-- [[wiki/Models/Architectures/트랜스포머 코드 분석 - PyTorch 구현.md]]
+- [[wiki/Models/Architectures/트랜스포머 코드 분석 - PyTorch 구현.md]]
 
 - [[wiki/Models/Architectures/토큰값-25-급락의-경고-똑똑해질수록-거지가-되는-AI의-역설.md]]

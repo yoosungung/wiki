@@ -18,10 +18,10 @@
 - [[wiki/Models/RL/NVIDIA GDPO: 다중 보상 RL의 GRPO 결함 해결.md]]
 - [[wiki/Models/RL/LLM-Reinforcement-Learning-Post-Training-Guide.md]]
 - [[wiki/Models/RL/LMSYS-Miles-On-Policy-Distillation.md]]
-- [[wiki/Models/RL/MIT의 재귀적 언어 모델(RLM) - 컨텍스트 한계 돌파.md]]
+- [[wiki/Models/RL/MIT의 재귀적 언어 모델(RLM) - 컨텍스트 한계 돌파.md]]
 
 - [[wiki/Models/RL/Neural-World-Models-Robotic-Planning-2026.md]]
-- [[wiki/Models/RL/NVIDIA GDPO: 다중 보상 RL의 GRPO 결함 해결.md]]
+- [[wiki/Models/RL/NVIDIA GDPO: 다중 보상 RL의 GRPO 결함 해결.md]]
 - [[wiki/Models/RL/OpenAI-Sora-Shutdown-Robot-Pivot.md]]
 - [[wiki/Models/RL/OpenPipe-ART-Agent-Reinforcement-Trainer.md]]
 - [[wiki/Models/RL/Parlant.md]]
@@ -32,8 +32,8 @@
 - [[wiki/Models/RL/SFT-Knowledge-Structuring-via-Reinforcement-Learning.md]]
 - [[wiki/Models/RL/Sebastian_Raschka_강화학습_GRPO_구현.md]]
 - [[wiki/Models/RL/Self-Evolving Agents - 자가 학습형 AI 에이전트 재훈련 매뉴얼.md]]
-- [[wiki/Models/RL/Sebastian_Raschka_강화학습_GRPO_구현.md]]
-- [[wiki/Models/RL/Self-Evolving Agents - 자가 학습형 AI 에이전트 재훈련 매뉴얼.md]]
+- [[wiki/Models/RL/Sebastian_Raschka_강화학습_GRPO_구현.md]]
+- [[wiki/Models/RL/Self-Evolving Agents - 자가 학습형 AI 에이전트 재훈련 매뉴얼.md]]
 
 - [[wiki/Models/RL/Sora-Shutdown-Runway-Gen-4.5-GWM-1-World-Models.md]]
 - [[wiki/Models/RL/Tesla-FSD-v13-Cybercab-Wayve-GAIA3-World-Models.md]]

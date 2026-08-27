@@ -1,8 +1,7 @@
 # Trends MOC
 
 ## 📄 Documents
-- [[wiki/Business/Trends/Kimi-K3-runs-on-Modal-since-Day-0-powered-by-vLLM
-vLLM-provides-the-serving-engine-Modal-exposes-it-as-a-production-endpoint-that-scales-on-demand-One-deploy-gets-you-the-full-model-and-it.md]]
+- [[wiki/Business/Trends/Kimi-K3-Modal-vLLM-Serving.md]]
 - [[wiki/Business/Trends/2026-하반기-AI-에이전트-4대-핵심-트렌드.md]]
 - [[wiki/Business/Trends/AI-Agent-Project-Success-Strategy.md]]
 - [[wiki/Business/Trends/AI-거버넌스-6대-시스템-계층-및-안전한-스케일링.md]]

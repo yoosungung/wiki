@@ -3,9 +3,9 @@ title: "온디바이스 AI 및 AI PC 기술 트렌드 (2026)"
 tags: ["On-Device", "AI-PC", "NPU", "Lunar-Lake", "Strix-Point", "Copilot+", "Agentic-AI"]
 type: "wiki"
 status: "published"
-last_updated: "2026-08-23"
-updated: "2026-08-23"
-related_raw: ["[[2026-08-23-panther-lake-npu5-realworld-llm-benchmarks.md]]", "[[2026-06-15-On-Device-AI-PC-Trends-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-on_device_ai_pc_agentic_trends.md]]", "[[2026-06-28-on_device_ai_trends_and_agentic_ai_2026.md]]", "[[2026-06-30-on_device_ai_trends_intel_amd_nvidia.md]]", "[[2026-07-01-on-device-ai-pc-hardware-trends.md]]", "[[2026-07-07-on-device-ai-trends-2026-ryzen-ai-max-panther-lake-rtx-spark.md]]", "[[2026-07-11-on_device_ai_pc_trends_strix_halo_panther_lake_rtx_spark.md]]", "[[2026-07-12-on-device-ai-pc-ryzen-ai-halo-npu-reality.md]]", "[[2026-07-13-ryzen-ai-halo-developer-center-bkc.md]]", "[[2026-07-17-ryzen-ai-halo-phoronix-shipping.md]]"]
+last_updated: "2026-08-27"
+updated: "2026-08-27"
+related_raw: ["[[2026-08-27-on_device_ai_trends_2026_uma.md]]", "[[2026-08-23-panther-lake-npu5-realworld-llm-benchmarks.md]]", "[[2026-06-15-On-Device-AI-PC-Trends-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-on_device_ai_pc_agentic_trends.md]]", "[[2026-06-28-on_device_ai_trends_and_agentic_ai_2026.md]]", "[[2026-06-30-on_device_ai_trends_intel_amd_nvidia.md]]", "[[2026-07-01-on-device-ai-pc-hardware-trends.md]]", "[[2026-07-07-on-device-ai-trends-2026-ryzen-ai-max-panther-lake-rtx-spark.md]]", "[[2026-07-11-on_device_ai_pc_trends_strix_halo_panther_lake_rtx_spark.md]]", "[[2026-07-12-on-device-ai-pc-ryzen-ai-halo-npu-reality.md]]", "[[2026-07-13-ryzen-ai-halo-developer-center-bkc.md]]", "[[2026-07-17-ryzen-ai-halo-phoronix-shipping.md]]"]
 ---
 
 # 💻 온디바이스 AI 및 AI PC 기술 트렌드 (2026)
@@ -68,13 +68,15 @@ Microsoft의 Copilot+ 업데이트는 AI 성능의 가시화와 범용성에 초
 - 소프트웨어: Debian계 **AMD Ryzen AI Developer Platform**이 단순 Ubuntu+ROCm 이미지 이상이라는 점을 재확인.
 - 출하 SKU는 Max+ 395(Strix Halo); Gorgon Halo(Max 400)는 후속.
 
-## 4.2 실리콘 3사의 에이전틱 지향점 (2026-07-14 업데이트)
+## 4.2 실리콘 3사의 에이전틱 지향점 (2026-08-27 업데이트)
 
-- **이종 가속기 분산 아키텍처**: 
-  - **AMD Ryzen AI Max 300 (Strix Halo)**: 50 TOPS XDNA 2 NPU와 40 RDNA 3.5 CU의 고성능 iGPU(플랫폼 총 125 TOPS)를 결합하여 로컬 멀티 에이전트 오프로딩 및 30B 이상 거대 로컬 모델의 독자 실행 구도를 구현했습니다.
-  - **Intel Panther Lake**: 18A 공정으로 제작되어 최대 50 NPU TOPS(NPU 5) 및 Xe3 GPU를 매핑, 평상시의 저전력 백그라운드 AI 모니터링은 NPU로, 고비용 생성형 계산은 GPU로 태스크를 분리해 전력 효율성과 컴퓨팅 퍼포먼스를 동시에 달성하는 아키텍처를 전개하고 있습니다.
-  - **NVIDIA RTX Spark**: Grace CPU와 Blackwell RTX GPU를 단일 기판에 병합하고 128GB Unified Memory를 탑재하여 FP4 연산 기준 1 Petaflop의 로컬 AI 성능을 제공합니다. 이는 기존의 OS와 앱 구조를 대화형/자율형 에이전트 컴퓨팅 환경으로 패러다임 전환을 이끄는 핵심 동력입니다.
-- **Unified Memory 가치 격상**: 에이전틱 워크로드의 상시 자율 구동과 멀티턴 대화 상태 유지를 위해 128GB~192GB급 통합 메모리(RAM-VRAM) 아키텍처가 단순 가속기 연산 성능(TOPS)보다 더 중요한 하드웨어 지표로 평가받고 있습니다.
+- **이종 가속기 및 UMA 분산 아키텍처**: 
+  - **AMD Ryzen AI Max 300 / Max PRO 400 (Strix Halo)**: 16 Zen 5 코어 및 40 RDNA 3.5 CU GPU, 50 TOPS XDNA 2 NPU를 탑재. 128GB LPDDR5X 통합 메모리(UMA) 환경에서 dGPU 없이 고성능 로컬 추론을 제공하며, 기업용 보안을 갖춘 Max PRO 400 군을 통해 엔터프라이즈 모바일 워크스테이션급 에이전틱 가속을 실현합니다.
+  - **Intel Panther Lake (Core Ultra 3)**: 인텔 18A 공정, Cougar Cove(P-core) 및 Darkmont(E-core) 코어. Xe3-LPG Battlemage GPU(120 TOPS)와 NPU 5(50 TOPS)를 묶어 플랫폼 합산 최대 180 TOPS의 가속을 띱니다. 평시 백그라운드 상시 모니터링은 저전력 NPU로, 버스트 연산은 GPU로 오프로딩하는 전력-성능 밸런싱이 핵심입니다.
+  - **NVIDIA RTX Spark**: 20코어 Grace CPU(Arm) + Blackwell RTX GPU 기반 "슈퍼칩" 플랫폼. 최대 128GB Unified LPDDR5X 메모리 지원, FP4 기준 1 Petaflop의 강력한 연산 성능으로 120B급 대형 로컬 LLM(100만 토큰 컨텍스트)을 로컬 구동합니다. Microsoft OpenShell을 통해 자율 에이전트의 로컬 실행을 보장합니다.
+- **Unified Memory (UMA) 가치 격상 및 Local Agentic AI**: 
+  - 에이전틱 워크로드의 상시 자율 구동과 멀티턴 대화 상태 유지를 위해, CPU/GPU/NPU가 메모리를 공유함으로써 복잡한 대형 멀티모달 모델 구동 시 데이터 전송 병목을 원천 해소하는 UMA가 필수 지표로 자리 잡았습니다.
+  - 로컬 자율 에이전트의 신뢰성과 보안이 주요 아젠다로 부상하면서, 단순 툴 호출을 넘어 MCP(Model Context Protocol) 표준과 폐쇄형 평가(closed-loop eval) 거버넌스를 통해 로컬 상에서 예외 처리 및 가드레일을 통제하는 아키텍처가 확산되고 있습니다.
 
 ## 5. Panther Lake NPU 5 실측·경쟁 비교 (2026-08-23)
 
