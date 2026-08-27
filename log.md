@@ -1,6 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-27 | RESEARCH | Web | 3 | Rebellions optimum/vLLM, Furiosa Overlap/Stork 2nm, LiteRT-LM Gemma 4 MTP |
+| 2026-08-27 | INGEST | raw/ | 3 | rebellions-npu-atom-max-vllm-integration, furiosa-ai-npu-rngd-stork-2nm-broadcom, litert-lm-gemma-4-mtp-speculative-decoding |
+| 2026-08-27 | SYNTHESIZE | wiki/ | 3 | 리벨리온 NPU 동향, 프리오사 AI RNGD/Stork 가이드, 스마트폰 LLM 서빙 MTP 가속 업데이트 |
+| 2026-08-27 | CLEANUP | raw/ | 3 | 합성 완료 후 raw 파일 삭제 |
+| 2026-08-27 | LINT | Root / wiki | ALL | 데일리 노트 생성, D-2(2026-08-25) 삭제, 연구_주제_관리.md 갱신 |
 | 2026-08-26 | INBOX_DRAIN | inbox/ | 25 | Leantime-Cross-Tenant-Mention-ACL·RefSql-Seal 증분; pm/nl2sql/qa/ta/aa 진행 EXCLUDE; git rm |
 | 2026-08-26 | RESEARCH | Web | 1 | LiteRT Gemma4 Intel OpenVino Panther/Lunar Lake NPU; MTP 2.2× ALREADY_COVERED |
 | 2026-08-26 | INGEST | raw/ | 1 | litert-lm-gemma4-intel-openvino-npu |

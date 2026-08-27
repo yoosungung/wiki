@@ -3,7 +3,7 @@ title: "프리오사 AI RNGD NPU 최적화 및 서빙 가이드 (2026)"
 tags: ["FuriosaAI", "RNGD", "Renegade", "NPU", "Inference", "vLLM", "HBM3"]
 last_updated: "2026-08-27"
 updated: "2026-08-27"
-related_raw: ["[[2026-08-27-furiosa_rngd_tcp_fxb.md]]", "[[2026-08-20-furiosa-llm-2026.4.0b13.md]]", "[[2026-08-13-furiosa-llm-2026-4-0b11.md]]", "[[2026-06-16-Research-Synthesis-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-furiosa_rngd_npu_serving_optimization.md]]", "[[2026-06-28-furiosa_rngd_npu_llm_serving_optimization.md]]", "[[2026-06-30-furiosa_rngd_furiosa_llm.md]]", "[[2026-07-01-furiosa-rngd-npu-hbm3-inference.md]]", "[[2026-07-07-furiosa-rngd-prefix-aware-dp-router.md]]", "[[2026-07-11-furiosa_rngd_npu_tcp_prefix_aware_router.md]]", "[[2026-07-12-furiosa-sdk-dp-routing-scoring-weights.md]]", "[[2026-07-15-samsung-sds-furiosa-npuaas-launch.md]]", "[[2026-07-16-furiosa-npuaas-launch-day-broadcom-stork.md]]"]
+related_raw: ["[[raw/2026-08-27-furiosa-ai-npu-rngd-stork-2nm-broadcom.md]]", "[[2026-08-27-furiosa_rngd_tcp_fxb.md]]", "[[2026-08-20-furiosa-llm-2026.4.0b13.md]]", "[[2026-08-13-furiosa-llm-2026-4-0b11.md]]", "[[2026-06-16-Research-Synthesis-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-furiosa_rngd_npu_serving_optimization.md]]", "[[2026-06-28-furiosa_rngd_npu_llm_serving_optimization.md]]", "[[2026-06-30-furiosa_rngd_furiosa_llm.md]]", "[[2026-07-01-furiosa-rngd-npu-hbm3-inference.md]]", "[[2026-07-07-furiosa-rngd-prefix-aware-dp-router.md]]", "[[2026-07-11-furiosa_rngd_npu_tcp_prefix_aware_router.md]]", "[[2026-07-12-furiosa-sdk-dp-routing-scoring-weights.md]]", "[[2026-07-15-samsung-sds-furiosa-npuaas-launch.md]]", "[[2026-07-16-furiosa-npuaas-launch-day-broadcom-stork.md]]"]
 ---
 
 # 🚀 프리오사 AI RNGD NPU 최적화 및 서빙 가이드 (2026)
@@ -60,8 +60,8 @@ fxb check Qwen/Qwen3-8B-FP8
 furiosa-llm serve Qwen/Qwen3-8B-FP8
 ```
 
-### Overlap Scheduler (실험적)
-NPU forward pass 사이 CPU 스케줄링 병목 제거. `--enable-overlap-scheduling`으로 활성화.
+### Overlap Scheduler (중첩 스케줄러)
+NPU의 순방향 연산(Forward Pass) 간 CPU 스케줄링 지연 병목(stalls)을 극복하기 위해 설계된 기법입니다. NPU가 현재 배치의 연산을 수행하고 있는 동안 CPU 레이어에서는 다음 배치의 메타데이터 준비 작업을 백그라운드에서 병렬 처리하여, NPU 유휴 시간 없이 데이터를 지속적으로 주입합니다. `--enable-overlap-scheduling` 옵션으로 기동합니다.
 
 ### 신규 대규모 모델
 Qwen3-VL-32B (RNGD 최초 VLM), gpt-oss-120b, Solar-Open-100B, Qwen3-30B-A3B, **K-EXAONE-236B-A23B** (NVFP4A16, hybrid attention).
@@ -90,8 +90,9 @@ furiosa-llm serve <model> --data-parallel-size 2 \
 
 - **Mass Production**: **2026년 1월 양산 시작**. 현재 NXT RNGD 서버 및 PCIe 카드 글로벌 공급 중.
 - **Samsung SDS NPUaaS 상용 런칭 (2026-07-16 당일 확인)**: 삼성SDS가 **2026-07-16** RNGD 기반 **NPU-as-a-Service (NPUaaS)**를 정식 출시했습니다(7월 14일 K-NPU Tech Wave 발표, 최정진 부사장). 국산 NPU의 **첫 대규모 상용 클라우드 배포**로, 고객은 학습·추론·서버리스 AI 워크로드를 **1·2·4·8장 카드 구독**으로 선택합니다. **상암(서울)·동탄(경기)** DC에 배치하며 연말까지 단계 확장합니다. ([The Elec](https://www.thelec.net/news/articleView.html?idxno=12245))
-- **차세대(3rd Gen / Stork) + Broadcom (2026-07-16 보강)**: 2026-05-27 Furiosa–Broadcom 파트너십으로 TCP를 **랙 스케일 scale-up 추론 플랫폼**으로 확장합니다. Broadcom 측은 XPU IP·**Ethernet scale-up/fabric 스위치**·패키징을 제공하고, 3세대는 **2nm compute die + HBM4/4E 멀티다이 SoC**를 목표로 합니다. ([Furiosa 블로그](https://furiosa.ai/blog/furiosaai-partners-with-broadcom-to-build-next-generation-inference-platform-for-the-agentic-era))
-  - **일정 모순 기록**: K-NPU 발언은 **이르면 2027년 말 양산**, DCD 등 보도는 **2028 H1 샘플링**을 언급합니다. 로드맵 인용 시 두 출처를 병기하고, 조달·PoC 일정은 Furiosa 공식 업데이트로 재확인합니다.
+- **차세대(3rd Gen / Stork) + Broadcom (2026-08-27 보강)**: Broadcom과의 공식 전략 파트너십 하에 공동 개발 중인 3세대 NPU **Stork**는 에이전트 인프라 환경의 랙 스케일 Scale-up 추론 플랫폼을 표방합니다.
+  - **사양**: TSMC 2nm 미세 공정을 채택하고, 차세대 초고대역폭 메모리인 **HBM4 및 HBM4E** 기반의 멀티다이 SoC/칩렛 아키텍처로 구동됩니다. 여기에 Broadcom의 고대역폭 이더넷(High-radix switches 등) 패브릭 기술을 직접 칩 단위에 내장해 장치 간 대규모 연산 데이터 이동 병목을 극복합니다.
+  - **일정 로드맵**: 공식 로드맵에 따르면 Stork 칩의 실물 샘플링(Sampling) 일정은 **2028년 상반기(H1)**를 명확한 타깃으로 잡고 진행 중입니다. (이전 K-NPU 보고서상의 '2027년 말 양산 착수' 가능성 및 기타 PoC 검증 시점은 개발 진척도에 따라 조율될 것으로 분석됨)
 
 ### 글로벌 진출 및 생산 스케일업 (2026-07-14 업데이트)
 - **생산 스케일업 및 차세대 "Stork"**: 에이전틱 AI 추론 수요 급증에 대처하기 위해 2027년까지 RNGD NPU 카드를 **40,000~50,000대 규모로 생산 능력을 확장**할 계획입니다. 동시에 NVIDIA 추론용 dGPU 제품군에 대항해 극강의 토큰당 비용 효율을 보장하는 **2nm 공정 기반 3세대 NPU "Stork"(황새)** 개발에 전력을 다하고 있습니다.

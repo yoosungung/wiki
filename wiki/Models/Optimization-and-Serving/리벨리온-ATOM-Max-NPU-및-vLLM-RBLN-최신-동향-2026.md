@@ -3,9 +3,9 @@ title: "리벨리온 ATOM-Max NPU 및 vLLM-RBLN 최신 동향 (2026)"
 tags: ["Models", "Optimization", "Serving", "NPU", "Rebellions", "vLLM-RBLN", "EXAONE"]
 type: "wiki"
 status: "published"
-last_updated: "2026-08-22"
-updated: "2026-08-22"
-related_raw: ["[[2026-08-22-vllm-rbln-v0.11.3.dev0.md]]", "[[2026-08-20-vllm-rbln-v0.11.2a10-a11.md]]", "[[2026-08-18-rbln-sdk-0.11.1-post1-mimalloc.md]]", "[[2026-08-15-vllm-rbln-v0.11.2a9-mega-cache.md]]", "[[2026-08-08-vllm-rbln-v0.11.2a8.md]]", "[[2026-08-04-vllm-rbln-v0.11.2a7.md]]", "[[2026-08-03-vllm-rbln-v0.11.2a5.md]]", "[[2026-08-01-vllm-rbln-v0.11.2a4-v0.11.1.md]]", "[[2026-07-30-vllm-rbln-v0.11.2a3.md]]", "[[2026-07-29-vllm-rbln-v0.11.2a2.md]]", "[[2026-07-28-vllm-rbln-v0.11.2a0-a1.md]]", "[[2026-07-24-vllm-rbln-v0.11.2.dev0.md]]", "[[2026-06-01-Rebellions-NPU-Update.md]]"]
+last_updated: "2026-08-27"
+updated: "2026-08-27"
+related_raw: ["[[raw/2026-08-27-rebellions-npu-atom-max-vllm-integration.md]]", "[[2026-08-22-vllm-rbln-v0.11.3.dev0.md]]", "[[2026-08-20-vllm-rbln-v0.11.2a10-a11.md]]", "[[2026-08-18-rbln-sdk-0.11.1-post1-mimalloc.md]]", "[[2026-08-15-vllm-rbln-v0.11.2a9-mega-cache.md]]", "[[2026-08-08-vllm-rbln-v0.11.2a8.md]]", "[[2026-08-04-vllm-rbln-v0.11.2a7.md]]", "[[2026-08-03-vllm-rbln-v0.11.2a5.md]]", "[[2026-08-01-vllm-rbln-v0.11.2a4-v0.11.1.md]]", "[[2026-07-30-vllm-rbln-v0.11.2a3.md]]", "[[2026-07-29-vllm-rbln-v0.11.2a2.md]]", "[[2026-07-28-vllm-rbln-v0.11.2a0-a1.md]]", "[[2026-07-24-vllm-rbln-v0.11.2.dev0.md]]", "[[2026-06-01-Rebellions-NPU-Update.md]]"]
 ---
 
 # 리벨리온 ATOM-Max NPU 및 vLLM-RBLN 최신 동향 (2026)
@@ -34,6 +34,12 @@ vLLM-RBLN 플러그인은 2026년 상반기 업데이트를 통해 vLLM 에코�
     - **Continuous Batching**: 처리 대기 중인 요청을 동적으로 배치에 추가하여 처리량을 높입니다.
     - **Prefix Caching**: 반복되는 시스템 프롬프트나 컨텍스트를 캐싱하여 Prefill 속도를 단축합니다.
 - **모델 지원 범위**: Llama-3 70B와 같은 거대 모델뿐만 아니라 **Qwen-MoE**, **LG EXAONE 3.5** 등 최신 모델에 최적화된 서빙 런타임을 제공합니다.
+
+### 표준 컴파일 및 배포 워크플로우
+ATOM-Max NPU 환경에서 LLM 모델을 실 서비스에 배포하는 표준 과정은 다음과 같이 구성됩니다:
+1.  **모델 컴파일 및 최적화**: Hugging Face 형식의 원본 LLM(예: Llama, Qwen, EXAONE 등)을 `optimum-rbln` 라이브러리를 통해 ATOM NPU 아키텍처 사양에 최적화된 중간 표현(IR)으로 AOT 컴파일합니다. 이 컴파일 과정에서 하드웨어의 메모리 구조 및 가용 연산 리소스를 정밀 분석하여 실행 계획을 수립합니다.
+2.  **API 서빙 배포**: `vLLM-RBLN` 플러그인을 활용하여 컴파일된 모델 가중치를 로드하고 추론 API 엔드포인트를 기동합니다. 이 통합 구조를 통해 수동으로 복잡한 파이프라인 코드를 작성할 필요 없이 vLLM의 엔진 구조(PagedAttention 등)를 고스란히 재사용하여 대량의 쿼리를 병렬 처리할 수 있게 됩니다.
+3.  **스케일링**: 대량 분산 환경에서는 RSD(Rebellions Scalable Design) 네트워크 상에서 다중 장치(Multi-chip/Multi-node)로 확장 구동하여 초대형 모델 및 혼합 전문가(MoE) 아키텍처 모델을 기동합니다.
 
 ### v0.11.2.dev0 (2026-07-24)
 - metrics_v2: worker latency `mean|p50|p90|p99` (#811)
