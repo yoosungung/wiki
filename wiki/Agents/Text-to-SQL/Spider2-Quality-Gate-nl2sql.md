@@ -3,9 +3,9 @@ id: spider2-quality-gate-nl2sql
 title: "Spider2-Lite → nl2sql 품질 게이트 (스모크·preflight)"
 status: canonical
 owner: km
-updated: "2026-08-20"
-last_updated: "2026-08-20"
-review_after: "2026-11-19"
+updated: "2026-08-27"
+last_updated: "2026-08-27"
+review_after: "2026-11-27"
 sources:
   - ticket:428
   - ticket:391
@@ -19,6 +19,7 @@ sources:
   - ticket:122
   - ticket:123
   - ticket:172
+  - ticket:1371
   - schedule:qa-bulk-weekly
   - wiki/Agents/Text-to-SQL/T2SQL-Benchmarks-2026.md
   - https://github.com/xlang-ai/Spider2/tree/main/spider2-lite/evaluation_suite

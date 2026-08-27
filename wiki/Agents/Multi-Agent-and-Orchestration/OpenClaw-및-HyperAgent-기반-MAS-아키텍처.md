@@ -3,9 +3,9 @@ title: "OpenClaw 및 HyperAgent 기반 MAS 아키텍처 (2026)"
 tags: ["Agents", "MAS", "OpenClaw", "HyperAgent", "Orchestration", "TaskFlow"]
 type: "wiki"
 status: "published"
-last_updated: "2026-08-16"
-updated: "2026-08-16"
-related_raw: ["[[2026-08-16-openclaw-v2026.8.1-beta.2.md]]", "[[2026-08-10-openclaw-managed-worktrees-cleanup-limits.md]]", "[[2026-07-30-openclaw-session-memory-flush.md]]", "[[2026-07-29-openclaw-hooks-mcp-proto-multi-account.md]]", "[[2026-07-28-openclaw-watched-session-sandbox-network.md]]", "[[2026-07-27-openclaw-route-bindings-grep-naming-harness.md]]", "[[2026-07-26-openclaw-session-urls-oauth-resume.md]]", "[[2026-06-12-Autonomous-Agents-OpenClaw-HyperAgent-Update.md]]", "[[2026-06-15-Autonomous-Agents-OpenClaw-HyperAgent-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]"]
+last_updated: "2026-08-27"
+updated: "2026-08-27"
+related_raw: ["[[2026-08-27-openclaw-auto-mode-exec-approvals.md]]", "[[2026-08-16-openclaw-v2026.8.1-beta.2.md]]", "[[2026-08-10-openclaw-managed-worktrees-cleanup-limits.md]]", "[[2026-07-30-openclaw-session-memory-flush.md]]", "[[2026-07-29-openclaw-hooks-mcp-proto-multi-account.md]]", "[[2026-07-28-openclaw-watched-session-sandbox-network.md]]", "[[2026-07-27-openclaw-route-bindings-grep-naming-harness.md]]", "[[2026-07-26-openclaw-session-urls-oauth-resume.md]]", "[[2026-06-12-Autonomous-Agents-OpenClaw-HyperAgent-Update.md]]", "[[2026-06-15-Autonomous-Agents-OpenClaw-HyperAgent-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]"]
 ---
 
 # 🤖 OpenClaw 및 HyperAgent 기반 MAS 아키텍처 (2026)
@@ -51,11 +51,13 @@ HyperAgent는 단순한 대행을 넘어 에이전트 스스로의 성능을 개
 - **SIRA (Superintelligent Retrieval Agent)**: 다단계 검색 과정을 단일 액션으로 압축하여 지연 시간을 획기적으로 줄인 차세대 검색 에이전트 부상 (2026.06.05 발표).
 - **YOLO Mode vs. Auto Mode**:
     - **YOLO Mode**: 사용자 확인 없이 즉시 도구 및 명령 실행. 생산성은 높으나 위험 요소 상존.
-    - **Auto Mode (2026.06.18 업데이트)**:
-        - **Guardian Pattern**: 다층 검증 아키텍처로, OpenAI Codex의 가디언 리뷰와 연동하여 에이전트의 실행 권한을 동적으로 제어.
-        - **Review Packet**: 정책 범위를 벗어난 명령 발생 시, 명령/인자/환경 정보를 포함한 '리뷰 패킷'을 생성하여 Auto-Reviewer 모델에 위임.
-        - **Risk Scoring**: 0-100 scale의 실시간 리스크 점수화. 저위험 명령은 자동 승인하고 임계값을 넘는 고위험 작업만 인간에게 라우팅.
-        - **`tools.exec.mode` (2026-08-22)**: `deny|allowlist|ask|auto|full`로 정규화. `auto`는 Guardian/native auto-review와 동일 축 — 상세 [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md]] §2.15 Task Flow.
+    - **Auto Mode (2026-08-27 공식 블로그 보강)**:
+        - **Guardian Pattern**: Codex Guardian과 동일 축 — allowlist/safe-bin 통과 후 policy miss만 native auto-reviewer에 위임, 불확실하면 인간.
+        - **Review Packet**: command·argv·cwd·env key names·host·parser 분석. 리뷰어는 **저위험 allow-once 1회**만 가능; 메타데이터는 untrusted.
+        - **`mode` ≠ `host`**: `tools.exec.host`는 실행 위치, `tools.exec.mode`는 승인 정책.
+        - **리뷰어 모델 분리**: `tools.exec.reviewer.model`(예: frontier)을 에이전트 모델과 분리 가능.
+        - **승인 UX**: allow-once/always/deny; Slack·Telegram·iMessage 라우팅. 기본값은 아직 ask 계열 유지(opt-in).
+        - **`tools.exec.mode`**: `deny|allowlist|ask|auto|full` — 상세 [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md]] §2.15.
 - **OpenClaw Task Flow (2026-08-22)**: background task 위 내구성 멀티스텝(managed/mirrored). CLI `openclaw tasks flow list|show|cancel`. 정본 동일 §2.15.
 - **Zero-Trust Security**: 에이전트 간 모든 데이터 핸드오프에 디지털 서명과 감사를 적용하는 아키텍처가 표준으로 자리 잡음.
 - **God Model의 종말**: 단일 거대 모델 대신 **Supervisor-Worker** 구조의 MAS 선호.

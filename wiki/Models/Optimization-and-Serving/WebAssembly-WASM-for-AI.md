@@ -4,9 +4,10 @@ status: "published"
 category: "Models"
 subcategory: "Optimization-and-Serving"
 tags: [WASM, WebAssembly, Memory64, AI-Inference]
-last_updated: "2026-05-13"
-updated: "2026-05-13"
+last_updated: "2026-08-27"
+updated: "2026-08-27"
 related_raw: [
+  "[[2026-08-27-wllama64-memory64-browser-llm.md]]",
   "[[raw/2026-05-12-Wasms-Identity-Crisis-What-the-3-0-Release-Tells-Us.md]]",
   "[[raw/2026-05-12-wasm64-support-memory-larger-than-16-gb.md]]"
 ]
@@ -19,9 +20,11 @@ WebAssembly 3.0은 단순한 웹 실행 형식을 넘어, 브라우저 환경에
 ## WASM 3.0 주요 기술 혁신
 
 ### 1. Memory64 (64-bit Memory Support)
-- **개요**: 기존 4GB(32-bit) 제한을 넘어 최대 16 exabytes까지 이론적 주소 확장이 가능.
-- **브라우저 실제 지원**: 현재 주요 브라우저에서 최대 **16GB**까지 메모리 접근 허용.
-- **AI 적용**: 7B~14B 이상의 LLM 파라미터를 브라우저 메모리에 직접 로드하여 추론 가능.
+- **개요**: 기존 4GB(32-bit) 제한을 넘어 이론상 거대 주소 공간. 브라우저 **JS API 실상한은 보통 16GB**.
+- **브라우저 지원 (2026-08)**: Chrome/Edge 133+, Firefox 134+ ✅. **Safari/iOS ❌** ([caniuse](https://caniuse.com/wf-wasm-memory64)).
+- **성능**: bounds check 때문에 wasm32보다 느릴 수 있음 — 4GB 초과 필요 시에만.
+- **AI 적용**: `wllama64` 등이 Memory64로 대형 가중치 로드; 미지원 브라우저는 4 GiB compat 빌드.
+- **참고**: [[wiki/Models/Optimization-and-Serving/브라우저-기반-LLM-서빙-기술-및-아키텍처-2026.md]]
 
 ### 2. WasmGC (Garbage Collection)
 - **개요**: 브라우저 네이티브 GC를 활용하여 Java, Python, Go, Kotlin 등의 언어를 효율적으로 지원.

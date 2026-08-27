@@ -493,3 +493,9 @@
 | 2026-08-26 | INGEST | raw/ | 13 | 13개 raw 마크다운 파일들의 표준 파일명 변환 및 메타데이터(YAML frontmatter) 주입 완료 |
 | 2026-08-26 | SYNTHESIZE | wiki/ | 11 | Global-Macro, AI-Engineering-Skills, Building-Multi-Agent-Teams, HF-Infrastructure-RAG, LLM-RL-Post-Training, Liquid-AI-Pipette, MoE-Routing-Innovations, Awesome-DLMs, Voice-Agent-Krisp, Harvey-Vertical-Lab, AgentSysBench-Non-LLM 등 11개 신규 위키 문서 합성 완료 및 MOC 업데이트 |
 | 2026-08-26 | LINT | Root / wiki | ALL | 데일리 생성, INDEX.md META/파일 갯수 갱신, raw/ 합성 후 삭제, 구버전 데일리(2026-08-24.md) 삭제 완료 |
+
+| 2026-08-27 | INGEST | raw/ | 2 | OpenClaw Auto Mode 공식 블로그·wllama64/Memory64 원천 수집 |
+| 2026-08-27 | RESEARCH | 연구_주제_관리.md | 2 | MAS Auto Mode·브라우저 Memory64 재탐색(wiki-first 후 웹) |
+| 2026-08-27 | SYNTHESIZE | wiki/Agents, wiki/Models | 5 | Auto Mode CLI/리뷰어 분리 보강; Safari Memory64 미지원·wllama64 반영; UTF-8 손상 1B 수정 |
+| 2026-08-27 | ALREADY_COVERED | inbox/ | 3 | publication-safety·issue-radar→Publication-Gate; scoreboard→Spider2 §7.3(EXCLUDE_PROGRESS) git rm |
+| 2026-08-27 | CLEANUP | raw/ | 2 | 합성 완료 raw 삭제; 데일리 D-0/D-1 유지 |
