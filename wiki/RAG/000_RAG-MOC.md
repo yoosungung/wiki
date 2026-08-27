@@ -2,14 +2,13 @@
 
 ## 📄 Documents
 - [[wiki/RAG/Run-multiple-coding-agent-sessions-in-parallel-without-your-machine-slowing-down
-- [[wiki/RAG/Stop-configuring-the-same-integrations-separately-for-every-AI-agent-you-use
 - [[wiki/RAG/The-distributed-platform-that-powered-Kimi-K3s-RL-training
 - [[wiki/RAG/There-is-no-single-best-OCR-approach-
 AgentENV-is-the-infrastructure-that-powered-agentic-RL-training-for-Kimi-K3-running-thousands-of-isolated-sandboxes-simultaneously.md]]
 Every-document-extraction-architecture-is-just-a-compromise-between-layout-awareness-latency-and-compute-cost
 Most-terminal-coding-agents-are-single-session-tools-built-without-multi-session-scaling-in-mind-jcode-is-built.md]]
 Over-the-past-year-I-built-an-OCR-Markus-Kuehnle.md]]
-Right-now-every-coding-agent-you-use-manages-its-own-connections-independently-Claude-Code-has-its-own-MCP-servers.md]]
+- [[wiki/RAG/Executor-MCP-Middleware-Layer.md]]
 - [[wiki/RAG/10-Notable-Open-Weight-Models-for-2026-Jihoo-Kim님이-토픽에-대해-올림.md]]
 - [[wiki/RAG/3-Layer-Graph-RAG-Deterministic-Search-System.md]]
 - [[wiki/RAG/AGRAG-Advanced-Graph-RAG-MCMI.md]]
