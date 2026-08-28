@@ -91,7 +91,8 @@ furiosa-llm serve <model> --data-parallel-size 2 \
 - **Mass Production**: **2026년 1월 양산 시작**. 현재 NXT RNGD 서버 및 PCIe 카드 글로벌 공급 중.
 - **Samsung SDS NPUaaS 상용 런칭 (2026-07-16 당일 확인)**: 삼성SDS가 **2026-07-16** RNGD 기반 **NPU-as-a-Service (NPUaaS)**를 정식 출시했습니다(7월 14일 K-NPU Tech Wave 발표, 최정진 부사장). 국산 NPU의 **첫 대규모 상용 클라우드 배포**로, 고객은 학습·추론·서버리스 AI 워크로드를 **1·2·4·8장 카드 구독**으로 선택합니다. **상암(서울)·동탄(경기)** DC에 배치하며 연말까지 단계 확장합니다. ([The Elec](https://www.thelec.net/news/articleView.html?idxno=12245))
 - **차세대(3rd Gen / Stork) + Broadcom (2026-08-27 보강)**: Broadcom과의 공식 전략 파트너십 하에 공동 개발 중인 3세대 NPU **Stork**는 에이전트 인프라 환경의 랙 스케일 Scale-up 추론 플랫폼을 표방합니다.
-  - **사양**: TSMC 2nm 미세 공정을 채택하고, 차세대 초고대역폭 메모리인 **HBM4 및 HBM4E** 기반의 멀티다이 SoC/칩렛 아키텍처로 구동됩니다. 여기에 Broadcom의 고대역폭 이더넷(High-radix switches 등) 패브릭 기술을 직접 칩 단위에 내장해 장치 간 대규모 연산 데이터 이동 병목을 극복합니다.
+  - **사양**: TSMC 2nm 미세 공정을 채택하고, 차세대 초고대역폭 메모리인 **HBM4 및 HBM4E** 기반의 멀티다이 SoC/칩렛 아키텍처로 구동됩니다. 여기에 Broadcom의 고대역폭 이더넷(High-radix switches 등) 패브릭 기술을 직접 칩 단위에 내장해 장치 간 대규모 연산 데이터 이동 병목을 극복합니다. all-to-all 토폴로지로 MoE 라우팅 등 하이퍼스케일 통신 패턴을 목표로 한다([공식 Broadcom 파트너십](https://furiosa.ai/blog/furiosaai-partners-with-broadcom-to-build-next-generation-inference-platform-for-the-agentic-era)).
+  - **2차 티저 해석 (비공식)**: 공개 티저 이미지 기준 12× HBM4/E 사이트·2× 2nm compute chiplet 구성을 **최대 ~432GB**(12-Hi 36GB/스택 가정)로 읽는 보도가 있으나, 용량·대역폭 수치는 샘플링 전까지 공식 스펙이 아니다.
   - **일정 로드맵**: 공식 로드맵에 따르면 Stork 칩의 실물 샘플링(Sampling) 일정은 **2028년 상반기(H1)**를 명확한 타깃으로 잡고 진행 중입니다. (이전 K-NPU 보고서상의 '2027년 말 양산 착수' 가능성 및 기타 PoC 검증 시점은 개발 진척도에 따라 조율될 것으로 분석됨)
 
 ### 글로벌 진출 및 생산 스케일업 (2026-07-14 업데이트)

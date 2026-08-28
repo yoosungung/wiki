@@ -5,7 +5,7 @@ type: "wiki"
 status: "published"
 last_updated: "2026-08-28"
 updated: "2026-08-28"
-related_raw: ["[[raw/2026-08-28-rebellions-npu-exaone-4-5-optimum-vllm.md]]", "[[raw/2026-08-27-rebellions-npu-atom-max-vllm-integration.md]]", "[[2026-08-22-vllm-rbln-v0.11.3.dev0.md]]", "[[2026-08-20-vllm-rbln-v0.11.2a10-a11.md]]", "[[2026-08-18-rbln-sdk-0.11.1-post1-mimalloc.md]]", "[[2026-08-15-vllm-rbln-v0.11.2a9-mega-cache.md]]", "[[2026-08-08-vllm-rbln-v0.11.2a8.md]]", "[[2026-08-04-vllm-rbln-v0.11.2a7.md]]", "[[2026-08-03-vllm-rbln-v0.11.2a5.md]]", "[[2026-08-01-vllm-rbln-v0.11.2a4-v0.11.1.md]]", "[[2026-07-30-vllm-rbln-v0.11.2a3.md]]", "[[2026-07-29-vllm-rbln-v0.11.2a2.md]]", "[[2026-07-28-vllm-rbln-v0.11.2a0-a1.md]]", "[[2026-07-24-vllm-rbln-v0.11.2.dev0.md]]", "[[2026-06-01-Rebellions-NPU-Update.md]]"]
+related_raw: ["[[raw/2026-08-28-rbln-container-toolkit-cdi.md]]", "[[raw/2026-08-28-rebellions-npu-exaone-4-5-optimum-vllm.md]]", "[[raw/2026-08-27-rebellions-npu-atom-max-vllm-integration.md]]", "[[2026-08-22-vllm-rbln-v0.11.3.dev0.md]]", "[[2026-08-20-vllm-rbln-v0.11.2a10-a11.md]]", "[[2026-08-18-rbln-sdk-0.11.1-post1-mimalloc.md]]", "[[2026-08-15-vllm-rbln-v0.11.2a9-mega-cache.md]]", "[[2026-08-08-vllm-rbln-v0.11.2a8.md]]", "[[2026-08-04-vllm-rbln-v0.11.2a7.md]]", "[[2026-08-03-vllm-rbln-v0.11.2a5.md]]", "[[2026-08-01-vllm-rbln-v0.11.2a4-v0.11.1.md]]", "[[2026-07-30-vllm-rbln-v0.11.2a3.md]]", "[[2026-07-29-vllm-rbln-v0.11.2a2.md]]", "[[2026-07-28-vllm-rbln-v0.11.2a0-a1.md]]", "[[2026-07-24-vllm-rbln-v0.11.2.dev0.md]]", "[[2026-06-01-Rebellions-NPU-Update.md]]"]
 ---
 
 # 리벨리온 ATOM-Max NPU 및 vLLM-RBLN 최신 동향 (2026)
@@ -148,6 +148,33 @@ uv pip install "vllm-rbln==0.11.3.dev0" \
 ## 3. 엔터프라이즈 및 클라우드 생태계
 - **Red Hat OpenShift AI 지원**: 2026년 5월부터 Red Hat OpenShift AI에서 공식 인증된 컨테이너 이미지와 `vLLM RBLN ServingRuntime`을 제공하여 기업용 AI 인프라 배포가 용이해졌습니다.
 - **RSD (Rebellions Scalable Design)**: 여러 장치를 하나의 거대한 가속기처럼 사용하는 분산 추론 프레임워크를 통해 초거대 모델 대응력을 높였습니다.
+
+### RBLN Container Toolkit (CDI) — SDK v0.11.1 / 2026-08-28
+
+공식 문서 기준, Docker·containerd·CRI-O가 **Container Device Interface(CDI)**로 호스트 RBLN 라이브러리·`rbln-smi`를 컨테이너에 주입한다. 앱 코드 변경 없이 NPU 접근이 가능하며, **범위는 CDI 스펙 생성·런타임 설정**이다(RSD 그룹 할당은 NPU Allocation 가이드 별도).
+
+| 바이너리 | 역할 |
+| :--- | :--- |
+| `rbln-ctk` | CDI 스펙 생성·런타임 configure·시스템 점검 |
+| `rbln-ctk-daemon` | K8s DaemonSet용 자동 설정·헬스·graceful shutdown |
+| `rbln-cdi-hook` | 컨테이너 내 ldcache/심링크 OCI hook |
+
+| 배포 | 대상 | 디바이스 주입 |
+| :--- | :--- | :--- |
+| DEB/RPM | 단독 Docker 호스트 | `/dev/rbln*` + 대응 `/dev/rsd*` CDI 주입, NPU↔RSD는 `librbln-ml` |
+| 컨테이너 이미지 | K8s DaemonSet | 디바이스 노드 미방출 — device-plugin/DRA가 Pod `/dev/rbln*` 소유; 이미지에 `librbln-ml` 없음 |
+
+**전제**: 호스트에 RBLN **드라이버를 툴킷보다 먼저** 설치(`librbln-ml3`/`librbln-ml` hard dep). Ubuntu 22.04/24.04·RHEL 9+, x86_64.
+
+```bash
+# apt 레포 등록 후
+sudo apt-get install rbln-container-toolkit
+sudo rbln-ctk cdi generate
+sudo rbln-ctk runtime configure
+docker run --device rebellions.ai/npu=all -it IMAGE_NAME:TAG
+```
+
+참고: [Container Toolkit](https://docs.rbln.ai/latest/software/system_management/container_toolkit.html) · [NPU Allocation](https://docs.rbln.ai/latest/software/system_management/container.html). 제품 발표상 Model Zoo에 Qwen3.5(0.8B–27B)·Qwen3.6-27B가 추가됐다는 2차 보고가 있으나, 설치·런타임 정본은 docs.rbln.ai를 따른다.
 
 ## 4. 향후 로드맵: REBEL NPU
 리벨리온은 차세대 **REBEL NPU**를 준비 중입니다.

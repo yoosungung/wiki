@@ -1,6 +1,13 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-28 | INBOX_DRAIN | inbox/candidate | 1 | people-ssot-curation → Publication-Gate ALREADY_COVERED/EXCLUDE_PROGRESS; git rm |
+| 2026-08-28 | RESEARCH | Web | 2 | WebMCP Chrome origin trial·document.modelContext; RBLN Container Toolkit CDI |
+| 2026-08-28 | INGEST | raw/ | 2 | webmcp-chrome-origin-trial, rbln-container-toolkit-cdi |
+| 2026-08-28 | SYNTHESIZE | wiki/ | 6 | OpenClaw WebMCP 정정, WebGPU§WebMCP, MAS 오케스트레이션, 리벨리온 CDI, 프리오사 Stork 티저, 스마트폰 Safari Memory64 정정 |
+| 2026-08-28 | ALREADY_COVERED | wiki/ | 1 | LiteRT-LM Gemma4 MTP 공식 가이드·권장 플래그 (스마트폰 LLM 서빙에 기반영) |
+| 2026-08-28 | CLEANUP | raw/ | 2 | 합성 완료 raw 2건 삭제 |
+| 2026-08-28 | LINT | Root / wiki | ALL | 데일리 갱신, D-2 점검, 연구_주제_관리.md 갱신 |
 | 2026-08-28 | RESEARCH | Web | 7 | LiteRT-LM Gemma 4, Rebellions NPU, Furiosa RNGD, AI PC Trends, Supermemory, AV-SQL, Autonomous MAS SOTA 탐색 |
 | 2026-08-28 | INGEST | raw/ | 7 | litert-lm-gemma-4, rebellions-npu-exaone, furiosa-rngd-scoring, on-device-ai-trends, supermemory-decay, av-sql-ossie, autonomous-mas |
 | 2026-08-28 | SYNTHESIZE | wiki/ | 9 | 스마트폰 LLM 서빙, 리벨리온 NPU 동향 및 EXAONE 4.5 가이드, 프리오사 RNGD 가이드, 온디바이스 AI PC 트렌드, Supermemory MCP, AV-SQL Spider 2.0, OpenClaw MAS, 에이전트 엔지니어링 성숙도 위키 증분 합성 |
