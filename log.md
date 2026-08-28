@@ -1,6 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-28 | RESEARCH | Web | 7 | LiteRT-LM Gemma 4, Rebellions NPU, Furiosa RNGD, AI PC Trends, Supermemory, AV-SQL, Autonomous MAS SOTA 탐색 |
+| 2026-08-28 | INGEST | raw/ | 7 | litert-lm-gemma-4, rebellions-npu-exaone, furiosa-rngd-scoring, on-device-ai-trends, supermemory-decay, av-sql-ossie, autonomous-mas |
+| 2026-08-28 | SYNTHESIZE | wiki/ | 9 | 스마트폰 LLM 서빙, 리벨리온 NPU 동향 및 EXAONE 4.5 가이드, 프리오사 RNGD 가이드, 온디바이스 AI PC 트렌드, Supermemory MCP, AV-SQL Spider 2.0, OpenClaw MAS, 에이전트 엔지니어링 성숙도 위키 증분 합성 |
+| 2026-08-28 | CLEANUP | raw/ | 7 | 금일 수집 및 합성이 완료된 raw 파일 7건 일괄 삭제 |
+| 2026-08-28 | LINT | Root / wiki | ALL | 데일리 노트 갱신, 연구_주제_관리.md 갱신, log.md 동기화 |
 | 2026-08-28 | RESEARCH | Web | 1 | Supermemory memory governance (EU AI Act & NIST AI RMF 준수) |
 | 2026-08-28 | SYNTHESIZE | wiki/ | 1 | Supermemory§MemoryGovernance 3대 기술 기둥 보강 |
 | 2026-08-28 | CLEANUP | raw/ | 8 | 2026-08-27 수집 완료된 raw 파일 8건 일괄 삭제 |

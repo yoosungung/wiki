@@ -3,9 +3,9 @@ title: "OpenClaw 및 HyperAgent 기반 MAS 아키텍처 (2026)"
 tags: ["Agents", "MAS", "OpenClaw", "HyperAgent", "Orchestration", "TaskFlow"]
 type: "wiki"
 status: "published"
-last_updated: "2026-08-27"
-updated: "2026-08-27"
-related_raw: ["[[2026-08-27-openclaw-auto-mode-exec-approvals.md]]", "[[2026-08-16-openclaw-v2026.8.1-beta.2.md]]", "[[2026-08-10-openclaw-managed-worktrees-cleanup-limits.md]]", "[[2026-07-30-openclaw-session-memory-flush.md]]", "[[2026-07-29-openclaw-hooks-mcp-proto-multi-account.md]]", "[[2026-07-28-openclaw-watched-session-sandbox-network.md]]", "[[2026-07-27-openclaw-route-bindings-grep-naming-harness.md]]", "[[2026-07-26-openclaw-session-urls-oauth-resume.md]]", "[[2026-06-12-Autonomous-Agents-OpenClaw-HyperAgent-Update.md]]", "[[2026-06-15-Autonomous-Agents-OpenClaw-HyperAgent-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]"]
+last_updated: "2026-08-28"
+updated: "2026-08-28"
+related_raw: ["[[raw/2026-08-28-autonomous-mas-openclaw-webmcp-goose.md]]", "[[2026-08-27-openclaw-auto-mode-exec-approvals.md]]", "[[2026-08-16-openclaw-v2026.8.1-beta.2.md]]", "[[2026-08-10-openclaw-managed-worktrees-cleanup-limits.md]]", "[[2026-07-30-openclaw-session-memory-flush.md]]", "[[2026-07-29-openclaw-hooks-mcp-proto-multi-account.md]]", "[[2026-07-28-openclaw-watched-session-sandbox-network.md]]", "[[2026-07-27-openclaw-route-bindings-grep-naming-harness.md]]", "[[2026-07-26-openclaw-session-urls-oauth-resume.md]]", "[[2026-06-12-Autonomous-Agents-OpenClaw-HyperAgent-Update.md]]", "[[2026-06-15-Autonomous-Agents-OpenClaw-HyperAgent-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]"]
 ---
 
 # 🤖 OpenClaw 및 HyperAgent 기반 MAS 아키텍처 (2026)
@@ -59,6 +59,8 @@ HyperAgent는 단순한 대행을 넘어 에이전트 스스로의 성능을 개
         - **승인 UX**: allow-once/always/deny; Slack·Telegram·iMessage 라우팅. 기본값은 아직 ask 계열 유지(opt-in).
         - **`tools.exec.mode`**: `deny|allowlist|ask|auto|full` — 상세 [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md]] §2.15.
 - **OpenClaw Task Flow (2026-08-22)**: background task 위 내구성 멀티스텝(managed/mirrored). CLI `openclaw tasks flow list|show|cancel`. 정본 동일 §2.15.
+- **WebMCP & Sandbox Isolation**: Chrome 146+부터 정식 지원되는 browser-native standard로, 기존 스크린 스크래핑 방식의 프롬프트 인젝션 취약점을 개선합니다. 웹 페이지가 `document.modelContext`를 통해 노출한 도구와 상호작용하도록 유도하며, origin isolation, HTTPS 필수 조건, `requestUserInteraction()` API 호출을 통해 악성 행위로부터 샌드박스 보안 격리를 구현합니다.
+- **Goose Framework (Block 개발)**: 소프트웨어 엔지니어링 에이전트 개발을 위해 설계된 오픈소스 MAS 프레임워크입니다. 모델-도구 연결에 MCP(Model Context Protocol)를 네이티브 채택하였으며, 대규모 코드 마이그레이션, 테스트 코드 생성 등 개발 프로세스를 자동 오케스트레이션하는 데 특화되어 있습니다.
 - **Zero-Trust Security**: 에이전트 간 모든 데이터 핸드오프에 디지털 서명과 감사를 적용하는 아키텍처가 표준으로 자리 잡음.
 - **God Model의 종말**: 단일 거대 모델 대신 **Supervisor-Worker** 구조의 MAS 선호.
 - **상호운용성 표준**: MCP(Model Context Protocol) 및 A2A(Agent-to-Agent) 프로토콜을 통한 벤더 간 에이전트 협업.
