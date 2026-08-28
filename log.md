@@ -1,6 +1,10 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-28 | RESEARCH | Web | 1 | Supermemory memory governance (EU AI Act & NIST AI RMF 준수) |
+| 2026-08-28 | SYNTHESIZE | wiki/ | 1 | Supermemory§MemoryGovernance 3대 기술 기둥 보강 |
+| 2026-08-28 | CLEANUP | raw/ | 8 | 2026-08-27 수집 완료된 raw 파일 8건 일괄 삭제 |
+| 2026-08-28 | LINT | Root / wiki | ALL | 데일리 생성, D-2(2026-08-26) 삭제, 연구_주제_관리.md 갱신 |
 | 2026-08-27 | RESEARCH | Web | 3 | Rebellions optimum/vLLM, Furiosa Overlap/Stork 2nm, LiteRT-LM Gemma 4 MTP |
 | 2026-08-27 | INGEST | raw/ | 3 | rebellions-npu-atom-max-vllm-integration, furiosa-ai-npu-rngd-stork-2nm-broadcom, litert-lm-gemma-4-mtp-speculative-decoding |
 | 2026-08-27 | SYNTHESIZE | wiki/ | 4 | 리벨리온 NPU 동향, 프리오사 AI RNGD/Stork 가이드, 스마트폰 LLM 서빙 MTP 가속 업데이트, Executor MCP 미들웨어 추가 |

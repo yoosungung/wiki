@@ -520,9 +520,9 @@ from supermemory_openai.middleware import SupermemoryMiddleware  # 예시 경로
 
 ---
 
-## 4. 2026년 에이전틱 메모리 인프라 지형도 및 거버넌스 (2026-08-27 업데이트)
+## 4. 2026년 에이전틱 메모리 인프라 지형도 및 거버넌스 (2026-08-28 업데이트)
 
-2026년 AI 생태계는 대용량 컨텍스트 윈도우를 단순 무차별적으로 채우는 "Prompt Stuffing" 관성에서 탈피하여, 에이전트의 효율성과 정합성을 통제하는 **'거버넌스형 메모리 인프라(Governed Memory Infrastructure)'** 구조로 완전히 수렴하였습니다.
+2026년 AI 생태계는 대용량 컨텍스트 윈도우를 단순 무차별적으로 채우는 "Prompt Stuffing" 관성에서 탈피하여, 에이전트의 효율성과 정합성을 통제하는 **'거버넌스형 메모리 인프라(Governed Memory Infrastructure)'** 구조로 완전히 수렴하였습니다. 특히 **EU AI Act (2026년 8월 전면 시행)** 및 **NIST AI RMF (Risk Management Framework)**의 규제 표준에 따라 AI 메모리 레이어의 데이터 통제권과 프라이버시가 핵심 아키텍처 설계 기준으로 자리 잡았습니다.
 
 ### 📊 주요 오픈소스 AI 메모리 엔진 및 플랫폼 비교
 
@@ -539,6 +539,10 @@ from supermemory_openai.middleware import SupermemoryMiddleware  # 예시 경로
     *   **메모리 오염(Memory Poisoning)** 방지: 잘못된 사실이 메모리에 주입되는 것을 차단.
     *   **권한 누수(Privilege Creep)** 방지: 타 계정의 민감 지식이나 권한이 메모리 참조 중 누출되는 것을 방지.
     *   **낡은 맥락(Stale Context)** 해소: 사용자의 오래된 설정이나 설정 변경으로 만료된 규칙을 메모리에서 정리.
+*   **규제 준수를 위한 3대 기술 기둥 (EU AI Act & GDPR 준수)**:
+    1.  **Data Provenance & Lineage (데이터 출처 추적)**: 각 메모리 노드와 팩트(Fact)가 어떤 원천 문서(`raw/`), 대화 세션, 또는 에이전트 실행에 의해 기입/수정되었는지 추적하여 데이터 계보를 명확히 유지합니다.
+    2.  **Right to Erasure (잊힐 권리) 및 목적 제한**: 사용자의 명시적 요청 또는 개인정보보호법에 따라 특정 기억(엔티티, 관계성)을 물리적으로 영구 삭제할 수 있는 API를 제공하며, 지정된 비즈니스 목적 외의 메모리 접근을 원천 차단합니다.
+    3.  **Least Privilege & Scoped Access (최소 권한 격리)**: 멀티 에이전트 및 멀티 테넌트 환경에서 `x-sm-project` 및 `containerTag`를 활용하여 작업 공간별 메모리 범위를 물리적/논리적으로 격리하고, 에이전트 권한 상승(Privilege Escalation)을 제어합니다.
 *   **Auto-forgetting & Auto-decay (자동 망각 및 감쇠)**: 에빙하우스 망각 곡선에 기반하여 메모리 노드에 강도(Strength)를 부여합니다.
     *   시간 흐름에 따라 접근 빈도가 낮은 메모리의 강도를 낮추어 **감쇠(Auto-decay)**합니다.
     *   강도가 임계값 미만으로 떨어진 메모리는 자동으로 **망각(Auto-forgetting/Archiving)**하여 컨텍스트 노이즈를 극소화하고 메모리 팽창(Memory Bloat)을 방지합니다.
