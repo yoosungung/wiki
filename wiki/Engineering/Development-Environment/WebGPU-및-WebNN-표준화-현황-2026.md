@@ -3,8 +3,8 @@ title: "WebGPU 및 WebNN 표준화 현황 (2026)"
 tags: ["Engineering", "Development-Environment", "WebGPU", "WebNN", "W3C", "Standardization"]
 type: "wiki"
 status: "published"
-last_updated: "2026-08-28"
-updated: "2026-08-28"
+last_updated: "2026-08-29"
+updated: "2026-08-29"
 related_raw: ["[[raw/2026-08-28-webmcp-chrome-origin-trial.md]]", "[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-07-01-webgpu-webnn-wasm3-webmcp.md]]", "[[2026-07-10-web-inference-wasm-3.0.md]]", "[[2026-07-11-webgpu_wasm_3_0_webnn_webllm_browser_serving.md]]", "[[2026-07-12-webllm-3w-opfs-json-workers.md]]", "[[2026-07-13-litert-lm-swift-js-session-api.md]]"]
 ---
 
@@ -38,6 +38,7 @@ NPU, GPU, CPU 등 하드웨어 가속기를 직접 제어하여 신경망 추론
 - **API**: Imperative — `document.modelContext.registerTool({ name, description, inputSchema, … })`(JSON Schema). Declarative — 표준 HTML form 주석으로 툴 생성. Chrome 150+: 구 `navigator.modelContext`는 alias.
 - **로컬 활성화**: `chrome://flags/#enable-webmcp-testing` → Enabled → 재시작. Permissions Policy **`tools`**(기본 `self`; cross-origin iframe 비활성).
 - **상태 (Chrome 문서 + 2차)**: 공식은 human-in-the-loop 로컬 워크플로 중심. 2차 보고 — Chrome **149–156 public origin trial**, 주 소비 에이전트 Gemini in Chrome; Shopify/Cloudflare 기본 노출은 상거래 표면 확대 신호.
+- **OT 종료·Ship 목표 (2026-08-29)**: ChromeStatus 기준 OT desktop/Android/WebView **149→156**, **Shipping 목표 157**. 현장 보고: trial 토큰 만료·OT 종료 **~2026-11-16** 전후 — 토큰/`document.modelContext` 없으면 `registerTool`이 **silent no-op**. 로컬은 `chrome://flags/#enable-webmcp-testing`. 프로덕션 등록 코드는 **OT 토큰 서빙·feature-detect(`document.modelContext || navigator.modelContext`)** 없이 머지하지 말 것.
 - **참고**: [Chrome WebMCP](https://developer.chrome.com/docs/ai/webmcp) · MAS 적용 [[wiki/Agents/Multi-Agent-and-Orchestration/OpenClaw-및-HyperAgent-기반-MAS-아키텍처.md]]
 
 ## 4. 웹 기반 LLM 서빙 및 실행 가속의 영향

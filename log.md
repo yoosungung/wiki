@@ -1,6 +1,13 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-29 | INBOX_DRAIN | inbox/{candidate,pm} | 4 | PubGate ALREADY(people/radar/pub-safety); Roadmap Done≠체크 idempotent 패턴; git rm |
+| 2026-08-29 | RESEARCH | Web | 3 | LiteRT OpenAI registry serve·Gemma4-12B; WebMCP OT~11-16/Ship157; Furiosa/RBLN/MTP ALREADY |
+| 2026-08-29 | INGEST | raw/ | 1 | litert-lm-openai-compatible-serve-gemma4-12b |
+| 2026-08-29 | SYNTHESIZE | wiki/ | 4 | 스마트폰§registry-serve; WebGPU/OpenClaw WebMCP OT; Roadmap-Sync; PubGate sources |
+| 2026-08-29 | ALREADY_COVERED | wiki/ | 3 | Furiosa 양산/Stork; RBLN Gemma4·EXAONE-4.5·OpenShift; LiteRT MTP 2.2–3x |
+| 2026-08-29 | CLEANUP | raw/ | 1 | 합성 완료 raw 1건 삭제 |
+| 2026-08-29 | LINT | Root / wiki | ALL | 데일리 생성, D-2(2026-08-27) 삭제, 연구_주제·INDEX META |
 | 2026-08-28 | INBOX_DRAIN | inbox/candidate | 1 | people-ssot-curation → Publication-Gate ALREADY_COVERED/EXCLUDE_PROGRESS; git rm |
 | 2026-08-28 | RESEARCH | Web | 2 | WebMCP Chrome origin trial·document.modelContext; RBLN Container Toolkit CDI |
 | 2026-08-28 | INGEST | raw/ | 2 | webmcp-chrome-origin-trial, rbln-container-toolkit-cdi |
