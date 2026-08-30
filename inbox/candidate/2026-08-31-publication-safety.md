@@ -1,7 +1,7 @@
 ---
 id: inbox-candidate-2026-08-31-publication-safety
 agent: candidate
-ticket_id: null
+ticket_id: 1475
 updated: 2026-08-31
 status: inbox
 sources:
