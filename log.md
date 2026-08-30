@@ -1,6 +1,13 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-31 | INBOX_DRAIN | inbox/candidate | 3 | PubGate bare-host·diff0 no-op 보강; people/radar/pub-safety ALREADY+sources; git rm |
+| 2026-08-31 | RESEARCH | Web | 3 | LiteRT 12B audio MTP drafter 갭; Furiosa/Supermemory/RBLN ALREADY |
+| 2026-08-31 | INGEST | raw/ | 1 | litert-lm-gemma4-12b-audio-mtp-drafter-gap |
+| 2026-08-31 | SYNTHESIZE | wiki/ | 2 | Publication-Gate bare-host/diff0; 스마트폰§MTP 패키지 함정 |
+| 2026-08-31 | ALREADY_COVERED | wiki/ | 3 | Furiosa RNGD/Stork; Supermemory MCP; RBLN EXAONE-4.5 |
+| 2026-08-31 | CLEANUP | raw/ | 1 | 합성 완료 raw 1건 삭제; 데일리 D-0/D-1 |
+| 2026-08-31 | LINT | Root / wiki | ALL | 데일리 생성, D-2(2026-08-29) 삭제, 연구_주제·INDEX META |
 | 2026-08-30 | RESEARCH | Web | 5 | AI PC 3사 가속기·Wasm 3.0 Memory64·Rebellions SqueezeBits·AV-SQL/OSI·Goose/AAIF SOTA 탐색 |
 | 2026-08-30 | INGEST | raw/ | 5 | 2026-08-30-on-device-ai-pc-spark-gorgon-panther, 2026-08-30-webassembly-3-memory64-webnn, 2026-08-30-rebellions-squeezebits-exaone-45, 2026-08-30-av-sql-agentic-views-osi-ossie, 2026-08-30-goose-framework-aaif-agentic-engineering |
 | 2026-08-30 | SYNTHESIZE | wiki/ | 7 | 스마트폰-환경의-LLM-서빙-기술-2026, 브라우저-기반-LLM-서빙-기술-및-아키텍처-2026, 온디바이스-AI-및-AI-PC-기술-트렌드-2026, 리벨리온-ATOM-Max-기반-EXAONE-4.5-최적화-가이드, AV-SQL-Agentic-Views-Spider-2-0, Goose-AI-Agent-Framework, 자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026 |
