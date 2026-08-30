@@ -2,9 +2,9 @@
 title: Goose AI 에이전트 프레임워크
 status: published
 tags: [Agents, Frameworks, GooseAI, OpenSource, MCP]
-related_raw: ["[[2026-05-08-goose-ai-future-of-work.md]]"]
-last_updated: 2026-05-08
-updated: "2026-05-08"
+related_raw: ["[[raw/2026-08-30-goose-framework-aaif-agentic-engineering.md]]", "[[2026-05-08-goose-ai-future-of-work.md]]"]
+last_updated: "2026-08-30"
+updated: "2026-08-30"
 ---
 
 # Goose AI (구스): 블록(Block)의 오픈소스 에이전트 프레임워크
@@ -30,7 +30,14 @@ updated: "2026-05-08"
 - **노동의 재정의**: 인간의 역할이 '실행자'에서 문제를 정의하고 행동을 규정하는 '설계자'로 강제 이주되고 있음을 보여줍니다.
 - **기술의 민주화 vs 권력 집중**: 강력한 생산 수단을 대중에게 개방하는 동시에, 인간 노동의 가치를 비용 효율성 측면에서 해체하는 양가적 성격을 가집니다.
 
+## 🏛️ AAIF (Agentic AI Foundation) 기증 (2026년 업데이트)
+- **표준화 기구 이관**: 블록(Block)은 2026년 자체적으로 관리하던 `goose` 프레임워크를 리눅스 재단 산하의 **Agentic AI Foundation (AAIF)**에 공식 기증하였습니다.
+- **상호운용성 표준 수립**: AAIF는 Anthropic의 MCP(Model Context Protocol), OpenAI의 `AGENTS.md` 규격과 함께 `goose` 에이전트 실행 엔진을 3대 핵심 기둥으로 삼아 벤더 종속이 없는 오픈 에이전트 인프라 표준을 정의합니다.
+- **에이전틱 엔지니어링(Agentic Engineering)**: 기존의 수동 코딩 패러다임에서 탈피해, 확률론적으로 동작하는 자율 에이전트 군(Swarms)의 오케스트레이션 설계, 컨텍스트 엔지니어링, 거버넌스를 설계하는 전문 규율로서의 '에이전틱 엔지니어링'이 새로운 핵심 기술 분과로 부상했습니다.
+
 ## 🔗 관련 문서
-- [[wiki/Agents/Frameworks/000_LLM-Agent-MOC.md]]
+- [[wiki/Agents/Frameworks/000_Frameworks-MOC.md]]
 - [[wiki/Agents/Frameworks/MCP/000_MCP-MOC.md]]
 - [[wiki/Business/Trends/AI-Agent-Economy.md]]
+- [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md]]
+

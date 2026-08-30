@@ -1,8 +1,8 @@
 ---
 title: "AV-SQL: Agentic Views를 통한 Text-to-SQL 혁신 및 시맨틱 레이어 통합"
-last_updated: "2026-08-28"
-updated: "2026-08-28"
-related_raw: ["[[raw/2026-08-28-av-sql-apache-ossie-semantic-layer-mcp.md]]", "[[2026-08-27-av_sql_semantic_layer_apache_ossie.md]]", "[[2026-08-23-apache-ossie-ai-context-spec141.md]]", "[[2026-07-29-apache-ossie-java21.md]]", "[[2026-07-28-apache-ossie-ai-disclosures-polaris-java17.md]]", "[[2026-07-24-apache-ossie-schema-ontology-flatten.md]]", "[[2026-07-23-apache-ossie-plugin-invocation.md]]", "[[2026-07-22-apache-ossie-wisdomai-converter-plugins.md]]", "[[2026-07-20-apache-ossie-databricks-snowflake-merged.md]]", "[[raw/2026-07-14-AV-SQL-논문-및-구현.md]]", "[[wiki/Agents/Text-to-SQL/2026-04-20-T2SQL-Trends-Update.md]]", "[[2026-07-16-av-sql-osi-mcp-integration-research.md]]", "[[2026-07-16-av_sql_semantic_layer_text_to_sql_research.md]]", "[[2026-07-17-apache-ossie-cli-scaffold.md]]", "[[2026-07-18-apache-ossie-duckdb-semantido-converters.md]]", "[[2026-07-19-apache-ossie-snowflake-quoted-identifiers.md]]"]
+last_updated: "2026-08-30"
+updated: "2026-08-30"
+related_raw: ["[[raw/2026-08-30-av-sql-agentic-views-osi-ossie.md]]", "[[raw/2026-08-28-av-sql-apache-ossie-semantic-layer-mcp.md]]", "[[2026-08-27-av_sql_semantic_layer_apache_ossie.md]]", "[[2026-08-23-apache-ossie-ai-context-spec141.md]]", "[[2026-07-29-apache-ossie-java21.md]]", "[[2026-07-28-apache-ossie-ai-disclosures-polaris-java17.md]]", "[[2026-07-24-apache-ossie-schema-ontology-flatten.md]]", "[[2026-07-23-apache-ossie-plugin-invocation.md]]", "[[2026-07-22-apache-ossie-wisdomai-converter-plugins.md]]", "[[2026-07-20-apache-ossie-databricks-snowflake-merged.md]]", "[[raw/2026-07-14-AV-SQL-논문-및-구현.md]]", "[[wiki/Agents/Text-to-SQL/2026-04-20-T2SQL-Trends-Update.md]]", "[[2026-07-16-av-sql-osi-mcp-integration-research.md]]", "[[2026-07-16-av_sql_semantic_layer_text_to_sql_research.md]]", "[[2026-07-17-apache-ossie-cli-scaffold.md]]", "[[2026-07-18-apache-ossie-duckdb-semantido-converters.md]]", "[[2026-07-19-apache-ossie-snowflake-quoted-identifiers.md]]"]
 ---
 
 # AV-SQL: Agentic Views를 통한 Text-to-SQL 혁신
