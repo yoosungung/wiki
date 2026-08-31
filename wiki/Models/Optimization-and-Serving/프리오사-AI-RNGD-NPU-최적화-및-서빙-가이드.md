@@ -133,6 +133,7 @@ fxb build Qwen/Qwen3-8B-FP8 qwen3-8b-fp8.fxb -O O3 -tp 8
 | :--- | :--- | :--- |
 | Tensor Parallel (`-tp`) | FXB 커널 샤딩에 포함 → **재빌드 필요** | 변경 불가 |
 | Pipeline / Data Parallel (`-pp`/`-dp`) | — | `furiosa-llm serve`에서 복제·스테이지 |
+| `--max-model-len` | `fxb build`/`furiosa-llm build`에서 **버킷 컴파일 범위**를 정함 | 아티팩트 버킷은 고정; serve 플래그는 **admission cap**만 (빌드 의미와 혼동 금지) |
 
 ### SDK 2026.1 하이라이트 (docs 2026.4.0b13)
 

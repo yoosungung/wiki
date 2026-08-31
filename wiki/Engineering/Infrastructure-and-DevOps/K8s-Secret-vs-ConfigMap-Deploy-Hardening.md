@@ -3,11 +3,13 @@ id: k8s-secret-vs-configmap-deploy-hardening
 title: "K8s Secret vs ConfigMap 배포 하드닝"
 status: canonical
 owner: km
-updated: "2026-07-31"
-last_updated: "2026-07-31"
-review_after: "2026-10-31"
+updated: "2026-08-31"
+last_updated: "2026-08-31"
+review_after: "2026-11-30"
 sources:
   - ticket:61
+  - ticket:1511
+  - inbox/aa/2026-08-31-1511-aa-security-pass-sglang-16k.md
 tags: ["Infrastructure", "DevOps", "Kubernetes", "Secret", "Security", "Overlay"]
 type: "wiki"
 ---
@@ -20,9 +22,9 @@ type: "wiki"
 
 | 넣을 곳 | 내용 |
 | :--- | :--- |
-| **Secret** + `envFrom.secretRef` | 공유 토큰, 자격 증명 |
-| **ConfigMap** | 비민감 설정만 |
-| **금지** | CM에 `*_TOKEN`, `*_DEV_USER` 등 신원 바이패스 키 |
+| **Secret** + `envFrom.secretRef` | 공유 토큰, 자격 증명, LLM `OPENAI_API_BASE`/`OPENAI_API_KEY`(또는 동등) |
+| **ConfigMap** | 비민감 설정만 — 모델 id, `max_model_len` / context trigger 등 |
+| **금지** | CM에 `*_TOKEN`, `*_DEV_USER`, API 키·베이스 URL 등 신원·엔드포인트 비밀 |
 
 ## Apply 후 scrubber
 

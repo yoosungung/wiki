@@ -38,6 +38,12 @@ sources:
   - inbox/candidate/2026-08-31-publication-safety.md
   - inbox/candidate/2026-08-30-people-ssot-curation.md
   - inbox/candidate/2026-08-30-issue-radar-today.yaml.md
+  - inbox/candidate/2026-08-31-people-ssot-curation.md
+  - inbox/candidate/2026-08-31-issue-radar-today.yaml.md
+  - inbox/candidate/2026-08-31-housing-jeonse-813-integration.md
+  - schedule:publication-safety-0300-kst
+  - schedule:people-ssot-curation-18h-kst
+  - schedule:issue-radar-today-0800-kst
 
 tags: ["Engineering", "AI-Native", "Publish", "Safety", "Git"]
 type: "wiki"

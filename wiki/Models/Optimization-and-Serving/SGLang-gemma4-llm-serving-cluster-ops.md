@@ -3,14 +3,16 @@ id: sglang-gemma4-llm-serving-cluster-ops
 title: "SGLang Gemma4 llm-serving 클러스터 운영 (12b/31b)"
 status: canonical
 owner: km
-updated: "2026-08-22"
-last_updated: "2026-08-22"
-review_after: "2026-11-22"
+updated: "2026-08-31"
+last_updated: "2026-08-31"
+review_after: "2026-11-30"
 sources:
   - ticket:426
   - ticket:42
+  - ticket:1523
   - kubectl:llm-serving
   - schedule:ta-k8s-daily
+  - inbox/candidate/2026-08-31-sglang-gemma4-31b-tier1-smoke.md
 tags: ["Models", "Serving", "SGLang", "Kubernetes", "Gemma4", "GPU"]
 type: "wiki"
 ---
@@ -74,6 +76,16 @@ API `max_model_len`은 **SGLang `--context-length`**가 결정한다(모델 카�
 fp8는 **용량/정밀도 트레이드오프**이지 새 listen/auth surface가 아니다. 제품 쪽 트림과 병행 — [[wiki/Engineering/AI-Native-Engineering/LLM-Tool-Payload-Context-Trim.md]].
 
 
+
+## Client env vs live model id drift
+
+에이전트/`PVC`에 박힌 `.env`가 **스케일 0·삭제된** 구 Deploy FQDN(예: 12b)을 가리키면 live가 31b를 서빙해도 클라이언트가 실패한다. 정본은 DESIGN/`.env.example`의 현재 Service FQDN·모델 id이며, gitignored env는 코드 기본값과 어긋나면 **env만** 맞춘다(불필요 rollout 금지).
+
+```bash
+# 개념: live /v1/models id ↔ 클라이언트 BASE_URL·MODEL 정합
+curl -sS http://<svc>.llm-serving.svc.cluster.local:30000/v1/models
+# PVC/로컬 .env가 dead Deploy를 가리키면 example 값으로 교정 후 smoke
+```
 
 ## Git vs live drift (context/fp8)
 

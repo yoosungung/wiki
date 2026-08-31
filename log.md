@@ -1,6 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-31 | INBOX_DRAIN | inbox/ | 75 | macOS self-hosted 라벨·AA tip-skim/CM·SGLang env drift 합성; PubGate/GH-empty/load ALREADY; pm-checkpoint EXCLUDE_PROGRESS git rm |
+| 2026-08-31 | RESEARCH | Web | 2 | LiteRT MTP·Furiosa 2026.4 max-model-len build vs serve — wiki-first 후 보강 |
+| 2026-08-31 | SYNTHESIZE | wiki/ | 6 | Test-Overlay 플랫폼 러너; Tenant-Quality/K8s-Secret; SGLang env drift; Furiosa max-model-len; PubGate/GH-empty sources |
+| 2026-08-31 | ALREADY_COVERED | wiki/ | 4 | LiteRT MTP locality; Furiosa FXB path; PubGate stance hygiene; ta-load-weekly skip |
+| 2026-08-31 | LINT | Root | ALL | 데일리 append; 연구_주제 비고; D-0/D-1 유지 |
 | 2026-08-31 | RESEARCH | Web | 6 | Rebellions SDK v0.11.0·Furiosa FXB·LiteRT-LM MTP·MCP stateless·AV-SQL Ossie·Goose 8단계 성숙도 탐색 |
 | 2026-08-31 | INGEST | raw/ | 6 | 6개 신규 raw 수집 (Rebellions 0.11.0, Furiosa 2026.3.0, LiteRT-LM MTP, MCP stateless, AV-SQL Ossie, Goose/Maturity) |
 | 2026-08-31 | SYNTHESIZE | wiki/ | 7 | 리벨리온 동향 0.11.0; 프리오사 2026.3.0 FXB; 스마트폰 LLM .litertlm; Supermemory MCP stateless; AV-SQL Ossie ai_context; Goose features; 에이전트 성숙도 8단계 |

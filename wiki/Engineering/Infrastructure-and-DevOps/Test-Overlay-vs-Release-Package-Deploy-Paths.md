@@ -3,9 +3,9 @@ id: test-overlay-vs-release-package-deploy-paths
 title: "Test Overlay vs Release Package 배포 축 분리"
 status: canonical
 owner: km
-updated: "2026-08-19"
-last_updated: "2026-08-19"
-review_after: "2026-11-19"
+updated: "2026-08-31"
+last_updated: "2026-08-31"
+review_after: "2026-11-30"
 sources:
   - ticket:59
   - ticket:61
@@ -15,6 +15,8 @@ sources:
   - ticket:176
   - ticket:551
   - ticket:552
+  - ticket:1514
+  - inbox/ta/2026-08-31-nl2sql-publish-releases-macos-runner.md
 tags: ["Infrastructure", "DevOps", "Kubernetes", "GHCR", "CD", "RBAC"]
 type: "wiki"
 ---
@@ -69,6 +71,22 @@ kubectl auth can-i create ingress -n <ns> --as=system:serviceaccount:<ns>:<sa>
 `apply.sh`가 Secret을 **재생성**하면 기존 `MCP_SHARED_TOKEN`(또는 동등 shared secret)이 바뀌어 backend↔mcp가 깨질 수 있다. 토큰이 이미 있으면 **보존**하고 idempotent `-k` apply만 한다. Service 스모크 포트는 문서의 containerPort(예: 8080/8800)를 쓴다 — `80` 가정 금지.
 
 레지스트리 `…/healthz` 호스트가 DNS에 없으면 **in-cluster Service FQDN**(예: `backend.ns.svc.cluster.local:8080`의 `/api/health`·`/api/ready`)으로 검증한다. backend-only 델타면 mcp deploy·MDL PVC reseed를 생략할 수 있다.
+
+## Self-hosted 플랫폼 라벨 러너 게이트
+
+`publish-releases`의 **플랫폼 전용 잡**(예: `build-mcp-macos` → artifact `*-macos-arm64`)은 `runs-on: [self-hosted, macOS]`처럼 **OS 라벨이 필수**다. Linux ARC만 온라인이면 잡은 `queued`·`runner_name` 빈 채로 수 시간 대기한다 — Linux 러너로 macOS 바이너리를 대체할 수 없다.
+
+| 신호 | 해석 | 조치 |
+| :--- | :--- | :--- |
+| 잡 `queued` + empty `runner_name` | 라벨 매칭 self-hosted 없음 | 플랫폼 러너 온라인 확인 전 cancel/재디스패치 금지 |
+| Linux ARC `meta`가 1s 스크립트 후 Complete job ~12m | ARC teardown wall time | “러너 죽음”과 혼동하지 않음 |
+| 수 시간 queued 후 cancel | 동일 라벨 갭 재발 | 인간 Approval 게이트로 러너 준비 후 재실행 |
+
+```bash
+# 개념: 라벨 매칭 러너 존재 여부만 선확인 (잡 디스패치 전)
+gh api repos/<owner>/<repo>/actions/runners --jq '.runners[] | {name,status,labels:[.labels[].name]}'
+# macOS 잡에 필요한 라벨이 online 러너에 없으면 publish를 올리지 않는다
+```
 
 ## GHCR publish ACL
 
