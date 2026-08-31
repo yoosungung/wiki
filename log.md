@@ -1,6 +1,10 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-31 | RESEARCH | Web | 6 | Rebellions SDK v0.11.0·Furiosa FXB·LiteRT-LM MTP·MCP stateless·AV-SQL Ossie·Goose 8단계 성숙도 탐색 |
+| 2026-08-31 | INGEST | raw/ | 6 | 6개 신규 raw 수집 (Rebellions 0.11.0, Furiosa 2026.3.0, LiteRT-LM MTP, MCP stateless, AV-SQL Ossie, Goose/Maturity) |
+| 2026-08-31 | SYNTHESIZE | wiki/ | 7 | 리벨리온 동향 0.11.0; 프리오사 2026.3.0 FXB; 스마트폰 LLM .litertlm; Supermemory MCP stateless; AV-SQL Ossie ai_context; Goose features; 에이전트 성숙도 8단계 |
+| 2026-08-31 | CLEANUP | raw/ | 6 | 합성 완료 raw 6건 삭제 |
 | 2026-08-31 | INBOX_DRAIN | inbox/candidate | 3 | PubGate bare-host·diff0 no-op 보강; people/radar/pub-safety ALREADY+sources; git rm |
 | 2026-08-31 | RESEARCH | Web | 3 | LiteRT 12B audio MTP drafter 갭; Furiosa/Supermemory/RBLN ALREADY |
 | 2026-08-31 | INGEST | raw/ | 1 | litert-lm-gemma4-12b-audio-mtp-drafter-gap |

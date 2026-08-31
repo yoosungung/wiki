@@ -1,9 +1,9 @@
 ---
 title: "프리오사 AI RNGD NPU 최적화 및 서빙 가이드 (2026)"
 tags: ["FuriosaAI", "RNGD", "Renegade", "NPU", "Inference", "vLLM", "HBM3"]
-last_updated: "2026-08-28"
-updated: "2026-08-28"
-related_raw: ["[[raw/2026-08-28-furiosa-rngd-scoring-dp-router.md]]", "[[raw/2026-08-27-furiosa-ai-npu-rngd-stork-2nm-broadcom.md]]", "[[2026-08-27-furiosa_rngd_tcp_fxb.md]]", "[[2026-08-20-furiosa-llm-2026.4.0b13.md]]", "[[2026-08-13-furiosa-llm-2026-4-0b11.md]]", "[[2026-06-16-Research-Synthesis-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-furiosa_rngd_npu_serving_optimization.md]]", "[[2026-06-28-furiosa_rngd_npu_llm_serving_optimization.md]]", "[[2026-06-30-furiosa_rngd_furiosa_llm.md]]", "[[2026-07-01-furiosa-rngd-npu-hbm3-inference.md]]", "[[2026-07-07-furiosa-rngd-prefix-aware-dp-router.md]]", "[[2026-07-11-furiosa_rngd_npu_tcp_prefix_aware_router.md]]", "[[2026-07-12-furiosa-sdk-dp-routing-scoring-weights.md]]", "[[2026-07-15-samsung-sds-furiosa-npuaas-launch.md]]", "[[2026-07-16-furiosa-npuaas-launch-day-broadcom-stork.md]]"]
+last_updated: "2026-08-31"
+updated: "2026-08-31"
+related_raw: ["[[raw/2026-08-31-furiosa-sdk-v2026-3-0-fxb-bundle.md]]", "[[raw/2026-08-28-furiosa-rngd-scoring-dp-router.md]]", "[[raw/2026-08-27-furiosa-ai-npu-rngd-stork-2nm-broadcom.md]]", "[[2026-08-27-furiosa_rngd_tcp_fxb.md]]", "[[2026-08-20-furiosa-llm-2026.4.0b13.md]]", "[[2026-08-13-furiosa-llm-2026-4-0b11.md]]", "[[2026-06-16-Research-Synthesis-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-furiosa_rngd_npu_serving_optimization.md]]", "[[2026-06-28-furiosa_rngd_npu_llm_serving_optimization.md]]", "[[2026-06-30-furiosa_rngd_furiosa_llm.md]]", "[[2026-07-01-furiosa-rngd-npu-hbm3-inference.md]]", "[[2026-07-07-furiosa-rngd-prefix-aware-dp-router.md]]", "[[2026-07-11-furiosa_rngd_npu_tcp_prefix_aware_router.md]]", "[[2026-07-12-furiosa-sdk-dp-routing-scoring-weights.md]]", "[[2026-07-15-samsung-sds-furiosa-npuaas-launch.md]]", "[[2026-07-16-furiosa-npuaas-launch-day-broadcom-stork.md]]"]
 ---
 
 # 🚀 프리오사 AI RNGD NPU 최적화 및 서빙 가이드 (2026)
@@ -52,7 +52,10 @@ RNGD는 최신 오픈소스 모델들에 대해 최적화된 성능을 제공합
 텐서 수축 연산(TCP 아키텍처 정합)을 1급 원시 타입으로 선언하는 **TCL (Tensor Contraction Language)** eDSL. `@tcl.kernel`로 attention/MoE/vision encoder 블록을 재사용 조합하여 신규 모델 enablement 속도를 획기적으로 단축.
 
 ### FXB (Furiosa Executable Bundle)
-`.fxb` = `manifest.json` + 컴파일 EDF 커널. 컴파일된 바이너리와 메타데이터가 단일 패키지로 구성되어 수동 컴파일 단계를 생략하고 Hugging Face 등에서 즉시 zero-recompilation 배포가 가능하도록 돕는 자체 이식 아카이브 포맷. **Architecture fingerprint**로 fine-tuned 변형 모델에 호환 번들을 자동으로 매칭함.
+- **도입 및 의의 (SDK v2026.3.0)**: **2026년 6월 30일 출시된 SDK v2026.3.0**의 핵심 기능으로 추가된 이식 가능한 모델 배포 포맷입니다.
+- **주요 기능**: `.fxb` = `manifest.json` + 컴파일 EDF 커널. 컴파일된 바이너리와 메타데이터가 단일 패키지로 포장되어 "zero-recompilation model shipping"을 가능케 합니다. 즉, 하나의 빌드본을 다른 다수의 RNGD NPU 서빙 머신에 수동 컴파일 단계를 생략하고 즉시 배포할 수 있습니다.
+- **Architecture fingerprint**: fine-tuned 변형 모델에 적합한 가중치와 하드웨어 커널을 컴파일 단계에서 매칭하여 런타임 검증을 자동화합니다.
+- **주의사항 (Version Matching)**: Qwen3 등 커스텀 모델에 대한 FXB 아티팩트 빌드 시, `furiosa-compiler`와 `furiosa-llm`의 버전(예: 2026.3.0)을 정밀하게 일치시켜 빌드하지 않으면 컴파일러 런타임 호환성 불일치 오류가 발생할 가능성이 높으므로 반드시 사전에 설치 환경의 라이브러리 버전을 동기화해야 합니다.
 
 ```bash
 fxb download furiosa-ai/Qwen3-8B-FP8

@@ -3,9 +3,9 @@ title: "리벨리온 ATOM-Max NPU 및 vLLM-RBLN 최신 동향 (2026)"
 tags: ["Models", "Optimization", "Serving", "NPU", "Rebellions", "vLLM-RBLN", "EXAONE"]
 type: "wiki"
 status: "published"
-last_updated: "2026-08-28"
-updated: "2026-08-28"
-related_raw: ["[[raw/2026-08-28-rbln-container-toolkit-cdi.md]]", "[[raw/2026-08-28-rebellions-npu-exaone-4-5-optimum-vllm.md]]", "[[raw/2026-08-27-rebellions-npu-atom-max-vllm-integration.md]]", "[[2026-08-22-vllm-rbln-v0.11.3.dev0.md]]", "[[2026-08-20-vllm-rbln-v0.11.2a10-a11.md]]", "[[2026-08-18-rbln-sdk-0.11.1-post1-mimalloc.md]]", "[[2026-08-15-vllm-rbln-v0.11.2a9-mega-cache.md]]", "[[2026-08-08-vllm-rbln-v0.11.2a8.md]]", "[[2026-08-04-vllm-rbln-v0.11.2a7.md]]", "[[2026-08-03-vllm-rbln-v0.11.2a5.md]]", "[[2026-08-01-vllm-rbln-v0.11.2a4-v0.11.1.md]]", "[[2026-07-30-vllm-rbln-v0.11.2a3.md]]", "[[2026-07-29-vllm-rbln-v0.11.2a2.md]]", "[[2026-07-28-vllm-rbln-v0.11.2a0-a1.md]]", "[[2026-07-24-vllm-rbln-v0.11.2.dev0.md]]", "[[2026-06-01-Rebellions-NPU-Update.md]]"]
+last_updated: "2026-08-31"
+updated: "2026-08-31"
+related_raw: ["[[raw/2026-08-31-rebellions-npu-sdk-v0-11-0-exaone-gemma.md]]", "[[raw/2026-08-28-rbln-container-toolkit-cdi.md]]", "[[raw/2026-08-28-rebellions-npu-exaone-4-5-optimum-vllm.md]]", "[[raw/2026-08-27-rebellions-npu-atom-max-vllm-integration.md]]", "[[2026-08-22-vllm-rbln-v0.11.3.dev0.md]]", "[[2026-08-20-vllm-rbln-v0.11.2a10-a11.md]]", "[[2026-08-18-rbln-sdk-0.11.1-post1-mimalloc.md]]", "[[2026-08-15-vllm-rbln-v0.11.2a9-mega-cache.md]]", "[[2026-08-08-vllm-rbln-v0.11.2a8.md]]", "[[2026-08-04-vllm-rbln-v0.11.2a7.md]]", "[[2026-08-03-vllm-rbln-v0.11.2a5.md]]", "[[2026-08-01-vllm-rbln-v0.11.2a4-v0.11.1.md]]", "[[2026-07-30-vllm-rbln-v0.11.2a3.md]]", "[[2026-07-29-vllm-rbln-v0.11.2a2.md]]", "[[2026-07-28-vllm-rbln-v0.11.2a0-a1.md]]", "[[2026-07-24-vllm-rbln-v0.11.2.dev0.md]]", "[[2026-06-01-Rebellions-NPU-Update.md]]"]
 ---
 
 # 리벨리온 ATOM-Max NPU 및 vLLM-RBLN 최신 동향 (2026)
@@ -144,6 +144,17 @@ uv pip install "vllm-rbln==0.11.3.dev0" \
   --extra-index-url https://wheels.vllm.ai/0.24.0/cpu \
   --torch-backend cpu
 ```
+
+### v0.11.0 (2026-07)
+- **공식 플러그인 통합**: 기존의 독자적인 vLLM 포크(fork) 유지 구조에서 탈피하여 vLLM의 **공식 플러그인 아키텍처**를 통해 통합되도록 대대적인 리팩토링이 진행되었습니다.
+- **최신 모델 및 프레임워크 지원**:
+  - LG EXAONE 4.5 VL (33B) 모델 컴파일 및 서빙 지원.
+  - Gemma 4 (26B-A4B MoE 및 31B) 지원 추가.
+  - Hugging Face Transformers v5로 마이그레이션하여 `apply_chat_template` 표준 인터페이스를 전면 차용.
+  - 의존성 핀: `transformers` 5.8.1 및 `torch` 2.11.0+cpu.
+- **파라미터 표준화**: 분산 및 멀티 NPU 제어를 명확히 하기 위해 기존의 `tensor_parallel_size` 파라미터를 `num_devices`로 명칭 변경했습니다 (기존 인자는 deprecated로 하위 호환 유지).
+- **도구 대체**: NPU 관리 도구인 `rbln-stat`이 deprecated 처리되었으며, 대체 도구로 `rbln-smi`를 사용할 것이 권장됩니다.
+- 설치: `uv pip install "vllm-rbln==0.11.0"` (vLLM 0.22.0 wheels index 대응)
 
 ## 3. 엔터프라이즈 및 클라우드 생태계
 - **Red Hat OpenShift AI 지원**: 2026년 5월부터 Red Hat OpenShift AI에서 공식 인증된 컨테이너 이미지와 `vLLM RBLN ServingRuntime`을 제공하여 기업용 AI 인프라 배포가 용이해졌습니다.

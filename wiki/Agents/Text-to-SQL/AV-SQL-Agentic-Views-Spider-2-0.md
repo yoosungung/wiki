@@ -1,8 +1,8 @@
 ---
 title: "AV-SQL: Agentic Views를 통한 Text-to-SQL 혁신 및 시맨틱 레이어 통합"
-last_updated: "2026-08-30"
-updated: "2026-08-30"
-related_raw: ["[[raw/2026-08-30-av-sql-agentic-views-osi-ossie.md]]", "[[raw/2026-08-28-av-sql-apache-ossie-semantic-layer-mcp.md]]", "[[2026-08-27-av_sql_semantic_layer_apache_ossie.md]]", "[[2026-08-23-apache-ossie-ai-context-spec141.md]]", "[[2026-07-29-apache-ossie-java21.md]]", "[[2026-07-28-apache-ossie-ai-disclosures-polaris-java17.md]]", "[[2026-07-24-apache-ossie-schema-ontology-flatten.md]]", "[[2026-07-23-apache-ossie-plugin-invocation.md]]", "[[2026-07-22-apache-ossie-wisdomai-converter-plugins.md]]", "[[2026-07-20-apache-ossie-databricks-snowflake-merged.md]]", "[[raw/2026-07-14-AV-SQL-논문-및-구현.md]]", "[[wiki/Agents/Text-to-SQL/2026-04-20-T2SQL-Trends-Update.md]]", "[[2026-07-16-av-sql-osi-mcp-integration-research.md]]", "[[2026-07-16-av_sql_semantic_layer_text_to_sql_research.md]]", "[[2026-07-17-apache-ossie-cli-scaffold.md]]", "[[2026-07-18-apache-ossie-duckdb-semantido-converters.md]]", "[[2026-07-19-apache-ossie-snowflake-quoted-identifiers.md]]"]
+last_updated: "2026-08-31"
+updated: "2026-08-31"
+related_raw: ["[[raw/2026-08-31-av-sql-agentic-views-apache-ossie-ai-context.md]]", "[[raw/2026-08-30-av-sql-agentic-views-osi-ossie.md]]", "[[raw/2026-08-28-av-sql-apache-ossie-semantic-layer-mcp.md]]", "[[2026-08-27-av_sql_semantic_layer_apache_ossie.md]]", "[[2026-08-23-apache-ossie-ai-context-spec141.md]]", "[[2026-07-29-apache-ossie-java21.md]]", "[[2026-07-28-apache-ossie-ai-disclosures-polaris-java17.md]]", "[[2026-07-24-apache-ossie-schema-ontology-flatten.md]]", "[[2026-07-23-apache-ossie-plugin-invocation.md]]", "[[2026-07-22-apache-ossie-wisdomai-converter-plugins.md]]", "[[2026-07-20-apache-ossie-databricks-snowflake-merged.md]]", "[[raw/2026-07-14-AV-SQL-논문-및-구현.md]]", "[[wiki/Agents/Text-to-SQL/2026-04-20-T2SQL-Trends-Update.md]]", "[[2026-07-16-av-sql-osi-mcp-integration-research.md]]", "[[2026-07-16-av_sql_semantic_layer_text_to_sql_research.md]]", "[[2026-07-17-apache-ossie-cli-scaffold.md]]", "[[2026-07-18-apache-ossie-duckdb-semantido-converters.md]]", "[[2026-07-19-apache-ossie-snowflake-quoted-identifiers.md]]"]
 ---
 
 # AV-SQL: Agentic Views를 통한 Text-to-SQL 혁신
@@ -34,8 +34,9 @@ AV-SQL은 3단계 에이전트 파이프라인을 통해 복잡한 쿼리를 분
 대규모 엔터프라이즈 환경에서는 AV-SQL의 Agentic Views 생성 단계에 시맨틱 거버넌스 정보를 함께 주입하는 방식이 유용합니다.
 
 1. **OSI v1.0 (Apache Ossie) `ai_context` 기반 CTE 가이드**:
-   - **Apache Ossie (formerly OSI - Open Semantic Interchange)** 규격은 Snowflake, dbt, Atlan 등이 주도하는 벤더 중립적인 메트릭/디멘션 표준 명세입니다. YAML 기반 선언을 통해 모든 플랫폼이 하나의 정의를 공유하게 함으로써 비즈니스 의미 왜곡(**Metric Drift**)을 예방합니다.
-   - 모델 정의 내 핵심 필드인 **`ai_context`**는 에이전트에게 단순 테이블 스키마가 아닌 "지배된 의미론적 컨텍스트(Governed Semantic Context)"를 제공합니다. `instructions`(자연어 지침), `synonyms`(유의어 매핑), `examples`(Few-shot 쿼리 쌍) 등을 View Generator Agent의 프롬프트 컨텍스트에 직접 주입할 수 있습니다.
+   - **Apache Ossie (formerly OSI - Open Semantic Interchange)** 규격은 Snowflake, dbt, Atlan 등이 주도하는 벤더 중립적인 메트릭/디멘션 표준 명세로, **2026년 7월 Apache 인큐베이터(Apache Incubator)에 공식 진입**하여 개발되고 있습니다. YAML 기반 선언을 통해 모든 플랫폼이 하나의 정의를 공유하게 함으로써 비즈니스 의미 왜곡(**Metric Drift**)을 예방합니다.
+   - 모델 정의 내 핵심 필드인 **`ai_context`**는 단순한 스펙 서술을 넘어, LLM 가이드를 전담하는 정형 명세 필드입니다. `instructions`(자연어 지침), `synonyms`(유의어 매핑), `examples`(Few-shot 쿼리 쌍) 등을 포함합니다. 
+   - 특히 부정적 지침(Negative Guidance, 예: "특정 쿼리에 어떤 메트릭을 쓰지 말아야 하는지") 및 도메인 지식의 뉘앙스를 전달하여 에이전트의 SQL 생성 실패(Hallucination)를 방지하는 거버넌스 도구로 작동하며, 이를 View Generator Agent 프롬프트에 동적 인젝션합니다.
    - 이를 통해 에이전트가 비즈니스 규칙(예: 특정 채널 매출 계산 시 취소 수수료 제외 등)을 선제적으로 완벽히 이해하고 반영한 CTE(Agentic Views)를 생성하도록 유도하여 스키마 링킹 및 비즈니스 로직 오류를 줄일 수 있습니다.
 2. **Snowflake Intelligence 및 MCP 연동**:
    - **Snowflake Intelligence**는 플랫폼 내부에서 에이전트가 복잡한 분석 태스크를 계획하고 조율하는 실행 레이어입니다.
