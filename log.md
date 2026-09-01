@@ -1,6 +1,10 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-09-01 | INBOX_DRAIN | inbox/ | 3 | candidate pub-safety·people-ssot; pm github-issue-check empty skip → Publication-Gate·GH-empty-skip 합성 후 git rm |
+| 2026-09-01 | RESEARCH | Web | 6 | LiteRT-LM v0.13·Rebellions vLLM-RBLN·Furiosa RNGD/Stork·Supermemory MCP·AV-SQL/Ossie wiki-first 재점검 |
+| 2026-09-01 | ALREADY_COVERED | wiki/ | 6 | 스마트폰 LLM·리벨리온 EXAONE·프리오사 RNGD·Supermemory·AV-SQL·PubGate/GH-empty 신규 사실 없음 |
+| 2026-09-01 | LINT | Root / wiki | ALL | 데일리 append; D-0/D-1 유지; 연구_주제 META 갱신 |
 | 2026-09-01 | INBOX_DRAIN | inbox/ | 15 | Cross-repo release token & README sync 패턴 합성; pm-checkpoint 및 티켓 진행 EXCLUDE_PROGRESS 후 git rm |
 | 2026-09-01 | RESEARCH | Web | 6 | LiteRT-LM MTP·Rebellions vLLM-RBLN·Furiosa FXB/Stork·Supermemory MCP·AV-SQL Ossie SOTA 재점검 |
 | 2026-09-01 | SYNTHESIZE | wiki/ | 6 | Test-Overlay-vs-Release-Package-Deploy-Paths; 스마트폰-환경의-LLM-서빙; 리벨리온-ATOM-Max-EXAONE; 프리오사-RNGD; Supermemory; AV-SQL-Agentic-Views |

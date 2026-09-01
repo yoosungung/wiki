@@ -3,8 +3,8 @@ id: publication-gate-empty-overwrite-guard
 title: "퍼블리시 게이트 + 빈 산출물 덮어쓰기 금지"
 status: canonical
 owner: km
-updated: "2026-08-31"
-last_updated: "2026-08-31"
+updated: "2026-09-01"
+last_updated: "2026-09-01"
 review_after: "2026-11-30"
 sources:
   - ticket:474
@@ -41,9 +41,10 @@ sources:
   - inbox/candidate/2026-08-31-people-ssot-curation.md
   - inbox/candidate/2026-08-31-issue-radar-today.yaml.md
   - inbox/candidate/2026-08-31-housing-jeonse-813-integration.md
-  - schedule:publication-safety-0300-kst
-  - schedule:people-ssot-curation-18h-kst
-  - schedule:issue-radar-today-0800-kst
+  - inbox/candidate/2026-09-01-publication-safety.md
+  - inbox/candidate/2026-09-01-people-ssot-curation.md
+  - ticket:1563
+  - ticket:1564
 
 tags: ["Engineering", "AI-Native", "Publish", "Safety", "Git"]
 type: "wiki"
@@ -91,16 +92,17 @@ python agent/publication_gate.py --base origin/main
 - **stub→curated 승격 축**: allowlist URL이 **같은 사람·같은 직**을 가리킬 때만. 역할 라벨이 틀린 stub(예: 「위원장」인데 실제는 연구위원)는 역할을 정정한 뒤 승격하거나 hold.
 - **동명이인 함정**: allowlist 호스트 URL이 **다른 사람**(같은 이름, 다른 직/기관)이면 콘텐츠 안전 실패 — 그 URL을 promote에 붙이지 않는다. 기초의원·명단 URL만으로 승격하지 않는다.
 - **직원명단 미기재**: 성명이 직원명단/조직도에 없으면 `go.kr` 등 허용 호스트여도 승격 근거로 쓰지 않는다. 직위만 있고 이름이 없는 페이지도 동일.
-- **목표 미달 ≠ 강제 승격**: 잔여 stub가 목표 구간(예: 20–30) 아래여도 안전 출처가 없으면 부족 보고로 끝낸다. 정치 인물 본문은 org-wiki에 합성하지 않는다(후보 제품 vault 정본).
-- **people slug remap**: collapse/접두 규칙(`lee→i`, `park→bak`, `kim→gim`, `jung→jeong`) + `name_ko` 매칭으로 정규화한 뒤 stance·링크를 고친다(예: unknown 김기재 → `gimgijae`). **로마자 비정규 slug**도 같은 축 — 로마자만 보고 유지하지 말고 `name_ko`로 remap(예: `yuhyoshang`→`yu-hyo-sang`, `lee-man-hee`→`i-man-hui`). `pending` 같은 placeholder slug는 실명 slug로 remap하거나 drop.
+- **목표 미달 ≠ 강제 승격**: 잔여 stub가 목표 구간(예: 20–30, 백로그가 허용하면 ~30 승격) 아래여도 안전 출처가 없으면 **부족 건수와 함께 Done**으로 끝낸다(강제 승격 금지). 동명이인·역할 불일치(예: 서울청장 vs 가스공사 사장)는 allowlist URL이 있어도 reject. 정치 인물 본문은 org-wiki에 합성하지 않는다(후보 제품 vault 정본).
+- **people slug remap**: collapse/접두 규칙(`lee→i`, `park→bak`, `kim→gim`, `jung→jeong`) + `name_ko` 매칭으로 정규화한 뒤 stance·링크를 고친다(예: unknown 김기재 → `gimgijae`). **로마자 비정규 slug**도 같은 축 — 로마자만 보고 유지하지 말고 `name_ko`로 remap(예: `yuhyoshang`→`yu-hyo-sang`, `lee-man-hee`→`i-man-hui`, Pass 스택 잔여 `lee-jaemyung`·`yonghyein`·`oh-geoho`, `/people/unknown`). `pending` 같은 placeholder slug는 실명 slug로 remap하거나 drop.
 - **stance 링크는 yaml+wiki 동시 존재 필수**: 한쪽에만 있으면 orphan/깨진 링크. remap·drop 후 yaml↔wiki orphan 0을 재확인한다.
 - 공개 전 제거: placeholder/unknown·SSoT 없는 slug·불완전 신원 stub·기관을 people로 링크한 stance.
-- Pass D가 people YAML을 추가하면 **최소 wiki stub도 같이 seed**해 yaml↔wiki orphan 0을 유지한다. 약한 중립 줄을 drop해도 orphan 0을 깨지 않게 stub를 함께 맞춘다.
+- Pass D가 people YAML을 추가하면 **최소 wiki stub도 같이 seed**해 yaml↔wiki orphan 0을 유지한다. 로컬 Pass 스택이 yaml-only people stub를 추가하면 **publication-safety 전에** 매칭 wiki shell을 seed해 slug 정렬을 맞춘다. 약한 중립 줄을 drop해도 orphan 0을 깨지 않게 stub를 함께 맞춘다.
 - `http.extraheader` + remote에 박힌 토큰이 401이면, env 토큰을 URL에 넣은 **한 번의 push**로 충분하다 — [[wiki/Engineering/Infrastructure-and-DevOps/GitHub-Fine-Grained-PAT-Contents-Write-Probe.md]].
 - meta/stub+stance만 갱신하는 잡에서 사이트 빌드 바이너리(예: Hugo)가 없으면 **빌드를 스킵**해도 된다 — 게이트·pytest가 정본이다.
 - issue-radar → today 발행: empty-overwrite guard 통과 후에만 공개 큐(`today.yaml` 등)를 커밋·push하고, **승인 티켓은 만들지 않는다**. 커밋 범위는 공개 큐 파일만(캐시/리포트 MD 제외). 스케줄 보고는 제품 프로젝트 Done 티켓으로만 남긴다.
 - **공개 today 큐는 중립만**: 내부 승인 상태·스케줄/도구명을 노출하지 않는다. 후보·이슈 큐 페이로드만 게시한다.
-- publication-safety 잡은 push 직전·직후 `publication_gate.py --base origin/main` PASS를 남기고, Pass 스택은 preserve 브랜치 또는 detach 경로로 다룬다(§분기·스택 운영).
+- publication-safety 잡은 push 직전·직후 `publication_gate.py --base origin/main` PASS를 남기고, Pass 스택은 preserve 브랜치 또는 detach 경로로 다룬다(§분기·스택 운영). people curation은 Pass issue-stance 스택을 preserve 브랜치에 두고 **`origin/main`에 detach**해 작업·push한 뒤 로컬 스택을 rebase한다.
+- **hygiene 패턴(2026-09-01)**: SSoT slug alias remap, non-SSoT/org person 링크 delink, weak misattribution stance drop — publication 시점에 people stub를 새로 invent하지 않는다(slug shell이 이미 있을 때만).
 
 
 ## 🔗 관련 문서

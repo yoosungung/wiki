@@ -3,8 +3,8 @@ id: github-issue-leantime-intake-empty-skip
 title: "GH issue→Leantime intake: open 0이면 explicit skip"
 status: canonical
 owner: km
-updated: "2026-08-31"
-last_updated: "2026-08-31"
+updated: "2026-09-01"
+last_updated: "2026-09-01"
 review_after: "2026-11-30"
 sources:
   - schedule:github-issue-check
@@ -22,7 +22,9 @@ sources:
   - ticket:575
   - ticket:571
   - ticket:1535
+  - ticket:1574
   - inbox/pm/2026-08-31-github-issue-check-empty-skip.md
+  - inbox/pm/2026-09-01-github-issue-check-empty-skip.md
 tags: ["Engineering", "AI-Native", "GitHub", "Leantime", "Intake"]
 type: "wiki"
 ---
@@ -37,6 +39,17 @@ type: "wiki"
 2. open=0 → skip 코멘트(점검 범위·lookback 포함). blocker 없음.
 3. open>0 → **매칭 클라이언트 Leantime project**에 변환(QA가 repro/시나리오 첨부 가능).
 4. Dedup 마커: 본문에 `<!-- github:owner/repo#N -->`.
+
+## 클라이언트 맵 (2026-09-01)
+
+| project_id | repo | 비고 |
+|------------|------|------|
+| 5 | `yoosungung/sw-factory` | gh list + REST true Issues |
+| 6 | `yoosungung/nl2sql` | all-time 16건 모두 closed |
+| 7 | `berryking404/candidate.win` | REST |
+| 8 | `yoosungung/codingland` | gh list + GraphQL OPEN + REST `pull_request==null` |
+
+lookback `2026-08-31T23:01Z` ~ `2026-09-01T23:01Z` 구간 open=0이면 created=0·explicit skip(실패 아님).
 
 ## 스킵 축
 
