@@ -1,6 +1,10 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-09-01 | INBOX_DRAIN | inbox/ | 15 | Cross-repo release token & README sync 패턴 합성; pm-checkpoint 및 티켓 진행 EXCLUDE_PROGRESS 후 git rm |
+| 2026-09-01 | RESEARCH | Web | 6 | LiteRT-LM MTP·Rebellions vLLM-RBLN·Furiosa FXB/Stork·Supermemory MCP·AV-SQL Ossie SOTA 재점검 |
+| 2026-09-01 | SYNTHESIZE | wiki/ | 6 | Test-Overlay-vs-Release-Package-Deploy-Paths; 스마트폰-환경의-LLM-서빙; 리벨리온-ATOM-Max-EXAONE; 프리오사-RNGD; Supermemory; AV-SQL-Agentic-Views |
+| 2026-09-01 | LINT | Root / wiki | ALL | 2026-09-01 데일리 생성, D-2(2026-08-30) 삭제, INDEX·연구_주제_관리 META 갱신 |
 | 2026-08-31 | INBOX_DRAIN | inbox/ | 75 | macOS self-hosted 라벨·AA tip-skim/CM·SGLang env drift 합성; PubGate/GH-empty/load ALREADY; pm-checkpoint EXCLUDE_PROGRESS git rm |
 | 2026-08-31 | RESEARCH | Web | 2 | LiteRT MTP·Furiosa 2026.4 max-model-len build vs serve — wiki-first 후 보강 |
 | 2026-08-31 | SYNTHESIZE | wiki/ | 6 | Test-Overlay 플랫폼 러너; Tenant-Quality/K8s-Secret; SGLang env drift; Furiosa max-model-len; PubGate/GH-empty sources |

@@ -3,8 +3,8 @@ id: test-overlay-vs-release-package-deploy-paths
 title: "Test Overlay vs Release Package 배포 축 분리"
 status: canonical
 owner: km
-updated: "2026-08-31"
-last_updated: "2026-08-31"
+updated: "2026-09-01"
+last_updated: "2026-09-01"
 review_after: "2026-11-30"
 sources:
   - ticket:59
@@ -17,6 +17,7 @@ sources:
   - ticket:552
   - ticket:1514
   - inbox/ta/2026-08-31-nl2sql-publish-releases-macos-runner.md
+  - inbox/ta/2026-09-01-nl2sql-1514-releases-token.md
 tags: ["Infrastructure", "DevOps", "Kubernetes", "GHCR", "CD", "RBAC"]
 type: "wiki"
 ---
@@ -91,6 +92,13 @@ gh api repos/<owner>/<repo>/actions/runners --jq '.runners[] | {name,status,labe
 ## GHCR publish ACL
 
 Actions `packages: write`만으로 부족할 수 있다 — [[wiki/Engineering/Infrastructure-and-DevOps/GHCR-Actions-Package-Write-ACL.md]].
+
+## Cross-Repo Release Token & README Sync
+
+`publish-releases`가 다른 레포(예: `nl2sql-releases`)로 README나 릴리스 메타를 동기화 푸시할 때, PAT(`RELEASES_REPO_TOKEN`)의 유효기간이 만료되거나 Contents write 권한이 누락되면 `Invalid username or token` 오류로 실패한다.
+
+- 릴리스 워크플로우 실행 전 cross-repo 토큰의 유효기간 및 권한 상태를 선제 점검한다.
+- 긴급 릴리스 시 out-of-band(수동 업로드) 후 토큰을 갱신하고 워크플로우를 redispatch하여 green 상태와 README 정합성을 맞춘다.
 
 ## Tip 이미지 공급 (Kaniko)
 

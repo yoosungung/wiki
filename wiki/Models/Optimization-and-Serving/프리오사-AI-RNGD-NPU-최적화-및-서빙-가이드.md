@@ -1,8 +1,8 @@
 ---
 title: "프리오사 AI RNGD NPU 최적화 및 서빙 가이드 (2026)"
 tags: ["FuriosaAI", "RNGD", "Renegade", "NPU", "Inference", "vLLM", "HBM3"]
-last_updated: "2026-08-31"
-updated: "2026-08-31"
+last_updated: "2026-09-01"
+updated: "2026-09-01"
 related_raw: ["[[raw/2026-08-31-furiosa-sdk-v2026-3-0-fxb-bundle.md]]", "[[raw/2026-08-28-furiosa-rngd-scoring-dp-router.md]]", "[[raw/2026-08-27-furiosa-ai-npu-rngd-stork-2nm-broadcom.md]]", "[[2026-08-27-furiosa_rngd_tcp_fxb.md]]", "[[2026-08-20-furiosa-llm-2026.4.0b13.md]]", "[[2026-08-13-furiosa-llm-2026-4-0b11.md]]", "[[2026-06-16-Research-Synthesis-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-furiosa_rngd_npu_serving_optimization.md]]", "[[2026-06-28-furiosa_rngd_npu_llm_serving_optimization.md]]", "[[2026-06-30-furiosa_rngd_furiosa_llm.md]]", "[[2026-07-01-furiosa-rngd-npu-hbm3-inference.md]]", "[[2026-07-07-furiosa-rngd-prefix-aware-dp-router.md]]", "[[2026-07-11-furiosa_rngd_npu_tcp_prefix_aware_router.md]]", "[[2026-07-12-furiosa-sdk-dp-routing-scoring-weights.md]]", "[[2026-07-15-samsung-sds-furiosa-npuaas-launch.md]]", "[[2026-07-16-furiosa-npuaas-launch-day-broadcom-stork.md]]"]
 ---
 

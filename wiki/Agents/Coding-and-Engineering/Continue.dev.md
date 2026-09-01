@@ -4,16 +4,16 @@ RTX 4090 2장을 활용하여 `Qwen2.5-Coder-32B-Instruct (Q4_K_M)` 모델을 
 
 폐쇄망 환경 구축 시 라이브러리 간 버전 불일치로 인한 Build/CUDA Mismatch 오류를 방지하기 위해 **검증된 조합**을 사용해야 합니다.
 
-|구분|추천 소프트웨어 / 구성요소|검증 버전|비고|
-|---|---|---|---|
-|**OS**|Ubuntu Linux|**22.04.4 LTS** (Kernel 5.15 / 6.5)|엔터프라이즈 GPU 드라이버 호환성 최적|
-|**GPU Driver**|NVIDIA Linux Driver|**550.54.14** (or 550.x Production)|CUDA 12.4 지원 및 Ada Lovelace(4090) 안정화|
-|**CUDA Toolkit**|NVIDIA CUDA|**12.4.1**|vLLM 0.6.x+ 컴파일 바이너리 호환|
-|**Container Engine**|Containerd / Container Toolkit|**NVIDIA Container Toolkit v1.15.0**|k3s 연동 GPU Passthrough 핵심|
-|**Kubernetes**|k3s (Rancher Lightweight K8s)|**v1.29.4+k3s1** 또는 **v1.30.2+k3s1**|경량화 K8s, 폐쇄망 단일 노드 구축 최적|
-|**Inference Engine**|vLLM|**v0.6.3** (`vllm/vllm-openai:v0.6.3`)|GGUF/AWQ 지원 및 Tensor Parallelism 지원|
-|**LLM Weights**|Qwen2.5-Coder-32B-Instruct|**GGUF (Q4_K_M)** 또는 **AWQ 4-bit**|AWQ 사용 시 vLLM 추론 속도 대폭 상승|
-|**IDE Plugin**|Continue.dev|**v0.8.x 이상**|VS Code / JetBrains 최신 확장|
+| 구분                   | 추천 소프트웨어 / 구성요소                | 검증 버전                                  | 비고                                    |
+| -------------------- | ------------------------------ | -------------------------------------- | ------------------------------------- |
+| **OS**               | Ubuntu Linux                   | **22.04.4 LTS** (Kernel 5.15 / 6.5)    | 엔터프라이즈 GPU 드라이버 호환성 최적                |
+| **GPU Driver**       | NVIDIA Linux Driver            | **550.54.14** (or 550.x Production)    | CUDA 12.4 지원 및 Ada Lovelace(4090) 안정화 |
+| **CUDA Toolkit**     | NVIDIA CUDA                    | **12.4.1**                             | vLLM 0.6.x+ 컴파일 바이너리 호환               |
+| **Container Engine** | Containerd / Container Toolkit | **NVIDIA Container Toolkit v1.15.0**   | k3s 연동 GPU Passthrough 핵심             |
+| **Kubernetes**       | k3s (Rancher Lightweight K8s)  | **v1.29.4+k3s1** 또는 **v1.30.2+k3s1**   | 경량화 K8s, 폐쇄망 단일 노드 구축 최적              |
+| **Inference Engine** | vLLM                           | **v0.6.3** (`vllm/vllm-openai:v0.6.3`) | GGUF/AWQ 지원 및 Tensor Parallelism 지원   |
+| **LLM Weights**      | Qwen2.5-Coder-32B-Instruct     | **GGUF (Q4_K_M)** 또는 **AWQ 4-bit**     | AWQ 사용 시 vLLM 추론 속도 대폭 상승             |
+| **IDE Plugin**       | Continue.dev                   | **v0.8.x 이상**                          | VS Code / JetBrains 최신 확장             |
 
 ## 2. 하드웨어 리소스 및 VRAM 구조 설계
 
