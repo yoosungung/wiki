@@ -1,9 +1,9 @@
 ---
 title: "리벨리온 ATOM-Max 기반 EXAONE 4.5 최적화 가이드 (2026)"
 tags: ["Rebellions", "ATOM-Max", "EXAONE4.5", "NPU", "Optimization", "vLLM", "PhysicalAI"]
-last_updated: "2026-09-01"
-updated: "2026-09-01"
-related_raw: ["[[raw/2026-08-30-rebellions-squeezebits-exaone-45.md]]", "[[raw/2026-08-28-rebellions-npu-exaone-4-5-optimum-vllm.md]]", "[[2026-08-27-rebellions_atom_max_exaone_4_5.md]]", "[[2026-08-22-vllm-rbln-v0.11.3.dev0.md]]", "[[2026-08-20-vllm-rbln-v0.11.2a10-a11.md]]", "[[2026-08-18-rbln-sdk-0.11.1-post1-mimalloc.md]]", "[[2026-08-15-vllm-rbln-v0.11.2a9-mega-cache.md]]", "[[2026-08-08-vllm-rbln-v0.11.2a8.md]]", "[[2026-07-30-vllm-rbln-v0.11.2a3.md]]", "[[2026-07-29-vllm-rbln-v0.11.2a2.md]]", "[[2026-07-28-vllm-rbln-v0.11.2a0-a1.md]]", "[[2026-07-24-vllm-rbln-v0.11.2.dev0.md]]", "[[2026-07-23-vllm-rbln-v0.11.1a11.md]]", "[[2026-07-21-vllm-rbln-v0.11.1a9.md]]", "[[2026-07-20-vllm-rbln-v0.11.1a8.md]]", "[[2026-06-04-Rebellions-ATOM-Max-EXAONE-4.5-Research.md]]", "[[2026-06-05-Rebellions-vLLM-EXAONE-Speculative-MoE-Update.md]]", "[[2026-06-07-Rebellions-ATOM-Max-vLLM-EXAONE-4.5-Update.md]]", "[[2026-06-09-Rebellions-NPU-EXAONE-4.5-Physical-AI-Update.md]]", "[[2026-06-11-Rebellions-Atom-Rebel-EXAONE-4.5-Research.md]]", "[[2026-06-12-Rebellions-ATOM-Max-EXAONE-4.5-Update.md]]", "[[2026-06-15-Rebellions-EXAONE-Physical-AI-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-rebellions_atom_max_exaone_optimization.md]]", "[[2026-06-28-rebellions_atom_max_exaone_4_5_optimization.md]]", "[[2026-06-30-rebellions_atom_max_exaone_4_5.md]]", "[[2026-07-01-vllm-rbln-exaone-4-5-atom-max.md]]", "[[2026-07-07-exaone-4.5-vllm-rbln-atom-max-optimization.md]]", "[[2026-07-11-rebellions_atom_max_exaone_4_5_vllm_rbln.md]]", "[[2026-07-12-rbln-sdk-0.11-vllm-exaone-gemma4.md]]", "[[2026-07-15-litert-lm-v0110-windows-rebellions-torchdynamo.md]]", "[[2026-07-16-vllm-rbln-v0.11.1a7-request-reordering-dtensor-mtp.md]]"]
+last_updated: "2026-09-02"
+updated: "2026-09-02"
+related_raw: ["[[raw/2026-09-02-vllm-rbln-v0.11.3a4-a5.md]]", "[[raw/2026-08-30-rebellions-squeezebits-exaone-45.md]]", "[[raw/2026-08-28-rebellions-npu-exaone-4-5-optimum-vllm.md]]", "[[2026-08-27-rebellions_atom_max_exaone_4_5.md]]", "[[2026-08-22-vllm-rbln-v0.11.3.dev0.md]]", "[[2026-08-20-vllm-rbln-v0.11.2a10-a11.md]]", "[[2026-08-18-rbln-sdk-0.11.1-post1-mimalloc.md]]", "[[2026-08-15-vllm-rbln-v0.11.2a9-mega-cache.md]]", "[[2026-08-08-vllm-rbln-v0.11.2a8.md]]", "[[2026-07-30-vllm-rbln-v0.11.2a3.md]]", "[[2026-07-29-vllm-rbln-v0.11.2a2.md]]", "[[2026-07-28-vllm-rbln-v0.11.2a0-a1.md]]", "[[2026-07-24-vllm-rbln-v0.11.2.dev0.md]]", "[[2026-07-23-vllm-rbln-v0.11.1a11.md]]", "[[2026-07-21-vllm-rbln-v0.11.1a9.md]]", "[[2026-07-20-vllm-rbln-v0.11.1a8.md]]", "[[2026-06-04-Rebellions-ATOM-Max-EXAONE-4.5-Research.md]]", "[[2026-06-05-Rebellions-vLLM-EXAONE-Speculative-MoE-Update.md]]", "[[2026-06-07-Rebellions-ATOM-Max-vLLM-EXAONE-4.5-Update.md]]", "[[2026-06-09-Rebellions-NPU-EXAONE-4.5-Physical-AI-Update.md]]", "[[2026-06-11-Rebellions-Atom-Rebel-EXAONE-4.5-Research.md]]", "[[2026-06-12-Rebellions-ATOM-Max-EXAONE-4.5-Update.md]]", "[[2026-06-15-Rebellions-EXAONE-Physical-AI-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-rebellions_atom_max_exaone_optimization.md]]", "[[2026-06-28-rebellions_atom_max_exaone_4_5_optimization.md]]", "[[2026-06-30-rebellions_atom_max_exaone_4_5.md]]", "[[2026-07-01-vllm-rbln-exaone-4-5-atom-max.md]]", "[[2026-07-07-exaone-4.5-vllm-rbln-atom-max-optimization.md]]", "[[2026-07-11-rebellions_atom_max_exaone_4_5_vllm_rbln.md]]", "[[2026-07-12-rbln-sdk-0.11-vllm-exaone-gemma4.md]]", "[[2026-07-15-litert-lm-v0110-windows-rebellions-torchdynamo.md]]", "[[2026-07-16-vllm-rbln-v0.11.1a7-request-reordering-dtensor-mtp.md]]"]
 ---
 
 # 🚀 리벨리온 ATOM-Max 기반 EXAONE 4.5 최적화 가이드 (2026)
@@ -391,12 +391,32 @@ uv pip install "vllm-rbln==0.11.3.dev0" \
 
 **적용 팁**: a11 PP·mega-cache가 안정이면 `.dev0`로 올려 **NIXL P/D KV 전송**과 **chiplet KV 예산**을 한 세트로 본다. EAGLE 경로를 쓰는 워크로드만 [#945] 효과를 분리 측정한다.
 
+## 4.18 vLLM-RBLN v0.11.3a4 / a5 (합성 2026-09-02)
+
+[v0.11.3a4](https://github.com/RBLN-SW/vllm-rbln/releases/tag/v0.11.3a4) / [v0.11.3a5](https://github.com/RBLN-SW/vllm-rbln/releases/tag/v0.11.3a5) (2026-08-31) — deps 핀·spec-decode 안정화·MoE routing mask. 프로덕션 핀은 `0.11.1.post1`; 프리릴리즈 추적은 `0.11.3a5`.
+
+| 축 | 내용 | 적용 |
+| :--- | :--- | :--- |
+| deps | `optimum-rbln==0.11.2`([#1017](https://github.com/RBLN-SW/vllm-rbln/pull/1017)), `torch-rbln==0.4.0`([#1021](https://github.com/RBLN-SW/vllm-rbln/pull/1021)), patch-line bound([#1029](https://github.com/RBLN-SW/vllm-rbln/pull/1029)) | 환경 재현 시 patch pin 강제 |
+| spec-decode | sampler batch pad([#1014](https://github.com/RBLN-SW/vllm-rbln/pull/1014)); rejection-sample을 mega-cache 밖([#1035](https://github.com/RBLN-SW/vllm-rbln/pull/1035)) | mid-decode recompile·캐시 오염 스모크 |
+| EAGLE3 PP | MiniMax-M2 PP target([#1006](https://github.com/RBLN-SW/vllm-rbln/pull/1006)) | PP speculative 경로 회귀 |
+| MoE mask | routing dtype mask([#1027](https://github.com/RBLN-SW/vllm-rbln/pull/1027)); bias wider 시 widen([#1036](https://github.com/RBLN-SW/vllm-rbln/pull/1036)) | MoE 라우팅 폭 mismatch 시 a5 필수 |
+| scheduler | connector preemption resume sub-block skip([#1009](https://github.com/RBLN-SW/vllm-rbln/pull/1009)) | preempt+connector 재개 hang 점검 |
+
+```bash
+uv pip install "vllm-rbln==0.11.3a5" \
+  --extra-index-url https://wheels.vllm.ai/0.24.0/cpu \
+  --torch-backend cpu
+# stable:
+# uv pip install "vllm-rbln==0.11.1.post1"
+```
+
 ## 5. 실전 최적화 체크리스트
 
 1.  **모델 컴파일**: SDK v0.11.0+에서는 vLLM API 경로의 자동 컴파일을 우선 사용. 레거시 AOT가 필요하면 `optimum-cli`로 Transformers v5 호환 재컴파일.
 2.  **병렬화 최적화**: 33B 모델의 경우 8개 이상의 ATOM-Max 칩을 활용한 Tensor Parallelism(TP) 설정 권장. `VLLM_RBLN_NUM_DEVICES_PER_LOCAL_RANK`로 디바이스 수 지정.
 3.  **Physical AI 연동**: LG 로봇 KAPEX 등 물리적 하드웨어와의 실시간 추론 연동 테스트 수행.
-4.  **0.11.3.dev0~a5 / 0.11.1.post1 검증**: **`.dev0` NIXL PP KV·EAGLE·chiplet KV·DP rendezvous·MoE shared expert**; a11 mega-cache 키·PP·Qwen3-Reranker·sampler temp; a9 mega-cache·DP mapping·Qwen3.5 block_size; a8 greedy·specdec·DP pad·dtensor/MTP; a7 vLLM 0.24; **stable 0.11.1.post1 Qwen3 MoE + compiler post1(mimalloc 제거) + 0.11.1 APC/w8a8**.
+4.  **0.11.3.dev0~a5 / 0.11.1.post1 검증**: **`.dev0` NIXL PP KV·EAGLE·chiplet KV·DP rendezvous·MoE shared expert**; **a4/a5 deps pin·spec-decode pad·MoE mask widen**; a11 mega-cache 키·PP·Qwen3-Reranker·sampler temp; a9 mega-cache·DP mapping·Qwen3.5 block_size; a8 greedy·specdec·DP pad·dtensor/MTP; a7 vLLM 0.24; **stable 0.11.1.post1 Qwen3 MoE + compiler post1(mimalloc 제거) + 0.11.1 APC/w8a8**.
 
 ---
 **관련 프로젝트**:

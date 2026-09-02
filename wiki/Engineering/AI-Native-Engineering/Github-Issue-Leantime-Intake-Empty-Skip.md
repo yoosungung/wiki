@@ -3,8 +3,8 @@ id: github-issue-leantime-intake-empty-skip
 title: "GH issue→Leantime intake: open 0이면 explicit skip"
 status: canonical
 owner: km
-updated: "2026-09-01"
-last_updated: "2026-09-01"
+updated: "2026-09-02"
+last_updated: "2026-09-02"
 review_after: "2026-11-30"
 sources:
   - schedule:github-issue-check
@@ -25,6 +25,8 @@ sources:
   - ticket:1574
   - inbox/pm/2026-08-31-github-issue-check-empty-skip.md
   - inbox/pm/2026-09-01-github-issue-check-empty-skip.md
+  - inbox/sw-factory/2026-09-02-github-issue-check-empty-skip.md
+  - ticket:1602
 tags: ["Engineering", "AI-Native", "GitHub", "Leantime", "Intake"]
 type: "wiki"
 ---
@@ -40,7 +42,7 @@ type: "wiki"
 3. open>0 → **매칭 클라이언트 Leantime project**에 변환(QA가 repro/시나리오 첨부 가능).
 4. Dedup 마커: 본문에 `<!-- github:owner/repo#N -->`.
 
-## 클라이언트 맵 (2026-09-01)
+## 클라이언트 맵 (2026-09-02)
 
 | project_id | repo | 비고 |
 |------------|------|------|
@@ -49,13 +51,14 @@ type: "wiki"
 | 7 | `berryking404/candidate.win` | REST |
 | 8 | `yoosungung/codingland` | gh list + GraphQL OPEN + REST `pull_request==null` |
 
-lookback `2026-08-31T23:01Z` ~ `2026-09-01T23:01Z` 구간 open=0이면 created=0·explicit skip(실패 아님).
+클라이언트 맵(+extras) 전수 open=0이면 created=0·explicit skip(실패 아님). lookback은 스케줄 감사 티켓에 기록.
 
 ## 스킵 축
 
 - 이미 closed된 과거 이슈를 QA 버그로 재오픈하지 않는다.
 - MCP discovery 실패 시 JSON-RPC fallback으로 seal 가능 — [[wiki/Engineering/AI-Native-Engineering/Tenant-Quality-Yaml-Gate-Skip-Pattern.md]].
-- 레지스트리 JSON이 없어도 **직전 클라이언트 맵을 재사용**해 open=0 skip을 남긴다. 맵 부재를 실패로 올리지 않는다.
+- 레지스트리 JSON이 없어도 **직전 클라이언트 맵(위키)을 재사용**해 open=0 skip을 남긴다. 맵 부재를 실패로 올리지 않는다.
+- **감사 티켓 쓰기 범위**: 일부 에이전트 토큰은 **project_id=5(sw-factory) 감사 티켓만** 생성·갱신할 수 있다. 타 테넌트 변환 티켓이 필요하면 해당 프로젝트 ACL/토큰으로 전환한다.
 
 ## 🔗 관련 문서
 

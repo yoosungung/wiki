@@ -1,6 +1,13 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-09-02 | INBOX_DRAIN | inbox/ | 4 | candidate pub-safety·people-ssot·issue-radar; sw-factory github-issue-check empty skip → PubGate·GH-empty-skip 합성 후 git rm |
+| 2026-09-02 | RESEARCH | Web/GitHub | 6 | LiteRT-LM·Furiosa FXB·Supermemory MCP·AV-SQL/Ossie wiki-first ALREADY; vLLM-RBLN v0.11.3a4/a5 신규 |
+| 2026-09-02 | INGEST | raw/ | 1 | 2026-09-02-vllm-rbln-v0.11.3a4-a5 |
+| 2026-09-02 | SYNTHESIZE | wiki/ | 4 | PubGate(gate≠full review·radar≠auto-close); GH-empty(audit ACL); 리벨리온 동향·EXAONE§4.18 a4/a5 |
+| 2026-09-02 | ALREADY_COVERED | wiki/ | 5 | LiteRT MTP/v0.16.1; Furiosa FXB/Stork; Supermemory MCP 4.0; AV-SQL/Ossie; people-ssot 진행 EXCLUDE |
+| 2026-09-02 | CLEANUP | raw/ | 1 | 합성 완료 raw 1건 삭제 |
+| 2026-09-02 | LINT | Root / wiki | ALL | 데일리 생성; D-2(2026-08-31) 삭제; INDEX·연구_주제 META 갱신 |
 | 2026-09-01 | INBOX_DRAIN | inbox/ | 3 | candidate pub-safety·people-ssot; pm github-issue-check empty skip → Publication-Gate·GH-empty-skip 합성 후 git rm |
 | 2026-09-01 | RESEARCH | Web | 6 | LiteRT-LM v0.13·Rebellions vLLM-RBLN·Furiosa RNGD/Stork·Supermemory MCP·AV-SQL/Ossie wiki-first 재점검 |
 | 2026-09-01 | ALREADY_COVERED | wiki/ | 6 | 스마트폰 LLM·리벨리온 EXAONE·프리오사 RNGD·Supermemory·AV-SQL·PubGate/GH-empty 신규 사실 없음 |

@@ -3,8 +3,8 @@ id: publication-gate-empty-overwrite-guard
 title: "퍼블리시 게이트 + 빈 산출물 덮어쓰기 금지"
 status: canonical
 owner: km
-updated: "2026-09-01"
-last_updated: "2026-09-01"
+updated: "2026-09-02"
+last_updated: "2026-09-02"
 review_after: "2026-11-30"
 sources:
   - ticket:474
@@ -45,6 +45,11 @@ sources:
   - inbox/candidate/2026-09-01-people-ssot-curation.md
   - ticket:1563
   - ticket:1564
+  - inbox/candidate/2026-09-02-publication-safety-review.md
+  - inbox/candidate/2026-09-02-people-ssot-curation.md
+  - inbox/candidate/2026-09-03-issue-radar-today.md
+  - skill:political-wiki-administration
+  - agent/publication_gate.py
 
 tags: ["Engineering", "AI-Native", "Publish", "Safety", "Git"]
 type: "wiki"
@@ -89,6 +94,8 @@ python agent/publication_gate.py --base origin/main
 - **약한 중립(weak-neutral)**: 신원·SSoT가 부족한 stance는 hold만 하지 말고 **drop**. org/unknown·SSoT-없는 slug와 같은 축.
 - yaml↔wiki orphan 0을 유지하려면 stub yaml 추가 시 **최소 wiki stub도 같이 seed**. SSoT 카운트는 `yaml==wiki`로 맞춘다.
 - **게이트 PASS ≠ content-safe**: `/people/unknown`, org-as-person stance, 이슈 slug를 인물로 쓴 stance, 약한 중립(발언 미확인), 역할·신원 오인 stub는 추가 strip. people promote는 allowlisted 공식/프로필 URL(≥1)이 있을 때만; wiki-only·비허용 호스트·검색 URL·직원명단 미기재 go.kr는 부족. 애매한 기자·통신원·특파원·동명이인·역할 불일치·비인물(학교·부처 등)은 hold.
+- **게이트 스크립트 ≠ 전체 리뷰**: `publication_gate.py`는 **zero-stance ongoing issue**만 차단한다. 야간 전체 리뷰는 별도로 `/people/unknown`, `/people/tmp`, 깨진 `**입장**` 줄, SSoT 없는 slug를 잡아야 한다.
+- **야간 fixup 패턴**: 해석 불가 actor 링크는 drop; 알려진 slug 오타는 기존 `data/people`로 remap; stub는 **이미 출처가 있는 실명 인물**에만 추가. 지자체·기관·기사 제목을 `/people/*`로 발행하지 않는다(실인물 SSoT 필수).
 - **stub→curated 승격 축**: allowlist URL이 **같은 사람·같은 직**을 가리킬 때만. 역할 라벨이 틀린 stub(예: 「위원장」인데 실제는 연구위원)는 역할을 정정한 뒤 승격하거나 hold.
 - **동명이인 함정**: allowlist 호스트 URL이 **다른 사람**(같은 이름, 다른 직/기관)이면 콘텐츠 안전 실패 — 그 URL을 promote에 붙이지 않는다. 기초의원·명단 URL만으로 승격하지 않는다.
 - **직원명단 미기재**: 성명이 직원명단/조직도에 없으면 `go.kr` 등 허용 호스트여도 승격 근거로 쓰지 않는다. 직위만 있고 이름이 없는 페이지도 동일.
@@ -100,6 +107,7 @@ python agent/publication_gate.py --base origin/main
 - `http.extraheader` + remote에 박힌 토큰이 401이면, env 토큰을 URL에 넣은 **한 번의 push**로 충분하다 — [[wiki/Engineering/Infrastructure-and-DevOps/GitHub-Fine-Grained-PAT-Contents-Write-Probe.md]].
 - meta/stub+stance만 갱신하는 잡에서 사이트 빌드 바이너리(예: Hugo)가 없으면 **빌드를 스킵**해도 된다 — 게이트·pytest가 정본이다.
 - issue-radar → today 발행: empty-overwrite guard 통과 후에만 공개 큐(`today.yaml` 등)를 커밋·push하고, **승인 티켓은 만들지 않는다**. 커밋 범위는 공개 큐 파일만(캐시/리포트 MD 제외). 스케줄 보고는 제품 프로젝트 Done 티켓으로만 남긴다.
+- **radar ≠ auto-close**: closure audit가 성숙한 이벤트 이슈를 편집자 모니터링용으로 **표면화**할 수는 있으나, radar가 이슈를 자동 종료하지 않는다.
 - **공개 today 큐는 중립만**: 내부 승인 상태·스케줄/도구명을 노출하지 않는다. 후보·이슈 큐 페이로드만 게시한다.
 - publication-safety 잡은 push 직전·직후 `publication_gate.py --base origin/main` PASS를 남기고, Pass 스택은 preserve 브랜치 또는 detach 경로로 다룬다(§분기·스택 운영). people curation은 Pass issue-stance 스택을 preserve 브랜치에 두고 **`origin/main`에 detach**해 작업·push한 뒤 로컬 스택을 rebase한다.
 - **hygiene 패턴(2026-09-01)**: SSoT slug alias remap, non-SSoT/org person 링크 delink, weak misattribution stance drop — publication 시점에 people stub를 새로 invent하지 않는다(slug shell이 이미 있을 때만).
