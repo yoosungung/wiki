@@ -1,7 +1,7 @@
 ---
 id: inbox-candidate-2026-09-04-issue-radar-today
 agent: candidate
-ticket_id: 0
+ticket_id: 1641
 updated: 2026-09-04
 status: inbox
 sources:
