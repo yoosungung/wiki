@@ -3,9 +3,9 @@ title: "OpenClaw 및 HyperAgent 기반 MAS 아키텍처 (2026)"
 tags: ["Agents", "MAS", "OpenClaw", "HyperAgent", "Orchestration", "TaskFlow"]
 type: "wiki"
 status: "published"
-last_updated: "2026-08-29"
-updated: "2026-08-29"
-related_raw: ["[[raw/2026-08-28-webmcp-chrome-origin-trial.md]]", "[[raw/2026-08-28-autonomous-mas-openclaw-webmcp-goose.md]]", "[[2026-08-27-openclaw-auto-mode-exec-approvals.md]]", "[[2026-08-16-openclaw-v2026.8.1-beta.2.md]]", "[[2026-08-10-openclaw-managed-worktrees-cleanup-limits.md]]", "[[2026-07-30-openclaw-session-memory-flush.md]]", "[[2026-07-29-openclaw-hooks-mcp-proto-multi-account.md]]", "[[2026-07-28-openclaw-watched-session-sandbox-network.md]]", "[[2026-07-27-openclaw-route-bindings-grep-naming-harness.md]]", "[[2026-07-26-openclaw-session-urls-oauth-resume.md]]", "[[2026-06-12-Autonomous-Agents-OpenClaw-HyperAgent-Update.md]]", "[[2026-06-15-Autonomous-Agents-OpenClaw-HyperAgent-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]"]
+last_updated: "2026-09-03"
+updated: "2026-09-03"
+related_raw: ["[[raw/2026-09-03-openclaw-sandbox-modes-and-guardclaw-auto-judge.md]]", "[[raw/2026-08-28-webmcp-chrome-origin-trial.md]]", "[[raw/2026-08-28-autonomous-mas-openclaw-webmcp-goose.md]]", "[[2026-08-27-openclaw-auto-mode-exec-approvals.md]]", "[[2026-08-16-openclaw-v2026.8.1-beta.2.md]]", "[[2026-08-10-openclaw-managed-worktrees-cleanup-limits.md]]", "[[2026-07-30-openclaw-session-memory-flush.md]]", "[[2026-07-29-openclaw-hooks-mcp-proto-multi-account.md]]", "[[2026-07-28-openclaw-watched-session-sandbox-network.md]]", "[[2026-07-27-openclaw-route-bindings-grep-naming-harness.md]]", "[[2026-07-26-openclaw-session-urls-oauth-resume.md]]", "[[2026-06-12-Autonomous-Agents-OpenClaw-HyperAgent-Update.md]]", "[[2026-06-15-Autonomous-Agents-OpenClaw-HyperAgent-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]"]
 ---
 
 # 🤖 OpenClaw 및 HyperAgent 기반 MAS 아키텍처 (2026)
@@ -15,6 +15,7 @@ related_raw: ["[[raw/2026-08-28-webmcp-chrome-origin-trial.md]]", "[[raw/2026-08
 ## 1. OpenClaw AI Agent Framework
 OpenClaw는 LLM을 로컬 하드웨어에서 동작하는 "자율 운영자(Autonomous Operator)"로 변환하는 선도적인 오픈소스 오케스트레이션 레이어입니다.
 
+- **Sandbox multi-backend & Read-Only governance (2026-09-03)**: `sandbox.mode`(off/non-main/all), Docker/Podman/SSH/OpenShell 백엔드, `~/.openclaw` Read-Only 마운트를 통한 런타임 변조 차단, `openclaw sandbox list|recreate|explain`. 상세는 [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md]] §2.16.
 - **Secret egress / SQLite backup / plugin provenance (2026-08-16)**: v2026.8.1 secret→HTTPS host fail-closed, `openclaw backup sqlite …`, untrusted plugin `--force`, shared channel ingress monitor, `OPENCLAW_SUPERVISOR_MODE=external`. 상세는 [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md]].
 - **Managed worktrees / cleanup limits (2026-08-10)**: snapshot-before-delete, 7d idle GC, opt-in `maxCount`/`maxTotalSizeGb`, `sandbox recreate`. 상세는 [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md]].
 - **Dynamic model `/tools` inventory (2026-08-04)**: `/tools`가 prepared runtime model context publish/borrow **전**에 resolve해 임시 inventory failure — [#119306](https://github.com/openclaw/openclaw/pull/119306). 상세는 [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md]].
@@ -58,6 +59,7 @@ HyperAgent는 단순한 대행을 넘어 에이전트 스스로의 성능을 개
         - **리뷰어 모델 분리**: `tools.exec.reviewer.model`(예: frontier)을 에이전트 모델과 분리 가능.
         - **승인 UX**: allow-once/always/deny; Slack·Telegram·iMessage 라우팅. 기본값은 아직 ask 계열 유지(opt-in).
         - **`tools.exec.mode`**: `deny|allowlist|ask|auto|full` — 상세 [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md]] §2.15.
+- **GuardClaw Open Auto Mode & Cryptographic Ledger (2026-09-03)**: 에이전트-도구 간 독립 보안 판정 미들웨어. 실시간 0–100 리스크 스코어링(Auto vs Monitor), 다단계 세션 전체 궤적(Trajectory) 추적, 사용자 승인/거부 기반 적응형 학습, 변조 방지 암호학적 서명 원장을 통한 오프라인 감사 가능성 확보. 상세는 [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md]] §2.16.
 - **OpenClaw Task Flow (2026-08-22)**: background task 위 내구성 멀티스텝(managed/mirrored). CLI `openclaw tasks flow list|show|cancel`. 정본 동일 §2.15.
 - **WebMCP & Sandbox Isolation (2026-08-28 정정 · 2026-08-29 OT)**: W3C WebML CG 제안의 **브라우저 탭용 MCP**. 사이트가 `document.modelContext.registerTool`(+ HTML form declarative 주석)로 JSON Schema 도구를 등록하면, 에이전트는 스크린샷/DOM 추측 대신 구조화 호출을 한다. Chrome 공식: `chrome://flags/#enable-webmcp-testing`, Permissions Policy **`tools`**(기본 `self`, cross-origin iframe 비활성). 로컬·human-in-the-loop 중심(헤드리스 1급 아님). 2차 보고: Chrome **149–156 origin trial**(146 flag 프리뷰에서 승격), Chrome 150에서 `navigator.modelContext`→`document.modelContext` rename(구 API alias 유지), ChromeStatus **Shipping 목표 157**·OT 종료 **~2026-11-16**(토큰 없으면 `registerTool` silent no-op). 소비 에이전트는 당분간 Gemini in Chrome. Shopify Liquid·Cloudflare 프런트 기본 노출은 상거래 표면 확대 신호이나 브라우저 지원 표와 별개로 검증. 백엔드 MCP 서버와 구분 — WebMCP는 **페이지가 툴 서버**. [[wiki/Engineering/Development-Environment/WebGPU-및-WebNN-표준화-현황-2026.md]] §WebMCP.
 - **Goose Framework (Block 개발)**: 소프트웨어 엔지니어링 에이전트 개발을 위해 설계된 오픈소스 MAS 프레임워크입니다. 모델-도구 연결에 MCP(Model Context Protocol)를 네이티브 채택하였으며, 대규모 코드 마이그레이션, 테스트 코드 생성 등 개발 프로세스를 자동 오케스트레이션하는 데 특화되어 있습니다. Chrome DevTools MCP 경로로 WebMCP 사이트 도구를 연결하는 가이드가 공개되어 있다.

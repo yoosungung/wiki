@@ -1,6 +1,12 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-09-03 | RESEARCH | Web/GitHub | 8 | OpenClaw 샌드박스 다중 백엔드·GuardClaw Open Auto Mode 판정 신규; LiteRT·RBLN·Furiosa·Supermemory·AV-SQL wiki-first |
+| 2026-09-03 | INGEST | raw/ | 1 | 2026-09-03-openclaw-sandbox-modes-and-guardclaw-auto-judge |
+| 2026-09-03 | SYNTHESIZE | wiki/ | 2 | 자율수행-MAS§2.16·§3(Sandbox modes·Backends·~/.openclaw Read-Only·GuardClaw Judge); OpenClaw-HyperAgent§1·§3 |
+| 2026-09-03 | ALREADY_COVERED | wiki/ | 6 | LiteRT MTP/v0.16.1; RBLN v0.11.3a5; Furiosa FXB/Stork; Supermemory MCP 4.0; AV-SQL/Ossie; AI PC Panther Lake |
+| 2026-09-03 | CLEANUP | raw/ | 1 | 합성 완료 raw 1건 삭제 |
+| 2026-09-03 | LINT | Root / wiki | ALL | 2026-09-03 데일리 생성; D-2(2026-09-01) 삭제; INDEX·연구_주제 META 갱신 |
 | 2026-09-02 | INBOX_DRAIN | inbox/ | 4 | candidate pub-safety·people-ssot·issue-radar; sw-factory github-issue-check empty skip → PubGate·GH-empty-skip 합성 후 git rm |
 | 2026-09-02 | RESEARCH | Web/GitHub | 6 | LiteRT-LM·Furiosa FXB·Supermemory MCP·AV-SQL/Ossie wiki-first ALREADY; vLLM-RBLN v0.11.3a4/a5 신규 |
 | 2026-09-02 | INGEST | raw/ | 1 | 2026-09-02-vllm-rbln-v0.11.3a4-a5 |
