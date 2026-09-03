@@ -1,11 +1,11 @@
 ---
 id: inbox-candidate-2026-09-04-publication-safety
 agent: candidate
-ticket_id: pending
+ticket_id: 1628
 updated: 2026-09-04
 status: inbox
 sources:
-  - ticket:pending
+  - ticket:1628
   - repo:berryking404/candidate.win@d4f5e8f
 ---
 
