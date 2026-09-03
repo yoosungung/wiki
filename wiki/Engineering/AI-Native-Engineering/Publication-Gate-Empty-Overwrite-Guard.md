@@ -3,8 +3,8 @@ id: publication-gate-empty-overwrite-guard
 title: "퍼블리시 게이트 + 빈 산출물 덮어쓰기 금지"
 status: canonical
 owner: km
-updated: "2026-09-02"
-last_updated: "2026-09-02"
+updated: "2026-09-04"
+last_updated: "2026-09-04"
 review_after: "2026-11-30"
 sources:
   - ticket:474
@@ -48,6 +48,10 @@ sources:
   - inbox/candidate/2026-09-02-publication-safety-review.md
   - inbox/candidate/2026-09-02-people-ssot-curation.md
   - inbox/candidate/2026-09-03-issue-radar-today.md
+  - inbox/candidate/2026-09-03-people-ssot-curation.md
+  - inbox/candidate/2026-09-03-people-ssot-curation-18h.md
+  - inbox/candidate/2026-09-04-publication-safety.md
+  - inbox/candidate/2026-09-04-issue-radar-today.md
   - skill:political-wiki-administration
   - agent/publication_gate.py
 
@@ -91,6 +95,7 @@ python agent/publication_gate.py --base origin/main
 - **검색엔진 결과 URL은 allowlist 출처가 아니다** — 게이트 PASS 이후에도 검색 URL 출처는 공개 본문에서 제거한다.
 - **bare 호스트만의 출처는 부족** — `naver.com`처럼 기사/프로필 경로 없는 도메인만으로는 allowlist 출처로 쓰지 않고 drop한다.
 - **콘텐츠 diff 0 → commit/push 없음**: curation·hygiene 후 워킹트리·인덱스에 실질 변경이 없으면 no-op으로 종료한다(빈 커밋 금지).
+- **clean main → Done without push**: `publication_gate.py --base origin/main` exit 0이고 unpublished diff가 비어 HEAD=`origin/main`이면 push·Hugo를 스킵해도 야간 게이트는 **성공(Done)** 으로 마감한다(실패 아님).
 - **약한 중립(weak-neutral)**: 신원·SSoT가 부족한 stance는 hold만 하지 말고 **drop**. org/unknown·SSoT-없는 slug와 같은 축.
 - yaml↔wiki orphan 0을 유지하려면 stub yaml 추가 시 **최소 wiki stub도 같이 seed**. SSoT 카운트는 `yaml==wiki`로 맞춘다.
 - **게이트 PASS ≠ content-safe**: `/people/unknown`, org-as-person stance, 이슈 slug를 인물로 쓴 stance, 약한 중립(발언 미확인), 역할·신원 오인 stub는 추가 strip. people promote는 allowlisted 공식/프로필 URL(≥1)이 있을 때만; wiki-only·비허용 호스트·검색 URL·직원명단 미기재 go.kr는 부족. 애매한 기자·통신원·특파원·동명이인·역할 불일치·비인물(학교·부처 등)은 hold.

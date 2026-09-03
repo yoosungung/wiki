@@ -1,9 +1,9 @@
 ---
 title: "프리오사 AI RNGD NPU 최적화 및 서빙 가이드 (2026)"
 tags: ["FuriosaAI", "RNGD", "Renegade", "NPU", "Inference", "vLLM", "HBM3"]
-last_updated: "2026-09-01"
-updated: "2026-09-01"
-related_raw: ["[[raw/2026-08-31-furiosa-sdk-v2026-3-0-fxb-bundle.md]]", "[[raw/2026-08-28-furiosa-rngd-scoring-dp-router.md]]", "[[raw/2026-08-27-furiosa-ai-npu-rngd-stork-2nm-broadcom.md]]", "[[2026-08-27-furiosa_rngd_tcp_fxb.md]]", "[[2026-08-20-furiosa-llm-2026.4.0b13.md]]", "[[2026-08-13-furiosa-llm-2026-4-0b11.md]]", "[[2026-06-16-Research-Synthesis-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-furiosa_rngd_npu_serving_optimization.md]]", "[[2026-06-28-furiosa_rngd_npu_llm_serving_optimization.md]]", "[[2026-06-30-furiosa_rngd_furiosa_llm.md]]", "[[2026-07-01-furiosa-rngd-npu-hbm3-inference.md]]", "[[2026-07-07-furiosa-rngd-prefix-aware-dp-router.md]]", "[[2026-07-11-furiosa_rngd_npu_tcp_prefix_aware_router.md]]", "[[2026-07-12-furiosa-sdk-dp-routing-scoring-weights.md]]", "[[2026-07-15-samsung-sds-furiosa-npuaas-launch.md]]", "[[2026-07-16-furiosa-npuaas-launch-day-broadcom-stork.md]]"]
+last_updated: "2026-09-04"
+updated: "2026-09-04"
+related_raw: ["[[raw/2026-09-04-furiosa-sdk-2026-4-0-hierarchical-kv-specdec.md]]", "[[raw/2026-08-31-furiosa-sdk-v2026-3-0-fxb-bundle.md]]", "[[raw/2026-08-28-furiosa-rngd-scoring-dp-router.md]]", "[[raw/2026-08-27-furiosa-ai-npu-rngd-stork-2nm-broadcom.md]]", "[[2026-08-27-furiosa_rngd_tcp_fxb.md]]", "[[2026-08-20-furiosa-llm-2026.4.0b13.md]]", "[[2026-08-13-furiosa-llm-2026-4-0b11.md]]", "[[2026-06-16-Research-Synthesis-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-furiosa_rngd_npu_serving_optimization.md]]", "[[2026-06-28-furiosa_rngd_npu_llm_serving_optimization.md]]", "[[2026-06-30-furiosa_rngd_furiosa_llm.md]]", "[[2026-07-01-furiosa-rngd-npu-hbm3-inference.md]]", "[[2026-07-07-furiosa-rngd-prefix-aware-dp-router.md]]", "[[2026-07-11-furiosa_rngd_npu_tcp_prefix_aware_router.md]]", "[[2026-07-12-furiosa-sdk-dp-routing-scoring-weights.md]]", "[[2026-07-15-samsung-sds-furiosa-npuaas-launch.md]]", "[[2026-07-16-furiosa-npuaas-launch-day-broadcom-stork.md]]"]
 ---
 
 # 🚀 프리오사 AI RNGD NPU 최적화 및 서빙 가이드 (2026)
@@ -146,6 +146,44 @@ fxb build Qwen/Qwen3-8B-FP8 qwen3-8b-fp8.fxb -O O3 -tp 8
 | Data-Parallel Routing | 서빙 라우팅 축 |
 
 프로덕션 빌드 매트릭스는 업스트림 `.github/fxb-artifacts.yaml`을 참고한다. 서빙 해석 순서(명시 `--fxb` → repo 내 `.fxb` → local cache fingerprint)는 §4와 동일.
+
+## 8. SDK 2026.4.0: Hierarchical KV · Multimodal FCFS · Specdec (합성 2026-09-04)
+
+공식 [Release 2026.4.0](https://developer.furiosa.ai/v2026.4.0/en/whatsnew/release-2026.4.0.html) (문서 핀 관측 `2026.4.0b15`). 2026.3 기반을 E2E 서빙 능력으로 승격한다. **legacy v2 artifact / `furiosa-llm build` 제거** — FXB-only.
+
+### Hierarchical KV (experimental)
+
+| Tier | 위치 | 역할 |
+| :--- | :--- | :--- |
+| L1 | NPU DRAM | attention 활성 블록 |
+| L2 | host memory | DMA 백업·재로드 (`--experimental-kv-offload-host-memory-gb` / `--experimental-kv-offload-host-memory-ratio`) |
+| L3 | RemoteKvStore | 클러스터 공유 prefix; Mooncake 첫 백엔드 |
+
+`UnifiedRadixCache`가 global/hybrid 분리 경로를 대체. 기본 OFF·`--help` 숨김. write-through 기본, `--experimental-kv-offload-write-back`는 eviction 시 동기 DMA 가능.
+
+```bash
+furiosa-llm serve <model> --experimental-kv-offload-host-memory-gb 64
+```
+
+### Multimodal FCFS · 모델 커버리지
+
+- VE batching · VE/decoder 분리 큐 · acquire-encode → generate 2-phase · DP 공유 media ID.
+- 신규/확장: Qwen3-VL 2B/4B, Gemma 4 31B, EXAONE 4.5 33B VLM, Mistral NeMo, Qwen3 Embedding/Reranker, BGE-M3, E5-Mistral, Harrier OSS v1. Qwen3.6-27B는 FXB/RawModel 경로(E2E 다음).
+
+### Experimental speculative decoding
+
+```bash
+furiosa-llm serve <target-model> \
+  --experimental-spec-model <draft-model> \
+  --experimental-spec-fxb <draft-model.fxb> \
+  --experimental-spec-tokens 4
+```
+
+동일 tokenizer mapping + TP; draft PP=1 on first target PP rank. 활성 시 prefix cache·overlap scheduler·hierarchical KV·PD disagg·structured output·logprobs와 **비호환**.
+
+### Sampling 가속
+
+top-k/top-p Qrita-inspired pruning: 샘플링 자체 2.7–13.2×; ShareGPT(`top_k=50`,`top_p=0.9`) 출력 처리량 +6.9–16.9%, mean TPOT −6.5–15.4% (gpt-oss-20b / EXAONE 4.0).
 
 ---
 **관련 문서**:

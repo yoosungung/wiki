@@ -3,9 +3,9 @@ title: "리벨리온 ATOM-Max NPU 및 vLLM-RBLN 최신 동향 (2026)"
 tags: ["Models", "Optimization", "Serving", "NPU", "Rebellions", "vLLM-RBLN", "EXAONE"]
 type: "wiki"
 status: "published"
-last_updated: "2026-09-02"
-updated: "2026-09-02"
-related_raw: ["[[raw/2026-09-02-vllm-rbln-v0.11.3a4-a5.md]]", "[[raw/2026-08-31-rebellions-npu-sdk-v0-11-0-exaone-gemma.md]]", "[[raw/2026-08-28-rbln-container-toolkit-cdi.md]]", "[[raw/2026-08-28-rebellions-npu-exaone-4-5-optimum-vllm.md]]", "[[raw/2026-08-27-rebellions-npu-atom-max-vllm-integration.md]]", "[[2026-08-22-vllm-rbln-v0.11.3.dev0.md]]", "[[2026-08-20-vllm-rbln-v0.11.2a10-a11.md]]", "[[2026-08-18-rbln-sdk-0.11.1-post1-mimalloc.md]]", "[[2026-08-15-vllm-rbln-v0.11.2a9-mega-cache.md]]", "[[2026-08-08-vllm-rbln-v0.11.2a8.md]]", "[[2026-08-04-vllm-rbln-v0.11.2a7.md]]", "[[2026-08-03-vllm-rbln-v0.11.2a5.md]]", "[[2026-08-01-vllm-rbln-v0.11.2a4-v0.11.1.md]]", "[[2026-07-30-vllm-rbln-v0.11.2a3.md]]", "[[2026-07-29-vllm-rbln-v0.11.2a2.md]]", "[[2026-07-28-vllm-rbln-v0.11.2a0-a1.md]]", "[[2026-07-24-vllm-rbln-v0.11.2.dev0.md]]", "[[2026-06-01-Rebellions-NPU-Update.md]]"]
+last_updated: "2026-09-04"
+updated: "2026-09-04"
+related_raw: ["[[raw/2026-09-04-vllm-rbln-v0.11.3a6.md]]", "[[raw/2026-09-02-vllm-rbln-v0.11.3a4-a5.md]]", "[[raw/2026-08-31-rebellions-npu-sdk-v0-11-0-exaone-gemma.md]]", "[[raw/2026-08-28-rbln-container-toolkit-cdi.md]]", "[[raw/2026-08-28-rebellions-npu-exaone-4-5-optimum-vllm.md]]", "[[raw/2026-08-27-rebellions-npu-atom-max-vllm-integration.md]]", "[[2026-08-22-vllm-rbln-v0.11.3.dev0.md]]", "[[2026-08-20-vllm-rbln-v0.11.2a10-a11.md]]", "[[2026-08-18-rbln-sdk-0.11.1-post1-mimalloc.md]]", "[[2026-08-15-vllm-rbln-v0.11.2a9-mega-cache.md]]", "[[2026-08-08-vllm-rbln-v0.11.2a8.md]]", "[[2026-08-04-vllm-rbln-v0.11.2a7.md]]", "[[2026-08-03-vllm-rbln-v0.11.2a5.md]]", "[[2026-08-01-vllm-rbln-v0.11.2a4-v0.11.1.md]]", "[[2026-07-30-vllm-rbln-v0.11.2a3.md]]", "[[2026-07-29-vllm-rbln-v0.11.2a2.md]]", "[[2026-07-28-vllm-rbln-v0.11.2a0-a1.md]]", "[[2026-07-24-vllm-rbln-v0.11.2.dev0.md]]", "[[2026-06-01-Rebellions-NPU-Update.md]]"]
 ---
 
 # 리벨리온 ATOM-Max NPU 및 vLLM-RBLN 최신 동향 (2026)
@@ -154,6 +154,19 @@ uv pip install "vllm-rbln==0.11.3.dev0" \
 
 ```bash
 uv pip install "vllm-rbln==0.11.3a5" \
+  --extra-index-url https://wheels.vllm.ai/0.24.0/cpu \
+  --torch-backend cpu
+```
+
+### v0.11.3a6 (2026-09-03)
+- **DFlash**: RBLN parallel drafting([#975](https://github.com/RBLN-SW/vllm-rbln/pull/975)).
+- **NIXL**: 비대칭 TP/PP KV 전송 + MLA 정합([#1011](https://github.com/RBLN-SW/vllm-rbln/pull/1011)); push-direction KV([#1018](https://github.com/RBLN-SW/vllm-rbln/pull/1018)).
+- **spec metrics / sampler**: MODEL+SAMPLE under spec decode([#1032](https://github.com/RBLN-SW/vllm-rbln/pull/1032)); `allowed_token_ids_mask` batch pad([#1031](https://github.com/RBLN-SW/vllm-rbln/pull/1031)).
+- **optimum**: non-fp32 dtype([#880](https://github.com/RBLN-SW/vllm-rbln/pull/880)); `local_block_table` → scheduler([#962](https://github.com/RBLN-SW/vllm-rbln/pull/962)).
+- 설치: `uv pip install "vllm-rbln==0.11.3a6"` — wheels index `vllm` 0.24.0 유지. stable 핀은 `0.11.1.post1`. 상세 [[wiki/Models/Optimization-and-Serving/리벨리온-ATOM-Max-기반-EXAONE-4.5-최적화-가이드.md]]
+
+```bash
+uv pip install "vllm-rbln==0.11.3a6" \
   --extra-index-url https://wheels.vllm.ai/0.24.0/cpu \
   --torch-backend cpu
 ```

@@ -1,6 +1,13 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-09-04 | INBOX_DRAIN | inbox/ | 7 | candidate pub-safety·people-ssot·issue-radar; pm/sw-factory GH-empty; pm roadmap → PubGate clean-main Done·sources; GH/Roadmap ALREADY; git rm |
+| 2026-09-04 | RESEARCH | Web/GitHub | 6 | vLLM-RBLN a6·Furiosa 2026.4.0 신규; LiteRT v0.16.1·Supermemory·AV-SQL/Ossie·OpenClaw wiki-first |
+| 2026-09-04 | INGEST | raw/ | 2 | 2026-09-04-vllm-rbln-v0.11.3a6; 2026-09-04-furiosa-sdk-2026-4-0-hierarchical-kv-specdec |
+| 2026-09-04 | SYNTHESIZE | wiki/ | 6 | 리벨리온§4.19 a6; 동향 a6; 프리오사§8 Hierarchical KV/specdec; PubGate clean-main; GH/Roadmap sources |
+| 2026-09-04 | ALREADY_COVERED | wiki/ | 4 | LiteRT MTP/v0.16.1; Supermemory MCP; AV-SQL/Ossie; OpenClaw/GuardClaw |
+| 2026-09-04 | CLEANUP | raw/ | 2 | 합성 완료 raw 2건 삭제 |
+| 2026-09-04 | LINT | Root / wiki | ALL | 2026-09-04 데일리 생성; D-2(2026-09-02) 점검; INDEX·연구_주제 META 갱신 |
 | 2026-09-03 | RESEARCH | Web/GitHub | 8 | OpenClaw 샌드박스 다중 백엔드·GuardClaw Open Auto Mode 판정 신규; LiteRT·RBLN·Furiosa·Supermemory·AV-SQL wiki-first |
 | 2026-09-03 | INGEST | raw/ | 1 | 2026-09-03-openclaw-sandbox-modes-and-guardclaw-auto-judge |
 | 2026-09-03 | SYNTHESIZE | wiki/ | 2 | 자율수행-MAS§2.16·§3(Sandbox modes·Backends·~/.openclaw Read-Only·GuardClaw Judge); OpenClaw-HyperAgent§1·§3 |
