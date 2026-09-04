@@ -1,6 +1,13 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-09-05 | INBOX_DRAIN | inbox/ | 9 | OpenAI 429 triage 신규; K8s/SGLang scale-0; PubGate/GH/Roadmap sources; pm-checkpoint EXCLUDE; git rm |
+| 2026-09-05 | RESEARCH | Web/GitHub | 6 | OpenVINO PTL NPU5 DEVICE_LOST 신규; LiteRT·RBLN a6·Furiosa 2026.4·Supermemory·AV-SQL wiki-first |
+| 2026-09-05 | INGEST | raw/ | 1 | 2026-09-05-openvino-panther-lake-npu5-device-lost |
+| 2026-09-05 | SYNTHESIZE | wiki/ | 8 | OpenAI-429; Spend-Alert; 온디바이스§5.1; K8s-Scale-Zero; SGLang ops; PubGate; GH-empty; Roadmap |
+| 2026-09-05 | ALREADY_COVERED | wiki/ | 5 | LiteRT MTP; vLLM-RBLN a6; Furiosa Hierarchical KV; Supermemory Dynamic Dreaming; AV-SQL/Ossie |
+| 2026-09-05 | CLEANUP | raw/ | 1 | 합성 완료 raw 1건 삭제 |
+| 2026-09-05 | LINT | Root / wiki | ALL | 2026-09-05 데일리; D-2(2026-09-03) 삭제; INDEX Eng 187/AI-Native 75 |
 | 2026-09-04 | RESEARCH | Web/ArXiv | 7 | Google WikiSkill; LangChain OpenWiki 0.4.0; OpenKB; MSR TailSFT; Meta Skaling; End of Software Eng; Cambridge ML |
 | 2026-09-04 | INGEST | raw/ | 7 | WikiSkill; OpenWiki 0.4.0 Claims/OKF; OpenKB PageIndex; MSR TailSFT; Meta Skaling; End of SE; Cambridge ML |
 | 2026-09-04 | SYNTHESIZE | wiki/ | 12 | WikiSkill; SkillOpt; OpenWiki 0.4.0; OpenWiki Claims Memory; OpenKB; PageIndex; TailSFT; RL-Post-Training; Skaling; End of SE; AI 역할군; Study-Resources |

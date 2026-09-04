@@ -3,13 +3,14 @@ id: roadmap-sync-unchecked-h2-gate
 title: "ROADMAP sync: ## + 미완료 - [ ] 섹션만 enqueue"
 status: canonical
 owner: km
-updated: "2026-09-04"
-last_updated: "2026-09-04"
-review_after: "2026-11-29"
+updated: "2026-09-05"
+last_updated: "2026-09-05"
+review_after: "2026-12-05"
 sources:
   - schedule:pm-roadmap-sync
   - inbox/pm/2026-08-29-codingland-roadmap-sync-m4-idempotent.md
   - inbox/pm/2026-09-03-codingland-roadmap-sync-m4-idempotent.md
+  - inbox/pm/2026-09-04-codingland-roadmap-sync-m4-idempotent.md
 tags: ["Engineering", "AI-Native", "Roadmap", "Leantime", "Sync"]
 type: "wiki"
 ---

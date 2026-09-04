@@ -3,9 +3,9 @@ title: "온디바이스 AI 및 AI PC 기술 트렌드 (2026)"
 tags: ["On-Device", "AI-PC", "NPU", "Lunar-Lake", "Strix-Point", "Copilot+", "Agentic-AI"]
 type: "wiki"
 status: "published"
-last_updated: "2026-08-30"
-updated: "2026-08-30"
-related_raw: ["[[raw/2026-08-30-on-device-ai-pc-spark-gorgon-panther.md]]", "[[raw/2026-08-28-on-device-ai-trends-rtx-spark-strix-halo-panther-lake.md]]", "[[2026-08-27-on_device_ai_trends_2026_uma.md]]", "[[2026-08-23-panther-lake-npu5-realworld-llm-benchmarks.md]]", "[[2026-06-15-On-Device-AI-PC-Trends-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-on_device_ai_pc_agentic_trends.md]]", "[[2026-06-28-on_device_ai_trends_and_agentic_ai_2026.md]]", "[[2026-06-30-on_device_ai_trends_intel_amd_nvidia.md]]", "[[2026-07-01-on-device-ai-pc-hardware-trends.md]]", "[[2026-07-07-on-device-ai-trends-2026-ryzen-ai-max-panther-lake-rtx-spark.md]]", "[[2026-07-11-on_device_ai_pc_trends_strix_halo_panther_lake_rtx_spark.md]]", "[[2026-07-12-on-device-ai-pc-ryzen-ai-halo-npu-reality.md]]", "[[2026-07-13-ryzen-ai-halo-developer-center-bkc.md]]", "[[2026-07-17-ryzen-ai-halo-phoronix-shipping.md]]"]
+last_updated: "2026-09-05"
+updated: "2026-09-05"
+related_raw: ["[[raw/2026-09-05-openvino-panther-lake-npu5-device-lost.md]]", "[[raw/2026-08-30-on-device-ai-pc-spark-gorgon-panther.md]]", "[[raw/2026-08-28-on-device-ai-trends-rtx-spark-strix-halo-panther-lake.md]]", "[[2026-08-27-on_device_ai_trends_2026_uma.md]]", "[[2026-08-23-panther-lake-npu5-realworld-llm-benchmarks.md]]", "[[2026-06-15-On-Device-AI-PC-Trends-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-on_device_ai_pc_agentic_trends.md]]", "[[2026-06-28-on_device_ai_trends_and_agentic_ai_2026.md]]", "[[2026-06-30-on_device_ai_trends_intel_amd_nvidia.md]]", "[[2026-07-01-on-device-ai-pc-hardware-trends.md]]", "[[2026-07-07-on-device-ai-trends-2026-ryzen-ai-max-panther-lake-rtx-spark.md]]", "[[2026-07-11-on_device_ai_pc_trends_strix_halo_panther_lake_rtx_spark.md]]", "[[2026-07-12-on-device-ai-pc-ryzen-ai-halo-npu-reality.md]]", "[[2026-07-13-ryzen-ai-halo-developer-center-bkc.md]]", "[[2026-07-17-ryzen-ai-halo-phoronix-shipping.md]]"]
 ---
 
 # 💻 온디바이스 AI 및 AI PC 기술 트렌드 (2026)
@@ -94,7 +94,44 @@ CES 2026 이후 독립 리뷰·실측이 공개되면서, **Core Ultra Series 3 
 
 **함정**: 180 TOPS 헤드라인은 마케팅 합산치이며, 대형 로컬 LLM·장시간 에이전트 워크로드는 여전히 **iGPU/GPU·대용량 UMA** 경로가 주류다. NPU는 Windows AI 기능·소형 모델 상시 추론에 최적.
 
-출처: [vibetric Panther Lake 리뷰](https://vibetric.com/intel-panther-lake-review-2026/) · [Intel Newsroom](https://newsroom.intel.com/client-computing/intel-unveils-panther-lake-architecture-first-ai-pc-platform-built-on-18a)
+### 5.1 OpenVINO GenAI · NPU 5 `DEVICE_LOST` 함정 (2026-09-05)
+
+[openvino#36161](https://github.com/openvinotoolkit/openvino/issues/36161)(Core Ultra 9 **386H** / NPU 5, OV·GenAI 2026.2.0, `OpenVINO/Qwen3-8B-int4-cw-ov`):
+
+| 단계 | 관측 |
+| :--- | :--- |
+| `LLMPipeline(..., "NPU")` 생성·컴파일 | 성공 |
+| 첫 `pipe.generate(...)` | `zeCommandQueueExecuteCommandLists` → `ZE_RESULT_ERROR_DEVICE_LOST` |
+| 동일 모델 `"CPU"` / `"GPU"` | 정상 |
+| DRIVER/PLUGIN compiler·HETERO·캐시 삭제·OV 다운그레이드 | 동일 실패 보고 |
+
+**적용 규칙**
+
+1. **컴파일 성공 ≠ NPU LLM 검증 완료** — smoke는 반드시 `generate`까지.
+2. NPU 5(Series 3)를 NPU 3/4 검증 매트릭스와 혼동하지 않는다. 모델 카드 min driver/OV만으로 PTL NPU LLM을 보장하지 않는다.
+3. 현장 장애 시 1차 폴백은 **`"GPU"`(iGPU) 또는 `"CPU"`**. hang 후 blob 잠금은 프로세스/재부팅 정리.
+4. Intel 측에서 동일 모델 NPU 성공 보고(이슈 코멘트)가 있어도, **호스트별 L0/펌웨어 skew**를 가정하고 CI에 NPU-only 단일 경로를 두지 않는다.
+
+```python
+# 개념: NPU 우선 + GenAI generate 스모크, 실패 시 GPU/CPU
+import openvino_genai as ov_genai
+
+def build_pipe(model_dir: str, device: str):
+    return ov_genai.LLMPipeline(model_dir, device, MAX_PROMPT_LEN=512, MIN_RESPONSE_LEN=64)
+
+for device in ("NPU", "GPU", "CPU"):
+    try:
+        pipe = build_pipe(r"path/to/qwen_ov", device)
+        cfg = ov_genai.GenerationConfig()
+        cfg.max_new_tokens = 8
+        cfg.do_sample = False
+        _ = pipe.generate("ping", generation_config=cfg)
+        break  # first device that survives generate
+    except RuntimeError:
+        continue
+```
+
+출처: [vibetric Panther Lake 리뷰](https://vibetric.com/intel-panther-lake-review-2026/) · [Intel Newsroom](https://newsroom.intel.com/client-computing/intel-unveils-panther-lake-architecture-first-ai-pc-platform-built-on-18a) · [openvino#36161](https://github.com/openvinotoolkit/openvino/issues/36161)
 
 ## 6. 향후 과제
 - **RAM 증설의 압박**: 로컬 LLM 및 에이전트의 멀티태스킹을 위해 **32GB RAM**이 최소 사양으로 요구되고 있습니다.

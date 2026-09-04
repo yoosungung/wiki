@@ -3,14 +3,15 @@ id: spend-alert-human-approval-triage
 title: "Spend alert: 인간 Approval로 모으고 임계·부하 결정"
 status: canonical
 owner: km
-updated: "2026-08-11"
-last_updated: "2026-08-11"
-review_after: "2026-11-11"
+updated: "2026-09-05"
+last_updated: "2026-09-05"
+review_after: "2026-12-05"
 sources:
   - ticket:212
   - ticket:310
   - ticket:508
   - schedule:spend-alert
+  - inbox/pm/2026-09-04-candydate-pass-ab-openai-quota.md
 tags: ["Engineering", "AI-Native", "Cost", "Cron", "Approval", "RBAC"]
 type: "wiki"
 ---
@@ -48,9 +49,11 @@ manifest/default만 올려도 **클러스터 CronJob env가 옛값**이면 계�
 - assignee가 알 수 없는 editorId면 catch만으로 닫지 않는다.
 - catch-up이 spend-alert New를 feature 작업으로 집지 않는다.
 - TA/에이전트 `can-i patch cronjobs=no`는 제품 CD 실패가 아니라 **RBAC 갭** — [[wiki/Engineering/Infrastructure-and-DevOps/Test-Overlay-vs-Release-Package-Deploy-Paths.md]].
+- OpenAI **HTTP 429**는 rate-limit과 빌링·쿼터를 구분한다 — [[wiki/Engineering/AI-Native-Engineering/OpenAI-HTTP-429-Billing-Vs-Rate-Limit-Triage.md]].
 
 ## 🔗 관련 문서
 
+- [[wiki/Engineering/AI-Native-Engineering/OpenAI-HTTP-429-Billing-Vs-Rate-Limit-Triage.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Schedule-Outcome-Requires-Active-Ticket.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Parent-Done-Requires-Closed-Subtasks.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Roadmap-Pass-Gate-Human-Approval.md]]

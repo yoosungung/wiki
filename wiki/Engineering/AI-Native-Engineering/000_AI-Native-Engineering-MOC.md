@@ -52,6 +52,7 @@
 - [[wiki/Engineering/AI-Native-Engineering/Needs-Only-Aggregate-CI-Gate.md]]
 - [[wiki/Engineering/AI-Native-Engineering/On-Demand-Schema-Describe-Tools.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Open-Design-에이전트-네이티브-디자인-워크스페이스.md]]
+- [[wiki/Engineering/AI-Native-Engineering/OpenAI-HTTP-429-Billing-Vs-Rate-Limit-Triage.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Orphan-Milestone-Close-After-Children-Done.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Parent-Done-Requires-Closed-Subtasks.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Persona-Bundle-When-Agents-Yaml-Missing.md]]
