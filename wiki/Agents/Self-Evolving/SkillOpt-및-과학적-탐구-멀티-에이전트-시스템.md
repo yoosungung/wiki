@@ -1,9 +1,9 @@
 ---
 title: "SkillOpt: 에이전트 스킬 문서 자율 진화(Self-Evolution) 및 과학적 탐구 멀티 에이전트 시스템"
 tags: ["SkillOpt", "Co-Scientist", "Self-Evolution", "Scientific-Discovery", "Multi-Agent"]
-last_updated: "2026-07-06"
-updated: "2026-07-06"
-related_raw: ["[[2026-07-06-suk_hyun_k_skillopt_scientific_agents.md]]"]
+last_updated: "2026-09-04"
+updated: "2026-09-04"
+related_raw: ["[[2026-07-06-suk_hyun_k_skillopt_scientific_agents.md]]", "[[2026-09-04-wikiskill-co-evolving-procedural-knowledge-agentic-systems.md]]"]
 ---
 
 # 🔬 SkillOpt: 에이전트 스킬 문서 자율 진화(Self-Evolution) 및 과학적 탐구 멀티 에이전트 시스템
@@ -21,4 +21,5 @@ related_raw: ["[[2026-07-06-suk_hyun_k_skillopt_scientific_agents.md]]"]
 ---
 **관련 문서**:
 - [[wiki/Agents/Self-Evolving/Memento-에이전트-스킬-자가-학습-프레임워크.md]]
+- [[wiki/Agents/Self-Evolving/WikiSkill-절차적-지식-자가-진화-프레임워크.md]]
 

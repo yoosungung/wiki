@@ -3,9 +3,9 @@ title: AI 시대의 제품 개발 역할군 5대 원형
 tags: ["Engineering", "AI-Native", "Team-Structure", "Anthropic"]
 type: wiki
 status: published
-created: 2026-07-05
-updated: 2026-07-05
-related_raw: ["[[2026-07-05-future_product_roles_archetypes_anthropic.md]]"]
+last_updated: "2026-09-04"
+updated: "2026-09-04"
+related_raw: ["[[2026-07-05-future_product_roles_archetypes_anthropic.md]]", "[[2026-09-04-the-end-of-software-engineering-intent-architect-aaas.md]]"]
 ---
 
 # AI 시대의 제품 개발 역할군 5대 원형 (Future Product Roles)
@@ -40,5 +40,6 @@ AI 코딩 에이전트(Claude Code 등)와 생성형 AI 기술이 개발 프로�
 
 ## 관련 문서
 - [[wiki/Engineering/AI-Native-Engineering/000_AI-Native-Engineering-MOC.md]]
+- [[wiki/Engineering/AI-Native-Engineering/The-End-of-Software-Engineering-Intent-Architecture.md|소프트웨어 공학의 종말: 인텐트 아키텍트]]
 - [[wiki/Engineering/AI-Native-Engineering/Claude-Code-and-Cursor-AI-Native-Engineering-에이전트-기반-엔지니어링.md]]
 - [[wiki/Agents/Coding-and-Engineering/000_Coding-and-Engineering-MOC.md]]

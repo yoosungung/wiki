@@ -1,6 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-09-04 | RESEARCH | Web/ArXiv | 7 | Google WikiSkill; LangChain OpenWiki 0.4.0; OpenKB; MSR TailSFT; Meta Skaling; End of Software Eng; Cambridge ML |
+| 2026-09-04 | INGEST | raw/ | 7 | WikiSkill; OpenWiki 0.4.0 Claims/OKF; OpenKB PageIndex; MSR TailSFT; Meta Skaling; End of SE; Cambridge ML |
+| 2026-09-04 | SYNTHESIZE | wiki/ | 12 | WikiSkill; SkillOpt; OpenWiki 0.4.0; OpenWiki Claims Memory; OpenKB; PageIndex; TailSFT; RL-Post-Training; Skaling; End of SE; AI 역할군; Study-Resources |
+| 2026-09-04 | CLEANUP | raw/ | 7 | 합성 완료 raw 7건 삭제 (WikiSkill·OpenWiki·OpenKB·TailSFT·Skaling·End of SE·Cambridge ML) |
+| 2026-09-04 | LINT | Root / wiki | ALL | 2026-09-04 데일리 갱신; D-2 점검; INDEX(265·252·106·186·43)·연구_주제 비고 갱신 |
 | 2026-09-04 | INBOX_DRAIN | inbox/ | 7 | candidate pub-safety·people-ssot·issue-radar; pm/sw-factory GH-empty; pm roadmap → PubGate clean-main Done·sources; GH/Roadmap ALREADY; git rm |
 | 2026-09-04 | RESEARCH | Web/GitHub | 6 | vLLM-RBLN a6·Furiosa 2026.4.0 신규; LiteRT v0.16.1·Supermemory·AV-SQL/Ossie·OpenClaw wiki-first |
 | 2026-09-04 | INGEST | raw/ | 2 | 2026-09-04-vllm-rbln-v0.11.3a6; 2026-09-04-furiosa-sdk-2026-4-0-hierarchical-kv-specdec |

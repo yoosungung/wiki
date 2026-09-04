@@ -40,6 +40,7 @@
 - [[wiki/Models/SFT/RunPod-Cloud-GPU-Inference.md]]
 - [[wiki/Models/SFT/Save Steps.md]]
 - [[wiki/Models/SFT/Smol-Training-Playbook.md]]
+- [[wiki/Models/SFT/TailSFT-Filtered-Fine-Tuning.md]]
 - [[wiki/Models/SFT/Train Stage.md]]
 - [[wiki/Models/SFT/Transformer Fine-tuning 옵션.md]]
 - [[wiki/Models/SFT/Unsloth-Gemma-4-and-Studio-Update-2026.md]]

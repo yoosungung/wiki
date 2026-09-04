@@ -2,8 +2,9 @@
 title: LLM 강화학습(RL) 포스트 트레이닝 및 최신 알고리즘 가이드
 related_raw: ["[[2026-08-26-reinforcement_learning_for_llms_complete_guide.md]]"]
 tags: [reinforcement_learning, llm_training, post_training, grpo]
-last_updated: "2026-08-26"
-updated: "2026-08-26"
+last_updated: "2026-09-04"
+updated: "2026-09-04"
+related_raw: ["[[2026-08-26-reinforcement_learning_for_llms_complete_guide.md]]", "[[2026-09-04-msr-tailsft-filtered-fine-tuning-post-training.md]]"]
 ---
 
 # 🤖 LLM 강화학습(RL) 포스트 트레이닝 및 최신 알고리즘 가이드
@@ -36,3 +37,14 @@ updated: "2026-08-26"
 ## 4. 실전 엔지니어링 구현 고려사항
 - **Verifiable Reward API**: 코드 테스트 통과 여부 및 정규식 기반 정답 추출(`Math-Verify` 등)을 통한 결정론적 보상 결합.
 - **Engine Co-design**: 학습 가속을 위해 롤아웃 생성을 고속 인퍼런스 엔진(vLLM)에 위임하고, 손실 함수 역전파 및 가중치 업데이트는 DeepSpeed/FSDP에 밀착 결합하는 아키텍처 구축 필수.
+
+## 5. SFT-RL 파이프라인 연계: TailSFT를 통한 탐색 커버리지(pass@k) 극대화
+- **엔트로피 붕괴 방지**: 표준 SFT 단계에서 쉬운 예제에 과도하게 손실을 낮추면(Over-fitting) 확률 분포가 특정 정답으로 쏠려, 후속 GRPO 롤아웃 시 16~32개 시도가 모두 동일한 외길 오답으로 귀결되어 보상 0의 늪에 빠집니다.
+- **Offset Filtering 해결책**: 베이스 모델 대비 손실 개선율을 기준으로 쉬운 데이터를 제외하고 꼬리(Tail) 영역 난제에만 그래디언트를 집중시키는 [[wiki/Models/SFT/TailSFT-Filtered-Fine-Tuning.md|TailSFT]]를 SFT 단계에 적용함으로써, 후속 GRPO의 pass@16 커버리지를 대폭 보존하고 최종 추론 성능을 끌어올릴 수 있습니다.
+
+---
+## 🔗 관련 문서
+- [[wiki/Models/SFT/TailSFT-Filtered-Fine-Tuning.md|TailSFT 필터링 미세조정]]
+- [[wiki/Models/RL/GRPO-Algorithm-Definition.md|GRPO 알고리즘 정의]]
+- [[wiki/Models/RL/DeepSeek-R1-GRPO-Implementation.md|DeepSeek-R1 GRPO 구현]]
+- [[wiki/Models/RL/000_RL-MOC.md|RL MOC]]

@@ -1,9 +1,9 @@
 ---
-title: OpenWiki 0.2 - OKF 표준 규격 도입을 통한 코드베이스 RAG 최적화
-last_updated: "2026-07-27"
-updated: "2026-07-27"
-related_raw: ["[[2026-07-27-openwiki_02_codebase_documentation.md]]"]
-tags: [RAG, Documentation, OpenWiki, OKF, Open-Knowledge-Format]
+title: OpenWiki 0.4.0 - Claims 런타임 및 OKF v0.2 표준 규격을 통한 자가 교정형 RAG 위키
+last_updated: "2026-09-04"
+updated: "2026-09-04"
+related_raw: ["[[2026-07-27-openwiki_02_codebase_documentation.md]]", "[[2026-09-04-openwiki-v040-claims-runtime-okf-v02.md]]"]
+tags: [RAG, Documentation, OpenWiki, OKF, Claims-Runtime, Self-Correcting-Memory]
 ---
 
 # OpenWiki 0.2: OKF 표준 규격 도입을 통한 코드베이스 RAG 최적화
@@ -66,7 +66,26 @@ openwiki generate --src="./src" --dest="./wiki" --format="okf"
 openwiki lint --dir="./wiki"
 ```
 
+## 4. OpenWiki 0.4.0: Claims 런타임과 OKF v0.2 자가 교정(Self-Correction) 메커니즘
+
+2026년 하반기 공개된 **OpenWiki v0.4.0**은 단순 정적 위키 생성을 넘어, 코드 변경 시 위키가 스스로 낡은 지식을 감지하고 잊거나 수정하는 **Claims 런타임**을 도입했습니다.
+
+### 4.1. Claims vs OKF v0.2 책임 분리 모델
+- **Claims = 내용 수준의 진실 (Content-level Truth)**:
+  - 위키 내 개별 주장(Fact/Assertion)과 이를 뒷받침하는 실제 소스 코드(Evidence)를 버전 기반으로 1:1 바인딩합니다.
+  - 소스 코드가 수정되면 관련 Claim이 즉각 '스테일(Stale)' 상태로 플래그되어, 전체 위키를 재빌드하지 않고도 해당 단락만 선별적으로 재검증/자가 교정합니다.
+- **OKF v0.2 = 페이지 수준의 신뢰 (Page-level Trust)**:
+  - 해당 페이지가 참조한 원천 소스 목록(Sources).
+  - 페이지 전체의 공식 검증 여부(Verification Status) 및 타임스탬프.
+  - 생성 주체(Actor Stamp): 네이티브 OpenWiki 런타임인지, Claude Code/Cursor 등의 호스트 코딩 에이전트인지 명시.
+
+```bash
+# OpenWiki 0.4.0 Claims 증분 검증 및 자가 교정
+openwiki verify --claims --runtime=auto
+```
+
 ---
 ## 🔗 관련 문서 링크
 - 로컬 경량 데이터베이스 RAG 설계: [[wiki/RAG/KnowNote-Local-First-RAG-NotebookLM.md]]
+- 에이전트 자가 교정 메모리 레이어: [[wiki/Agents/Memory-and-Cognition/OpenWiki-Claims-Runtime-Self-Correcting-Memory.md]]
 - 에이전트 다단계 피드백 루프 모니터링: [[wiki/Agents/Evaluations/Deep-Agents-Benchmarking-Methodology.md]]

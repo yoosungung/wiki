@@ -1,3 +1,4 @@
+from __future__ import annotations
 """Vault root detection for KM scripts."""
 import os
 

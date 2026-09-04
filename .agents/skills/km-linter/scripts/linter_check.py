@@ -20,7 +20,7 @@ def get_all_wiki_files():
             continue
         for file in files:
             if file.endswith(".md"):
-                rel_path = os.path.relpath(os.path.join(root, file), VAULT_ROOT)
+                rel_path = normalize(os.path.relpath(os.path.join(root, file), VAULT_ROOT))
                 wiki_files[rel_path] = {
                     "inbound_links": [],
                     "outbound_links": []
@@ -33,10 +33,12 @@ def extract_links(content):
     clean_links = []
     for link in links:
         path = link.split('|')[0].strip()
-        clean_links.append(path)
+        clean_links.append(normalize(path))
     return clean_links
 
 def resolve_link(link_path, current_file_path, all_files):
+    link_path = normalize(link_path)
+    current_file_path = normalize(current_file_path)
     # Obsidian links can be:
     # 1. Full path from vault root: wiki/Category/File.md
     # 2. Relative to current file: ../Other/File.md

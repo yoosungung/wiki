@@ -1,11 +1,11 @@
 ---
 title: "PageIndex: 벡터 검색 없는 추론 기반 오픈소스 RAG 프레임워크"
-related_raw: ["[[PageIndex Open-Source RAG Framework for Document Retrieval | Sumanth P님이 토픽에 대해 올림 | LinkedIn.md]]"]
-tags: ["RAG", "Vectorless", "Reasoning-based", "Search", "Open_Source", "PageIndex"]
+last_updated: "2026-09-04"
+updated: "2026-09-04"
+related_raw: ["[[PageIndex Open-Source RAG Framework for Document Retrieval | Sumanth P님이 토픽에 대해 올림 | LinkedIn.md]]", "[[2026-09-04-openkb-persistent-wiki-compiler-pageindex.md]]"]
+tags: ["RAG", "Vectorless", "Reasoning-based", "Search", "Open_Source", "PageIndex", "OpenKB"]
 type: "wiki"
 status: "published"
-last_updated: "2026-05-15"
-updated: "2026-05-15"
 ---
 
 # PageIndex: 벡터리스 추론 기반 RAG의 새로운 지평
@@ -25,10 +25,13 @@ PageIndex는 전통적인 벡터 임베딩(Vector Search)에 의존하지 않고
 - **높은 신뢰성**: 모델이 답변의 근거가 되는 문서 위치를 정확히 명시할 수 있음.
 - **다양한 포맷 지원**: PDF, HTML 등 복잡한 문서 구조를 가진 정형/비정형 데이터 처리에 강점.
 
-## 4. 시사점
-PageIndex는 'RAG = 벡터 검색'이라는 공식을 깨고, LLM의 추론 성능이 향상됨에 따라 검색 엔진 자체가 더 지능화될 수 있음을 보여줍니다. 특히 엔터프라이즈 환경에서 수천 페이지에 달하는 복합 문서를 다룰 때 기존 방식보다 뛰어난 성능을 발휘할 것으로 기대됩니다.
+## 5. 상위 시스템으로의 진화: OpenKB와 지속적 위키 컴파일
+PageIndex는 단순 검색 프레임워크를 넘어, 안드레이 카파시의 지속적 위키 비전인 **OpenKB**의 핵심 추론 엔진으로 통합되었습니다.
+- 문서들을 상호 연결된 위키로 컴파일하고, 각 문서를 계층형 트리로 인덱싱하여 다단계 복합 질의를 해결합니다.
+- 위키 지식으로부터 에이전트 스킬(`SKILL.md`)을 증류하는 **Skill Factory**와 연계되어 에이전트 역량 강화로 이어집니다.
 
 ## 관련 문서
 - [[wiki/RAG/000_RAG-MOC.md|RAG MOC]]
+- [[wiki/RAG/OpenKB-Persistent-Wiki-Compiler.md|OpenKB 지속적 위키 컴파일러]]
 - [[wiki/RAG/GraphRAG.md|GraphRAG 분석]]
 - [[wiki/Models/Reasoning-and-Cognition/000_Reasoning-and-Cognition-MOC.md|추론 및 인지 MOC]]

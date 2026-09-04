@@ -11,3 +11,4 @@
 - [[wiki/Agents/Self-Evolving/Self-Improving-AI-Agents-and-Dynamic-Scaffolding.md]]
 - [[wiki/Agents/Self-Evolving/Self-evolving-Agents-DGM-O-mega-자가-진화형-에이전트-모델.md]]
 - [[wiki/Agents/Self-Evolving/SkillOpt-및-과학적-탐구-멀티-에이전트-시스템.md]]
+- [[wiki/Agents/Self-Evolving/WikiSkill-절차적-지식-자가-진화-프레임워크.md]]

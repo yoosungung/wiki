@@ -21,6 +21,7 @@
 - [[wiki/Agents/Memory-and-Cognition/Memory.md]]
 - [[wiki/Agents/Memory-and-Cognition/Neural-Procedural-Memory-for-Implicit-Agent-Action.md]]
 - [[wiki/Agents/Memory-and-Cognition/OpenMemory.md]]
+- [[wiki/Agents/Memory-and-Cognition/OpenWiki-Claims-Runtime-Self-Correcting-Memory.md]]
 - [[wiki/Agents/Memory-and-Cognition/에이전트-네이티브-메모리-시스템-평가-연구-2026.md]]
 - [[wiki/Agents/Memory-and-Cognition/에이전트-메모리-레이어-설계-및-LangSmith-분석.md]]
 - [[wiki/Agents/Memory-and-Cognition/통합-메모리-및-MCP-기반-컨텍스트-레이어-독립.md]]

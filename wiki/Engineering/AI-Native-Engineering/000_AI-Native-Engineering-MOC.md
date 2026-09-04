@@ -71,5 +71,6 @@
 - [[wiki/Engineering/AI-Native-Engineering/Spend-Alert-Human-Approval-Triage.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Static-Site-Frontmatter-Title-Sync.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Tenant-Quality-Yaml-Gate-Skip-Pattern.md]]
+- [[wiki/Engineering/AI-Native-Engineering/The-End-of-Software-Engineering-Intent-Architecture.md]]
 - [[wiki/Engineering/AI-Native-Engineering/VSCode-Extension-Host-QA-Gate.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Wiki-Synthesis-Policy.md]]
