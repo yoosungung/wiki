@@ -584,3 +584,4 @@
 | 2026-08-27 | SYNTHESIZE | wiki/Agents, wiki/Models | 5 | Auto Mode CLI/리뷰어 분리 보강; Safari Memory64 미지원·wllama64 반영; UTF-8 손상 1B 수정 |
 | 2026-08-27 | ALREADY_COVERED | inbox/ | 3 | publication-safety·issue-radar→Publication-Gate; scoreboard→Spider2 §7.3(EXCLUDE_PROGRESS) git rm |
 | 2026-08-27 | CLEANUP | raw/ | 2 | 합성 완료 raw 삭제; 데일리 D-0/D-1 유지 |
+| 2026-09-05 | LINT | wiki/Models/RL | 1 | Quartz GitHub Pages 빌드 실패 원인인 `LLM-Reinforcement-Learning-Post-Training-Guide.md` frontmatter `related_raw` 중복 키 제거 |

@@ -1,6 +1,5 @@
 ---
 title: LLM 강화학습(RL) 포스트 트레이닝 및 최신 알고리즘 가이드
-related_raw: ["[[2026-08-26-reinforcement_learning_for_llms_complete_guide.md]]"]
 tags: [reinforcement_learning, llm_training, post_training, grpo]
 last_updated: "2026-09-04"
 updated: "2026-09-04"
