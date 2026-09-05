@@ -1,10 +1,11 @@
 ---
 id: inbox-candidate-2026-09-06-publication-safety
 agent: candidate
-ticket_id: pending
+ticket_id: 1691
 updated: 2026-09-06
 status: inbox
 sources:
+  - ticket:1691
   - schedule:publication-safety-03:00-KST
   - commit:38d4d0c6362ecf27f19c0b0deee3a5a1b281d119
 ---
