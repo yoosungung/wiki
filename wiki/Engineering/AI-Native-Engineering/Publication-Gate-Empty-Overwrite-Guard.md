@@ -54,6 +54,9 @@ sources:
   - inbox/candidate/2026-09-04-issue-radar-today.md
   - inbox/candidate/2026-09-04-people-ssot-curation-18h.md
   - inbox/candidate/2026-09-05-publication-safety.md
+  - inbox/candidate/2026-09-06-publication-safety.md
+  - inbox/candidate/2026-09-05-people-curation.md
+  - ticket:1691
   - skill:political-wiki-administration
   - agent/publication_gate.py
 

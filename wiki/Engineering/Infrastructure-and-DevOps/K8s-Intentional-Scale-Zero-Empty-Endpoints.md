@@ -8,6 +8,7 @@ last_updated: "2026-09-05"
 review_after: "2026-12-05"
 sources:
   - schedule:ta-k8s-daily
+  - inbox/ta/2026-09-05-k8s-daily-report.md
   - inbox/ta/2026-09-04-k8s-daily.md
   - inbox:ta/2026-08-22-ta-k8s-daily
   - inbox:ta/2026-08-18-ta-k8s-daily
@@ -70,6 +71,7 @@ kubectl get nodes -o custom-columns=NAME:.metadata.name,READY:.status.conditions
 - **재확인 (2026-08-18)**: 동일 기준선 + TEI health는 Service 포트 **:8080** (기본 :80 타임아웃은 포트 오탐, 사고 아님) + graph DB STS가 Helm 기본 limit보다 낮아도 Ready·최근 OOM 없으면 일일 티켓 없음 — [[wiki/Models/Optimization-and-Serving/SGLang-gemma4-llm-serving-cluster-ops.md]].
 - **재확인 (2026-08-22)**: `didim-gpu` Pressure=False·Warning/CrashLoop/Pending=0 + `runtime/pgbouncer-{ro,rw}` scale-0 + `sglang-gemma4-12b` 2/2·`bge-m3-tei` 1/1 + postgres live 4Gi/2Gi Ready + PVC Bound → Incident 없음. kubelet eviction 미발화 축은 [[wiki/Engineering/Infrastructure-and-DevOps/K8s-Kubelet-Node-Pressure-Eviction.md]].
 - **재확인 (2026-09-04)**: `didim-gpu` Ready·Pressure=False·abnormal Pod/Warning=0·PVC Bound + postgres live 4Gi/2Gi·restarts 0. **의도적 scale-0 allowlist**에 `llm-serving/sglang-gemma4-12b`와 `runtime/pgbouncer-{ro,rw}`를 함께 둔다 — GPU 서빙 Deploy가 0/0이어도 replicas=0이면 Incident 아님. [[wiki/Models/Optimization-and-Serving/SGLang-gemma4-llm-serving-cluster-ops.md]].
+- **재확인 (2026-09-05)**: 동일 Pressure/PVC/postgres 기준선 + `sglang-gemma4-12b`·`pgbouncer-{ro,rw}` scale-0. **활성 GPU 점유는 `sglang-gemma4-31b` 2/2** — 12b가 0이어도 다른 SGLang Deploy가 allocatable GPU를 Ready로 쓰면 Incident 아님(티어 교체·scale-0 allowlist 병행). [[wiki/Models/Optimization-and-Serving/SGLang-gemma4-llm-serving-cluster-ops.md]].
 - **티켓 불필요면 MCP 미사용**: 조치 가능 장애가 0이면 ticketing MCP discovery 실패를 점검 실패로 올리지 않는다. MCP는 티켓이 필요할 때만.
 - **점검 worktree ≠ git 정본**: 로컬 checkout이 feature 브랜치여도 **live 클러스터**가 점검 기준(SoR)이다. `git pull origin main`을 생략해도 되고, repo drift를 Incident로 올리지 않는다. 점검 시 kubectl mutate 없음.
 

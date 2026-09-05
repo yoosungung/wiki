@@ -1,6 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-09-05 | INBOX_DRAIN | inbox/ | 8 | candidate pub/people; GH-empty×4; roadmap M4; ta-k8s → K8s/SGLang 31b 2/2·sources; PubGate/GH/Roadmap ALREADY·people EXCLUDE; git rm |
+| 2026-09-05 | RESEARCH | Web/wiki-first | 6 | LiteRT MTP#2498·RBLN OpenShift·Furiosa Hierarchical KV·Supermemory Dreaming·AV-SQL/Ossie → ALREADY_COVERED |
+| 2026-09-05 | SYNTHESIZE | wiki/ | 2 | K8s-Scale-Zero·SGLang: 12b scale-0 + 31b GPU 2/2 티어 교체 기준선 |
+| 2026-09-05 | ALREADY_COVERED | wiki/ | 5 | PubGate clean-main/stub목표; GH open=0 skip; Roadmap Done≠체크; LiteRT/RBLN/Furiosa/Supermemory/AV-SQL |
+| 2026-09-05 | LINT | Root / wiki | ALL | INDEX META 2026-09-05; 데일리 append; Eng 187/AI-Native 75 유지 |
 | 2026-09-05 | INBOX_DRAIN | inbox/ | 9 | OpenAI 429 triage 신규; K8s/SGLang scale-0; PubGate/GH/Roadmap sources; pm-checkpoint EXCLUDE; git rm |
 | 2026-09-05 | RESEARCH | Web/GitHub | 6 | OpenVINO PTL NPU5 DEVICE_LOST 신규; LiteRT·RBLN a6·Furiosa 2026.4·Supermemory·AV-SQL wiki-first |
 | 2026-09-05 | INGEST | raw/ | 1 | 2026-09-05-openvino-panther-lake-npu5-device-lost |

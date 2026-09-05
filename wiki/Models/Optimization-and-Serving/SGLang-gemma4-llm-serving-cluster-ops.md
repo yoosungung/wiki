@@ -12,6 +12,7 @@ sources:
   - ticket:1523
   - kubectl:llm-serving
   - schedule:ta-k8s-daily
+  - inbox/ta/2026-09-05-k8s-daily-report.md
   - inbox/ta/2026-09-04-k8s-daily.md
   - inbox/candidate/2026-08-31-sglang-gemma4-31b-tier1-smoke.md
 tags: ["Models", "Serving", "SGLang", "Kubernetes", "Gemma4", "GPU"]
@@ -57,6 +58,7 @@ kubectl delete deployment sglang-gemma4-31b -n llm-serving
 - 보조 추론 서비스(예: TEI) Ready는 GPU 전량 점유와 병행 가능한 정상 신호로 본다(2026-08-09·2026-08-16·2026-08-18·**2026-08-22** 재확인: `bge-m3-tei` 1/1 + `sglang-gemma4-12b` 2/2; `/v1/models` 200).
 - **재확인 (2026-08-22)**: 노드 Pressure=False·postgres live 4Gi/request 2Gi Ready — OOM/eviction 경로 없음. [[wiki/Engineering/Infrastructure-and-DevOps/K8s-Kubelet-Node-Pressure-Eviction.md]].
 - **재확인 (2026-09-04)**: `sglang-gemma4-12b` + `pgbouncer-{ro,rw}` intentional scale-0 · abnormal Pod/Warning=0 · postgres Ready → Incident 없음(서빙 ON 기준선과 병행 문서화).
+- **재확인 (2026-09-05)**: `sglang-gemma4-12b` scale-0 + **`sglang-gemma4-31b` 2/2 Ready**(노드 GPU 전량) + `pgbouncer-{ro,rw}` scale-0. 활성 티어가 31b이면 smoke·클라이언트 FQDN도 31b Service를 본다 — [[#Client env vs live model id drift]]. 12b empty endpoints는 allowlist.
 - **TEI health 포트 오탐**: ClusterIP health는 컨테이너/Service listen 포트(예: **:8080**)로 확인한다. 관례적 `:80` 타임아웃만으로 Down/Incident로 올리지 않는다.
 - **SGLang smoke 포트**: Service listen이 **:30000**이면 `/v1/models`·tiny completion을 그 포트로 친다. 관례적 `:8000` 타임아웃만으로 사고 취급하지 않는다(TEI `:80` vs `:8080`과 같은 축). 서빙 scale-0이면 smoke 스킵.
 
