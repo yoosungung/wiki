@@ -15,6 +15,8 @@ description: 지식 베이스의 구조적 무결성을 점검하고 `INDEX.md`,
 - **DEAD_LINKS**: `[[ ]]`로 참조되었으나 실제 파일이 존재하지 않는 문서 목록을 추출함.
 - **PATH_SYNC**: 파일 이동으로 인해 발생한 잘못된 경로 링크를 `fix_wiki_links.py` 로직을 사용하여 현재 실제 경로로 자동 수정함.
 - **DATE_SYNC**: GitHub Pages 빌드 시 날짜 왜곡(빌드 날짜로 초기화되는 현상)을 방지하기 위해, frontmatter에 `last_updated` 필드 값을 기반으로 한 `updated` 필드가 올바르게 입력되어 있는지 점검하고 일치시킴.
+- **YAML_UNIQUE_KEYS**: `wiki/` frontmatter 최상위 매핑 키 중복을 전수 점검함. 중복(`related_raw` 두 번 등)은 Quartz YAML 파서가 `duplicated mapping key`로 **fatal** 종료하므로, 값을 병합한 뒤 키를 1개만 남긴다.
+- **KATEX_CURRENCY**: 본문에서 통화 `$숫자`가 한글과 짝 `$`로 수식 구간을 만들면 KaTeX `unicodeTextInMathMode` warn이 난다 (`strict: warn` → 배포는 됨, 해당 구간 렌더 깨짐). 가격은 `` `$0.08` `` 또는 `USD 0.08`로 고치고, 수식 안 한글은 `\text{...}`로 감싼다.
 
 ### 2. INDEX_REFRESH (INDEX.md) - 필수 수행
 - `INDEX.md`를 **KM_INDEX_AGENT_v1** 포맷으로 **무조건 최신화**함.

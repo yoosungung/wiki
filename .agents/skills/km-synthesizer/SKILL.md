@@ -29,6 +29,10 @@ description: `raw/` 데이터를 분석하여 `wiki/` 5대 핵심 카테고리 �
 ### 3. AGENT_EDITING
 - **FRONTMATTER**: `related_raw: ["[[파일명.md]]"]` 및 `tags` 업데이트.
   - Quartz 빌드 시 올바른 수정 날짜 반영을 위해, frontmatter에 `last_updated: "YYYY-MM-DD"`와 `updated: "YYYY-MM-DD"` 필드를 반드시 동일하게 생성/업데이트함.
+  - YAML 매핑 키는 문서당 **1회만**. `related_raw`를 기존 블록 아래에 한 줄 더 붙이지 말고 배열을 합친다. 중복 키는 Quartz `duplicated mapping key`로 GitHub Pages 빌드가 **fatal** 종료한다.
+- **QUARTZ_KATEX** (본문 `$`): Quartz는 `$...$` / `$$...$$`를 KaTeX 수식으로 파싱한다. 통화 기호 `$`도 수식 시작이다.
+  - `입력 $0.08 / 출력 $0.30`처럼 한글이 짝 `$` 사이에 들어가면 `unicodeTextInMathMode`(예: 문자 `력`) 경고가 난다. `strict: warn`이면 배포는 되고, 해당 구간만 수식으로 깨진다.
+  - 가격·금액은 `` `$0.08` `` 또는 `USD 0.08`로 쓰고, 진짜 수식 안 한글·라벨은 `\text{출력}`으로 감싼다. 홀수 개의 `$`(예: `$0.08/1M 토큰`)도 금지.
 - **LINKING**: 관련된 다른 `wiki/` 문서에 대해 **현재의 전체 상대 경로**(`[[wiki/Category/Sub/File.md]]`)를 사용하여 링크를 생성함.
 
 ### 4. VALIDATION

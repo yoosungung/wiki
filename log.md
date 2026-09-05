@@ -585,3 +585,4 @@
 | 2026-08-27 | ALREADY_COVERED | inbox/ | 3 | publication-safety·issue-radar→Publication-Gate; scoreboard→Spider2 §7.3(EXCLUDE_PROGRESS) git rm |
 | 2026-08-27 | CLEANUP | raw/ | 2 | 합성 완료 raw 삭제; 데일리 D-0/D-1 유지 |
 | 2026-09-05 | LINT | wiki/Models/RL | 1 | Quartz GitHub Pages 빌드 실패 원인인 `LLM-Reinforcement-Learning-Post-Training-Guide.md` frontmatter `related_raw` 중복 키 제거 |
+| 2026-09-05 | SYNTHESIZE | .agents/skills | 2 | Quartz KaTeX `unicodeTextInMathMode`(통화 `$`+한글) 및 YAML 중복 키 fatal을 km-synthesizer·km-linter에 합성 |
