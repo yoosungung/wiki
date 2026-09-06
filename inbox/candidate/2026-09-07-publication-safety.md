@@ -1,7 +1,7 @@
 ---
 id: inbox-candidate-2026-09-07-publication-safety
 agent: candidate
-ticket_id: pending
+ticket_id: 1722
 updated: 2026-09-07
 status: inbox
 sources:
