@@ -3,11 +3,12 @@ id: k8s-intentional-scale-zero-empty-endpoints
 title: "K8s 의도적 scale-0와 empty endpoints 판별"
 status: canonical
 owner: km
-updated: "2026-09-05"
-last_updated: "2026-09-05"
-review_after: "2026-12-05"
+updated: "2026-09-06"
+last_updated: "2026-09-06"
+review_after: "2026-12-06"
 sources:
   - schedule:ta-k8s-daily
+  - inbox/ta/2026-09-06-k8s-daily-report.md
   - inbox/ta/2026-09-05-k8s-daily-report.md
   - inbox/ta/2026-09-04-k8s-daily.md
   - inbox:ta/2026-08-22-ta-k8s-daily
@@ -72,6 +73,8 @@ kubectl get nodes -o custom-columns=NAME:.metadata.name,READY:.status.conditions
 - **재확인 (2026-08-22)**: `didim-gpu` Pressure=False·Warning/CrashLoop/Pending=0 + `runtime/pgbouncer-{ro,rw}` scale-0 + `sglang-gemma4-12b` 2/2·`bge-m3-tei` 1/1 + postgres live 4Gi/2Gi Ready + PVC Bound → Incident 없음. kubelet eviction 미발화 축은 [[wiki/Engineering/Infrastructure-and-DevOps/K8s-Kubelet-Node-Pressure-Eviction.md]].
 - **재확인 (2026-09-04)**: `didim-gpu` Ready·Pressure=False·abnormal Pod/Warning=0·PVC Bound + postgres live 4Gi/2Gi·restarts 0. **의도적 scale-0 allowlist**에 `llm-serving/sglang-gemma4-12b`와 `runtime/pgbouncer-{ro,rw}`를 함께 둔다 — GPU 서빙 Deploy가 0/0이어도 replicas=0이면 Incident 아님. [[wiki/Models/Optimization-and-Serving/SGLang-gemma4-llm-serving-cluster-ops.md]].
 - **재확인 (2026-09-05)**: 동일 Pressure/PVC/postgres 기준선 + `sglang-gemma4-12b`·`pgbouncer-{ro,rw}` scale-0. **활성 GPU 점유는 `sglang-gemma4-31b` 2/2** — 12b가 0이어도 다른 SGLang Deploy가 allocatable GPU를 Ready로 쓰면 Incident 아님(티어 교체·scale-0 allowlist 병행). [[wiki/Models/Optimization-and-Serving/SGLang-gemma4-llm-serving-cluster-ops.md]].
+- **재확인 (2026-09-06)**: `didim-gpu` Ready·Pressure=False·CrashLoop/ImagePull/Pending/Failed=0·Warning=0·PVC Bound + postgres live 4Gi/2Gi·restarts 0. allowlist: `llm-serving/sglang-gemma4-12b` + `runtime/pgbouncer-{ro,rw}` scale-0. Incident 없음.
+- **비관리 STS OOM → watch-only**: k8s-test 레포 밖 그래프 DB(예: `nebula/nebula-storaged`)가 limit 부족으로 OOMKilled 후 **Ready로 회복·사용량≪limit**이면 일일 Incident로 올리지 않고 watch만 한다. limit 상향은 **해당 워크로드 소유 레포/운영자** 축 — shared Postgres OOM과 같은 “limit vs 실제” 판별은 [[wiki/Engineering/Infrastructure-and-DevOps/Shared-Postgres-Cgroup-Limit-vs-Statement-Timeout.md]].
 - **티켓 불필요면 MCP 미사용**: 조치 가능 장애가 0이면 ticketing MCP discovery 실패를 점검 실패로 올리지 않는다. MCP는 티켓이 필요할 때만.
 - **점검 worktree ≠ git 정본**: 로컬 checkout이 feature 브랜치여도 **live 클러스터**가 점검 기준(SoR)이다. `git pull origin main`을 생략해도 되고, repo drift를 Incident로 올리지 않는다. 점검 시 kubectl mutate 없음.
 

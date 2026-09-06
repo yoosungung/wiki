@@ -1,8 +1,8 @@
 ---
 title: "프리오사 AI RNGD NPU 최적화 및 서빙 가이드 (2026)"
 tags: ["FuriosaAI", "RNGD", "Renegade", "NPU", "Inference", "vLLM", "HBM3"]
-last_updated: "2026-09-04"
-updated: "2026-09-04"
+last_updated: "2026-09-06"
+updated: "2026-09-06"
 related_raw: ["[[raw/2026-09-04-furiosa-sdk-2026-4-0-hierarchical-kv-specdec.md]]", "[[raw/2026-08-31-furiosa-sdk-v2026-3-0-fxb-bundle.md]]", "[[raw/2026-08-28-furiosa-rngd-scoring-dp-router.md]]", "[[raw/2026-08-27-furiosa-ai-npu-rngd-stork-2nm-broadcom.md]]", "[[2026-08-27-furiosa_rngd_tcp_fxb.md]]", "[[2026-08-20-furiosa-llm-2026.4.0b13.md]]", "[[2026-08-13-furiosa-llm-2026-4-0b11.md]]", "[[2026-06-16-Research-Synthesis-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-furiosa_rngd_npu_serving_optimization.md]]", "[[2026-06-28-furiosa_rngd_npu_llm_serving_optimization.md]]", "[[2026-06-30-furiosa_rngd_furiosa_llm.md]]", "[[2026-07-01-furiosa-rngd-npu-hbm3-inference.md]]", "[[2026-07-07-furiosa-rngd-prefix-aware-dp-router.md]]", "[[2026-07-11-furiosa_rngd_npu_tcp_prefix_aware_router.md]]", "[[2026-07-12-furiosa-sdk-dp-routing-scoring-weights.md]]", "[[2026-07-15-samsung-sds-furiosa-npuaas-launch.md]]", "[[2026-07-16-furiosa-npuaas-launch-day-broadcom-stork.md]]"]
 ---
 
@@ -164,6 +164,22 @@ fxb build Qwen/Qwen3-8B-FP8 qwen3-8b-fp8.fxb -O O3 -tp 8
 ```bash
 furiosa-llm serve <model> --experimental-kv-offload-host-memory-gb 64
 ```
+
+### Mooncake L3 (클러스터 RemoteKvStore)
+
+Furiosa-LLM은 Mooncake를 **번들하지 않는다**. L3 ON 시 `libmooncake_store.so`를 `dlopen`하고, 로드 실패 시 L2-only로 경고 후 계속한다. 공식 가이드: [Using Mooncake with Furiosa-LLM](https://developer.furiosa.ai/v2026.4.0/en/furiosa_llm/mooncake_deployment.html).
+
+```bash
+# 개념: Furiosa-LLM Pod env (TCP Mooncake; 값은 풀 크기에 맞게 조정)
+export L3_ENABLED=1
+export MOONCAKE_PROTOCOL=tcp
+export MOONCAKE_MASTER=<master-fqdn>:5005
+export L3_GLOBAL_SEGMENT_SIZE=6710886400   # Host DRAM 기여분
+export L3_LOCAL_BUFFER_SIZE=2147483648
+export LD_LIBRARY_PATH=/path/to/mooncake/lib:$LD_LIBRARY_PATH
+```
+
+프로덕션에서는 Master/Store를 전용 Deploy로 두고 Host DRAM·SSD를 풀에 기여한다. 단일 Pod 내장 Store는 개발·소규모만.
 
 ### Multimodal FCFS · 모델 커버리지
 

@@ -3,15 +3,16 @@ id: sglang-gemma4-llm-serving-cluster-ops
 title: "SGLang Gemma4 llm-serving 클러스터 운영 (12b/31b)"
 status: canonical
 owner: km
-updated: "2026-09-05"
-last_updated: "2026-09-05"
-review_after: "2026-12-05"
+updated: "2026-09-06"
+last_updated: "2026-09-06"
+review_after: "2026-12-06"
 sources:
   - ticket:426
   - ticket:42
   - ticket:1523
   - kubectl:llm-serving
   - schedule:ta-k8s-daily
+  - inbox/ta/2026-09-06-k8s-daily-report.md
   - inbox/ta/2026-09-05-k8s-daily-report.md
   - inbox/ta/2026-09-04-k8s-daily.md
   - inbox/candidate/2026-08-31-sglang-gemma4-31b-tier1-smoke.md
@@ -59,6 +60,7 @@ kubectl delete deployment sglang-gemma4-31b -n llm-serving
 - **재확인 (2026-08-22)**: 노드 Pressure=False·postgres live 4Gi/request 2Gi Ready — OOM/eviction 경로 없음. [[wiki/Engineering/Infrastructure-and-DevOps/K8s-Kubelet-Node-Pressure-Eviction.md]].
 - **재확인 (2026-09-04)**: `sglang-gemma4-12b` + `pgbouncer-{ro,rw}` intentional scale-0 · abnormal Pod/Warning=0 · postgres Ready → Incident 없음(서빙 ON 기준선과 병행 문서화).
 - **재확인 (2026-09-05)**: `sglang-gemma4-12b` scale-0 + **`sglang-gemma4-31b` 2/2 Ready**(노드 GPU 전량) + `pgbouncer-{ro,rw}` scale-0. 활성 티어가 31b이면 smoke·클라이언트 FQDN도 31b Service를 본다 — [[#Client env vs live model id drift]]. 12b empty endpoints는 allowlist.
+- **재확인 (2026-09-06)**: `sglang-gemma4-12b` + `pgbouncer-{ro,rw}` intentional scale-0 · abnormal Pod/Warning=0 · postgres Ready → Incident 없음(서빙 OFF 기준선; 활성 GPU Deploy 미관측 시 smoke 스킵).
 - **TEI health 포트 오탐**: ClusterIP health는 컨테이너/Service listen 포트(예: **:8080**)로 확인한다. 관례적 `:80` 타임아웃만으로 Down/Incident로 올리지 않는다.
 - **SGLang smoke 포트**: Service listen이 **:30000**이면 `/v1/models`·tiny completion을 그 포트로 친다. 관례적 `:8000` 타임아웃만으로 사고 취급하지 않는다(TEI `:80` vs `:8080`과 같은 축). 서빙 scale-0이면 smoke 스킵.
 

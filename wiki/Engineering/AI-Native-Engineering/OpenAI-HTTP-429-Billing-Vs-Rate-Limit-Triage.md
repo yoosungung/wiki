@@ -3,13 +3,17 @@ id: openai-http-429-billing-vs-rate-limit-triage
 title: "OpenAI HTTP 429: 빌링·쿼터 vs rate limit 트리아지"
 status: canonical
 owner: km
-updated: "2026-09-05"
-last_updated: "2026-09-05"
-review_after: "2026-12-05"
+updated: "2026-09-06"
+last_updated: "2026-09-06"
+review_after: "2026-12-06"
 sources:
   - https://developers.openai.com/api/docs/guides/error-codes
+  - https://help.openai.com/en/articles/5955604
   - inbox/pm/2026-09-04-candydate-pass-ab-openai-quota.md
+  - inbox/pm/2026-09-06-candydate-pass-ab-openai-credits.md
   - ticket:1655
+  - ticket:1686
+  - ticket:1717
 tags: ["Engineering", "AI-Native", "OpenAI", "Billing", "RateLimit", "Triage"]
 type: "wiki"
 ---
@@ -33,9 +37,10 @@ type: "wiki"
 ## 운영 규칙
 
 1. 스케줄/Pass 수집이 429로 실패하면 **본문 `error.code`를 로그·티켓에 남긴다**(HTTP만으로 rate-limit 취급 금지).
-2. `credit_balance_exhausted` / spend·usage limit → In Progress 재시도 루프 **금지**. `Waiting for Approval` + 인간(billing) assignee. 새 `@mention` 폭주 금지.
+2. `credit_balance_exhausted` / spend·usage limit → In Progress 재시도 루프 **금지**. `Waiting for Approval` + 인간(billing) assignee. 새 `@mention` 폭주 금지. 미배정 cron 실패를 **Blocked(FS 마커 없이)** 로 두지 않는다 — Approval lane이 정본.
 3. `rate_limit_exceeded` / `slow_down` → 백오프·동시성 축소 후 재실행. 직전 cron이 연속 성공이었으면 코드 회귀보다 **일시 한도**를 먼저 의한다.
 4. 해제 검증: 크레딧/한도 복구 후 다음 스케줄 성공 또는 수동 수집 1회.
+5. SDK가 `RateLimitError`로 감싸도 `type=insufficient_quota`만 보지 말고 **`code=credit_balance_exhausted`** 를 로그·티켓에 남긴다(연속 동일 코드 streak면 재시도·코드 회귀 가설 금지).
 
 ```python
 # 개념: SDK RateLimitError라도 body code로 분기

@@ -1,6 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-09-06 | INBOX_DRAIN | inbox/ | 9 | candidate pub/people/radar; GH-empty×3; OpenAI credits; roadmap M4; ta-k8s → K8s/SGLang·OpenAI-429; PubGate/GH/Roadmap sources; people EXCLUDE; git rm |
+| 2026-09-06 | RESEARCH | Web/wiki-first | 5 | LiteRT v0.16.x·RBLN OpenShift·Supermemory Dreaming·AV-SQL → ALREADY; Furiosa Mooncake L3 env 증분 |
+| 2026-09-06 | SYNTHESIZE | wiki/ | 7 | K8s Nebula OOM watch-only·scale-0 09-06; SGLang OFF 기준선; OpenAI 429 streak; Furiosa Mooncake L3; PubGate/GH/Roadmap sources |
+| 2026-09-06 | ALREADY_COVERED | wiki/ | 4 | LiteRT MTP/v0.16; vLLM-RBLN OpenShift; Supermemory Dynamic Dreaming; AV-SQL/Ossie |
+| 2026-09-06 | LINT | Root / wiki | ALL | INDEX META 2026-09-06; 데일리 생성; D-2(2026-09-04) 삭제 |
 | 2026-09-05 | INBOX_DRAIN | inbox/ | 8 | candidate pub/people; GH-empty×4; roadmap M4; ta-k8s → K8s/SGLang 31b 2/2·sources; PubGate/GH/Roadmap ALREADY·people EXCLUDE; git rm |
 | 2026-09-05 | RESEARCH | Web/wiki-first | 6 | LiteRT MTP#2498·RBLN OpenShift·Furiosa Hierarchical KV·Supermemory Dreaming·AV-SQL/Ossie → ALREADY_COVERED |
 | 2026-09-05 | SYNTHESIZE | wiki/ | 2 | K8s-Scale-Zero·SGLang: 12b scale-0 + 31b GPU 2/2 티어 교체 기준선 |
