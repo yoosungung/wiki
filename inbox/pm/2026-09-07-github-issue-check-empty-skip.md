@@ -1,10 +1,11 @@
 ---
 id: inbox-pm-2026-09-07-github-issue-check-empty-skip
 agent: pm
-ticket_id: pending
+ticket_id: 1768
 updated: 2026-09-07
 status: inbox
 sources:
+  - ticket:1768
   - schedule:github-issue-check
   - wiki/Engineering/AI-Native-Engineering/Github-Issue-Leantime-Intake-Empty-Skip.md
   - https://docs.github.com/en/rest/issues/issues
