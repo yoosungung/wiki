@@ -13,7 +13,8 @@ sources:
 
 # qa-bulk-weekly 2026-09-07
 
-- Sync evidence: sw-factory `87c623a`, nl2sql `3b70ad7`, candidate `bcfcc20`, codingland `03e1714` under `/tmp/tenant-repos/<repo_id>`.
-- Gate skip: no `bulk_api` on any client; sw-factory/candidate no `.factory/quality.yaml`; codingland has e2e/clean_code only (no opik).
-- nl2sql `opik.command` weekly (long_run): detach → check + gold-sql + agent hard all exit 0, pass_rate=1.0 on local008/local022; ticket #1753 Done; NF=0.
-- Ephemeral checkout needs `SPIDER2_TMP_DIR` / symlink to populated `.tmp-spider2` (wiki §4.3).
+- tenant-repo-sync 4/4: sw-factory `87c623a`, nl2sql `3b70ad7`, candidate `bcfcc20`, codingland `03e1714` (branch=`master` — remote HEAD; `main` ref 없음).
+- bulk_api: 전 클라이언트 skip (키 없음 또는 quality.yaml 부재). NF 미생성.
+- opik: nl2sql만 실행 (`long_run:true` detach). check→gold-sql→agent hard 전부 exit=0, pass_rate=1.0 (local008,local022). 실험명 `weekly-gold-sql-smoke` / `weekly-agent-smoke`.
+- codingland/sw-factory/candidate: opik·bulk_api skip (사유 기록). NF=0.
+- long-run: ARCHITECTURE §2.6 #10 — pid log `/tmp/qa-bulk-weekly-nl2sql-opik.log` + `nf-progress.json` phase=done; tracking #1753 Done.
