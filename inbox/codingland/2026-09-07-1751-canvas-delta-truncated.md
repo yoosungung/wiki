@@ -6,12 +6,11 @@ updated: 2026-09-07
 status: inbox
 sources:
   - ticket:1751
-  - ticket:1750
-  - https://github.com/yoosungung/codingland/pull/15
+  - wiki/Engineering/AI-Native-Engineering/Smell-Agglomeration-Module-Split.md
 ---
 
-# #1751 — applyWorkspaceDelta shares pushDelta cap/truncated
+# codingland #1751 — canvas delta truncated consistency
 
-- Smell: incremental ingest sliced upsert only while `fullSnapshot` stayed uncapped; no `truncated` flag.
-- Fix: `buildCanvasViewDelta` (zoom+`MAX_CANVAS_NODES`+`truncated`); `applyWorkspaceDelta` merges then `pushDelta`.
-- EH-free host Jest; soft-coord #1750 (RunnerTape split, same file, separate PR).
+- Smell: `applyWorkspaceDelta` sliced upsert-only without `truncated` while `pushDelta` capped + flagged — Canvas DOM vs uncapped `fullSnapshot` diverged.
+- Fix: extract EH-free `buildCanvasViewDelta` (zoom + `MAX_CANVAS_NODES` + `truncated`); both paths post via shared helper (`applyWorkspaceDelta` → merge then `pushDelta`).
+- Soft-coord: #1750 owns RunnerTape split; this PR is master-based and does not include that split.
