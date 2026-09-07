@@ -44,6 +44,7 @@ dotfile/숨김 필터·권한 게이트는 그대로 둔다. 리팩터로 helper
 
 ## 🔗 관련 문서
 
+- [[wiki/Engineering/AI-Native-Engineering/Existence-Gate-Corrupt-Vs-Absent.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Tenant-Quality-Yaml-Gate-Skip-Pattern.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Agent-SSE-Failfast-and-Tool-Flood-Guard.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Wiki-Synthesis-Policy.md]]

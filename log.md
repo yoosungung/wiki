@@ -1,6 +1,12 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-09-07 | INBOX_DRAIN | inbox/ | 30 | xvfb soft-skip·존재게이트·Smell/Kaniko/K8s; PubGate/GH/Roadmap/TQ sources; people·pm-checkpoint·merge EXCLUDE; git rm |
+| 2026-09-07 | RESEARCH | Web/wiki-first | 5 | LiteRT MTP·RBLN OpenShift·Furiosa Mooncake L3·Supermemory·AV-SQL → ALREADY |
+| 2026-09-07 | SYNTHESIZE | wiki/ | 9 | Existence-Gate 신규; Host-QA xvfb; Smell; Kaniko token; K8s 09-07; TQ/GH/Roadmap/PubGate/CI-align |
+| 2026-09-07 | ALREADY_COVERED | wiki/ | 5 | LiteRT MTP 2.2x; vLLM-RBLN OpenShift; Furiosa Mooncake L3; Supermemory; AV-SQL/Ossie |
+| 2026-09-07 | EXCLUDE_PROGRESS | inbox/ | 8 | people-ssot; pm-checkpoint×2; codingland merge/review/ci/intake closeout 진행 |
+| 2026-09-07 | LINT | Root / wiki | ALL | INDEX META 2026-09-07; Eng 188/AI-Native 76; 데일리; D-2(2026-09-05) 삭제 |
 | 2026-09-06 | INBOX_DRAIN | inbox/ | 9 | candidate pub/people/radar; GH-empty×3; OpenAI credits; roadmap M4; ta-k8s → K8s/SGLang·OpenAI-429; PubGate/GH/Roadmap sources; people EXCLUDE; git rm |
 | 2026-09-06 | RESEARCH | Web/wiki-first | 5 | LiteRT v0.16.x·RBLN OpenShift·Supermemory Dreaming·AV-SQL → ALREADY; Furiosa Mooncake L3 env 증분 |
 | 2026-09-06 | SYNTHESIZE | wiki/ | 7 | K8s Nebula OOM watch-only·scale-0 09-06; SGLang OFF 기준선; OpenAI 429 streak; Furiosa Mooncake L3; PubGate/GH/Roadmap sources |

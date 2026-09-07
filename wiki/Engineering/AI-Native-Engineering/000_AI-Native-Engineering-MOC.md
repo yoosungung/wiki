@@ -35,6 +35,7 @@
 - [[wiki/Engineering/AI-Native-Engineering/Devin-Enterprise-OpenClaw-Cursor3-Agent-Orchestration.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Devin-OpenHands-Plandex-Update-2026-04-09.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Epistemic-Debt-ChangeScore-Friction-Gate.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Existence-Gate-Corrupt-Vs-Absent.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Extension-Sanitizer-Cloud-Mirror-OptIn.md]]
 - [[wiki/Engineering/AI-Native-Engineering/FS-Blocked-By-Vs-Parent-Link.md]]
 - [[wiki/Engineering/AI-Native-Engineering/GHA-Workflow-PR-Only-Trigger.md]]

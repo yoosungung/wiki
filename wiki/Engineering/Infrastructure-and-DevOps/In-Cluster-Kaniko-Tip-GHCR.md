@@ -3,13 +3,16 @@ id: in-cluster-kaniko-tip-ghcr
 title: "In-cluster Kaniko tip → GHCR (vs Actions build-ghcr)"
 status: canonical
 owner: km
-updated: "2026-08-25"
-last_updated: "2026-08-25"
-review_after: "2026-11-19"
+updated: "2026-09-07"
+last_updated: "2026-09-07"
+review_after: "2026-12-07"
 sources:
   - ticket:551
   - ticket:552
   - ticket:1050
+  - ticket:1747
+  - inbox/ta/2026-09-07-nl2sql-kaniko-ghcr-secret.md
+  - inbox/ta/2026-09-07-nl2sql-tip-cd-no-environment-input.md
   - https://github.com/GoogleContainerTools/kaniko
 tags: ["Infrastructure", "DevOps", "Kaniko", "GHCR", "Kubernetes", "CD"]
 type: "wiki"
@@ -61,6 +64,10 @@ gh workflow run build-ghcr-images.yml \
 ## SHA ref 체크아웃
 
 스톡 스크립트가 `git clone --branch <ref>`이면 **커밋 SHA를 `--branch`에 넣으면 Init:Error**다. tip Job의 git-ref는 **브랜치명**(예: `main`)을 쓰고, 태그만 `test-<short_sha>`로 맞춘다. one-shot이 특정 커밋을 강제해야 하면 `git fetch origin <sha> && git checkout <sha>`. backend-only 델타면 MCP Kaniko Job을 생략하고 퍼블리시 바이너리 핀은 유지 — [[wiki/Engineering/Infrastructure-and-DevOps/Tip-Roll-Keep-Published-Binary.md]].
+
+## Stale `github-token` → git-clone 403
+
+Kaniko tip Job이 `Init:Error`이고 로그가 `Write access to repository not granted` / HTTP **403**이면, GHCR Packages 권한보다 먼저 **clone용 Contents**를 의심한다. Secret(예: `*-ghcr-build`)의 `github-token`이 만료되었거나 private repo Contents:Read를 잃으면 clone 단계에서 죽는다. SETUP 절차로 `github-token` + `ghcr.io` `config.json`을 재생성한 뒤 tip 스크립트를 재실행한다. Packages Write ACL과는 별 축 — [[wiki/Engineering/Infrastructure-and-DevOps/GHCR-Actions-Package-Write-ACL.md]].
 
 ## AA 스코프
 

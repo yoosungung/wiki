@@ -3,13 +3,14 @@ id: quality-yaml-clean-code-ci-align
 title: "quality.yaml clean_code = CI backend 3단 정합"
 status: canonical
 owner: km
-updated: "2026-08-04"
-last_updated: "2026-08-04"
-review_after: "2026-11-04"
+updated: "2026-09-07"
+last_updated: "2026-09-07"
+review_after: "2026-12-07"
 sources:
   - ticket:113
   - ticket:115
   - ticket:99
+  - ticket:1751
 tags: ["Engineering", "AI-Native", "Quality", "CI", "Ruff", "Mypy"]
 type: "wiki"
 ---
@@ -41,6 +42,10 @@ clean_code:
 | 언어별 sidecar (예: mcp cargo) | 주간 AA 스코프 밖 |
 
 키 자체가 없으면 skip — [[wiki/Engineering/AI-Native-Engineering/Tenant-Quality-Yaml-Gate-Skip-Pattern.md]]. stub `echo`를 examples에서 복사하지 않는다.
+
+## 머지 충돌 시 `ci` 스크립트 보존
+
+충돌 해소로 `package.json`의 `"ci": "npm test && …"` 같은 **게이트 포인터**가 빠지면 clean_code/AA가 깨진다. 리팩터 PR을 합칠 때 기존 `ci`/`test:vscode` 키를 한쪽 브랜치에서만 갖고 있으면 **양쪽을 유지**한 뒤 CI를 다시 돌린다.
 
 ## 🔗 관련 문서
 

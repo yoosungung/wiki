@@ -3,9 +3,9 @@ id: tenant-quality-yaml-gate-skip-pattern
 title: "테넌트 quality.yaml 게이트 키 누락 시 skip (NF 미생성)"
 status: canonical
 owner: km
-updated: "2026-08-31"
-last_updated: "2026-08-31"
-review_after: "2026-11-30"
+updated: "2026-09-07"
+last_updated: "2026-09-07"
+review_after: "2026-12-07"
 sources:
   - ticket:414
   - ticket:85
@@ -15,9 +15,16 @@ sources:
   - ticket:113
   - ticket:172
   - ticket:1511
+  - ticket:1747
+  - ticket:1753
   - schedule:aa-clean-weekly
   - schedule:qa-bulk-weekly
   - schedule:ta-load-weekly
+  - inbox/aa/2026-09-07-aa-clean-weekly.md
+  - inbox/aa/2026-09-07-nl2sql-security-command-absent.md
+  - inbox/qa/2026-09-07-qa-bulk-weekly.md
+  - inbox/qa/2026-09-07-nl2sql-1747-e2e-pass.md
+  - inbox/ta/2026-09-07-ta-load-weekly.md
   - inbox/aa/2026-08-31-1511-aa-security-pass-sglang-16k.md
   - inbox/ta/2026-08-31-ta-load-weekly.md
 tags: ["Engineering", "AI-Native", "Quality", "Factory", "NF", "Skip"]
@@ -45,7 +52,7 @@ type: "wiki"
 | bulk_api | `bulk_api` (endpoints/command) | skip + 사유, NF 없음 |
 | opik | `opik:` (project_name/dataset/command) | skip; fail/regression만 NF — Spider2 weekly는 [[wiki/Agents/Text-to-SQL/Spider2-Quality-Gate-nl2sql.md]] |
 | load | `load.command` (test env) | skip + 사유; **실패만** NF — chat SSE 하네스 [[wiki/Engineering/AI-Native-Engineering/In-Process-ASGI-Load-Harness-Pattern.md]] |
-| security | `security.command` | 키 없으면 mechanical skip; AA는 **tip↔merge 스킴**(auth/Host/secret/transport/router/admin surface delta만) + 관련 unit 증거로 대체 — 없는 SAST·보안 커맨드를 발명하지 않음. hardening/observability·데이터 최소화(예: search slim)·ClusterIP/`max_model_len`·모델명 CM만의 변경은 보통 **새 trust boundary 아님**. LLM 엔드포인트 자격은 Secret 유지, CM에는 모델·context 상한만 — [[wiki/Engineering/Infrastructure-and-DevOps/K8s-Secret-vs-ConfigMap-Deploy-Hardening.md]] |
+| security | `security.command` | 키 없으면 mechanical skip; AA는 **tip↔merge 스킴**(auth/Host/secret/transport/router/admin surface delta만) + 관련 unit 증거로 대체 — 없는 SAST·보안 커맨드를 발명하지 않음. 증거 문구에 `aa: security pass|fail` + “mechanical SAST skipped”를 명시. hardening/observability·데이터 최소화(예: search slim)·ClusterIP/`max_model_len`·모델명 CM만의 변경은 보통 **새 trust boundary 아님**. LLM 엔드포인트 자격은 Secret 유지, CM에는 모델·context 상한만 — [[wiki/Engineering/Infrastructure-and-DevOps/K8s-Secret-vs-ConfigMap-Deploy-Hardening.md]]. follow-up으로 실제 `security.command`(bandit/pip-audit 등)를 넣는 것은 IC 백로그이며 당일 게이트 blocker가 아님 |
 | e2e (참고) | `e2e:` | UI 스모크 축 — [[wiki/Engineering/AI-Native-Engineering/Playwright-Frontend-UI-Smoke-Pattern.md]] |
 
 ```yaml
