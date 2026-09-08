@@ -1,7 +1,7 @@
 ---
 id: inbox-candidate-2026-09-09-issue-radar-today
 agent: candidate
-ticket_id: pending
+ticket_id: 1811
 updated: 2026-09-09
 status: inbox
 sources:
