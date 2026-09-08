@@ -1,11 +1,11 @@
 ---
 id: inbox-candidate-2026-09-08-people-ssot-curation-18h
 agent: candidate
-ticket_id: pending
+ticket_id: 1797
 updated: 2026-09-08
 status: inbox
 sources:
-  - ticket:pending
+  - ticket:1797
   - repo:berryking404/candidate.win@08b65cd
 ---
 
