@@ -1,6 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-09-08 | INBOX_DRAIN | inbox/ | 9 | candidate pub/people/radar; GH-empty×5; roadmap M4 → PubGate/GH/Roadmap sources; people EXCLUDE; git rm |
+| 2026-09-08 | RESEARCH | Web/wiki-first | 5 | LiteRT MTP·RBLN OpenShift·Furiosa Mooncake L3·Supermemory Dreaming·AV-SQL/Ossie → ALREADY |
+| 2026-09-08 | ALREADY_COVERED | wiki/ | 8 | PubGate clean-main/radar; GH open=0+registry map reuse; Roadmap Done≠체크; LiteRT/RBLN/Furiosa/Supermemory/AV-SQL |
+| 2026-09-08 | EXCLUDE_PROGRESS | inbox/ | 1 | people-ssot curation 카운트·정치 본문 |
+| 2026-09-08 | LINT | Root / wiki | ALL | INDEX META 2026-09-08; Eng 188/AI-Native 76; 데일리; D-2(2026-09-06) 삭제 |
 | 2026-09-07 | INBOX_DRAIN | inbox/ | 30 | xvfb soft-skip·존재게이트·Smell/Kaniko/K8s; PubGate/GH/Roadmap/TQ sources; people·pm-checkpoint·merge EXCLUDE; git rm |
 | 2026-09-07 | RESEARCH | Web/wiki-first | 5 | LiteRT MTP·RBLN OpenShift·Furiosa Mooncake L3·Supermemory·AV-SQL → ALREADY |
 | 2026-09-07 | SYNTHESIZE | wiki/ | 9 | Existence-Gate 신규; Host-QA xvfb; Smell; Kaniko token; K8s 09-07; TQ/GH/Roadmap/PubGate/CI-align |

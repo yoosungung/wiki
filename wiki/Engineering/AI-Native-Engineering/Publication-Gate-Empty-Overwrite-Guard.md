@@ -3,9 +3,9 @@ id: publication-gate-empty-overwrite-guard
 title: "퍼블리시 게이트 + 빈 산출물 덮어쓰기 금지"
 status: canonical
 owner: km
-updated: "2026-09-07"
-last_updated: "2026-09-07"
-review_after: "2026-12-07"
+updated: "2026-09-08"
+last_updated: "2026-09-08"
+review_after: "2026-12-08"
 sources:
   - ticket:474
   - ticket:854
@@ -62,6 +62,12 @@ sources:
   - inbox/candidate/2026-09-07-issue-radar-today.md
   - ticket:1691
   - ticket:1722
+  - ticket:1797
+  - ticket:1799
+  - ticket:1811
+  - inbox/candidate/2026-09-08-people-ssot-curation-18h.md
+  - inbox/candidate/2026-09-09-publication-safety.md
+  - inbox/candidate/2026-09-09-issue-radar-today.md
   - skill:political-wiki-administration
   - agent/publication_gate.py
 
