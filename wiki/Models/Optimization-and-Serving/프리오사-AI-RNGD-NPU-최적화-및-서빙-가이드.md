@@ -1,9 +1,9 @@
 ---
 title: "프리오사 AI RNGD NPU 최적화 및 서빙 가이드 (2026)"
 tags: ["FuriosaAI", "RNGD", "Renegade", "NPU", "Inference", "vLLM", "HBM3"]
-last_updated: "2026-09-06"
-updated: "2026-09-06"
-related_raw: ["[[raw/2026-09-04-furiosa-sdk-2026-4-0-hierarchical-kv-specdec.md]]", "[[raw/2026-08-31-furiosa-sdk-v2026-3-0-fxb-bundle.md]]", "[[raw/2026-08-28-furiosa-rngd-scoring-dp-router.md]]", "[[raw/2026-08-27-furiosa-ai-npu-rngd-stork-2nm-broadcom.md]]", "[[2026-08-27-furiosa_rngd_tcp_fxb.md]]", "[[2026-08-20-furiosa-llm-2026.4.0b13.md]]", "[[2026-08-13-furiosa-llm-2026-4-0b11.md]]", "[[2026-06-16-Research-Synthesis-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-furiosa_rngd_npu_serving_optimization.md]]", "[[2026-06-28-furiosa_rngd_npu_llm_serving_optimization.md]]", "[[2026-06-30-furiosa_rngd_furiosa_llm.md]]", "[[2026-07-01-furiosa-rngd-npu-hbm3-inference.md]]", "[[2026-07-07-furiosa-rngd-prefix-aware-dp-router.md]]", "[[2026-07-11-furiosa_rngd_npu_tcp_prefix_aware_router.md]]", "[[2026-07-12-furiosa-sdk-dp-routing-scoring-weights.md]]", "[[2026-07-15-samsung-sds-furiosa-npuaas-launch.md]]", "[[2026-07-16-furiosa-npuaas-launch-day-broadcom-stork.md]]"]
+last_updated: "2026-09-09"
+updated: "2026-09-09"
+related_raw: ["[[raw/2026-09-09-furiosa-llm-llm-d-intelligent-inference-scheduling.md]]", "[[raw/2026-09-04-furiosa-sdk-2026-4-0-hierarchical-kv-specdec.md]]", "[[raw/2026-08-31-furiosa-sdk-v2026-3-0-fxb-bundle.md]]", "[[raw/2026-08-28-furiosa-rngd-scoring-dp-router.md]]", "[[raw/2026-08-27-furiosa-ai-npu-rngd-stork-2nm-broadcom.md]]", "[[2026-08-27-furiosa_rngd_tcp_fxb.md]]", "[[2026-08-20-furiosa-llm-2026.4.0b13.md]]", "[[2026-08-13-furiosa-llm-2026-4-0b11.md]]", "[[2026-06-16-Research-Synthesis-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-furiosa_rngd_npu_serving_optimization.md]]", "[[2026-06-28-furiosa_rngd_npu_llm_serving_optimization.md]]", "[[2026-06-30-furiosa_rngd_furiosa_llm.md]]", "[[2026-07-01-furiosa-rngd-npu-hbm3-inference.md]]", "[[2026-07-07-furiosa-rngd-prefix-aware-dp-router.md]]", "[[2026-07-11-furiosa_rngd_npu_tcp_prefix_aware_router.md]]", "[[2026-07-12-furiosa-sdk-dp-routing-scoring-weights.md]]", "[[2026-07-15-samsung-sds-furiosa-npuaas-launch.md]]", "[[2026-07-16-furiosa-npuaas-launch-day-broadcom-stork.md]]"]
 ---
 
 # 🚀 프리오사 AI RNGD NPU 최적화 및 서빙 가이드 (2026)
@@ -200,6 +200,68 @@ furiosa-llm serve <target-model> \
 ### Sampling 가속
 
 top-k/top-p Qrita-inspired pruning: 샘플링 자체 2.7–13.2×; ShareGPT(`top_k=50`,`top_p=0.9`) 출력 처리량 +6.9–16.9%, mean TPOT −6.5–15.4% (gpt-oss-20b / EXAONE 4.0).
+
+## 9. llm-d Intelligent Inference Scheduling (합성 2026-09-09)
+
+공식 가이드: [Deploying Furiosa-LLM with llm-d](https://developer.furiosa.ai/v2026.4.0/en/cloud_native_toolkit/llm_d.html) (문서 핀 `2026.4.0b15`).
+
+**llm-d**는 K8s 네이티브 분산 추론 프레임워크다. Furiosa-LLM과의 현재 지원 축은 **Intelligent Inference Scheduling**(메트릭 기반 라우팅)뿐이다.
+
+| 지원 | 미지원(현재) |
+| :--- | :--- |
+| MSP 메트릭 보고 → Intelligent Inference Scheduling | Precise Prefix-Cache-Aware Scoring (KV Cache events 미구현) |
+| | Prefill/Decode Disaggregation |
+| | Wide Expert-Parallelism |
+
+### MSP ↔ Furiosa-LLM 메트릭 매핑
+
+| MSP | Furiosa-LLM |
+| :--- | :--- |
+| TotalQueuedRequests | `furiosa_llm_num_requests_waiting` |
+| TotalRunningRequests | `furiosa_llm_num_requests_running` |
+| KVCacheUtilization | `furiosa_llm_kv_cache_usage_percent` |
+| BlockSize | `furiosa_llm_cache_config_info` · label `block_size` |
+| NumGPUBlocks | `furiosa_llm_cache_config_info` · label `num_gpu_blocks` |
+
+### 배포 스케치 (Well-lit Path)
+
+전제: RNGD ≥2장, HF 토큰, dynamic PVC, Gateway API + GIE CRD, GIE 호환 게이트웨이(예: Istio). Helm 차트는 Furiosa fork(`furiosa/llm-d-modelservice`).
+
+```bash
+helm repo add furiosa https://furiosa-ai.github.io/helm-charts && helm repo update
+kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/download/v1.4.1/standard-install.yaml
+kubectl apply -f https://github.com/kubernetes-sigs/gateway-api-inference-extension/releases/download/v1.3.0/manifests.yaml
+```
+
+Inference Scheduler에 Furiosa 메트릭 플래그를 배선한 뒤 modelservice를 올린다.
+
+```yaml
+# 개념: inferenceExtension.flags
+cache-info-metric: "furiosa_llm_cache_config_info"
+kv-cache-usage-percentage-metric: "furiosa_llm_kv_cache_usage_percent"
+total-queued-requests-metric: "furiosa_llm_num_requests_waiting"
+total-running-requests-metric: "furiosa_llm_num_requests_running"
+```
+
+```yaml
+# 개념: decode 워커 (prefix caching ON)
+accelerator:
+  type: "furiosa"
+decode:
+  parallelism: { tensor: 8 }
+  replicas: 2
+  containers:
+    - name: furiosa-llm
+      image: furiosaai/furiosa-llm:latest
+      modelCommand: furiosaLLMServe
+      args: ["--enable-prefix-caching", "--disable-uvicorn-access-log"]
+```
+
+```bash
+helm install ms furiosa/llm-d-modelservice -n llm-d -f llm-d-modelservice.yaml
+```
+
+HTTPRoute는 InferencePool(`gaie`, port 8000)을 백엔드로 두고 llm-d-infra 게이트웨이로 노출한다. Mooncake L3(§8)와 병행 가능하나, **P/D disagg·precise prefix-cache scoring은 llm-d 경로에서도 아직 비활성**이므로 라우팅은 대기/실행 큐·KV 사용률 메트릭에 의존한다.
 
 ---
 **관련 문서**:

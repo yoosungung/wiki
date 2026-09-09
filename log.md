@@ -1,6 +1,14 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-09-09 | INBOX_DRAIN | inbox/ | 7 | GH-empty×3→GH sources; pub/radar→PubGate sources; roadmap M4→Roadmap sources; people EXCLUDE; git rm |
+| 2026-09-09 | RESEARCH | Web/wiki-first | 6 | Furiosa llm-d IIS 신규; LiteRT MTP·RBLN OpenShift·Supermemory Dreaming·AV-SQL/Ossie → ALREADY |
+| 2026-09-09 | INGEST | raw/ | 1 | 2026-09-09-furiosa-llm-llm-d-intelligent-inference-scheduling |
+| 2026-09-09 | SYNTHESIZE | wiki/ | 4 | Furiosa llm-d §9; GH-empty/PubGate/Roadmap sources·dates |
+| 2026-09-09 | ALREADY_COVERED | wiki/ | 4 | LiteRT MTP 2.2–3x/#2498; vLLM-RBLN OpenShift; Supermemory Dreaming/MemoryBench; AV-SQL/Ossie |
+| 2026-09-09 | EXCLUDE_PROGRESS | inbox/ | 1 | people-ssot curation 카운트·정치 본문 |
+| 2026-09-09 | CLEANUP | raw/ & inbox/ | 8 | 합성 raw 1건 삭제; inbox 7건 git rm |
+| 2026-09-09 | LINT | Root / wiki | ALL | INDEX META 2026-09-09 (Agents 267, Models 257, Eng 188); 데일리 append; 연구_주제 갱신 |
 | 2026-09-09 | INBOX_DRAIN | inbox/ | 1 | ta-k8s-daily-health → K8s scale-0/SGLang 31b ops sources 반영 후 git rm |
 | 2026-09-09 | RESEARCH | Web/Raw | 6 | LatentMoE/Stable K3·Declarative Attention·Gemini Agentic Video·Swarm ExploitGym·SuperSonic·MiniMind |
 | 2026-09-09 | SYNTHESIZE | wiki/ | 14 | LatentMoE 신규·Kimi K3; Declarative Attention 신규; Gemini Video/Omni Flash 신규·서멀 신규·온디바이스 갱신; Swarm 신규·자율수행 MAS 갱신; SuperSonic 신규·시맨틱 갱신; MiniMind 신규·Study-Resources 갱신; K8s scale-0·SGLang ops |
