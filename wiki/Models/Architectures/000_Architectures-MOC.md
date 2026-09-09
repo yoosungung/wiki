@@ -16,6 +16,7 @@
 - [[wiki/Models/Architectures/GLM-5-2-Architecture-and-IndexShare.md]]
 - [[wiki/Models/Architectures/Inkling-975B-MoE-Model.md]]
 - [[wiki/Models/Architectures/Kimi-K3-Sparse-MoE-Model.md]]
+- [[wiki/Models/Architectures/LatentMoE-and-Stable-LatentMoE-Architecture.md]]
 - [[wiki/Models/Architectures/LLM 아키텍처 비교.md]]
 - [[wiki/Models/Architectures/LeWorldModel-JEPA.md]]
 - [[wiki/Models/Architectures/Lottery Ticket Hypothesis와 LLM.md]]

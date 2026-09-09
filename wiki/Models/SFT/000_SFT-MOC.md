@@ -30,6 +30,7 @@
 - [[wiki/Models/SFT/LoRA.md]]
 - [[wiki/Models/SFT/Logging Steps.md]]
 - [[wiki/Models/SFT/Maximum Gradient Norm.md]]
+- [[wiki/Models/SFT/MiniMind-From-Scratch-LLM-Training-Pipeline.md]]
 - [[wiki/Models/SFT/NEFTune Alpha.md]]
 - [[wiki/Models/SFT/OpenAI o1 추론 스케일링 및 2026년 최신 동향.md]]
 - [[wiki/Models/SFT/Optimizer.md]]

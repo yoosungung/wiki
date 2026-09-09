@@ -1,9 +1,9 @@
 ---
 title: 무료 머신러닝, 딥러닝 및 강화학습 추천 교재 가이드
-last_updated: "2026-09-04"
-updated: "2026-09-04"
-related_raw: ["[[2026-07-27-free_ai_ml_dl_textbooks.md]]", "[[2026-09-04-cambridge-free-machine-learning-textbooks.md]]"]
-tags: [Machine-Learning, Deep-Learning, Textbook, Study-Resources, Cambridge]
+last_updated: "2026-09-09"
+updated: "2026-09-09"
+related_raw: ["[[2026-07-27-free_ai_ml_dl_textbooks.md]]", "[[2026-09-04-cambridge-free-machine-learning-textbooks.md]]", "[[raw/오늘은 LLM 진입장벽을 학습 교재 수준으로 낮춰버린 #GitHub 랭킹 1위🥇 프로젝트를 하ㄴ.md]]"]
+tags: [Machine-Learning, Deep-Learning, Textbook, Study-Resources, Cambridge, MiniMind]
 ---
 
 # 무료 머신러닝, 딥러닝 및 강화학습 추천 교재 가이드
@@ -72,8 +72,16 @@ tags: [Machine-Learning, Deep-Learning, Textbook, Study-Resources, Cambridge]
 10. **Advanced Data Analysis (고급 데이터 분석)**
     - **핵심 주제**: 고차원 회귀 분석, 모델 선택(Model Selection), 비모수 통계 및 인과 추론.
 
+## 5. 실습형 From-Scratch LLM 엔지니어링 실습
+
+*   **MiniMind: 단일 GPU 풀스택 경량 LLM 학습 및 강화학습 파이프라인**
+    - **상세 분석**: [[wiki/Models/SFT/MiniMind-From-Scratch-LLM-Training-Pipeline.md]]
+    - **핵심 특징**: 단일 RTX 3090(24GB) 1장으로 약 2시간($3) 만에 64M Dense 및 198M-A64M MoE 모델을 스크래치부터 완주. 토크나이저 -> 사전학습(32K RoPE) -> SFT -> LoRA -> DPO -> PPO -> GRPO -> CISPO 및 vLLM/Ollama 서빙까지 전 과정 코드 제공.
+    - **GitHub**: `jingyaogong/minimind`
+
 ---
 ## 🔗 관련 문서 링크
+- 단일 GPU LLM 풀스택 파이프라인: [[wiki/Models/SFT/MiniMind-From-Scratch-LLM-Training-Pipeline.md]]
 - 소형 모델 파인튜닝 실무 학습: [[wiki/Models/Small-Models/HuggingFace-Smol-Course.md]]
 - 에이전트 강화학습 프레임워크: [[wiki/Models/RL/OpenPipe-ART-Agent-Reinforcement-Trainer.md]]
 - 모델 사전학습 스케일링 법칙: [[wiki/Models/Optimization/Skaling-Law-Meta-FAIR-Pretraining-Scaling.md]]

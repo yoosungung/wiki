@@ -4,14 +4,14 @@ related_raw: ["[[2026-07-24-kimi-k3-mixture-of-experts.md]]", "[[raw/2026-07-28-
 tags: ["Models", "Architectures", "MoE", "Kimi", "Moonshot-AI", "Long-Context"]
 type: "wiki"
 status: "published"
-last_updated: "2026-07-31"
-updated: "2026-07-31"
+last_updated: "2026-09-09"
+updated: "2026-09-09"
 ---
 
 # Kimi K3: 2.8조 파라미터 희소 혼합 전문가(Sparse MoE) 모델 아키텍처
 
 ## 1. 개요
-**Kimi K3**는 중국의 AI 스타트업인 Moonshot AI가 2026년 7월에 발표한 초대형 플래그십 인공지능 모델입니다. 총 **2.8조 파라미터(2.8 Trillion Parameters)** 규모의 거대한 스파스 혼합 전문가(Sparse Mixture-of-Experts, MoE) 구조로 이루어져 있으며, 연산 효율성을 극대화하기 위해 선형 어텐션(Linear Attention)과 전통적 어텐션 기법의 하이브리드 혁신을 이루어 냈습니다.
+**Kimi K3**는 중국의 AI 스타트업인 Moonshot AI가 2026년 7월에 발표한 초대형 플래그십 인공지능 모델입니다. 총 **2.8조 파라미터(2.8 Trillion Parameters, 활성 파라미터 1,040억/A104B)** 규모의 거대한 스파스 혼합 전문가(Sparse Mixture-of-Experts, MoE) 구조로 이루어져 있으며, 연산 효율성을 극대화하기 위해 선형 어텐션(Linear Attention)과 전통적 어텐션 기법의 하이브리드 혁신, 그리고 **Stable LatentMoE** 아키텍처를 도입하였습니다.
 
 ## 2. 핵심 아키텍처 혁신
 
@@ -28,6 +28,16 @@ updated: "2026-07-31"
 ### 2) 100만 토큰 (1M Context Window) 컨텍스트 지원
 Kimi K3는 Delta Attention 스택 덕분에 모델 구동 시 그래픽 메모리(VRAM) 병목을 회피하여 **최대 1,000,000 토큰(1M tokens)**의 입력 범위를 온전히 지원합니다. 이는 책 여러 권 분량의 자료나 전체 코드베이스 프로젝트 리포지토리를 한 번에 주입하여 즉각적인 다중 파일 검색 및 추론을 가능하게 합니다.
 
+### 3) Stable LatentMoE (896개 전문가 및 극한 희소성 안정화)
+상세 분석: [[wiki/Models/Architectures/LatentMoE-and-Stable-LatentMoE-Architecture.md]]
+- **전문가 구성**: 총 **896개 전문가**를 배치하고, 토큰당 **16개 라우팅 전문가와 2개 공유 전문가**를 동시 활성화.
+- **잠재 공간 선형 압축 (2x Latent Factor)**: 입력 토큰을 2배 압축된 잠재 공간으로 투영하여 통신량 및 메모리 적재 부담을 절반으로 절감한 뒤 FFN 연산 수행.
+- **3대 훈련 및 추론 안정화 장치**:
+  1. **SiTU-GLU (Sigmoid-Tanh Unit GLU)**: SwiGLU의 연산 폭발(Overflow)을 방지하기 위해 Gate에 $4 \times \tanh$, Up-proj에 $25 \times \tanh$를 적용하여 활성화 값을 $[-100, 100]$ 범위로 소프트 캡핑.
+  2. **RMSNorm 단계**: Top-16 전문가의 연산 합산 직후, 원래 차원 복원 전에 RMSNorm을 적용하여 합산 벡터 스케일을 1 근처로 안정화.
+  3. **Quantile Balancing**: 896개 전문가마다 1,000개 구간(Bin) 히스토그램 행렬($H$)로 점수 분포를 실시간 집계하고 선형 보간하여 라우팅 바이어스를 동적 계산(기존 고정 스텝의 진동 문제 해소).
+- **스케일링 효율**: Stable LatentMoE와 KDA, AttnRes의 결합으로 이전 세대 Kimi K2 대비 스케일링 효율을 **2.5배** 향상.
+
 ## 3. 타깃 에이전트 성능 최적화
 Moonshot AI는 Kimi K3를 단순 질의응답을 넘어 **장기 계획(Long-horizon Planning)과 코드베이스 자율 탐색(Repository Navigation)에 특화**되도록 사후 포스트 트레이닝(Post-training)을 진행했습니다.
 - **도구 호출 및 오케스트레이션:** 복잡한 개발 시나리오에서 수십 단계의 API 호출 및 파일 읽기/쓰기를 오류 없이 자율적으로 수행하는 멀티 에이전트 시스템(MAS)의 조율자(Orchestrator) 모델로 활용하기에 이상적입니다.
@@ -37,6 +47,7 @@ Moonshot AI는 Kimi K3를 단순 질의응답을 넘어 **장기 계획(Long-hor
 - **양자화 배포**: 허깅페이스(Hugging Face)를 통해 배포된 4-bit (INT4) 및 8-bit (FP8) 양자화 가중치를 활용하여 단일 또는 듀얼 GPU 워크스테이션 환경에서도 100만 토큰 컨텍스트를 안정적으로 로드하여 가동할 수 있습니다.
 
 ## 관련 문서
+- [[wiki/Models/Architectures/LatentMoE-and-Stable-LatentMoE-Architecture.md|LatentMoE 및 Stable LatentMoE 아키텍처]]
 - [[wiki/Models/Architectures/000_Architectures-MOC.md|모델 아키텍처 MOC]]
 - [[wiki/Models/Reasoning-and-Cognition/000_Reasoning-and-Cognition-MOC.md|추론 및 인지 아키텍처 MOC]]
 - [[wiki/Agents/Coding-and-Engineering/000_Coding-and-Engineering-MOC.md|에이전틱 코딩 및 엔지니어링 MOC]]

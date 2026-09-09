@@ -3,8 +3,8 @@ title: "Agentic Semantic Layer: AI 에이전트를 위한 지능형 데이터 �
 tags: ["Architecture", "Semantic-Layer", "T2SQL", "Agentic-AI"]
 type: "wiki"
 status: "published"
-last_updated: "2026-07-24"
-updated: "2026-07-24"
+last_updated: "2026-09-09"
+updated: "2026-09-09"
 related_raw: ["[[raw/2026-07-24-apache-ossie-schema-ontology-flatten.md]]", "[[raw/2026-07-14-AV-SQL-논문-및-구현.md]]", "[[raw/2026-07-14-Apache-Ossie-명세.md]]"]
 ---
 
@@ -58,7 +58,6 @@ Anthropic이 발표하고 Google, Microsoft, OpenAI가 참여하는 **MCP**가 A
 
 ## 🤝 교차 도메인 컨텍스트 공유 메커니즘
 에이전트가 여러 도메인(예: 마케팅, 재무, 인프라)의 데이터를 통합 분석하기 위해 시맨틱 레이어가 제공하는 핵심 기능입니다.
-
 1. **온톨로지 기반 관계 및 ID 레이어:** 서로 다른 시스템(CRM, ERP 등)의 식별자를 매핑하고, 엔티티 간의 관계(예: '고객'은 '주문'을 가진다)를 기계가 읽을 수 있는 형태로 정의합니다.
 2. **메타데이터 강화:** 데이터의 생성 배경, 비즈니스 규칙, 사용 시 주의사항 등 풍부한 컨텍스트를 포함하여 에이전트의 판단을 돕습니다.
 3. **연합 시맨틱 레이어 (Federated Semantic Layer):** 데이터가 여러 클라우드나 DB에 분산되어 있어도, 에이전트에게는 하나의 통합된 시맨틱 인터페이스로 보이게 합니다.
@@ -67,7 +66,7 @@ Anthropic이 발표하고 Google, Microsoft, OpenAI가 참여하는 **MCP**가 A
 
 ### 1. 결정론적 생성 (Deterministic Generation)
 - **Probabilistic vs. Deterministic**: LLM이 확률적으로 SQL을 직접 생성하는 대신, 사전에 정의된 메트릭과 차원을 선택하게 합니다.
-- **검증된 쿼리 엔진**: 시맨틱 엔진(dbt MetricFlow, Cube, ThoughtSpot 등)이 최적화된 SQL을 직접 생성하여 조인 오류나 집계 실수를 원천 차단함으로써 **정확도를 100% 가깝게** 유지합니다.
+- **검증된 쿼리 엔진**: 시맨틱 엔진(dbt MetricFlow, Cube, ThoughtSpot, SuperSonic 등)이 최적화된 SQL을 직접 생성하여 조인 오류나 집계 실수를 원천 차단함으로써 **정확도를 100% 가깝게** 유지합니다.
 
 ### 2. 비즈니스 컨텍스트 주입 및 캡슐화
 - **Context Gap 해소**: 기업 고유의 비즈니스 로직(예: '활성 사용자'의 기준, 회계 연도 설정 등)을 AI가 이해할 수 있도록 가이드합니다.
@@ -96,14 +95,16 @@ Anthropic이 발표하고 Google, Microsoft, OpenAI가 참여하는 **MCP**가 A
 - **구조**: `domains/`, `entities/`, `metrics/`, `rules/` 등의 디렉토리로 구성됩니다.
 
 ## 🚀 주요 기술 및 도구
+- **SuperSonic**: 텐센트뮤직의 오픈소스 ChatBI + 시맨틱 레이어 일체형 엔진. 지표/차원 거버넌스 기반 환각 차단. ([[wiki/Agents/Text-to-SQL/SuperSonic-Semantic-Layer-ChatBI-Architecture.md]])
 - **ThoughtSpot Spotter Semantics**: 업계 최초의 상용 에이전틱 시맨틱 레이어.
 - **dbt MetricFlow**: 코드 기반의 메트릭 정의 및 의미론적 쿼리 엔진.
 - **Snowflake Cortex Analyst**: Snowflake 에코시스템 내 지능형 시맨틱 인터페이스.
 - **MCP (Model Context Protocol)**: 시맨틱 레이어와 다양한 AI 에이전트를 연결하는 표준 프로토콜.
 
 ## 🔗 관련 문서
-- [[wiki/Agents/Text-to-SQL/ThoughtSpot-Spotter-Semantics]]
-- [[wiki/Agents/Text-to-SQL/T2SQL-Benchmarks-2026]]
-- [[wiki/Agents/Text-to-SQL/Metadata-RAG]]
-- [[wiki/Agents/Text-to-SQL/Semantic-Layer-DeepAgent-Filesystem]]
-- [[wiki/Engineering/Data-and-Security/OSI-Open-Semantic-Interchange.md]]
+- [[wiki/Agents/Text-to-SQL/SuperSonic-Semantic-Layer-ChatBI-Architecture.md|SuperSonic 시맨틱 레이어 ChatBI 아키텍처]]
+- [[wiki/Agents/Text-to-SQL/ThoughtSpot-Spotter-Semantics.md|ThoughtSpot Spotter Semantics]]
+- [[wiki/Agents/Text-to-SQL/T2SQL-Benchmarks-2026.md|T2SQL 벤치마크 2026]]
+- [[wiki/Agents/Text-to-SQL/Metadata-RAG.md|Metadata RAG]]
+- [[wiki/Agents/Text-to-SQL/Semantic-Layer-DeepAgent-Filesystem.md|Semantic Layer DeepAgent Filesystem]]
+- [[wiki/Engineering/Data-and-Security/OSI-Open-Semantic-Interchange.md|OSI Open Semantic Interchange]]

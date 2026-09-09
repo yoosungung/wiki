@@ -1,6 +1,12 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-09-09 | INBOX_DRAIN | inbox/ | 1 | ta-k8s-daily-health → K8s scale-0/SGLang 31b ops sources 반영 후 git rm |
+| 2026-09-09 | RESEARCH | Web/Raw | 6 | LatentMoE/Stable K3·Declarative Attention·Gemini Agentic Video·Swarm ExploitGym·SuperSonic·MiniMind |
+| 2026-09-09 | SYNTHESIZE | wiki/ | 14 | LatentMoE 신규·Kimi K3; Declarative Attention 신규; Gemini Video/Omni Flash 신규·서멀 신규·온디바이스 갱신; Swarm 신규·자율수행 MAS 갱신; SuperSonic 신규·시맨틱 갱신; MiniMind 신규·Study-Resources 갱신; K8s scale-0·SGLang ops |
+| 2026-09-09 | ALREADY_COVERED | wiki/ | 5 | LiteRT MTP 2.2x; vLLM-RBLN OpenShift; Furiosa RNGD/Mooncake L3; Supermemory MCP 4.0; AV-SQL/Ossie |
+| 2026-09-09 | CLEANUP | raw/ & root | 7 | 합성 완료 raw 6건 삭제; D-2(2026-09-07.md) 삭제 |
+| 2026-09-09 | LINT | Root / wiki | ALL | INDEX META 2026-09-09 (Agents 267, Models 257, Eng 188); 2026-09-09 데일리 생성; 연구_주제 갱신 |
 | 2026-09-08 | INBOX_DRAIN | inbox/ | 9 | candidate pub/people/radar; GH-empty×5; roadmap M4 → PubGate/GH/Roadmap sources; people EXCLUDE; git rm |
 | 2026-09-08 | RESEARCH | Web/wiki-first | 5 | LiteRT MTP·RBLN OpenShift·Furiosa Mooncake L3·Supermemory Dreaming·AV-SQL/Ossie → ALREADY |
 | 2026-09-08 | ALREADY_COVERED | wiki/ | 8 | PubGate clean-main/radar; GH open=0+registry map reuse; Roadmap Done≠체크; LiteRT/RBLN/Furiosa/Supermemory/AV-SQL |

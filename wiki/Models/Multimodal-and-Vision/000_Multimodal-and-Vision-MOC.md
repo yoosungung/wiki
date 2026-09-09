@@ -4,6 +4,7 @@
 - [[wiki/Models/Multimodal-and-Vision/ByteDance Dolphin - Multimodal AI Model.md]]
 - [[wiki/Models/Multimodal-and-Vision/DeepSeek-OCR.md]]
 - [[wiki/Models/Multimodal-and-Vision/Fuyu-8B.md]]
+- [[wiki/Models/Multimodal-and-Vision/Gemini-Agentic-Video-and-Omni-Flash-API.md]]
 - [[wiki/Models/Multimodal-and-Vision/Generative-UI.md]]
 - [[wiki/Models/Multimodal-and-Vision/JiT-Just-image-Transformers.md]]
 - [[wiki/Models/Multimodal-and-Vision/OneThinker.md]]

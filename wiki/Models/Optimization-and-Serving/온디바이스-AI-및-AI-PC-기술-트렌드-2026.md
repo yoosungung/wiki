@@ -3,8 +3,8 @@ title: "온디바이스 AI 및 AI PC 기술 트렌드 (2026)"
 tags: ["On-Device", "AI-PC", "NPU", "Lunar-Lake", "Strix-Point", "Copilot+", "Agentic-AI"]
 type: "wiki"
 status: "published"
-last_updated: "2026-09-05"
-updated: "2026-09-05"
+last_updated: "2026-09-09"
+updated: "2026-09-09"
 related_raw: ["[[raw/2026-09-05-openvino-panther-lake-npu5-device-lost.md]]", "[[raw/2026-08-30-on-device-ai-pc-spark-gorgon-panther.md]]", "[[raw/2026-08-28-on-device-ai-trends-rtx-spark-strix-halo-panther-lake.md]]", "[[2026-08-27-on_device_ai_trends_2026_uma.md]]", "[[2026-08-23-panther-lake-npu5-realworld-llm-benchmarks.md]]", "[[2026-06-15-On-Device-AI-PC-Trends-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-on_device_ai_pc_agentic_trends.md]]", "[[2026-06-28-on_device_ai_trends_and_agentic_ai_2026.md]]", "[[2026-06-30-on_device_ai_trends_intel_amd_nvidia.md]]", "[[2026-07-01-on-device-ai-pc-hardware-trends.md]]", "[[2026-07-07-on-device-ai-trends-2026-ryzen-ai-max-panther-lake-rtx-spark.md]]", "[[2026-07-11-on_device_ai_pc_trends_strix_halo_panther_lake_rtx_spark.md]]", "[[2026-07-12-on-device-ai-pc-ryzen-ai-halo-npu-reality.md]]", "[[2026-07-13-ryzen-ai-halo-developer-center-bkc.md]]", "[[2026-07-17-ryzen-ai-halo-phoronix-shipping.md]]"]
 ---
 
@@ -38,6 +38,7 @@ Microsoft의 Copilot+ 업데이트는 AI 성능의 가시화와 범용성에 초
   - **Burst/Complex 태스크 (iGPU/GPU/Cloud)**: 복잡한 이미지 생성 및 문서 종합 추론.
 - **Local Agentic AI**: OpenClaw 등 MAS 프레임워크가 AI PC의 NPU를 직접 활용하여 이메일 관리, 코드 작성, 시스템 설정을 자율적으로 수행합니다.
 - **통합 메모리(Unified Memory)의 중요성**: 2026년에는 NPU TOPS 수치보다 **대용량 통합 메모리(128GB~192GB)** 확보가 "Frontier" 급 모델을 로컬에서 구동하기 위한 핵심 지표로 부상했습니다. **Strix Halo**가 이 시장을 주도하고 있습니다.
+- **통합 메모리 Mac Studio 가치**: Mac Studio의 256GB UMA 환경은 Qwen-3.8 Flash Next(125B total / 6B active MoE)와 같은 프론티어급 에이전트 모델을 단일 기기에서 팀 전체 공유 인프라로 구동할 수 있는 독보적 선택지로 자리매김했습니다.
 
 ## 4. Ryzen AI Halo 출하 및 NPU vs iGPU 현실 (2026-07-12 업데이트)
 
@@ -133,6 +134,13 @@ for device in ("NPU", "GPU", "CPU"):
 
 출처: [vibetric Panther Lake 리뷰](https://vibetric.com/intel-panther-lake-review-2026/) · [Intel Newsroom](https://newsroom.intel.com/client-computing/intel-unveils-panther-lake-architecture-first-ai-pc-platform-built-on-18a) · [openvino#36161](https://github.com/openvinotoolkit/openvino/issues/36161)
 
+## 5.2 모바일/에지 비디오 AI 서멀 스로틀링 극복 패턴
+상세 분석: [[wiki/Models/Optimization-and-Serving/On-Device-Agentic-Video-Pipeline-and-Thermal-Optimization.md]]
+- **The Caveman Bottleneck**: 단말에서 고해상도(4K) 비디오 프레임을 연속 전수 분석할 때 발생하는 AP/NPU 발열 누적 및 강제 다운클럭/프로세스 킬 현상.
+- **프레임 스트라이딩(Frame Striding)**: 장면 전환율과 움직임 변화에 맞춰 분석 간격을 동적으로 조절하여 칩셋 쿨다운을 유도.
+- **0.3 신뢰도 게이팅(Confidence Gating)**: 편집 판단 매트릭스에 0.3 확신도 임계값을 적용하여 불확실한 구간의 연산 조기 탈출(Early Exit).
+- **로컬 완결형 FFmpeg 파이프라인**: 서버 전송 없이 단말 내부에서 하드웨어 가속 컷/트랜지션 렌더링 완결.
+
 ## 6. 향후 과제
 - **RAM 증설의 압박**: 로컬 LLM 및 에이전트의 멀티태스킹을 위해 **32GB RAM**이 최소 사양으로 요구되고 있습니다.
 - **통합 메모리 대역폭**: NPU 성능만큼이나 메모리 대역폭(LPDDR5x/LPDDR6) 확보가 온디바이스 성능의 척도가 되고 있습니다.
@@ -140,5 +148,7 @@ for device in ("NPU", "GPU", "CPU"):
 
 ---
 **관련 문서**:
-- [[wiki/Models/Optimization-and-Serving/스마트폰-환경의-LLM-서빙-기술-2026]]
-- [[wiki/Models/Optimization-and-Serving/리벨리온-ATOM-Max-기반-EXAONE-4.5-최적화-가이드]]
+- [[wiki/Models/Optimization-and-Serving/On-Device-Agentic-Video-Pipeline-and-Thermal-Optimization.md]]
+- [[wiki/Models/Multimodal-and-Vision/Gemini-Agentic-Video-and-Omni-Flash-API.md]]
+- [[wiki/Models/Optimization-and-Serving/스마트폰-환경의-LLM-서빙-기술-2026.md]]
+- [[wiki/Models/Optimization-and-Serving/리벨리온-ATOM-Max-기반-EXAONE-4.5-최적화-가이드.md]]
