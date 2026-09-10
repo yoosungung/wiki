@@ -1,7 +1,7 @@
 ---
 id: inbox-candidate-2026-09-10-people-ssot-curation-18h
 agent: candidate
-ticket_id: pending
+ticket_id: 1859
 updated: 2026-09-10
 status: inbox
 sources:
