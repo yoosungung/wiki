@@ -17,5 +17,5 @@ tags: ["#wiki", "World-Models", "Next-Latent-Prediction", "Reasoning", "Speculat
 - **추론 속도 혁신 (자가 추측성 디코딩)**: 구조화된 잠재 공간을 기반으로 **가변 길이 자가 추측성 디코딩(variable-length self-speculative decoding)**을 수행합니다. 별도의 대형 드래프트 모델 없이도 아키텍처 오버헤드나 병렬 학습 효율성을 훼손하지 않으면서도 추론 속도를 **최대 3.3배** 가속화합니다.
 
 ## 🔗 연결된 문서
-- [[wiki/Models/Optimization-and-Serving/DFlash-병렬-추측-디코딩-및-SGLang-V2-가속.md]] — 또 다른 추측 디코딩 기술인 블록 디퓨전 및 KV Injection 가속 구조.
+- [[wiki/Models/Optimization-and-Serving/DFlash-병렬-추측-디코딩-및-SGLang-V2-가속.md]] — 또 다른 추측 디코딩 기술인 블록 디퓨전 및 KV Injection 가속 구조.
 - [[index.md]]

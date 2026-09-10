@@ -24,7 +24,7 @@ WebAssembly 3.0은 단순한 웹 실행 형식을 넘어, 브라우저 환경에
 - **브라우저 지원 (2026-08)**: Chrome/Edge 133+, Firefox 134+ ✅. **Safari/iOS ❌** ([caniuse](https://caniuse.com/wf-wasm-memory64)).
 - **성능**: bounds check 때문에 wasm32보다 느릴 수 있음 — 4GB 초과 필요 시에만.
 - **AI 적용**: `wllama64` 등이 Memory64로 대형 가중치 로드; 미지원 브라우저는 4 GiB compat 빌드.
-- **참고**: [[wiki/Models/Optimization-and-Serving/브라우저-기반-LLM-서빙-기술-및-아키텍처-2026.md]]
+- **참고**: [[wiki/Models/Optimization-and-Serving/브라우저-기반-LLM-서빙-기술-및-아키텍처-2026.md]]
 
 ### 2. WasmGC (Garbage Collection)
 - **개요**: 브라우저 네이티브 GC를 활용하여 Java, Python, Go, Kotlin 등의 언어를 효율적으로 지원.

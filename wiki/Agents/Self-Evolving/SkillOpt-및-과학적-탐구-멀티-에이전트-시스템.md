@@ -20,6 +20,6 @@ related_raw: ["[[2026-07-06-suk_hyun_k_skillopt_scientific_agents.md]]", "[[2026
 
 ---
 **관련 문서**:
-- [[wiki/Agents/Self-Evolving/Memento-에이전트-스킬-자가-학습-프레임워크.md]]
+- [[wiki/Agents/Self-Evolving/Memento-에이전트-스킬-자가-학습-프레임워크.md]]
 - [[wiki/Agents/Self-Evolving/WikiSkill-절차적-지식-자가-진화-프레임워크.md]]
 

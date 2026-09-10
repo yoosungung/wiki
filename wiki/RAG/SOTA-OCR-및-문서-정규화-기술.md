@@ -23,4 +23,4 @@ OCR 모델의 성능을 객관적으로 판별하기 위해 다음과 같은 현
 ## 🔗 연결된 문서
 - [[wiki/RAG/olmocr-pdf-linearization-toolkit.md]] — AI2의 VLM 기반 PDF-to-Text 데이터 선형화 오픈소스.
 - [[wiki/RAG/OpenDataLoader-PDF-Parser.md]] — PDF 내 Bounding Box 좌표 및 구조 추출 라이브러리.
-- [[wiki/RAG/omniparse-멀티포맷-데이터-정규화-파이프라인.md]] — 오디오, 비디오, 스캔 문서를 일괄 가공해 주는 omniparse 기술.
+- [[wiki/RAG/omniparse-멀티포맷-데이터-정규화-파이프라인.md]] — 오디오, 비디오, 스캔 문서를 일괄 가공해 주는 omniparse 기술.

@@ -29,5 +29,5 @@ NVIDIA의 **SkillSpector**는 AI 에이전트 스킬 및 도구(Tooling)의 설�
 
 ---
 **관련 문서**:
-- [[wiki/Agents/Frameworks/BuildingAI-적목식-AI-앱-빌더-및-보안-취약점.md]]
+- [[wiki/Agents/Frameworks/BuildingAI-적목식-AI-앱-빌더-및-보안-취약점.md]]
 - [[wiki/Engineering/Data-and-Security/000_Data-and-Security-MOC]]

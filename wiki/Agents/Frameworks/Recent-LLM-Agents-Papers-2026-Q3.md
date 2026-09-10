@@ -30,5 +30,5 @@ updated: "2026-08-24"
 
 ---
 **관련 문서**:
-- [[wiki/Agents/Coding-and-Engineering/루프-엔지니어링-패러다임-및-시스템-안전.md]]
+- [[wiki/Agents/Coding-and-Engineering/루프-엔지니어링-패러다임-및-시스템-안전.md]]
 - [[wiki/Agents/Frameworks/Active-Inference-as-Context-Acquisition-for-AI-Agents.md]]

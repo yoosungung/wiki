@@ -86,6 +86,6 @@ version: 1.2.0
 
 ## 🔗 관련 문서
 - [[wiki/Agents/Self-Evolving/000_Self-Evolving-MOC.md|Self-Evolving MOC]]
-- [[wiki/Agents/Self-Evolving/SkillOpt-및-과학적-탐구-멀티-에이전트-시스템.md|SkillOpt 및 과학적 탐구 멀티 에이전트 시스템]]
-- [[wiki/Agents/Self-Evolving/Memento-에이전트-스킬-자가-학습-프레임워크.md|Memento 에이전트 스킬 자가 학습 프레임워크]]
-- [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md|자율수행 멀티 에이전트 시스템 오케스트레이션 및 보안 격리 2026]]
+- [[wiki/Agents/Self-Evolving/SkillOpt-및-과학적-탐구-멀티-에이전트-시스템.md|SkillOpt 및 과학적 탐구 멀티 에이전트 시스템]]
+- [[wiki/Agents/Self-Evolving/Memento-에이전트-스킬-자가-학습-프레임워크.md|Memento 에이전트 스킬 자가 학습 프레임워크]]
+- [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md|자율수행 멀티 에이전트 시스템 오케스트레이션 및 보안 격리 2026]]

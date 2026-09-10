@@ -26,5 +26,5 @@ RAG 시스템은 개발 단계(PoC)에서는 쉽게 동작하나, 실제 프로�
 **관련 문서**:
 - [[wiki/RAG/Claude-Web-Search-Brave-Backend-and-SEO.md]]
 - [[wiki/RAG/OpenDataLoader-PDF-Parser.md]]
-- [[wiki/RAG/omniparse-멀티포맷-데이터-정규화-파이프라인.md]]
+- [[wiki/RAG/omniparse-멀티포맷-데이터-정규화-파이프라인.md]]
 

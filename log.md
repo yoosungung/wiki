@@ -621,3 +621,7 @@
 | 2026-08-27 | CLEANUP | raw/ | 2 | 합성 완료 raw 삭제; 데일리 D-0/D-1 유지 |
 | 2026-09-05 | LINT | wiki/Models/RL | 1 | Quartz GitHub Pages 빌드 실패 원인인 `LLM-Reinforcement-Learning-Post-Training-Guide.md` frontmatter `related_raw` 중복 키 제거 |
 | 2026-09-05 | SYNTHESIZE | .agents/skills | 2 | Quartz KaTeX `unicodeTextInMathMode`(통화 `$`+한글) 및 YAML 중복 키 fatal을 km-synthesizer·km-linter에 합성 |
+| 2026-09-10 | RESEARCH | 연구_주제_관리.md | 8 | 8개 활성 연구 과제 전수 모니터링; W3C WebNN 2026-09-04 CR Draft 최신화 확인, LiteRT-LM·RBLN·Furiosa-LLM·Panther Lake·Supermemory·AV-SQL 최신 상태 점검 |
+| 2026-09-10 | SYNTHESIZE | wiki/Engineering, wiki/Models | 4 | K8s 의도적 scale-0 allowlist 및 SGLang 31b 1/1 건강 점검 갱신; W3C WebNN Candidate Recommendation Draft(2026-09-04) 및 WebGPU 연동 반영; KaTeX 통화 기호 정제 |
+| 2026-09-10 | CLEANUP | inbox/, Root | 2 | inbox/ta/2026-09-10-k8s-daily-report.md git rm; D-2 데일리(2026-09-08.md) git rm |
+| 2026-09-10 | LINT | Root / wiki | ALL | 2026-09-10.md 데일리 생성, auto_moc & update_index 실행, fix_wiki_links.py를 통한 위키 링크 동기화 |

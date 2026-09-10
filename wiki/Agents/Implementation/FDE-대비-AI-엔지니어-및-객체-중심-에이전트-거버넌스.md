@@ -26,5 +26,5 @@ tags: ["#wiki", "Agents/Implementation", "Agents/Trends", "Object-Centric", "Gov
 ## 🔗 연결된 문서
 - [[wiki/Agents/Implementation/000_Implementation-MOC.md]]
 - [[wiki/Agents/Implementation/Deep-Agents-Architecture-Patterns.md]]
-- [[wiki/Business/Trends/AI-시대의-기업-미래와-토큰-자본-전략.md]]
+- [[wiki/Business/Trends/AI-시대의-기업-미래와-토큰-자본-전략.md]]
 - [[index.md]]

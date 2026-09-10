@@ -21,5 +21,5 @@ related_raw: ["[[2026-07-06-jyoung105_text_to_vision_token_reduction.md]]"]
 ---
 **관련 문서**:
 - [[wiki/RAG/OpenDataLoader-PDF-Parser.md]]
-- [[wiki/RAG/SOTA-OCR-및-문서-정규화-기술.md]]
+- [[wiki/RAG/SOTA-OCR-및-문서-정규화-기술.md]]
 

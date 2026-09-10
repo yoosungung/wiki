@@ -60,7 +60,7 @@ npx @alook/app onboard
 ---
 
 ## 🔗 관련 문서 링크
-- 멀티 에이전트 오케스트레이션 연구: [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md]]
-- OpenClaw 및 HyperAgent 기반 MAS: [[wiki/Agents/Multi-Agent-and-Orchestration/OpenClaw-및-HyperAgent-기반-MAS-아키텍처.md]]
+- 멀티 에이전트 오케스트레이션 연구: [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md]]
+- OpenClaw 및 HyperAgent 기반 MAS: [[wiki/Agents/Multi-Agent-and-Orchestration/OpenClaw-및-HyperAgent-기반-MAS-아키텍처.md]]
 - [[wiki/Agents/Multi-Agent-and-Orchestration/000_Multi-Agent-and-Orchestration-MOC.md]]
 - [[index.md]]

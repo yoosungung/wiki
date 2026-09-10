@@ -35,5 +35,5 @@ related_raw: ["[[2026-07-05-headroom_agent_context_compression_ast_cache_aligner
 
 ## 관련 문서
 - [[wiki/Agents/Coding-and-Engineering/Claude-Code-Codex-Token-Optimization.md]]
-- [[wiki/Agents/Coding-and-Engineering/루프-엔지니어링-패러다임-및-시스템-안전.md]]
+- [[wiki/Agents/Coding-and-Engineering/루프-엔지니어링-패러다임-및-시스템-안전.md]]
 - [[wiki/Agents/Memory-and-Cognition/AI-Agent-Memory-Architecture.md]]

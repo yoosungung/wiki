@@ -37,5 +37,5 @@ LangChain, LangGraph, LlamaIndex, CrewAI 및 Google ADK를 포함한 **18개 핵
 
 ## 관련 문서
 - [[wiki/Agents/Memory-and-Cognition/AI-Agent-Memory-Architecture.md]]
-- [[wiki/Agents/Memory-and-Cognition/통합-메모리-및-MCP-기반-컨텍스트-레이어-독립.md]]
+- [[wiki/Agents/Memory-and-Cognition/통합-메모리-및-MCP-기반-컨텍스트-레이어-독립.md]]
 - [[wiki/RAG/Mem0-Mem-Long-term-Memory.md]]

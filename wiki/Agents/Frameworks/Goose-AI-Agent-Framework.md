@@ -26,7 +26,7 @@ updated: "2026-08-31"
 
 ### 4. MCP(Model Context Protocol) 통합
 - [[wiki/Agents/Frameworks/MCP/000_MCP-MOC.md|MCP]]의 **공식 래퍼런스 구현체** 역할을 수행하며, 로컬 파일 시스템, 외부 API 도구 등을 손쉽게 융합해 쓸 수 있습니다.
-- 조직의 에이전틱 엔지니어링 성숙도 모델(Level 3~8)에서 자율 Task 수행을 위한 실천적인 인프라 툴로 채택됩니다. (상세는 [[wiki/Agents/Coding-and-Engineering/에이전트-기반-엔지니어링-조직-전환-및-성숙도-모델.md|에이전트 엔지니어링 성숙도 모델]] 참조)
+- 조직의 에이전틱 엔지니어링 성숙도 모델(Level 3~8)에서 자율 Task 수행을 위한 실천적인 인프라 툴로 채택됩니다. (상세는 [[wiki/Agents/Coding-and-Engineering/에이전트-기반-엔지니어링-조직-전환-및-성숙도-모델.md|에이전트 엔지니어링 성숙도 모델]] 참조)
 
 ## 📉 사회적 및 경제적 함의 (구스쇼크)
 - **노동의 재정의**: 인간의 역할이 '실행자'에서 문제를 정의하고 행동을 규정하는 '설계자'로 강제 이주되고 있음을 보여줍니다.
@@ -41,5 +41,5 @@ updated: "2026-08-31"
 - [[wiki/Agents/Frameworks/000_Frameworks-MOC.md]]
 - [[wiki/Agents/Frameworks/MCP/000_MCP-MOC.md]]
 - [[wiki/Business/Trends/AI-Agent-Economy.md]]
-- [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md]]
+- [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md]]
 

@@ -3,11 +3,12 @@ id: k8s-intentional-scale-zero-empty-endpoints
 title: "K8s 의도적 scale-0와 empty endpoints 판별"
 status: canonical
 owner: km
-updated: "2026-09-09"
-last_updated: "2026-09-09"
+updated: "2026-09-10"
+last_updated: "2026-09-10"
 review_after: "2026-12-09"
 sources:
   - schedule:ta-k8s-daily
+  - inbox/ta/2026-09-10-k8s-daily-report.md
   - inbox/ta/2026-09-09-k8s-daily-health.md
   - inbox/ta/2026-09-07-k8s-daily-health.md
   - inbox/ta/2026-09-06-k8s-daily-report.md
@@ -78,6 +79,7 @@ kubectl get nodes -o custom-columns=NAME:.metadata.name,READY:.status.conditions
 - **재확인 (2026-09-06)**: `didim-gpu` Ready·Pressure=False·CrashLoop/ImagePull/Pending/Failed=0·Warning=0·PVC Bound + postgres live 4Gi/2Gi·restarts 0. allowlist: `llm-serving/sglang-gemma4-12b` + `runtime/pgbouncer-{ro,rw}` scale-0. Incident 없음.
 - **재확인 (2026-09-07)**: `didim-gpu` Ready·Disk/Memory/PID Pressure=False·root disk ~58%·desired Deploy/STS Ready·Pending/Failed=0·Warning=0·PVC Bound + postgres live 4Gi/2Gi. allowlist: `llm-serving/sglang-gemma4-12b` + `runtime/pgbouncer-{ro,rw}` scale-0. `nebula/nebula-storaged-0` lastState OOMKilled(09-05) 후 Ready·restartCount 누적 — CrashLoop 아니면 **watch-only**(Incident 없음).
 - **재확인 (2026-09-09)**: `didim-gpu` Ready·Disk/MemoryPressure=False·root disk ~58%(999G/1.8T)·Warning/CrashLoop/Pending=0·all PVCs Bound(local-path) + postgres live 4Gi/2Gi. allowlist: `llm-serving/sglang-gemma4-12b` + `runtime/pgbouncer-{ro,rw}` scale-0. 활성 GPU는 `sglang-gemma4-31b` 2/2 전담 할당 및 `bge-m3-tei` Ready. Incident 없음.
+- **재확인 (2026-09-10)**: `didim-gpu` Ready·Disk/Memory/PIDPressure=False·root disk ~58%(999G/1.8T)·node mem ~39%(50Gi)·CPU ~7%·Warning/CrashLoop/Pending=0·all PVCs Bound(local-path) + postgres live 4Gi/2Gi·restarts 0. allowlist: `llm-serving/sglang-gemma4-12b` + `runtime/pgbouncer-{ro,rw}` scale-0. 활성 LLM은 `sglang-gemma4-31b` 1/1 할당. Actionable incident 없음. 점검 worktree는 feature 브랜치(`feature/775-postgres-memory-4gi`) untracked 상태로 git pull 미수행 기준선 준수.
 - **비관리 STS OOM → watch-only**: k8s-test 레포 밖 그래프 DB(예: `nebula/nebula-storaged`)가 limit 부족으로 OOMKilled 후 **Ready로 회복·사용량≪limit**이면 일일 Incident로 올리지 않고 watch만 한다. limit 상향은 **해당 워크로드 소유 레포/운영자** 축 — shared Postgres OOM과 같은 “limit vs 실제” 판별은 [[wiki/Engineering/Infrastructure-and-DevOps/Shared-Postgres-Cgroup-Limit-vs-Statement-Timeout.md]].
 - **티켓 불필요면 MCP 미사용**: 조치 가능 장애가 0이면 ticketing MCP discovery 실패를 점검 실패로 올리지 않는다. MCP는 티켓이 필요할 때만.
 - **점검 worktree ≠ git 정본**: 로컬 checkout이 feature 브랜치여도 **live 클러스터**가 점검 기준(SoR)이다. `git pull origin main`을 생략해도 되고, repo drift를 Incident로 올리지 않는다. 점검 시 kubectl mutate 없음.

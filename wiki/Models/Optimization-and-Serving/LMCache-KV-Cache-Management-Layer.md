@@ -51,6 +51,6 @@ RAG 및 멀티 에이전트 시스템에서는 에이전트가 동일한 문서 
 2. **GPU 메모리 절약**: 긴 대화 히스토리의 KV 캐시를 VRAM이 아닌 CPU나 SSD로 오프로드하여, 더 많은 동시 요청(Concurrent Requests)을 수용할 수 있습니다.
 
 ## 🔗 연결된 문서
-- [[wiki/Models/Optimization-and-Serving/LLM 캐시 최적화 기술: TurboQuant와 IceCache.md]]
+- [[wiki/Models/Optimization-and-Serving/LLM 캐시 최적화 기술: TurboQuant와 IceCache.md]]
 - [[wiki/Models/Optimization-and-Serving/vLLM_Serving_Techniques.md]]
-- [[wiki/Models/Optimization-and-Serving/SGLang LLM 서빙 프레임워크 리뷰.md]]
+- [[wiki/Models/Optimization-and-Serving/SGLang LLM 서빙 프레임워크 리뷰.md]]

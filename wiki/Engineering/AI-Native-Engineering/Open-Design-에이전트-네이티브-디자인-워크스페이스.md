@@ -18,5 +18,5 @@ Open Design(nexu-io/open-design)은 Anthropic의 Claude Design Workspace를 로�
 
 ---
 **관련 문서**:
-- [[wiki/Engineering/AI-Native-Engineering/Block-자율-개발-배포-플랫폼-아키텍처.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Block-자율-개발-배포-플랫폼-아키텍처.md]]
 

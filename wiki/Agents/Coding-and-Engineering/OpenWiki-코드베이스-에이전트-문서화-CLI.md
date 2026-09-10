@@ -34,6 +34,6 @@ related_raw: ["[[2026-07-05-langchain_openwiki_codebase_agent_documentation_cli.
 - **GitHub**: https://github.com/langchain-ai/openwiki
 
 ## 관련 문서
-- [[wiki/Agents/Coding-and-Engineering/루프-엔지니어링-패러다임-및-시스템-안전.md]]
+- [[wiki/Agents/Coding-and-Engineering/루프-엔지니어링-패러다임-및-시스템-안전.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Claude-Code-Next-Gen-Coding-Agent.md]]
-- [[wiki/Engineering/AI-Native-Engineering/AI-시대의-제품-개발-역할군-5대-원형.md]]
+- [[wiki/Engineering/AI-Native-Engineering/AI-시대의-제품-개발-역할군-5대-원형.md]]

@@ -150,5 +150,5 @@ for device in ("NPU", "GPU", "CPU"):
 **관련 문서**:
 - [[wiki/Models/Optimization-and-Serving/On-Device-Agentic-Video-Pipeline-and-Thermal-Optimization.md]]
 - [[wiki/Models/Multimodal-and-Vision/Gemini-Agentic-Video-and-Omni-Flash-API.md]]
-- [[wiki/Models/Optimization-and-Serving/스마트폰-환경의-LLM-서빙-기술-2026.md]]
+- [[wiki/Models/Optimization-and-Serving/스마트폰-환경의-LLM-서빙-기술-2026.md]]
 - [[wiki/Models/Optimization-and-Serving/리벨리온-ATOM-Max-기반-EXAONE-4.5-최적화-가이드.md]]

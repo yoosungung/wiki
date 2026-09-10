@@ -21,5 +21,5 @@ AI 코딩 에이전트의 개발 속도는 인간 리뷰어의 처리 능력을 
 
 ## 🔗 연결된 문서
 - [[wiki/Agents/Coding-and-Engineering/000_Coding-and-Engineering-MOC.md]]
-- [[wiki/Agents/Coding-and-Engineering/루프-엔지니어링-패러다임-및-시스템-안전.md]]
+- [[wiki/Agents/Coding-and-Engineering/루프-엔지니어링-패러다임-및-시스템-안전.md]]
 - [[index.md]]

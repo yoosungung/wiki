@@ -20,5 +20,5 @@ BidingCC/BuildingAI는 "AI 시대의 워드프레스"를 지향하는 적목식(
 
 ---
 **관련 문서**:
-- [[wiki/Engineering/Data-and-Security/SkillSpector-에이전트-스킬-보안-취약점-스캐너.md]]
+- [[wiki/Engineering/Data-and-Security/SkillSpector-에이전트-스킬-보안-취약점-스캐너.md]]
 

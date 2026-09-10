@@ -36,6 +36,6 @@ olmocr parse --input document.pdf --output document.md --model allenai/olmOCR-2-
 전통적인 PDF 파서(예: PyPDF, PDFMiner)는 2단 편집(Two-column) 레이아웃이나 복잡한 표를 처리할 때 줄 바꿈 및 텍스트 순서가 꼬이는 고질적인 한계를 가집니다. olmocr은 VLM의 시각적 컨텍스트 이해력을 전처리 단계에 결합하여 이 문제를 완벽히 방어함으로써, 검색 증강 생성(RAG)의 검색 정확도와 에이전트 도구 호출 성능을 크게 증대시킵니다.
 
 ## 🔗 연결된 문서
-- [[wiki/RAG/SOTA-OCR-및-문서-정규화-기술.md]]
+- [[wiki/RAG/SOTA-OCR-및-문서-정규화-기술.md]]
 - [[wiki/RAG/OpenDataLoader-PDF-Parser.md]]
-- [[wiki/RAG/omniparse-멀티포맷-데이터-정규화-파이프라인.md]]
+- [[wiki/RAG/omniparse-멀티포맷-데이터-정규화-파이프라인.md]]

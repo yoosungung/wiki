@@ -59,7 +59,7 @@ docker compose -f docker/docker-compose.yml up -d
 ---
 
 ## 🔗 관련 문서 링크
-- 비정형 OCR 및 데이터 파싱: [[wiki/RAG/SOTA-OCR-및-문서-정규화-기술.md]]
-- RAG 파이프라인 실패 요인 분석: [[wiki/RAG/프로덕션-RAG-파이프라인-실패-요인-및-해결-방안.md]]
+- 비정형 OCR 및 데이터 파싱: [[wiki/RAG/SOTA-OCR-및-문서-정규화-기술.md]]
+- RAG 파이프라인 실패 요인 분석: [[wiki/RAG/프로덕션-RAG-파이프라인-실패-요인-및-해결-방안.md]]
 - [[wiki/RAG/000_RAG-MOC.md]]
 - [[index.md]]

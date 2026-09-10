@@ -3,8 +3,8 @@ title: "WebGPU 및 WebNN 표준화 현황 (2026)"
 tags: ["Engineering", "Development-Environment", "WebGPU", "WebNN", "W3C", "Standardization"]
 type: "wiki"
 status: "published"
-last_updated: "2026-08-29"
-updated: "2026-08-29"
+last_updated: "2026-09-10"
+updated: "2026-09-10"
 related_raw: ["[[raw/2026-08-28-webmcp-chrome-origin-trial.md]]", "[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-07-01-webgpu-webnn-wasm3-webmcp.md]]", "[[2026-07-10-web-inference-wasm-3.0.md]]", "[[2026-07-11-webgpu_wasm_3_0_webnn_webllm_browser_serving.md]]", "[[2026-07-12-webllm-3w-opfs-json-workers.md]]", "[[2026-07-13-litert-lm-swift-js-session-api.md]]"]
 ---
 
@@ -26,7 +26,7 @@ WebGPU는 GPGPU 접근을 단순화하여 웹 환경에서도 고성능 추론 �
 ## 2. WebNN (Web Neural Network) API
 NPU, GPU, CPU 등 하드웨어 가속기를 직접 제어하여 신경망 추론을 최적화하는 전용 API입니다.
 
-- **표준 상태**: **Candidate Recommendation Draft** (2026.05.21 최신화).
+- **표준 상태**: **Candidate Recommendation Draft** (2026.09.04 최신화; 2026년 1월 22일 Snapshot 이후 W3C Web Machine Learning WG 개정판 발행).
 - **기술적 특징**:
     - **MLTensor API**: WebGPU와 WebNN 간의 버퍼를 Zero-copy로 직접 공유하여 오버헤드 최소화.
     - **3rd Wave Operators**: Transformer 기반 모델(LLM) 가속을 위한 최적화 연산자 대거 추가.
@@ -39,11 +39,11 @@ NPU, GPU, CPU 등 하드웨어 가속기를 직접 제어하여 신경망 추론
 - **로컬 활성화**: `chrome://flags/#enable-webmcp-testing` → Enabled → 재시작. Permissions Policy **`tools`**(기본 `self`; cross-origin iframe 비활성).
 - **상태 (Chrome 문서 + 2차)**: 공식은 human-in-the-loop 로컬 워크플로 중심. 2차 보고 — Chrome **149–156 public origin trial**, 주 소비 에이전트 Gemini in Chrome; Shopify/Cloudflare 기본 노출은 상거래 표면 확대 신호.
 - **OT 종료·Ship 목표 (2026-08-29)**: ChromeStatus 기준 OT desktop/Android/WebView **149→156**, **Shipping 목표 157**. 현장 보고: trial 토큰 만료·OT 종료 **~2026-11-16** 전후 — 토큰/`document.modelContext` 없으면 `registerTool`이 **silent no-op**. 로컬은 `chrome://flags/#enable-webmcp-testing`. 프로덕션 등록 코드는 **OT 토큰 서빙·feature-detect(`document.modelContext || navigator.modelContext`)** 없이 머지하지 말 것.
-- **참고**: [Chrome WebMCP](https://developer.chrome.com/docs/ai/webmcp) · MAS 적용 [[wiki/Agents/Multi-Agent-and-Orchestration/OpenClaw-및-HyperAgent-기반-MAS-아키텍처.md]]
+- **참고**: [Chrome WebMCP](https://developer.chrome.com/docs/ai/webmcp) · MAS 적용 [[wiki/Agents/Multi-Agent-and-Orchestration/OpenClaw-및-HyperAgent-기반-MAS-아키텍처.md]]
 
 ## 4. 웹 기반 LLM 서빙 및 실행 가속의 영향
 - **Wasm 3.0 Memory64 및 표준 런칭**: 2025년 9월 공식 표준 격상 및 런칭이 완료된 WebAssembly 3.0은 단순한 샌드박스를 넘어 보편적 라이브 런타임으로 이행했습니다. 핵심 기능인 **Memory64**를 통해 기존 32비트의 4GB 힙 메모리 한계를 극복하고 브라우저 실구현 기준 최대 **16GB**까지 주소 공간이 확장되어, 대용량 LLM 가중치 데이터(1B~8B 매개변수 모델)를 통째로 로드하여 실행할 수 있습니다. 또한 **Multiple Memories**를 기본 탑재하여 단일 모듈 내 격리된 다중 메모리 영역 접근 및 WebGPU 버퍼와의 zero-copy 매핑을 지원하며, Component Model(WASIp3) 도입을 통해 클라우드와 브라우저를 관통하는 이식성을 확보했습니다.
-- **브라우저 엔진 패리티**: Chromium·Firefox는 Memory64를 실서비스에 쓸 수 있으나 **Safari/WebKit은 2026-08 기준 Memory64 미지원** — [[wiki/Models/Optimization-and-Serving/브라우저-기반-LLM-서빙-기술-및-아키텍처-2026.md]]. Multiple Memories 등은 엔진별 단계 도입.
+- **브라우저 엔진 패리티**: Chromium·Firefox는 Memory64를 실서비스에 쓸 수 있으나 **Safari/WebKit은 2026-08 기준 Memory64 미지원** — [[wiki/Models/Optimization-and-Serving/브라우저-기반-LLM-서빙-기술-및-아키텍처-2026.md]]. Multiple Memories 등은 엔진별 단계 도입.
 - **IndexedDB 캐싱**: 모바일 브라우저의 1~4GB 가용 메모리 제약 하에, IndexedDB를 가중치 캐시 저장소로 활용하여 최초 1회 로드 후에는 네트워크 전송 없이 오프라인 기동 및 로컬 가속을 보장합니다.
 
 ## 5. LlamaWeb: llama.cpp WebGPU 백엔드 (Microsoft Research, 2026.05)
@@ -79,4 +79,4 @@ WebLLM/Transformers.js와 병행 평가 시, llama.cpp 생태계 사용자는 Ll
 ---
 **관련 문서**:
 - [[wiki/Engineering/Development-Environment/000_Development-Environment-MOC.md]]
-- [[wiki/Models/Optimization-and-Serving/스마트폰-환경의-LLM-서빙-기술-2026.md]]
+- [[wiki/Models/Optimization-and-Serving/스마트폰-환경의-LLM-서빙-기술-2026.md]]

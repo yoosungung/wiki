@@ -21,5 +21,5 @@ Memento-Skills는 에이전트의 파라미터 미세 조정(Fine-tuning)을 수
 
 ---
 **관련 문서**:
-- [[wiki/Agents/Self-Evolving/SkillOpt-및-과학적-탐구-멀티-에이전트-시스템.md]]
+- [[wiki/Agents/Self-Evolving/SkillOpt-및-과학적-탐구-멀티-에이전트-시스템.md]]
 

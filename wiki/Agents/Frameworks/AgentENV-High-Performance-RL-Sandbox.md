@@ -28,4 +28,4 @@ Kimi K3의 에이전틱 강화학습(RL) 학습을 위해 수만 개의 독립 �
 
 ---
 **관련 문서**:
-- [[wiki/Engineering/Data-and-Security/SkillSpector-에이전트-스킬-보안-취약점-스캐너.md]]
+- [[wiki/Engineering/Data-and-Security/SkillSpector-에이전트-스킬-보안-취약점-스캐너.md]]

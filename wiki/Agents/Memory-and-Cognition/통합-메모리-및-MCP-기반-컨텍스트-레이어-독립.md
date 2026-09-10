@@ -34,5 +34,5 @@ AI 모델과 에이전트 하네스(Claude Code, Cursor, OpenCode, Gemini CLI �
 
 ## 관련 문서
 - [[wiki/Agents/Memory-and-Cognition/AI-Agent-Memory-Architecture.md]]
-- [[wiki/Agents/Memory-and-Cognition/Maximem-Synap-에이전트-메모리-레이어.md]]
+- [[wiki/Agents/Memory-and-Cognition/Maximem-Synap-에이전트-메모리-레이어.md]]
 - [[wiki/Agents/Frameworks/000_Frameworks-MOC.md]]

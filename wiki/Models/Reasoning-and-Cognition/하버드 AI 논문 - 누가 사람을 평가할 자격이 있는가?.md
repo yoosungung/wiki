@@ -1,7 +1,7 @@
 ---
 title: 하버드 AI 논문 - 누가 사람을 평가할 자격이 있는가?
 related_raw:
-  - "[[wiki/Models/Reasoning-and-Cognition/하버드 AI 논문 - 누가 사람을 평가할 자격이 있는가?]]"
+  - "[[wiki/Models/Reasoning-and-Cognition/하버드 AI 논문 - 누가 사람을 평가할 자격이 있는가?]]"
 tags:
   - wiki
   - ai_core

@@ -82,5 +82,5 @@ Skaling 법칙에 따른 순수 학습 연산(Compute-Optimal) 기준 권장 토
 ## 🔗 관련 문서
 - [[wiki/Models/Optimization/000_Optimization-MOC.md|Optimization MOC]]
 - [[wiki/Models/Architectures/000_Architectures-MOC.md|Architectures MOC]]
-- [[wiki/Models/Architectures/LLM 아키텍처 비교.md|LLM 아키텍처 비교]]
+- [[wiki/Models/Architectures/LLM 아키텍처 비교.md|LLM 아키텍처 비교]]
 - [[wiki/Models/SFT/TailSFT-Filtered-Fine-Tuning.md|TailSFT 필터링 미세조정]]

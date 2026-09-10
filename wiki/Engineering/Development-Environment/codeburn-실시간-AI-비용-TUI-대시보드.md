@@ -13,5 +13,5 @@ tags: ["#wiki", "codeburn", "AI-Cost-Tracking", "Agentic-Tools", "TUI", "Develop
 - **토큰 폭발(Runaway) 제어**: 자율 루프 구조에서 에이전트가 예기치 않게 오류 피드백 루프에 갇혀 무한 호출되는 현상을 모니터링하고 차단 리미트를 연계하는 안전 장치로 유용하게 동작합니다.
 
 ## 🔗 연결된 문서
-- [[wiki/Agents/Coding-and-Engineering/루프-엔지니어링-패러다임-및-시스템-안전.md]] — 토큰 폭발 등 자율 루프의 리스크 및 관제 구조.
+- [[wiki/Agents/Coding-and-Engineering/루프-엔지니어링-패러다임-및-시스템-안전.md]] — 토큰 폭발 등 자율 루프의 리스크 및 관제 구조.
 - [[wiki/Engineering/Development-Environment/000_Development-Environment-MOC.md]]

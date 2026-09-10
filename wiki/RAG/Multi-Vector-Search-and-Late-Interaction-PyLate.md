@@ -56,6 +56,6 @@ print("Query shape:", query_vectors.shape)
 ```
 
 ## 🔗 연결된 문서
-- [[wiki/RAG/LFM2.5-Embedding-및-ColBERT-검색-모델-2026.md]]
-- [[wiki/RAG/SOTA-OCR-및-문서-정규화-기술.md]]
+- [[wiki/RAG/LFM2.5-Embedding-및-ColBERT-검색-모델-2026.md]]
+- [[wiki/RAG/SOTA-OCR-및-문서-정규화-기술.md]]
 - [[wiki/RAG/000_RAG-MOC.md]]

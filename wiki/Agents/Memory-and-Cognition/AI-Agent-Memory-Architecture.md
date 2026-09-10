@@ -48,8 +48,8 @@ AI 에이전트의 기억 관리 아키텍처는 단순한 데이터 저장을 �
 - **MemGPT / Letta**: LLM을 운영체제(OS)처럼 취급하여, 컨텍스트 창을 RAM으로, 외부 DB를 디스크로 관리하며 지능적으로 데이터를 스왑(Swap)한다.
 - **Agentic Memory (A-MEM)**: 에이전트가 도구를 사용할 때마다 자동으로 '기억 노트'를 생성하고 이를 지식 그래프에 실시간으로 통합한다.
 - **Versioned Memory**: 기억의 오염(Hallucination)을 방지하기 위해 기억의 변경 이력을 관리하고, 필요 시 특정 시점으로 롤백하는 기능을 제공한다.
-- **컨텍스트 레이어 독립 아키텍처 (2026.07)**: 모델과 하네스(Claude Code 등)의 범용화에 맞서, 메모리를 독립된 DB에 구축하고 **MCP(Model Context Protocol) Server**를 인터페이스로 사용하여 툴 간 이동 및 소유권을 확보하는 설계가 확대되고 있다. [[wiki/Agents/Memory-and-Cognition/통합-메모리-및-MCP-기반-컨텍스트-레이어-독립.md]]
-- **Maximem Synap (2026.07)**: 에이전트 전용 동적 지능형 메모리 SDK. 벡터/그래프/파일 혼합형 **하이브리드 스토리지**, 여러 세션의 지시 및 취소(Retractions)를 자동 파싱하는 **엔티티 해결** 및 **시간적 감쇠**를 처리하며 최상위 벤치마크(LoCoMo 93.2%)를 달성했다. [[wiki/Agents/Memory-and-Cognition/Maximem-Synap-에이전트-메모리-레이어.md]]
+- **컨텍스트 레이어 독립 아키텍처 (2026.07)**: 모델과 하네스(Claude Code 등)의 범용화에 맞서, 메모리를 독립된 DB에 구축하고 **MCP(Model Context Protocol) Server**를 인터페이스로 사용하여 툴 간 이동 및 소유권을 확보하는 설계가 확대되고 있다. [[wiki/Agents/Memory-and-Cognition/통합-메모리-및-MCP-기반-컨텍스트-레이어-독립.md]]
+- **Maximem Synap (2026.07)**: 에이전트 전용 동적 지능형 메모리 SDK. 벡터/그래프/파일 혼합형 **하이브리드 스토리지**, 여러 세션의 지시 및 취소(Retractions)를 자동 파싱하는 **엔티티 해결** 및 **시간적 감쇠**를 처리하며 최상위 벤치마크(LoCoMo 93.2%)를 달성했다. [[wiki/Agents/Memory-and-Cognition/Maximem-Synap-에이전트-메모리-레이어.md]]
 
 ## 4. 설계 시 고려사항
 
@@ -60,6 +60,6 @@ AI 에이전트의 기억 관리 아키텍처는 단순한 데이터 저장을 �
 ## 관련 문서
 - [[wiki/RAG/Mem0-Mem-Long-term-Memory.md]]
 - [[wiki/RAG/Mem0-Zep-Hybrid-Memory-KG-RAG.md]]
-- [[wiki/Agents/Memory-and-Cognition/통합-메모리-및-MCP-기반-컨텍스트-레이어-독립.md]]
-- [[wiki/Agents/Memory-and-Cognition/Maximem-Synap-에이전트-메모리-레이어.md]]
+- [[wiki/Agents/Memory-and-Cognition/통합-메모리-및-MCP-기반-컨텍스트-레이어-독립.md]]
+- [[wiki/Agents/Memory-and-Cognition/Maximem-Synap-에이전트-메모리-레이어.md]]
 - [[wiki/Agents/Frameworks/000_LLM-Agent-MOC.md]]

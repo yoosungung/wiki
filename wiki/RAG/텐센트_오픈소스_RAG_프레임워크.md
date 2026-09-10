@@ -1,7 +1,7 @@
 ---
 title: 텐센트_오픈소스_RAG_프레임워크
 related_raw:
-  - "[[wiki/RAG/텐센트_오픈소스_RAG_프레임워크]]"
+  - "[[wiki/RAG/텐센트_오픈소스_RAG_프레임워크]]"
 tags:
   - wiki
   - knowledge_and_memory

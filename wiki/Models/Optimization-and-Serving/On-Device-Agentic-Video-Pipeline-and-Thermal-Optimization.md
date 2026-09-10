@@ -60,5 +60,5 @@ flowchart LR
 ## 🔗 관련 문서
 - [[wiki/Models/Multimodal-and-Vision/Gemini-Agentic-Video-and-Omni-Flash-API.md|Gemini Agentic Video API]]
 - [[wiki/Models/Optimization-and-Serving/온디바이스-AI-및-AI-PC-기술-트렌드-2026.md|온디바이스 AI 및 AI PC 기술 트렌드 2026]]
-- [[wiki/Models/Optimization-and-Serving/스마트폰-환경의-LLM-서빙-기술-2026.md|스마트폰 환경의 LLM 서빙 기술 2026]]
+- [[wiki/Models/Optimization-and-Serving/스마트폰-환경의-LLM-서빙-기술-2026.md|스마트폰 환경의 LLM 서빙 기술 2026]]
 - [[wiki/Models/Optimization-and-Serving/000_Optimization-and-Serving-MOC.md|최적화 및 서빙 MOC]]

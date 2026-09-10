@@ -1,7 +1,7 @@
 ---
 title: RAG-GraphRAG-DRIFT-Search-CAG-지식-관리-고도화
 related_raw:
-  - "[[wiki/RAG/RAG-GraphRAG-DRIFT-Search-CAG-지식-관리-고도화]]"
+  - "[[wiki/RAG/RAG-GraphRAG-DRIFT-Search-CAG-지식-관리-고도화]]"
 tags:
   - wiki
   - knowledge_and_memory

@@ -22,6 +22,6 @@ related_raw: ["[[2026-07-06-kalyan_ks_halumem_benchmark.md]]"]
 
 ---
 **관련 문서**:
-- [[wiki/Agents/Memory-and-Cognition/에이전트-네이티브-메모리-시스템-평가-연구-2026.md]]
+- [[wiki/Agents/Memory-and-Cognition/에이전트-네이티브-메모리-시스템-평가-연구-2026.md]]
 - [[wiki/Agents/Frameworks/Evaluations/000_Evaluations-MOC]]
 

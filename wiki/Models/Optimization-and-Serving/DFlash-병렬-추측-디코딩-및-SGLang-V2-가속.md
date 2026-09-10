@@ -19,5 +19,5 @@ tags: ["#wiki", "Speculative-Decoding", "DFlash", "SGLang-V2", "KV-Injection", "
 - Qwen3.5 397B-A17B와 결합 시 baseline 대비 4.3배, 네이티브 MTP 대비 1.5배의 throughput 향상을 벤치마크했습니다.
 
 ## 🔗 연결된 문서
-- [[wiki/Models/Optimization-and-Serving/로컬-AI-하드웨어-지형도-및-대역폭-병목-분석.md]] — 하드웨어 물리 대역폭 병목.
-- [[wiki/Models/Reasoning-and-Cognition/NextLat-잠재-공간-세계-모델-2026.md]] — 잠재 공간 수준에서 자가 추측 디코딩을 수행하는 NextLat 연구.
+- [[wiki/Models/Optimization-and-Serving/로컬-AI-하드웨어-지형도-및-대역폭-병목-분석.md]] — 하드웨어 물리 대역폭 병목.
+- [[wiki/Models/Reasoning-and-Cognition/NextLat-잠재-공간-세계-모델-2026.md]] — 잠재 공간 수준에서 자가 추측 디코딩을 수행하는 NextLat 연구.

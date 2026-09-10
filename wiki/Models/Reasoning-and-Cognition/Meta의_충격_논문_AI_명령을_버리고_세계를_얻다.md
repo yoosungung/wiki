@@ -1,7 +1,7 @@
 ---
 title: Meta의_충격_논문_AI_명령을_버리고_세계를_얻다
 related_raw:
-  - "[[wiki/Models/Reasoning-and-Cognition/Meta의_충격_논문_AI_명령을_버리고_세계를_얻다]]"
+  - "[[wiki/Models/Reasoning-and-Cognition/Meta의_충격_논문_AI_명령을_버리고_세계를_얻다]]"
 tags:
   - wiki
   - ai_core

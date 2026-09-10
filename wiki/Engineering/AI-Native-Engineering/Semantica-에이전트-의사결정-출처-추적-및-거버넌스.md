@@ -30,4 +30,4 @@ updated: "2026-08-24"
 ---
 **관련 문서**:
 - [[wiki/Engineering/AI-Native-Engineering/000_AI-Native-Engineering-MOC.md]]
-- [[wiki/Engineering/Data-and-Security/SkillSpector-에이전트-스킬-보안-취약점-스캐너.md]]
+- [[wiki/Engineering/Data-and-Security/SkillSpector-에이전트-스킬-보안-취약점-스캐너.md]]

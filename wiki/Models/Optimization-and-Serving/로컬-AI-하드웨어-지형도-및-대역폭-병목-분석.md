@@ -27,5 +27,5 @@ tags: ["#wiki", "Hardware", "Memory-Bandwidth", "Local-AI", "AI-PC", "System-Bot
 - **텐스토렌트**: 500 GB/s 대역폭을 제공하는 Wormhole/Blackhole 하드웨어를 바탕으로, 독점 라이브러리에 종속되지 않는 완전한 오픈소스 소프트웨어 컴파일 스택을 지향하고 있습니다.
 
 ## 🔗 연결된 문서
-- [[wiki/Models/Optimization-and-Serving/DFlash-병렬-추측-디코딩-및-SGLang-V2-가속.md]] — 메모리 대역폭 병목 하에서도 알고리즘적으로 가속을 유도하는 디코딩 기술.
+- [[wiki/Models/Optimization-and-Serving/DFlash-병렬-추측-디코딩-및-SGLang-V2-가속.md]] — 메모리 대역폭 병목 하에서도 알고리즘적으로 가속을 유도하는 디코딩 기술.
 - [[index.md]]

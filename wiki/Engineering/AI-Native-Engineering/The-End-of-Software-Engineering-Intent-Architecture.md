@@ -77,6 +77,6 @@ graph TD
 
 ## 🔗 관련 문서
 - [[wiki/Engineering/AI-Native-Engineering/000_AI-Native-Engineering-MOC.md|AI-Native-Engineering MOC]]
-- [[wiki/Engineering/AI-Native-Engineering/AI-시대의-제품-개발-역할군-5대-원형.md|AI 시대의 제품 개발 역할군 5대 원형]]
+- [[wiki/Engineering/AI-Native-Engineering/AI-시대의-제품-개발-역할군-5대-원형.md|AI 시대의 제품 개발 역할군 5대 원형]]
 - [[wiki/Engineering/AI-Native-Engineering/Agentic-Software-Factory.md|Agentic Software Factory]]
 - [[wiki/Agents/Coding-and-Engineering/000_Coding-and-Engineering-MOC.md|Coding-and-Engineering MOC]]

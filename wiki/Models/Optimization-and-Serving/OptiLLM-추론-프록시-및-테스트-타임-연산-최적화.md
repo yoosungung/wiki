@@ -89,7 +89,7 @@ OptiLLM은 확장 가능한 구조를 지니고 있어, `/plugins` 폴더 내에
 ---
 
 ## 🔗 관련 문서 링크
-- 테스트 타임 컴퓨트 제어: [[wiki/Models/Reasoning-and-Cognition/추론-LLM-추론-노력-제어-및-스케일링.md]]
-- 에이전트 토큰 경제학 분석: [[wiki/Agents/Coding-and-Engineering/하네스-핸드북-및-하네스-이펙트-연구-2026.md]]
+- 테스트 타임 컴퓨트 제어: [[wiki/Models/Reasoning-and-Cognition/추론-LLM-추론-노력-제어-및-스케일링.md]]
+- 에이전트 토큰 경제학 분석: [[wiki/Agents/Coding-and-Engineering/하네스-핸드북-및-하네스-이펙트-연구-2026.md]]
 - [[wiki/Models/Optimization-and-Serving/000_Optimization-and-Serving-MOC.md]]
 - [[index.md]]

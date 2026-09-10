@@ -37,7 +37,7 @@ related_raw: ["[[2026-07-06-block_autonomous_development_delivery_platform.md]]"
 
 ---
 **관련 문서**:
-- [[wiki/Agents/Coding-and-Engineering/루프-엔지니어링-패러다임-및-피드백-시스템-설계.md]]
-- [[wiki/Engineering/AI-Native-Engineering/AI-시대의-제품-개발-역할군-5대-원형.md]]
-- [[wiki/Engineering/AI-Native-Engineering/Open-Design-에이전트-네이티브-디자인-워크스페이스.md]]
+- [[wiki/Agents/Coding-and-Engineering/루프-엔지니어링-패러다임-및-피드백-시스템-설계.md]]
+- [[wiki/Engineering/AI-Native-Engineering/AI-시대의-제품-개발-역할군-5대-원형.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Open-Design-에이전트-네이티브-디자인-워크스페이스.md]]
 

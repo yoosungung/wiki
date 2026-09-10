@@ -40,5 +40,5 @@ related_raw: ["[[2026-06-11-WWDC26-Core-AI-Siri-AI-Research.md]]", "[[2026-06-12
 
 ---
 **관련 문서**:
-- [[wiki/Models/Optimization-and-Serving/스마트폰-환경의-LLM-서빙-기술-2026]]
-- [[wiki/Agents/Frameworks/차세대-자율-수행-에이전트-분석-2026]]
+- [[wiki/Models/Optimization-and-Serving/스마트폰-환경의-LLM-서빙-기술-2026]]
+- [[wiki/Agents/Frameworks/차세대-자율-수행-에이전트-분석-2026]]

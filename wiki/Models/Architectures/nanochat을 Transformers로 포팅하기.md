@@ -1,7 +1,7 @@
 ---
 title: nanochat을 Transformers로 포팅하기
 related_raw:
-  - "[[wiki/Models/Architectures/nanochat을 Transformers로 포팅하기]]"
+  - "[[wiki/Models/Architectures/nanochat을 Transformers로 포팅하기]]"
 tags:
   - wiki
   - ai_core
@@ -34,7 +34,7 @@ Andrej Karpathy의 nanochat 프로젝트를 Hugging Face의 `transformers` 라�
 
 ## 관련 노트
 
-- [[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리 - Part 2 - 아키텍처와 구현]]
-- [[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리 - Part 3 - 심화 학습]]
-- [[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리를 깊이 이해]]
+- [[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리 - Part 2 - 아키텍처와 구현]]
+- [[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리 - Part 3 - 심화 학습]]
+- [[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리를 깊이 이해]]
 - [[wiki/Models/Architectures/Weight-sparse transformers have interpretable circuits]]

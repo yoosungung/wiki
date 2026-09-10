@@ -40,4 +40,4 @@ ICLR 2025 등 최신 인공지능 학회에서는 이 두 패러다임의 장점
 ## 🔗 연결된 문서
 - [[wiki/Models/Architectures/000_Architectures-MOC.md]]
 - [[wiki/Models/Architectures/Diffusion-Language-Models-dLLM.md]]
-- [[wiki/Models/Optimization-and-Serving/스마트폰-환경의-LLM-서빙-기술-2026.md]]
+- [[wiki/Models/Optimization-and-Serving/스마트폰-환경의-LLM-서빙-기술-2026.md]]

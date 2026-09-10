@@ -23,4 +23,4 @@ AI 기술의 급격한 발전과 자율형 에이전트의 등장에 따라, 정
 
 ---
 **관련 문서**:
-- [[wiki/Engineering/Data-and-Security/SkillSpector-에이전트-스킬-보안-취약점-스캐너.md]]
+- [[wiki/Engineering/Data-and-Security/SkillSpector-에이전트-스킬-보안-취약점-스캐너.md]]

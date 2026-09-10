@@ -13,5 +13,5 @@ tags: ["#wiki", "omniparse", "Data-Parsing", "RAG-Ingestion", "Multi-Format"]
 - **로컬 보안 처리**: 모든 전처리 엔진이 로컬 자원(GPU/CPU)을 사용하므로, 민감한 환자 정보나 기밀 기업 문서를 외부 클라우드 API로 송출할 필요가 없어 높은 정보 보안 수준을 유지합니다.
 
 ## 🔗 연결된 문서
-- [[wiki/RAG/SOTA-OCR-및-문서-정규화-기술.md]] — SOTA OCR 엔진과의 결합.
+- [[wiki/RAG/SOTA-OCR-및-문서-정규화-기술.md]] — SOTA OCR 엔진과의 결합.
 - [[wiki/RAG/000_RAG-MOC.md]]

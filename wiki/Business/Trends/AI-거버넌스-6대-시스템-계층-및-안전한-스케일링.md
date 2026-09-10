@@ -47,6 +47,6 @@ graph TD
 
 ## 🔗 연결된 문서
 - [[wiki/Business/Trends/000_Trends-MOC.md]]
-- [[wiki/Agents/Implementation/FDE-대비-AI-엔지니어-및-객체-중심-에이전트-거버넌스.md]]
+- [[wiki/Agents/Implementation/FDE-대비-AI-엔지니어-및-객체-중심-에이전트-거버넌스.md]]
 - [[wiki/Engineering/Data-and-Security/000_Data-and-Security-MOC.md]]
 - [[index.md]]
