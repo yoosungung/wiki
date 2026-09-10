@@ -62,7 +62,21 @@ HyperAgent는 단순한 대행을 넘어 에이전트 스스로의 성능을 개
 - **GuardClaw Open Auto Mode & Cryptographic Ledger (2026-09-03)**: 에이전트-도구 간 독립 보안 판정 미들웨어. 실시간 0–100 리스크 스코어링(Auto vs Monitor), 다단계 세션 전체 궤적(Trajectory) 추적, 사용자 승인/거부 기반 적응형 학습, 변조 방지 암호학적 서명 원장을 통한 오프라인 감사 가능성 확보. 상세는 [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md]] §2.16.
 - **OpenClaw Task Flow (2026-08-22)**: background task 위 내구성 멀티스텝(managed/mirrored). CLI `openclaw tasks flow list|show|cancel`. 정본 동일 §2.15.
 - **WebMCP & Sandbox Isolation (2026-08-28 정정 · 2026-08-29 OT)**: W3C WebML CG 제안의 **브라우저 탭용 MCP**. 사이트가 `document.modelContext.registerTool`(+ HTML form declarative 주석)로 JSON Schema 도구를 등록하면, 에이전트는 스크린샷/DOM 추측 대신 구조화 호출을 한다. Chrome 공식: `chrome://flags/#enable-webmcp-testing`, Permissions Policy **`tools`**(기본 `self`, cross-origin iframe 비활성). 로컬·human-in-the-loop 중심(헤드리스 1급 아님). 2차 보고: Chrome **149–156 origin trial**(146 flag 프리뷰에서 승격), Chrome 150에서 `navigator.modelContext`→`document.modelContext` rename(구 API alias 유지), ChromeStatus **Shipping 목표 157**·OT 종료 **~2026-11-16**(토큰 없으면 `registerTool` silent no-op). 소비 에이전트는 당분간 Gemini in Chrome. Shopify Liquid·Cloudflare 프런트 기본 노출은 상거래 표면 확대 신호이나 브라우저 지원 표와 별개로 검증. 백엔드 MCP 서버와 구분 — WebMCP는 **페이지가 툴 서버**. [[wiki/Engineering/Development-Environment/WebGPU-및-WebNN-표준화-현황-2026.md]] §WebMCP.
-- **Goose Framework (Block 개발)**: 소프트웨어 엔지니어링 에이전트 개발을 위해 설계된 오픈소스 MAS 프레임워크입니다. 모델-도구 연결에 MCP(Model Context Protocol)를 네이티브 채택하였으며, 대규모 코드 마이그레이션, 테스트 코드 생성 등 개발 프로세스를 자동 오케스트레이션하는 데 특화되어 있습니다. Chrome DevTools MCP 경로로 WebMCP 사이트 도구를 연결하는 가이드가 공개되어 있다.
+- **Goose Framework (Block 개발)**: 소프트웨어 엔지니어링 에이전트 개발을 위해 설계된 오픈소스 MAS 프레임워크입니다. 모델-도구 연결에 MCP(Model Context Protocol)를 네이티브 채택하였으며, 대규모 코드 마이그레이션, 테스트 코드 생성 등 개발 프로세스를 자동 오케스트레이션하는 데 특화되어 있습니다.
+- **Goose × Chrome DevTools MCP × WebMCP (2026-09-10)**: 페이지가 `document.modelContext.registerTool`로 등록한 도구를 Goose가 쓰려면 **Chrome DevTools MCP 브리지**가 필요하다. 검증된 기동 예:
+
+```bash
+npx -y chrome-devtools-mcp@latest \
+  --isolated \
+  --categoryExperimentalWebmcp=true \
+  --chromeArg=--enable-features=WebMCPTesting,DevToolsWebMCPSupport
+```
+
+  - `--categoryExperimentalWebmcp=true`: DevTools MCP의 experimental WebMCP discover/execute.
+  - `WebMCPTesting` + `DevToolsWebMCPSupport`: 브라우저 쪽 WebMCP 플래그(버전별 변경 가능 — 문서 재확인).
+  - `--isolated`: 프로필 락을 피하려는 테스트용(WebMCP 필수 아님).
+  - **공유 상태 패턴**: `get_page_context`처럼 현재 선택 상품·미리보기·뷰를 노출하면, 사람이 UI에서 고른 객체를 에이전트가 ID 없이 이해한다. 워크플로는 작은 도구를 조합하고, 적용/게시 같은 side-effect는 사람 승인 경계를 둔다.
+  - **검증 함정**: 결과가 맞아도 DOM snapshot/브라우저 자동화로 처리했을 수 있다 — **실제 tool call이 WebMCP 등록 도구인지** 확인한다. 상세: [[wiki/Agents/Frameworks/Goose-AI-Agent-Framework.md]].
 - **Zero-Trust Security**: 에이전트 간 모든 데이터 핸드오프에 디지털 서명과 감사를 적용하는 아키텍처가 표준으로 자리 잡음.
 - **God Model의 종말**: 단일 거대 모델 대신 **Supervisor-Worker** 구조의 MAS 선호.
 - **상호운용성 표준**: MCP(Model Context Protocol) 및 A2A(Agent-to-Agent) 프로토콜을 통한 벤더 간 에이전트 협업.

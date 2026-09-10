@@ -625,3 +625,8 @@
 | 2026-09-10 | SYNTHESIZE | wiki/Engineering, wiki/Models | 4 | K8s 의도적 scale-0 allowlist 및 SGLang 31b 1/1 건강 점검 갱신; W3C WebNN Candidate Recommendation Draft(2026-09-04) 및 WebGPU 연동 반영; KaTeX 통화 기호 정제 |
 | 2026-09-10 | CLEANUP | inbox/, Root | 2 | inbox/ta/2026-09-10-k8s-daily-report.md git rm; D-2 데일리(2026-09-08.md) git rm |
 | 2026-09-10 | LINT | Root / wiki | ALL | 2026-09-10.md 데일리 생성, auto_moc & update_index 실행, fix_wiki_links.py를 통한 위키 링크 동기화 |
+
+| 2026-09-10 | ALREADY_COVERED | inbox/ | 10 | GH-empty×5+aa→Github-Issue-Empty-Skip; pub-safety/radar/people→Publication-Gate; roadmap M4→Roadmap-Sync; duplicate Outcome seal→Schedule-Outcome (신규 claim) |
+| 2026-09-10 | RESEARCH | 연구_주제_관리.md | 8 | 8개 활성 과제 재탐색; Goose×WebMCP 공유상태·Chrome DevTools MCP 플래그 신규; LiteRT 0.16/Furiosa llm-d/Supermemory/Ossie ALREADY_COVERED |
+| 2026-09-10 | SYNTHESIZE | wiki/Agents, wiki/Models, wiki/Engineering | 5 | Goose WebMCP 브리지·OpenClaw/MAS 연동; Rebellions 서빙 자동컴파일 정합; Schedule-Outcome duplicate seal |
+| 2026-09-10 | CLEANUP | inbox/ | 10 | promote 완료 inbox 10건 git rm; 데일리 D-0/D-1만 유지 |

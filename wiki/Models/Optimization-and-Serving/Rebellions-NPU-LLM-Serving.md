@@ -3,6 +3,8 @@ title: "리벨리온 NPU 기반 고성능 LLM 서빙 최적화 (vLLM-RBLN)"
 related_raw: ["[[2026-05-12-Rebellions_LLM_Serving_Whitepaper.md]]"]
 tags: ["Models/Optimization", "NPU", "Rebellions", "vLLM", "Serving"]
 date: "2026-05-12"
+last_updated: "2026-09-10"
+updated: "2026-09-10"
 ---
 
 # 리벨리온 NPU 기반 LLM 서빙 최적화 기술
@@ -24,7 +26,9 @@ date: "2026-05-12"
 ## 3. 서빙 프레임워크: vLLM-RBLN
 - **vLLM 플러그인**: 기존 vLLM 기반 워크플로우를 코드 수정 없이 리벨리온 NPU에서 실행 가능하게 함.
 - **통합 런타임**: FlashAttention과 PagedAttention을 통합된 연산 그래프 및 메모리 모델 내에서 실행.
-- **향후 계획**: `torch.compile()`과의 네이티브 통합을 통해 별도의 컴파일 단계 없는 심리스한 사용자 경험 제공 예정.
+- **자동 컴파일 (출시됨)**: vLLM API로 추론을 직접 실행하면 **자동 컴파일**이 수행되어, 별도 `Optimum RBLN` 사전 컴파일 단계가 필수가 아님(콜드 스타트 후 캐시·웜 스타트). 상세·EXAONE 경로: [[wiki/Models/Optimization-and-Serving/리벨리온-ATOM-Max-기반-EXAONE-4.5-최적화-가이드.md]].
+- **디바이스 env**: `VLLM_RBLN_TP_SIZE` → `VLLM_RBLN_NUM_DEVICES_PER_LOCAL_RANK`(레거시 이름은 deprecation warning).
+- **모델**: Gemma4·EXAONE-4.5 등 — [[wiki/Models/Optimization-and-Serving/리벨리온-ATOM-Max-NPU-및-vLLM-RBLN-최신-동향-2026.md]].
 
 ## 4. 분산 시스템: RSD (Rebellions Scalable Design)
 - 단일 기기를 넘어 랙 및 데이터 센터 규모로 확장 가능.

@@ -1,10 +1,10 @@
 ---
 title: Goose AI 에이전트 프레임워크
 status: published
-tags: [Agents, Frameworks, GooseAI, OpenSource, MCP]
+tags: [Agents, Frameworks, GooseAI, OpenSource, MCP, WebMCP]
 related_raw: ["[[raw/2026-08-31-goose-agent-framework-engineering-ai-maturity-model.md]]", "[[raw/2026-08-30-goose-framework-aaif-agentic-engineering.md]]", "[[2026-05-08-goose-ai-future-of-work.md]]"]
-last_updated: "2026-08-31"
-updated: "2026-08-31"
+last_updated: "2026-09-10"
+updated: "2026-09-10"
 ---
 
 # Goose AI (구스): 블록(Block)의 오픈소스 에이전트 프레임워크
@@ -26,7 +26,33 @@ updated: "2026-08-31"
 
 ### 4. MCP(Model Context Protocol) 통합
 - [[wiki/Agents/Frameworks/MCP/000_MCP-MOC.md|MCP]]의 **공식 래퍼런스 구현체** 역할을 수행하며, 로컬 파일 시스템, 외부 API 도구 등을 손쉽게 융합해 쓸 수 있습니다.
-- 조직의 에이전틱 엔지니어링 성숙도 모델(Level 3~8)에서 자율 Task 수행을 위한 실천적인 인프라 툴로 채택됩니다. (상세는 [[wiki/Agents/Coding-and-Engineering/에이전트-기반-엔지니어링-조직-전환-및-성숙도-모델.md|에이전트 엔지니어링 성숙도 모델]] 참조)
+- 조직의 에이전틱 엔지니어링 성숙도 모델(Level 3~8)에서 자율 Task 수행을 위한 실천적인 인프라 툴로 채택됩니다. (상세는 [[wiki/Agents/Coding-and-Engineering/에이전트-기반-엔지니어링-조직-전환-및-성숙도-모델.md|에이전트 엔지니어링 성숙도 모델]] 참조)
+
+## 🌐 Goose × WebMCP (Chrome DevTools MCP 브리지, 2026-09-10)
+
+WebMCP는 **페이지가 툴 서버**인 브라우저 표준이다(백엔드 MCP 서버와 별개). Goose가 페이지 등록 도구를 쓰려면 Chrome DevTools MCP로 브라우저에 붙인다.
+
+```bash
+npx -y chrome-devtools-mcp@latest \
+  --isolated \
+  --categoryExperimentalWebmcp=true \
+  --chromeArg=--enable-features=WebMCPTesting,DevToolsWebMCPSupport
+```
+
+| 플래그 | 역할 |
+| --- | --- |
+| `--categoryExperimentalWebmcp=true` | DevTools MCP의 WebMCP discover/execute |
+| `WebMCPTesting`, `DevToolsWebMCPSupport` | Chrome WebMCP 실험 플래그(버전별 재확인) |
+| `--isolated` | 임시 프로필로 락 회피(선택) |
+
+**설계 패턴**
+
+1. `document.modelContext.registerTool`로 **작은 단위** 도구 노출(`get_page_context`, `select_product`, `apply_*` 등).
+2. **공유 상태**: 사람이 UI에서 고른 객체를 `get_page_context`로 노출 → 에이전트는 상품 ID를 추측하지 않음.
+3. side-effect(적용·게시)는 미리보기/승인 경계를 페이지 상태에 둔다.
+4. 성공 결과만 보지 말고 **tool call이 WebMCP인지** 확인(DOM snapshot 폴백 함정).
+
+참고: [What Does WebMCP Really Unlock?](https://dev.to/cloudinary/what-does-webmcp-really-unlock-dj4) (Goose + Cloudinary merchant demo, 2026-09-10). 표준·OT 일정: [[wiki/Agents/Multi-Agent-and-Orchestration/OpenClaw-및-HyperAgent-기반-MAS-아키텍처.md]].
 
 ## 📉 사회적 및 경제적 함의 (구스쇼크)
 - **노동의 재정의**: 인간의 역할이 '실행자'에서 문제를 정의하고 행동을 규정하는 '설계자'로 강제 이주되고 있음을 보여줍니다.
@@ -41,5 +67,5 @@ updated: "2026-08-31"
 - [[wiki/Agents/Frameworks/000_Frameworks-MOC.md]]
 - [[wiki/Agents/Frameworks/MCP/000_MCP-MOC.md]]
 - [[wiki/Business/Trends/AI-Agent-Economy.md]]
-- [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md]]
-
+- [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md]]
+- [[wiki/Agents/Multi-Agent-and-Orchestration/OpenClaw-및-HyperAgent-기반-MAS-아키텍처.md]]
