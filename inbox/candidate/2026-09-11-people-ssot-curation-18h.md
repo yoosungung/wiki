@@ -1,10 +1,11 @@
 ---
 id: inbox-candidate-2026-09-11-people-ssot-curation-18h
 agent: candidate
-ticket_id: pending
+ticket_id: 1889
 updated: 2026-09-11
 status: inbox
 sources:
+  - ticket:1889
   - schedule:people-ssot-curation-18h-kst
   - wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md
 ---
