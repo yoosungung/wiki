@@ -3,8 +3,8 @@ title: "Supermemory: 에이전트 네이티브 메모리 시스템 및 MCP 아�
 tags: ["Agents", "Implementation", "Memory", "Supermemory", "MCP", "SMFS", "Cloudflare"]
 type: "wiki"
 status: "published"
-last_updated: "2026-09-01"
-updated: "2026-09-01"
+last_updated: "2026-09-11"
+updated: "2026-09-11"
 related_raw: ["[[raw/2026-08-31-mcp-memory-servers-stateless-letta-mem0.md]]", "[[raw/2026-08-28-supermemory-memory-governance-auto-decay.md]]", "[[2026-08-27-supermemory_mcp_memory_governance.md]]", "[[2026-08-25-supermemory-mcp-v4-tool-surface.md]]", "[[2026-08-24-supermemory-team-mcp-permissions.md]]", "[[2026-08-24-supermemory-python-sdk-profile-dedupe.md]]", "[[2026-08-18-supermemory-dynamic-dreaming-sla.md]]", "[[2026-08-17-supermemory-memorybench-skill-pipeline.md]]", "[[2026-08-08-supermemory-forget-matching-ids.md]]", "[[2026-08-02-supermemory-company-brain-skills.md]]", "[[2026-07-29-supermemory-company-brain-proactivity-nova.md]]", "[[2026-07-28-supermemory-company-brain-custom-mcp.md]]", "[[2026-07-26-supermemory-chatgpt-mcp-setup.md]]", "[[2026-07-25-supermemory-cursor-agents-company-brain.md]]", "[[2026-07-24-supermemory-mcp-scope-opencode.md]]", "[[2026-07-23-supermemory-agents-memory-workspace.md]]", "[[2026-07-22-supermemory-company-brain-open-signup.md]]", "[[2026-07-21-supermemory-mcp-tool-safety-annotations.md]]", "[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]", "[[2026-07-12-supermemory-local-6767-cli-mcp-context.md]]", "[[raw/2026-07-13-sadik-mohammad-rag-systems-limitations.md]]", "[[2026-07-13-supermemory-openclaw-claude-plugins.md]]", "[[2026-07-16-supermemory_ai_memory_layer_analysis.md]]", "[[2026-07-18-supermemory-server-v0.0.5-pluggable-embeddings.md]]", "[[2026-07-19-supermemory-server-v0.0.6-windows.md]]"]
 ---
 
@@ -519,6 +519,23 @@ from supermemory_openai.middleware import SupermemoryMiddleware  # 예시 경로
 - **HTTP API v3**: `POST /v3/add`, `POST /v3/search` — [OpenAPI](https://supermemory.ai/openapi.json).
 
 레거시 클라이언트가 `memory`/`recall` 이름을 쓰면 최신 MCP 4.0 도구명으로 매핑해 호출한다.
+
+### 3.3 Supermemory Learner-1 지속 학습 엔진 및 tools v2.0.0 (2026-09-11 업데이트)
+
+2026년 9월, Supermemory는 단순 사실 추출/검색을 넘어 에이전트의 자기 진화를 위한 **"Learner-1"**과 멀티 프레임워크 호환 도구 규격인 **`supermemory/tools` v2.0.0**을 발표했습니다.
+
+1. **Learner-1 지속 학습 (Continual Learning) 엔진**:
+   - 상호작용 과정에서 파편화된 사실을 저장하는 데 그치지 않고, 에이전트의 작업 습관, 코드 리뷰 피드백, 도메인 컨벤션을 능동적으로 학습하여 인컨텍스트 메모리(In-Context Memory) 정책으로 진화시킵니다.
+   - 시간이 지나며 지속적으로 모델이 적응(Adaptation)할 수 있는 가드레일 기반 학습 메커니즘을 제공합니다.
+2. **`supermemory/tools` v2.0.0 멀티 프레임워크 통합**:
+   - Vercel AI SDK, Mastra, LangGraph 등 이종 에이전트 SDK 간의 호출 인터페이스를 단일 규격으로 표준화했습니다.
+   - **Conversation Identity**를 1급 객체(First-Class Citizen)로 공식 도입하여, 멀티 에이전트 협업 시 각 에이전트의 발화 맥락과 세션 정체성을 분리하여 메모리를 색인하고 격리합니다.
+3. **표준 MCP 클라이언트 연동 규격**:
+   ```bash
+   # 원격 MCP 서버 즉시 연동 (Claude Desktop, Cursor, Windsurf 등)
+   npx -y mcp-remote@latest https://mcp.supermemory.ai/mcp
+   ```
+   - OAuth 인증이 기본 연동되며, CI/CD 및 헤드리스 에이전트 환경에서는 `Authorization: Bearer sm_...` 헤더를 통해 무인증(Headless) 세션을 즉시 기동할 수 있습니다.
 
 ---
 

@@ -3,8 +3,8 @@ title: "온디바이스 AI 및 AI PC 기술 트렌드 (2026)"
 tags: ["On-Device", "AI-PC", "NPU", "Lunar-Lake", "Strix-Point", "Copilot+", "Agentic-AI"]
 type: "wiki"
 status: "published"
-last_updated: "2026-09-09"
-updated: "2026-09-09"
+last_updated: "2026-09-11"
+updated: "2026-09-11"
 related_raw: ["[[raw/2026-09-05-openvino-panther-lake-npu5-device-lost.md]]", "[[raw/2026-08-30-on-device-ai-pc-spark-gorgon-panther.md]]", "[[raw/2026-08-28-on-device-ai-trends-rtx-spark-strix-halo-panther-lake.md]]", "[[2026-08-27-on_device_ai_trends_2026_uma.md]]", "[[2026-08-23-panther-lake-npu5-realworld-llm-benchmarks.md]]", "[[2026-06-15-On-Device-AI-PC-Trends-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-on_device_ai_pc_agentic_trends.md]]", "[[2026-06-28-on_device_ai_trends_and_agentic_ai_2026.md]]", "[[2026-06-30-on_device_ai_trends_intel_amd_nvidia.md]]", "[[2026-07-01-on-device-ai-pc-hardware-trends.md]]", "[[2026-07-07-on-device-ai-trends-2026-ryzen-ai-max-panther-lake-rtx-spark.md]]", "[[2026-07-11-on_device_ai_pc_trends_strix_halo_panther_lake_rtx_spark.md]]", "[[2026-07-12-on-device-ai-pc-ryzen-ai-halo-npu-reality.md]]", "[[2026-07-13-ryzen-ai-halo-developer-center-bkc.md]]", "[[2026-07-17-ryzen-ai-halo-phoronix-shipping.md]]"]
 ---
 
@@ -16,7 +16,7 @@ related_raw: ["[[raw/2026-09-05-openvino-panther-lake-npu5-device-lost.md]]", "[
 
 | 제조사 | 플랫폼 | 주요 사양 | 핵심 포지셔닝 |
 | :--- | :--- | :--- | :--- |
-| **Intel** | **Lunar Lake (Core Ultra 2) / Panther Lake (Core Ultra 3)** | Intel 18A 공정 / NPU 5 (~50 TOPS, FP8 native 지원) / Xe3-LPG (Battlemage) iGPU (~120 TOPS) / Up to 128GB RAM | 30~70B 파라미터 로컬 모델 구동 가능. Lunar Lake의 NPU 4(48 TOPS) 대비 Panther Lake NPU 5는 플랫폼 총 180 TOPS 처리 지원(CPU, GPU, NPU 분산) 및 높은 면적 효율성 확보. (2026-07-08 업데이트) Panther Lake는 NPU 5(50 TOPS)와 Xe3-LPG GPU(120 TOPS)를 조합하여 경량 상시 AI 연산과 집중형 생성 AI 워크로드를 하이브리드로 완벽 분산 처리합니다. |
+| **Intel** | **Lunar Lake (Core Ultra 2) / Panther Lake (Core Ultra 3)** | Intel 18A 공정 / NPU 5 (~50 TOPS, FP8 native 지원) / Xe3-LPG (Battlemage) iGPU (~120 TOPS) / Up to 128GB RAM | 30~70B 파라미터 로컬 모델 구동 가능. Lunar Lake의 NPU 4(48 TOPS) 대비 Panther Lake NPU 5는 플랫폼 총 180 TOPS 처리 지원(CPU, GPU, NPU 분산) 및 높은 면적 효율성 확보. (2026-07-08 업데이트) Panther Lake는 NPU 5(50 TOPS)와 Xe3-LPG GPU(120 TOPS)를 조합하여 경량 상시 AI 연산과 집중형 생성 AI 워크로드를 하이브리드로 완벽 분산 처리합니다. Google LiteRT 2.2.0에서 Lunar Lake/Panther Lake NPU에 대한 Full JIT/AOT 하드웨어 가속 지원이 추가되어, OpenVINO 외에도 크로스플랫폼 NPU 직접 컴파일 경로가 공식 개방되었습니다 (2026-09-11). |
 | **AMD** | **Strix Halo / Gorgon Halo (Ryzen AI Max 300)** | 16 'Zen 5' CPU cores / Radeon 8060S (40 RDNA 3.5 CUs) / XDNA 2 NPU (50 TOPS) / Up to 128GB (Strix) → **192GB (Gorgon Halo, 2026 H2)** Unified LPDDR5X | **PS5 / RTX 4060급 GPU 성능** 통합. Strix Halo는 128GB unified memory로 70B~200B 모델 로컬 추론 지원. **Gorgon Halo**는 Computex 2026에서 RTX Spark 대응 SKU로 192GB 메모리 확장을 예고. (2026-07-11 PM 업데이트) |
 | **NVIDIA** | **RTX Spark / RTX GPU** | **1 Petaflop (FP4)** / 20-core Arm CPU (MediaTek) + Blackwell RTX GPU / 70B transistors (TSMC 3nm) / 128GB Unified LPDDR5X | GTC Taipei/COMPUTEX 2026 공식 런칭. **120B 로컬 에이전트 + 1M 토큰 컨텍스트** 목표. Microsoft **OpenShell** + Windows 보안 프리미티브로 primary PC 에이전트 샌드박스. Adobe Photoshop/Premiere 네이티브 재설계. (2026-07-11 PM 업데이트) |
 | **Qualcomm** | **Snapdragon X2** | NPU 80+ TOPS | Always-On 연결성 및 저전력 배터리 특화. |
@@ -134,7 +134,13 @@ for device in ("NPU", "GPU", "CPU"):
 
 출처: [vibetric Panther Lake 리뷰](https://vibetric.com/intel-panther-lake-review-2026/) · [Intel Newsroom](https://newsroom.intel.com/client-computing/intel-unveils-panther-lake-architecture-first-ai-pc-platform-built-on-18a) · [openvino#36161](https://github.com/openvinotoolkit/openvino/issues/36161)
 
-## 5.2 모바일/에지 비디오 AI 서멀 스로틀링 극복 패턴
+### 5.2 LiteRT v2.2.0의 Intel Lunar Lake & Panther Lake NPU 정식 가속 (2026-09-11 업데이트)
+
+기존 Intel AI PC 생태계는 주로 OpenVINO(GenAI) 파이프라인에 의존했으나, Google AI Edge의 **LiteRT v2.2.0** 릴리스를 통해 **Lunar Lake(NPU 4)** 및 **Panther Lake(NPU 5)** 하드웨어에 대한 **Full JIT/AOT 컴파일 가속 백엔드**가 공식 지원되었습니다.
+- **의의**: OpenVINO의 런타임 드라이버/Level Zero 의존성으로 인한 `DEVICE_LOST` 크래시(§5.1) 상황에서, 모바일·웹·임베디드와 동일한 LiteRT 단일 모델 바이너리(`.litertlm`/Compiled Model)로 Intel NPU를 직접 구동할 수 있는 대체 서빙 경로가 확보되었습니다.
+- **GPU 보완**: LiteRT 2.2.0의 `kLiteRtDelegatePrecisionFp16WithFp32Accum` 모드와 RoPE 합성 연산자를 통해 Xe2/Xe3 iGPU에서도 FP32 누산 안정성을 확보한 상태로 LLM 디코딩을 최대 5% 가속합니다. Rust 환경에서는 crates.io의 `google-ai-edge-litert`를 통해 C++ SDK 바인딩을 네이티브로 직접 엮을 수 있습니다.
+
+## 5.3 모바일/에지 비디오 AI 서멀 스로틀링 극복 패턴
 상세 분석: [[wiki/Models/Optimization-and-Serving/On-Device-Agentic-Video-Pipeline-and-Thermal-Optimization.md]]
 - **The Caveman Bottleneck**: 단말에서 고해상도(4K) 비디오 프레임을 연속 전수 분석할 때 발생하는 AP/NPU 발열 누적 및 강제 다운클럭/프로세스 킬 현상.
 - **프레임 스트라이딩(Frame Striding)**: 장면 전환율과 움직임 변화에 맞춰 분석 간격을 동적으로 조절하여 칩셋 쿨다운을 유도.

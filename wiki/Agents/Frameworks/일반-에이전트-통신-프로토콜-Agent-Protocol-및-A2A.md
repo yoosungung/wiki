@@ -3,8 +3,8 @@ title: "일반 에이전트 통신 프로토콜: Agent Protocol 및 Google A2A"
 tags: ["Agents", "Frameworks", "AgentProtocol", "A2A", "Interoperability", "Open-Standards"]
 type: "wiki"
 status: "published"
-last_updated: "2026-07-07"
-updated: "2026-07-07"
+last_updated: "2026-09-11"
+updated: "2026-09-11"
 related_raw: ["[[2026-07-07-general-agent-protocols-agent-protocol-and-google-a2a.md]]"]
 ---
 
@@ -33,12 +33,15 @@ related_raw: ["[[2026-07-07-general-agent-protocols-agent-protocol-and-google-a2
 
 **Agent-to-Agent (A2A) 프로토콜**은 서로 다른 환경과 프레임워크에서 작동하는 **AI 에이전트 간의 상호 작용 및 협업**을 지원하는 오픈소스 애플리케이션 레이어 프로토콜입니다.
 
-* **배경**: 2025년 4월 Google이 최초 발표한 이후, 에이전트 생태계의 중립적인 성장을 위해 **Linux Foundation**에 기부되어 글로벌 연합(Google, IBM, MS, AWS 등) 체계로 운영되고 있습니다.
+* **배경 및 생태계**: 2025년 4월 Google이 최초 발표한 이후, 에이전트 생태계의 중립적인 성장을 위해 **Linux Foundation**에 기부되어 글로벌 연합(Google, IBM, MS, AWS 등 150개 이상 조직) 체계로 운영되고 있습니다.
 * **핵심 기능**:
-  * **에이전트 검색 (Agent Discovery)**: 에이전트는 자신의 역할, 가능 도구, 입력 포맷을 명시한 **'Agent Card(에이전트 카드)'**를 통해 네트워크에 자신의 존재를 알리고 다른 에이전트를 검색합니다.
+  * **에이전트 검색 (Agent Discovery)**: 에이전트는 자신의 역할, 가능 도구, 입력 포맷을 명시한 JSON 스키마인 **'Agent Card(에이전트 카드)'**를 표준 경로(`/.well-known/agent-card.json`)에 노출하여 네트워크 내 타 에이전트에 의해 자동 탐색됩니다.
   * **작업 위임 및 협업**: 단일 에이전트가 처리하기 어려운 작업을 타 에이전트에 위임하고, 하위 작업의 진행 상태를 실시간 트래킹하며 결과물(Artifacts)을 공유받습니다.
   * **상태 보호 (Encapsulation)**: 에이전트들이 내부 메모리, 프롬프트 템플릿, 로컬 도구를 외부에 노출하지 않으면서도 보안이 확보된 상태로 결과 데이터만 주고받을 수 있습니다.
-* **기술 스택**: 웹 표준 기술인 HTTP, JSON-RPC 2.0 및 실시간 상태 동기화를 위한 **SSE(Server-Sent Events)**를 차용합니다.
+* **기술 스택 및 SDK**: 웹 표준 기술인 HTTP, JSON-RPC 2.0 및 실시간 상태 동기화를 위한 **SSE(Server-Sent Events)**를 차용하며, Python, JavaScript, Java, Go, .NET, Rust 공식 SDK를 제공합니다.
+* **수평적 협업 vs 수직적 연동**:
+  - Anthropic의 **MCP**가 에이전트와 도구/데이터 소스 간의 **수직적(Vertical)** 연결을 담당한다면,
+  - **A2A**는 이종 프레임워크(LangGraph, CrewAI, Semantic Kernel 등) 간의 **수평적(Horizontal)** 에이전트 오케스트레이션을 담당하여 상호보완적 표준을 형성합니다.
 
 ---
 

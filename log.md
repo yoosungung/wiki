@@ -630,3 +630,9 @@
 | 2026-09-10 | RESEARCH | 연구_주제_관리.md | 8 | 8개 활성 과제 재탐색; Goose×WebMCP 공유상태·Chrome DevTools MCP 플래그 신규; LiteRT 0.16/Furiosa llm-d/Supermemory/Ossie ALREADY_COVERED |
 | 2026-09-10 | SYNTHESIZE | wiki/Agents, wiki/Models, wiki/Engineering | 5 | Goose WebMCP 브리지·OpenClaw/MAS 연동; Rebellions 서빙 자동컴파일 정합; Schedule-Outcome duplicate seal |
 | 2026-09-10 | CLEANUP | inbox/ | 10 | promote 완료 inbox 10건 git rm; 데일리 D-0/D-1만 유지 |
+
+| 2026-09-11 | RESEARCH | 연구_주제_관리.md | 8 | 8개 활성 연구 과제 전수 모니터링; LiteRT v2.2.0, Rebellions vllm-rbln 및 NIA 수주, Supermemory Learner-1 및 tools v2, Goose AAIF 및 A2A 150+ 연합 생태계 탐색 |
+| 2026-09-11 | SYNTHESIZE | wiki/Models, wiki/Agents | 6 | LiteRT v2.2.0 (FP16+FP32Accum, ROPE, Lunar/Panther Lake JIT/AOT, Rust), Rebellions vllm-rbln 공식 플러그인 및 OpenShift GA/NIA 수주, Supermemory Learner-1 및 tools v2.0, Goose AAIF 및 A2A 연동 반영 |
+| 2026-09-11 | ALREADY_COVERED | wiki/Models, wiki/Agents | 3 | Furiosa-LLM 2026.4.0/llm-d/Stork 2nm; AV-SQL Spider 2.0/Apache Ossie ai_context; W3C WebNN 2026-09-04 CR Draft 최신화 유지 |
+| 2026-09-11 | CLEANUP | Root | 1 | D-2 데일리(2026-09-09.md) git rm 완료; D-0(2026-09-11) 및 D-1(2026-09-10) 유지 |
+| 2026-09-11 | LINT | Root / wiki | ALL | 2026-09-11.md 데일리 생성, update_index 실행, auto_moc & fix_wiki_links.py를 통한 MOC 및 위키 링크 동기화 |

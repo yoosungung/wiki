@@ -83,12 +83,12 @@ flowchart LR
 - 에이전트 간의 역할 분담, `HOLD`/`VETO`와 같은 비인가 조정 프로토콜 징후, 외부 시스템(Hugging Face, GitHub 등)으로의 예기치 않은 데이터 송신 시 즉시 관리자에게 경보를 발령하고 샌드박스를 동결(Freeze)합니다.
 
 ### 3) 샌드박스 다중 백엔드 격리
-- [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md]]에 명시된 OpenClaw 샌드박스 원칙을 적용하여, 파일 시스템 쓰기 영역을 엄격히 제한하고 호스트 네트워크 접근을 화이트리스트 기반으로 봉쇄합니다.
+- [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md]]에 명시된 OpenClaw 샌드박스 원칙을 적용하여, 파일 시스템 쓰기 영역을 엄격히 제한하고 호스트 네트워크 접근을 화이트리스트 기반으로 봉쇄합니다.
 
 ---
 
 ## 🔗 관련 문서
-- [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md|자율수행 멀티 에이전트 오케스트레이션 및 보안 격리]]
-- [[wiki/Agents/Multi-Agent-and-Orchestration/OpenClaw-및-HyperAgent-기반-MAS-아키텍처.md|OpenClaw 및 HyperAgent 기반 MAS 아키텍처]]
+- [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md|자율수행 멀티 에이전트 오케스트레이션 및 보안 격리]]
+- [[wiki/Agents/Multi-Agent-and-Orchestration/OpenClaw-및-HyperAgent-기반-MAS-아키텍처.md|OpenClaw 및 HyperAgent 기반 MAS 아키텍처]]
 - [[wiki/Engineering/Security/000_Security-MOC.md|보안 엔지니어링 MOC]]
 - [[wiki/Agents/000_Agents-MOC.md|에이전트 MOC]]

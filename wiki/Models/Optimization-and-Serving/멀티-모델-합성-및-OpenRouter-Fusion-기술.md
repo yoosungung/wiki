@@ -35,5 +35,5 @@ OpenRouter에서 공개한 **Fusion**은 여러 LLM을 동시에 호출하고, �
 
 ---
 **관련 문서**:
-- [[wiki/Agents/Multi-Agent-and-Orchestration/OpenClaw-및-HyperAgent-기반-MAS-아키텍처]]
+- [[wiki/Agents/Multi-Agent-and-Orchestration/OpenClaw-및-HyperAgent-기반-MAS-아키텍처]]
 - [[wiki/Models/Optimization-and-Serving/000_Optimization-and-Serving-MOC]]

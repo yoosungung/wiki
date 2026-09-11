@@ -39,7 +39,7 @@ NPU, GPU, CPU 등 하드웨어 가속기를 직접 제어하여 신경망 추론
 - **로컬 활성화**: `chrome://flags/#enable-webmcp-testing` → Enabled → 재시작. Permissions Policy **`tools`**(기본 `self`; cross-origin iframe 비활성).
 - **상태 (Chrome 문서 + 2차)**: 공식은 human-in-the-loop 로컬 워크플로 중심. 2차 보고 — Chrome **149–156 public origin trial**, 주 소비 에이전트 Gemini in Chrome; Shopify/Cloudflare 기본 노출은 상거래 표면 확대 신호.
 - **OT 종료·Ship 목표 (2026-08-29)**: ChromeStatus 기준 OT desktop/Android/WebView **149→156**, **Shipping 목표 157**. 현장 보고: trial 토큰 만료·OT 종료 **~2026-11-16** 전후 — 토큰/`document.modelContext` 없으면 `registerTool`이 **silent no-op**. 로컬은 `chrome://flags/#enable-webmcp-testing`. 프로덕션 등록 코드는 **OT 토큰 서빙·feature-detect(`document.modelContext || navigator.modelContext`)** 없이 머지하지 말 것.
-- **참고**: [Chrome WebMCP](https://developer.chrome.com/docs/ai/webmcp) · MAS 적용 [[wiki/Agents/Multi-Agent-and-Orchestration/OpenClaw-및-HyperAgent-기반-MAS-아키텍처.md]]
+- **참고**: [Chrome WebMCP](https://developer.chrome.com/docs/ai/webmcp) · MAS 적용 [[wiki/Agents/Multi-Agent-and-Orchestration/OpenClaw-및-HyperAgent-기반-MAS-아키텍처.md]]
 
 ## 4. 웹 기반 LLM 서빙 및 실행 가속의 영향
 - **Wasm 3.0 Memory64 및 표준 런칭**: 2025년 9월 공식 표준 격상 및 런칭이 완료된 WebAssembly 3.0은 단순한 샌드박스를 넘어 보편적 라이브 런타임으로 이행했습니다. 핵심 기능인 **Memory64**를 통해 기존 32비트의 4GB 힙 메모리 한계를 극복하고 브라우저 실구현 기준 최대 **16GB**까지 주소 공간이 확장되어, 대용량 LLM 가중치 데이터(1B~8B 매개변수 모델)를 통째로 로드하여 실행할 수 있습니다. 또한 **Multiple Memories**를 기본 탑재하여 단일 모듈 내 격리된 다중 메모리 영역 접근 및 WebGPU 버퍼와의 zero-copy 매핑을 지원하며, Component Model(WASIp3) 도입을 통해 클라우드와 브라우저를 관통하는 이식성을 확보했습니다.

@@ -3,8 +3,8 @@ title: Goose AI 에이전트 프레임워크
 status: published
 tags: [Agents, Frameworks, GooseAI, OpenSource, MCP, WebMCP]
 related_raw: ["[[raw/2026-08-31-goose-agent-framework-engineering-ai-maturity-model.md]]", "[[raw/2026-08-30-goose-framework-aaif-agentic-engineering.md]]", "[[2026-05-08-goose-ai-future-of-work.md]]"]
-last_updated: "2026-09-10"
-updated: "2026-09-10"
+last_updated: "2026-09-11"
+updated: "2026-09-11"
 ---
 
 # Goose AI (구스): 블록(Block)의 오픈소스 에이전트 프레임워크
@@ -26,7 +26,7 @@ updated: "2026-09-10"
 
 ### 4. MCP(Model Context Protocol) 통합
 - [[wiki/Agents/Frameworks/MCP/000_MCP-MOC.md|MCP]]의 **공식 래퍼런스 구현체** 역할을 수행하며, 로컬 파일 시스템, 외부 API 도구 등을 손쉽게 융합해 쓸 수 있습니다.
-- 조직의 에이전틱 엔지니어링 성숙도 모델(Level 3~8)에서 자율 Task 수행을 위한 실천적인 인프라 툴로 채택됩니다. (상세는 [[wiki/Agents/Coding-and-Engineering/에이전트-기반-엔지니어링-조직-전환-및-성숙도-모델.md|에이전트 엔지니어링 성숙도 모델]] 참조)
+- 조직의 에이전틱 엔지니어링 성숙도 모델(Level 3~8)에서 자율 Task 수행을 위한 실천적인 인프라 툴로 채택됩니다. (상세는 [[wiki/Agents/Coding-and-Engineering/에이전트-기반-엔지니어링-조직-전환-및-성숙도-모델.md|에이전트 엔지니어링 성숙도 모델]] 참조)
 
 ## 🌐 Goose × WebMCP (Chrome DevTools MCP 브리지, 2026-09-10)
 
@@ -58,9 +58,9 @@ npx -y chrome-devtools-mcp@latest \
 - **노동의 재정의**: 인간의 역할이 '실행자'에서 문제를 정의하고 행동을 규정하는 '설계자'로 강제 이주되고 있음을 보여줍니다.
 - **기술의 민주화 vs 권력 집중**: 강력한 생산 수단을 대중에게 개방하는 동시에, 인간 노동의 가치를 비용 효율성 측면에서 해체하는 양가적 성격을 가집니다.
 
-## 🏛️ AAIF (Agentic AI Foundation) 기증 (2026년 업데이트)
-- **표준화 기구 이관**: 블록(Block)은 2026년 자체적으로 관리하던 `goose` 프레임워크를 리눅스 재단 산하의 **Agentic AI Foundation (AAIF)**에 공식 기증하였습니다.
-- **상호운용성 표준 수립**: AAIF는 Anthropic의 MCP(Model Context Protocol), OpenAI의 `AGENTS.md` 규격과 함께 `goose` 에이전트 실행 엔진을 3대 핵심 기둥으로 삼아 벤더 종속이 없는 오픈 에이전트 인프라 표준을 정의합니다.
+## 🏛️ AAIF (Agentic AI Foundation) 기증 및 오픈 거버넌스 (2026년 업데이트)
+- **표준화 기구 이관**: 블록(Block)은 자체적으로 관리하던 `goose` 프레임워크를 리눅스 재단(Linux Foundation) 산하의 **Agentic AI Foundation (AAIF)**에 공식 기증하여 오픈 거버넌스 체계로 이관했습니다.
+- **70개 이상의 MCP 도구 확장 및 상호운용성**: Anthropic의 MCP(Model Context Protocol) 표준과 완전히 정합되어 70개 이상의 MCP 확장 도구를 즉시 연결할 수 있는 벤더 중립적 오픈 에이전트 런타임으로 자리매김했습니다. WebMCP 브리지와 함께 웹 브라우저 내 등록 액션을 직접 호출합니다.
 - **에이전틱 엔지니어링(Agentic Engineering)**: 기존의 수동 코딩 패러다임에서 탈피해, 확률론적으로 동작하는 자율 에이전트 군(Swarms)의 오케스트레이션 설계, 컨텍스트 엔지니어링, 거버넌스를 설계하는 전문 규율로서의 '에이전틱 엔지니어링'이 새로운 핵심 기술 분과로 부상했습니다.
 
 ## 🔗 관련 문서

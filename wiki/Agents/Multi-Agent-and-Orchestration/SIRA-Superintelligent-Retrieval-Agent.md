@@ -69,5 +69,5 @@ SIRA는 MAS 환경에서 다른 협업 에이전트에게 필요한 컨텍스트
 
 ---
 **관련 문서**:
-- [[wiki/Agents/Multi-Agent-and-Orchestration/OpenClaw-및-HyperAgent-기반-MAS-아키텍처.md]]
+- [[wiki/Agents/Multi-Agent-and-Orchestration/OpenClaw-및-HyperAgent-기반-MAS-아키텍처.md]]
 - [[wiki/Agents/Multi-Agent-and-Orchestration/000_Multi-Agent-and-Orchestration-MOC.md]]

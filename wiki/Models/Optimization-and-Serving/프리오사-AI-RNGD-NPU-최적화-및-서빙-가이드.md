@@ -114,7 +114,7 @@ furiosa-llm serve <model> --data-parallel-size 2 \
 | LLM Assistant | **OpenClaw 에이전트 플랫폼 통합**, 멀티에이전트 뉴스, 금융 센티먼트 |
 | RAG | embedding·reranker·generation 파이프라인 |
 
-프리컴파일 HF FXB 예: EXAONE-4.0-32B-FP8 / Qwen3-32B-FP8(4×RNGD), Llama-3.1-8B·Qwen3-Embedding/Reranker(1×). 서빙은 `furiosa-llm serve <model>` — [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md]].
+프리컴파일 HF FXB 예: EXAONE-4.0-32B-FP8 / Qwen3-32B-FP8(4×RNGD), Llama-3.1-8B·Qwen3-Embedding/Reranker(1×). 서빙은 `furiosa-llm serve <model>` — [[wiki/Agents/Multi-Agent-and-Orchestration/자율수행-멀티-에이전트-시스템-오케스트레이션-및-보안-격리-2026.md]].
 
 ## 7. SDK 2026.4.0b13: `fxb build` 정본 경로 (2026-08-20)
 
