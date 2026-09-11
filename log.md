@@ -637,3 +637,5 @@
 | 2026-09-11 | CLEANUP | Root | 1 | D-2 데일리(2026-09-09.md) git rm 완료; D-0(2026-09-11) 및 D-1(2026-09-10) 유지 |
 | 2026-09-11 | LINT | Root / wiki | ALL | 2026-09-11.md 데일리 생성, update_index 실행, auto_moc & fix_wiki_links.py를 통한 MOC 및 위키 링크 동기화 |
 | 2026-09-11 | RESEARCH | 연구_주제_관리.md | 4 | 위키 5대 카테고리 자산 분석 기반 4대 신규 연구과제(하이브리드 GraphRAG/Graphiti, Test-Time Compute & GDPO/GRPO, 자가 진화 AI-Native 소프트웨어 팩토리, 월드 모델 & VLA 피지컬 AI) 신설 |
+| 2026-09-11 | SYNTHESIZE | wiki/RAG, wiki/Models, wiki/Agents | 4 | GraphRAG/LazyGraphRAG/Graphiti(Zep) 이중 시간성 그래프, NVIDIA GDPO(ICML 2026) 다중 보상 분리 정규화, WikiSkill(Google Research) 3계층 공진화 벤치마크, Physical Intelligence pi0 openpi 50Hz Flow Matching VLA 심층 합성 |
+

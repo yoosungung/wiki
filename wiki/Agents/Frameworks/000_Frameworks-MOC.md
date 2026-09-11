@@ -23,7 +23,7 @@
 - [[wiki/Agents/Frameworks/Goose-AI-Agent-Framework.md]]
 - [[wiki/Agents/Frameworks/Hermes-Self-Improving-Agent.md]]
 - [[wiki/Agents/Frameworks/Kotaemon.md]]
-- [[wiki/Agents/Frameworks/LangChain/LangChain-Deep-Agents.md]]
+- [[wiki/Agents/Frameworks/LangChain-Deep-Agents.md]]
 - [[wiki/Agents/Frameworks/Langchain Open Deep Research 아키텍처 가이드.md]]
 - [[wiki/Agents/Frameworks/Liner-Actions-Autonomous-MCP-Tool-Binding.md]]
 - [[wiki/Agents/Frameworks/NVIDIA-Object-Oriented-Agents-NOOA.md]]
