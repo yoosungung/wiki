@@ -3,9 +3,9 @@ id: github-issue-leantime-intake-empty-skip
 title: "GH issue→Leantime intake: open 0이면 explicit skip"
 status: canonical
 owner: km
-updated: "2026-09-10"
-last_updated: "2026-09-10"
-review_after: "2026-12-10"
+updated: "2026-09-11"
+last_updated: "2026-09-11"
+review_after: "2026-12-11"
 sources:
   - schedule:github-issue-check
   - ticket:942
@@ -86,6 +86,13 @@ sources:
   - inbox/nl2sql/2026-09-10-github-issue-check-empty-skip.md
   - inbox/codingland/2026-09-10-github-issue-check-empty-skip.md
   - inbox/aa/2026-09-10-github-issue-triage.md
+  - ticket:1876
+  - ticket:1895
+  - ticket:1900
+  - ticket:1910
+  - inbox/pm/2026-09-11-github-issue-check-empty-skip.md
+  - inbox/sw-factory/2026-09-11-github-issue-check-empty-skip.md
+  - inbox/codingland/2026-09-11-github-issue-check-empty-skip.md
 tags: ["Engineering", "AI-Native", "GitHub", "Leantime", "Intake"]
 type: "wiki"
 ---
