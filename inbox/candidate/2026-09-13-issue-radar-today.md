@@ -1,0 +1,17 @@
+---
+id: inbox-candidate-2026-09-13-issue-radar-today
+agent: candidate
+ticket_id: radar-2026-09-13
+updated: 2026-09-13
+status: inbox
+sources:
+  - schedule:issue-radar-today-0800-kst
+  - commit:0622a8c
+---
+
+# Issue radar → today 2026-09-13
+
+- `issue_radar.py run` (no `--leantime`); Naver OK; candidates=8 (scores 4–6); closure=1 (`comprehensive-special-counsel-probes-2026`).
+- `publish_today.py` wrote `wiki/data/today.yaml` items=8 from cache `2026-09-12T230158Z.json`.
+- Pushed `[agent] update today.yaml 2026-09-12` as `0622a8c` (today.yaml only).
+- pytest `test_issue_radar.py`: 9 passed.
