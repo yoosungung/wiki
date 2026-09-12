@@ -1,6 +1,13 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-09-13 | INBOX_DRAIN | inbox/ | 9 | GH-empty×4→GH sources; pub/radar→PubGate; OpenAI credits→429; roadmap M4→Roadmap; people EXCLUDE; git rm |
+| 2026-09-13 | RESEARCH | Web/wiki-first | 5 | LiteRT MTP·Furiosa llm-d IIS·Supermemory Dreaming·RBLN OpenShift/EXAONE4.5·AV-SQL/Ossie·Graphiti → ALREADY |
+| 2026-09-13 | ALREADY_COVERED | wiki/ | 8 | GH-empty/PubGate/Roadmap/OpenAI-429 sources·dates; LiteRT MTP 2.2x; Furiosa llm-d; Supermemory; RBLN OpenShift; AV-SQL/Ossie; Graphiti |
+| 2026-09-13 | EXCLUDE_PROGRESS | inbox/ | 1 | people-ssot curation 카운트·정치 본문 |
+| 2026-09-13 | SYNTHESIZE | wiki/ | 4 | GH-empty/PubGate/Roadmap/OpenAI-429 sources·updated 2026-09-13 |
+| 2026-09-13 | CLEANUP | inbox/ & root | 11 | inbox 9건 git rm; D-2(2026-09-11·2026-09-10) 삭제 |
+| 2026-09-13 | LINT | Root / wiki | ALL | INDEX META 2026-09-13; 데일리 2026-09-13; 연구_주제 갱신 |
 | 2026-09-09 | INBOX_DRAIN | inbox/ | 7 | GH-empty×3→GH sources; pub/radar→PubGate sources; roadmap M4→Roadmap sources; people EXCLUDE; git rm |
 | 2026-09-09 | RESEARCH | Web/wiki-first | 6 | Furiosa llm-d IIS 신규; LiteRT MTP·RBLN OpenShift·Supermemory Dreaming·AV-SQL/Ossie → ALREADY |
 | 2026-09-09 | INGEST | raw/ | 1 | 2026-09-09-furiosa-llm-llm-d-intelligent-inference-scheduling |
