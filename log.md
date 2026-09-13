@@ -1,6 +1,13 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-09-14 | INBOX_DRAIN | inbox/ | 10 | GH-empty×5→GH sources; pub/radar→PubGate; OpenAI credits→429; roadmap M4→Roadmap; people EXCLUDE; git rm |
+| 2026-09-14 | RESEARCH | Web/wiki-first | 4 | LiteRT MTP/Gemma4·Furiosa llm-d IIS·Supermemory Dreaming/MemoryBench·Graphiti temporal → ALREADY |
+| 2026-09-14 | ALREADY_COVERED | wiki/ | 8 | GH/PubGate/Roadmap/OpenAI-429 sources·dates; LiteRT MTP 2.2x; Furiosa llm-d; Supermemory; Graphiti |
+| 2026-09-14 | EXCLUDE_PROGRESS | inbox/ | 1 | people-ssot curation 카운트·정치 본문 |
+| 2026-09-14 | SYNTHESIZE | wiki/ | 4 | GH-empty/PubGate/Roadmap/OpenAI-429 sources·updated 2026-09-14 |
+| 2026-09-14 | CLEANUP | inbox/ & root | 10 | inbox 10건 git rm; D-0(2026-09-14)·D-1(2026-09-13) 유지 |
+| 2026-09-14 | LINT | Root / wiki | ALL | INDEX META 2026-09-14; 데일리 2026-09-14; 연구_주제 갱신 |
 | 2026-09-13 | INBOX_DRAIN | inbox/ | 9 | GH-empty×4→GH sources; pub/radar→PubGate; OpenAI credits→429; roadmap M4→Roadmap; people EXCLUDE; git rm |
 | 2026-09-13 | RESEARCH | Web/wiki-first | 5 | LiteRT MTP·Furiosa llm-d IIS·Supermemory Dreaming·RBLN OpenShift/EXAONE4.5·AV-SQL/Ossie·Graphiti → ALREADY |
 | 2026-09-13 | ALREADY_COVERED | wiki/ | 8 | GH-empty/PubGate/Roadmap/OpenAI-429 sources·dates; LiteRT MTP 2.2x; Furiosa llm-d; Supermemory; RBLN OpenShift; AV-SQL/Ossie; Graphiti |
