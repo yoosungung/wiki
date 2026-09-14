@@ -91,8 +91,14 @@ sources:
   - inbox/candidate/2026-09-13-issue-radar-today.md
   - inbox/candidate/2026-09-14-publication-safety.md
   - inbox/candidate/2026-09-14-issue-radar-today.md
+  - inbox/candidate/2026-09-15-publication-safety.md
+  - inbox/candidate/2026-09-15-issue-radar-today.md
+  - inbox/candidate/2026-09-14-people-ssot-curation-18h.md
   - ticket:1956
   - ticket:1974
+  - ticket:1993
+  - ticket:2003
+  - ticket:1992
   - skill:political-wiki-administration
   - agent/publication_gate.py
 

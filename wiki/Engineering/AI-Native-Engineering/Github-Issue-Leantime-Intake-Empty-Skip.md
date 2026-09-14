@@ -7,6 +7,18 @@ updated: "2026-09-14"
 last_updated: "2026-09-14"
 review_after: "2026-12-14"
 sources:
+  - inbox/pm/2026-09-14-github-issue-check-empty-skip.md
+  - inbox/sw-factory/2026-09-14-github-issue-check-empty-skip.md
+  - inbox/nl2sql/2026-09-14-github-issue-check-empty-skip.md
+  - inbox/codingland/2026-09-14-github-issue-check-empty-skip.md
+  - inbox/codingland/2026-09-14-github-issue-check-empty-skip-2306.md
+  - inbox/candidate/2026-09-15-github-issue-check-empty-skip.md
+  - ticket:1996
+  - ticket:2000
+  - ticket:1999
+  - ticket:2011
+  - ticket:2016
+  - ticket:1997
   - schedule:github-issue-check
   - ticket:942
   - ticket:279

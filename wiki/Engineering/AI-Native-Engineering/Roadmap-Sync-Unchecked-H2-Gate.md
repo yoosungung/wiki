@@ -19,6 +19,7 @@ sources:
   - inbox/pm/2026-09-10-codingland-roadmap-sync-m4-idempotent.md
   - inbox/pm/2026-09-12-codingland-roadmap-sync-m4-idempotent.md
   - inbox/pm/2026-09-13-codingland-roadmap-sync-m4-idempotent.md
+  - inbox/pm/2026-09-14-codingland-roadmap-sync-m4-idempotent.md
 tags: ["Engineering", "AI-Native", "Roadmap", "Leantime", "Sync"]
 type: "wiki"
 ---

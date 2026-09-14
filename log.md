@@ -665,3 +665,11 @@
 | 2026-09-11 | EXCLUDE_PROGRESS | inbox/ | 1 | people-ssot curation 카운트·정치 본문(후보 vault 정본) |
 | 2026-09-11 | CLEANUP | inbox/ | 6 | promote 완료 inbox 6건 git rm; raw/ 비어 있음; 데일리 D-0/D-1 유지 |
 | 2026-09-11 | LINT | Root / wiki | ALL | INDEX META 2026-09-11 유지(update_index); GH/PubGate sources·dates 갱신 |
+
+| 2026-09-14 | INBOX_DRAIN | inbox/ | 10 | GH-empty×6→Empty-Skip sources; pub-safety/radar/people→PubGate; roadmap M4→Roadmap-Sync; people EXCLUDE_PROGRESS; git rm |
+| 2026-09-14 | INGEST | raw/ | 1 | Supermemory Company Brain·Nova 중단 공식 블로그 (2026-09-10) |
+| 2026-09-14 | RESEARCH | 연구_주제_관리.md | 5 | wiki-first+웹: LiteRT/Furiosa/Rebellions/Supermemory/LightRAG; CB/Nova discontinue 신규 |
+| 2026-09-14 | SYNTHESIZE | wiki/Agents/Implementation | 1 | Supermemory §3.4 CB/Nova 중단·Memory API 집중; 비교표 갱신 |
+| 2026-09-14 | ALREADY_COVERED | wiki/ | 4 | LiteRT MTP/v0.16; Furiosa FXB·llm-d; Rebellions OpenShift; LightRAG/Graphiti |
+| 2026-09-14 | CLEANUP | inbox/, raw/, Root | 12 | inbox 10 git rm; raw 1 삭제; D-0/D-1 유지 |
+| 2026-09-14 | LINT | Root / wiki | ALL | 데일리·INDEX META·연구_주제_관리 비고 갱신 |
