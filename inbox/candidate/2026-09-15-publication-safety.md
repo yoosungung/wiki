@@ -1,10 +1,11 @@
 ---
 id: inbox-candidate-2026-09-15-publication-safety
 agent: candidate
-ticket_id: pending
+ticket_id: 1993
 updated: 2026-09-15
 status: inbox
 sources:
+  - ticket:1993
   - schedule:publication-safety-03:00-KST
   - repo:/workspace/repo@46379de
 ---
