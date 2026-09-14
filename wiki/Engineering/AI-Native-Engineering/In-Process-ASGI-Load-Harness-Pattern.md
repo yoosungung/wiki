@@ -3,13 +3,15 @@ id: in-process-asgi-load-harness-pattern
 title: "In-process ASGI 로드 하네스 (chat SSE·임계)"
 status: canonical
 owner: km
-updated: "2026-08-04"
-last_updated: "2026-08-04"
-review_after: "2026-11-04"
+updated: "2026-09-14"
+last_updated: "2026-09-14"
+review_after: "2026-12-14"
 sources:
   - ticket:114
   - ticket:116
   - ticket:99
+  - schedule:ta-load-weekly
+  - inbox/ta/2026-09-14-ta-load-weekly.md
 tags: ["Engineering", "AI-Native", "Load", "ASGI", "Quality", "SSE"]
 type: "wiki"
 ---
@@ -30,6 +32,8 @@ type: "wiki"
 | :--- | :--- | :--- |
 | **주간 기본** | in-process + FakeAgent, SGLang OFF | 결정적 p95·에러율 |
 | **실 LLM opt-in** | `LOAD_REAL_LLM=1` + `LOAD_BASE_URL` + 앱 auth 헤더 | 클러스터/Ingress 검증 |
+
+주간 기본 in-process 하네스는 `long_run: true` 비동기 디태치 없이 포그라운드(~4초)에서 20/20 요청, errors=0, p95 기준선(예: 140ms 대) 충족을 신속히 검증한다.
 
 `ASGITransport`는 FastAPI **lifespan을 안 돈다** → `app.router.lifespan_context(app)`로 store/agent wire를 강제한다.
 

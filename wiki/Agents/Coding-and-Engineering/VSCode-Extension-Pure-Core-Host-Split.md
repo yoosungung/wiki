@@ -3,15 +3,19 @@ id: vscode-extension-pure-core-host-split
 title: "VS Code 확장: vscode-free core + host 어댑터 분리"
 status: canonical
 owner: km
-updated: "2026-08-12"
-last_updated: "2026-08-12"
-review_after: "2026-11-12"
+updated: "2026-09-14"
+last_updated: "2026-09-14"
+review_after: "2026-12-14"
 sources:
   - https://doi.org/10.48550/arxiv.2602.20206
   - ticket:458
   - ticket:242
   - ticket:254
+  - ticket:1983
   - https://www.npmjs.com/package/ts-morph
+  - https://devblogs.microsoft.com/ise/testing-vscode-extensions-with-typescript/
+  - https://www.richardkotze.com/coding/unit-test-mock-vs-code-extension-api-jest
+  - inbox/codingland/2026-09-14-host-jest-vscode-virtual-mock.md
 tags: ["Agents", "Coding", "VSCode", "Extension", "AST", "ts-morph"]
 type: "wiki"
 ---
@@ -53,6 +57,25 @@ Host E2E 게이트·CDN fallback·xvfb는 [[wiki/Engineering/AI-Native-Engineeri
 | 스모크 | `runGateSmoke`로 none/light/full(+ sessionLoad downshift)을 **Electron 없이** 검증 |
 
 ChangeScore·friction tier는 [[wiki/Engineering/AI-Native-Engineering/Epistemic-Debt-ChangeScore-Friction-Gate.md]].
+
+## Host Jest 단위 테스트 시 `vscode` 가상 모킹 (`{ virtual: true }`)
+
+- **런타임 모듈 부재**: `@types/vscode`는 타입 정의 전용이며, Node.js 단위 테스트 환경에서는 실제 `vscode` 모듈을 resolve할 수 없다.
+- **가상 모킹 패턴**: 무거운 Extension Host(`test:vscode`)를 띄우지 않고 호스트 어댑터/GateHost를 빠른 Jest(`npm test`)로 검증할 때, 테스트 파일 또는 `__mocks__/vscode`에서 `{ virtual: true }` 옵션으로 모킹한다:
+  ```typescript
+  // GateHost.test.ts
+  jest.mock("vscode", () => ({
+    workspace: {
+      getConfiguration: jest.fn(() => ({
+        get: jest.fn(),
+      })),
+    },
+    window: {
+      activeTextEditor: undefined,
+    },
+  }), { virtual: true });
+  ```
+- **의존성 격리**: 테스트 대상 코드가 실제 사용하는 최소한의 API만 모킹하고, 출력 패널(`getPanel().appendLine`) 등 UI 컴포넌트는 별도 모듈 stub으로 분리하여 의존성 오염을 차단한다.
 
 ## 🔗 관련 문서
 

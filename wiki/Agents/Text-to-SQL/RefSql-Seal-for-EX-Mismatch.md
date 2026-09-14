@@ -3,9 +3,9 @@ id: refsql-seal-for-ex-mismatch
 title: "EX mismatch는 refSql seal로 고정한다"
 status: canonical
 owner: km
-updated: "2026-08-26"
-last_updated: "2026-08-26"
-review_after: "2026-11-20"
+updated: "2026-09-14"
+last_updated: "2026-09-14"
+review_after: "2026-12-14"
 sources:
   - ticket:689
   - ticket:1326
@@ -23,6 +23,8 @@ sources:
   - ticket:1050
   - ticket:1269
   - ticket:1268
+  - ticket:1986
+  - inbox/nl2sql/2026-09-14-nf-1986-local008-seal-isolation.md
 tags: ["Agents", "Text-to-SQL", "MDL", "refSql", "Evaluation"]
 type: "wiki"
 ---
@@ -58,6 +60,7 @@ type: "wiki"
 | tip duplicate rich-grain 모델 | tip-only `weekly_sale`(KO region/platform/demographic)이 fixture 1위 seal보다 rebuild를 가로챔 | tip 중복 삭제·thin; seal명을 질문 vocab+SCORE_CAP 알파(`…attribute_impact_june15_12wk`)로 rename |
 | rolling AVG ~0.1 off lite gold | warehouse AVG가 Spider2 lite CSV와 미세 불일치 | VALUES로 gold_a pin; SELECT-only description |
 | baseline month 이중 필터 | seal이 baseline drop 후 agent가 `WHERE month > MIN(month)` 추가 → 2 rows | VALUES + baseline anchor row; description에 필터 의무화; PG smoke 동일 필터 |
+| seal 고유 vocab 베이스 누출 및 후행 SSE 오염 | 고유 vocab이 베이스 모델로 누출되어 mega-join rebuild 유발, 또는 execute 후 AnalystResponse(source null)가 마지막 SQL을 덮어씀 | 고유 vocab을 seal에만 격리; saw_sql에서 AnalystResponse 재방출 건너뛰고 sourced execute SQL 우선 추출 |
 
 ## 적용
 
@@ -69,6 +72,7 @@ type: "wiki"
 6. **검색 1위 ≠ SELECT seal**: agent `k=3` 픽스처가 맞아도 describe가 베이스 카탈로그를 고르면 mismatch. SCORE_CAP에 같이 걸리면 알파벳 순이 이긴다 — [[wiki/Agents/Text-to-SQL/MCP-Search-Short-Column-Reverse-Match.md]].
 7. 2-instance agent EX pass_rate=1 은 Full EX 증거가 아니다. 스코어보드는 tip live chat SSE — [[wiki/Agents/Text-to-SQL/Spider2-Quality-Gate-nl2sql.md]].
 8. unparser 인용·COLLATE — [[wiki/Agents/Text-to-SQL/RefSql-Unparser-Identifier-Quoting.md]].
+9. **SSE 후행 이벤트 오염 방지**: 올바른 execute SSE 이후 `AnalystResponse`의 `warehouse_sql`이 후행 이벤트로 방출되어 채점 SQL을 덮어쓰지 않도록, `extract_last_sql_from_sse`는 소스가 존재하는 execute 이벤트를 우선 취하고 비어있는 소스의 재방출을 무시한다.
 
 ## 관련
 

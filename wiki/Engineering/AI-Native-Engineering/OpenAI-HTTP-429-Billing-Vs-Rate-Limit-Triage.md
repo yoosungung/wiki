@@ -20,6 +20,9 @@ sources:
   - ticket:1885
   - ticket:1916
   - ticket:1950
+  - ticket:1988
+  - https://help.openai.com/en/articles/8264644-what-is-usage-based-billing
+  - inbox/pm/2026-09-14-candydate-1988-openai-credits.md
 tags: ["Engineering", "AI-Native", "OpenAI", "Billing", "RateLimit", "Triage"]
 type: "wiki"
 ---

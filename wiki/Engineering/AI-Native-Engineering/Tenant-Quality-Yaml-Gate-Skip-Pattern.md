@@ -3,9 +3,9 @@ id: tenant-quality-yaml-gate-skip-pattern
 title: "테넌트 quality.yaml 게이트 키 누락 시 skip (NF 미생성)"
 status: canonical
 owner: km
-updated: "2026-09-07"
-last_updated: "2026-09-07"
-review_after: "2026-12-07"
+updated: "2026-09-14"
+last_updated: "2026-09-14"
+review_after: "2026-12-14"
 sources:
   - ticket:414
   - ticket:85
@@ -17,6 +17,11 @@ sources:
   - ticket:1511
   - ticket:1747
   - ticket:1753
+  - ticket:1982
+  - ticket:1983
+  - ticket:1985
+  - ticket:1986
+  - ticket:1988
   - schedule:aa-clean-weekly
   - schedule:qa-bulk-weekly
   - schedule:ta-load-weekly
@@ -27,6 +32,9 @@ sources:
   - inbox/ta/2026-09-07-ta-load-weekly.md
   - inbox/aa/2026-08-31-1511-aa-security-pass-sglang-16k.md
   - inbox/ta/2026-08-31-ta-load-weekly.md
+  - inbox/aa/2026-09-14-clean-code-weekly.md
+  - inbox/qa/2026-09-14-qa-bulk-weekly.md
+  - inbox/ta/2026-09-14-ta-load-weekly.md
 tags: ["Engineering", "AI-Native", "Quality", "Factory", "NF", "Skip"]
 type: "wiki"
 ---

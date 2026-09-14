@@ -1,6 +1,12 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-09-14 | INBOX_DRAIN | inbox/ | 22 | clean-code/1982-ci→CI-Align; host-jest→Core-Host-Split; local008→RefSql/Spider2; qa-bulk→Soft-Gate; ta-load→ASGI-Load; candydate→429; skip-pattern; 15 workflow EXCLUDE; git rm |
+| 2026-09-14 | RESEARCH | Web/wiki-first | 8 | 8대 활성 연구 과제 전수 모니터링; LiteRT v2.2.0·Supermemory v0.0.8·Graphiti Zep·Furiosa llm-d·RBLN OpenShift·AV-SQL/Ossie·LightRAG v1.5.7 → ALREADY |
+| 2026-09-14 | ALREADY_COVERED | wiki/ | 8 | LiteRT v2.2.0; Furiosa llm-d IIS; Supermemory server-v0.0.8; Graphiti bi-temporal; Rebellions OpenShift; AV-SQL/Ossie; LightRAG |
+| 2026-09-14 | EXCLUDE_PROGRESS | inbox/ | 15 | checkpoint(3)·review-merge(3)·done(1)·triage(1)·security-pass(1)·e2e-pass(2)·tenant-cd(2)·intake(1) |
+| 2026-09-14 | SYNTHESIZE | wiki/ | 8 | Quality-Yaml-CI-Align, VSCode-Pure-Core-Host, Spider2-Quality-Gate, RefSql-Seal, OpenAI-429, ASGI-Load, Soft-Gate, Tenant-Quality-Yaml |
+| 2026-09-14 | CLEANUP | inbox/ | 22 | promote 완료 inbox 22건 git rm; D-0(2026-09-14)·D-1(2026-09-13) 유지 |
 | 2026-09-14 | INBOX_DRAIN | inbox/ | 10 | GH-empty×5→GH sources; pub/radar→PubGate; OpenAI credits→429; roadmap M4→Roadmap; people EXCLUDE; git rm |
 | 2026-09-14 | RESEARCH | Web/wiki-first | 4 | LiteRT MTP/Gemma4·Furiosa llm-d IIS·Supermemory Dreaming/MemoryBench·Graphiti temporal → ALREADY |
 | 2026-09-14 | ALREADY_COVERED | wiki/ | 8 | GH/PubGate/Roadmap/OpenAI-429 sources·dates; LiteRT MTP 2.2x; Furiosa llm-d; Supermemory; Graphiti |

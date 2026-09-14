@@ -3,9 +3,9 @@ id: spider2-quality-gate-nl2sql
 title: "Spider2-Lite → nl2sql 품질 게이트 (스모크·preflight)"
 status: canonical
 owner: km
-updated: "2026-08-27"
-last_updated: "2026-08-27"
-review_after: "2026-11-27"
+updated: "2026-09-14"
+last_updated: "2026-09-14"
+review_after: "2026-12-14"
 sources:
   - ticket:428
   - ticket:391
@@ -20,7 +20,11 @@ sources:
   - ticket:123
   - ticket:172
   - ticket:1371
+  - ticket:1985
+  - ticket:1986
   - schedule:qa-bulk-weekly
+  - inbox/qa/2026-09-14-qa-bulk-weekly.md
+  - inbox/nl2sql/2026-09-14-nf-1986-local008-seal-isolation.md
   - wiki/Agents/Text-to-SQL/T2SQL-Benchmarks-2026.md
   - https://github.com/xlang-ai/Spider2/tree/main/spider2-lite/evaluation_suite
   - https://github.com/nodal-data/spider2-claude-code
@@ -239,6 +243,8 @@ cd spider2-eval && \
 11. **부분 seed**: `pit_stops=0`인데 `lap_times`만 채워진 상태. SQLite PK NULL이 PG NOT NULL에 막히면 surgical UPDATE 후 COPY. 소스 zip은 앱 PVC에 있을 수 있음(ephemeral checkout과 혼동 금지).
 12. **live 판정**: `/readyz`가 SPA HTML을 주면 tip-live가 아님. `/api/health` + chat SSE. 스코어보드 JSON에 `instance_id`가 없으면 Opik item에서 재구성.
 13. **잔여 클러스터 우선순위**: Full EX residual이 empty_sql / sql_exec / result_mismatch로 갈리면 각각 tip vocab·grain/`refSql`·seal 축으로 나눈다 — [[wiki/Agents/Text-to-SQL/Semantic-View-Single-Master.md]], [[wiki/Agents/Text-to-SQL/RefSql-Seal-for-EX-Mismatch.md]]. 수치 스냅샷은 위키에 두지 않는다.
+14. **SSE 후행 이벤트 오염 방지**: chat SSE 파싱 시, 정상적인 execute SSE 이벤트 이후 `AnalystResponse`의 `warehouse_sql`(source=null)이 재방출되어 마지막 SQL을 덮어쓰지 않도록 `extract_last_sql_from_sse`는 소스가 명시된 execute 이벤트를 우선 추출한다.
+15. **shallow clone 에셋 누락**: 테넌트 repo sync(depth=1 shallow) 환경에서는 `.tmp-spider2` 에셋 디렉터리가 누락될 수 있으므로, 에셋이 완비된 워크스페이스 트리와 symlink로 연결한다.
 
 UI Playwright는 LLM/SQL EX를 대체하지 않는다 — [[wiki/Engineering/AI-Native-Engineering/Playwright-Frontend-UI-Smoke-Pattern.md]].
 
