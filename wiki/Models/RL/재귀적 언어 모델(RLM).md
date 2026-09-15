@@ -1,6 +1,6 @@
 ---
 title: "재귀적 언어 모델(RLM)"
-related_raw: ["[[wiki/Models/RL/재귀적 언어 모델(RLM).md]]"]
+related_raw: ["[[wiki/Models/RL/재귀적 언어 모델(RLM).md]]"]
 tags: ['wiki', 'ai_core', 'llm_concepts', 'recursive_language_models_rlm']
 type: "wiki"
 status: "published"
@@ -40,6 +40,6 @@ RLM의 핵심 아이디어는 긴 프롬프트를 신경망에 직접 공급하�
 > **Figure 4:** RLM은 작업을 해결할 때 궤적에서 공통적인 패턴을 가집니다. (a) RLM이 정규식 쿼리와 같은 코드를 통해 컨텍스트를 필터링하고 상호작용하는 것을 자주 관찰했습니다. (b) RLM이 재귀적 하위 호출을 통해 컨텍스트를 효과적으로 분해할 수 있음을 발견했습니다. (c) 긴 출력 작업에서 RLM은 재귀적 하위 LLM 호출을 사용하여 하위 문제를 해결하고 출력을 결합하여 최종 출력을 형성할 수 있습니다.
 
 ## 연결된 노트
-* [[wiki/Models/Architectures/LLM 아키텍처 비교]]
-* [[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리 - Part 2 - 아키텍처와 구현]]
+* [[wiki/Models/Architectures/LLM 아키텍처 비교]]
+* [[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리 - Part 2 - 아키텍처와 구현]]
 * [[wiki/Engineering/Prompt-Engineering/LLM_Thinking_Time_Prompt_Engineering]]

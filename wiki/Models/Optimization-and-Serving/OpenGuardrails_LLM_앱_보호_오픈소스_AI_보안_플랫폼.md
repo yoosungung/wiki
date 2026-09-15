@@ -1,6 +1,6 @@
 ---
 title: "OpenGuardrails_LLM_앱_보호_오픈소스_AI_보안_플랫폼"
-related_raw: ["[[wiki/Models/Optimization-and-Serving/OpenGuardrails_LLM_앱_보호_오픈소스_AI_보안_플랫폼.md]]"]
+related_raw: ["[[wiki/Models/Optimization-and-Serving/OpenGuardrails_LLM_앱_보호_오픈소스_AI_보안_플랫폼.md]]"]
 tags: ['wiki', 'ai_core', 'ai', 'security']
 type: "wiki"
 status: "published"

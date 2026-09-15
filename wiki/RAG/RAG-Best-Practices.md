@@ -36,4 +36,4 @@ Niharika Tanaya의 댓글에 따르면, 많은 팀이 쿼리 확장 및 검색 �
 - [[Areas/RAG기술현황(1)]]
 - [[Areas/RAG기술현황(2)]]
 - [[wiki/RAG/GraphRAG]]
-- [[wiki/Engineering/Prompt-Engineering/프롬프트_컨텍스트_엔지니어링]]
+- [[wiki/Engineering/Prompt-Engineering/프롬프트_컨텍스트_엔지니어링]]

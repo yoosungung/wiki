@@ -25,6 +25,6 @@ updated: "2026-04-19"
 ## 관련 노트
 
 - [[wiki/Agents/Implementation/AI OS]]
-- [[wiki/Business/AI시대, 스타트업이 살아남기 위한 사고의 틀]]
+- [[wiki/Business/AI시대, 스타트업이 살아남기 위한 사고의 틀]]
 - [[Projects/LinkedIn/현대 AI 멀티에이전트 시스템의 구조와 동작]]
 - [[wiki/Agents/Implementation/Agents 2.0 - From Shallow Loops to Deep Agents]]

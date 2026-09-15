@@ -1,7 +1,7 @@
 ---
 title: RAG-Optimization-2026-Trends-RAG-최적화-트렌드
 related_raw:
-  - "[[wiki/RAG/RAG-Optimization-2026-Trends-RAG-최적화-트렌드]]"
+  - "[[wiki/RAG/RAG-Optimization-2026-Trends-RAG-최적화-트렌드]]"
 tags:
   - wiki
   - knowledge_and_memory

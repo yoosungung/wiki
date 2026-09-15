@@ -1,6 +1,6 @@
 ---
 title: "BigQuery의 AI 시대에 맞춰 재해석된 SQL"
-related_raw: ["[[wiki/Models/Architectures/BigQuery의 AI 시대에 맞춰 재해석된 SQL.md]]"]
+related_raw: ["[[wiki/Models/Architectures/BigQuery의 AI 시대에 맞춰 재해석된 SQL.md]]"]
 tags: ['wiki', 'ai_core', 'llm_concepts', 'llm_applications_and_insights']
 type: "wiki"
 status: "published"

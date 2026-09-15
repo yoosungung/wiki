@@ -1,15 +1,15 @@
 ---
 title: GraphRAG-vs-LightRAG-2026
 related_raw:
-  - "[[wiki/RAG/GraphRAG-vs-LightRAG-2026]]"
+  - "[[raw/2026-09-15-lightrag-v1.5.7-workspace-pgtable.md]]"
 tags:
   - wiki
   - ai_core
   - ai
 type: wiki
 status: draft
-last_updated: "2026-09-11"
-updated: "2026-09-11"
+last_updated: "2026-09-15"
+updated: "2026-09-15"
 ---
 
 # 📊 GraphRAG vs LightRAG: 2026년 성능 및 아키텍처 비교
@@ -53,8 +53,30 @@ updated: "2026-09-11"
 - **LightRAG**: FastAPI 기반 REST 엔드포인트를 내장하여 Docker 컨테이너 및 WebUI로 손쉽게 기동 가능.
 - **Graphiti**: `graphiti-core` 파이썬 패키지와 Model Context Protocol(MCP) 서버를 공식 지원하여 Cursor, Claude Desktop, Goose 등 에이전트 클라이언트에 즉시 도구로 마운트 가능.
 
+## 6. LightRAG v1.5.7 운영 패턴 (2026-09-02)
+
+프로덕션에 넘길 때 **관리자 WebUI**와 **엔드유저 질의 표면**을 분리한다.
+
+| 축 | 패턴 | 구현 힌트 |
+| :--- | :--- | :--- |
+| **듀얼 엔트리** | 운영자 UI vs 질의 전용 UI | 엔드유저는 `/workspace` — 문서/KG/API-docs 링크 없음(모바일 채팅만) |
+| **브랜딩 번들** | 재빌드 없이 로고·환영·동의문 | `UI_TEMPLATES_DIR` + `manifest.json` Markdown 번들(`docs/ui_templates_example/`) |
+| **전역 역할 프롬프트** | 배포 단위 톤/포맷 고정 | `USER_PROMPT_PREFIX` / `USER_PROMPT_PREFIX_FILE` — 클라이언트가 읽거나 덮어쓸 수 없음; API만 `disable_user_prompt_prefix`로 옵트아웃 |
+| **graph-first ingest** | 벡터 인덱싱 지연 | 그래프를 먼저 쌓고 벡터는 deferred — 대량 유입 시 인덱싱 피크 완화 |
+| **청킹 선택** | 파이프라인 명시 | custom chunking selector로 Fix/Recursive 등 전략을 문서군별로 고정 |
+| **Postgres all-in-one** | AGE 의존 축소 | `PGTableGraphStorage`(네이티브 테이블)가 AGE 기반 `PGGraphStorage` 대비 선호; AGE→PG 오프라인 마이그레이션 도구 제공. **AGE ≥ 1.8.0**에서는 `PGGraphStorage`를 거부(크래시 가드) |
+
+```bash
+# 개념: 엔드유저 전용 표면 + 템플릿 번들
+export UI_TEMPLATES_DIR=./docs/ui_templates_example
+export USER_PROMPT_PREFIX="답변은 한국어. 인용은 [n] 형식. Mermaid만 사용."
+# /workspace → 채팅만; 관리자 엔트리는 문서·그래프 유지
+```
+
+참고: [LightRAG v1.5.7 release](https://github.com/HKUDS/LightRAG/releases/tag/v1.5.7), [[wiki/RAG/LightRAG-Summary-2026.md]]
+
 ---
 ## 🔗 관련 링크 및 참고 자료
 - LightRAG 공식 리포지토리: [HKUDS/LightRAG](https://github.com/HKUDS/LightRAG)
 - Graphiti 공식 리포지토리: [getzep/graphiti](https://github.com/getzep/graphiti)
-- 관련 위키: [[wiki/RAG/000_RAG-MOC.md]], [[wiki/RAG/Contextual-Retrieval-Anthropic-2026.md]], [[wiki/Agents/Implementation/Supermemory-Architecture-and-MCP.md]]
+- 관련 위키: [[wiki/RAG/000_RAG-MOC.md]], [[wiki/RAG/Contextual-Retrieval-Anthropic-2026.md]], [[wiki/Agents/Implementation/Supermemory-Architecture-and-MCP.md]], [[wiki/RAG/LightRAG-Summary-2026.md]]

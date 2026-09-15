@@ -30,7 +30,7 @@ Unsloth AI와 NVIDIA의 기술 협업을 통해 일반 소비자용 GPU에서도
 
 ## 🔗 관련 문서
 - [[wiki/Models/Optimization/000_Optimization-MOC.md]]
-- [[wiki/Agents/Frameworks/Unsloth AI - GLM-4.7-Flash 로컬 실행 및 미세 조정.md]]
+- [[wiki/Agents/Frameworks/Unsloth AI - GLM-4.7-Flash 로컬 실행 및 미세 조정.md]]
 - [[wiki/Models/Architectures/Mixture-of-Experts-MoE.md]]
 
 ## 🛠️ 참조 리소스

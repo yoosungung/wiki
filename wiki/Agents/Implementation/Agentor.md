@@ -23,4 +23,4 @@ LiteMCP는 표준 패턴을 사용하여 FastAPI와 직접 통합되는 네이�
 ---
 ## 관련 노트
 - [[wiki/Agents/Frameworks/MCP/MCP]]
-- [[wiki/Agents/Multi-Agent-and-Orchestration/멀티-에이전트-패턴]]
+- [[wiki/Agents/Multi-Agent-and-Orchestration/멀티-에이전트-패턴]]

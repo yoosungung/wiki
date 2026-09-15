@@ -1,6 +1,6 @@
 ---
 title: "LangGraph와 Azure OpenAI 기반 NL2SQL 에이전트"
-related_raw: ["[[wiki/Agents/Frameworks/LangChain/LangGraph와 Azure OpenAI 기반 NL2SQL 에이전트.md]]"]
+related_raw: ["[[wiki/Agents/Frameworks/LangChain/LangGraph와 Azure OpenAI 기반 NL2SQL 에이전트.md]]"]
 tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'agent_frameworks_and_trends']
 type: "wiki"
 status: "published"

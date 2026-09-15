@@ -45,7 +45,7 @@ Hugging Face가 Transformers v5.0.0rc-0를 출시했습니다. v5는 단순성, 
 
 ---
 ## 관련 노트
-- [[wiki/Models/Optimization-and-Serving/SGLang LLM 서빙 프레임워크 리뷰]]
-- [[wiki/Engineering/Infrastructure-and-DevOps/DGX Spark에서의 VLM 파인튜닝]]
+- [[wiki/Models/Optimization-and-Serving/SGLang LLM 서빙 프레임워크 리뷰]]
+- [[wiki/Engineering/Infrastructure-and-DevOps/DGX Spark에서의 VLM 파인튜닝]]
 - [[wiki/Models/RL/TRL-OpenEnv Integration for Training LLMs]]
 - [[wiki/Models/SFT/Fine-Tuning]]

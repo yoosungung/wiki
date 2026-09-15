@@ -42,6 +42,6 @@ Docker 명령 하나로 시작할 수 있으며, Python 클라이언트로 테�
 
 ## Related Notes
 - [[wiki/RAG/Knowledge Graph Extraction and Challenges.md]]
-- [[wiki/Models/Reasoning-and-Cognition/LLM을 활용한 상향식 지식 그래프 구축.md]]
+- [[wiki/Models/Reasoning-and-Cognition/LLM을 활용한 상향식 지식 그래프 구축.md]]
 - [[wiki/RAG/GraphRAG.md]]
 - [[wiki/RAG/sqlite-graph.md]]

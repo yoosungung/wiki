@@ -36,4 +36,4 @@ Sebastian Raschka(rasbt)가 공개한 `LLMs-from-scratch` 레포지토리는 외
 ## 관련 문서
 - [[wiki/Models/Architectures/000_Architectures-MOC.md|모델 아키텍처 MOC]]
 - [[wiki/Models/SFT/000_SFT-MOC.md|SFT (Finetuning) MOC]]
-- [[wiki/Models/Architectures/트랜스포머 코드 분석 - PyTorch 구현.md|트랜스포머 코드 분석 상세]]
+- [[wiki/Models/Architectures/트랜스포머 코드 분석 - PyTorch 구현.md|트랜스포머 코드 분석 상세]]

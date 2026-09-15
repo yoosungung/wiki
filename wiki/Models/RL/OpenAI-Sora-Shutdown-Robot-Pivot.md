@@ -28,6 +28,6 @@ OpenAI는 고비용 구조와 수익성 문제로 인해 영상 생성 서비스
 - ![Synthetic Edge Case Data](https://example.com/edge-case.png) (Sora로 생성된 자율주행 돌발 상황 시나리오)
 
 ### 5. 관련 노트 링크
-- [[wiki/Business/2026년-로봇-공학-예측]]
+- [[wiki/Business/2026년-로봇-공학-예측]]
 - [[wiki/Agents/Self-Evolving/Self-Evolving-Agents-NVIDIA]]
-- [[wiki/Agents/Frameworks/구글의-LLM-기반-에이전트-한계-고백]]
+- [[wiki/Agents/Frameworks/구글의-LLM-기반-에이전트-한계-고백]]

@@ -1,6 +1,6 @@
 ---
 title: "AI_지능의_양자화_Grokking_2탄"
-related_raw: ["[[wiki/Models/Reasoning-and-Cognition/AI_지능의_양자화_Grokking_2탄.md]]"]
+related_raw: ["[[wiki/Models/Reasoning-and-Cognition/AI_지능의_양자화_Grokking_2탄.md]]"]
 tags: ['wiki', 'ai_core', 'llm_concepts', 'llm_architecture_and_technical']
 type: "wiki"
 status: "published"

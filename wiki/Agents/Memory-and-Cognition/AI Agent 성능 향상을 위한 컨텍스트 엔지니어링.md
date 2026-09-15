@@ -1,6 +1,6 @@
 ---
 title: "AI Agent 성능 향상을 위한 컨텍스트 엔지니어링"
-related_raw: ["[[wiki/Agents/Memory-and-Cognition/AI Agent 성능 향상을 위한 컨텍스트 엔지니어링.md]]"]
+related_raw: ["[[wiki/Agents/Memory-and-Cognition/AI Agent 성능 향상을 위한 컨텍스트 엔지니어링.md]]"]
 tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'basetech', 'llm_agent_theory_and_patterns']
 type: "wiki"
 status: "published"

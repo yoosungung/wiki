@@ -23,7 +23,7 @@ date: "2026-05-12"
 ## 3. 고성능 서빙 프레임워크
 - [[wiki/Models/Optimization-and-Serving/Rebellions-NPU-LLM-Serving|vLLM-RBLN 서빙 최적화]]
 - [[wiki/Models/Optimization-and-Serving/Continuous-Batching|연속 배칭(Continuous Batching) 및 동적 스케줄링]]
-- [[wiki/Models/Optimization-and-Serving/SGLang LLM 서빙 프레임워크 리뷰.md|SGLang 프레임워크 분석]]
+- [[wiki/Models/Optimization-and-Serving/SGLang LLM 서빙 프레임워크 리뷰.md|SGLang 프레임워크 분석]]
 
 ## 4. 모델별 최적화 및 브라우저 기반 추론
 - [[wiki/Models/Optimization-and-Serving/Browser-AI-Inference-MOC.md|브라우저 기반 AI 추론 (Browser-AI) MOC]]

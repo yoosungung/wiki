@@ -21,7 +21,7 @@ Meta는 최근 멀티 에이전트 모델의 일관성을 강화하는 새로운
 
 ## 노트 링크
 
-*   [[wiki/Agents/Multi-Agent-and-Orchestration/멀티-에이전트-패턴]]
+*   [[wiki/Agents/Multi-Agent-and-Orchestration/멀티-에이전트-패턴]]
 *   [[wiki/Agents/Implementation/Agents 2.0 - From Shallow Loops to Deep Agents]]
 *   [[wiki/Agents/Implementation/AI OS]]
 *   [[wiki/Agents/Implementation/Computer Use Agents]]

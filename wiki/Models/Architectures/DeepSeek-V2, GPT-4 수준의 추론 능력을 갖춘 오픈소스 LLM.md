@@ -1,6 +1,6 @@
 ---
 title: "DeepSeek-V2, GPT-4 수준의 추론 능력을 갖춘 오픈소스 LLM"
-related_raw: ["[[wiki/Models/Architectures/DeepSeek-V2, GPT-4 수준의 추론 능력을 갖춘 오픈소스 LLM.md]]"]
+related_raw: ["[[wiki/Models/Architectures/DeepSeek-V2, GPT-4 수준의 추론 능력을 갖춘 오픈소스 LLM.md]]"]
 tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'agent_models_and_libraries']
 type: "wiki"
 status: "published"

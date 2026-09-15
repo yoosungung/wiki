@@ -1,6 +1,6 @@
 ---
 title: "구글의-LLM-기반-에이전트-한계-고백"
-related_raw: ["[[wiki/Agents/Frameworks/구글의-LLM-기반-에이전트-한계-고백.md]]"]
+related_raw: ["[[wiki/Agents/Frameworks/구글의-LLM-기반-에이전트-한계-고백.md]]"]
 tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'agent_frameworks_and_trends']
 type: "wiki"
 status: "published"

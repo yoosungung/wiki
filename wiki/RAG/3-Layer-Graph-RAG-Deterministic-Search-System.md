@@ -47,4 +47,4 @@ updated: "2026-04-19"
 - **관련 노트:**
     - [[wiki/RAG/GraphRAG|GraphRAG 개요 및 원리]]
     - [[wiki/RAG/Contextual-Retrieval-Anthropic-2026|Anthropic의 Contextual Retrieval 분석]]
-    - [[wiki/Models/Reasoning-and-Cognition/LLM을 활용한 상향식 지식 그래프 구축.md|지식 그래프 구축 방법론]]
+    - [[wiki/Models/Reasoning-and-Cognition/LLM을 활용한 상향식 지식 그래프 구축.md|지식 그래프 구축 방법론]]

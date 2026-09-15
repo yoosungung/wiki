@@ -33,5 +33,5 @@ updated: "2026-06-23"
 ## 5. 연결 문서 (Internal Links)
 - [[wiki/Agents/Coding-and-Engineering/Claude-Code-Agentic-CLI-Update.md|Claude Code: 자율형 에이전트 CLI 도구의 진화]]
 - [[wiki/Agents/Frameworks/Claude-Code-Agentic-Workflows.md|Claude Code 에이전틱 워크플로우]]
-- [[wiki/Agents/Coding-and-Engineering/Claude Code의 Task 변화와 AI-native 엔지니어의 조건.md|Claude Code Task 변화와 AI-native 엔지니어]]
+- [[wiki/Agents/Coding-and-Engineering/Claude Code의 Task 변화와 AI-native 엔지니어의 조건.md|Claude Code Task 변화와 AI-native 엔지니어]]
 - [[wiki/Agents/Frameworks/SkillOpt-Self-Evolving-Agent-Skills.md|SkillOpt: 에이전트 자율 진화 스킬 최적화 프레임워크]]

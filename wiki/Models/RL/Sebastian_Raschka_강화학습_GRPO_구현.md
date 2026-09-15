@@ -1,6 +1,6 @@
 ---
 title: "Sebastian_Raschka_강화학습_GRPO_구현"
-related_raw: ["[[wiki/Models/RL/Sebastian_Raschka_강화학습_GRPO_구현.md]]"]
+related_raw: ["[[wiki/Models/RL/Sebastian_Raschka_강화학습_GRPO_구현.md]]"]
 tags: ['wiki', 'ai_core', 'ai_ml_development', 'grpo_dpo_reinforcement_learning']
 type: "wiki"
 status: "published"

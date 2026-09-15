@@ -24,7 +24,7 @@ updated: "2026-04-19"
 
 ## 기타 정보
 
-*   Moonshot AI의 CEO는 [[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리를 깊이 이해|Transformer-XL]] 모델의 첫 번째 저자입니다.
+*   Moonshot AI의 CEO는 [[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리를 깊이 이해|Transformer-XL]] 모델의 첫 번째 저자입니다.
 
 ## 관련 링크
 
@@ -35,4 +35,4 @@ updated: "2026-04-19"
 ---
 ## 관련 노트
 - [[wiki/Models/Architectures/Transformers-v5]]
-- [[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리를 깊이 이해]]
+- [[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리를 깊이 이해]]

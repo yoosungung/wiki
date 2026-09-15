@@ -1,6 +1,6 @@
 ---
 title: "구글의-Embodied-Agent-SIMA"
-related_raw: ["[[wiki/Agents/Frameworks/구글의-Embodied-Agent-SIMA.md]]"]
+related_raw: ["[[wiki/Agents/Frameworks/구글의-Embodied-Agent-SIMA.md]]"]
 tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'agent_frameworks_and_trends']
 type: "wiki"
 status: "published"
@@ -34,4 +34,4 @@ DeepMind는 이를 "AGI로 가는 중요한 발걸음"이라고 표현했습니�
 - [[wiki/Models/Reasoning-and-Cognition/Andrej_Karpathy_on_AGI]]
 - [[wiki/Agents/Robotics-and-VLA/Why VLAs are becoming the real link between AI reasoning and physical robotics]]
 - [[wiki/Models/Small-Models/Google-Gemini-3]]
-- [[wiki/Agents/Frameworks/구글의-LLM-기반-에이전트-한계-고백]]
+- [[wiki/Agents/Frameworks/구글의-LLM-기반-에이전트-한계-고백]]

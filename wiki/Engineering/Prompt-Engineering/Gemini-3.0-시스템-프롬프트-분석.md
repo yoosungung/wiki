@@ -1,6 +1,6 @@
 ---
 title: "Gemini-3.0-시스템-프롬프트-분석"
-related_raw: ["[[wiki/Engineering/Prompt-Engineering/Gemini-3.0-시스템-프롬프트-분석.md]]"]
+related_raw: ["[[wiki/Engineering/Prompt-Engineering/Gemini-3.0-시스템-프롬프트-분석.md]]"]
 tags: ['wiki', 'ai_core', 'llm_concepts', 'prompt_engineering']
 type: "wiki"
 status: "published"
@@ -34,6 +34,6 @@ updated: "2026-04-19"
 
 *   [[wiki/Models/Small-Models/Google-Gemini-3]]
 *   [[wiki/Engineering/Prompt-Engineering/Prompt-Decorators]]
-*   [[wiki/Engineering/Prompt-Engineering/메타_프롬프트]]
+*   [[wiki/Engineering/Prompt-Engineering/메타_프롬프트]]
 *   [[Projects/LinkedIn/The Egg와 LLM 페르소나]]
-*   [[wiki/Engineering/Prompt-Engineering/AI_질문법]]
+*   [[wiki/Engineering/Prompt-Engineering/AI_질문법]]

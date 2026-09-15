@@ -1,6 +1,6 @@
 ---
 title: "LLM 캐시 최적화 기술: TurboQuant, IceCache, LMCache"
-related_raw: ["[[wiki/Models/Optimization-and-Serving/LLM 캐시 최적화 기술: TurboQuant와 IceCache.md]]", "[[2026-07-31-lmcache-kv-cache-sharing.md]]"]
+related_raw: ["[[wiki/Models/Optimization-and-Serving/LLM 캐시 최적화 기술: TurboQuant와 IceCache.md]]", "[[2026-07-31-lmcache-kv-cache-sharing.md]]"]
 tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'llm_cache']
 type: "wiki"
 status: "published"

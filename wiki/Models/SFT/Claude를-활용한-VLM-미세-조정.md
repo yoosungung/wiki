@@ -1,6 +1,6 @@
 ---
 title: "Claude를-활용한-VLM-미세-조정"
-related_raw: ["[[wiki/Models/SFT/Claude를-활용한-VLM-미세-조정.md]]"]
+related_raw: ["[[wiki/Models/SFT/Claude를-활용한-VLM-미세-조정.md]]"]
 tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_concepts']
 type: "wiki"
 status: "published"
@@ -24,7 +24,7 @@ Merve Noyan의 게시물에 따르면, Anthropic의 Claude를 사용하여 개�
 
 ## 관련 노트
 
-*   [[wiki/Engineering/Infrastructure-and-DevOps/DGX Spark에서의 VLM 파인튜닝]]
+*   [[wiki/Engineering/Infrastructure-and-DevOps/DGX Spark에서의 VLM 파인튜닝]]
 *   [[wiki/Models/SFT/Fine-Tuning]]
 *   [[wiki/Agents/Coding-and-Engineering/Claude_Code_on_the_web]]
 *   [[wiki/Models/SFT/PEFT-Options]]

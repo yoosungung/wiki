@@ -1,6 +1,6 @@
 ---
 title: "삼성 Tiny Recursive Model (TRM) - AI 패러다임의 전환"
-related_raw: ["[[wiki/Models/RL/삼성 Tiny Recursive Model (TRM) - AI 패러다임의 전환.md]]"]
+related_raw: ["[[wiki/Models/RL/삼성 Tiny Recursive Model (TRM) - AI 패러다임의 전환.md]]"]
 tags: ['wiki', 'ai_core', 'llm_concepts', 'recursive_language_models_rlm']
 type: "wiki"
 status: "published"

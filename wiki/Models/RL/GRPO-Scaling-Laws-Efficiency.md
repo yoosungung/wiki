@@ -31,4 +31,4 @@ updated: "2026-04-19"
 - Reinforcement_Learning
 - [[wiki/Models/RL/DeepSeek-R1-GRPO-Guide]]
 - [[wiki/Models/RL/Unsloth-Studio-GRPO-2026]]
-- [[wiki/Models/RL/NVIDIA GDPO: 다중 보상 RL의 GRPO 결함 해결]]
+- [[wiki/Models/RL/NVIDIA GDPO: 다중 보상 RL의 GRPO 결함 해결]]

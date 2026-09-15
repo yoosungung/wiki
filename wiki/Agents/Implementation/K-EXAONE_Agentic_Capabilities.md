@@ -26,4 +26,4 @@ LG AI의 **K-EXAONE 236B-A23B** 모델은 뛰어난 추론(Reasoning) 능력과 
 
 관련 문서:
 - [[wiki/Models/Optimization-and-Serving/Rebellions-NPU-LLM-Serving.md]]
-- [[wiki/Models/Architectures/MoE 모델 분석.md]]
+- [[wiki/Models/Architectures/MoE 모델 분석.md]]

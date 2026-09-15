@@ -46,4 +46,4 @@ updated: "2026-04-19"
 - Resources/Knowledge-Graph/GraphRAG-2
 - [[wiki/RAG/GraphReady]]
 - [[wiki/RAG/Apple_Embedding_Atlas_RAG_Optimization]]
-- [[wiki/Models/Reasoning-and-Cognition/LLM을 활용한 상향식 지식 그래프 구축]]
+- [[wiki/Models/Reasoning-and-Cognition/LLM을 활용한 상향식 지식 그래프 구축]]

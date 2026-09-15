@@ -38,4 +38,4 @@ Snowflake AI 스택의 핵심 목표는 기업 데이터의 80%를 차지하는 
 ## 관련 문서
 - [[wiki/Agents/Text-to-SQL/WrenAI-Generative-BI-Agent.md|WrenAI: 시맨틱 레이어 기반 BI 에이전트]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/000_Infrastructure-and-DevOps-MOC.md|인프라 및 DevOps MOC]]
-- [[wiki/Models/Architectures/BigQuery의 AI 시대에 맞춰 재해석된 SQL.md|BigQuery의 SQL 재해석 분석]]
+- [[wiki/Models/Architectures/BigQuery의 AI 시대에 맞춰 재해석된 SQL.md|BigQuery의 SQL 재해석 분석]]

@@ -1,6 +1,6 @@
 ---
 title: "법률 LLM 구축 추론 인사이트"
-related_raw: ["[[wiki/Business/법률 LLM 구축 추론 인사이트.md]]"]
+related_raw: ["[[wiki/Business/법률 LLM 구축 추론 인사이트.md]]"]
 tags: ['wiki', 'business_and_misc', 'business']
 type: "wiki"
 status: "published"

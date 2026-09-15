@@ -1,6 +1,6 @@
 ---
 title: "MIT의 재귀적 언어 모델(RLM) - 컨텍스트 한계 돌파"
-related_raw: ["[[wiki/Models/RL/MIT의 재귀적 언어 모델(RLM) - 컨텍스트 한계 돌파.md]]"]
+related_raw: ["[[wiki/Models/RL/MIT의 재귀적 언어 모델(RLM) - 컨텍스트 한계 돌파.md]]"]
 tags: ['wiki', 'ai_core', 'llm_concepts', 'recursive_language_models_rlm']
 type: "wiki"
 status: "published"
@@ -34,8 +34,8 @@ RLM은 긴 문서 분석, 코드베이스 전체 이해, 대규모 데이터 처
 *   CatchPaper 뉴스레터: https://lnkd.in/ge889SGW
 
 **관련 노트**:
-*   [[wiki/Models/RL/재귀적 언어 모델(RLM)]]
-*   [[wiki/Models/RL/삼성 Tiny Recursive Model (TRM) - AI 패러다임의 전환]]
-*   [[wiki/Engineering/Prompt-Engineering/프롬프트_컨텍스트_엔지니어링]]
+*   [[wiki/Models/RL/재귀적 언어 모델(RLM)]]
+*   [[wiki/Models/RL/삼성 Tiny Recursive Model (TRM) - AI 패러다임의 전환]]
+*   [[wiki/Engineering/Prompt-Engineering/프롬프트_컨텍스트_엔지니어링]]
 *   [[wiki/Models/Reasoning-and-Cognition/Why LLM models are not good at RAG]]
 *   [[wiki/Engineering/Prompt-Engineering/Context-Engineering-Sessions-and-Memory]]

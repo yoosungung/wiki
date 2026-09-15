@@ -1,6 +1,6 @@
 ---
 title: "Confucius Code Agent - 모델 스케일링의 종말과 에이전트 설계의 중요성"
-related_raw: ["[[wiki/Agents/Coding-and-Engineering/Confucius Code Agent - 모델 스케일링의 종말과 에이전트 설계의 중요성.md]]"]
+related_raw: ["[[wiki/Agents/Coding-and-Engineering/Confucius Code Agent - 모델 스케일링의 종말과 에이전트 설계의 중요성.md]]"]
 tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'basetech', 'llm_systems_projects']
 type: "wiki"
 status: "published"
@@ -42,10 +42,10 @@ Confucius Code Agent는 AI 에이전트 경쟁이 모델 크기보다는 **잘 �
 *   [[wiki/Engineering/Prompt-Engineering/Context-Engineering-Sessions-and-Memory]]
 *   [[wiki/Agents/Frameworks/LangChain/LangChain-DeepAgents-CLI]]
 *   [[wiki/Agents/Memory-and-Cognition/OpenMemory]]
-*   [[wiki/Agents/Coding-and-Engineering/Claude Code의 Task 변화와 AI-native 엔지니어의 조건]]
+*   [[wiki/Agents/Coding-and-Engineering/Claude Code의 Task 변화와 AI-native 엔지니어의 조건]]
 *   [[wiki/Agents/Implementation/Agents 2.0 - From Shallow Loops to Deep Agents]]
 *   [[wiki/Agents/Implementation/Agents-2.0-Discussion]]
 *   [[wiki/Agents/Implementation/Computer Use Agents]]
-*   [[wiki/Agents/Multi-Agent-and-Orchestration/Langchain_다중_에이전트_아키텍처_선택]]
+*   [[wiki/Agents/Multi-Agent-and-Orchestration/Langchain_다중_에이전트_아키텍처_선택]]
 *   [[wiki/Agents/Evaluations/AI-Agent-Evaluation]]
 *   [[wiki/Agents/Memory-and-Cognition/Memory]]

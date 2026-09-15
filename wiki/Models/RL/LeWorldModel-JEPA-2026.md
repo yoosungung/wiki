@@ -36,4 +36,4 @@ updated: "2026-04-19"
 
 ---
 **출처**: [AMI Labs Research](https://ami-labs.ai/research)
-**관련 노트:** `[[wiki/Models/RL/OpenAI-Sora-Shutdown-Robot-Pivot]]`, `[[wiki/Agents/Frameworks/구글의-Embodied-Agent-SIMA]]`, `[[wiki/Business/2026년-로봇-공학-예측]]`
+**관련 노트:** `[[wiki/Models/RL/OpenAI-Sora-Shutdown-Robot-Pivot]]`, `[[wiki/Agents/Frameworks/구글의-Embodied-Agent-SIMA]]`, `[[wiki/Business/2026년-로봇-공학-예측]]`

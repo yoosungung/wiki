@@ -1,6 +1,6 @@
 ---
 title: "Microsoft AsyncThink - 조직적 사고를 통한 AI의 진화"
-related_raw: ["[[wiki/Agents/Frameworks/Microsoft-Frameworks/Microsoft AsyncThink - 조직적 사고를 통한 AI의 진화.md]]"]
+related_raw: ["[[wiki/Agents/Frameworks/Microsoft-Frameworks/Microsoft AsyncThink - 조직적 사고를 통한 AI의 진화.md]]"]
 tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'basetech', 'llm_systems_projects']
 type: "wiki"
 status: "published"
@@ -31,7 +31,7 @@ AsyncThink는 단순히 더 빠르고 정확한 모델을 넘어, 지능이 스�
 ---
 
 **관련 노트:**
-- [[wiki/Agents/Multi-Agent-and-Orchestration/멀티-에이전트-패턴]]
+- [[wiki/Agents/Multi-Agent-and-Orchestration/멀티-에이전트-패턴]]
 - [[wiki/Agents/Multi-Agent-and-Orchestration/Multi-Agent Systems - Collaboration, Complexity, and Innovation]]
 - [[wiki/Agents/Frameworks/Microsoft-Frameworks/Microsoft Agent Framework]]
 - Projects/LinkedIn/현대 AI 멀티에이전트 시스템의 구조와 동작

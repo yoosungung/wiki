@@ -40,7 +40,7 @@ updated: "2026-04-19"
 ## 링크
 
 *   [[Archive/AI Agent 구성 (내부 교육용)]]
-*   [[wiki/Agents/Multi-Agent-and-Orchestration/멀티-에이전트-패턴]]
+*   [[wiki/Agents/Multi-Agent-and-Orchestration/멀티-에이전트-패턴]]
 *   [[wiki/Agents/Implementation/MaxKB]]
 *   [[wiki/Business/Allibee-Smarter-Legal-Agent]]
 *   [[wiki/Agents/Frameworks/LangChain/LangChain_DeepAgents_v1_Rewrite]]

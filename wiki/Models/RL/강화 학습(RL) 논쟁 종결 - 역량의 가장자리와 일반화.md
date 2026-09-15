@@ -1,6 +1,6 @@
 ---
 title: "강화 학습(RL) 논쟁 종결 - 역량의 가장자리와 일반화"
-related_raw: ["[[wiki/Models/RL/강화 학습(RL) 논쟁 종결 - 역량의 가장자리와 일반화.md]]"]
+related_raw: ["[[wiki/Models/RL/강화 학습(RL) 논쟁 종결 - 역량의 가장자리와 일반화.md]]"]
 tags: ['wiki', 'ai_core', 'ai_ml_development', 'grpo_dpo_reinforcement_learning']
 type: "wiki"
 status: "published"
@@ -48,8 +48,8 @@ Ludovico Bessi의 게시물과 관련 댓글들은 강화 학습(RL)이 모델�
 *   `https://lnkd.in/euu5X7gu`
 
 **관련 노트:**
-*   [[wiki/Models/RL/NVIDIA GDPO: 다중 보상 RL의 GRPO 결함 해결]]
+*   [[wiki/Models/RL/NVIDIA GDPO: 다중 보상 RL의 GRPO 결함 해결]]
 *   [[wiki/Models/RL/RLHF]]
 *   [[wiki/Models/RL/Agent-R1 Training Powerful LLM Agents with End-to-End Reinforcement Learning]]
-*   [[wiki/Models/Reasoning-and-Cognition/LLM 학습 패러다임]]
+*   [[wiki/Models/Reasoning-and-Cognition/LLM 학습 패러다임]]
 *   [[wiki/Models/SFT/Fine-Tuning]]

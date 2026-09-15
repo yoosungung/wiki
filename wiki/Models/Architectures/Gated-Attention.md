@@ -37,6 +37,6 @@ updated: "2026-04-19"
 
 ---
 ## 관련 노트
-- [[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리를 깊이 이해]]
+- [[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리를 깊이 이해]]
 - [[wiki/Models/Architectures/RoPE-and-NoPE-Multi-Scale-Architecture]]
 - [[wiki/Models/Architectures/Transformers-v5]]

@@ -88,7 +88,7 @@ Physical Intelligence는 단일 로봇 전용 모델을 탈피하여 다양한 �
 ---
 
 ## 🔗 관련 문서
-- [[wiki/Agents/Robotics-and-VLA/NVIDIA-Physical-AI-GR00T-Cosmos-물리적-AI-혁신.md|NVIDIA Physical AI GR00T & Cosmos 물리적 AI 혁신]]
+- [[wiki/Agents/Robotics-and-VLA/NVIDIA-Physical-AI-GR00T-Cosmos-물리적-AI-혁신.md|NVIDIA Physical AI GR00T & Cosmos 물리적 AI 혁신]]
 - [[wiki/Models/RL/World-Models-JEPA-LeWorldModel-Generative-Simulation.md|JEPA 및 LeWorldModel 생성 시뮬레이션]]
 - [[wiki/Models/RL/LeWorldModel-JEPA-2026.md|LeWorldModel JEPA 2026]]
 - [[wiki/Agents/Robotics-and-VLA/Google-RT-3-Open-Source-Robotics.md|Google RT-3 오픈소스 로보틱스]]

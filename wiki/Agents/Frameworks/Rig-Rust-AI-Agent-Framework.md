@@ -24,7 +24,7 @@ Rig은 Rust 언어로 작성된 고성능, 타입 안정성(Type-safe), 모듈�
 ## 🔗 관련 링크
 - **GitHub Repository**: [0xSage/rig](https://github.com/0xSage/rig)
 - **카테고리**: [[wiki/Agents/Frameworks/000_Frameworks-MOC.md]]
-- **비교군**: [[wiki/Agents/Frameworks/LangChain/LangChain 1.1의 동적 컨텍스트 압축.md]]
+- **비교군**: [[wiki/Agents/Frameworks/LangChain/LangChain 1.1의 동적 컨텍스트 압축.md]]
 
 ---
 *Last Updated: 2026-06-01*

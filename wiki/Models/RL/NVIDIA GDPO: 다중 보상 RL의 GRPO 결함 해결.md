@@ -1,6 +1,6 @@
 ---
 title: "NVIDIA GDPO: 다중 보상 RL의 GRPO 결함 해결"
-related_raw: ["[[wiki/Models/RL/NVIDIA GDPO: 다중 보상 RL의 GRPO 결함 해결.md]]"]
+related_raw: ["[[wiki/Models/RL/NVIDIA GDPO: 다중 보상 RL의 GRPO 결함 해결.md]]"]
 tags: ['wiki', 'ai_core', 'ai_ml_development']
 type: "wiki"
 status: "published"
@@ -87,4 +87,4 @@ def compute_gdpo_advantage(rewards_per_token, reward_weights, eps=1e-6):
 
 ## 🔗 관련 문서 및 출처
 - 원천 논문: [arXiv:2601.05242 - GDPO: Group reward-Decoupled Normalization Policy Optimization](https://arxiv.org/abs/2601.05242) (ICML 2026)
-- 관련 위키: [[wiki/Models/RL/000_RL-MOC.md]], [[wiki/Models/RL/DeepSeek-R1-GRPO-Implementation.md]], [[wiki/Models/Reasoning-and-Cognition/추론-LLM-추론-노력-제어-및-스케일링.md]]
+- 관련 위키: [[wiki/Models/RL/000_RL-MOC.md]], [[wiki/Models/RL/DeepSeek-R1-GRPO-Implementation.md]], [[wiki/Models/Reasoning-and-Cognition/추론-LLM-추론-노력-제어-및-스케일링.md]]

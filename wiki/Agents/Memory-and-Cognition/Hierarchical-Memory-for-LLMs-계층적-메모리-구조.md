@@ -1,6 +1,6 @@
 ---
 title: "Hierarchical-Memory-for-LLMs-계층적-메모리-구조"
-related_raw: ["[[wiki/Agents/Memory-and-Cognition/Hierarchical-Memory-for-LLMs-계층적-메모리-구조.md]]"]
+related_raw: ["[[wiki/Agents/Memory-and-Cognition/Hierarchical-Memory-for-LLMs-계층적-메모리-구조.md]]"]
 tags: ['wiki', 'knowledge_and_memory', 'advanced_rag_&_knowledge_graph', 'agent_memory_and_cognition']
 type: "wiki"
 status: "published"

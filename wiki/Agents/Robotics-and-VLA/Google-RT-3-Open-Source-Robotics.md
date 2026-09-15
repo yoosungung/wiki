@@ -28,6 +28,6 @@ Google은 자사의 최신 로보틱스 파운데이션 모델인 **RT-3 (Roboti
 - ![Robot Task Execution](https://example.com/rt3-tasks.png) (주방 보조, 물건 정리 등 실제 수행 사례)
 
 ### 5. 관련 노트 링크
-- [[wiki/Agents/Frameworks/구글의-Embodied-Agent-SIMA]]
-- [[wiki/Agents/Frameworks/구글의-LLM-기반-에이전트-한계-고백]]
-- [[wiki/Business/2026년-로봇-공학-예측]]
+- [[wiki/Agents/Frameworks/구글의-Embodied-Agent-SIMA]]
+- [[wiki/Agents/Frameworks/구글의-LLM-기반-에이전트-한계-고백]]
+- [[wiki/Business/2026년-로봇-공학-예측]]

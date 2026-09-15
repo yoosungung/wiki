@@ -1,6 +1,6 @@
 ---
 title: "Claude-Code-and-Cursor-AI-Native-Engineering-에이전트-기반-엔지니어링"
-related_raw: ["[[wiki/Engineering/AI-Native-Engineering/Claude-Code-and-Cursor-AI-Native-Engineering-에이전트-기반-엔지니어링.md]]"]
+related_raw: ["[[wiki/Engineering/AI-Native-Engineering/Claude-Code-and-Cursor-AI-Native-Engineering-에이전트-기반-엔지니어링.md]]"]
 tags: ['wiki', 'agents_and_systems', 'aiops_&_ai-native_devtools', 'claude_code_and_cursor_ai-native_engineering']
 type: "wiki"
 status: "published"

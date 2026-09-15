@@ -29,5 +29,5 @@ updated: "2026-04-19"
 
 ### 5. 관련 노트 링크
 - [[wiki/Engineering/AI-Native-Engineering/Claude-Code-vs-Cursor-Deep-Dive]]
-- [[wiki/Engineering/AI-Native-Engineering/Claude Code 개발자 Boris의 효율적인 AI 활용 팁]]
+- [[wiki/Engineering/AI-Native-Engineering/Claude Code 개발자 Boris의 효율적인 AI 활용 팁]]
 - [[wiki/Agents/Frameworks/MCP/MCP-Ecosystem-2026]]

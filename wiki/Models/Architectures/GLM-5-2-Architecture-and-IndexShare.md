@@ -42,7 +42,7 @@ GLM-5.2는 DSA와 IndexShare의 통합으로 긴 문맥의 히스토리를 필�
 - **실전적 의의**: CPU 구동에 따른 속도 제한(0.05~0.1 tok/s)이 존재하나, Speculative Decoding(MTP) 및 캐시 최적화 연동을 통해 일반 인프라에서도 주권 MoE(Sovereign MoE) 모델을 독립 가동할 수 있는 가능성을 열었습니다.
 
 ## 6. 연결 문서 (Internal Links)
-- [[wiki/Models/Architectures/MoE 모델 분석.md|MoE (Mixture of Experts) 모델 분석]]
+- [[wiki/Models/Architectures/MoE 모델 분석.md|MoE (Mixture of Experts) 모델 분석]]
 - [[wiki/Models/Architectures/Recent-LLM-Architecture-Developments.md|최신 LLM 아키텍처 동향]]
-- [[wiki/Models/Architectures/DeepSeek-V2, GPT-4 수준의 추론 능력을 갖춘 오픈소스 LLM.md|DeepSeek-V2 및 MLA 분석]]
+- [[wiki/Models/Architectures/DeepSeek-V2, GPT-4 수준의 추론 능력을 갖춘 오픈소스 LLM.md|DeepSeek-V2 및 MLA 분석]]
 - [[wiki/Models/Optimization-and-Serving/프리오사-AI-RNGD-NPU-최적화-및-서빙-가이드.md|NPU 서빙 및 최적화 기술]]

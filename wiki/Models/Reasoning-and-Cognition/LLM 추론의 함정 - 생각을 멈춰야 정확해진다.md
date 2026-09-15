@@ -1,6 +1,6 @@
 ---
 title: "LLM 추론의 함정 - 생각을 멈춰야 정확해진다"
-related_raw: ["[[wiki/Models/Reasoning-and-Cognition/LLM 추론의 함정 - 생각을 멈춰야 정확해진다.md]]"]
+related_raw: ["[[wiki/Models/Reasoning-and-Cognition/LLM 추론의 함정 - 생각을 멈춰야 정확해진다.md]]"]
 tags: ['wiki', 'ai_core', 'llm_concepts', 'llm_applications_and_insights']
 type: "wiki"
 status: "published"

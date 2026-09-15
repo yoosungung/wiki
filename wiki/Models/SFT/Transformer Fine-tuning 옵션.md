@@ -1,6 +1,6 @@
 ---
 title: "Transformer Fine-tuning 옵션"
-related_raw: ["[[wiki/Models/SFT/Transformer Fine-tuning 옵션.md]]"]
+related_raw: ["[[wiki/Models/SFT/Transformer Fine-tuning 옵션.md]]"]
 tags: ['wiki', 'ai_core', 'fine-tuning_&_reasoning_models', 'fine-tuning_concepts']
 type: "wiki"
 status: "published"

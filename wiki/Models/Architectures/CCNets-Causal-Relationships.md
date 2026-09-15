@@ -32,4 +32,4 @@ CCNets는 단순한 패턴 인식을 넘어 변수 간의 인과적 메커니즘
 ## 관련 문서
 - [[wiki/Models/Architectures/000_Architectures-MOC.md|모델 아키텍처 MOC]]
 - [[wiki/Models/Architectures/World-Models-Analysis.md|월드 모델 시스템 분석]]
-- [[wiki/Models/Reasoning-and-Cognition/LLM 추론의 함정 - 생각을 멈춰야 정확해진다.md|LLM 추론의 한계 분석]]
+- [[wiki/Models/Reasoning-and-Cognition/LLM 추론의 함정 - 생각을 멈춰야 정확해진다.md|LLM 추론의 한계 분석]]

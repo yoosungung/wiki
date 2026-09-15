@@ -28,7 +28,7 @@ LLM을 활용한 설문 조사 시뮬레이션의 정확도와 신뢰성을 엄�
 
 ## 🔗 관련 링크 (Related Links)
 - **Metrics Visualization**: [Arxiv Metrics Page](https://arxiv.org/html/2603.19002/metrics.jpg)
-- **기존 노트 연결**: [[wiki/RAG/Knowledge Graph Extraction and Challenges]], [[wiki/Models/Reasoning-and-Cognition/합성 정신병리학 (Synthetic Psychopathology)의 등장]]
+- **기존 노트 연결**: [[wiki/RAG/Knowledge Graph Extraction and Challenges]], [[wiki/Models/Reasoning-and-Cognition/합성 정신병리학 (Synthetic Psychopathology)의 등장]]
 
 ---
 *Created on: 2026-03-20*

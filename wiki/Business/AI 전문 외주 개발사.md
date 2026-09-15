@@ -1,6 +1,6 @@
 ---
 title: "AI 전문 외주 개발사"
-related_raw: ["[[wiki/Business/AI 전문 외주 개발사.md]]"]
+related_raw: ["[[wiki/Business/AI 전문 외주 개발사.md]]"]
 tags: ['wiki', 'business_and_misc', 'miscellaneous']
 type: "wiki"
 status: "published"

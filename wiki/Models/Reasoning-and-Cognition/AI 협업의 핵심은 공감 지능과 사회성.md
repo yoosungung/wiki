@@ -1,6 +1,6 @@
 ---
 title: "AI 협업의 핵심은 공감 지능과 사회성"
-related_raw: ["[[wiki/Models/Reasoning-and-Cognition/AI 협업의 핵심은 공감 지능과 사회성.md]]"]
+related_raw: ["[[wiki/Models/Reasoning-and-Cognition/AI 협업의 핵심은 공감 지능과 사회성.md]]"]
 tags: ['wiki', 'ai_core', 'llm_concepts', 'llm_applications_and_insights']
 type: "wiki"
 status: "published"

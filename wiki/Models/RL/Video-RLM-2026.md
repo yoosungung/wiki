@@ -31,7 +31,7 @@ MIT CSAIL 연구진이 제안한 RLM(Recursive Language Models) 프레임워크�
 - **에이전트 통합**: `recursive-decomposition-skill`과 연동하여 복잡한 시각적 데이터를 분석하는 에이전트의 핵심 엔진으로 활용 가능합니다.
 
 ## 🔗 관련 링크 (Related Links)
-- **기존 노트 연결**: [[wiki/Models/RL/재귀적 언어 모델(RLM)]], [[wiki/Agents/Frameworks/구글의-Embodied-Agent-SIMA]]
+- **기존 노트 연결**: [[wiki/Models/RL/재귀적 언어 모델(RLM)]], [[wiki/Agents/Frameworks/구글의-Embodied-Agent-SIMA]]
 
 ---
 *Created on: 2026-03-20*

@@ -31,5 +31,5 @@ type: "wiki"
 
 ## 🔗 연결된 문서
 - [[wiki/Agents/Coding-and-Engineering/000_Coding-and-Engineering-MOC.md]]
-- [[wiki/Agents/Coding-and-Engineering/Claude Code의 Task 변화와 AI-native 엔지니어의 조건.md]]
+- [[wiki/Agents/Coding-and-Engineering/Claude Code의 Task 변화와 AI-native 엔지니어의 조건.md]]
 - [[wiki/Models/Architectures/000_Architectures-MOC.md]]

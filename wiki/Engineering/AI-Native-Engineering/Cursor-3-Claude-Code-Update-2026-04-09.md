@@ -22,6 +22,6 @@ AI 기반 코딩 도구의 패러다임이 '코드 자동 완성'에서 '멀티 
 - [Cursor 3.0 공식 블로그](https://cursor.com/)
 
 ## 관련 노트
-- [[wiki/Engineering/AI-Native-Engineering/Claude-Code-and-Cursor-AI-Native-Engineering-에이전트-기반-엔지니어링]]
+- [[wiki/Engineering/AI-Native-Engineering/Claude-Code-and-Cursor-AI-Native-Engineering-에이전트-기반-엔지니어링]]
 - [[wiki/Engineering/AI-Native-Engineering/Cursor-3-Agent-First-IDE-Claude-Code-Leak-Capybara]]
 - [[wiki/Engineering/AI-Native-Engineering/Claude-Code-vs-Cursor-Deep-Dive]]

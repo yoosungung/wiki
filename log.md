@@ -673,3 +673,11 @@
 | 2026-09-14 | ALREADY_COVERED | wiki/ | 4 | LiteRT MTP/v0.16; Furiosa FXB·llm-d; Rebellions OpenShift; LightRAG/Graphiti |
 | 2026-09-14 | CLEANUP | inbox/, raw/, Root | 12 | inbox 10 git rm; raw 1 삭제; D-0/D-1 유지 |
 | 2026-09-14 | LINT | Root / wiki | ALL | 데일리·INDEX META·연구_주제_관리 비고 갱신 |
+
+| 2026-09-15 | INBOX_DRAIN | inbox/ | 9 | GH-empty×5→Empty-Skip sources; pub-safety/radar/people→PubGate; roadmap M4→Roadmap-Sync; people EXCLUDE_PROGRESS; git rm |
+| 2026-09-15 | INGEST | raw/ | 1 | LightRAG v1.5.7 `/workspace`·USER_PROMPT_PREFIX·graph-first·PGTable (2026-09-02) |
+| 2026-09-15 | RESEARCH | 연구_주제_관리.md | 6 | wiki-first+웹: LiteRT/Furiosa/Rebellions/Supermemory/LightRAG/openpi; v1.5.7 신규 |
+| 2026-09-15 | SYNTHESIZE | wiki/RAG | 2 | GraphRAG-vs-LightRAG §6·LightRAG-Summary v1.5.7 배포 체크리스트 |
+| 2026-09-15 | ALREADY_COVERED | wiki/ | 5 | LiteRT MTP/v0.16.1; Furiosa FXB·llm-d; Rebellions OpenShift; Supermemory CB/Nova; openpi π0/π0.5 |
+| 2026-09-15 | CLEANUP | inbox/, raw/, Root | 11 | inbox 9 git rm; raw 1 삭제; D-2(2026-09-13) 삭제; D-0/D-1 유지 |
+| 2026-09-15 | LINT | Root / wiki | ALL | 데일리·INDEX META·auto_moc·fix_wiki_links·연구_주제_관리 비고 갱신 |

@@ -100,8 +100,8 @@ version: 1.2.0
 
 ## 🔗 관련 문서
 - [[wiki/Agents/Self-Evolving/000_Self-Evolving-MOC.md|Self-Evolving MOC]]
-- [[wiki/Agents/Self-Evolving/SkillOpt-및-과학적-탐구-멀티-에이전트-시스템.md|SkillOpt 및 과학적 탐구 멀티 에이전트 시스템]]
-- [[wiki/Agents/Self-Evolving/Memento-에이전트-스킬-자가-학습-프레임워크.md|Memento 에이전트 스킬 자가 학습 프레임워크]]
+- [[wiki/Agents/Self-Evolving/SkillOpt-및-과학적-탐구-멀티-에이전트-시스템.md|SkillOpt 및 과학적 탐구 멀티 에이전트 시스템]]
+- [[wiki/Agents/Self-Evolving/Memento-에이전트-스킬-자가-학습-프레임워크.md|Memento 에이전트 스킬 자가 학습 프레임워크]]
 - [[wiki/Engineering/AI-Native-Engineering/Agentic-Software-Factory.md|에이전틱 소프트웨어 팩토리 아키텍처]]
 - [[wiki/Engineering/AI-Native-Engineering/Epistemic-Debt-ChangeScore-Friction-Gate.md|인식 부채 통제 및 에이전트 마찰 게이트]]
 

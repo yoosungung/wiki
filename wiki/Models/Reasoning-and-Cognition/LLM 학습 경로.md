@@ -1,6 +1,6 @@
 ---
 title: "LLM 학습 경로"
-related_raw: ["[[wiki/Models/Reasoning-and-Cognition/LLM 학습 경로.md]]"]
+related_raw: ["[[wiki/Models/Reasoning-and-Cognition/LLM 학습 경로.md]]"]
 tags: ['wiki', 'ai_core', 'llm_concepts', 'llm_applications_and_insights']
 type: "wiki"
 status: "published"

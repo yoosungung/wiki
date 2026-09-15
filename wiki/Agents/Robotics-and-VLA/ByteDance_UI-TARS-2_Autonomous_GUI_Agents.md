@@ -17,5 +17,5 @@ updated: "2026-04-19"
 ---
 ### 관련 노트
 - [[Archive/AI Agent 구성 (내부 교육용)]]
-- [[wiki/Business/Recommendation Systems/추천시스템]]
+- [[wiki/Business/Recommendation Systems/추천시스템]]
 - Agent Builder

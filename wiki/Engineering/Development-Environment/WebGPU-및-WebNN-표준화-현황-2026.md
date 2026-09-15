@@ -43,7 +43,7 @@ NPU, GPU, CPU 등 하드웨어 가속기를 직접 제어하여 신경망 추론
 
 ## 4. 웹 기반 LLM 서빙 및 실행 가속의 영향
 - **Wasm 3.0 Memory64 및 표준 런칭**: 2025년 9월 공식 표준 격상 및 런칭이 완료된 WebAssembly 3.0은 단순한 샌드박스를 넘어 보편적 라이브 런타임으로 이행했습니다. 핵심 기능인 **Memory64**를 통해 기존 32비트의 4GB 힙 메모리 한계를 극복하고 브라우저 실구현 기준 최대 **16GB**까지 주소 공간이 확장되어, 대용량 LLM 가중치 데이터(1B~8B 매개변수 모델)를 통째로 로드하여 실행할 수 있습니다. 또한 **Multiple Memories**를 기본 탑재하여 단일 모듈 내 격리된 다중 메모리 영역 접근 및 WebGPU 버퍼와의 zero-copy 매핑을 지원하며, Component Model(WASIp3) 도입을 통해 클라우드와 브라우저를 관통하는 이식성을 확보했습니다.
-- **브라우저 엔진 패리티**: Chromium·Firefox는 Memory64를 실서비스에 쓸 수 있으나 **Safari/WebKit은 2026-08 기준 Memory64 미지원** — [[wiki/Models/Optimization-and-Serving/브라우저-기반-LLM-서빙-기술-및-아키텍처-2026.md]]. Multiple Memories 등은 엔진별 단계 도입.
+- **브라우저 엔진 패리티**: Chromium·Firefox는 Memory64를 실서비스에 쓸 수 있으나 **Safari/WebKit은 2026-08 기준 Memory64 미지원** — [[wiki/Models/Optimization-and-Serving/브라우저-기반-LLM-서빙-기술-및-아키텍처-2026.md]]. Multiple Memories 등은 엔진별 단계 도입.
 - **IndexedDB 캐싱**: 모바일 브라우저의 1~4GB 가용 메모리 제약 하에, IndexedDB를 가중치 캐시 저장소로 활용하여 최초 1회 로드 후에는 네트워크 전송 없이 오프라인 기동 및 로컬 가속을 보장합니다.
 
 ## 5. LlamaWeb: llama.cpp WebGPU 백엔드 (Microsoft Research, 2026.05)
@@ -79,4 +79,4 @@ WebLLM/Transformers.js와 병행 평가 시, llama.cpp 생태계 사용자는 Ll
 ---
 **관련 문서**:
 - [[wiki/Engineering/Development-Environment/000_Development-Environment-MOC.md]]
-- [[wiki/Models/Optimization-and-Serving/스마트폰-환경의-LLM-서빙-기술-2026.md]]
+- [[wiki/Models/Optimization-and-Serving/스마트폰-환경의-LLM-서빙-기술-2026.md]]

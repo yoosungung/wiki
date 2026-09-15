@@ -46,4 +46,4 @@ updated: "2026-07-31"
 **관련 문서**:
 - [[wiki/Business/Korea_Sovereign_AI_and_Upstage.md]]
 - [[wiki/Models/Optimization-and-Serving/Rebellions-NPU-LLM-Serving.md]]
-- [[wiki/Agents/Frameworks/2026년 AI 에이전트 트렌드.md]]
+- [[wiki/Agents/Frameworks/2026년 AI 에이전트 트렌드.md]]

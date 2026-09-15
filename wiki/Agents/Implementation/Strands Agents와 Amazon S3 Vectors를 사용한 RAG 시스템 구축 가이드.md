@@ -1,6 +1,6 @@
 ---
 title: "Strands Agents와 Amazon S3 Vectors를 사용한 RAG 시스템 구축 가이드"
-related_raw: ["[[wiki/Agents/Implementation/Strands Agents와 Amazon S3 Vectors를 사용한 RAG 시스템 구축 가이드.md]]"]
+related_raw: ["[[wiki/Agents/Implementation/Strands Agents와 Amazon S3 Vectors를 사용한 RAG 시스템 구축 가이드.md]]"]
 tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'implementations', 'agent_data_and_memory']
 type: "wiki"
 status: "published"

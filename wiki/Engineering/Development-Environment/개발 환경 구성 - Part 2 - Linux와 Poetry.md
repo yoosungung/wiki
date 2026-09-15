@@ -1,6 +1,6 @@
 ---
 title: "개발 환경 구성 - Part 2 - Linux와 Poetry"
-related_raw: ["[[wiki/Engineering/Development-Environment/개발 환경 구성 - Part 2 - Linux와 Poetry.md]]"]
+related_raw: ["[[wiki/Engineering/Development-Environment/개발 환경 구성 - Part 2 - Linux와 Poetry.md]]"]
 tags: ['wiki', 'engineering_and_infra', 'dev_environment', 'dev_setup_guides']
 type: "wiki"
 status: "published"
@@ -43,8 +43,8 @@ Poetry는 Python 프로젝트의 의존성 관리와 패키지 작성을 쉽게 
 
 ## 이전
 
-- [[wiki/Engineering/Development-Environment/개발 환경 구성]]
+- [[wiki/Engineering/Development-Environment/개발 환경 구성]]
 
 ## 다음
 
-- [[wiki/Engineering/Development-Environment/개발 환경 구성 - Part 3 - 프로젝트 설정]]
+- [[wiki/Engineering/Development-Environment/개발 환경 구성 - Part 3 - 프로젝트 설정]]

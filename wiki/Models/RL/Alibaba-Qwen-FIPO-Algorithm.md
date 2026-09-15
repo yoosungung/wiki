@@ -26,5 +26,5 @@ updated: "2026-04-19"
 
 ## 관련 노트
 - [[wiki/Models/RL/DeepSeek-R1-GRPO-Guide]]
-- [[wiki/Models/RL/NVIDIA GDPO: 다중 보상 RL의 GRPO 결함 해결]]
+- [[wiki/Models/RL/NVIDIA GDPO: 다중 보상 RL의 GRPO 결함 해결]]
 - [[wiki/Models/RL/GRPO-Scaling-Laws-Efficiency]]

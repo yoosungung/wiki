@@ -24,4 +24,4 @@ updated: "2026-04-19"
 ## 관련 노트
 - [[wiki/Agents/Memory-and-Cognition/Mem0-vs-Cognee-Comparison-2026]]
 - [[wiki/Agents/Memory-and-Cognition/Cognee 핵심 개념]]
-- [[wiki/Agents/Memory-and-Cognition/Hierarchical-Memory-for-LLMs-계층적-메모리-구조]]
+- [[wiki/Agents/Memory-and-Cognition/Hierarchical-Memory-for-LLMs-계층적-메모리-구조]]

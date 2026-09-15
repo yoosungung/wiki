@@ -1,6 +1,6 @@
 ---
 title: "오픈소스 OCR 솔루션 Chandra"
-related_raw: ["[[wiki/Models/Multimodal-and-Vision/오픈소스 OCR 솔루션 Chandra.md]]"]
+related_raw: ["[[wiki/Models/Multimodal-and-Vision/오픈소스 OCR 솔루션 Chandra.md]]"]
 tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'tools']
 type: "wiki"
 status: "published"
@@ -39,8 +39,8 @@ CLI에서 `chandra input.pdf ./output` 명령어를 사용하거나, Streamlit �
 
 *   Areas/RAG기술현황(1)
 *   [[wiki/RAG/GraphRAG]]
-*   [[wiki/Agents/Frameworks/MCP/AI-에이전트-개발-트렌드-MCP에서-Skills로]]
-*   [[wiki/Engineering/Infrastructure-and-DevOps/DGX Spark에서의 VLM 파인튜닝]]
+*   [[wiki/Agents/Frameworks/MCP/AI-에이전트-개발-트렌드-MCP에서-Skills로]]
+*   [[wiki/Engineering/Infrastructure-and-DevOps/DGX Spark에서의 VLM 파인튜닝]]
 *   [[wiki/Models/Multimodal-and-Vision/DeepSeek-OCR]]
 
 ---

@@ -37,6 +37,6 @@ updated: "2026-04-19"
 
 ---
 ## 관련 노트
-- [[wiki/Agents/Multi-Agent-and-Orchestration/멀티-에이전트-패턴]]
+- [[wiki/Agents/Multi-Agent-and-Orchestration/멀티-에이전트-패턴]]
 - [[wiki/Agents/Frameworks/Microsoft-Frameworks/Microsoft Agent Framework]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/airflow]]

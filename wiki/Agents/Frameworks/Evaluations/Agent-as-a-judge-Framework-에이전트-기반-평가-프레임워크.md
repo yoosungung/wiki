@@ -1,6 +1,6 @@
 ---
 title: "Agent-as-a-judge-Framework-에이전트-기반-평가-프레임워크"
-related_raw: ["[[wiki/Agents/Frameworks/Evaluations/Agent-as-a-judge-Framework-에이전트-기반-평가-프레임워크.md]]"]
+related_raw: ["[[wiki/Agents/Frameworks/Evaluations/Agent-as-a-judge-Framework-에이전트-기반-평가-프레임워크.md]]"]
 tags: ['wiki', 'knowledge_and_memory', 'advanced_rag_&_knowledge_graph', 'agent_memory_and_cognition']
 type: "wiki"
 status: "published"

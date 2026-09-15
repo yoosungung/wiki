@@ -1,6 +1,6 @@
 ---
 title: "Langchain Open Deep Research 아키텍처 가이드"
-related_raw: ["[[wiki/Agents/Frameworks/Langchain Open Deep Research 아키텍처 가이드.md]]"]
+related_raw: ["[[wiki/Agents/Frameworks/Langchain Open Deep Research 아키텍처 가이드.md]]"]
 tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'basetech', 'langchain_framework']
 type: "wiki"
 status: "published"

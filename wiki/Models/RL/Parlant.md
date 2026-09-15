@@ -19,5 +19,5 @@ AI 챗봇 개발의 큰 이슈는 일관되지 않은 LLM 동작이죠. 그런�
 ## 관련 노트
 
 - Graphiti 1
-- [[wiki/Business/AI 전문 외주 개발사]]
+- [[wiki/Business/AI 전문 외주 개발사]]
 - [[Archive/AI Agent 구성 (내부 교육용)]]

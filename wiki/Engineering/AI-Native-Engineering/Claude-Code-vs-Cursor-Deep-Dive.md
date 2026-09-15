@@ -38,9 +38,9 @@ updated: "2026-04-19"
 
 ## 6. 관련 노트 (Internal Links)
 - [[wiki/Engineering/AI-Native-Engineering/Claude-Code-vs-Cursor-Comparison-2026]]
-- [[wiki/Engineering/AI-Native-Engineering/AI 기반 코딩의 실제 사례 - Cursor와 OpenAI]]
-- [[wiki/Agents/Coding-and-Engineering/Claude Code의 Task 변화와 AI-native 엔지니어의 조건]]
-- [[wiki/Business/OpenAI의 AI-Native 엔지니어링 팀 구축 가이드]]
+- [[wiki/Engineering/AI-Native-Engineering/AI 기반 코딩의 실제 사례 - Cursor와 OpenAI]]
+- [[wiki/Agents/Coding-and-Engineering/Claude Code의 Task 변화와 AI-native 엔지니어의 조건]]
+- [[wiki/Business/OpenAI의 AI-Native 엔지니어링 팀 구축 가이드]]
 
 ---
 *Last Updated: 2026-03-14*

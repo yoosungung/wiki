@@ -1,6 +1,6 @@
 ---
 title: "MCP 기능"
-related_raw: ["[[wiki/Agents/Frameworks/MCP/MCP 기능.md]]"]
+related_raw: ["[[wiki/Agents/Frameworks/MCP/MCP 기능.md]]"]
 tags: ['wiki', 'agents_and_systems', 'text-to-sql_(t2sql)_&_analytics']
 type: "wiki"
 status: "published"

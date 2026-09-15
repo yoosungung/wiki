@@ -182,6 +182,6 @@ class StableLatentMoEBlock(nn.Module):
 
 ## 🔗 관련 문서
 - [[wiki/Models/Architectures/Kimi-K3-Sparse-MoE-Model.md|Kimi K3 모델 아키텍처]]
-- [[wiki/Models/Architectures/MoE 모델 분석.md|MoE 모델 분석]]
+- [[wiki/Models/Architectures/MoE 모델 분석.md|MoE 모델 분석]]
 - [[wiki/Models/Optimization-and-Serving/Speculative-MoE.md|Speculative MoE]]
 - [[wiki/Models/Architectures/000_Architectures-MOC.md|모델 아키텍처 MOC]]

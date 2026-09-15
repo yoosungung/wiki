@@ -1,6 +1,6 @@
 ---
 title: "Lottery Ticket Hypothesis와 LLM"
-related_raw: ["[[wiki/Models/Architectures/Lottery Ticket Hypothesis와 LLM.md]]"]
+related_raw: ["[[wiki/Models/Architectures/Lottery Ticket Hypothesis와 LLM.md]]"]
 tags: ['wiki', 'ai_core', 'ai']
 type: "wiki"
 status: "published"

@@ -1,6 +1,6 @@
 ---
 title: "Comet의 Opik을 사용한 AI 에이전트 성능 향상"
-related_raw: ["[[wiki/Agents/Frameworks/Opik/Comet의 Opik을 사용한 AI 에이전트 성능 향상.md]]"]
+related_raw: ["[[wiki/Agents/Frameworks/Opik/Comet의 Opik을 사용한 AI 에이전트 성능 향상.md]]"]
 tags: ['wiki', 'agents_and_systems', 'llm_agent_&_deep_agents', 'tools']
 type: "wiki"
 status: "published"

@@ -32,5 +32,5 @@ updated: "2026-07-31"
 
 관련 문서:
 - [[wiki/Business/Trends/Sovereign-AI-Korea-Upstage.md]]
-- [[wiki/Agents/Frameworks/2026년 AI 에이전트 트렌드.md]]
+- [[wiki/Agents/Frameworks/2026년 AI 에이전트 트렌드.md]]
 - [[wiki/Models/Optimization-and-Serving/Rebellions_ATOM_Max_NPU_Serving.md]]

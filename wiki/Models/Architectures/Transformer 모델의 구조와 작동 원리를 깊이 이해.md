@@ -1,6 +1,6 @@
 ---
 title: "Transformer 모델의 구조와 작동 원리를 깊이 이해"
-related_raw: ["[[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리를 깊이 이해.md]]"]
+related_raw: ["[[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리를 깊이 이해.md]]"]
 tags: ['wiki', 'ai_core', 'llm_concepts', 'llm_architecture_and_technical']
 type: "wiki"
 status: "published"
@@ -21,5 +21,5 @@ Transformer 모델의 구조와 작동 원리를 깊이 이해하는 것은 자�
 
 ## 다음
 
-- [[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리 - Part 2 - 아키텍처와 구현]]
-- [[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리 - Part 3 - 심화 학습]]
+- [[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리 - Part 2 - 아키텍처와 구현]]
+- [[wiki/Models/Architectures/Transformer 모델의 구조와 작동 원리 - Part 3 - 심화 학습]]

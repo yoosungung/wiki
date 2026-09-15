@@ -1,6 +1,6 @@
 ---
 title: "LLM을 활용한 상향식 지식 그래프 구축"
-related_raw: ["[[wiki/Models/Reasoning-and-Cognition/LLM을 활용한 상향식 지식 그래프 구축.md]]"]
+related_raw: ["[[wiki/Models/Reasoning-and-Cognition/LLM을 활용한 상향식 지식 그래프 구축.md]]"]
 tags: ['wiki', 'knowledge_and_memory', 'advanced_rag_&_knowledge_graph', 'knowledge_graph_foundations_and_databases']
 type: "wiki"
 status: "published"
