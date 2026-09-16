@@ -2,14 +2,15 @@
 title: GraphRAG-vs-LightRAG-2026
 related_raw:
   - "[[raw/2026-09-15-lightrag-v1.5.7-workspace-pgtable.md]]"
+  - "[[raw/2026-09-16-graphiti-v0.30.2-neo4j-falkordb.md]]"
 tags:
   - wiki
   - ai_core
   - ai
 type: wiki
 status: draft
-last_updated: "2026-09-15"
-updated: "2026-09-15"
+last_updated: "2026-09-16"
+updated: "2026-09-16"
 ---
 
 # 📊 GraphRAG vs LightRAG: 2026년 성능 및 아키텍처 비교
@@ -51,7 +52,7 @@ updated: "2026-09-15"
 
 ## 5. API 및 에이전트 연동 패턴
 - **LightRAG**: FastAPI 기반 REST 엔드포인트를 내장하여 Docker 컨테이너 및 WebUI로 손쉽게 기동 가능.
-- **Graphiti**: `graphiti-core` 파이썬 패키지와 Model Context Protocol(MCP) 서버를 공식 지원하여 Cursor, Claude Desktop, Goose 등 에이전트 클라이언트에 즉시 도구로 마운트 가능.
+- **Graphiti**: `graphiti-core` 파이썬 패키지와 Model Context Protocol(MCP) 서버를 공식 지원하여 Cursor, Claude Desktop, Goose 등 에이전트 클라이언트에 즉시 도구로 마운트 가능. **0.30.x**부터 Neo4j `execute_query`·MCP `NEO4J_DATABASE` 정렬과 FalkorDB fulltext 스캔 제거가 들어갔으므로 셀프호스트 업그레이드 시 [[wiki/RAG/Graphiti-Driver-Abstraction.md]]·[[wiki/RAG/Graphiti-MCP.md]]를 함께 본다.
 
 ## 6. LightRAG v1.5.7 운영 패턴 (2026-09-02)
 

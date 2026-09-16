@@ -3,10 +3,16 @@ id: publication-gate-empty-overwrite-guard
 title: "퍼블리시 게이트 + 빈 산출물 덮어쓰기 금지"
 status: canonical
 owner: km
-updated: "2026-09-15"
-last_updated: "2026-09-15"
+updated: "2026-09-16"
+last_updated: "2026-09-16"
 review_after: "2026-12-15"
 sources:
+  - inbox/candidate/2026-09-17-publication-safety.md
+  - inbox/candidate/2026-09-17-issue-radar-today.md
+  - inbox/candidate/2026-09-16-people-ssot-curation-18h.md
+  - ticket:2058
+  - ticket:2069
+  - ticket:2056
   - inbox/candidate/2026-09-16-publication-safety.md
   - inbox/candidate/2026-09-16-issue-radar-today.md
   - inbox/candidate/2026-09-15-people-ssot-curation-18h.md

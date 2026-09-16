@@ -681,3 +681,12 @@
 | 2026-09-15 | ALREADY_COVERED | wiki/ | 5 | LiteRT MTP/v0.16.1; Furiosa FXB·llm-d; Rebellions OpenShift; Supermemory CB/Nova; openpi π0/π0.5 |
 | 2026-09-15 | CLEANUP | inbox/, raw/, Root | 11 | inbox 9 git rm; raw 1 삭제; D-2(2026-09-13) 삭제; D-0/D-1 유지 |
 | 2026-09-15 | LINT | Root / wiki | ALL | 데일리·INDEX META·auto_moc·fix_wiki_links·연구_주제_관리 비고 갱신 |
+
+| 2026-09-16 | INBOX_DRAIN | inbox/ | 7 | GH-empty×4→Empty-Skip sources; pub-safety/radar/people→PubGate; people EXCLUDE_PROGRESS; git rm |
+| 2026-09-16 | INGEST | raw/ | 1 | Graphiti v0.30.0–0.30.2 Neo4j DB 라우팅·MCP NEO4J_DATABASE·FalkorDB fulltext (2026-09-08) |
+| 2026-09-16 | RESEARCH | 연구_주제_관리.md | 6 | wiki-first+웹: LiteRT/Furiosa/Rebellions/Supermemory/LightRAG/Graphiti; 0.30.2 신규 |
+| 2026-09-16 | SYNTHESIZE | wiki/RAG | 4 | Graphiti-Driver/MCP/Overview·GraphRAG-vs-LightRAG §5 0.30.x 운영 함정 |
+| 2026-09-16 | ALREADY_COVERED | wiki/ | 5 | LiteRT MTP/v0.16.1; Furiosa FXB·llm-d; Rebellions OpenShift; Supermemory CB/Nova; LightRAG v1.5.7 |
+| 2026-09-16 | EXCLUDE_PROGRESS | inbox/ | 1 | people-ssot curation 카운트·정치 본문(후보 vault 정본) |
+| 2026-09-16 | CLEANUP | inbox/, raw/, Root | 9 | inbox 7 git rm; raw 1 삭제; D-2(2026-09-14) 삭제; D-0/D-1 유지 |
+| 2026-09-16 | LINT | Root / wiki | ALL | 데일리·INDEX META·auto_moc·fix_wiki_links·연구_주제_관리 비고 갱신 |

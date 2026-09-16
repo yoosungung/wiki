@@ -2,6 +2,7 @@
 title: MCP
 related_raw:
   - "[[wiki/Agents/Frameworks/MCP/MCP]]"
+  - "[[raw/2026-09-16-graphiti-v0.30.2-neo4j-falkordb.md]]"
 tags:
   - wiki
   - knowledge_and_memory
@@ -9,8 +10,8 @@ tags:
   - graphiti
 type: wiki
 status: draft
-last_updated: "2026-04-19"
-updated: "2026-04-19"
+last_updated: "2026-09-16"
+updated: "2026-09-16"
 ---
 
 `mcp_server.py`에서 MCP 데코레이터 정의들을 찾아 확인했습니다. 이제 노출되는 MCP 항목(툴/리소스)을 간결히 나열합니다.
@@ -27,3 +28,9 @@ updated: "2026-04-19"
 
 ### MCP Resource
 - **resource 'http://graphiti/status' → get_status()**: 서버/Neo4j 연결 상태 반환(ok/error).
+
+### v0.30.2 배포 체크리스트 (MCP + Neo4j)
+
+- **`NEO4J_DATABASE` 명시**: MCP 서버가 드라이버 DB 설정을 존중하도록 수정됨(#1812). 기본 `neo4j`가 아니면 환경변수/설정을 반드시 맞춤 — [[wiki/RAG/Graphiti-Driver-Abstraction.md]]의 `execute_query` 라우팅과 동일 계열.
+- **멀티 테넌트 `group_id`**: 동시 요청 isolation은 요청 스코프 드라이버에 의존(0.30.2+). `clear` by `group_ids` 시 Saga 노드 누락 수정 포함.
+- **업그레이드 순서**: graphiti-core ≥0.30.2 → MCP 이미지/프로세스 재기동 → `http://graphiti/status`로 연결·DB 확인.
