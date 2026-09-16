@@ -1,11 +1,11 @@
 ---
 id: inbox-candidate-2026-09-17-issue-radar-today
 agent: candidate
-ticket_id: pending
+ticket_id: 2069
 updated: 2026-09-17
 status: inbox
 sources:
-  - ticket:pending
+  - ticket:2069
   - repo:berryking404/candidate.win
 ---
 
