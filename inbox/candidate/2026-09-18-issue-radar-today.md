@@ -1,10 +1,11 @@
 ---
 id: inbox-candidate-2026-09-18-issue-radar-today
 agent: candidate
-ticket_id: pending
+ticket_id: 2100
 updated: 2026-09-18
 status: inbox
 sources:
+  - ticket:2100
   - schedule:issue-radar-today-0800-kst
   - commit:258f54b
 ---
