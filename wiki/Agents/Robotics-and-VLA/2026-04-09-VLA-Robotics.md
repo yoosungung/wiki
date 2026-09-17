@@ -4,8 +4,8 @@ related_raw: ["[[wiki/Agents/Robotics-and-VLA/2026-04-09-VLA-Robotics.md]]"]
 tags: ['wiki', 'agents_and_systems', 'robotics_&_physical_ai_(vla)', 'vision-language-action_vla_model_robotics']
 type: "wiki"
 status: "published"
-last_updated: "2026-04-19"
-updated: "2026-04-19"
+last_updated: "2026-09-17"
+updated: "2026-09-17"
 ---
 
 # 로보틱스 VLA(Vision-Language-Action) 모델 최신 기술 동향 (2026-04-09)
@@ -25,7 +25,7 @@ updated: "2026-04-19"
 - **ReconVLA:** 별도의 어노테이션 없이 언어 기반 어텐션 마스킹을 통해 시각적 인지 능력을 강화하여 추론 속도를 5배 향상시켰습니다.
 
 ### 3. 주요 연구소 동향
-- **Physical Intelligence ($\pi$):** VLA 모델에서 RL 토큰을 추출하여 효율적인 온라인 강화학습을 구현하고, 다중 스케일 체화 메모리(MEM)를 통해 10분 이상의 긴 작업도 수행합니다.
+- **Physical Intelligence ($\pi$):** VLA 모델에서 RL 토큰을 추출하여 효율적인 온라인 강화학습을 구현하고, 다중 스케일 체화 메모리(MEM)를 통해 10분 이상의 긴 작업도 수행합니다. **$\pi_{0.7}$(2026-04-16)** 는 다중 모달 프롬프트(*how* 메타·시각 서브골)로 조합적 일반화·크로스 엠보디먼트를 강화 — [[wiki/Agents/Robotics-and-VLA/Physical-Intelligence-pi0-Foundation-Model.md]].
 - **Google Gemini Robotics:** Gemini 2.0 기반으로 고수준 계획(ER)과 저수준 행동 생성이 협업하는 구조를 갖추었습니다.
 
 ## AX1센터 R&D 시사점

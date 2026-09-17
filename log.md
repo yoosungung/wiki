@@ -690,3 +690,12 @@
 | 2026-09-16 | EXCLUDE_PROGRESS | inbox/ | 1 | people-ssot curation 카운트·정치 본문(후보 vault 정본) |
 | 2026-09-16 | CLEANUP | inbox/, raw/, Root | 9 | inbox 7 git rm; raw 1 삭제; D-2(2026-09-14) 삭제; D-0/D-1 유지 |
 | 2026-09-16 | LINT | Root / wiki | ALL | 데일리·INDEX META·auto_moc·fix_wiki_links·연구_주제_관리 비고 갱신 |
+
+| 2026-09-17 | INBOX_DRAIN | inbox/ | 10 | GH-empty×4→Empty-Skip sources; pub-safety/radar/people→PubGate; roadmap M4→Roadmap-Sync; k8s-daily→Scale-Zero; people EXCLUDE_PROGRESS; git rm |
+| 2026-09-17 | INGEST | raw/ | 1 | Physical Intelligence π0.7 steerable VLA 블로그 (2026-04-16) |
+| 2026-09-17 | RESEARCH | 연구_주제_관리.md | 7 | wiki-first+웹: LiteRT/Furiosa/Rebellions/Supermemory/LightRAG/Graphiti/π0.7; π0.7·RBLN 3.4 신규 |
+| 2026-09-17 | SYNTHESIZE | wiki/Agents, wiki/Models, wiki/Engineering | 7 | π0.7 §4·VLA 교차; RBLN OpenShift AI 3.4; GH/PubGate/Roadmap/K8s sources·재확인 |
+| 2026-09-17 | ALREADY_COVERED | wiki/ | 5 | LiteRT MTP/v0.16.1; Furiosa FXB·llm-d; Graphiti 0.30.2; Supermemory Memory API; LightRAG v1.5.7 |
+| 2026-09-17 | EXCLUDE_PROGRESS | inbox/ | 1 | people-ssot curation 카운트·정치 본문(후보 vault 정본) |
+| 2026-09-17 | CLEANUP | inbox/, raw/, Root | 12 | inbox 10 git rm; raw 1 삭제; D-2(2026-09-15) 삭제; D-0/D-1 유지 |
+| 2026-09-17 | LINT | Root / wiki | ALL | 데일리·INDEX META·auto_moc·fix_wiki_links·연구_주제_관리 비고 갱신 |

@@ -3,8 +3,8 @@ title: "리벨리온 NPU 기반 고성능 LLM 서빙 최적화 (vLLM-RBLN)"
 related_raw: ["[[2026-05-12-Rebellions_LLM_Serving_Whitepaper.md]]"]
 tags: ["Models/Optimization", "NPU", "Rebellions", "vLLM", "Serving"]
 date: "2026-05-12"
-last_updated: "2026-09-11"
-updated: "2026-09-11"
+last_updated: "2026-09-17"
+updated: "2026-09-17"
 ---
 
 # 리벨리온 NPU 기반 LLM 서빙 최적화 기술
@@ -46,6 +46,7 @@ updated: "2026-09-11"
 
 ## 6. 상용화 및 엔터프라이즈 인프라 도입 (2026-09 업데이트)
 - **Red Hat OpenShift AI 공식 지원 (GA)**: Red Hat과의 파트너십을 통해 Red Hat OpenShift AI 환경에서 Rebellions ATOM NPU 기반 분산 LLM 추론 솔루션이 General Availability(GA)로 출시되었습니다. 엔터프라이즈 쿠버네티스 클러스터에서 높은 와트당 처리량으로 LLM 서빙 컨테이너를 통합 관리할 수 있습니다.
+- **검증 스택 핀 (OpenShift AI 3.4)**: 공식 joint-solution 문서는 **OpenShift AI 3.4** + 이미지 `repo.rebellions.ai/rebellions/vllm-rbln-rhel9:3.4`를 권장한다. ServingRuntime·HardwareProfile(`rebellions.ai/npu`)·InferenceService(RawDeployment)로 배포하고, 콜드 스타트는 그래프 컴파일·웜업을 감안해 readiness `initialDelaySeconds`를 여유 있게 둔다. 캐시 경로 개념: `~/.cache/vllm/rbln`. ([설치](https://docs.rbln.ai/latest/software/partner_solutions/redhat_joint_solution/installation.html) · [배포](https://docs.rbln.ai/latest/software/partner_solutions/redhat_joint_solution/deployment.html))
 - **NIA 공공 초거대 AI 사업 대규모 채택**: 2026년 8월 한국지능정보사회진흥원(NIA) 주관 공공 초거대 AI 서빙 인프라 사업에서 약 100억원 규모의 Rebellions ATOM-Max NPU 서버 공급 계약이 체결되었습니다. 정부 부처 및 공공기관의 행정 AI 챗봇 및 데이터 분석 워크로드의 정식 백엔드로 가동 중입니다.
 - **ATOM-Max 혁신제품 지정**: 과학기술정보통신부의 우수연구개발 혁신제품으로 지정되어 공공 조달 및 공공 AI 인프라 확산 경로를 확보했습니다.
 

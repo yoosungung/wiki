@@ -1,11 +1,18 @@
 ---
+id: physical-intelligence-pi0-foundation-model
 title: "Physical Intelligence π₀ (pi-zero) 및 openpi VLA 파운데이션 모델 아키텍처"
-last_updated: "2026-09-11"
-updated: "2026-09-11"
-related_raw: ["[[wiki/Agents/Robotics-and-VLA/Physical-Intelligence-pi0-Foundation-Model.md]]"]
-tags: ["wiki", "Agents", "Robotics", "Physical-AI", "VLA", "Flow-Matching", "openpi"]
+status: canonical
+owner: km
+last_updated: "2026-09-17"
+updated: "2026-09-17"
+review_after: "2026-12-16"
+related_raw: ["[[raw/2026-09-17-physical-intelligence-pi07-steerable-vla.md]]"]
+sources:
+  - https://www.pi.website/blog/pi07
+  - https://www.pi.website/download/pi07.pdf
+  - https://github.com/Physical-Intelligence/openpi
+tags: ["wiki", "Agents", "Robotics", "Physical-AI", "VLA", "Flow-Matching", "openpi", "pi07"]
 type: "wiki"
-status: "published"
 ---
 
 # Physical Intelligence $\pi_0$ (pi-zero) 및 openpi VLA 아키텍처
@@ -87,9 +94,49 @@ Physical Intelligence는 단일 로봇 전용 모델을 탈피하여 다양한 �
 
 ---
 
+## 4. $\pi_{0.7}$ — Steerable Generalist (2026-04-16)
+
+[π 0.7 블로그](https://www.pi.website/blog/pi07) / [PDF](https://www.pi.website/download/pi07.pdf). **클로즈드 웨이트**(openpi의 $\pi_0$/$\pi_{0.5}$와 별선). Gemma 3 4B급 VLM 백본 + 다중 모달 프롬프트 조건화.
+
+### 4.1. 핵심 아이디어: *what*뿐 아니라 *how*를 프롬프트에
+
+| 프롬프트 축 | 역할 | 구현 함의 |
+| :--- | :--- | :--- |
+| 언어 (태스크·서브스텝) | 목표·코칭 시퀀스 | 단계별 verbal coaching → 고수준 정책으로 증류 가능 |
+| 전략 메타데이터 | 속도·품질 태그 | 실패/저품질 자율 에피소드를 **버리지 않고** 라벨로 흡수 |
+| 제어 모달리티 | joint vs end-effector | 이종 로봇·제어 공간을 한 모델에 병합 |
+| 시각 서브골 이미지 | 서브스텝 종료 장면 | 테스트 시 경량 월드 모델로 합성 서브골 주입 |
+
+이질 데이터(멀티 로봇 데모·휴먼 비디오·자율/실패 롤아웃·Recap RL 경험)를 **단일 프롬프트 프레임**으로 합치면, naive mix보다 조합적 일반화가 나온다.
+
+### 4.2. 보고된 창발 능력 (재사용 체크리스트)
+
+1. **조합적 태스크 일반화**: 에어프라이어 등 미수집 가전 — zero-shot 한 줄 프롬프트는 부분 성공, 단계별 언어 코칭은 완수. 코칭 로그로 고수준 서브골 정책을 추가 텔레옵 없이 파인튜닝.
+2. **크로스 엠보디먼트**: 빨래 접기 데이터가 없는 양팔 UR5e에서도 성공률이 “원본 로봇 숙련 텔레옵의 UR5e 첫 시도”와 동급.
+3. **단일 범용 = Recap 전문가**: laundry / espresso / box folding에서 $\pi^*$0.6 전문가와 동등·상회 처리량·성공률 (전략 메타데이터로 RL 경험 증류).
+
+### 4.3. 로컬 Physical AI 파이프라인에의 적용 힌트
+
+```text
+# 개념 스택 (구현 시)
+observation + language_cmd
+  + optional(strategy_meta: speed|quality)
+  + optional(control_modality: joint|ee)
+  + optional(visual_subgoal from world_model)
+    → VLA policy → action chunk (50Hz)
+```
+
+- 실패 롤아웃을 폐기하지 말고 `quality=low`/`speed=slow`로 태그해 재학습 배치에 넣는다.
+- 새 가전/도구는 데모 수집 전에 **언어 코칭 루프 → 고수준 서브골 정책**을 먼저 시도한다.
+- openpi 체크포인트(`pi0_base` / `pi05_base`)는 오픈 라인; $\pi_{0.7}$은 파트너십·API 경로(`research@physicalintelligence.company`).
+
+---
+
 ## 🔗 관련 문서
 - [[wiki/Agents/Robotics-and-VLA/NVIDIA-Physical-AI-GR00T-Cosmos-물리적-AI-혁신.md|NVIDIA Physical AI GR00T & Cosmos 물리적 AI 혁신]]
 - [[wiki/Models/RL/World-Models-JEPA-LeWorldModel-Generative-Simulation.md|JEPA 및 LeWorldModel 생성 시뮬레이션]]
 - [[wiki/Models/RL/LeWorldModel-JEPA-2026.md|LeWorldModel JEPA 2026]]
 - [[wiki/Agents/Robotics-and-VLA/Google-RT-3-Open-Source-Robotics.md|Google RT-3 오픈소스 로보틱스]]
+- [[wiki/Agents/Robotics-and-VLA/2026-04-09-VLA-Robotics.md]]
+- [[wiki/Agents/Robotics-and-VLA/Figure-PI-VLA-Update-2026-04-09.md]]
 
