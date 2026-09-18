@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-09-17 | Root: wiki/
+[META] Updated: 2026-09-19 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -72,9 +72,9 @@
     - SFT: 52 files
     - Optimization: 3 files
 - wiki/RAG/ (105 files)
-- wiki/Engineering/ (178 files)
+- wiki/Engineering/ (179 files)
     - Data-and-Security: 14 files
-    - Infrastructure-and-DevOps: 48 files
+    - Infrastructure-and-DevOps: 49 files
     - AI-Native-Engineering: 74 files
     - Development-Environment: 21 files
     - Prompt-Engineering: 18 files

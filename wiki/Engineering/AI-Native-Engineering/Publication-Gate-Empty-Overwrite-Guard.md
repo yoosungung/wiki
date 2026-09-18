@@ -3,10 +3,12 @@ id: publication-gate-empty-overwrite-guard
 title: "퍼블리시 게이트 + 빈 산출물 덮어쓰기 금지"
 status: canonical
 owner: km
-updated: "2026-09-17"
-last_updated: "2026-09-17"
-review_after: "2026-12-16"
+updated: "2026-09-19"
+last_updated: "2026-09-19"
+review_after: "2026-12-18"
 sources:
+  - inbox/candidate/2026-09-19-issue-radar-today.md
+  - ticket:2136
   - inbox/candidate/2026-09-18-publication-safety.md
   - inbox/candidate/2026-09-18-issue-radar-today.md
   - inbox/candidate/2026-09-17-people-ssot-curation-18h.md
@@ -179,6 +181,7 @@ python agent/publication_gate.py --base origin/main
 - meta/stub+stance만 갱신하는 잡에서 사이트 빌드 바이너리(예: Hugo)가 없으면 **빌드를 스킵**해도 된다 — 게이트·pytest가 정본이다.
 - issue-radar → today 발행: empty-overwrite guard 통과 후에만 공개 큐(`today.yaml` 등)를 커밋·push하고, **승인 티켓은 만들지 않는다**. 커밋 범위는 공개 큐 파일만(캐시/리포트 MD 제외). 스케줄 보고는 제품 프로젝트 Done 티켓으로만 남긴다.
 - **radar ≠ auto-close**: closure audit가 성숙한 이벤트 이슈를 편집자 모니터링용으로 **표면화**할 수는 있으나, radar가 이슈를 자동 종료하지 않는다.
+- **점수 게이트 ≠ 출처 게이트**: empty-overwrite는 `items=[]`만 막는다. 점수 임계(예: ≥4)를 넘은 후보는 보도 0건·출처 목록이 비어도 공개 큐에 남을 수 있다. 출처가 필수면 점수와 별도로 source-nonempty 게이트를 둔다. 이 분기는 가드 실패가 아니다.
 - **공개 today 큐는 중립만**: 내부 승인 상태·스케줄/도구명을 노출하지 않는다. 후보·이슈 큐 페이로드만 게시한다.
 - publication-safety 잡은 push 직전·직후 `publication_gate.py --base origin/main` PASS를 남기고, Pass 스택은 preserve 브랜치 또는 detach 경로로 다룬다(§분기·스택 운영). people curation은 Pass issue-stance 스택을 preserve 브랜치에 두고 **`origin/main`에 detach**해 작업·push한 뒤 로컬 스택을 rebase한다.
 - **hygiene 패턴(2026-09-01)**: SSoT slug alias remap, non-SSoT/org person 링크 delink, weak misattribution stance drop — publication 시점에 people stub를 새로 invent하지 않는다(slug shell이 이미 있을 때만).

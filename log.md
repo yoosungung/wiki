@@ -1,6 +1,13 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-09-19 | INBOX_DRAIN | inbox/ | 5 | GH-empty×3→open_issues_count; radar score≥4 zero-article→PubGate; D1 migrate-before-deploy 신규; git rm |
+| 2026-09-19 | RESEARCH | Web/wiki-first | 6 | graphiti-local 0.4.1 신규; LiteRT v0.16.1·Furiosa FXB·RBLN OpenShift 3.4·π0.7·Graphiti core 0.30.2 → ALREADY |
+| 2026-09-19 | INGEST | raw/ | 1 | 2026-09-19-graphiti-local-readonly-mcp |
+| 2026-09-19 | SYNTHESIZE | wiki/ | 7 | D1-before-deploy; GH; PubGate; Graphiti-MCP/Architecture/Overview; GraphRAG-vs-LightRAG |
+| 2026-09-19 | ALREADY_COVERED | wiki/ | 5 | LiteRT-LM MTP/v0.16.1; Furiosa FXB fingerprint; vLLM-RBLN OpenShift 3.4; π0.7 openpi 미공개; Graphiti core 0.30.2 |
+| 2026-09-19 | CLEANUP | raw/ & inbox/ & root | 8 | inbox 5 git rm; raw 1 삭제; D-2(2026-09-17·2026-09-16) 삭제 |
+| 2026-09-19 | LINT | Root / wiki | ALL | INDEX META 2026-09-19 Eng 179/Infra 49; 데일리; 연구_주제 갱신 |
 | 2026-09-14 | INBOX_DRAIN | inbox/ | 22 | clean-code/1982-ci→CI-Align; host-jest→Core-Host-Split; local008→RefSql/Spider2; qa-bulk→Soft-Gate; ta-load→ASGI-Load; candydate→429; skip-pattern; 15 workflow EXCLUDE; git rm |
 | 2026-09-14 | RESEARCH | Web/wiki-first | 8 | 8대 활성 연구 과제 전수 모니터링; LiteRT v2.2.0·Supermemory v0.0.8·Graphiti Zep·Furiosa llm-d·RBLN OpenShift·AV-SQL/Ossie·LightRAG v1.5.7 → ALREADY |
 | 2026-09-14 | ALREADY_COVERED | wiki/ | 8 | LiteRT v2.2.0; Furiosa llm-d IIS; Supermemory server-v0.0.8; Graphiti bi-temporal; Rebellions OpenShift; AV-SQL/Ossie; LightRAG |

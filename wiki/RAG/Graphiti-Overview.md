@@ -3,6 +3,7 @@ title: 무엇을-하는-패키지인ᄀ�
 related_raw:
   - "[[wiki/RAG/graphiti/무엇을-하는-패키지인가]]"
   - "[[raw/2026-09-16-graphiti-v0.30.2-neo4j-falkordb.md]]"
+  - "[[raw/2026-09-19-graphiti-local-readonly-mcp.md]]"
 tags:
   - wiki
   - knowledge_and_memory
@@ -10,8 +11,8 @@ tags:
   - graphiti
 type: wiki
 status: draft
-last_updated: "2026-09-16"
-updated: "2026-09-16"
+last_updated: "2026-09-19"
+updated: "2026-09-19"
 ---
 
 ### 무엇을 하는 패키지인가
@@ -26,6 +27,7 @@ updated: "2026-09-16"
 - MCP: `NEO4J_DATABASE` 존중.
 - FalkorDB: edge fulltext의 per-hit `:Entity` 스캔 제거.
 - 상세·체크리스트: [[wiki/RAG/Graphiti-Driver-Abstraction.md]], [[wiki/RAG/Graphiti-MCP.md]].
+- **로컬 대안 (2026-09-18)**: `graphiti-local` 0.4.1은 core `0.30.1`에 고정된 읽기 전용 MCP다. 업스트림 0.30.2 수정과 핀이 다르다 — [[wiki/RAG/Graphiti-MCP.md]].
 
 
 

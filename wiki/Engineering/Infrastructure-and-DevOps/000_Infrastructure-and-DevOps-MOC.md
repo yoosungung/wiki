@@ -6,6 +6,7 @@
 - [[wiki/Engineering/Infrastructure-and-DevOps/AOI-Autonomous-RCA-2026.md]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/Airflow DAG 테스트 환경 구축.md]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/Airflow-Common-AI-Provider.md]]
+- [[wiki/Engineering/Infrastructure-and-DevOps/Cloudflare-D1-Migrations-Before-Worker-Deploy.md]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/Cron-Monitor-Zombie-PID-Check.md]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/DGX Spark.md]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/DGX Spark에서의 VLM 파인튜닝.md]]
