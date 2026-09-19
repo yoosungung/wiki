@@ -4,9 +4,10 @@ status: "published"
 category: "Models"
 subcategory: "Optimization-and-Serving"
 tags: [WebLLM, MLC-LLM, WebGPU, Browser-LLM]
-last_updated: "2026-05-13"
-updated: "2026-05-13"
+last_updated: "2026-09-20"
+updated: "2026-09-20"
 related_raw: [
+  "[[raw/2026-09-20-webllm-v0.2.85-opfs-sync-worker.md]]",
   "[[raw/2026-05-13-WebLLM-Home.md]]",
   "[[raw/2026-05-13-mlc-ai-web-llm-github.md]]"
 ]
@@ -47,6 +48,15 @@ const reply = await engine.chat.completions.create({
 ## 최적화 기법
 - **Quantization (양자화)**: `q4f16_1` 등 4-bit/8-bit 양자화를 통해 모델 크기 축소 및 메모리 사용량 절감.
 - **Caching**: 모델 가중치 및 컴파일된 셰이더를 브라우저 캐시에 저장하여 재로딩 속도 개선.
+
+## v0.2.85 캐시·워커 (2026-09-08)
+
+[릴리스](https://github.com/mlc-ai/web-llm/releases/tag/v0.2.85)는 모델 라이브러리 `v0_2_84/base`를 유지한다. 엔진만 올리고 가중치는 재받지 않는다.
+
+- OPFS **synchronous access handle**과 **committed cache record**로 캐시 커밋 전 읽기를 막는다.
+- 서비스 워커 핸들러를 기동 시 등록하고, 복구된 워커의 모델 상태를 보존해 reload 루프를 끊는다.
+- Chat Completions `created`는 초 단위. NaN 샘플링 파라미터는 거절하고, 잘못된 structural tag는 행(hang) 대신 실패한다.
+- 표준화·3W 스택 맥락: [[wiki/Engineering/Development-Environment/WebGPU-및-WebNN-표준화-현황-2026.md]].
 
 ## 관련 문서
 - [[wiki/Models/Optimization-and-Serving/Browser-AI-Inference-MOC.md|Browser AI Inference MOC]]

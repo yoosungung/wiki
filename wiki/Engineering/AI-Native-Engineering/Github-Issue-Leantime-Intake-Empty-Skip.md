@@ -3,10 +3,16 @@ id: github-issue-leantime-intake-empty-skip
 title: "GH issue→Leantime intake: open 0이면 explicit skip"
 status: canonical
 owner: km
-updated: "2026-09-19"
-last_updated: "2026-09-19"
-review_after: "2026-12-18"
+updated: "2026-09-20"
+last_updated: "2026-09-20"
+review_after: "2026-12-19"
 sources:
+  - inbox/candidate/2026-09-20-github-issue-check-empty-skip.md
+  - inbox/pm/2026-09-19-github-issue-check-empty-skip.md
+  - inbox/sw-factory/2026-09-19-github-issue-check-empty-skip.md
+  - ticket:2154
+  - ticket:2155
+  - ticket:2158
   - inbox/candidate/2026-09-19-github-issue-check-empty-skip.md
   - inbox/pm/2026-09-18-github-issue-check-empty-skip.md
   - inbox/sw-factory/2026-09-18-github-issue-check-empty-skip.md
@@ -185,6 +191,7 @@ type: "wiki"
 
 - 이미 closed된 과거 이슈를 QA 버그로 재오픈하지 않는다.
 - **`open_issues_count`는 Pull Request를 포함한다.** true issue는 REST 응답에서 `pull_request`가 없는 항목, 또는 검색 `is:issue is:open`으로 센다. 릴리스 레포·wiki·테스트 클러스터 같은 extras도 같은 open=0 sweep에 넣는다.
+- **4신호가 모두 0일 때만 skip을 확정**한다: `gh issue list --state open`, REST(`pull_request==null`), GraphQL `OPEN`, `open_issues_count`. 하나라도 어긋나면 count를 진실로 쓰지 말고 REST/검색으로 재확인한다. 종료된 takedown/correction 이슈는 재오픈·재변환하지 않는다.
 - MCP discovery 실패 시 JSON-RPC fallback으로 seal 가능 — [[wiki/Engineering/AI-Native-Engineering/Tenant-Quality-Yaml-Gate-Skip-Pattern.md]].
 - 레지스트리 JSON이 없어도 **직전 클라이언트 맵(위키)을 재사용**해 open=0 skip을 남긴다. 맵 부재를 실패로 올리지 않는다.
 - **감사 티켓 쓰기 범위**: 일부 에이전트 토큰은 **project_id=5(sw-factory) 감사 티켓만** 생성·갱신할 수 있다. 타 테넌트 변환 티켓이 필요하면 해당 프로젝트 ACL/토큰으로 전환한다.

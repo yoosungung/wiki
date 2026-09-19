@@ -3,9 +3,9 @@ title: "WebGPU 및 WebNN 표준화 현황 (2026)"
 tags: ["Engineering", "Development-Environment", "WebGPU", "WebNN", "W3C", "Standardization"]
 type: "wiki"
 status: "published"
-last_updated: "2026-09-10"
-updated: "2026-09-10"
-related_raw: ["[[raw/2026-08-28-webmcp-chrome-origin-trial.md]]", "[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-07-01-webgpu-webnn-wasm3-webmcp.md]]", "[[2026-07-10-web-inference-wasm-3.0.md]]", "[[2026-07-11-webgpu_wasm_3_0_webnn_webllm_browser_serving.md]]", "[[2026-07-12-webllm-3w-opfs-json-workers.md]]", "[[2026-07-13-litert-lm-swift-js-session-api.md]]"]
+last_updated: "2026-09-20"
+updated: "2026-09-20"
+related_raw: ["[[raw/2026-09-20-webllm-v0.2.85-opfs-sync-worker.md]]", "[[raw/2026-08-28-webmcp-chrome-origin-trial.md]]", "[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-07-01-webgpu-webnn-wasm3-webmcp.md]]", "[[2026-07-10-web-inference-wasm-3.0.md]]", "[[2026-07-11-webgpu_wasm_3_0_webnn_webllm_browser_serving.md]]", "[[2026-07-12-webllm-3w-opfs-json-workers.md]]", "[[2026-07-13-litert-lm-swift-js-session-api.md]]"]
 ---
 
 # 🌐 WebGPU 및 WebNN 표준화 현황 (2026)
@@ -75,6 +75,21 @@ WebLLM/Transformers.js와 병행 평가 시, llama.cpp 생태계 사용자는 Ll
 - npm [`@mlc-ai/web-llm@0.2.84`](https://www.npmjs.com/package/@mlc-ai/web-llm) (2026-05-27): 0.2.83 이후 패치 라인. OpenAI 호환·WebGPU·WebWorker 패턴 유지.
 - 병행 스택: Google **`@litert-lm/core`** 는 `.litertlm` + WebGPU로 Gemma 계열 온디바이스 파이프라인을 브라우저에 직접 올린다 (M4 Max ~76 tok/s decode 보고). WebLLM(MLC/TVM 커널) vs LiteRT-LM.js(Gemma Edge 스택)를 모델·배포 포맷 기준으로 선택.
 - 실무: 범용 HF/GGUF·멀티모델 → WebLLM; Gemma 4 Edge Gallery 정렬·MTP/세션 API 공유 → LiteRT-LM.js.
+
+## 8. WebLLM v0.2.85 — OPFS 동기 핸들 · 워커 상태 보존 (2026-09-08)
+
+[v0.2.85](https://github.com/mlc-ai/web-llm/releases/tag/v0.2.85)(`5f74244`)는 모델 바이너리를 바꾸지 않는 런타임 패치다. 가중치 라이브러리는 계속 `v0_2_84/base` — **모델 재다운로드 없이** 엔진만 올린다. 번들 TVM web runtime은 `0.27.0-dev0` ([apache/tvm `7e06fc6`](https://github.com/apache/tvm/commit/7e06fc6c1420d0188eb9d889bd74e2e1fb76e448)).
+
+| 변경 | 운영 의미 |
+| --- | --- |
+| OPFS synchronous access handle + committed cache record | 재방문 시 캐시 커밋이 끝나기 전에 읽지 않는다. IndexedDB 폴백과 별개로 OPFS 커밋 완료를 로드 게이트로 둔다. |
+| 기동 시 service-worker 핸들러 등록 | 재시작된 워커가 요청을 받는다. SW 수명과 엔진 수명을 분리해도 라우팅이 남는다. |
+| 복구된 워커 모델 상태 보존 | 워커 재시작마다 가중치 reload를 반복하지 않는다. |
+| OpenAI `created`를 **초** 단위로 | ms로 파싱하던 클라이언트는 타임스탬프가 1000배 작게 보인다. 초 단위로 맞춘다. |
+| 잘못된 structural-tag는 hang 대신 실패 | JSON/grammar 제약 초기화 실패를 타임아웃으로 오진하지 않는다. |
+| NaN 생성 파라미터 reject | temperature/top_p 등에 NaN을 넘기지 않는다. |
+
+npm `latest` 태그가 한동안 0.2.84에 머물 수 있다. 핀은 GitHub 릴리스 `v0.2.85` 또는 명시 버전으로 한다. 상세 서빙 절차는 [[wiki/Models/Optimization-and-Serving/WebLLM-Engine.md]], 온디바이스 Gemma 축은 [[wiki/Models/Optimization-and-Serving/스마트폰-환경의-LLM-서빙-기술-2026.md]].
 
 ---
 **관련 문서**:

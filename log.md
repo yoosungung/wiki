@@ -1,6 +1,12 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-09-20 | INBOX_DRAIN | inbox/ | 4 | GH-empty×3→4신호 skip; pub 입장 줄·Hugo skip→PubGate; git rm |
+| 2026-09-20 | RESEARCH | Web/wiki-first | 2 | WebLLM v0.2.85 신규; LiteRT-LM v0.17.0/0.17.1 신규 |
+| 2026-09-20 | INGEST | raw/ | 2 | webllm-v0.2.85; litert-lm-v0.17 |
+| 2026-09-20 | SYNTHESIZE | wiki/ | 6 | GH; PubGate; 스마트폰 서빙; WebGPU/WebNN; WebLLM-Engine; 브라우저 서빙 |
+| 2026-09-20 | CLEANUP | raw/ & inbox/ | 6 | inbox 4 git rm; raw 2 합성 후 삭제; D-0(09-20)·D-1(09-19) 유지 |
+| 2026-09-20 | LINT | Root / wiki | ALL | INDEX META 2026-09-20; 데일리; 연구_주제 갱신 |
 | 2026-09-19 | INBOX_DRAIN | inbox/ | 5 | GH-empty×3→open_issues_count; radar score≥4 zero-article→PubGate; D1 migrate-before-deploy 신규; git rm |
 | 2026-09-19 | RESEARCH | Web/wiki-first | 6 | graphiti-local 0.4.1 신규; LiteRT v0.16.1·Furiosa FXB·RBLN OpenShift 3.4·π0.7·Graphiti core 0.30.2 → ALREADY |
 | 2026-09-19 | INGEST | raw/ | 1 | 2026-09-19-graphiti-local-readonly-mcp |

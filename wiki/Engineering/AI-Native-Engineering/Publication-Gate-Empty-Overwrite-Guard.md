@@ -3,10 +3,12 @@ id: publication-gate-empty-overwrite-guard
 title: "퍼블리시 게이트 + 빈 산출물 덮어쓰기 금지"
 status: canonical
 owner: km
-updated: "2026-09-19"
-last_updated: "2026-09-19"
-review_after: "2026-12-18"
+updated: "2026-09-20"
+last_updated: "2026-09-20"
+review_after: "2026-12-19"
 sources:
+  - inbox/candidate/2026-09-20-publication-safety.md
+  - ticket:2150
   - inbox/candidate/2026-09-19-issue-radar-today.md
   - ticket:2136
   - inbox/candidate/2026-09-18-publication-safety.md
@@ -168,6 +170,8 @@ python agent/publication_gate.py --base origin/main
 - yaml↔wiki orphan 0을 유지하려면 stub yaml 추가 시 **최소 wiki stub도 같이 seed**. SSoT 카운트는 `yaml==wiki`로 맞춘다.
 - **게이트 PASS ≠ content-safe**: `/people/unknown`, org-as-person stance, 이슈 slug를 인물로 쓴 stance, 약한 중립(발언 미확인), 역할·신원 오인 stub는 추가 strip. people promote는 allowlisted 공식/프로필 URL(≥1)이 있을 때만; wiki-only·비허용 호스트·검색 URL·직원명단 미기재 go.kr는 부족. 애매한 기자·통신원·특파원·동명이인·역할 불일치·비인물(학교·부처 등)은 hold.
 - **게이트 스크립트 ≠ 전체 리뷰**: `publication_gate.py`는 **zero-stance ongoing issue**만 차단한다. 야간 전체 리뷰는 별도로 `/people/unknown`, `/people/tmp`, 깨진 `**입장**` 줄, SSoT 없는 slug를 잡아야 한다.
+- **깨진 입장 줄 수리**: `**입장**`이 slug 라벨이거나 영문 source 표기이면, **같은 출처 이슈의 중립 문장**으로 바꾼 뒤 게이트를 다시 돌린다. 새 입장을 쓰지 않는다.
+- **Hugo 없음 + 입장 한 줄**: 사이트 빌드 바이너리가 없으면 빌드를 건너뛴다(실패 아님). 마감 기준은 게이트 exit 0 **그리고** 링크·SSoT orphan 0이다.
 - **야간 fixup 패턴**: 해석 불가 actor 링크는 drop; 알려진 slug 오타는 기존 `data/people`로 remap; stub는 **이미 출처가 있는 실명 인물**에만 추가. 지자체·기관·기사 제목을 `/people/*`로 발행하지 않는다(실인물 SSoT 필수).
 - **stub→curated 승격 축**: allowlist URL이 **같은 사람·같은 직**을 가리킬 때만. 역할 라벨이 틀린 stub(예: 「위원장」인데 실제는 연구위원)는 역할을 정정한 뒤 승격하거나 hold.
 - **동명이인 함정**: allowlist 호스트 URL이 **다른 사람**(같은 이름, 다른 직/기관)이면 콘텐츠 안전 실패 — 그 URL을 promote에 붙이지 않는다. 기초의원·명단 URL만으로 승격하지 않는다.
