@@ -7,6 +7,14 @@ updated: "2026-09-20"
 last_updated: "2026-09-20"
 review_after: "2026-12-19"
 sources:
+  - inbox/aa/2026-09-20-github-issue-check-empty-skip.md
+  - inbox/pm/2026-09-20-github-issue-check-empty-skip.md
+  - inbox/sw-factory/2026-09-20-github-issue-check-empty-skip.md
+  - inbox/candidate/2026-09-21-github-issue-check-empty-skip.md
+  - ticket:2200
+  - ticket:2180
+  - ticket:2194
+  - ticket:2181
   - inbox/candidate/2026-09-20-github-issue-check-empty-skip.md
   - inbox/pm/2026-09-19-github-issue-check-empty-skip.md
   - inbox/sw-factory/2026-09-19-github-issue-check-empty-skip.md

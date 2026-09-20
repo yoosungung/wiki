@@ -1,6 +1,13 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-09-20 | INBOX_DRAIN | inbox/ | 5 | GH-empty×4→Empty-Skip sources; radar today.yaml empty-guard PASS→PubGate; git rm |
+| 2026-09-20 | RESEARCH | 연구_주제_관리.md | 6 | wiki-first+웹: LiteRT v0.17·WebLLM 0.2.85·Furiosa 2026.4b15·Graphiti 0.30.2·LightRAG 1.5.7 ALREADY; Ossie PR#350·Supermemory documentDate 신규 |
+| 2026-09-20 | INGEST | raw/ | 2 | ossie-pr350-ai-context; supermemory-documentdate-openapi |
+| 2026-09-20 | SYNTHESIZE | wiki/ | 5 | OSI PR#350; AV-SQL ai_context; Supermemory §3.5; GH Empty-Skip; PubGate sources |
+| 2026-09-20 | ALREADY_COVERED | wiki/ | 5 | LiteRT-LM v0.17.x; WebLLM v0.2.85; Furiosa FXB/specdec/llm-d; Graphiti 0.30.2; LightRAG v1.5.7 |
+| 2026-09-20 | CLEANUP | raw/ & inbox/ | 7 | inbox 5 git rm; raw 2 합성 후 삭제; D-0(09-20)·D-1(09-19) 유지 |
+| 2026-09-20 | LINT | Root / wiki | ALL | INDEX META 2026-09-20 유지(Agents 269·Models 259·Eng 190); 데일리 append; 연구_주제 갱신 |
 | 2026-09-20 | INGEST | raw/ | 4 | grpo-signbalance; ncp-archpreview; frognano-4b; qwenpaw-heimel |
 | 2026-09-20 | SYNTHESIZE | wiki/ | 10 | SignBalance; GRPO-Def; NCP-ArchPreview; LLM-비교; FrogNano; 코딩-하네스; End-of-SE; QwenPaw; Heimel; Hierarchical-Memory |
 | 2026-09-20 | CLEANUP | raw/ | 4 | 합성 완료 raw 4건 삭제 (SignBalance·NCP·FrogNano·QwenPaw/Heimel) |

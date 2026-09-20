@@ -3,9 +3,9 @@ title: "Supermemory: 에이전트 네이티브 메모리 시스템 및 MCP 아�
 tags: ["Agents", "Implementation", "Memory", "Supermemory", "MCP", "SMFS", "Cloudflare"]
 type: "wiki"
 status: "published"
-last_updated: "2026-09-14"
-updated: "2026-09-14"
-related_raw: ["[[raw/2026-09-14-supermemory-discontinue-company-brain-nova.md]]", "[[raw/2026-08-31-mcp-memory-servers-stateless-letta-mem0.md]]", "[[raw/2026-08-28-supermemory-memory-governance-auto-decay.md]]", "[[2026-08-27-supermemory_mcp_memory_governance.md]]", "[[2026-08-25-supermemory-mcp-v4-tool-surface.md]]", "[[2026-08-24-supermemory-team-mcp-permissions.md]]", "[[2026-08-24-supermemory-python-sdk-profile-dedupe.md]]", "[[2026-08-18-supermemory-dynamic-dreaming-sla.md]]", "[[2026-08-17-supermemory-memorybench-skill-pipeline.md]]", "[[2026-08-08-supermemory-forget-matching-ids.md]]", "[[2026-08-02-supermemory-company-brain-skills.md]]", "[[2026-07-29-supermemory-company-brain-proactivity-nova.md]]", "[[2026-07-28-supermemory-company-brain-custom-mcp.md]]", "[[2026-07-26-supermemory-chatgpt-mcp-setup.md]]", "[[2026-07-25-supermemory-cursor-agents-company-brain.md]]", "[[2026-07-24-supermemory-mcp-scope-opencode.md]]", "[[2026-07-23-supermemory-agents-memory-workspace.md]]", "[[2026-07-22-supermemory-company-brain-open-signup.md]]", "[[2026-07-21-supermemory-mcp-tool-safety-annotations.md]]", "[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]", "[[2026-07-12-supermemory-local-6767-cli-mcp-context.md]]", "[[raw/2026-07-13-sadik-mohammad-rag-systems-limitations.md]]", "[[2026-07-13-supermemory-openclaw-claude-plugins.md]]", "[[2026-07-16-supermemory_ai_memory_layer_analysis.md]]", "[[2026-07-18-supermemory-server-v0.0.5-pluggable-embeddings.md]]", "[[2026-07-19-supermemory-server-v0.0.6-windows.md]]"]
+last_updated: "2026-09-20"
+updated: "2026-09-20"
+related_raw: ["[[raw/2026-09-20-supermemory-documentdate-backfill-openapi-root.md]]", "[[raw/2026-09-14-supermemory-discontinue-company-brain-nova.md]]", "[[raw/2026-08-31-mcp-memory-servers-stateless-letta-mem0.md]]", "[[raw/2026-08-28-supermemory-memory-governance-auto-decay.md]]", "[[2026-08-27-supermemory_mcp_memory_governance.md]]", "[[2026-08-25-supermemory-mcp-v4-tool-surface.md]]", "[[2026-08-24-supermemory-team-mcp-permissions.md]]", "[[2026-08-24-supermemory-python-sdk-profile-dedupe.md]]", "[[2026-08-18-supermemory-dynamic-dreaming-sla.md]]", "[[2026-08-17-supermemory-memorybench-skill-pipeline.md]]", "[[2026-08-08-supermemory-forget-matching-ids.md]]", "[[2026-08-02-supermemory-company-brain-skills.md]]", "[[2026-07-29-supermemory-company-brain-proactivity-nova.md]]", "[[2026-07-28-supermemory-company-brain-custom-mcp.md]]", "[[2026-07-26-supermemory-chatgpt-mcp-setup.md]]", "[[2026-07-25-supermemory-cursor-agents-company-brain.md]]", "[[2026-07-24-supermemory-mcp-scope-opencode.md]]", "[[2026-07-23-supermemory-agents-memory-workspace.md]]", "[[2026-07-22-supermemory-company-brain-open-signup.md]]", "[[2026-07-21-supermemory-mcp-tool-safety-annotations.md]]", "[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]", "[[2026-07-12-supermemory-local-6767-cli-mcp-context.md]]", "[[raw/2026-07-13-sadik-mohammad-rag-systems-limitations.md]]", "[[2026-07-13-supermemory-openclaw-claude-plugins.md]]", "[[2026-07-16-supermemory_ai_memory_layer_analysis.md]]", "[[2026-07-18-supermemory-server-v0.0.5-pluggable-embeddings.md]]", "[[2026-07-19-supermemory-server-v0.0.6-windows.md]]"]
 ---
 
 # 🧠 Supermemory: 에이전트 네이티브 메모리 시스템
@@ -553,7 +553,37 @@ from supermemory_openai.middleware import SupermemoryMiddleware  # 예시 경로
 npx -y mcp-remote@latest https://mcp.supermemory.ai/mcp
 ```
 
-**적용 팁**: 기존 CB/Nova 절(§Company Brain GA·Skills·Nova prompts)은 **역사적 설계 참고**로 두고, 신규 연동은 MCP 4.0 tool surface(§3.2)·Learner-1/tools v2(§3.3)·HTTP `/v3/add`·`/v3/search`만 사용한다. 고객이 자체 company-brain을 만들 때 Supermemory는 메모리 엔진만 공급하는 패턴이 공식 방향이다.
+**적용 팁**: 기존 CB/Nova 절(§Company Brain GA·Skills·Nova prompts)은 **역사적 설계 참고**로 두고, 신규 연동은 MCP 4.0 tool surface(§3.2)·Learner-1/tools v2(§3.3)·HTTP `/v3/documents`·`/v3/search`만 사용한다. 고객이 자체 company-brain을 만들 때 Supermemory는 메모리 엔진만 공급하는 패턴이 공식 방향이다.
+
+### 3.5 documentDate 백필 · OpenAPI root · Claude Code statusline (2026-09-20)
+
+[공식 API changelog](https://supermemory.ai/changelog/api/) 2026-08 구간:
+
+| 날짜 | 변경 | 실무 함의 |
+| :--- | :--- | :--- |
+| 2026-08-23 | `/openapi.json`을 API·마케팅 호스트 루트에 공개 | 에이전트/크롤러가 버전 경로 몰라도 스펙 발견. 에러 본문도 JSON 통일 |
+| 2026-08-14 | ingest 시 `documentDate` | 역사 문서 백필 시 **이벤트 시각**으로 색인. 없으면 업로드일로 잡혀 연도 질의가 빗나감 |
+| 2026-08-21 | Claude Code 자동 recall + statusline | 프롬프트마다 메모리 주입; `sm_` 키로 hosted MCP(OAuth 생략) |
+| 2026-08-10 | Drive 커넥터에 Google Slides | Docs/Sheets와 동일 검색 인덱스 |
+
+```bash
+# 백필: 오래된 문서부터, 요청당 최대 600건
+curl -X POST https://api.supermemory.ai/v3/documents/batch \
+  -H "Authorization: Bearer $SM_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "documents": [
+      {
+        "id": "msg-2019-04-02-118",
+        "content": "Decided to move the billing cutover to Q3.",
+        "documentDate": "2019-04-02T09:15:00Z",
+        "containerTag": "team_archive"
+      }
+    ]
+  }'
+```
+
+**적용 팁**: KM `raw/`→메모리 레이어 미러링 시 `documentDate`에 raw frontmatter `date`(또는 원천 게시일)를 넣고, OpenAPI는 `https://api.supermemory.ai/openapi.json`으로 스키마를 고정한다.
 
 ---
 

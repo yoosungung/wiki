@@ -7,6 +7,8 @@ updated: "2026-09-20"
 last_updated: "2026-09-20"
 review_after: "2026-12-19"
 sources:
+  - inbox/candidate/2026-09-21-issue-radar-today.md
+  - ticket:2195
   - inbox/candidate/2026-09-20-publication-safety.md
   - ticket:2150
   - inbox/candidate/2026-09-19-issue-radar-today.md
