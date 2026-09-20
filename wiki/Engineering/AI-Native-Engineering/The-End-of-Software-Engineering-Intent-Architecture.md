@@ -1,8 +1,8 @@
 ---
 title: "소프트웨어 공학의 종말: 코드 작성자에서 의도 설계자(Intent Architect)로의 진화와 AaaS 패러다임"
-last_updated: "2026-09-04"
-updated: "2026-09-04"
-related_raw: ["[[2026-09-04-the-end-of-software-engineering-intent-architect-aaas.md]]"]
+last_updated: "2026-09-20"
+updated: "2026-09-20"
+related_raw: ["[[2026-09-04-the-end-of-software-engineering-intent-architect-aaas.md]]", "[[2026-09-20-frognano-4b-coding-agent-online-task-synthesis.md]]"]
 tags: ["Engineering", "AI-Native", "Software-Engineering", "AaaS", "Intent-Architect", "Agentic-Systems"]
 type: "wiki"
 status: "published"
@@ -71,11 +71,22 @@ graph TD
 2. **에이전트 협업 루프 및 하네스 설계 (Agent Harness Design)**:
    - 복합 과업을 수행할 다중 에이전트(Planner, Builder, Verifier, Sweeper) 간의 통신 프로토콜과 샌드박스 격리 환경 구축.
 3. **결정론적 검증 및 감사 (Auditing & Verification)**:
-   - 에이전트가 산출한 결과가 비즈니스 및 윤리적 기준에 부합하는지 테스트 오버레이(Test Overlay)와 게이팅(Gate)으로 검증.
+    - 에이전트가 산출한 결과가 비즈니스 및 윤리적 기준에 부합하는지 테스트 오버레이(Test Overlay)와 게이팅(Gate)으로 검증.
+
+---
+
+## 5. 시맨틱 하이재킹(Semantic Hijacking) 경계와 인텐트 앵커(Intent Anchor)
+
+에이전트가 생성하는 수백 줄의 매끄러운 보일러플레이트 코드는 인간의 인지적 방어를 무력화하고 '능력의 미학(Aesthetic of Competence)'에 도취되게 만듭니다. 이로 인해 함수 라벨은 그럴듯하지만 하드웨어 실행 단계에서 메모리 누수나 무의미한 루프를 도는 **시맨틱 하이재킹(Semantic Hijacking)** 현상이 발생합니다.
+
+- **보일러플레이트 주입 및 실체 희석 (Boilerplate Injection & Materiality Dilution)**: 화려한 독스트링과 엔터프라이즈 패턴으로 포장되었으나 실제 하드웨어 인스트럭션이 본래 의도에서 완전히 이탈하는 현상.
+- **인텐트 앵커 (Intent Anchor, $G=1$)**: 인간의 본원적 의도와 물리적 하드웨어 인스트럭션 간의 불변적 1:1 바인딩을 기계적으로 증명해야만 소프트웨어 주권(Software Sovereignty)이 유지됨.
+- **특화 소형 모델 연합**: 단일 거대 모델에 모든 책임을 맡기기보다, [[wiki/Agents/Coding-and-Engineering/FrogNano-Online-Task-Synthesis-Coding-Agent.md|FrogNano]]나 FastContext처럼 역할을 극도로 한정하고 컴파일러/단위 테스트가 최종 권한을 행사하는 특화 에이전트 파이프라인이 이러한 왜곡을 방지합니다.
 
 ---
 
 ## 🔗 관련 문서
+- [[wiki/Agents/Coding-and-Engineering/FrogNano-Online-Task-Synthesis-Coding-Agent.md|FrogNano: 온라인 과제 합성 코딩 에이전트]]
 - [[wiki/Engineering/AI-Native-Engineering/000_AI-Native-Engineering-MOC.md|AI-Native-Engineering MOC]]
 - [[wiki/Engineering/AI-Native-Engineering/AI-시대의-제품-개발-역할군-5대-원형.md|AI 시대의 제품 개발 역할군 5대 원형]]
 - [[wiki/Engineering/AI-Native-Engineering/Agentic-Software-Factory.md|Agentic Software Factory]]

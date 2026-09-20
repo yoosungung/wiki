@@ -4,8 +4,8 @@ related_raw: ["[[wiki/Agents/Memory-and-Cognition/Hierarchical-Memory-for-LLMs-�
 tags: ['wiki', 'knowledge_and_memory', 'advanced_rag_&_knowledge_graph', 'agent_memory_and_cognition']
 type: "wiki"
 status: "published"
-last_updated: "2026-04-19"
-updated: "2026-04-19"
+last_updated: "2026-09-20"
+updated: "2026-09-20"
 ---
 
 # Hierarchical Memory for LLMs: 계층적 메모리 구조
@@ -17,6 +17,7 @@ LLM이 긴 문맥(Long Context)을 처리할 때 발생하는 비용과 성능 �
 *   **L1 (작업 메모리):** 현재 처리 중인 즉각적인 토큰과 활성화 상태를 유지하며 가장 빠른 응답 속도를 제공합니다.
 *   **L2 (단기 에피소드 메모리):** 현재 대화 세션 내의 이전 맥락을 요약된 형태로 저장하여 컨텍스트 윈도우의 효율성을 극대화합니다.
 *   **L3 (장기 지식 저장소):** 과거의 모든 상호작용과 외부 지식을 벡터화 및 지식 그래프화하여 저장합니다. Mem0, Cognee 등과 같은 도구가 이 계층의 지능형 검색(Retrieval)을 담당합니다.
+*   **현대적 구현 사례 (QwenPaw):** 즉각적 컨텍스트(Immediate Context) $\rightarrow$ 작업 지식(Working Knowledge) $\rightarrow$ 장기 개인 인사이트(Long-term Personal Insights)의 3계층 영속적 메모리로 세션 간 자가 진화를 지원하며, 단순 대화 버퍼를 넘어 제어 시스템(Control System)으로 기능합니다.
 
 ## 핵심 특징 및 효과
 *   **지능형 메모리 관리:** 모델이 무한에 가까운 컨텍스트를 가진 것처럼 작동하게 하여, 복잡한 프로젝트 관리나 연속적인 연구 작업에서 일관성을 유지할 수 있도록 돕습니다.
@@ -26,8 +27,8 @@ LLM이 긴 문맥(Long Context)을 처리할 때 발생하는 비용과 성능 �
 - https://unite.ai/hierarchical-memory-for-llms
 
 ## 관련 링크
-- [[wiki/Agents/Memory-and-Cognition/Mem0-vs-Cognee-vs-QMD-Comparison]]
-- [[wiki/Agents/Memory-and-Cognition/Cognee - AI Memory System]]
-- [[wiki/Agents/Memory-and-Cognition/Cognee 핵심 개념]]
-- [[wiki/Agents/Memory-and-Cognition/LangMem]]
-- [[wiki/Agents/Memory-and-Cognition/Memory]]
+- [[wiki/Agents/Memory-and-Cognition/QwenPaw-Three-Layer-Persistent-Memory.md|QwenPaw 3계층 영속적 메모리]]
+- [[wiki/Agents/Memory-and-Cognition/Mem0-vs-Cognee-vs-QMD-Comparison.md]]
+- [[wiki/Agents/Memory-and-Cognition/Cognee-Architecture.md]]
+- [[wiki/Agents/Memory-and-Cognition/LangMem.md]]
+- [[wiki/Agents/Memory-and-Cognition/000_Memory-and-Cognition-MOC.md]]

@@ -10,6 +10,7 @@
 - [[wiki/Models/RL/GRPO-Algorithm-Definition.md]]
 - [[wiki/Models/RL/GRPO-Reinforcement-Learning-SQL-Optimization.md]]
 - [[wiki/Models/RL/GRPO-Scaling-Laws-Efficiency.md]]
+- [[wiki/Models/RL/GRPO-Spurious-Advantage-SignBalance.md]]
 - [[wiki/Models/RL/Graph-PRefLexOR-Graph-Native-RL.md]]
 - [[wiki/Models/RL/JEPA-LeWorldModel-Next-Gen-World-Model.md]]
 - [[wiki/Models/RL/LLM-Reinforcement-Learning-Post-Training-Guide.md]]

@@ -1,6 +1,10 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-09-20 | INGEST | raw/ | 4 | grpo-signbalance; ncp-archpreview; frognano-4b; qwenpaw-heimel |
+| 2026-09-20 | SYNTHESIZE | wiki/ | 10 | SignBalance; GRPO-Def; NCP-ArchPreview; LLM-비교; FrogNano; 코딩-하네스; End-of-SE; QwenPaw; Heimel; Hierarchical-Memory |
+| 2026-09-20 | CLEANUP | raw/ | 4 | 합성 완료 raw 4건 삭제 (SignBalance·NCP·FrogNano·QwenPaw/Heimel) |
+| 2026-09-20 | LINT | Root / wiki | ALL | INDEX META 2026-09-20 (Agents 269·Models 259·Eng 190); 데일리 2026-09-20; 연구_주제 갱신 |
 | 2026-09-20 | INBOX_DRAIN | inbox/ | 4 | GH-empty×3→4신호 skip; pub 입장 줄·Hugo skip→PubGate; git rm |
 | 2026-09-20 | RESEARCH | Web/wiki-first | 2 | WebLLM v0.2.85 신규; LiteRT-LM v0.17.0/0.17.1 신규 |
 | 2026-09-20 | INGEST | raw/ | 2 | webllm-v0.2.85; litert-lm-v0.17 |

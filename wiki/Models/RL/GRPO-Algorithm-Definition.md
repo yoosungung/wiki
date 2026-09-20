@@ -3,8 +3,9 @@ title: "GRPO (Group Relative Policy Optimization) 알고리즘 정의"
 tags: ['wiki', 'ai_core', 'reinforcement_learning', 'grpo', 'algorithm']
 type: "wiki"
 status: "published"
-last_updated: "2026-04-20"
-updated: "2026-04-20"
+last_updated: "2026-09-20"
+updated: "2026-09-20"
+related_raw: ["[[2026-09-20-grpo-spurious-advantage-signbalance.md]]"]
 ---
 
 # GRPO (Group Relative Policy Optimization) 알고리즘 정의
@@ -23,18 +24,22 @@ updated: "2026-04-20"
 2. **보상 계산:** 각 답변에 대해 규칙 기반(Rule-based) 또는 모델 기반 보상을 부여합니다.
 3. **상대적 이득 계산:** 그룹 내 답변들의 평균 점수와 표준 편차를 기준으로 각 답변의 상대적 우수성(Advantage)을 계산합니다.
    - $A_i = \frac{R_i - \text{mean}(R)}{\text{std}(R)}$
-4. **정책 업데이트:** 상대적으로 높은 점수를 받은 답변의 생성 확률을 높이는 방향으로 모델을 업데이트합니다.
+4. **정책 업데이트:** 상대적으로 높은 점수를 받은 답변의 생성 확률을 높시키는 방향으로 모델을 업데이트합니다.
 
 ## 3. 주요 장점
 - **자원 효율성:** 소형 모델(sLM)에서도 강력한 추론 능력을 학습시킬 수 있는 환경을 제공합니다.
 - **학습 안정성:** 그룹 내 비교를 통해 보상의 베이스라인을 자동으로 설정하므로 학습이 더 안정적으로 진행됩니다.
 - **검증 가능한 보상 체계:** 수학, 코딩과 같이 정답이 명확한 분야에서 규칙 기반 보상(Rule-based Rewards)과 결합하여 탁월한 성능을 발휘합니다.
 
-## 4. 확장 기술
+## 4. 확장 기술 및 한계 극복
 - **Tree-GRPO:** 단일 경로 샘플링 대신 트리 구조 탐색을 도입하여 논리적 일관성을 강화합니다.
 - **CISPO:** 드물게 발생하는 고영향(High-impact) 토큰에 가중치를 두어 학습 속도를 개선합니다.
+- **SignBalance (거짓 이득 교정):** $G=16$ 중 1개만 우연히 맞힌 요행 궤적에 정상 추론(+1.0) 대비 최대 약 4배(+3.87)의 폭탄 보상이 쏠리는 Spurious Advantage 결함을 해결. 정답 이득을 +1.0으로 고정하고 $1/N$ 음수 보상을 오답에 분배하여 수식 단 한 줄로 추론 안정성을 확보합니다. 자세한 내용은 [[wiki/Models/RL/GRPO-Spurious-Advantage-SignBalance.md|GRPO Spurious Advantage 및 SignBalance]] 참조.
+- **GDPO (다중 보상 분리):** 형식, 정답, 도구 호출 등 복합 보상 간의 상쇄 문제를 분리 정규화로 해결합니다.
 
 ## 관련 문서
-- [[wiki/Models/RL/DeepSeek-R1-GRPO-Implementation]]
-- [[wiki/Models/RL/Unsloth-GRPO-Optimization]]
-- [[wiki/Models/RL/000_RL-MOC]]
+- [[wiki/Models/RL/GRPO-Spurious-Advantage-SignBalance.md]]
+- [[wiki/Models/RL/DeepSeek-R1-GRPO-Implementation.md]]
+- [[wiki/Models/RL/NVIDIA GDPO: 다중 보상 RL의 GRPO 결함 해결.md]]
+- [[wiki/Models/RL/Unsloth-GRPO-Optimization.md]]
+- [[wiki/Models/RL/000_RL-MOC.md]]

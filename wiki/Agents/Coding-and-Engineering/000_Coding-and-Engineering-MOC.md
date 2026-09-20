@@ -9,6 +9,7 @@
 - [[wiki/Agents/Coding-and-Engineering/Claude_Code_on_the_web.md]]
 - [[wiki/Agents/Coding-and-Engineering/Confucius Code Agent - 모델 스케일링의 종말과 에이전트 설계의 중요성.md]]
 - [[wiki/Agents/Coding-and-Engineering/Continue.dev.md]]
+- [[wiki/Agents/Coding-and-Engineering/FrogNano-Online-Task-Synthesis-Coding-Agent.md]]
 - [[wiki/Agents/Coding-and-Engineering/Grep-vs-Vector-DB-for-Coding-Agents.md]]
 - [[wiki/Agents/Coding-and-Engineering/Headroom-컨텍스트-압축-및-캐시-정렬.md]]
 - [[wiki/Agents/Coding-and-Engineering/HuggingFace-ml-intern-Autonomous-ML-Engineer.md]]

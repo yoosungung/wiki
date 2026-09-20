@@ -19,6 +19,7 @@
 - [[wiki/Models/Architectures/Lottery Ticket Hypothesis와 LLM.md]]
 - [[wiki/Models/Architectures/MoE 모델 분석.md]]
 - [[wiki/Models/Architectures/MoE-Routing-Innovations-ReMoE-AoE.md]]
+- [[wiki/Models/Architectures/NCP-ArchPreview-Next-Concept-Prediction.md]]
 - [[wiki/Models/Architectures/Rebellions-ATOM-Max.md]]
 - [[wiki/Models/Architectures/Recent-LLM-Architecture-Developments.md]]
 - [[wiki/Models/Architectures/RoPE-and-NoPE-Multi-Scale-Architecture.md]]
