@@ -3,9 +3,9 @@ id: tenant-quality-yaml-gate-skip-pattern
 title: "테넌트 quality.yaml 게이트 키 누락 시 skip (NF 미생성)"
 status: canonical
 owner: km
-updated: "2026-09-14"
-last_updated: "2026-09-14"
-review_after: "2026-12-14"
+updated: "2026-09-21"
+last_updated: "2026-09-21"
+review_after: "2026-12-20"
 sources:
   - ticket:414
   - ticket:85
@@ -22,9 +22,12 @@ sources:
   - ticket:1985
   - ticket:1986
   - ticket:1988
+  - ticket:2206
+  - ticket:1506
   - schedule:aa-clean-weekly
   - schedule:qa-bulk-weekly
   - schedule:ta-load-weekly
+  - inbox/aa/2026-09-21-aa-clean-weekly.md
   - inbox/aa/2026-09-07-aa-clean-weekly.md
   - inbox/aa/2026-09-07-nl2sql-security-command-absent.md
   - inbox/qa/2026-09-07-qa-bulk-weekly.md
@@ -82,11 +85,12 @@ type: "wiki"
 
 ## 운영 규칙
 
-1. **파일 자체 없음** = 모든 게이트 skip (사유: no `.factory/quality.yaml`).
+1. **파일 자체 없음** = 모든 게이트 skip (사유: no `.factory/quality.yaml`). 예: 일부 제품 레포에 yaml이 없으면 `clean_code`도 skip이며 **NF를 만들지 않는다**.
 2. **파일은 있으나 키만 없음** (예: `e2e`만 존재) = 해당 게이트만 skip. 다른 축(Playwright vs SQL EX)과 혼동하지 않는다 — [[wiki/Agents/Text-to-SQL/Spider2-Quality-Gate-nl2sql.md]].
-3. **NF 티켓**: skip ≠ 실패. 실행 후 실패·회귀만 클라이언트 `project_id`에 New NF.
+3. **NF 티켓**: skip ≠ 실패. 실행 후 실패·회귀만 클라이언트 `project_id`에 New NF. 이미 테스트로 봉인된 회귀(예: SQL 재방출 방지)는 tip green만으로 새 스멜 티켓을 올리지 않는다.
 4. **CD Done 게이트**: `tenant_cd-registry`의 `tenants`가 비어 있으면 그 NF 런의 feature Done 게이트는 **해당 없음**(스킵). 빈 레지스트리를 장애로 올리지 않는다.
 5. MCP discovery가 깨져도 Active 스케줄 티켓은 JSON-RPC fallback(`getTicket`/`addComment`)으로 마감 가능 — [[wiki/Engineering/AI-Native-Engineering/MCP-Python-Package-Skew-Import-Failure.md]], [[wiki/Engineering/Infrastructure-and-DevOps/path-graph-Argo-ImagePullBackOff-runbook.md]] Closeout pitfall.
+6. **워크스페이스 ingest 카운터**: full-scan `done`은 `ingestUri` 델타 성공만. skip/실패를 `done`에 넣으면 그래프 누락이 완료 로그에 가려진다 — [[wiki/Engineering/AI-Native-Engineering/Workspace-Ingest-Done-Vs-Skipped-Counter.md]].
 
 ## 적용 팁
 
@@ -102,6 +106,7 @@ type: "wiki"
 - [[wiki/Engineering/AI-Native-Engineering/Agentic-Software-Factory.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Playwright-Frontend-UI-Smoke-Pattern.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Quality-Yaml-Clean-Code-CI-Align.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Workspace-Ingest-Done-Vs-Skipped-Counter.md]]
 - [[wiki/Engineering/AI-Native-Engineering/In-Process-ASGI-Load-Harness-Pattern.md]]
 - [[wiki/Engineering/AI-Native-Engineering/MCP-Python-Package-Skew-Import-Failure.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Wiki-Synthesis-Policy.md]]

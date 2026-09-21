@@ -1,9 +1,9 @@
 ---
 title: "OSI (Open Semantic Interchange)"
 tags: ["OSI", "Apache Ossie", "Semantic Layer", "Agent", "MCP", "Data"]
-last_updated: "2026-09-20"
-updated: "2026-09-20"
-related_raw: ["[[raw/2026-09-20-apache-ossie-pr350-ai-context-spec-align.md]]", "[[2026-08-23-apache-ossie-ai-context-spec141.md]]", "[[raw/2026-07-24-apache-ossie-schema-ontology-flatten.md]]", "[[raw/2026-07-14-Apache-Ossie-명세.md]]"]
+last_updated: "2026-09-21"
+updated: "2026-09-21"
+related_raw: ["[[raw/2026-09-21-apache-ossie-pr423-datetimetz-converter-typo.md]]", "[[raw/2026-09-20-apache-ossie-pr350-ai-context-spec-align.md]]", "[[2026-08-23-apache-ossie-ai-context-spec141.md]]", "[[raw/2026-07-24-apache-ossie-schema-ontology-flatten.md]]", "[[raw/2026-07-14-Apache-Ossie-명세.md]]"]
 ---
 
 # OSI (Open Semantic Interchange)
@@ -58,6 +58,12 @@ AV-SQL/에이전트 파이프라인 연계는 [[wiki/Agents/Text-to-SQL/AV-SQL-A
 - **해결 ([PR #350](https://github.com/apache/ossie/pull/350), merged 2026-09-09)**: 다섯 노드(semantic_model·datasets·relationships·fields·metrics)를 `ai_context: {} # see AIContext in ossie-schema.json` + string|object 주석으로 정렬. **규범 동작 변경 없음**(스키마·Python·예시는 이미 union). 버전 **0.2.0.dev0** 유지.
 - **구현 함정 해소**: `spec.yaml`만 보고 string-only 파서를 짜던 경로가 문서상으로도 막힘. 검증은 여전히 `osi-schema.json` + `validation/validate.py`.
 - **Kyvos** 가 2026-08-12 Apache Ossie 생태계에 합류([ossie.apache.org](https://ossie.apache.org/)).
+
+### 2026-09-19: 컨버터 enum 오타 → 시간 차원 역할 유실 ([PR #423](https://github.com/apache/ossie/pull/423))
+
+- **함정**: Ossie→Omni가 `datatype`을 `"DateTimez"`(존재하지 않는 문자열)와 비교해 `DateTimeTz` 필드의 자동 `is_time` 감지가 실패. 명시 `dimension.is_time`이 없으면 Omni `timeframes`가 비고 round-trip에서 시간 역할이 사라짐.
+- **정본**: 스키마 enum은 `DateTimeTz`. 컨버터·테스트는 **스펙 enum 문자열을 그대로** 쓰고, typo fixture로 회귀한다.
+- **적용 팁**: 시맨틱 컨버터에서 “스펙에 없는 enum 리터럴”은 silent drop이다. NL2SQL/에이전트 파이프라인은 시간 필터 CTE 전에 `datatype`↔`is_time` round-trip 검사를 넣는다 — [[wiki/Agents/Text-to-SQL/AV-SQL-Agentic-Views-Spider-2-0.md]].
 
 ### dbt 컨버터: SUM_BOOLEAN + qualified columns (2026-07-31)
 

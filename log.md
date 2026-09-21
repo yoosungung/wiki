@@ -1,6 +1,13 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-09-21 | INBOX_DRAIN | inbox/ | 10 | GH-empty×7→Empty-Skip; pub-safety→PubGate; aa-clean→Tenant/CI-Align; ingest-skip→Workspace-Ingest 신규; git rm |
+| 2026-09-21 | RESEARCH | 연구_주제_관리.md | 6 | wiki-first+릴리스: LiteRT 0.17.1·WebLLM 0.2.85·Graphiti 0.30.2·LightRAG 1.5.7·Furiosa 2026.4b15·Supermemory → ALREADY; Ossie PR#423 신규 |
+| 2026-09-21 | INGEST | raw/ | 1 | ossie-pr423-datetimetz-converter-typo |
+| 2026-09-21 | SYNTHESIZE | wiki/ | 8 | Workspace-Ingest 신규; GH/PubGate/Tenant/CI-Align; OSI PR#423; AV-SQL; AI-Native MOC |
+| 2026-09-21 | ALREADY_COVERED | wiki/ | 6 | LiteRT-LM v0.17.1; WebLLM v0.2.85; Graphiti 0.30.2; LightRAG v1.5.7; Furiosa FXB; Supermemory server-v0.0.8 |
+| 2026-09-21 | CLEANUP | raw/ & inbox/ & root | 12 | inbox 10 git rm; raw 1 삭제; D-2(2026-09-19) 삭제 |
+| 2026-09-21 | LINT | Root / wiki | ALL | INDEX META 2026-09-21 Eng 191·AIN 77; 데일리; 연구_주제 갱신 |
 | 2026-09-20 | INBOX_DRAIN | inbox/ | 5 | GH-empty×4→Empty-Skip sources; radar today.yaml empty-guard PASS→PubGate; git rm |
 | 2026-09-20 | RESEARCH | 연구_주제_관리.md | 6 | wiki-first+웹: LiteRT v0.17·WebLLM 0.2.85·Furiosa 2026.4b15·Graphiti 0.30.2·LightRAG 1.5.7 ALREADY; Ossie PR#350·Supermemory documentDate 신규 |
 | 2026-09-20 | INGEST | raw/ | 2 | ossie-pr350-ai-context; supermemory-documentdate-openapi |

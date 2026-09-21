@@ -77,3 +77,4 @@
 - [[wiki/Engineering/AI-Native-Engineering/The-End-of-Software-Engineering-Intent-Architecture.md]]
 - [[wiki/Engineering/AI-Native-Engineering/VSCode-Extension-Host-QA-Gate.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Wiki-Synthesis-Policy.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Workspace-Ingest-Done-Vs-Skipped-Counter.md]]
