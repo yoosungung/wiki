@@ -730,3 +730,11 @@
 | 2026-09-17 | EXCLUDE_PROGRESS | inbox/ | 1 | people-ssot curation 카운트·정치 본문(후보 vault 정본) |
 | 2026-09-17 | CLEANUP | inbox/, raw/, Root | 12 | inbox 10 git rm; raw 1 삭제; D-2(2026-09-15) 삭제; D-0/D-1 유지 |
 | 2026-09-17 | LINT | Root / wiki | ALL | 데일리·INDEX META·auto_moc·fix_wiki_links·연구_주제_관리 비고 갱신 |
+
+| 2026-09-22 | INBOX_DRAIN | inbox/ | 8 | GH-empty×6→Empty-Skip sources; pub-safety/radar→PubGate sources; git rm |
+| 2026-09-22 | INGEST | raw/ | 1 | Helix Temporal GraphRAG helix-rag 0.2.0 (LightRAG+Graphiti) |
+| 2026-09-22 | RESEARCH | 연구_주제_관리.md | 8 | wiki-first+웹: LiteRT/Furiosa/Rebellions/Supermemory/LightRAG/Graphiti/Goose/Ossie; Helix 신규 |
+| 2026-09-22 | SYNTHESIZE | wiki/RAG | 2 | Helix-Temporal-GraphRAG 신규; GraphRAG-vs-LightRAG 선택 가이드 |
+| 2026-09-22 | ALREADY_COVERED | wiki/ | 7 | LiteRT v0.17.1; Furiosa FXB; Graphiti 0.30.2; LightRAG v1.5.7; Supermemory; Goose WebMCP; Ossie |
+| 2026-09-22 | CLEANUP | inbox/, raw/, Root | 10 | inbox 8 git rm; raw 1 삭제; D-2(2026-09-20) 삭제; D-0/D-1 유지 |
+| 2026-09-22 | LINT | Root / wiki | ALL | 데일리·INDEX META·auto_moc·fix_wiki_links·연구_주제_관리 비고 갱신 |

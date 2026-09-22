@@ -54,6 +54,7 @@
 - [[wiki/RAG/Graphiti-Types.md]]
 - [[wiki/RAG/Graphiti-Usage-Flow.md]]
 - [[wiki/RAG/HF-Infrastructure-for-Hybrid-Search-pwc.md]]
+- [[wiki/RAG/Helix-Temporal-GraphRAG.md]]
 - [[wiki/RAG/Kimi-K3-AgentENV-RL-Training-Sandbox.md]]
 - [[wiki/RAG/KnowNote-Local-First-RAG-NotebookLM.md]]
 - [[wiki/RAG/Knowledge Graph Extraction and Challenges.md]]

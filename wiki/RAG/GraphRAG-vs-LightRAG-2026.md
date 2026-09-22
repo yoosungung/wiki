@@ -1,6 +1,7 @@
 ---
 title: GraphRAG-vs-LightRAG-2026
 related_raw:
+  - "[[raw/2026-09-22-helix-temporal-graphrag-lightrag-graphiti.md]]"
   - "[[raw/2026-09-15-lightrag-v1.5.7-workspace-pgtable.md]]"
   - "[[raw/2026-09-16-graphiti-v0.30.2-neo4j-falkordb.md]]"
   - "[[raw/2026-09-19-graphiti-local-readonly-mcp.md]]"
@@ -10,8 +11,8 @@ tags:
   - ai
 type: wiki
 status: draft
-last_updated: "2026-09-19"
-updated: "2026-09-19"
+last_updated: "2026-09-22"
+updated: "2026-09-22"
 ---
 
 # 📊 GraphRAG vs LightRAG: 2026년 성능 및 아키텍처 비교
@@ -50,6 +51,7 @@ updated: "2026-09-19"
 - **LightRAG 선택:** 대규모 규정집, 매뉴얼, 위키 지식 베이스를 상대로 빠른 응답 속도와 지속적인 문서 추가·업데이트가 필요한 엔터프라이즈 RAG 시스템.
 - **Graphiti 선택:** 멀티턴 대화, 사용자 프로필 진화, 장기 목표 추적 등 시간에 따라 사실이 변경되는 자율 에이전트(Autonomous Agent)의 롱텀 메모리 레이어.
 - **LazyGraphRAG 선택:** 초기 인덱싱 예산이 제한적이며 사전 전역 분석보다는 개별 질의의 심층 추론이 우선인 대규모 비정형 데이터셋.
+- **Helix (`helix-rag`) 선택:** LightRAG 검색 + Graphiti 시간축을 **단일 Python API**로 프로토타입할 때. PyPI 0.2.0은 Alpha이며 CFI·다중 홉 모듈을 번들한다 — 운영 핀·함정은 [[wiki/RAG/Helix-Temporal-GraphRAG.md]].
 
 ## 5. API 및 에이전트 연동 패턴
 - **LightRAG**: FastAPI 기반 REST 엔드포인트를 내장하여 Docker 컨테이너 및 WebUI로 손쉽게 기동 가능.
