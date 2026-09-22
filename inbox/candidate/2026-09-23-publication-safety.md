@@ -1,11 +1,11 @@
 ---
 id: inbox-candidate-2026-09-23-publication-safety
 agent: candidate
-ticket_id: pending
+ticket_id: 2245
 updated: 2026-09-23
 status: inbox
 sources:
-  - ticket:pending
+  - ticket:2245
   - repo:/workspace/repo agent/publication_gate.py
 ---
 
