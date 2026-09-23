@@ -35,4 +35,4 @@ AgentEval은 단순 오답 여부뿐만 아니라 다음과 같은 고차원적 
 ## 🔗 연결된 문서
 - [[wiki/Agents/Frameworks/Evaluations/000_Evaluations-MOC.md]]
 - [[wiki/Agents/Evaluations/Deep-Agent-Evaluation-Framework.md]]
-- [[wiki/Engineering/Prompt-Engineering/프롬프트 엔지니어링에서 컨텍스트 엔지니어링으로의 전환.md]]
+- [[wiki/Engineering/Prompt-Engineering/프롬프트 엔지니어링에서 컨텍스트 엔지니어링으로의 전환.md]]

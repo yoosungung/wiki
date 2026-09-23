@@ -738,3 +738,11 @@
 | 2026-09-22 | ALREADY_COVERED | wiki/ | 7 | LiteRT v0.17.1; Furiosa FXB; Graphiti 0.30.2; LightRAG v1.5.7; Supermemory; Goose WebMCP; Ossie |
 | 2026-09-22 | CLEANUP | inbox/, raw/, Root | 10 | inbox 8 git rm; raw 1 삭제; D-2(2026-09-20) 삭제; D-0/D-1 유지 |
 | 2026-09-22 | LINT | Root / wiki | ALL | 데일리·INDEX META·auto_moc·fix_wiki_links·연구_주제_관리 비고 갱신 |
+
+| 2026-09-23 | INBOX_DRAIN | inbox/pm | 1 | candydate-pass-ab-openai-quota (ticket:2270) → OpenAI-HTTP-429-Billing-Vs-Rate-Limit-Triage sources lineage; git rm |
+| 2026-09-23 | INGEST | raw/ | 1 | TypeSafe Jev System One Decision Model (Choice, Score, Noul, RLCD, 70~500ms, USD 0.042/1M) |
+| 2026-09-23 | RESEARCH | 연구_주제_관리.md | 8 | wiki-first+웹: TypeSafe Jev System 1 신규 포착; LiteRT/Furiosa/Rebellions/Supermemory/LightRAG/Graphiti/Ossie ALREADY_COVERED |
+| 2026-09-23 | SYNTHESIZE | wiki/Agents, wiki/Models, wiki/Engineering | 4 | TypeSafe-Jev-System-One-Decision-Architecture 신규; 추론-LLM-추론-노력-제어-및-스케일링·Epistemic-Debt-ChangeScore-Friction-Gate·OpenAI-HTTP-429-Billing-Vs-Rate-Limit-Triage 갱신 |
+| 2026-09-23 | ALREADY_COVERED | wiki/ | 8 | LiteRT-LM v0.17.1; WebLLM v0.2.85; Furiosa 2026.4.0b15 FXB; Graphiti 0.30.2; LightRAG v1.5.7; Supermemory server-v0.0.8; Goose×WebMCP; Ossie PR#350/#423 |
+| 2026-09-23 | CLEANUP | inbox/, raw/, Root | 3 | inbox 1 git rm; raw 1 합성 후 삭제; D-2(2026-09-21) 삭제; D-0/D-1 유지 |
+| 2026-09-23 | LINT | Root / wiki | ALL | 데일리 생성, INDEX META 갱신, auto_moc·fix_wiki_links·update_index 실행, 연구_주제_관리 비고 갱신 |

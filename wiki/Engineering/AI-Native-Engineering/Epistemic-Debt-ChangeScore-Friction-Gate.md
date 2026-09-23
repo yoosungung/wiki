@@ -3,8 +3,8 @@ id: epistemic-debt-changescore-friction-gate
 title: "Epistemic Debt ChangeScore·Friction Gate"
 status: canonical
 owner: km
-updated: "2026-08-12"
-last_updated: "2026-08-12"
+updated: "2026-09-23"
+last_updated: "2026-09-23"
 review_after: "2026-11-12"
 sources:
   - ticket:458
@@ -53,6 +53,7 @@ runGateSmoke
 
 ## 🔗 관련 문서
 
+- [[wiki/Agents/Frameworks/TypeSafe-Jev-System-One-Decision-Architecture.md]] — System 1 초저지연 결정 모델을 활용한 게이트/마찰 분기 판정
 - [[wiki/Agents/Coding-and-Engineering/VSCode-Extension-Pure-Core-Host-Split.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Agentic-Software-Factory.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Wiki-Synthesis-Policy.md]]

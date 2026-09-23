@@ -30,7 +30,7 @@
 - [[wiki/Models/Reasoning-and-Cognition/Sionic AI STORM Parse.md]]
 - [[wiki/Models/Reasoning-and-Cognition/The Missing Layer of AGI - From Pattern Alchemy to Coordination Physics.md]]
 - [[wiki/Models/Reasoning-and-Cognition/Why LLM models are not good at RAG.md]]
-- [[wiki/Models/Reasoning-and-Cognition/아스트라-수학-수학난제해결-ai혁신-openai-astra-aimathematics-ai-인공지능-scientificreasoning-aibreakthrough.md]]
+- [[wiki/Models/Reasoning-and-Cognition/아스트라-수학-수학난제해결-ai혁신-openai-astra-aimathematics-ai-인공지능-scientificreasoning-aibreakthrough.md]]
 - [[wiki/Models/Reasoning-and-Cognition/추론-LLM-추론-노력-제어-및-스케일링.md]]
 - [[wiki/Models/Reasoning-and-Cognition/하버드 AI 논문 - 누가 사람을 평가할 자격이 있는가?.md]]
 - [[wiki/Models/Reasoning-and-Cognition/합성 정신병리학 (Synthetic Psychopathology)의 등장.md]]

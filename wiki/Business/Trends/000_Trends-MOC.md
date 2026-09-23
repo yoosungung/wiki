@@ -10,6 +10,6 @@
 - [[wiki/Business/Trends/Kimi-K3-Modal-vLLM-Serving.md]]
 - [[wiki/Business/Trends/OCR-to-AI-Worker-Financial-Document-Automation.md]]
 - [[wiki/Business/Trends/Rebellions-Global-Outlook-2026.md]]
-- [[wiki/Business/Trends/Soul-AI-인간-기반-LLM-정렬-학습-플랫폼.md]]
+- [[wiki/Business/Trends/Soul-AI-인간-기반-LLM-정렬-학습-플랫폼.md]]
 - [[wiki/Business/Trends/Sovereign-AI-Korea-Upstage.md]]
 - [[wiki/Business/Trends/Weekly-AI-Trends-2026-08-W4.md]]

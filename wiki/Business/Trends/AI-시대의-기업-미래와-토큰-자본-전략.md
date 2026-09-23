@@ -35,4 +35,4 @@ related_raw: ["[[2026-06-17-Nadella-AI-Corporate-Future-Insights.md]]"]
 ---
 **관련 문서**:
 - [[wiki/Business/Trends/000_Trends-MOC]]
-- [[wiki/Agents/Frameworks/차세대-자율-수행-에이전트-분석-2026]]
+- [[wiki/Agents/Frameworks/차세대-자율-수행-에이전트-분석-2026]]

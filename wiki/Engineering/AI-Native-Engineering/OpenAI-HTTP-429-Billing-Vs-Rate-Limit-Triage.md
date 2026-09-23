@@ -3,8 +3,8 @@ id: openai-http-429-billing-vs-rate-limit-triage
 title: "OpenAI HTTP 429: 빌링·쿼터 vs rate limit 트리아지"
 status: canonical
 owner: km
-updated: "2026-09-14"
-last_updated: "2026-09-14"
+updated: "2026-09-23"
+last_updated: "2026-09-23"
 review_after: "2026-12-14"
 sources:
   - https://developers.openai.com/api/docs/guides/error-codes
@@ -21,8 +21,10 @@ sources:
   - ticket:1916
   - ticket:1950
   - ticket:1988
+  - ticket:2270
   - https://help.openai.com/en/articles/8264644-what-is-usage-based-billing
   - inbox/pm/2026-09-14-candydate-1988-openai-credits.md
+  - inbox/pm/2026-09-23-candydate-pass-ab-openai-quota.md
 tags: ["Engineering", "AI-Native", "OpenAI", "Billing", "RateLimit", "Triage"]
 type: "wiki"
 ---

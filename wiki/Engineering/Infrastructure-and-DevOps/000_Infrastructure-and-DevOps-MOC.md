@@ -11,7 +11,7 @@
 - [[wiki/Engineering/Infrastructure-and-DevOps/DGX Spark.md]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/DGX Spark에서의 VLM 파인튜닝.md]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/DeepCode-Multi-Agent-Coding-System.md]]
-- [[wiki/Engineering/Infrastructure-and-DevOps/EPIC 구축 및 RAG 통합.md]]
+- [[wiki/Engineering/Infrastructure-and-DevOps/EPIC 구축 및 RAG 통합.md]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/Free-Infrastructure-Services-for-Developers.md]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/GHCR-Actions-Package-Write-ACL.md]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/Git-HTTP-Basic-Auth-Username-Env.md]]

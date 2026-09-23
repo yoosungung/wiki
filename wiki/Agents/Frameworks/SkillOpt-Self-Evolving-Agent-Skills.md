@@ -51,4 +51,4 @@ pip install skillopt
 
 **관련 문서**:
 - [[wiki/Agents/Frameworks/000_Frameworks-MOC]]
-- [[wiki/Agents/Frameworks/차세대-자율-수행-에이전트-분석-2026]]
+- [[wiki/Agents/Frameworks/차세대-자율-수행-에이전트-분석-2026]]

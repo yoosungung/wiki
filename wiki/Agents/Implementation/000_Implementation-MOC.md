@@ -3,7 +3,7 @@
 ## 📄 Documents
 - [[wiki/Agents/Implementation/AI OS.md]]
 - [[wiki/Agents/Implementation/AI-Agent-Chart-Generation-Automation.md]]
-- [[wiki/Agents/Implementation/AI는-정말-아무것도-느끼지-못하는가-Feat-Sentient-AI.md]]
+- [[wiki/Agents/Implementation/AI는-정말-아무것도-느끼지-못하는가-Feat-Sentient-AI.md]]
 - [[wiki/Agents/Implementation/Agent-Lightning.md]]
 - [[wiki/Agents/Implementation/Agent0.md]]
 - [[wiki/Agents/Implementation/AgentFS-Architecture-and-SQLite-Filesystem.md]]
@@ -43,6 +43,6 @@
 - [[wiki/Agents/Implementation/deepagents.md]]
 - [[wiki/Agents/Implementation/my-adk-python-samples.md]]
 - [[wiki/Agents/Implementation/open-agent-builder.md]]
-- [[wiki/Agents/Implementation/앤스로픽스캔들-제프리엡스타인-실리콘밸리의위선-agi의어머니-ai-인공지능-anthropicscanda.md]]
-- [[wiki/Agents/Implementation/인공지능자의식-앤스로픽-ai내성-클로드오퍼스-ai-인공지능-aiintrospection-anthropic-claudeopus-aiconsciousness.md]]
-- [[wiki/Agents/Implementation/프로덕션-AI-에이전트-아키텍처-7대-계층.md]]
+- [[wiki/Agents/Implementation/앤스로픽스캔들-제프리엡스타인-실리콘밸리의위선-agi의어머니-ai-인공지능-anthropicscanda.md]]
+- [[wiki/Agents/Implementation/인공지능자의식-앤스로픽-ai내성-클로드오퍼스-ai-인공지능-aiintrospection-anthropic-claudeopus-aiconsciousness.md]]
+- [[wiki/Agents/Implementation/프로덕션-AI-에이전트-아키텍처-7대-계층.md]]

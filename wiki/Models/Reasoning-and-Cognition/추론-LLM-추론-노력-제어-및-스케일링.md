@@ -1,7 +1,7 @@
 ---
 title: "추론 LLM의 추론 노력(Reasoning Effort) 제어 및 스케일링 메커니즘"
-last_updated: "2026-07-28"
-updated: "2026-07-28"
+last_updated: "2026-09-23"
+updated: "2026-09-23"
 related_raw: ["[[raw/2026-07-28-controlling_reasoning_effort_in_llms.md]]"]
 tags: [Reasoning, Inference-Scaling, Variable-Effort, RLVR, Post-Training]
 ---
@@ -58,6 +58,7 @@ graph TD
 에이전트 오케스트레이션 개발 시, 무작정 Max Effort 추론 모델을 사용하는 것은 극단적인 비용 낭비(Token Maxing)를 초래합니다.
 
 1.  **결정 분기 설계 (Decision Split)**:
+    - 단순 스위치문 분기, 에러 트리아지, 도구 선택, 안전성 판별 등 텍스트 생성이 불필요한 결정 지점은 LLM이 아닌 **[[wiki/Agents/Frameworks/TypeSafe-Jev-System-One-Decision-Architecture.md|TypeSafe Jev]]**와 같은 **시스템 1(System 1, 70~500ms, RLCD 기반 초저비용 결정 전용 모델)**로 사전에 걸러냅니다.
     - 린터 에러 수정, 단순 API 호출 파싱 등은 `Low/Medium Effort`로 처리합니다.
     - 시스템 설계, 샌드박스 내부의 테스트가 계속 실패하여 추론 경로 재기획이 필요할 때만 `High/Max Effort` 모드로 라우팅합니다.
 2.  **테스트 타임 컴퓨트 확장**:
@@ -66,6 +67,7 @@ graph TD
 ---
 
 ## 🔗 관련 문서 링크
+- System 1 결정 전용 모델 및 에이전트 라우팅: [[wiki/Agents/Frameworks/TypeSafe-Jev-System-One-Decision-Architecture.md]]
 - o1/DeepSeek 추론 최적화 동향: [[wiki/Models/SFT/OpenAI o1 추론 스케일링 및 2026년 최신 동향.md]]
 - 하네스 오케스트레이션 비용 제어: [[wiki/Agents/Coding-and-Engineering/하네스-핸드북-및-하네스-이펙트-연구-2026.md]]
 - [[wiki/Models/Reasoning-and-Cognition/000_Reasoning-and-Cognition-MOC.md]]
