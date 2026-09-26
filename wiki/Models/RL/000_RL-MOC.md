@@ -7,6 +7,7 @@
 - [[wiki/Models/RL/DeepSeek-R1-GRPO-Implementation.md]]
 - [[wiki/Models/RL/Domain_Specific_GRPO.md]]
 - [[wiki/Models/RL/FIPO-Algorithm-DeepSeek-V4-Huawei-Ascend-Optimization.md]]
+- [[wiki/Models/RL/GD2PO-Multi-Reward-Conflict-Mitigation.md]]
 - [[wiki/Models/RL/GRPO-Algorithm-Definition.md]]
 - [[wiki/Models/RL/GRPO-Reinforcement-Learning-SQL-Optimization.md]]
 - [[wiki/Models/RL/GRPO-Scaling-Laws-Efficiency.md]]

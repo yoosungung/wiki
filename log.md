@@ -746,3 +746,11 @@
 | 2026-09-23 | ALREADY_COVERED | wiki/ | 8 | LiteRT-LM v0.17.1; WebLLM v0.2.85; Furiosa 2026.4.0b15 FXB; Graphiti 0.30.2; LightRAG v1.5.7; Supermemory server-v0.0.8; Goose×WebMCP; Ossie PR#350/#423 |
 | 2026-09-23 | CLEANUP | inbox/, raw/, Root | 3 | inbox 1 git rm; raw 1 합성 후 삭제; D-2(2026-09-21) 삭제; D-0/D-1 유지 |
 | 2026-09-23 | LINT | Root / wiki | ALL | 데일리 생성, INDEX META 갱신, auto_moc·fix_wiki_links·update_index 실행, 연구_주제_관리 비고 갱신 |
+
+| 2026-09-26 | INGEST | raw/ | 1 | GD²PO 다중 보상 충돌 완화 정책 최적화 논문 (arXiv:2606.16771, Qwen-Applications/GD2PO) |
+| 2026-09-26 | RESEARCH | 연구_주제_관리.md | 8 | wiki-first+웹: GD²PO 신규 포착; LiteRT-LM/WebLLM/Furiosa/Rebellions/Supermemory/Graphiti/LightRAG/Ossie ALREADY_COVERED |
+| 2026-09-26 | SYNTHESIZE | wiki/Models | 4 | GD2PO-Multi-Reward-Conflict-Mitigation 신규; NVIDIA GDPO·SignBalance·추론 노력 제어 갱신 |
+| 2026-09-26 | ALREADY_COVERED | wiki/ | 8 | LiteRT-LM v0.17.1; WebLLM v0.2.85; Furiosa 2026.4.0b15 FXB; Rebellions optimum-rbln; Graphiti 0.30.2; LightRAG v1.5.7; Supermemory server-v0.0.8; Ossie core-spec |
+| 2026-09-26 | CLEANUP | raw/, Root | 3 | raw 1 삭제; 과거 데일리(2026-09-23, 2026-09-22) 삭제; D-0(2026-09-26) 유지 |
+| 2026-09-26 | LINT | Root / wiki | ALL | 데일리 생성, INDEX META 갱신, auto_moc·fix_wiki_links·update_index 실행, 연구_주제_관리 비고 갱신 |
+

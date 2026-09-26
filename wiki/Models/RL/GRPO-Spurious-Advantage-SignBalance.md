@@ -1,7 +1,7 @@
 ---
 title: "GRPO의 거짓 이득(Spurious Advantage) 결함 및 SignBalance 알고리즘"
-last_updated: "2026-09-20"
-updated: "2026-09-20"
+last_updated: "2026-09-26"
+updated: "2026-09-26"
 related_raw: ["[[2026-09-20-grpo-spurious-advantage-signbalance.md]]"]
 tags: ["wiki", "Models", "RL", "GRPO", "SignBalance", "Reinforcement-Learning", "Reasoning"]
 type: "wiki"
@@ -123,8 +123,9 @@ SignBalance는 추가 연산 비용 0%로 GRPO 대비 뛰어난 성능 향상을
    - NTP(Next-Token Prediction)가 대규모 데이터 주입으로 확장되었듯, GRPO는 Critic 없는 검증 함수 기반으로 무한 스케일링을 가능케 했습니다.
 2. **샘플링 노이즈의 수식적 절제**:
    - 대규모 병렬 생성 과정에서 발생하는 '찍기 요행 노이즈'를 외부 필터링이나 대형 보상 모델 없이 순수 대수학적 대칭성(Algebraic Symmetry) 교정만으로 해결한 모범적 사례입니다.
-3. **NVIDIA GDPO와의 관계**:
-   - [[wiki/Models/RL/NVIDIA GDPO: 다중 보상 RL의 GRPO 결함 해결.md|NVIDIA GDPO]]가 *다중 보상 항목 간의 상쇄 결함*을 분리 정규화로 해결했다면, SignBalance는 *단일 보상 체계 내에서 그룹 내 성공 빈도 왜곡*을 고정 진폭으로 해결합니다.
+3. **NVIDIA GDPO 및 GD²PO와의 관계**:
+   - [[wiki/Models/RL/NVIDIA GDPO: 다중 보상 RL의 GRPO 결함 해결.md|NVIDIA GDPO]]가 *다중 보상 항목 간의 분산 불균형에 의한 이점 붕괴*를 분리 정규화로 해결했다면, SignBalance는 *단일 보상 체계 내에서 그룹 내 성공 빈도 왜곡에 따른 요행 폭탄 보상*을 대수학적 대칭성으로 해결합니다.
+   - 나아가 [[wiki/Models/RL/GD2PO-Multi-Reward-Conflict-Mitigation.md|GD²PO]]는 *다중 보상 차원 간 상반된 신호 상쇄(Multi-Reward Conflict)*를 충돌 인지 필터링(Conflict-Aware Filtering)과 쿼리 수준 합의 가중치로 해소하여, SignBalance-GDPO-GD²PO로 이어지는 PPO-free RL 정렬 파이프라인의 핵심 축을 이룹니다.
 
 ---
 
@@ -132,4 +133,5 @@ SignBalance는 추가 연산 비용 0%로 GRPO 대비 뛰어난 성능 향상을
 - [[wiki/Models/RL/GRPO-Algorithm-Definition.md|GRPO 알고리즘 정의]]
 - [[wiki/Models/RL/DeepSeek-R1-GRPO-Implementation.md|DeepSeek-R1 GRPO 구현]]
 - [[wiki/Models/RL/NVIDIA GDPO: 다중 보상 RL의 GRPO 결함 해결.md|NVIDIA GDPO: 다중 보상 RL 결함 해결]]
+- [[wiki/Models/RL/GD2PO-Multi-Reward-Conflict-Mitigation.md|GD²PO: 다중 보상 충돌 완화 및 그룹 동적 분리 정책 최적화]]
 - [[wiki/Models/RL/000_RL-MOC.md|RL MOC]]

@@ -1,7 +1,7 @@
 ---
 title: "추론 LLM의 추론 노력(Reasoning Effort) 제어 및 스케일링 메커니즘"
-last_updated: "2026-09-23"
-updated: "2026-09-23"
+last_updated: "2026-09-26"
+updated: "2026-09-26"
 related_raw: ["[[raw/2026-07-28-controlling_reasoning_effort_in_llms.md]]"]
 tags: [Reasoning, Inference-Scaling, Variable-Effort, RLVR, Post-Training]
 ---
@@ -50,6 +50,7 @@ graph TD
 
 - **Verifiable Reward**: 코딩(테스트 패스 여부)이나 수학(정답 수치 일치 여부)과 같이 기계적으로 참/거짓 판독이 가능한 규칙을 기반으로 학습 그라디언트를 구성합니다.
 - **Inference Scaling**: 검증 가능한 환경 내에서 모델은 "더 오랫동안 생각하고(Inference-time search)", "스스로 에러를 감지하고 수정하는(Self-Correction)" 기법을 강화학습을 통해 스스로 습득하게 되며, 이 과정에서 추론 노력 제어판이 완성됩니다.
+- **다중 목표 상충 제어**: 정답률과 토큰 길이 제약, 포맷 규칙이 상충할 때 발생하는 그래디언트 상쇄 현상은 [[wiki/Models/RL/GD2PO-Multi-Reward-Conflict-Mitigation.md|GD²PO (Group-Dynamic reward-Decoupled Policy Optimization)]]의 충돌 인지 필터링(Conflict-Aware Filtering)을 통해 방지합니다.
 
 ---
 
@@ -67,6 +68,7 @@ graph TD
 ---
 
 ## 🔗 관련 문서 링크
+- 다중 보상 상충 완화 및 동적 정렬: [[wiki/Models/RL/GD2PO-Multi-Reward-Conflict-Mitigation.md]]
 - System 1 결정 전용 모델 및 에이전트 라우팅: [[wiki/Agents/Frameworks/TypeSafe-Jev-System-One-Decision-Architecture.md]]
 - o1/DeepSeek 추론 최적화 동향: [[wiki/Models/SFT/OpenAI o1 추론 스케일링 및 2026년 최신 동향.md]]
 - 하네스 오케스트레이션 비용 제어: [[wiki/Agents/Coding-and-Engineering/하네스-핸드북-및-하네스-이펙트-연구-2026.md]]

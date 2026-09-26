@@ -4,8 +4,8 @@ related_raw: ["[[wiki/Models/RL/NVIDIA GDPO: 다중 보상 RL의 GRPO 결함 해
 tags: ['wiki', 'ai_core', 'ai_ml_development']
 type: "wiki"
 status: "published"
-last_updated: "2026-09-11"
-updated: "2026-09-11"
+last_updated: "2026-09-26"
+updated: "2026-09-26"
 ---
 
 # NVIDIA GDPO: 다중 보상 RL의 GRPO 보상 붕괴 결함 해결
@@ -85,6 +85,14 @@ def compute_gdpo_advantage(rewards_per_token, reward_weights, eps=1e-6):
 
 ---
 
+## 5. 발전 및 후속 연구: 다중 보상 상충과 GD²PO
+
+GDPO는 보상 분산 불균형에 의한 **보상 붕괴**는 성공적으로 차단했으나, 각 보상 어드밴티지를 가중 합산하는 구조($A_i = \sum_k w_k A_{i,k}$)로 인해 **다중 보상 상충(Multi-Reward Conflict)** 문제를 남겼습니다.
+- 특정 롤아웃이 한 목표(예: 도구 호출 정확도)에서 높은 양의 어드밴티지를 얻고 다른 목표(예: 포맷 규칙)에서 음의 어드밴티지를 얻을 때, 신호가 상쇄되어 $A_i \approx 0$이 되는 현상입니다.
+- 이를 해결하기 위해 알리바바 Qwen 연구진은 롤아웃 간 부호/SNR 불일치를 사전 마스킹하고 합의도에 따라 쿼리 업데이트 가중치를 조절하는 **[[wiki/Models/RL/GD2PO-Multi-Reward-Conflict-Mitigation.md|GD²PO (Group-Dynamic reward-Decoupled Policy Optimization)]]**를 제안했습니다.
+
+---
+
 ## 🔗 관련 문서 및 출처
 - 원천 논문: [arXiv:2601.05242 - GDPO: Group reward-Decoupled Normalization Policy Optimization](https://arxiv.org/abs/2601.05242) (ICML 2026)
-- 관련 위키: [[wiki/Models/RL/000_RL-MOC.md]], [[wiki/Models/RL/DeepSeek-R1-GRPO-Implementation.md]], [[wiki/Models/Reasoning-and-Cognition/추론-LLM-추론-노력-제어-및-스케일링.md]]
+- 관련 위키: [[wiki/Models/RL/000_RL-MOC.md]], [[wiki/Models/RL/GD2PO-Multi-Reward-Conflict-Mitigation.md]], [[wiki/Models/RL/GRPO-Spurious-Advantage-SignBalance.md]], [[wiki/Models/RL/DeepSeek-R1-GRPO-Implementation.md]], [[wiki/Models/Reasoning-and-Cognition/추론-LLM-추론-노력-제어-및-스케일링.md]]

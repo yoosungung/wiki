@@ -2,7 +2,7 @@
 
 ## 📂 Categories
 - [[wiki/Agents/Coding-and-Engineering/000_Coding-and-Engineering-MOC.md|Coding-and-Engineering]]
-- [[wiki/Agents/Frameworks/Evaluations/000_Evaluations-MOC.md|Evaluations]]
+- [[wiki/Agents/Evaluations/000_Evaluations-MOC.md|Evaluations]]
 - [[wiki/Agents/Frameworks/000_Frameworks-MOC.md|Frameworks]]
 - [[wiki/Agents/Implementation/000_Implementation-MOC.md|Implementation]]
 - [[wiki/Agents/Memory-and-Cognition/000_Memory-and-Cognition-MOC.md|Memory-and-Cognition]]

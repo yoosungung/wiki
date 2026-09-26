@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-09-23 | Root: wiki/
+[META] Updated: 2026-09-26 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -62,7 +62,7 @@
     - Coding-and-Engineering: 23 files
     - Self-Evolving: 11 files
     - Frameworks: 64 files
-- wiki/Models/ (245 files)
+- wiki/Models/ (246 files)
     - Optimization-and-Serving: 52 files
     - Optimization: 3 files
     - Architectures: 33 files
@@ -70,7 +70,7 @@
     - SFT: 52 files
     - Multimodal-and-Vision: 10 files
     - Reasoning-and-Cognition: 31 files
-    - RL: 45 files
+    - RL: 46 files
 - wiki/RAG/ (106 files)
 - wiki/Engineering/ (181 files)
     - Data-and-Security: 14 files
