@@ -30,6 +30,7 @@
 - [[wiki/Models/RL/SFT-Knowledge-Structuring-via-Reinforcement-Learning.md]]
 - [[wiki/Models/RL/Sebastian_Raschka_강화학습_GRPO_구현.md]]
 - [[wiki/Models/RL/Self-Evolving Agents - 자가 학습형 AI 에이전트 재훈련 매뉴얼.md]]
+- [[wiki/Models/RL/Self-Play-Pretraining-Zero-Data.md]]
 - [[wiki/Models/RL/Sora-Shutdown-Runway-Gen-4.5-GWM-1-World-Models.md]]
 - [[wiki/Models/RL/TRL-OpenEnv Integration for Training LLMs.md]]
 - [[wiki/Models/RL/Tesla-FSD-v13-Cybercab-Wayve-GAIA3-World-Models.md]]

@@ -754,3 +754,9 @@
 | 2026-09-26 | CLEANUP | raw/, Root | 3 | raw 1 삭제; 과거 데일리(2026-09-23, 2026-09-22) 삭제; D-0(2026-09-26) 유지 |
 | 2026-09-26 | LINT | Root / wiki | ALL | 데일리 생성, INDEX META 갱신, auto_moc·fix_wiki_links·update_index 실행, 연구_주제_관리 비고 갱신 |
 
+| 2026-09-27 | INGEST | raw/ | 1 | Self-Play Pretraining with Zero Data 논문 (arXiv:2609.30063, UTM 기반 자율 사전학습) |
+| 2026-09-27 | RESEARCH | 연구_주제_관리.md | 8 | wiki-first+웹: Self-Play Pretraining 신규 포착; GD²PO/LiteRT-LM/WebLLM/Furiosa/Rebellions/Supermemory/Graphiti/LightRAG/Ossie ALREADY_COVERED |
+| 2026-09-27 | SYNTHESIZE | wiki/Models | 4 | Self-Play-Pretraining-Zero-Data 신규; GRPO-Scaling-Laws-Efficiency·추론-LLM-추론-노력-제어-및-스케일링·000_RL-MOC 갱신 |
+| 2026-09-27 | ALREADY_COVERED | wiki/ | 8 | GD²PO (arXiv:2606.16771); LiteRT-LM v0.17.1; WebLLM v0.2.85; Furiosa 2026.4.0b15 FXB; Rebellions optimum-rbln; Graphiti 0.30.2; LightRAG v1.5.7; Supermemory server-v0.0.8 |
+| 2026-09-27 | CLEANUP | raw/, Root | 2 | raw 1 삭제 (2026-09-27-self-play-pretraining-zero-data); D-0(2026-09-27)·D-1(2026-09-26) 유지 |
+| 2026-09-27 | LINT | Root / wiki | ALL | 데일리 생성, INDEX META 갱신, auto_moc·fix_wiki_links·update_index 실행, 연구_주제_관리 비고 갱신 |

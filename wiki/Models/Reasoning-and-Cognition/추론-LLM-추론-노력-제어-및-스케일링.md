@@ -1,7 +1,7 @@
 ---
 title: "추론 LLM의 추론 노력(Reasoning Effort) 제어 및 스케일링 메커니즘"
-last_updated: "2026-09-26"
-updated: "2026-09-26"
+last_updated: "2026-09-27"
+updated: "2026-09-27"
 related_raw: ["[[raw/2026-07-28-controlling_reasoning_effort_in_llms.md]]"]
 tags: [Reasoning, Inference-Scaling, Variable-Effort, RLVR, Post-Training]
 ---
@@ -62,12 +62,14 @@ graph TD
     - 단순 스위치문 분기, 에러 트리아지, 도구 선택, 안전성 판별 등 텍스트 생성이 불필요한 결정 지점은 LLM이 아닌 **[[wiki/Agents/Frameworks/TypeSafe-Jev-System-One-Decision-Architecture.md|TypeSafe Jev]]**와 같은 **시스템 1(System 1, 70~500ms, RLCD 기반 초저비용 결정 전용 모델)**로 사전에 걸러냅니다.
     - 린터 에러 수정, 단순 API 호출 파싱 등은 `Low/Medium Effort`로 처리합니다.
     - 시스템 설계, 샌드박스 내부의 테스트가 계속 실패하여 추론 경로 재기획이 필요할 때만 `High/Max Effort` 모드로 라우팅합니다.
-2.  **테스트 타임 컴퓨트 확장**:
+2.  **테스트 타임 및 훈련 시점 연산 스케일링 (Universal Data Ansatz)**:
     - Sebastian Raschka의 저서 *Build a Reasoning Model (From Scratch)*에 따르면, 고정된 작은 모델(예: 3B/8B)을 활용해 RLVR 정렬 후, 추론 단계를 세분화하여 테스트 타임 컴퓨트(MCTS, Self-Reflection)를 적용하는 것이 대형 모델의 무제한 추론보다 높은 토큰 가성비를 보입니다.
+    - 특히 **[[wiki/Models/RL/Self-Play-Pretraining-Zero-Data.md|보편 데이터 가설(Universal Data Ansatz)]]**에 따르면, 데이터는 우연적 사실($D_c$)과 보편적 예측 구조($D_u$)로 분해되며, 연산량 투입만으로 보편 구조를 확장하여 모델의 테스트 타임 추론 및 제로샷 예측 손실을 거듭제곱 법칙으로 개선할 수 있습니다.
 
 ---
 
 ## 🔗 관련 문서 링크
+- 무데이터 자기대전 사전학습 및 보편 데이터 가설: [[wiki/Models/RL/Self-Play-Pretraining-Zero-Data.md]]
 - 다중 보상 상충 완화 및 동적 정렬: [[wiki/Models/RL/GD2PO-Multi-Reward-Conflict-Mitigation.md]]
 - System 1 결정 전용 모델 및 에이전트 라우팅: [[wiki/Agents/Frameworks/TypeSafe-Jev-System-One-Decision-Architecture.md]]
 - o1/DeepSeek 추론 최적화 동향: [[wiki/Models/SFT/OpenAI o1 추론 스케일링 및 2026년 최신 동향.md]]
