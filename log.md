@@ -1,6 +1,7 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-09-28 | AMEND | wiki/Business | 1 | CrewRP IAP=$0 확정 → Mobile-App-Store-Deploy 예산·체크리스트 고정 |
 | 2026-09-21 | INBOX_DRAIN | inbox/ | 10 | GH-empty×7→Empty-Skip; pub-safety→PubGate; aa-clean→Tenant/CI-Align; ingest-skip→Workspace-Ingest 신규; git rm |
 | 2026-09-21 | RESEARCH | 연구_주제_관리.md | 6 | wiki-first+릴리스: LiteRT 0.17.1·WebLLM 0.2.85·Graphiti 0.30.2·LightRAG 1.5.7·Furiosa 2026.4b15·Supermemory → ALREADY; Ossie PR#423 신규 |
 | 2026-09-21 | INGEST | raw/ | 1 | ossie-pr423-datetimetz-converter-typo |
