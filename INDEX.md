@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-09-27 | Root: wiki/
+[META] Updated: 2026-09-28 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -80,6 +80,7 @@
     - Development-Environment: 21 files
     - Prompt: 1 files
     - AI-Native-Engineering: 75 files
-- wiki/Business/ (40 files)
+- wiki/Business/ (41 files)
+    - NEW: [[wiki/Business/Mobile-App-Store-Deploy-Procedures-and-Costs.md]] — iOS/Android 마켓 배포 절차·비용
     - Recommendation Systems: 6 files
     - Trends: 12 files

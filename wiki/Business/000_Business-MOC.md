@@ -5,6 +5,7 @@
 - [[wiki/Business/Trends/000_Trends-MOC.md|Trends]]
 
 ## 📄 Documents
+- [[wiki/Business/Mobile-App-Store-Deploy-Procedures-and-Costs.md]] — iOS·Android 마켓 배포 절차·계정비·수수료 (CrewRP)
 - [[wiki/Business/2025년-11월-프로덕트-헌트-분석.md]]
 - [[wiki/Business/2026년-로봇-공학-예측.md]]
 - [[wiki/Business/AI 에이전트를 활용한 마케팅 혁신 - SafetyCulture 사례.md]]
