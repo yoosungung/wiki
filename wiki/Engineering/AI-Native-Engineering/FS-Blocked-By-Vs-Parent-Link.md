@@ -3,7 +3,7 @@ id: fs-blocked-by-vs-parent-link
 title: "선행은 blocked-by, 부모는 dependingTicketId"
 status: canonical
 owner: km
-updated: "2026-08-13"
+updated: "2026-10-02"
 last_updated: "2026-08-13"
 review_after: "2026-11-13"
 sources:
@@ -28,3 +28,7 @@ Finish-to-Start 선행을 **부모/자식 필드**에 넣으면 선행이 Done�
 - [[wiki/Engineering/AI-Native-Engineering/Parent-Done-Requires-Closed-Subtasks.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Orphan-Milestone-Close-After-Children-Done.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Agentic-Software-Factory.md]]
+
+## Factory (Workers) SoR
+
+현재 공장 정본은 [[wiki/Engineering/AI-Native-Engineering/Factory-Ticket-Dependencies-SoR.md]] (D1 `ticket_dependencies` + REST). 이 문서는 Leantime 시대 필드 분리 함정용.

@@ -761,3 +761,10 @@
 | 2026-09-27 | ALREADY_COVERED | wiki/ | 8 | GD²PO (arXiv:2606.16771); LiteRT-LM v0.17.1; WebLLM v0.2.85; Furiosa 2026.4.0b15 FXB; Rebellions optimum-rbln; Graphiti 0.30.2; LightRAG v1.5.7; Supermemory server-v0.0.8 |
 | 2026-09-27 | CLEANUP | raw/, Root | 2 | raw 1 삭제 (2026-09-27-self-play-pretraining-zero-data); D-0(2026-09-27)·D-1(2026-09-26) 유지 |
 | 2026-09-27 | LINT | Root / wiki | ALL | 데일리 생성, INDEX META 갱신, auto_moc·fix_wiki_links·update_index 실행, 연구_주제_관리 비고 갱신 |
+
+| 2026-10-02 | INBOX_DRAIN | inbox/ | 29 | Factory timeline/FS/gateway + UniTutor CF/learner/stage3 + schedule skips → 6 canonical; git rm |
+| 2026-10-02 | RESEARCH | 연구_주제_관리.md | 8 | wiki-first: AV-SQL/Ossie ALREADY_COVERED; LiteRT/WebLLM/Furiosa/Supermemory/Graphiti/LightRAG/GD²PO/Self-Play covered |
+| 2026-10-02 | SYNTHESIZE | wiki/Engineering | 6 | Factory-* ×4 + UniTutor learner + UniTutor CF deploy |
+| 2026-10-02 | ALREADY_COVERED | wiki/ | 10 | AV-SQL; Ossie; LiteRT-LM; WebLLM; Furiosa; Rebellions; Graphiti; LightRAG; Supermemory; GD²PO/Self-Play |
+| 2026-10-02 | CLEANUP | inbox/, Root | 30 | inbox 29 git rm; daily 2026-10-02 |
+| 2026-10-02 | LINT | Root / wiki | ALL | INDEX META 2026-10-02; AI-Native/Infra MOC 링크 추가 |

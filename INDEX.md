@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-09-28 | Root: wiki/
+[META] Updated: 2026-10-02 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -79,7 +79,13 @@
     - Infrastructure-and-DevOps: 49 files
     - Development-Environment: 21 files
     - Prompt: 1 files
-    - AI-Native-Engineering: 75 files
+    - AI-Native-Engineering: 75+ files
+    - NEW: [[wiki/Engineering/AI-Native-Engineering/Factory-Timeline-Status-Dates.md]] — Timeline date_from/date_to
+    - NEW: [[wiki/Engineering/AI-Native-Engineering/Factory-Ticket-Dependencies-SoR.md]] — FS 1급 SoR
+    - NEW: [[wiki/Engineering/AI-Native-Engineering/Factory-Gateway-Tick-Dispatched-Fields.md]] — tick dispatched fields
+    - NEW: [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — schedule empty-skip/registry
+    - NEW: [[wiki/Engineering/AI-Native-Engineering/UniTutor-Learner-Storage-and-Stage3-Locks.md]] — learner + stage3 locks
+    - NEW: [[wiki/Engineering/Infrastructure-and-DevOps/UniTutor-Cloudflare-Deploy.md]] — UniTutor CF deploy
 - wiki/Business/ (41 files)
     - NEW: [[wiki/Business/Mobile-App-Store-Deploy-Procedures-and-Costs.md]] — iOS/Android 마켓 배포 절차·비용
     - Recommendation Systems: 6 files
