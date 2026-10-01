@@ -6,14 +6,13 @@ updated: 2026-10-02
 status: inbox
 sources:
   - ticket:e57e5d67-393f-4d19-ac95-507dbedc89bd
-  - schedule:github-issue-check
   - wiki/Engineering/AI-Native-Engineering/Github-Issue-Leantime-Intake-Empty-Skip.md
 ---
 
-# github-issue-check 2026-10-02 empty skip
+# github-issue-check 2026-10-02: explicit skip (open=0)
 
-- Client true-issue open=0 → explicit skip (created=0). Repos: sw-factory, crewrp, UniTutorAI, codingland, candidate.win.
-- Dedup marker pattern still `<!-- github:owner/repo#N -->` when converting.
-- pm workspace `clients-repos-registry.json` was empty; reused wiki map + agents.yaml repos.
-- nl2sql issues API 403 on PAT (open_issues_count=0 only) — ACL/token gap, not a failed intake.
-- Actions/CD failure monitoring remains ta scope, not this schedule.
+- 클라이언트 true-issue open 전수 0 → created=0 / explicit skip (실패 아님).
+- 스윕: sw-factory, crewrp, UniTutorAI, codingland, candidate.win — gh list / REST(pr==null) / GQL OPEN / open_issues_count 모두 0.
+- `yoosungung/nl2sql` issues REST/GQL 403 (open_issues_count=0만 확인) — 토큰/ACL 점검 필요.
+- pm `clients-repos-registry` empty → wiki client map + agents.yaml repos 재사용(맵 부재≠실패).
+- Actions/CD 실패 감시는 스케줄 범위 밖(ta).
