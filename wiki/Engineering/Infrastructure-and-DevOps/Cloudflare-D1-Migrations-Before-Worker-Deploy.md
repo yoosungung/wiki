@@ -3,13 +3,15 @@ id: cloudflare-d1-migrations-before-worker-deploy
 title: "D1 마이그레이션은 Worker deploy보다 먼저"
 status: canonical
 owner: km
-updated: "2026-09-19"
-last_updated: "2026-09-19"
-review_after: "2026-12-18"
+updated: "2026-10-02"
+last_updated: "2026-10-02"
+review_after: "2027-01-02"
 sources:
   - inbox/ta/2026-09-18-d1-migrations-on-deploy.md
   - ticket:22f76e62-a1de-43b6-8032-086d35d127db
   - https://developers.cloudflare.com/d1/wrangler-commands/
+  - inbox/uni-tutor/2026-10-01-unitutor-cloudflare-deploy-prep.md
+  - https://github.com/cloudflare/workers-sdk/issues/13568
 tags: ["Engineering", "DevOps", "Cloudflare", "D1", "Workers"]
 type: "wiki"
 ---
@@ -37,6 +39,10 @@ npx wrangler deploy
 - **재실행 안전**: 이미 적용 기록에 있는 파일은 no-op이다. 같은 명령을 배포 잡마다 돌려도 된다.
 - **토큰 분리**: Workers 편집 권한만으로는 D1 apply가 거절될 수 있다. Cloudflare 토큰에 D1 편집이 필요하다. GitHub Actions에서 워크플로 YAML 자체를 고치려면 토큰에 `workflow` 스코프가 필요하다(Workers 배포 토큰과 별개).
 - **증상 축**: 코드는 새 컬럼을 가정하는데 원격 DB에 그 컬럼이 없으면 500. 앱 로직 버그로 보기 전에 원격 `migrations list`와 apply 여부를 먼저 본다.
+
+- **D1 미바인딩**: apply 단계는 N/A. 바인딩이 생기면 위 순서를 `npm run deploy`에 고정.
+- **정렬**: Wrangler 3는 macOS에서 readdir 순서로 apply될 수 있다 → 4.80.0+로 올리고 numeric prefix 정렬을 신뢰한다.
+- **관련 파이프라인**: Worker→Pages CI — [[wiki/Engineering/Infrastructure-and-DevOps/Cloudflare-Workers-Pages-CI-Deploy-Pipeline.md]].
 
 ## 🔗 관련 문서
 

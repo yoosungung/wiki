@@ -63,6 +63,7 @@
     - Self-Evolving: 11 files
     - Frameworks: 64 files
 - wiki/Models/ (247 files)
+    - UPD: [[wiki/Models/Optimization-and-Serving/스마트폰-환경의-LLM-서빙-기술-2026.md]] — Gemma4 NPU per-SoC matrix (2026-10-02)
     - Optimization-and-Serving: 52 files
     - Optimization: 3 files
     - Architectures: 33 files
