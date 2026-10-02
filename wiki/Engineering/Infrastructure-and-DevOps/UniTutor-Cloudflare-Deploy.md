@@ -3,43 +3,58 @@ id: unitutor-cloudflare-deploy
 title: "UniTutor Cloudflare 배포 (Pages + Workers + domain)"
 status: canonical
 owner: km
-updated: "2026-10-02"
-review_after: "2027-01-02"
+updated: "2026-10-03"
+review_after: "2027-01-03"
 sources:
   - inbox/pm/2026-10-01-unitutor-cloudflare-deploy-prep.md
-  - inbox/pm/2026-10-01-unitutor-cf-deploy-prep-intent.md
-  - inbox/pm/2026-10-01-unitutor-gh-actions-deploy-intent.md
-  - inbox/pm/2026-10-01-unitutor-tutor-askwho-domain-intent.md
-  - inbox/ta/2026-10-01-unitutor-gh-actions-deploy.yml.md
-  - inbox/ta/2026-10-01-unitutor-tutor-askwho-domain.md
-  - inbox/uni-tutor/2026-10-01-unitutor-cloudflare-deploy-prep.md
-  - https://github.com/yoosungung/UniTutorAI/pull/8
-  - https://github.com/yoosungung/UniTutorAI/pull/9
-  - https://github.com/yoosungung/UniTutorAI/pull/10
+  - inbox/pm/2026-10-02-unitutor-pages-project-create-ci.md
+  - inbox/pm/2026-10-02-unitutor-pages-domain-dns-530.md
+  - inbox/pm/2026-10-02-unitutor-pages-domain-dns-gap.md
+  - inbox/pm/2026-10-02-unitutor-first-remote-deploy-done.md
+  - inbox/ta/2026-10-02-unitutor-pages-wrangler-config.md
+  - inbox/ta/2026-10-02-unitutor-pages-custom-domain-api.md
+  - inbox/ta/2026-10-02-unitutor-pages-domain-attach-idempotent.md
+  - inbox/ta/2026-10-02-unitutor-pages-domain-dns-cname.md
+  - inbox/ta/2026-10-02-unitutor-pages-domain-zone-cname.md
+  - inbox/ta/2026-10-02-unitutor-dns-list-403-soft-skip.md
+  - inbox/ta/2026-10-02-unitutor-pages-dns-list-403-soft-skip.md
+  - ticket:25217dd4-521b-452e-ba9f-e4766b3898af
+  - https://github.com/yoosungung/UniTutorAI/pull/22
 tags: ["Engineering", "DevOps", "Cloudflare", "UniTutor"]
 type: "wiki"
 ---
 
 # UniTutor Cloudflare 배포 (Pages + Workers + domain)
 
-UniTutor 원격 배포는 k8s가 아니라 **Cloudflare**: FE=Pages(`dist/`), BE=Workers(`wrangler`). AGENTS의 k8s 문구와 불일치하면 CF 기준으로 맞춘다.
+UniTutor 원격 배포는 k8s가 아니라 **Cloudflare**: FE=Pages(`dist/`), BE=Workers(`wrangler`).
 
 ## 순서
 
-1. (D1 바인딩 있을 때) `d1 migrations apply` → 그다음 deploy. 없으면 apply N/A. 일반 규칙: [[wiki/Engineering/Infrastructure-and-DevOps/Cloudflare-D1-Migrations-Before-Worker-Deploy.md]]
-2. Worker `backend` deploy (`wrangler deploy --config ./wrangler.jsonc` — monorepo find-up redirect 회피)
-3. Pages `frontend` (`VITE_API_BASE_URL=https://api.tutor.askwho.net`)
-4. Smoke: `api.tutor.askwho.net/health` + Pages 루트 `tutor.askwho.net/`
+1. (D1 있으면) `d1 migrations apply` → deploy. 일반 규칙: [[wiki/Engineering/Infrastructure-and-DevOps/Cloudflare-D1-Migrations-Before-Worker-Deploy.md]]
+2. Worker `backend` — `wrangler deploy --config ./wrangler.jsonc` (monorepo find-up 회피)
+3. Pages `frontend` — **`wrangler pages deploy`는 `--config` 커스텀 경로 거부**. cwd의 `wrangler.jsonc`만 자동 탐색. Workers와 혼동 금지.
+4. Pages project가 없으면 **deploy 전에** project create(CI).
+5. Custom domain attach (API) → (가능하면) zone CNAME → Smoke.
 
-CI: `.github/workflows/deploy.yml` — `main` push + `workflow_dispatch` (sw-factory 패턴). Pages wrangler v3에는 `pages deploy --dry-run` 없음 → dry-run은 `npm run build`.
+CI: `.github/workflows/deploy.yml`. Pages dry-run=`tsc`/`build` (테스트 exclude 필요).
 
-## Domain
+## Domain (운영 SoR, 2026-10-02)
 
-- Pages: `tutor.askwho.net`
-- Worker custom_domain: `api.tutor.askwho.net`
-- Eric 오타 `tutor.askwhow.net` → 관례상 `askwho.net` zone (factory와 동일)
+| 역할 | 호스트 | 비고 |
+|------|--------|------|
+| Pages smoke | `unitutor.askwho.net` | Dashboard DNS; 첫 green Deploy run 37014651191 / PR #22 |
+| Worker API | `api.tutor.askwho.net` | health 200 유지 |
+| Legacy intent | `tutor.askwho.net` | NXDOMAIN이면 smoke에 쓰지 말 것 (#21 정렬) |
+
+## Attach ≠ public DNS
+
+- Pages Domains API attach **success** alone ≠ public resolve. `dig` empty + edge **530**(1016) 가능.
+- Same-account attach가 zone DNS를 항상 만들지 않음. Ensure는 idempotent **proxied CNAME** `host → *.pages.dev` (`deploy/pages_domain_dns.py`)까지.
+- Compact JSON grep(`"name":"host"`)는 pretty-print miss → 재POST·400. `pages_domain_attached.py`로 list+already-exists=success.
+- Token에 Zone DNS Read/Edit 없으면 `dns_records` **403** → **soft-skip** Ensure, Smoke/Dashboard 신뢰. Hard-fail로 Smoke를 막지 말 것.
 
 ## 게이트
 
-- Actions secrets: `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`. 없으면 워크플로 파일만 merge, `prod:` 보류.
-- macOS에서 `package-lock.json` 재생성 시 `@rollup/rollup-linux-x64-gnu` optional이 빠지면 Linux CI 깨짐 → main lock 기준으로 유지.
+- Secrets: `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`.
+- `prod:` 증거 = public DNS + HTTP 200 (530/NXDOMAIN 아님).
+- 첫 원격 closeout: merge `bd40a573` / Actions 37014651191.

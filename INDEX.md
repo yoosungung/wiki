@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-10-02 | Root: wiki/
+[META] Updated: 2026-10-03 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,17 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-10-03 (km-wiki drain)
+- [[wiki/Engineering/Infrastructure-and-DevOps/UniTutor-Cloudflare-Deploy.md]] — Pages attach≠DNS, DNS 403 soft-skip, smoke host `unitutor.askwho.net`
+- [[wiki/Engineering/AI-Native-Engineering/UniTutor-BYOK-Browser-Oneshot.md]] — browser custody + one-shot header
+- [[wiki/Engineering/AI-Native-Engineering/UniTutor-TutorTurn-SSE-Inference.md]] — TutorTurn SSE Gemini MVP
+- [[wiki/Engineering/AI-Native-Engineering/Factory-On-Demand-Agent-Prompt.md]] — manual_prompt Option A + F16 UI
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Quick-Create-Compact-Description.md]] — F14 compact Description
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-10-03 empty skip / roadmap no-checklist
+- [[wiki/Engineering/Development-Environment/CrewRP-Local-Mobile-Build-Env.md]] — macOS iOS/Android toolchain snapshot
+- [[wiki/Agents/Implementation/Supermemory-Architecture-and-MCP.md]] — Company Brain harness OSS (2026-09-25)
+
 - wiki/Agents/ (250 files)
     - Multi-Agent-and-Orchestration: 19 files
     - Text-to-SQL: 34 files
@@ -63,7 +74,6 @@
     - Self-Evolving: 11 files
     - Frameworks: 64 files
 - wiki/Models/ (247 files)
-    - UPD: [[wiki/Models/Optimization-and-Serving/스마트폰-환경의-LLM-서빙-기술-2026.md]] — Gemma4 NPU per-SoC matrix (2026-10-02)
     - Optimization-and-Serving: 52 files
     - Optimization: 3 files
     - Architectures: 33 files
@@ -73,21 +83,14 @@
     - Reasoning-and-Cognition: 31 files
     - RL: 47 files
 - wiki/RAG/ (106 files)
-- wiki/Engineering/ (181 files)
+- wiki/Engineering/ (192 files)
     - Data-and-Security: 14 files
     - Security: 2 files
     - Prompt-Engineering: 18 files
-    - Infrastructure-and-DevOps: 49 files
-    - Development-Environment: 21 files
+    - Infrastructure-and-DevOps: 50 files
+    - Development-Environment: 22 files
     - Prompt: 1 files
-    - AI-Native-Engineering: 75+ files
-    - NEW: [[wiki/Engineering/AI-Native-Engineering/Factory-Timeline-Status-Dates.md]] — Timeline date_from/date_to
-    - NEW: [[wiki/Engineering/AI-Native-Engineering/Factory-Ticket-Dependencies-SoR.md]] — FS 1급 SoR
-    - NEW: [[wiki/Engineering/AI-Native-Engineering/Factory-Gateway-Tick-Dispatched-Fields.md]] — tick dispatched fields
-    - NEW: [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — schedule empty-skip/registry
-    - NEW: [[wiki/Engineering/AI-Native-Engineering/UniTutor-Learner-Storage-and-Stage3-Locks.md]] — learner + stage3 locks
-    - NEW: [[wiki/Engineering/Infrastructure-and-DevOps/UniTutor-Cloudflare-Deploy.md]] — UniTutor CF deploy
+    - AI-Native-Engineering: 84 files
 - wiki/Business/ (41 files)
-    - NEW: [[wiki/Business/Mobile-App-Store-Deploy-Procedures-and-Costs.md]] — iOS/Android 마켓 배포 절차·비용
     - Recommendation Systems: 6 files
     - Trends: 12 files

@@ -5,7 +5,6 @@
 - [[wiki/Business/Trends/000_Trends-MOC.md|Trends]]
 
 ## 📄 Documents
-- [[wiki/Business/Mobile-App-Store-Deploy-Procedures-and-Costs.md]] — iOS·Android 마켓 배포 절차·계정비·수수료 (CrewRP)
 - [[wiki/Business/2025년-11월-프로덕트-헌트-분석.md]]
 - [[wiki/Business/2026년-로봇-공학-예측.md]]
 - [[wiki/Business/AI 에이전트를 활용한 마케팅 혁신 - SafetyCulture 사례.md]]
@@ -23,6 +22,7 @@
 - [[wiki/Business/Meta_AI_job_cuts.md]]
 - [[wiki/Business/Meta_teen_AI_safety.md]]
 - [[wiki/Business/Microsoft_Copilot_human-centered_AI.md]]
+- [[wiki/Business/Mobile-App-Store-Deploy-Procedures-and-Costs.md]]
 - [[wiki/Business/OpenAI_company_knowledge.md]]
 - [[wiki/Business/OpenAI의 AI-Native 엔지니어링 팀 구축 가이드.md]]
 - [[wiki/Business/The State of AI Global Survey 2025.md]]

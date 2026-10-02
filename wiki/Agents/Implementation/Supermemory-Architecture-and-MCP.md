@@ -3,8 +3,8 @@ title: "Supermemory: 에이전트 네이티브 메모리 시스템 및 MCP 아�
 tags: ["Agents", "Implementation", "Memory", "Supermemory", "MCP", "SMFS", "Cloudflare"]
 type: "wiki"
 status: "published"
-last_updated: "2026-09-20"
-updated: "2026-09-20"
+last_updated: "2026-10-03"
+updated: "2026-10-03"
 related_raw: ["[[raw/2026-09-20-supermemory-documentdate-backfill-openapi-root.md]]", "[[raw/2026-09-14-supermemory-discontinue-company-brain-nova.md]]", "[[raw/2026-08-31-mcp-memory-servers-stateless-letta-mem0.md]]", "[[raw/2026-08-28-supermemory-memory-governance-auto-decay.md]]", "[[2026-08-27-supermemory_mcp_memory_governance.md]]", "[[2026-08-25-supermemory-mcp-v4-tool-surface.md]]", "[[2026-08-24-supermemory-team-mcp-permissions.md]]", "[[2026-08-24-supermemory-python-sdk-profile-dedupe.md]]", "[[2026-08-18-supermemory-dynamic-dreaming-sla.md]]", "[[2026-08-17-supermemory-memorybench-skill-pipeline.md]]", "[[2026-08-08-supermemory-forget-matching-ids.md]]", "[[2026-08-02-supermemory-company-brain-skills.md]]", "[[2026-07-29-supermemory-company-brain-proactivity-nova.md]]", "[[2026-07-28-supermemory-company-brain-custom-mcp.md]]", "[[2026-07-26-supermemory-chatgpt-mcp-setup.md]]", "[[2026-07-25-supermemory-cursor-agents-company-brain.md]]", "[[2026-07-24-supermemory-mcp-scope-opencode.md]]", "[[2026-07-23-supermemory-agents-memory-workspace.md]]", "[[2026-07-22-supermemory-company-brain-open-signup.md]]", "[[2026-07-21-supermemory-mcp-tool-safety-annotations.md]]", "[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]", "[[2026-07-12-supermemory-local-6767-cli-mcp-context.md]]", "[[raw/2026-07-13-sadik-mohammad-rag-systems-limitations.md]]", "[[2026-07-13-supermemory-openclaw-claude-plugins.md]]", "[[2026-07-16-supermemory_ai_memory_layer_analysis.md]]", "[[2026-07-18-supermemory-server-v0.0.5-pluggable-embeddings.md]]", "[[2026-07-19-supermemory-server-v0.0.6-windows.md]]"]
 ---
 
@@ -585,6 +585,18 @@ curl -X POST https://api.supermemory.ai/v3/documents/batch \
 
 **적용 팁**: KM `raw/`→메모리 레이어 미러링 시 `documentDate`에 raw frontmatter `date`(또는 원천 게시일)를 넣고, OpenAPI는 `https://api.supermemory.ai/openapi.json`으로 스키마를 고정한다.
 
+### 3.6 Company Brain harness 오픈소스 (2026-09-25)
+
+[공식 changelog](https://supermemory.ai/changelog/) **2026-09-25**: 호스팅 Company Brain은 §3.4대로 종료됐지만, **Slack Company Brain 에이전트 하네스를 오픈소스**로 공개했다. Cloudflare에 자체 배포해 데이터 통제를 유지할 수 있다.
+
+| 축 | 상태 | 실무 함의 |
+| :--- | :--- | :--- |
+| Hosted CB / Nova | 종료 (2026-09-09) | 신규 의존 금지 (§3.4) |
+| CB harness (OSS) | 2026-09-25 공개 | 자체 Slack+Cloudflare 배포가 필요하면 참고; Memory API/MCP와 별 제품면 |
+| Memory MCP / API | 정본 유지 | `https://mcp.supermemory.ai/mcp` · `/v3/documents` · `/v4/search` · `/v4/profile` |
+
+**적용 팁**: org-wiki KM 자동화는 계속 Memory API/MCP만 쓴다. CB OSS는 “자체 company-brain을 만들 때 하네스 샘플”이지 Supermemory 호스팅 복귀가 아니다.
+
 ---
 
 ## 4. 2026년 에이전틱 메모리 인프라 지형도 및 거버넌스 (2026-08-28 업데이트)
@@ -596,7 +608,7 @@ curl -X POST https://api.supermemory.ai/v3/documents/batch \
 | 솔루션 / 도구 | 핵심 아키텍처 특징 | 주요 용도 및 권장 환경 |
 | :--- | :--- | :--- |
 | **Mem0** | 하이브리드 벡터/그래프/Key-Value 형태 | 애플리케이션 레벨의 간편한 사용자 개인화 및 여러 세션에 걸친 장기 메모리(Universal Memory) 레이어 제공 |
-| **Supermemory** | 시맨틱 그래프 + MCP 결합 · **CB/Nova 중단(2026-09-09)** | Memory API/MCP·플러그인 중심 인프라. Company Brain·Nova 서피스는 종료; 에이전트 메모리 엔진·자가 호스팅(`supermemory-server`)·원격 MCP가 정본 |
+| **Supermemory** | 시맨틱 그래프 + MCP 결합 · **CB/Nova 중단(2026-09-09)** · **CB harness OSS(2026-09-25)** | Memory API/MCP·플러그인 중심 인프라. 호스팅 CB/Nova 종료; 하네스 OSS·자가 호스팅(`supermemory-server`)·원격 MCP가 정본 |
 | **Zep** | 시공간 지식 그래프 (Temporal Knowledge Graphs) | 시간에 따른 사실 관계 진화와 시계열 문맥 추적(언제 사실을 배웠는지)이 중요한 중장기 프로젝트 |
 | **Letta** (구 MemGPT) | 에이전트 자율 관리 OS 아키텍처 | 에이전트가 가상 OS처럼 자체 내부 함수 호출을 통해 L1/L2(RAM/Disk) 메모리 영역을 제어하고 수정하는 자율 런타임입니다. 2026년 업데이트를 통해 클라이언트 사이드 스킬(client-side skills) 및 Git 기반 메모리 버전 관리(versioning)를 도입하여 에이전트가 스스로 메모리 이력을 주도적으로 다루도록 고도화되었습니다. |
 | **Cognee** | 그래프 기반 지식 검색 | 정형/비정형 문서의 그래프 데이터 파이프라인 생성 및 관계 추적 분석 |

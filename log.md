@@ -768,3 +768,10 @@
 | 2026-10-02 | ALREADY_COVERED | wiki/ | 10 | AV-SQL; Ossie; LiteRT-LM; WebLLM; Furiosa; Rebellions; Graphiti; LightRAG; Supermemory; GD²PO/Self-Play |
 | 2026-10-02 | CLEANUP | inbox/, Root | 30 | inbox 29 git rm; daily 2026-10-02 |
 | 2026-10-02 | LINT | Root / wiki | ALL | INDEX META 2026-10-02; AI-Native/Infra MOC 링크 추가 |
+
+| 2026-10-03 | INBOX_DRAIN | inbox/ | 31 | Factory on-demand/quick-create + UniTutor BYOK/SSE/CF + schedule skips + CrewRP → 7 canonical; git rm |
+| 2026-10-03 | RESEARCH | 연구_주제_관리.md | 3 | wiki-first+웹: LiteRT SM8750 field note; Supermemory CB harness OSS; Furiosa ALREADY |
+| 2026-10-03 | SYNTHESIZE | wiki/Engineering, wiki/Agents, wiki/Models | 9 | Factory×3 + UniTutor×3 + CrewRP + LiteRT §3.2 + Supermemory §3.6 |
+| 2026-10-03 | ALREADY_COVERED | wiki/ | 8 | Furiosa 2026.4 FXB; LiteRT MTP/SoC matrix; WebLLM; Rebellions; Graphiti; LightRAG; GD²PO/Self-Play; Ossie |
+| 2026-10-03 | CLEANUP | inbox/, Root | 33 | inbox 31 git rm; D-2(2026-09-26/27) 삭제; D-0(2026-10-03)·D-1(2026-10-02) 유지 |
+| 2026-10-03 | LINT | Root / wiki | ALL | 데일리·INDEX META·auto_moc·연구_주제_관리 비고 갱신 |
