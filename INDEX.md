@@ -54,6 +54,7 @@
 ## 📌 KEY_FILE_LIST
 
 ### UPD 2026-10-03 (km-wiki drain)
+- [[wiki/Engineering/Development-Environment/CrewRP-Physical-Device-E2E.md]] — 스토어 없이 USB/Xcode 실기기 install·CRUD 스모크
 - [[wiki/Engineering/Infrastructure-and-DevOps/UniTutor-Cloudflare-Deploy.md]] — Pages attach≠DNS, DNS 403 soft-skip, smoke host `unitutor.askwho.net`
 - [[wiki/Engineering/AI-Native-Engineering/UniTutor-BYOK-Browser-Oneshot.md]] — browser custody + one-shot header
 - [[wiki/Engineering/AI-Native-Engineering/UniTutor-TutorTurn-SSE-Inference.md]] — TutorTurn SSE Gemini MVP
@@ -83,12 +84,12 @@
     - Reasoning-and-Cognition: 31 files
     - RL: 47 files
 - wiki/RAG/ (106 files)
-- wiki/Engineering/ (192 files)
+- wiki/Engineering/ (193 files)
     - Data-and-Security: 14 files
     - Security: 2 files
     - Prompt-Engineering: 18 files
     - Infrastructure-and-DevOps: 50 files
-    - Development-Environment: 22 files
+    - Development-Environment: 23 files
     - Prompt: 1 files
     - AI-Native-Engineering: 84 files
 - wiki/Business/ (41 files)
