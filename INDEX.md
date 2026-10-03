@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-10-03 | Root: wiki/
+[META] Updated: 2026-10-04 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -53,6 +53,15 @@
 
 ## 📌 KEY_FILE_LIST
 
+### UPD 2026-10-04 (km-wiki drain)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-SPA-Page-Scroll.md]] — `.main` overflow + `.page-scroll` 스크롤포트
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Lists-Newest-First.md]] — tickets/kanban/timeline/projects newest-first
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Done-Ticket-Purge.md]] — 7일 archived · 28일 purge
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Collapsed-Sidebar-Icon-Rail.md]] — collapsed = 40px icon rail
+- [[wiki/Engineering/AI-Native-Engineering/Factory-SPA-App-Icon.md]] — app-icon.svg / tab·PWA vs BrandMark
+- [[wiki/Engineering/Infrastructure-and-DevOps/Factory-Workers-Single-Env-CD.md]] — Workers 단일 prod · descendant SHA
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-10-04 github-issue-check empty skip
+
 ### UPD 2026-10-03 (km-wiki drain)
 - [[wiki/Engineering/Development-Environment/CrewRP-Physical-Device-E2E.md]] — 스토어 없이 USB/Xcode 실기기 install·CRUD 스모크
 - [[wiki/Engineering/Infrastructure-and-DevOps/UniTutor-Cloudflare-Deploy.md]] — Pages attach≠DNS, DNS 403 soft-skip, smoke host `unitutor.askwho.net`
@@ -84,14 +93,14 @@
     - Reasoning-and-Cognition: 31 files
     - RL: 47 files
 - wiki/RAG/ (106 files)
-- wiki/Engineering/ (193 files)
+- wiki/Engineering/ (209 files)
     - Data-and-Security: 14 files
     - Security: 2 files
     - Prompt-Engineering: 18 files
-    - Infrastructure-and-DevOps: 50 files
+    - Infrastructure-and-DevOps: 53 files
     - Development-Environment: 23 files
     - Prompt: 1 files
-    - AI-Native-Engineering: 84 files
+    - AI-Native-Engineering: 91 files
 - wiki/Business/ (41 files)
     - Recommendation Systems: 6 files
     - Trends: 12 files

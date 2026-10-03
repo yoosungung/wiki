@@ -3,11 +3,12 @@ id: factory-schedule-ops-skips
 title: "Factory 스케줄 ops: empty skip · registry placeholder"
 status: canonical
 owner: km
-updated: "2026-10-03"
-review_after: "2027-01-03"
+updated: "2026-10-04"
+review_after: "2027-01-04"
 sources:
   - inbox/pm/2026-10-02-github-issue-check-empty-skip.md
   - inbox/pm/2026-10-03-github-issue-check-empty-skip.md
+  - inbox/pm/2026-10-04-github-issue-check-empty-skip.md
   - inbox/pm/2026-10-02-sw-factory-roadmap-sync-noop.md
   - inbox/pm/2026-10-03-sw-factory-roadmap-sync-no-checklist.md
   - wiki/Engineering/AI-Native-Engineering/Github-Issue-Leantime-Intake-Empty-Skip.md
@@ -27,7 +28,8 @@ type: "wiki"
 
 - pm `clients-repos-registry` empty면 wiki client map + `agents.yaml` repos 재사용 (맵 부재≠실패).
 - factory projects 예: `sw-factory`, `CrewRP`, `UniTutorAI` (nl2sql 프로젝트 없을 수 있음).
-- 스윕 2026-10-03: sw-factory/crewrp/UniTutorAI/wiki OPEN true-issue 0; sw-factory `open_issues_count=1`은 PR#24만. `nl2sql` issues 403 → count만.
+- 스윕 2026-10-03·**2026-10-04**: sw-factory/crewrp/UniTutorAI/wiki OPEN true-issue 0; sw-factory `open_issues_count=1`은 PR#24만. `nl2sql` issues ACL/token 403 → `open_issues_count=0`만 확인·변환 티켓 미생성.
+- Active `ticket_id` 없는 스케줄 → orphan Outcome 티켓 미생성([[wiki/Engineering/AI-Native-Engineering/Schedule-Outcome-Requires-Active-Ticket.md]]).
 - Actions/CD 실패 감시는 이 스케줄 범위 아님(→ ta).
 
 ## roadmap-sync no-op
