@@ -39,5 +39,5 @@ type: "wiki"
 ## 함정
 
 - Xcode 프로젝트 파일명은 `CrewRPApp.xcodeproj`이나 **scheme/target 이름은 `CrewRP`** (`CrewRPApp` 스킴 없음).
-- 에뮬레이터 기동·실기기 install/E2E는 이 스냅샷 범위 밖(compile/test만). 실기기 런북: [[wiki/Engineering/Development-Environment/CrewRP-Physical-Device-E2E.md]] 실기기 런북: [[wiki/Engineering/Development-Environment/CrewRP-Physical-Device-E2E.md]].
+- 에뮬레이터 기동·실기기 install/E2E는 이 스냅샷 범위 밖(compile/test만). 실기기 런북: [[wiki/Engineering/Development-Environment/CrewRP-Physical-Device-E2E.md]]
 - Host toolchain 스냅샷 — CI/remote와 버전 드리프트 시 이 표를 갱신.
