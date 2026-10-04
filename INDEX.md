@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-10-04 | Root: wiki/
+[META] Updated: 2026-10-05 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,18 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-10-05 (km-wiki drain)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-File-Inline-Disposition.md]] — same-origin file inline MIME allowlist
+- [[wiki/Engineering/AI-Native-Engineering/Factory-SPA-Page-Scroll.md]] — Backlog/Timeline `.page-scroll`
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-10-05 github-issue-check + roadmap freeze/enqueue
+- [[wiki/Engineering/AI-Native-Engineering/Roadmap-Pass-Gate-Human-Approval.md]] — freeze/maintenance approval option
+- [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] — `### 나중` vs H2 checklist; doc lag markers
+- [[wiki/Engineering/AI-Native-Engineering/UniTutor-LTI-13-B2B.md]] — Option B + JWKS fail-closed
+- [[wiki/Engineering/AI-Native-Engineering/UniTutor-PictureSearch-SlideLabel.md]] — static slideLabel → seek
+- [[wiki/Engineering/AI-Native-Engineering/UniTutor-Editor-Roommate-Canvas.md]] — same-canvas Tutor tabs
+- [[wiki/Engineering/AI-Native-Engineering/UniTutor-On-Device-WebLLM.md]] — opt-in WebLLM TutorTurn
+- [[wiki/Engineering/Infrastructure-and-DevOps/UniTutor-Cloudflare-Deploy.md]] — real D1 for LTI
 
 ### UPD 2026-10-04 (km-wiki drain)
 - [[wiki/Engineering/AI-Native-Engineering/Factory-SPA-Page-Scroll.md]] — `.main` overflow + `.page-scroll` 스크롤포트

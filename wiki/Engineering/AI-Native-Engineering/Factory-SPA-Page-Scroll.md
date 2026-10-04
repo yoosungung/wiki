@@ -3,7 +3,7 @@ id: factory-spa-page-scroll
 title: "Factory SPA: `.main` overflow + `.page-scroll` 스크롤포트"
 status: canonical
 owner: km
-updated: "2026-10-04"
+updated: "2026-10-05"
 review_after: "2027-01-04"
 sources:
   - inbox/pm/2026-10-03-admin-page-scroll.md
@@ -17,6 +17,9 @@ sources:
   - ticket:900893c0-b570-496c-859a-ce201e3b57bc
   - https://github.com/yoosungung/sw-factory/pull/28
   - https://github.com/yoosungung/sw-factory/pull/31
+  - inbox/pm/2026-10-04-backlog-timeline-page-scroll-gap.md
+  - inbox/sw-factory/2026-10-04-backlog-timeline-page-scroll.md
+  - ticket:8d8acba4-c49a-421a-9255-5bafd72f8706
 tags: ["Engineering", "AI-Native", "Factory", "SPA", "CSS"]
 type: "wiki"
 ---
@@ -44,6 +47,8 @@ type: "wiki"
 | Space/Project settings People | `.settings-main.page-scroll` |
 | `/projects` | 그리드가 `.page-scroll`을 소유; 헤더 고정 |
 | Search | 이미 `.page-scroll` |
+| Tickets `?view=backlog` | 툴바 고정 + 본문 `.page-scroll` (2026-10-04) |
+| Tickets `?view=timeline` | 동일; `.backlog-panel`/`content-panel` overflow만으로는 클리핑 미해결 |
 
 ## 게이트
 

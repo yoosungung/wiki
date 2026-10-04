@@ -3,7 +3,7 @@ id: unitutor-cloudflare-deploy
 title: "UniTutor Cloudflare 배포 (Pages + Workers + domain)"
 status: canonical
 owner: km
-updated: "2026-10-03"
+updated: "2026-10-05"
 review_after: "2027-01-03"
 sources:
   - inbox/pm/2026-10-01-unitutor-cloudflare-deploy-prep.md
@@ -20,6 +20,9 @@ sources:
   - inbox/ta/2026-10-02-unitutor-pages-dns-list-403-soft-skip.md
   - ticket:25217dd4-521b-452e-ba9f-e4766b3898af
   - https://github.com/yoosungung/UniTutorAI/pull/22
+  - inbox/ta/2026-10-04-unitutor-d1-lti-test-deploy.md
+  - inbox/ta/2026-10-04-unitutor-lti-jwks-test-redeploy.md
+  - ticket:4aa8d43d-4ad6-42b0-bd1c-a0d83caaf061
 tags: ["Engineering", "DevOps", "Cloudflare", "UniTutor"]
 type: "wiki"
 ---
@@ -52,6 +55,14 @@ CI: `.github/workflows/deploy.yml`. Pages dry-run=`tsc`/`build` (테스트 exclu
 - Same-account attach가 zone DNS를 항상 만들지 않음. Ensure는 idempotent **proxied CNAME** `host → *.pages.dev` (`deploy/pages_domain_dns.py`)까지.
 - Compact JSON grep(`"name":"host"`)는 pretty-print miss → 재POST·400. `pages_domain_attached.py`로 list+already-exists=success.
 - Token에 Zone DNS Read/Edit 없으면 `dns_records` **403** → **soft-skip** Ensure, Smoke/Dashboard 신뢰. Hard-fail로 Smoke를 막지 말 것.
+
+## D1 for LTI (2026-10-04)
+
+- LTI Option B needs a **real** D1 binding. Placeholder `00000000-…0001` fails Worker deploy (CF **10181**).
+- `wrangler d1 create unitutor` → commit uuid into `backend/wrangler.jsonc` (example uuid `7bc6be4d-4809-4faa-9f38-4a9d7973b6be`).
+- `npm run deploy` = `d1 migrations apply DB --remote` then `wrangler deploy`.
+- `FRONTEND_ORIGIN` prod: `https://unitutor.askwho.net`.
+- LTI/JWKS smoke uses temporary `lti_deployments` row then deletes it — see [[wiki/Engineering/AI-Native-Engineering/UniTutor-LTI-13-B2B.md]].
 
 ## 게이트
 

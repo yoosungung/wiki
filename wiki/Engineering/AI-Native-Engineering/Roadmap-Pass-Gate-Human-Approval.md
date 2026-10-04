@@ -3,12 +3,14 @@ id: roadmap-pass-gate-human-approval
 title: "ROADMAP pass-gate: 인간 Approval 후 다음 마일스톤"
 status: canonical
 owner: km
-updated: "2026-08-14"
-last_updated: "2026-08-14"
+updated: "2026-10-05"
+last_updated: "2026-10-05"
 review_after: "2026-11-14"
 sources:
   - ticket:516
   - schedule:pm-roadmap-sync
+  - inbox/pm/2026-10-04-crewrp-phase3-pass-freeze.md
+  - ticket:f9f2416a-dc9c-4fed-8aaf-cfa25022c7c2
 tags: ["Engineering", "AI-Native", "Roadmap", "PM", "Approval"]
 type: "wiki"
 ---
@@ -24,6 +26,10 @@ type: "wiki"
 3. pass-gate 티켓에 HTML 마커(예: `<!-- roadmap:{product}:pass-gate:m{n}-current -->`) + `Waiting for Approval` + human assignee.
 4. 담당자가 `<!-- roadmap-pass:approved -->`를 코멘트하기 전에는 **다음 부모 티켓을 만들지 않는다**.
 5. 헤딩이 `current`→`done`으로만 바뀌면 **새 slug의 두 번째 gate를 만들지 않는다.** 기존 `passedId`(예: `pass-gate:m3-current`)와 부모 마일스톤을 재사용한다. `### M3.1 — current` plain bullet은 H2-gate 대상이 아님 — [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]].
+
+## Freeze option (CrewRP 2026-10-04)
+
+Human may approve **freeze/maintenance only** (no next milestone). Seal `<!-- roadmap-pass:approved -->`, mark pass-gate `done`, and **do not enqueue** Phase N+1. Subsequent `pm-roadmap-sync` no-ops while ROADMAP has no incomplete `##` `- [ ]`.
 
 ## 🔗 관련 문서
 

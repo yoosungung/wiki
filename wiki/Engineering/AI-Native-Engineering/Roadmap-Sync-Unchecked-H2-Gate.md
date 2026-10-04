@@ -3,8 +3,8 @@ id: roadmap-sync-unchecked-h2-gate
 title: "ROADMAP sync: ## + 미완료 - [ ] 섹션만 enqueue"
 status: canonical
 owner: km
-updated: "2026-09-17"
-last_updated: "2026-09-17"
+updated: "2026-10-05"
+last_updated: "2026-10-05"
 review_after: "2026-12-16"
 sources:
   - schedule:pm-roadmap-sync
@@ -22,6 +22,9 @@ sources:
   - inbox/pm/2026-09-12-codingland-roadmap-sync-m4-idempotent.md
   - inbox/pm/2026-09-13-codingland-roadmap-sync-m4-idempotent.md
   - inbox/pm/2026-09-14-codingland-roadmap-sync-m4-idempotent.md
+  - inbox/pm/2026-10-04-roadmap-sync-no-next.md
+  - inbox/pm/2026-10-04-roadmap-next-enqueue.md
+  - inbox/pm/2026-10-05-roadmap-sync.md
 tags: ["Engineering", "AI-Native", "Roadmap", "Leantime", "Sync"]
 type: "wiki"
 ---
@@ -49,6 +52,7 @@ type: "wiki"
 - Dedup: `<!-- roadmap:repo_id:slug -->`.
 - `## 마일스톤` 아래 `### M3.1 — current` plain bullet은 sync 대상이 아님. 다음 체크리스트는 `##` + `- [ ]`가 생기기 전 no-op.
 - leftover `type=milestone` New는 자식·pass-gate Done 후 위생 closeout — [[wiki/Engineering/AI-Native-Engineering/Orphan-Milestone-Close-After-Children-Done.md]].
+- `### 나중` (plain H3 catalog) alone is **not** H2-checklist enqueue. After human asks to ticketize later-scope, create milestone+children with dedup markers; skip already-done markers even if ROADMAP checkbox still open (doc lag).
 
 ## Leantime Done ≠ ROADMAP 체크 완료 (idempotent)
 
