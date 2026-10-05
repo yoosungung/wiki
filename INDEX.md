@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-10-05 | Root: wiki/
+[META] Updated: 2026-10-06 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,13 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-10-06 (km-wiki drain)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-10-06 github-issue-check empty + roadmap no-op/doc-lag
+- [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] — uni-tutor 1× LMS checkbox / crewrp freeze no-op
+- [[wiki/Engineering/AI-Native-Engineering/Tenant-Quality-Yaml-Gate-Skip-Pattern.md]] — 2026-10-05 ta/aa/qa weekly all-skip
+- [[wiki/Engineering/AI-Native-Engineering/Tenant-Repo-Sync-Dirty-Tree-Skip.md]] — dirty WT → skip sync (no stash)
+- [[wiki/Models/Optimization-and-Serving/스마트폰-환경의-LLM-서빙-기술-2026.md]] — LiteRT-LM tip v0.17.1 int tool-call fix
 
 ### UPD 2026-10-05 (km-wiki drain)
 - [[wiki/Engineering/AI-Native-Engineering/Factory-File-Inline-Disposition.md]] — same-origin file inline MIME allowlist

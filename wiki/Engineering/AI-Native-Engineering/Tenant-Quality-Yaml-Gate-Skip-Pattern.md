@@ -3,9 +3,9 @@ id: tenant-quality-yaml-gate-skip-pattern
 title: "테넌트 quality.yaml 게이트 키 누락 시 skip (NF 미생성)"
 status: canonical
 owner: km
-updated: "2026-09-21"
-last_updated: "2026-09-21"
-review_after: "2026-12-20"
+updated: "2026-10-06"
+last_updated: "2026-10-06"
+review_after: "2027-01-05"
 sources:
   - ticket:414
   - ticket:85
@@ -38,6 +38,9 @@ sources:
   - inbox/aa/2026-09-14-clean-code-weekly.md
   - inbox/qa/2026-09-14-qa-bulk-weekly.md
   - inbox/ta/2026-09-14-ta-load-weekly.md
+  - inbox/aa/2026-10-05-aa-clean-weekly.md
+  - inbox/qa/2026-10-05-qa-bulk-weekly.md
+  - inbox/ta/2026-10-05-ta-load-weekly.md
 tags: ["Engineering", "AI-Native", "Quality", "Factory", "NF", "Skip"]
 type: "wiki"
 ---
@@ -100,6 +103,19 @@ type: "wiki"
 
 - clean_code 스멜 티켓화: mechanical green 이후 High/Med만 제품 티켓. **인프라 list/parse 실패를 `[]`로 삼키면** `manifest_missing` false-pass — loader는 `repo_list_failed`/`invalid_json` 등으로 단락(short-circuit)할 것.
 - `load` chat SSE는 [[wiki/Engineering/AI-Native-Engineering/In-Process-ASGI-Load-Harness-Pattern.md]].
+- dirty working tree → sync skip (no stash) — [[wiki/Engineering/AI-Native-Engineering/Tenant-Repo-Sync-Dirty-Tree-Skip.md]].
+
+## 2026-10-05 주간 NF (ta/aa/qa)
+
+Registry: `sw-factory` / `crewrp` / `uni-tutor` (nl2sql not in persona registry → out of scope).
+
+| 스케줄 | 결과 |
+| :--- | :--- |
+| ta-load-weekly | 3 repo 모두 no `load.command` → skip; NF=0 |
+| aa-clean-weekly | 3 repo 모두 no `clean_code.command` → skip; High/Med=0 |
+| qa-bulk-weekly | 3 repo 모두 no `bulk_api`/`opik` → skip; factory `/api/health` 200 `qa: pass`; sw-factory dirty sync skip |
+
+Active 없는 스케줄 → orphan Outcome 금지. 장시간/`nf-progress:` N/A (명령 미기동).
 
 ## 🔗 관련 문서
 
@@ -108,6 +124,7 @@ type: "wiki"
 - [[wiki/Engineering/AI-Native-Engineering/Quality-Yaml-Clean-Code-CI-Align.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Workspace-Ingest-Done-Vs-Skipped-Counter.md]]
 - [[wiki/Engineering/AI-Native-Engineering/In-Process-ASGI-Load-Harness-Pattern.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Tenant-Repo-Sync-Dirty-Tree-Skip.md]]
 - [[wiki/Engineering/AI-Native-Engineering/MCP-Python-Package-Skew-Import-Failure.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Wiki-Synthesis-Policy.md]]
 - [[wiki/Agents/Text-to-SQL/Spider2-Quality-Gate-nl2sql.md]]
