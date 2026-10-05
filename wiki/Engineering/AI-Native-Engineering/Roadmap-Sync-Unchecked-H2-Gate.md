@@ -3,9 +3,9 @@ id: roadmap-sync-unchecked-h2-gate
 title: "ROADMAP sync: ## + 미완료 - [ ] 섹션만 enqueue"
 status: canonical
 owner: km
-updated: "2026-10-05"
-last_updated: "2026-10-05"
-review_after: "2026-12-16"
+updated: "2026-10-06"
+last_updated: "2026-10-06"
+review_after: "2027-01-05"
 sources:
   - schedule:pm-roadmap-sync
   - inbox/pm/2026-09-17-codingland-roadmap-sync-m4-idempotent.md
@@ -25,6 +25,7 @@ sources:
   - inbox/pm/2026-10-04-roadmap-sync-no-next.md
   - inbox/pm/2026-10-04-roadmap-next-enqueue.md
   - inbox/pm/2026-10-05-roadmap-sync.md
+  - inbox/pm/2026-10-06-roadmap-sync.md
 tags: ["Engineering", "AI-Native", "Roadmap", "Leantime", "Sync"]
 type: "wiki"
 ---
@@ -60,9 +61,11 @@ type: "wiki"
 - Dedup 마커(`<!-- roadmap:… -->`)가 있으면 **티켓을 다시 만들지 않는다**(idempotent skip). sync가 ROADMAP을 `- [x]`로 고쳐 쓰지 않는다.
 - **Pass-gate / approved→next**는 incomplete `##`가 0이 될 때까지 deferred. 다음 `##`/`###` enqueue는 current 체크리스트가 문서상 닫힌 뒤에만.
 - 운영: 마일스톤 티켓 재사용 + 자식 skip은 정상; “Done인데 sync가 또 current”는 버그가 아니라 **문서·보드 축 분리**다. 진행을 넘기려면 ROADMAP 체크를 사람이(또는 pass-gate 승인 후) 닫는다 — [[wiki/Engineering/AI-Native-Engineering/Roadmap-Pass-Gate-Human-Approval.md]].
+- **2026-10-06 uni-tutor:** `## 나중`에 LMS/LTI `- [ ]` 1개만 남아 current; milestone `f8d92c00` 재사용 + 자식 LMS marker `4aa8d43d` already done → `created=0`, pass-gate deferred. crewrp incomplete 0 → no-op (Phase 4 invent 금지).
 
 ## 🔗 관련 문서
 
 - [[wiki/Engineering/AI-Native-Engineering/Roadmap-Pass-Gate-Human-Approval.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Agentic-Software-Factory.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Schedule-Outcome-Requires-Active-Ticket.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]]
