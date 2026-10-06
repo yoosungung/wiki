@@ -53,6 +53,7 @@
 - [[wiki/Engineering/AI-Native-Engineering/UniTutor-PictureSearch-SlideLabel.md]]
 - [[wiki/Engineering/AI-Native-Engineering/UniTutor-Editor-Roommate-Canvas.md]]
 - [[wiki/Engineering/AI-Native-Engineering/UniTutor-On-Device-WebLLM.md]]
+- [[wiki/Engineering/AI-Native-Engineering/UniTutor-PWA-Installable-Shell.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Ticket-Dependencies-SoR.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Timeline-Status-Dates.md]]
 - [[wiki/Engineering/AI-Native-Engineering/GHA-Workflow-PR-Only-Trigger.md]]
