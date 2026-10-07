@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-10-07 | Root: wiki/
+[META] Updated: 2026-10-08 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,10 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-10-08 (km-wiki drain)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-10-08 github-issue empty + roadmap freeze/doc-lag
+- [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] — uni-tutor 1× LMS / crewrp freeze no-op
 
 ### UPD 2026-10-07 (km-wiki drain)
 - [[wiki/Engineering/Development-Environment/CrewRP-Projects-Due-Date-Field.md]] — Due date 매칭·ensure·auto-create 승인
