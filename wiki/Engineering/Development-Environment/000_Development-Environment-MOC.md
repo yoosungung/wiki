@@ -3,6 +3,7 @@
 ## 📄 Documents
 - [[wiki/Engineering/Development-Environment/Azure-AI-Foundry-Local-Setup.md]]
 - [[wiki/Engineering/Development-Environment/Coding-Simulation-Sandbox-Training.md]]
+- [[wiki/Engineering/Development-Environment/CrewRP-API-Stutter-Warm-Cache.md]]
 - [[wiki/Engineering/Development-Environment/CrewRP-Local-Mobile-Build-Env.md]]
 - [[wiki/Engineering/Development-Environment/CrewRP-Physical-Device-E2E.md]]
 - [[wiki/Engineering/Development-Environment/CrewRP-PR-Local-Test-Evidence.md]]
