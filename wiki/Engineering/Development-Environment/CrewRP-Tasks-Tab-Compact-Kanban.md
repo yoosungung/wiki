@@ -3,8 +3,8 @@ id: crewrp-tasks-tab-compact-kanban
 title: "CrewRP 할 일 탭: compact 칸반·상세 납기"
 status: canonical
 owner: km
-updated: "2026-10-07"
-review_after: "2027-01-06"
+updated: "2026-10-10"
+review_after: "2027-01-09"
 sources:
   - inbox/crewrp/2026-10-06-tasks-tab-compact-kanban.md
   - inbox/pm/2026-10-06-crewrp-tasks-tab-ux.md
@@ -33,3 +33,4 @@ type: "wiki"
 
 - 계약 유지: 칸반 ↔ 마감일 리스트, Projects v2 Status/Due.
 - Phase 4 enqueue 아님(maintenance UX). Due 필드 ensure: [[wiki/Engineering/Development-Environment/CrewRP-Projects-Due-Date-Field.md]].
+- iOS 납기 silent no-op: [[wiki/Engineering/Development-Environment/CrewRP-iOS-Due-Edit-Silent-Noop.md]]. 자료실 목록→상세: [[wiki/Engineering/Development-Environment/CrewRP-Docs-Tab-List-Detail.md]].

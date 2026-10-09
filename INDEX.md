@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-10-09 | Root: wiki/
+[META] Updated: 2026-10-10 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,13 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-10-10 (km-wiki drain)
+- [[wiki/Engineering/Development-Environment/CrewRP-iOS-Due-Edit-Silent-Noop.md]] — iOS 납기 silent no-op + PR#7 Intent
+- [[wiki/Engineering/Development-Environment/CrewRP-Docs-Tab-List-Detail.md]] — 자료실 목록→상세·lazy 드릴다운
+- [[wiki/Engineering/Development-Environment/CrewRP-PC-Web-Plan-Options.md]] — PC web OAuth·옵션 A–D (freeze 하)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-10-10 github-issue empty + roadmap freeze/doc-lag
+- [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] — uni-tutor 1× LMS / crewrp freeze no-op
 
 ### UPD 2026-10-09 (km-wiki drain)
 - [[wiki/Engineering/Development-Environment/CrewRP-API-Stutter-Warm-Cache.md]] — GraphQLFreshness 60s + ETag + PR#5 warm-cache

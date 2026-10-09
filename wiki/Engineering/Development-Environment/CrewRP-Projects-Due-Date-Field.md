@@ -3,8 +3,8 @@ id: crewrp-projects-due-date-field
 title: "CrewRP Projects v2: Due date 필드 매칭·자동 생성"
 status: canonical
 owner: km
-updated: "2026-10-07"
-review_after: "2027-01-06"
+updated: "2026-10-10"
+review_after: "2027-01-09"
 sources:
   - inbox/crewrp/2026-10-06-projects-due-date-field.md
   - inbox/crewrp/2026-10-06-projects-due-date-ensure.md
@@ -40,7 +40,12 @@ GitHub Projects v2 보드에 DATE 필드가 없거나 이름 매칭이 좁으면
 - `./gradlew :app:connectedDebugAndroidTest`는 기본으로 앱을 제거해 로그인 세션이 사라진다. 에뮬 UI 증거는 `installDebug` 유지 후 조작.
 - 카드에 월/일 반영은 로그인 시뮬/실기기 스모크가 유닛테스트와 별도 AC — [[wiki/Engineering/Development-Environment/CrewRP-Physical-Device-E2E.md]].
 
+## iOS silent no-op (후속)
+
+ensure 이후에도 iOS `updateTask`가 `projectMeta == nil`이면 silent return할 수 있음 — [[wiki/Engineering/Development-Environment/CrewRP-iOS-Due-Edit-Silent-Noop.md]].
+
 ## 🔗 관련
 
 - [[wiki/Engineering/Development-Environment/CrewRP-Tasks-Tab-Compact-Kanban.md]]
+- [[wiki/Engineering/Development-Environment/CrewRP-iOS-Due-Edit-Silent-Noop.md]]
 - [[wiki/Engineering/Development-Environment/CrewRP-PR-Local-Test-Evidence.md]]
