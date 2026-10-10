@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-10-10 | Root: wiki/
+[META] Updated: 2026-10-11 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,9 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-10-11 (km-wiki research)
+- inbox drain: empty no-op; LiteRT-LM tip still **v0.18.0** — ALREADY_COVERED ([[wiki/Models/Optimization-and-Serving/스마트폰-환경의-LLM-서빙-기술-2026.md]] §3.3)
 
 ### UPD 2026-10-10 (km-wiki drain)
 - [[wiki/Engineering/Development-Environment/CrewRP-iOS-Due-Edit-Silent-Noop.md]] — iOS 납기 silent no-op + PR#7 Intent

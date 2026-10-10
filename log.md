@@ -775,3 +775,9 @@
 | 2026-10-03 | ALREADY_COVERED | wiki/ | 8 | Furiosa 2026.4 FXB; LiteRT MTP/SoC matrix; WebLLM; Rebellions; Graphiti; LightRAG; GD²PO/Self-Play; Ossie |
 | 2026-10-03 | CLEANUP | inbox/, Root | 33 | inbox 31 git rm; D-2(2026-09-26/27) 삭제; D-0(2026-10-03)·D-1(2026-10-02) 유지 |
 | 2026-10-03 | LINT | Root / wiki | ALL | 데일리·INDEX META·auto_moc·연구_주제_관리 비고 갱신 |
+
+| 2026-10-11 | INBOX_DRAIN | inbox/ | 0 | status:inbox empty → no-op |
+| 2026-10-11 | RESEARCH | 연구_주제_관리.md | 1 | wiki-first+웹: LiteRT-LM tip still v0.18.0 EmbeddingGemma 2 → ALREADY_COVERED |
+| 2026-10-11 | ALREADY_COVERED | wiki/ | 1 | 스마트폰-환경의-LLM-서빙-기술-2026 §3.3 (v0.18.0) |
+| 2026-10-11 | CLEANUP | Root | 8 | D-2+ daily 2026-10-02…09 삭제; D-0(10-11)·D-1(10-10) 유지 |
+| 2026-10-11 | LINT | Root / wiki | ALL | INDEX META 2026-10-11; 데일리·연구_주제_관리 비고 갱신 |
