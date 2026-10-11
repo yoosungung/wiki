@@ -1,6 +1,10 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-10-12 | INBOX_DRAIN | inbox/ | 4 | GH-empty + roadmap-sync + Discord OAuth kickoff/e2e → Factory-Ops/Roadmap-Sync/CrewRP-Discord-OAuth; git rm |
+| 2026-10-12 | SYNTHESIZE | wiki/ | 5 | CrewRP-Discord-OAuth-Manual-E2E 신규; Factory-Ops·Roadmap-Sync·Physical-Device·DevEnv-MOC 갱신 |
+| 2026-10-12 | ALREADY_COVERED | wiki/ | 1 | LiteRT-LM tip still v0.18.0 (`스마트폰-환경의-LLM-서빙-기술-2026` §3.3) |
+| 2026-10-12 | CLEANUP | inbox/ & root | 6 | inbox 4 git rm; D-2(2026-10-10) 삭제; D-0(2026-10-12)·D-1(2026-10-11) 유지 |
 | 2026-10-11 | INBOX_DRAIN | inbox/ | 1 | crewrp-ios-due-closeout → CrewRP-iOS-Due-Edit-Silent-Noop 반영 후 git rm |
 | 2026-10-11 | INGEST | raw/ | 10 | jev-judge, clm-8b, typellm, gliner2.5, model-collapse, mimo-rl, tasteval, asd-ste100, astro-flue, openresearch |
 | 2026-10-11 | SYNTHESIZE | wiki/ | 23 | CLM-8B·TypeLLM·GLiNER2.5·ModelCollapse·MiMo-RL·TasteVal·ASD-STE100·Flue·OpenResearch 신규(9); Jev·Judge·SelfPlay·AgentR1·Karpathy·SoftwareFactory·CrewRP 갱신(7); MOC 7건 |

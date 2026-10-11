@@ -4,6 +4,7 @@
 - [[wiki/Engineering/Development-Environment/Azure-AI-Foundry-Local-Setup.md]]
 - [[wiki/Engineering/Development-Environment/Coding-Simulation-Sandbox-Training.md]]
 - [[wiki/Engineering/Development-Environment/CrewRP-API-Stutter-Warm-Cache.md]]
+- [[wiki/Engineering/Development-Environment/CrewRP-Discord-OAuth-Manual-E2E.md]]
 - [[wiki/Engineering/Development-Environment/CrewRP-Docs-Tab-List-Detail.md]]
 - [[wiki/Engineering/Development-Environment/CrewRP-iOS-Due-Edit-Silent-Noop.md]]
 - [[wiki/Engineering/Development-Environment/CrewRP-Local-Mobile-Build-Env.md]]

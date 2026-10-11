@@ -3,8 +3,8 @@ id: factory-schedule-ops-skips
 title: "Factory 스케줄 ops: empty skip · registry placeholder"
 status: canonical
 owner: km
-updated: "2026-10-10"
-review_after: "2027-01-09"
+updated: "2026-10-12"
+review_after: "2027-01-12"
 sources:
   - inbox/pm/2026-10-02-github-issue-check-empty-skip.md
   - inbox/pm/2026-10-03-github-issue-check-empty-skip.md
@@ -15,6 +15,7 @@ sources:
   - inbox/pm/2026-10-08-github-issue-check-empty-skip.md
   - inbox/pm/2026-10-09-github-issue-check-empty-skip.md
   - inbox/pm/2026-10-10-github-issue-check-empty-skip.md
+  - inbox/pm/2026-10-12-github-issue-check-empty-skip.md
   - inbox/pm/2026-10-04-roadmap-sync-no-next.md
   - inbox/pm/2026-10-04-roadmap-next-enqueue.md
   - inbox/pm/2026-10-05-roadmap-sync.md
@@ -23,6 +24,7 @@ sources:
   - inbox/pm/2026-10-08-roadmap-sync.md
   - inbox/pm/2026-10-09-roadmap-sync.md
   - inbox/pm/2026-10-10-roadmap-sync.md
+  - inbox/pm/2026-10-12-roadmap-sync.md
   - inbox/pm/2026-10-04-crewrp-phase3-pass-freeze.md
   - inbox/pm/2026-10-02-sw-factory-roadmap-sync-noop.md
   - inbox/pm/2026-10-03-sw-factory-roadmap-sync-no-checklist.md
@@ -43,7 +45,7 @@ type: "wiki"
 
 - pm `clients-repos-registry` empty면 wiki client map + `agents.yaml` repos 재사용 (맵 부재≠실패).
 - factory projects 예: `sw-factory`, `CrewRP`, `UniTutorAI` (nl2sql 프로젝트 없을 수 있음).
-- 스윕 2026-10-03···**10**: sw-factory/crewrp/UniTutorAI/wiki OPEN true-issue 0; sw-factory `open_issues_count=1`은 PR#24만; crewrp `open_issues_count=1`은 PR#7만(2026-10-10). `nl2sql` issues ACL/token 403 → `open_issues_count=0`만 확인·변환 티켓 미생성.
+- 스윕 2026-10-03···**12**: sw-factory/crewrp/UniTutorAI/wiki/codingland/candidate.win OPEN true-issue 0; sw-factory `open_issues_count=1`은 PR#24만; crewrp는 2026-10-12 기준 `open_issues_count=0`(이전 PR#7만 카운트 구간 종료). `nl2sql` issues ACL/token 403 → `open_issues_count=0`만 확인·변환 티켓 미생성.
 - Active `ticket_id` 없는 스케줄 → orphan Outcome 티켓 미생성([[wiki/Engineering/AI-Native-Engineering/Schedule-Outcome-Requires-Active-Ticket.md]]).
 - Actions/CD 실패 감시는 이 스케줄 범위 아님(→ ta).
 
@@ -53,12 +55,13 @@ type: "wiki"
 - sync 계약: `##` + `- [ ]`/`- [x]`만. 표·plain bullet·상태 컬럼만 → **skip: no passed section**, pass-gate 티켓 미생성. 상세: [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]]
 - 2026-10-03 sw-factory ROADMAP: 모든 `##`에 checkbox 0 → incomplete/passed 없음 → skip.
 
-## roadmap-sync ops (2026-10-04···10)
+## roadmap-sync ops (2026-10-04···12)
 
 - Registry: `crewrp`, `uni-tutor` only (sw-factory not in `pm.roadmaps[]` when table-only).
-- **crewrp:** Phase 1–3 all `- [x]`; Eric chose freeze (option 2) → `<!-- roadmap-pass:approved -->` + maintenance only; no Phase 4 / no next `###`. Later sync no-ops while no incomplete `##` `- [ ]` (2026-10-06···**10** 재확인: incomplete 0 → freeze no-op; pass-gate `f9f2416a` already `done`).
+- **crewrp 2026-10-04···10:** Phase 1–3 all `- [x]`; Eric chose freeze (option 2) → `<!-- roadmap-pass:approved -->` + maintenance only; incomplete 0 → freeze no-op; pass-gate `f9f2416a` already `done`.
+- **crewrp 2026-10-12:** current=`## Phase 4 — 소통 = Discord 계정 연동` → milestone `012deff8` + child `6beb03a9` (`roadmap:crewrp:discord-oauth-app-server-channel-keys-manual-e2e`); Phase 5/6 blocked on current. Discord 수동 E2E: [[wiki/Engineering/Development-Environment/CrewRP-Discord-OAuth-Manual-E2E.md]].
 - **uni-tutor 2026-10-05:** `## 나중` with 2× `- [ ]` → reuse milestone `f8d92c00`; child Editor/Roommate `66ac47e7`; LMS marker already done (`4aa8d43d`) even if ROADMAP checkbox lags.
-- **uni-tutor 2026-10-06···10:** `## 나중` still current with **1×** `- [ ]` (LMS/LTI); milestone reuse `f8d92c00`; LMS marker `4aa8d43d` (doc lag) → enqueue skip / `created=0`; pass-gate deferred until checkbox closed.
+- **uni-tutor 2026-10-06···12:** `## 나중` still current with **1×** `- [ ]` (LMS/LTI); milestone reuse `f8d92c00`; LMS marker `4aa8d43d` (doc lag) → enqueue skip / `created=0`; pass-gate deferred until checkbox closed.
 - zsh heredoc 함정: `[x]`/`###` glob → JSON 파일로 API body 작성.
 - factory MCP namespace 부재 시 session-cookie REST로 동일 계약 수행(쓰기 전 get_ticket).
 

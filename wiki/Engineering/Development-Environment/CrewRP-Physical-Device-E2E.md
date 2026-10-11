@@ -22,7 +22,7 @@ type: "wiki"
 
 # CrewRP 실기기 설치·CRUD 스모크 (스토어 없음)
 
-Play Store / App Store / TestFlight 없이, USB·Xcode 개발 서명으로 Android·iOS **실기기**에 CrewRP를 올리고 CRUD를 반복하는 런북. compile/sim 스냅샷은 [[wiki/Engineering/Development-Environment/CrewRP-Local-Mobile-Build-Env.md]] — 테넌트 명령 정본은 `android/DESIGN.md`, `ios/DESIGN.md`.
+Play Store / App Store / TestFlight 없이, USB·Xcode 개발 서명으로 Android·iOS **실기기**에 CrewRP를 올리고 CRUD를 반복하는 런북. compile/sim 스냅샷은 [[wiki/Engineering/Development-Environment/CrewRP-Local-Mobile-Build-Env.md]] — 테넌트 명령 정본은 `android/DESIGN.md`, `ios/DESIGN.md`. Discord OAuth 수동 E2E(시크릿 probe·사람 로그인 게이트)는 [[wiki/Engineering/Development-Environment/CrewRP-Discord-OAuth-Manual-E2E.md]].
 
 ## Android (USB debugging → debug APK)
 

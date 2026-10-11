@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-10-11 | Root: wiki/
+[META] Updated: 2026-10-12 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,12 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-10-12 (km-wiki drain)
+- [[wiki/Engineering/Development-Environment/CrewRP-Discord-OAuth-Manual-E2E.md]] — Discord OAuth 시크릿 probe·sim E2E·사람 로그인 게이트
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-10-12 github-issue empty + crewrp Phase 4 current
+- [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] — crewrp Discord OAuth child + uni-tutor LMS doc lag
+- inbox drain: pm×3 + crewrp×1 git rm; LiteRT-LM tip still v0.18.0 — ALREADY_COVERED
 
 ### UPD 2026-10-11 (km-researcher auto-research)
 - [[wiki/Models/Optimization-and-Serving/CLM-Choice-Language-Model.md]] — Stanford + NVIDIA CLM-8B 단일 패스 선택 모델
