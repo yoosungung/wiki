@@ -42,6 +42,7 @@
 - [[wiki/Models/RL/Wayve와 Tesla FSD v14 자율주행 기술 비교 및 시장 확장.md]]
 - [[wiki/Models/RL/WordLift-RLM-on-KG.md]]
 - [[wiki/Models/RL/World-Models-JEPA-LeWorldModel-Generative-Simulation.md]]
+- [[wiki/Models/RL/Xiaomi-MiMo-Open-RL-Task-Environments.md]]
 - [[wiki/Models/RL/강화 학습(RL) 논쟁 종결 - 역량의 가장자리와 일반화.md]]
 - [[wiki/Models/RL/삼성 Tiny Recursive Model (TRM) - AI 패러다임의 전환.md]]
 - [[wiki/Models/RL/안녕하세요-정이태입니다-Graph-Interview-10번째-소식-전달드립니다행사.md]]

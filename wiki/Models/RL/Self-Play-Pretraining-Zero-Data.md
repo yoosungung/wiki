@@ -4,8 +4,8 @@ related_raw: ["[[raw/2026-09-27-self-play-pretraining-zero-data.md]]"]
 tags: ['wiki', 'models', 'rl', 'pretraining', 'self-play', 'zero-data', 'scaling-laws', 'universal-turing-machine']
 type: "wiki"
 status: "published"
-last_updated: "2026-09-27"
-updated: "2026-09-27"
+last_updated: "2026-10-11"
+updated: "2026-10-11"
 ---
 
 # Self-Play Pretraining with Zero Data: 무(無)데이터 기반 자기대전 사전학습과 보편적 예측 구조의 창발
@@ -169,7 +169,7 @@ $$L_{\text{zero-shot}}(T) = E' + \left(\frac{T_0}{T}\right)^\gamma \quad (\gamma
 
 ---
 
-## 7. 관련 위키 문서
+- [[wiki/Models/Architectures/Model-Collapse-Recursive-Synthetic-Data-Degradation.md]] : 합성 데이터 재귀 학습의 구조적 결함 및 모델 붕괴 회피 기법
 - [[wiki/Models/RL/GRPO-Scaling-Laws-Efficiency.md]] : GRPO 강화학습의 포화 법칙 및 컴퓨팅 최적 조기 종료
 - [[wiki/Models/RL/DeepSeek-R1-GRPO-Implementation.md]] : 배치 단위 보상 정규화 기반 비평가-프리(Critic-free) RL
 - [[wiki/Models/RL/NVIDIA GDPO: 다중 보상 RL의 GRPO 결함 해결.md]] : 다중 목표 보상 분리 정규화

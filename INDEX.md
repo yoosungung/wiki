@@ -53,8 +53,19 @@
 
 ## 📌 KEY_FILE_LIST
 
-### UPD 2026-10-11 (km-wiki research)
-- inbox drain: empty no-op; LiteRT-LM tip still **v0.18.0** — ALREADY_COVERED ([[wiki/Models/Optimization-and-Serving/스마트폰-환경의-LLM-서빙-기술-2026.md]] §3.3)
+### UPD 2026-10-11 (km-researcher auto-research)
+- [[wiki/Models/Optimization-and-Serving/CLM-Choice-Language-Model.md]] — Stanford + NVIDIA CLM-8B 단일 패스 선택 모델
+- [[wiki/Models/Optimization-and-Serving/TypeLLM-SGLang-Type-Safe-Generation.md]] — SGLang 기반 타입 세이프 스키마 디코딩
+- [[wiki/Models/Optimization-and-Serving/GLiNER2.5-Decide-Structured-Decision-Encoder.md]] — Fastino 340M 스팬/관계 및 제약식 인코더 결정 모델
+- [[wiki/Models/Architectures/Model-Collapse-Recursive-Synthetic-Data-Degradation.md]] — 옥스퍼드/케임브리지 재귀 합성 데이터 꼬리 소멸 메커니즘
+- [[wiki/Models/RL/Xiaomi-MiMo-Open-RL-Task-Environments.md]] — 샤오미 MiMo 7,000+ 오픈 강화학습 실행 환경
+- [[wiki/Agents/Evaluations/TasteVal-Scientific-Research-Taste-Benchmark.md]] — P-Zero Research AI 연구 직관 벤치마크
+- [[wiki/Engineering/Prompt-Engineering/ASD-STE100-Unambiguous-Prompting-Standard.md]] — 카파시 항공 정비 규격 무모호성 프롬프트 표준
+- [[wiki/Engineering/AI-Native-Engineering/Flue-GitHub-Actions-Issue-Triage-Software-Factory.md]] — Astro Flue 프레임워크 자율 이슈 트리아지 팩토리
+- [[wiki/Agents/Frameworks/OpenResearch-Local-First-Autoresearch-Workspace.md]] — alphaXiv OpenResearch 로컬 우선 오토리서치 워크스페이스
+- [[wiki/Agents/Frameworks/TypeSafe-Jev-System-One-Decision-Architecture.md]] — JEV-as-a-Judge 신뢰도 기반 점진적 에스컬레이션
+- [[wiki/Engineering/Development-Environment/CrewRP-iOS-Due-Edit-Silent-Noop.md]] — PR#7 closeout 반영
+- inbox drain: `inbox/pm/2026-10-11-crewrp-ios-due-closeout.md` git rm; LiteRT-LM tip still v0.18.0 — ALREADY_COVERED
 
 ### UPD 2026-10-10 (km-wiki drain)
 - [[wiki/Engineering/Development-Environment/CrewRP-iOS-Due-Edit-Silent-Noop.md]] — iOS 납기 silent no-op + PR#7 Intent

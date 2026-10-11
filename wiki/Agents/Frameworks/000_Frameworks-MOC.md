@@ -27,6 +27,7 @@
 - [[wiki/Agents/Frameworks/Langchain Open Deep Research 아키텍처 가이드.md]]
 - [[wiki/Agents/Frameworks/Liner-Actions-Autonomous-MCP-Tool-Binding.md]]
 - [[wiki/Agents/Frameworks/NVIDIA-Object-Oriented-Agents-NOOA.md]]
+- [[wiki/Agents/Frameworks/OpenResearch-Local-First-Autoresearch-Workspace.md]]
 - [[wiki/Agents/Frameworks/OpenWorker-Agentic-AI.md]]
 - [[wiki/Agents/Frameworks/PI-Agent-Framework.md]]
 - [[wiki/Agents/Frameworks/Pipecat-Voice-and-Multimodal-Agent-Framework.md]]

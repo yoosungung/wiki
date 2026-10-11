@@ -1,7 +1,7 @@
 ---
 title: 에이전트 네이티브 소프트웨어 팩토리(Agentic Software Factory) 아키텍처 및 자동화 방안
-last_updated: "2026-08-04"
-updated: "2026-08-04"
+last_updated: "2026-10-11"
+updated: "2026-10-11"
 id: agentic-software-factory
 related_raw: ["[[2026-07-27-agentic_software_factory_and_automation.md]]"]
 tags: [Engineering, AI-Native-Engineering, Software-Factory, Developer-Agent, SDLC-Automation]
@@ -102,6 +102,7 @@ AI 스크럼 마스터 에이전트는 기획 실행 상태의 정합성을 감�
 
 ---
 ## 🔗 관련 문서 링크
+- Flue 및 Astro 자율 이슈 트리아지 팩토리: [[wiki/Engineering/AI-Native-Engineering/Flue-GitHub-Actions-Issue-Triage-Software-Factory.md]]
 - 프로덕션 RAG 및 위키 구조 표준(OKF): [[wiki/RAG/OpenWiki-OKF-Codebase-Documentation.md]]
 - 에이전트 하네스 설계 및 자율 예외 수정: [[wiki/Agents/Frameworks/Strands-Agents-Harness-SDK.md]]
 - 에이전트 다단계 피드백 루프 평가 및 Harbor: [[wiki/Agents/Evaluations/Deep-Agents-Benchmarking-Methodology.md]]

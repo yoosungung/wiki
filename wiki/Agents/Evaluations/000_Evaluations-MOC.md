@@ -10,3 +10,4 @@
 - [[wiki/Agents/Evaluations/Giskard-Agent-Testing-Framework.md]]
 - [[wiki/Agents/Evaluations/HaluMem-에이전트-메모리-환각-벤치마크.md]]
 - [[wiki/Agents/Evaluations/Judge-Model-Comparison.md]]
+- [[wiki/Agents/Evaluations/TasteVal-Scientific-Research-Taste-Benchmark.md]]

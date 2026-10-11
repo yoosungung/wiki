@@ -56,6 +56,7 @@
 - [[wiki/Engineering/AI-Native-Engineering/UniTutor-PWA-Installable-Shell.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Ticket-Dependencies-SoR.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Timeline-Status-Dates.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Flue-GitHub-Actions-Issue-Triage-Software-Factory.md]]
 - [[wiki/Engineering/AI-Native-Engineering/GHA-Workflow-PR-Only-Trigger.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Github-Issue-Leantime-Intake-Empty-Skip.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Graphify-Codebase-Knowledge-Graph.md]]

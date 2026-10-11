@@ -3,14 +3,15 @@ id: typesafe-jev-system-one-decision-architecture
 title: "TypeSafe Jev: 시스템 1(System One) 결정 전용 모델 및 에이전트 분기 아키텍처"
 status: canonical
 owner: km
-updated: "2026-09-23"
-last_updated: "2026-09-23"
+updated: "2026-10-11"
+last_updated: "2026-10-11"
 sources:
   - https://typesafe.ai/
   - https://craftbettersoftware.com/p/jev-engineering-101
   - raw/2026-09-23-typesafe-jev-system-one-decision-model.md
+  - "JEV-as-a-Judge: Accept When Confident, Escalate When Unsure (TypeSafe AI)"
 related_raw: ["[[raw/2026-09-23-typesafe-jev-system-one-decision-model.md]]"]
-tags: ["Agents", "Frameworks", "Decision-Model", "System-One", "RLCD", "Architecture"]
+tags: ["Agents", "Frameworks", "Decision-Model", "System-One", "RLCD", "Architecture", "LLM-as-a-Judge"]
 type: "wiki"
 ---
 
@@ -177,7 +178,47 @@ else:
 
 ---
 
+## 6. JEV-as-a-Judge: 신뢰도 기반 점진적 에스컬레이션(Cascade)
+
+평가 규모가 커질수록 프론티어 LLM을 전면 평가자로 사용하는 'LLM-as-a-Judge' 방식은 막대한 서빙 비용과 지연 시간을 초래한다. TypeSafe AI 연구진은 **"Accept When Confident, Escalate When Unsure"** 원칙에 입각한 **JEV-as-a-Judge** 계층형 평가 구조를 제안하였다.
+
+```mermaid
+flowchart TD
+    EvalInput[평가 입력: 프롬프트 + 모델 응답 쌍] --> JEV[1차 심판: Jev Decision Judge]
+    JEV --> ConfCheck{확신도 Confidence >= 임계값?}
+    ConfCheck -->|Yes: 확신| FastAccept[Jev 판정 결과 채택<br/>0.36% 비용 · 100ms 응답]
+    ConfCheck -->|No: 불확실| FrontierEscalate[2차 심판: 프론티어 생성 LLM 에스컬레이션<br/>심층 CoT 근거 분석]
+    FrontierEscalate --> FinalVerdict[최종 검증 판정]
+```
+
+### 6.1. 동작 메커니즘
+1. **결정 전용 1차 판정(Decision-only First-Pass Judge)**: 긴 텍스트 사유를 생성하지 않고, 판정 라벨(`verdict`)과 확신도 점수(`confidence`)만을 단일 패스로 반환.
+2. **동적 캐스케이드 라우팅**: 확신도가 높은 대다수(80~90% 이상)의 일반 케이스는 Jev 결과를 즉시 수용. 확신도가 임계값 미만인 모호한 케이스에 한해서만 고비용 프론티어 모델로 에스컬레이션.
+3. **벤치마크 및 비용 효율**:
+   - 프론티어 모델 대비 **비용 단 0.36%**만 소모.
+   - 일반 선호도(Preference) 및 근거 기반 사실성(Faithfulness) 평가에서 프론티어 모델 대비 **약 99%의 정확도**를 보존.
+   - 오류는 거의 전적으로 저확신도(Low-confidence) 구간에 집중되므로 에스컬레이션을 통해 손실 없이 복구 가능.
+
+---
+
+## 7. 오픈소스 대안 및 상호 연결
+
+Jev의 독점 클라우드 API를 대체하거나 보완하기 위해 다음과 같은 오픈소스 기술이 병행 활용된다:
+
+1. **[[wiki/Models/Optimization-and-Serving/CLM-Choice-Language-Model.md]] (Stanford + NVIDIA CLM-8B)**:
+   - Qwen3-8B 기반의 듀얼 인코더 구조로, 사전 임베딩 캐싱을 통해 1,000개 선택지 기준 Jev 대비 최대 13배 빠른 16.5ms 지연 시간을 달성. Apache 2.0 라이선스로 자체 호스팅 가능.
+2. **[[wiki/Models/Optimization-and-Serving/TypeLLM-SGLang-Type-Safe-Generation.md]] (TypeLLM)**:
+   - 오픈소스 SGLang 엔진 기반으로 모델 가중치 수정 없이 JSON Schema 제약 디코딩과 의존성 DAG(`depends_on`) 실행을 지원하여 완벽한 스키마 정합성을 보장.
+3. **[[wiki/Models/Optimization-and-Serving/GLiNER2.5-Decide-Structured-Decision-Encoder.md]] (GLiNER2.5-Decide)**:
+   - DeBERTa-v3 기반 340M 인코더로 텍스트 내 스팬/관계 추출과 명제 제약 조건을 결합한 경량 CPU 서빙 결정 모델.
+
+---
+
 ## 🔗 관련 문서 링크
+- [[wiki/Models/Optimization-and-Serving/CLM-Choice-Language-Model.md]] — Stanford + NVIDIA 오픈소스 선택 언어 모델
+- [[wiki/Models/Optimization-and-Serving/TypeLLM-SGLang-Type-Safe-Generation.md]] — SGLang 기반 타입 세이프 스키마 디코딩
+- [[wiki/Models/Optimization-and-Serving/GLiNER2.5-Decide-Structured-Decision-Encoder.md]] — 제약식 구조화 인코더 결정 모델
+- [[wiki/Agents/Evaluations/Judge-Model-Comparison.md]] — LLM vs Agent vs Decision Judge 비교
 - [[wiki/Models/Reasoning-and-Cognition/추론-LLM-추론-노력-제어-및-스케일링.md]] — System 2 추론 노력 제어 및 가변 CoT
 - [[wiki/Engineering/AI-Native-Engineering/Epistemic-Debt-ChangeScore-Friction-Gate.md]] — 변경 비용 기반 개입 게이트
 - [[wiki/Engineering/AI-Native-Engineering/OpenAI-HTTP-429-Billing-Vs-Rate-Limit-Triage.md]] — 빌링 고갈 vs 일시 한도 분기 트리아지

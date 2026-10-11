@@ -1,6 +1,12 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-10-11 | INBOX_DRAIN | inbox/ | 1 | crewrp-ios-due-closeout → CrewRP-iOS-Due-Edit-Silent-Noop 반영 후 git rm |
+| 2026-10-11 | INGEST | raw/ | 10 | jev-judge, clm-8b, typellm, gliner2.5, model-collapse, mimo-rl, tasteval, asd-ste100, astro-flue, openresearch |
+| 2026-10-11 | SYNTHESIZE | wiki/ | 23 | CLM-8B·TypeLLM·GLiNER2.5·ModelCollapse·MiMo-RL·TasteVal·ASD-STE100·Flue·OpenResearch 신규(9); Jev·Judge·SelfPlay·AgentR1·Karpathy·SoftwareFactory·CrewRP 갱신(7); MOC 7건 |
+| 2026-10-11 | ALREADY_COVERED | wiki/ | 6 | LiteRT-LM v0.18.0(0.19-dev)·Furiosa·Rebellions·Supermemory·Graphiti·LightRAG |
+| 2026-10-11 | CLEANUP | raw/ & inbox/ | 11 | raw 10건 전수 합성 후 삭제; inbox 1건 git rm; D-0(2026-10-11)·D-1(2026-10-10) 유지 |
+| 2026-10-11 | RESEARCH | 연구_주제_관리.md | 10 | 10대 신규 주제 탐색·합성 완결; 활성 연구 과제 [ ] 유지 |
 | 2026-09-28 | AMEND | wiki/Business | 1 | CrewRP IAP=$0 확정 → Mobile-App-Store-Deploy 예산·체크리스트 고정 |
 | 2026-09-21 | INBOX_DRAIN | inbox/ | 10 | GH-empty×7→Empty-Skip; pub-safety→PubGate; aa-clean→Tenant/CI-Align; ingest-skip→Workspace-Ingest 신규; git rm |
 | 2026-09-21 | RESEARCH | 연구_주제_관리.md | 6 | wiki-first+릴리스: LiteRT 0.17.1·WebLLM 0.2.85·Graphiti 0.30.2·LightRAG 1.5.7·Furiosa 2026.4b15·Supermemory → ALREADY; Ossie PR#423 신규 |

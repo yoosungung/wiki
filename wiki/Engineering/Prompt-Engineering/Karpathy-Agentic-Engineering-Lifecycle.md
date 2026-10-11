@@ -1,8 +1,11 @@
----
 tags:
-  - inbox
+  - Engineering
+  - Prompt-Engineering
+  - Karpathy
 type: wiki
 status: published
+last_updated: "2026-10-11"
+updated: "2026-10-11"
 ---
 
 # Karpathy Agentic Engineering Lifecycle
@@ -26,3 +29,7 @@ status: published
     *   기존 기능의 회귀(Regression)가 없음을 증명하면서 프롬프트를 최적화합니다.
 6.  **Publish (게시)**
     *   조직 전체가 사용할 수 있도록 완성된 에이전트를 Gemini Enterprise(또는 엔터프라이즈 환경)에 등록합니다.
+
+## 🔗 관련 문서 링크
+- [[wiki/Engineering/Prompt-Engineering/ASD-STE100-Unambiguous-Prompting-Standard.md|ASD-STE100 무모호성 프롬프트 표준]]
+- [[wiki/Engineering/Prompt-Engineering/000_Prompt-Engineering-MOC.md|프롬프트 엔지니어링 MOC]]
