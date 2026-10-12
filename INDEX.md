@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-10-12 | Root: wiki/
+[META] Updated: 2026-10-13 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,15 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-10-13 (km-wiki drain)
+- [[wiki/Engineering/AI-Native-Engineering/UniTutor-PathChrome-Gating-Strip.md]] — PathChrome 접힘 기본·CF single-env gate
+- [[wiki/Engineering/Development-Environment/CrewRP-Phase5-Home-Comm-Manual-E2E.md]] — Phase 5 홈 README·Discussions 수동 E2E
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-10-13 github-issue empty + crewrp Phase 5 current
+- [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] — Phase 5 enqueue + uni-tutor LMS doc lag
+- [[wiki/Engineering/AI-Native-Engineering/Tenant-Quality-Yaml-Gate-Skip-Pattern.md]] — 2026-10-12 ta/aa/qa weekly all-skip
+- [[wiki/Engineering/Infrastructure-and-DevOps/UniTutor-Cloudflare-Deploy.md]] — single-env prod gate
+- inbox drain: 13 files git rm; LiteRT-LM tip still v0.18.0 — ALREADY_COVERED
 
 ### UPD 2026-10-12 (km-wiki drain)
 - [[wiki/Engineering/Development-Environment/CrewRP-Discord-OAuth-Manual-E2E.md]] — Discord OAuth 시크릿 probe·sim E2E·사람 로그인 게이트

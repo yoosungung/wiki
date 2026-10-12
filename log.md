@@ -1,6 +1,10 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-10-13 | INBOX_DRAIN | inbox/ | 13 | PathChrome×5 + Phase5×3 + GH-empty + roadmap + weekly NF×3 → PathChrome/Phase5/Ops/Roadmap/Tenant/CF; git rm |
+| 2026-10-13 | SYNTHESIZE | wiki/ | 8 | PathChrome·Phase5 신규; Factory-Ops·Roadmap-Sync·Tenant-Quality·CF-Deploy·MOC×2·INDEX |
+| 2026-10-13 | ALREADY_COVERED | wiki/ | 1 | LiteRT-LM tip still v0.18.0 (`스마트폰-환경의-LLM-서빙-기술-2026` §3.3) |
+| 2026-10-13 | CLEANUP | inbox/ | 13 | inbox 13 git rm; D-0(2026-10-13)·D-1(2026-10-12) 유지 |
 | 2026-10-12 | INBOX_DRAIN | inbox/ | 4 | GH-empty + roadmap-sync + Discord OAuth kickoff/e2e → Factory-Ops/Roadmap-Sync/CrewRP-Discord-OAuth; git rm |
 | 2026-10-12 | SYNTHESIZE | wiki/ | 5 | CrewRP-Discord-OAuth-Manual-E2E 신규; Factory-Ops·Roadmap-Sync·Physical-Device·DevEnv-MOC 갱신 |
 | 2026-10-12 | ALREADY_COVERED | wiki/ | 1 | LiteRT-LM tip still v0.18.0 (`스마트폰-환경의-LLM-서빙-기술-2026` §3.3) |

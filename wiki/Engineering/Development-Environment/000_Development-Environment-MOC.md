@@ -9,6 +9,7 @@
 - [[wiki/Engineering/Development-Environment/CrewRP-iOS-Due-Edit-Silent-Noop.md]]
 - [[wiki/Engineering/Development-Environment/CrewRP-Local-Mobile-Build-Env.md]]
 - [[wiki/Engineering/Development-Environment/CrewRP-PC-Web-Plan-Options.md]]
+- [[wiki/Engineering/Development-Environment/CrewRP-Phase5-Home-Comm-Manual-E2E.md]]
 - [[wiki/Engineering/Development-Environment/CrewRP-Physical-Device-E2E.md]]
 - [[wiki/Engineering/Development-Environment/CrewRP-PR-Local-Test-Evidence.md]]
 - [[wiki/Engineering/Development-Environment/CrewRP-Projects-Due-Date-Field.md]]

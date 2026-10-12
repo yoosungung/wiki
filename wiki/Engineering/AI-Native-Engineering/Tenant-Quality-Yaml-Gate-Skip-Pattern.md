@@ -3,9 +3,9 @@ id: tenant-quality-yaml-gate-skip-pattern
 title: "테넌트 quality.yaml 게이트 키 누락 시 skip (NF 미생성)"
 status: canonical
 owner: km
-updated: "2026-10-06"
-last_updated: "2026-10-06"
-review_after: "2027-01-05"
+updated: "2026-10-13"
+last_updated: "2026-10-13"
+review_after: "2027-01-13"
 sources:
   - ticket:414
   - ticket:85
@@ -41,6 +41,9 @@ sources:
   - inbox/aa/2026-10-05-aa-clean-weekly.md
   - inbox/qa/2026-10-05-qa-bulk-weekly.md
   - inbox/ta/2026-10-05-ta-load-weekly.md
+  - inbox/aa/2026-10-12-aa-clean-weekly.md
+  - inbox/qa/2026-10-12-qa-bulk-weekly.md
+  - inbox/ta/2026-10-12-ta-load-weekly.md
 tags: ["Engineering", "AI-Native", "Quality", "Factory", "NF", "Skip"]
 type: "wiki"
 ---
@@ -116,6 +119,18 @@ Registry: `sw-factory` / `crewrp` / `uni-tutor` (nl2sql not in persona registry 
 | qa-bulk-weekly | 3 repo 모두 no `bulk_api`/`opik` → skip; factory `/api/health` 200 `qa: pass`; sw-factory dirty sync skip |
 
 Active 없는 스케줄 → orphan Outcome 금지. 장시간/`nf-progress:` N/A (명령 미기동).
+
+## 2026-10-12 주간 NF (ta/aa/qa)
+
+동일 registry 3 repo. tip sync 후 Discover — `.factory/quality.yaml` 게이트 키 없음 → 전수 skip; NF New=0.
+
+| 스케줄 | 결과 |
+| :--- | :--- |
+| ta-load-weekly | 3 repo no `load.command` → skip; NF=0 |
+| aa-clean-weekly | 3 repo no `clean_code:` → skip; High/Med=0 |
+| qa-bulk-weekly | 3 repo no `bulk_api`/`opik` → skip; factory `/api/health` 200 `qa: pass`; sw-factory dirty WT → sync skip (behind origin; no stash) |
+
+Active 없는 스케줄 → orphan Outcome 금지. `nf-progress:` N/A.
 
 ## 🔗 관련 문서
 

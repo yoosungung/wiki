@@ -3,8 +3,8 @@ id: unitutor-cloudflare-deploy
 title: "UniTutor Cloudflare 배포 (Pages + Workers + domain)"
 status: canonical
 owner: km
-updated: "2026-10-05"
-review_after: "2027-01-03"
+updated: "2026-10-13"
+review_after: "2027-01-13"
 sources:
   - inbox/pm/2026-10-01-unitutor-cloudflare-deploy-prep.md
   - inbox/pm/2026-10-02-unitutor-pages-project-create-ci.md
@@ -23,6 +23,9 @@ sources:
   - inbox/ta/2026-10-04-unitutor-d1-lti-test-deploy.md
   - inbox/ta/2026-10-04-unitutor-lti-jwks-test-redeploy.md
   - ticket:4aa8d43d-4ad6-42b0-bd1c-a0d83caaf061
+  - inbox/ta/2026-10-12-unitutor-path-chrome-test-deploy.md
+  - inbox/ta/2026-10-12-unitutor-path-chrome-prod-gate.md
+  - ticket:793c7592-3071-4ab1-a07b-f96a9ee8703c
 tags: ["Engineering", "DevOps", "Cloudflare", "UniTutor"]
 type: "wiki"
 ---
@@ -63,6 +66,12 @@ CI: `.github/workflows/deploy.yml`. Pages dry-run=`tsc`/`build` (테스트 exclu
 - `npm run deploy` = `d1 migrations apply DB --remote` then `wrangler deploy`.
 - `FRONTEND_ORIGIN` prod: `https://unitutor.askwho.net`.
 - LTI/JWKS smoke uses temporary `lti_deployments` row then deletes it — see [[wiki/Engineering/AI-Native-Engineering/UniTutor-LTI-13-B2B.md]].
+
+## Single-env prod gate (k8s tenant_cd 아님)
+
+- UniTutor는 `.factory/cd.yaml` / `ta.tenant_cd[]` 미등록 → Cloudflare Pages+Workers **단일 환경**; merge 후 `deploy.yml`이 곧 prod.
+- prod gate = main SHA 일치 + Deploy success + public smoke (`api.tutor` / `unitutor.askwho.net`).
+- PathChrome UI 롤아웃 예: merge `73178e8` / Actions 38196130315 — [[wiki/Engineering/AI-Native-Engineering/UniTutor-PathChrome-Gating-Strip.md]].
 
 ## 게이트
 
