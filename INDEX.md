@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-10-13 | Root: wiki/
+[META] Updated: 2026-10-14 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,12 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-10-14 (km-wiki drain)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-10-14 github-issue empty + crewrp Phase 6 current + uni-tutor 403 skip
+- [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] — Phase 6 enqueue + uni-tutor membership 403
+- [[wiki/Engineering/Development-Environment/CrewRP-Phase6-Todo-Board-Comments.md]] — Phase 6 할 일·게시판 댓글 CRUD 티켓 축
+- inbox drain: pm×2 git rm; LiteRT-LM tip still v0.18.0 — ALREADY_COVERED
 
 ### UPD 2026-10-13 (km-wiki drain)
 - [[wiki/Engineering/AI-Native-Engineering/UniTutor-PathChrome-Gating-Strip.md]] — PathChrome 접힘 기본·CF single-env gate

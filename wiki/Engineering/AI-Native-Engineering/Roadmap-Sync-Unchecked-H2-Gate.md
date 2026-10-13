@@ -3,9 +3,9 @@ id: roadmap-sync-unchecked-h2-gate
 title: "ROADMAP sync: ## + 미완료 - [ ] 섹션만 enqueue"
 status: canonical
 owner: km
-updated: "2026-10-13"
-last_updated: "2026-10-13"
-review_after: "2027-01-13"
+updated: "2026-10-14"
+last_updated: "2026-10-14"
+review_after: "2027-01-14"
 sources:
   - schedule:pm-roadmap-sync
   - inbox/pm/2026-09-17-codingland-roadmap-sync-m4-idempotent.md
@@ -32,10 +32,13 @@ sources:
   - inbox/pm/2026-10-10-roadmap-sync.md
   - inbox/pm/2026-10-12-roadmap-sync.md
   - inbox/pm/2026-10-13-roadmap-sync.md
+  - inbox/pm/2026-10-14-roadmap-sync.md
   - ticket:6beb03a9-b4cf-4096-995d-20b98ca918a9
   - ticket:012deff8-61cf-4270-86f7-de83b5d1f32b
   - ticket:10fe0055-84a9-47c1-9e2c-5ca3f638c51a
   - ticket:d13290fa-bf2f-4f41-ac2a-e5d9db243eea
+  - ticket:51724bbd-8861-497d-b125-9b1e67ea2fd5
+  - ticket:4c55a7df-66c0-4f40-a65e-468bbf438b8d
 tags: ["Engineering", "AI-Native", "Roadmap", "Leantime", "Sync"]
 type: "wiki"
 ---
@@ -74,6 +77,7 @@ type: "wiki"
 - **2026-10-06···10 uni-tutor:** `## 나중`에 LMS/LTI `- [ ]` 1개만 남아 current; milestone `f8d92c00` 재사용 + LMS marker `4aa8d43d` → enqueue skip / `created=0`, pass-gate deferred (checkbox open). crewrp incomplete 0 → freeze no-op (Phase 4 invent 금지; pass-gate `f9f2416a` already `done`).
 - **2026-10-12:** crewrp current=`## Phase 4 — 소통 = Discord 계정 연동` → milestone `012deff8` + child `6beb03a9` (marker `roadmap:crewrp:discord-oauth-app-server-channel-keys-manual-e2e`); Phase 5/6 blocked. uni-tutor LMS/LTI still open checkbox + done marker `4aa8d43d` → `created=0` / doc lag; pass-gate deferred while any incomplete `##` remains. Discord E2E: [[wiki/Engineering/Development-Environment/CrewRP-Discord-OAuth-Manual-E2E.md]].
 - **2026-10-13:** crewrp current=`## Phase 5 — 소통 허브 + 홈 README` → milestone `10fe0055` + child `d13290fa` (`roadmap:crewrp:home-readme-comm-category-manual-e2e`); Phase 6 blocked. uni-tutor LMS/LTI still open checkbox + done marker `4aa8d43d` → `created=0` / doc lag. Phase 5 E2E: [[wiki/Engineering/Development-Environment/CrewRP-Phase5-Home-Comm-Manual-E2E.md]].
+- **2026-10-14:** crewrp current=`## Phase 6 — 할 일·게시판 댓글` → milestone `51724bbd` + child `4c55a7df` (`roadmap:crewrp:todo-board-comment-crud-manual-e2e`); Phase 7+ blocked. uni-tutor: registry 있으나 pm membership 403 → skip enqueue. Pass-gate N/A while incomplete `##` remains; `tenant_cd` N/A for crewrp. Phase 6: [[wiki/Engineering/Development-Environment/CrewRP-Phase6-Todo-Board-Comments.md]].
 
 ## 🔗 관련 문서
 
@@ -83,3 +87,4 @@ type: "wiki"
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]]
 - [[wiki/Engineering/Development-Environment/CrewRP-Discord-OAuth-Manual-E2E.md]]
 - [[wiki/Engineering/Development-Environment/CrewRP-Phase5-Home-Comm-Manual-E2E.md]]
+- [[wiki/Engineering/Development-Environment/CrewRP-Phase6-Todo-Board-Comments.md]]
