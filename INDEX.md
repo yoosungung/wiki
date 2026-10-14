@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-10-14 | Root: wiki/
+[META] Updated: 2026-10-15 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,15 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-10-15 (km-wiki drain)
+- [[wiki/Engineering/Development-Environment/CrewRP-Study-Build-Sim-Regressions.md]] — Study tip 빌드·시뮬 회귀 (Compose modifier·Swift Regex·fullScreenCover·온보딩 CTA)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Timeline-List-Row-4col.md]] — Timeline 4-cell vs 공유 `.list-row` 3-col → `.list-timeline`
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Your-Work-Exclude-Done.md]] — Assigned `exclude_done=true` (API 우선)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-10-15 github-issue empty + Phase 6 doc-lag + uni-tutor 403
+- [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] — Phase 6 children done / checkbox open; uni-tutor 403+LMS 404
+- [[wiki/Engineering/Development-Environment/CrewRP-Phase6-Todo-Board-Comments.md]] — board Done + ROADMAP doc lag
+- inbox drain: pm×5 + sw-factory×2 + crewrp×1 git rm; LiteRT-LM tip still v0.18.0 — ALREADY_COVERED
 
 ### UPD 2026-10-14 (km promote — PC web defer)
 - [[wiki/Engineering/Development-Environment/CrewRP-PC-Web-Plan-Options.md]] — Decision D (2026-10-14): PC/웹 보류·동결 유지; waiting_for_approval 문구 제거

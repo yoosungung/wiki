@@ -3,9 +3,9 @@ id: roadmap-sync-unchecked-h2-gate
 title: "ROADMAP sync: ## + 미완료 - [ ] 섹션만 enqueue"
 status: canonical
 owner: km
-updated: "2026-10-14"
-last_updated: "2026-10-14"
-review_after: "2027-01-14"
+updated: "2026-10-15"
+last_updated: "2026-10-15"
+review_after: "2027-01-15"
 sources:
   - schedule:pm-roadmap-sync
   - inbox/pm/2026-09-17-codingland-roadmap-sync-m4-idempotent.md
@@ -33,6 +33,7 @@ sources:
   - inbox/pm/2026-10-12-roadmap-sync.md
   - inbox/pm/2026-10-13-roadmap-sync.md
   - inbox/pm/2026-10-14-roadmap-sync.md
+  - inbox/pm/2026-10-15-roadmap-sync.md
   - ticket:6beb03a9-b4cf-4096-995d-20b98ca918a9
   - ticket:012deff8-61cf-4270-86f7-de83b5d1f32b
   - ticket:10fe0055-84a9-47c1-9e2c-5ca3f638c51a
@@ -78,6 +79,7 @@ type: "wiki"
 - **2026-10-12:** crewrp current=`## Phase 4 — 소통 = Discord 계정 연동` → milestone `012deff8` + child `6beb03a9` (marker `roadmap:crewrp:discord-oauth-app-server-channel-keys-manual-e2e`); Phase 5/6 blocked. uni-tutor LMS/LTI still open checkbox + done marker `4aa8d43d` → `created=0` / doc lag; pass-gate deferred while any incomplete `##` remains. Discord E2E: [[wiki/Engineering/Development-Environment/CrewRP-Discord-OAuth-Manual-E2E.md]].
 - **2026-10-13:** crewrp current=`## Phase 5 — 소통 허브 + 홈 README` → milestone `10fe0055` + child `d13290fa` (`roadmap:crewrp:home-readme-comm-category-manual-e2e`); Phase 6 blocked. uni-tutor LMS/LTI still open checkbox + done marker `4aa8d43d` → `created=0` / doc lag. Phase 5 E2E: [[wiki/Engineering/Development-Environment/CrewRP-Phase5-Home-Comm-Manual-E2E.md]].
 - **2026-10-14:** crewrp current=`## Phase 6 — 할 일·게시판 댓글` → milestone `51724bbd` + child `4c55a7df` (`roadmap:crewrp:todo-board-comment-crud-manual-e2e`); Phase 7+ blocked. uni-tutor: registry 있으나 pm membership 403 → skip enqueue. Pass-gate N/A while incomplete `##` remains; `tenant_cd` N/A for crewrp. Phase 6: [[wiki/Engineering/Development-Environment/CrewRP-Phase6-Todo-Board-Comments.md]].
+- **2026-10-15:** crewrp current still Phase 6 (ROADMAP `- [ ]` open) but milestone `51724bbd` + child `4c55a7df` already **done** → dedup skip / `created=0`; Phase 7+ blocked until checkbox closed; pass-gate deferred. uni-tutor: pm membership 403 지속 + LMS ticket `4aa8d43d` GET 404 → skip enqueue. `tenant_cd` N/A for crewrp.
 
 ## 🔗 관련 문서
 

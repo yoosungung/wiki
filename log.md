@@ -1,6 +1,10 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-10-15 | INBOX_DRAIN | inbox/ | 9 | Study-build×3 + Timeline×2 + YourWork×2 + GH-empty + roadmap → Study/Timeline/YourWork/Ops/Roadmap/Phase6; git rm |
+| 2026-10-15 | SYNTHESIZE | wiki/ | 8 | Study-Build-Sim·Timeline-4col·Your-Work-Exclude 신규; Ops·Roadmap·Phase6·MOC×2·INDEX |
+| 2026-10-15 | ALREADY_COVERED | wiki/ | 1 | LiteRT-LM tip still v0.18.0 (`스마트폰-환경의-LLM-서빙-기술-2026` §3.3); 0.19 nightly only |
+| 2026-10-15 | CLEANUP | inbox/ & root | 10 | inbox 9 git rm; D-0(2026-10-15)·D-1(2026-10-14) 유지; D-2(2026-10-13) 삭제 |
 | 2026-10-13 | INBOX_DRAIN | inbox/ | 13 | PathChrome×5 + Phase5×3 + GH-empty + roadmap + weekly NF×3 → PathChrome/Phase5/Ops/Roadmap/Tenant/CF; git rm |
 | 2026-10-13 | SYNTHESIZE | wiki/ | 8 | PathChrome·Phase5 신규; Factory-Ops·Roadmap-Sync·Tenant-Quality·CF-Deploy·MOC×2·INDEX |
 | 2026-10-13 | ALREADY_COVERED | wiki/ | 1 | LiteRT-LM tip still v0.18.0 (`스마트폰-환경의-LLM-서빙-기술-2026` §3.3) |
