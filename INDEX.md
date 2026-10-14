@@ -53,6 +53,10 @@
 
 ## 📌 KEY_FILE_LIST
 
+### UPD 2026-10-14 (km promote — PC web defer)
+- [[wiki/Engineering/Development-Environment/CrewRP-PC-Web-Plan-Options.md]] — Decision D (2026-10-14): PC/웹 보류·동결 유지; waiting_for_approval 문구 제거
+- inbox drain: `inbox/pm/2026-10-14-crewrp-pc-web-defer.md` git rm
+
 ### UPD 2026-10-14 (km-wiki drain)
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-10-14 github-issue empty + crewrp Phase 6 current + uni-tutor 403 skip
 - [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] — Phase 6 enqueue + uni-tutor membership 403
@@ -91,7 +95,7 @@
 ### UPD 2026-10-10 (km-wiki drain)
 - [[wiki/Engineering/Development-Environment/CrewRP-iOS-Due-Edit-Silent-Noop.md]] — iOS 납기 silent no-op + PR#7 Intent
 - [[wiki/Engineering/Development-Environment/CrewRP-Docs-Tab-List-Detail.md]] — 자료실 목록→상세·lazy 드릴다운
-- [[wiki/Engineering/Development-Environment/CrewRP-PC-Web-Plan-Options.md]] — PC web OAuth·옵션 A–D (freeze 하)
+- [[wiki/Engineering/Development-Environment/CrewRP-PC-Web-Plan-Options.md]] — Decision D (2026-10-14): PC/웹 보류; 옵션 A–C 참고만
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-10-10 github-issue empty + roadmap freeze/doc-lag
 - [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] — uni-tutor 1× LMS / crewrp freeze no-op
 
