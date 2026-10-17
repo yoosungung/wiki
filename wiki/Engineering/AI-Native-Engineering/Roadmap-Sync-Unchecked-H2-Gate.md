@@ -3,8 +3,8 @@ id: roadmap-sync-unchecked-h2-gate
 title: "ROADMAP sync: ## + 미완료 - [ ] 섹션만 enqueue"
 status: canonical
 owner: km
-updated: "2026-10-17"
-last_updated: "2026-10-17"
+updated: "2026-10-18"
+last_updated: "2026-10-18"
 review_after: "2027-01-15"
 sources:
   - schedule:pm-roadmap-sync
@@ -36,6 +36,7 @@ sources:
   - inbox/pm/2026-10-15-roadmap-sync.md
   - inbox/pm/2026-10-16-roadmap-sync.md
   - inbox/pm/2026-10-17-roadmap-sync.md
+  - inbox/pm/2026-10-18-roadmap-sync.md
   - ticket:6beb03a9-b4cf-4096-995d-20b98ca918a9
   - ticket:012deff8-61cf-4270-86f7-de83b5d1f32b
   - ticket:10fe0055-84a9-47c1-9e2c-5ca3f638c51a
@@ -84,6 +85,7 @@ type: "wiki"
 - **2026-10-15:** crewrp current still Phase 6 (ROADMAP `- [ ]` open) but milestone `51724bbd` + child `4c55a7df` already **done** → dedup skip / `created=0`; Phase 7+ blocked until checkbox closed; pass-gate deferred. uni-tutor: pm membership 403 지속 + LMS ticket `4aa8d43d` GET 404 → skip enqueue. `tenant_cd` N/A for crewrp.
 - **2026-10-16:** crewrp still Phase 6 (1× `- [ ]` 수동 E2E); parent `51724bbd` + child `4c55a7df` done → dedup skip `created=0`; Phase 7+ blocked / pass-gate deferred until ROADMAP checkbox closed. uni-tutor: current=`## 나중` LMS/LTI `- [ ]` 1×; pm membership 403 → list/create skip (human: add pm to UniTutorAI). `tenant_cd` N/A.
 - **2026-10-17:** crewrp same Phase 6 doc lag → dedup skip `created=0`; pass-gate deferred. uni-tutor: `## 나중` LMS/LTI `- [ ]` 1×; pm membership 403 → skip (add pm to UniTutorAI `1fc753f5-…`). `tenant_cd` N/A.
+- **2026-10-18:** crewrp still Phase 6 (1× `- [ ]` 수동 E2E); parent `51724bbd` + child `4c55a7df` done → dedup skip `created=0`; Phase 7+ blocked / pass-gate deferred until ROADMAP checkbox closed. No ROADMAP rewrite. uni-tutor: project `1fc753f5-…` GET 403 for pm → skip (registry lists it; local `agents.yaml` pm.roadmaps crewrp-only). `tenant_cd` N/A.
 
 ## 🔗 관련 문서
 
