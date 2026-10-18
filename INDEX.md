@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-10-18 | Root: wiki/
+[META] Updated: 2026-10-19 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,12 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-10-19 (km-wiki drain)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-10-19 github-issue empty + Phase 6 doc-lag + uni-tutor 403
+- [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] — Phase 6 children done / checkbox open; uni-tutor 403 skip
+- [[wiki/Engineering/Development-Environment/CrewRP-Phase6-Todo-Board-Comments.md]] — board Done + ROADMAP doc lag (2026-10-19)
+- inbox drain: pm×2 git rm; LiteRT-LM tip still v0.18.0 (0.19 nightly only) — ALREADY_COVERED
 
 ### UPD 2026-10-18 (km-wiki drain)
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-10-18 github-issue empty + Phase 6 doc-lag + uni-tutor 403
