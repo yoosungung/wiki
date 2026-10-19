@@ -3,10 +3,12 @@ id: roadmap-sync-unchecked-h2-gate
 title: "ROADMAP sync: ## + 미완료 - [ ] 섹션만 enqueue"
 status: canonical
 owner: km
-updated: "2026-10-19"
-last_updated: "2026-10-19"
+updated: "2026-10-20"
+last_updated: "2026-10-20"
 review_after: "2027-01-15"
 sources:
+  - inbox/pm/2026-10-20-roadmap-sync.md
+  - inbox/pm/2026-10-19-roadmap-sync.md
   - schedule:pm-roadmap-sync
   - inbox/pm/2026-09-17-codingland-roadmap-sync-m4-idempotent.md
   - inbox/pm/2026-09-15-roadmap-sync-codingland-m4.md
@@ -87,6 +89,7 @@ type: "wiki"
 - **2026-10-16:** crewrp still Phase 6 (1× `- [ ]` 수동 E2E); parent `51724bbd` + child `4c55a7df` done → dedup skip `created=0`; Phase 7+ blocked / pass-gate deferred until ROADMAP checkbox closed. uni-tutor: current=`## 나중` LMS/LTI `- [ ]` 1×; pm membership 403 → list/create skip (human: add pm to UniTutorAI). `tenant_cd` N/A.
 - **2026-10-17:** crewrp same Phase 6 doc lag → dedup skip `created=0`; pass-gate deferred. uni-tutor: `## 나중` LMS/LTI `- [ ]` 1×; pm membership 403 → skip (add pm to UniTutorAI `1fc753f5-…`). `tenant_cd` N/A.
 - **2026-10-18:** crewrp still Phase 6 (1× `- [ ]` 수동 E2E); parent `51724bbd` + child `4c55a7df` done → dedup skip `created=0`; Phase 7+ blocked / pass-gate deferred until ROADMAP checkbox closed. No ROADMAP rewrite. uni-tutor: project `1fc753f5-…` GET 403 for pm → skip (registry lists it; local `agents.yaml` pm.roadmaps crewrp-only). `tenant_cd` N/A.
+- **2026-10-19···20:** crewrp same Phase 6 doc lag → dedup skip `created=0`; pass-gate deferred until ROADMAP checkbox closed. uni-tutor: `GET /api/projects/1fc753f5…/tickets` → **403** → skip. `tenant_cd` N/A.
 
 ## 🔗 관련 문서
 

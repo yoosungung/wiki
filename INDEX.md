@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-10-19 | Root: wiki/
+[META] Updated: 2026-10-20 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,14 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-10-20 (km-wiki drain)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-10-20 github-issue empty + Phase 6 doc-lag + uni-tutor 403
+- [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] — Phase 6 children done / checkbox open; uni-tutor 403 skip
+- [[wiki/Engineering/Development-Environment/CrewRP-Phase6-Todo-Board-Comments.md]] — board Done + ROADMAP doc lag (2026-10-20)
+- [[wiki/Engineering/AI-Native-Engineering/Tenant-Quality-Yaml-Gate-Skip-Pattern.md]] — 2026-10-19 ta/aa/qa weekly NF skip (no quality.yaml)
+- [[wiki/Engineering/AI-Native-Engineering/Tenant-Repo-Sync-Dirty-Tree-Skip.md]] — 2026-10-19 sw-factory dirty sync skip
+- inbox drain: pm×2 + qa/aa/ta×1 git rm; LiteRT-LM tip still v0.18.0 — ALREADY_COVERED
 
 ### UPD 2026-10-19 (km-wiki drain)
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-10-19 github-issue empty + Phase 6 doc-lag + uni-tutor 403

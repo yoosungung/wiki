@@ -3,10 +3,11 @@ id: tenant-repo-sync-dirty-tree-skip
 title: "tenant-repo-sync: dirty working tree → skip sync (no stash)"
 status: canonical
 owner: km
-updated: "2026-10-06"
+updated: "2026-10-20"
 review_after: "2027-01-05"
 sources:
   - inbox/qa/2026-10-05-qa-bulk-weekly.md
+  - inbox/qa/2026-10-19-qa-bulk-weekly.md
   - schedule:qa-bulk-weekly
   - schedule:aa-clean-weekly
   - schedule:ta-load-weekly
@@ -29,6 +30,11 @@ type: "wiki"
 
 - `repo_id=sw-factory` dirty: `@rollup/rollup-linux-arm64-gnu` add → skip sync; HEAD behind origin/main by 59.
 - crewrp / uni-tutor: clean sync 후 모두 `quality.yaml` 없음 → bulk_api/opik skip; factory `/api/health` 200만 스모크.
+
+## 2026-10-19 사례 (qa)
+
+- `repo_id=sw-factory` dirty: `package.json`/`package-lock.json` → skip sync (no stash); tip `8e6f8af`는 origin만 조회.
+- crewrp / uni-tutor: clean sync (`d27b67c` / `73178e8`) 후 `quality.yaml` 없음 → bulk_api/opik skip; factory `/api/health` 200 `qa: pass`.
 
 ## 🔗 관련 문서
 

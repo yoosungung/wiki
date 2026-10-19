@@ -1,6 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-10-20 | INBOX_DRAIN | inbox/ | 5 | pm×2 + qa/aa/ta weekly → Factory-Ops/Roadmap-Sync/Phase6/Tenant-Quality/Dirty-Tree; git rm |
+| 2026-10-20 | RESEARCH | 연구_주제_관리.md | 1 | wiki-first+웹: LiteRT-LM tip still v0.18.0 → ALREADY_COVERED |
+| 2026-10-20 | SYNTHESIZE | wiki/Engineering | 5 | Factory-Ops·Roadmap-Sync·Phase6·Tenant-Quality·Dirty-Tree-Skip |
+| 2026-10-20 | ALREADY_COVERED | wiki/ | 1 | LiteRT-LM tip still v0.18.0 (`스마트폰-환경의-LLM-서빙-기술-2026` §3.3) |
+| 2026-10-20 | CLEANUP | inbox/ & root | 7 | inbox 5 git rm; D-0(2026-10-20)·D-1(2026-10-19) 유지; D-2(2026-10-18) 삭제 |
 | 2026-10-19 | INBOX_DRAIN | inbox/ | 2 | GH-empty + roadmap-sync → Factory-Ops/Roadmap-Sync/Phase6; git rm |
 | 2026-10-19 | SYNTHESIZE | wiki/ | 4 | Factory-Ops·Roadmap-Sync·Phase6·INDEX 갱신 |
 | 2026-10-19 | ALREADY_COVERED | wiki/ | 1 | LiteRT-LM tip still v0.18.0 (`스마트폰-환경의-LLM-서빙-기술-2026` §3.3); 0.19 nightly only |

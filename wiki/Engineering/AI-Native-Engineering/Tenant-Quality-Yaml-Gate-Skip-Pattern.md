@@ -3,10 +3,13 @@ id: tenant-quality-yaml-gate-skip-pattern
 title: "테넌트 quality.yaml 게이트 키 누락 시 skip (NF 미생성)"
 status: canonical
 owner: km
-updated: "2026-10-13"
-last_updated: "2026-10-13"
+updated: "2026-10-20"
+last_updated: "2026-10-20"
 review_after: "2027-01-13"
 sources:
+  - inbox/qa/2026-10-19-qa-bulk-weekly.md
+  - inbox/aa/2026-10-19-aa-clean-weekly.md
+  - inbox/ta/2026-10-19-ta-load-weekly.md
   - ticket:414
   - ticket:85
   - ticket:86
@@ -131,6 +134,18 @@ Active 없는 스케줄 → orphan Outcome 금지. 장시간/`nf-progress:` N/A 
 | qa-bulk-weekly | 3 repo no `bulk_api`/`opik` → skip; factory `/api/health` 200 `qa: pass`; sw-factory dirty WT → sync skip (behind origin; no stash) |
 
 Active 없는 스케줄 → orphan Outcome 금지. `nf-progress:` N/A.
+
+## 2026-10-19 주간 NF (ta/aa/qa)
+
+동일 registry 3 repo (`sw-factory` / `crewrp` / `uni-tutor`). tip sync 후 Discover — `.factory/quality.yaml` 전무 → 전수 skip; NF New=0.
+
+| 스케줄 | 결과 |
+| :--- | :--- |
+| ta-load-weekly | 3 repo no `load.command` → skip; NF=0; uni-tutor project list 403 (멤버십) — path sync만 |
+| aa-clean-weekly | 3 repo no `clean_code:` → skip; High/Med=0; not a prod gate |
+| qa-bulk-weekly | 3 repo no `bulk_api`/`opik` → skip; factory `/api/health` 200 `qa: pass`; sw-factory dirty WT (`package.json`/`package-lock.json`) → sync skip (no stash); tip `8e6f8af` origin-only |
+
+Active 없는 스케줄 → orphan Outcome 금지. `nf-progress:` N/A (명령 미기동).
 
 ## 🔗 관련 문서
 
