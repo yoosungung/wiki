@@ -1,6 +1,10 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-10-21 | INBOX_DRAIN | inbox/ | 2 | pm GH-empty + roadmap-sync → Factory-Ops/Roadmap-Sync/Phase6; git rm |
+| 2026-10-21 | RESEARCH | 연구_주제_관리.md | 1 | wiki-first+웹: LiteRT-LM tip **v0.18.1** (2026-10-20) EmbeddingGemma 2 ABI source-build fix |
+| 2026-10-21 | SYNTHESIZE | wiki/ | 4 | Factory-Ops·Roadmap-Sync·Phase6·스마트폰-서빙 §3.3 v0.18.1 |
+| 2026-10-21 | CLEANUP | inbox/ & root | 4 | inbox 2 git rm; D-0(2026-10-21)·D-1(2026-10-20) 유지; D-2(2026-10-19) 삭제 |
 | 2026-10-20 | INBOX_DRAIN | inbox/ | 5 | pm×2 + qa/aa/ta weekly → Factory-Ops/Roadmap-Sync/Phase6/Tenant-Quality/Dirty-Tree; git rm |
 | 2026-10-20 | RESEARCH | 연구_주제_관리.md | 1 | wiki-first+웹: LiteRT-LM tip still v0.18.0 → ALREADY_COVERED |
 | 2026-10-20 | SYNTHESIZE | wiki/Engineering | 5 | Factory-Ops·Roadmap-Sync·Phase6·Tenant-Quality·Dirty-Tree-Skip |

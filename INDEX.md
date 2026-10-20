@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-10-20 | Root: wiki/
+[META] Updated: 2026-10-21 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,13 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-10-21 (km-wiki drain)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-10-21 github-issue empty + Phase 6 doc-lag + uni-tutor 403
+- [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] — Phase 6 children done / checkbox open; uni-tutor 403 skip
+- [[wiki/Engineering/Development-Environment/CrewRP-Phase6-Todo-Board-Comments.md]] — board Done + ROADMAP doc lag (2026-10-21)
+- [[wiki/Models/Optimization-and-Serving/스마트폰-환경의-LLM-서빙-기술-2026.md]] — LiteRT-LM tip v0.18.1 EmbeddingGemma 2 ABI source-build fix
+- inbox drain: pm×2 git rm; LiteRT-LM tip **v0.18.1**
 
 ### UPD 2026-10-20 (km-wiki drain)
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-10-20 github-issue empty + Phase 6 doc-lag + uni-tutor 403
@@ -157,7 +164,7 @@
 - [[wiki/Engineering/AI-Native-Engineering/UniTutor-PWA-Installable-Shell.md]] — Option B installable PWA shell
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-10-07 github-issue empty + roadmap freeze/doc-lag
 - [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] — uni-tutor 1× LMS / crewrp freeze no-op
-- [[wiki/Models/Optimization-and-Serving/스마트폰-환경의-LLM-서빙-기술-2026.md]] — LiteRT-LM tip v0.18.0 EmbeddingGemma 2
+- [[wiki/Models/Optimization-and-Serving/스마트폰-환경의-LLM-서빙-기술-2026.md]] — LiteRT-LM tip v0.18.1 EmbeddingGemma 2 ABI fix
 
 ### UPD 2026-10-06 (km-wiki drain)
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-10-06 github-issue-check empty + roadmap no-op/doc-lag
