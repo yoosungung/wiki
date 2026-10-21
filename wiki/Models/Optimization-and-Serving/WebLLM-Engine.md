@@ -4,8 +4,8 @@ status: "published"
 category: "Models"
 subcategory: "Optimization-and-Serving"
 tags: [WebLLM, MLC-LLM, WebGPU, Browser-LLM]
-last_updated: "2026-09-20"
-updated: "2026-09-20"
+last_updated: "2026-10-22"
+updated: "2026-10-22"
 related_raw: [
   "[[raw/2026-09-20-webllm-v0.2.85-opfs-sync-worker.md]]",
   "[[raw/2026-05-13-WebLLM-Home.md]]",
@@ -57,6 +57,17 @@ const reply = await engine.chat.completions.create({
 - 서비스 워커 핸들러를 기동 시 등록하고, 복구된 워커의 모델 상태를 보존해 reload 루프를 끊는다.
 - Chat Completions `created`는 초 단위. NaN 샘플링 파라미터는 거절하고, 잘못된 structural tag는 행(hang) 대신 실패한다.
 - 표준화·3W 스택 맥락: [[wiki/Engineering/Development-Environment/WebGPU-및-WebNN-표준화-현황-2026.md]].
+
+## v0.2.86 Gemma 4 E2B · 카탈로그 재빌드 (2026-10-11)
+
+[v0.2.86](https://github.com/mlc-ai/web-llm/releases/tag/v0.2.86)(`c42c366`)은 **가중치 카탈로그를 바꾼다**. `v0_2_86/base`로 올리고, 엔진만 올리는 0.2.85와 다르다.
+
+1. **Gemma 4 E2B IT** — `q4f16_1` / `q4f32_1`, 텍스트+오디오. FP32 변형은 `shader-f16` 불필요.
+2. **TVM** — `@mlc-ai/web-runtime@0.28.0-dev0`. WebGPU 라이브러리 224개 재빌드(base 112 + sg32 112).
+3. **Phi-3.5 vision** — 기본 정사각 이미지용 4K-prefill 라이브러리(기존 2K는 binary 폴더에 잔류).
+4. **로더** — manifest 기반 audio/image(옵트인, 기존 레코드는 legacy 경로). crash-resumable generation. 중단 대화·취소 스트림·모델 lock·토큰 카운트·오디오 cleanup 수정.
+
+핀은 `@mlc-ai/web-llm@0.2.86`. 브라우저 서빙: [[wiki/Models/Optimization-and-Serving/브라우저-기반-LLM-서빙-기술-및-아키텍처-2026.md]].
 
 ## 관련 문서
 - [[wiki/Models/Optimization-and-Serving/Browser-AI-Inference-MOC.md|Browser AI Inference MOC]]

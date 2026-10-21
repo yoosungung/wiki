@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-10-21 | Root: wiki/
+[META] Updated: 2026-10-22 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,13 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-10-22 (km-wiki drain)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-10-22 github-issue empty skip (PR#24 only)
+- [[wiki/RAG/Graphiti-Overview.md]] — graphiti-core **0.31.2** (gpt-6-luna · LLMRuntime · C2 · certifi eMudhra)
+- [[wiki/RAG/Graphiti-MCP.md]] — MCP SDK 2.x · localhost default · server 1.1.2
+- [[wiki/Models/Optimization-and-Serving/WebLLM-Engine.md]] — WebLLM **v0.2.86** Gemma 4 E2B + `v0_2_86/base`
+- inbox drain: pm×1 git rm; LiteRT-LM tip still **v0.18.1** — ALREADY_COVERED
 
 ### UPD 2026-10-21 (km-wiki drain)
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-10-21 github-issue empty + Phase 6 doc-lag + uni-tutor 403

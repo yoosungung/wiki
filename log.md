@@ -1,6 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-10-22 | INBOX_DRAIN | inbox/ | 1 | pm GH-empty → Factory-Ops; git rm |
+| 2026-10-22 | RESEARCH | 연구_주제_관리.md | 3 | wiki-first+웹: LiteRT-LM tip still v0.18.1 ALREADY; Graphiti 0.31.2·WebLLM 0.2.86 신규 |
+| 2026-10-22 | SYNTHESIZE | wiki/ | 11 | Factory-Ops; Graphiti Overview/MCP/Arch/Driver/Episode/Helix; WebLLM-Engine·브라우저서빙·WebGPU·스마트폰서빙 |
+| 2026-10-22 | ALREADY_COVERED | wiki/ | 1 | LiteRT-LM tip still v0.18.1 (`스마트폰-환경의-LLM-서빙-기술-2026` §3.3) |
+| 2026-10-22 | CLEANUP | inbox/ & root | 3 | inbox 1 git rm; D-0(2026-10-22)·D-1(2026-10-21) 유지; D-2(2026-10-20) 삭제 |
 | 2026-10-21 | INBOX_DRAIN | inbox/ | 2 | pm GH-empty + roadmap-sync → Factory-Ops/Roadmap-Sync/Phase6; git rm |
 | 2026-10-21 | RESEARCH | 연구_주제_관리.md | 1 | wiki-first+웹: LiteRT-LM tip **v0.18.1** (2026-10-20) EmbeddingGemma 2 ABI source-build fix |
 | 2026-10-21 | SYNTHESIZE | wiki/ | 4 | Factory-Ops·Roadmap-Sync·Phase6·스마트폰-서빙 §3.3 v0.18.1 |

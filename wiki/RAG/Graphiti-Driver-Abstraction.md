@@ -10,8 +10,8 @@ tags:
   - graphiti
 type: wiki
 status: draft
-last_updated: "2026-09-16"
-updated: "2026-09-16"
+last_updated: "2026-10-22"
+updated: "2026-10-22"
 ---
 
 ### 드라이버 추상화
@@ -56,6 +56,13 @@ class GraphDriver(ABC):
 
 3. **멀티 `group_id` 동시성 (0.30.2+)**  
    - 요청 스코프 드라이버로 concurrent multi-`group_id` 격리. `group_ids` 클리어 시 Saga 노드 포함.
+
+### v0.31.x 드라이버 (2026-10-14···20)
+
+4. **Neptune fulltext `group` 필터 (0.31.2+)**  
+   - fulltext 검색에 group 필터를 적용하고 list 파라미터를 바인딩(#2031). 멀티테넌트 Neptune에서 그룹 미필터 히트를 가정하지 말 것.
+5. **FalkorDB 6.x 노드 fulltext DDL (0.31.0+)**  
+   - 노드 fulltext 인덱스를 DDL 형으로 생성(#1963). FalkorDB 6와 구 인덱스 문법을 섞지 말 것.
 
 관련: [[wiki/RAG/Graphiti-MCP.md]], [[wiki/RAG/Graphiti-Overview.md]], [[wiki/RAG/GraphRAG-vs-LightRAG-2026.md]].
 

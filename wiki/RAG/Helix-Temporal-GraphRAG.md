@@ -3,8 +3,8 @@ id: helix-temporal-graphrag
 title: "Helix Temporal GraphRAG (LightRAG + Graphiti 결합)"
 status: canonical
 owner: km
-updated: "2026-09-22"
-last_updated: "2026-09-22"
+updated: "2026-10-22"
+last_updated: "2026-10-22"
 review_after: "2026-12-21"
 related_raw:
   - "[[raw/2026-09-22-helix-temporal-graphrag-lightrag-graphiti.md]]"
@@ -48,7 +48,7 @@ LLM_API_KEY=...
 # optional: SUPABASE_URL / SUPABASE_KEY
 ```
 
-의존성 메타데이터는 `graphiti-core>=0.27.1`이다. org-wiki 정본 스택은 Graphiti **0.30.2**·LightRAG **v1.5.7**이므로, Helix를 올릴 때 **코어 핀을 재검증**한다 — [[wiki/RAG/Graphiti-Overview.md]], [[wiki/RAG/LightRAG-Summary-2026.md]].
+의존성 메타데이터는 `graphiti-core>=0.27.1`이다. org-wiki 정본 스택은 Graphiti **0.31.2**·LightRAG **v1.5.7**이므로, Helix를 올릴 때 **코어 핀을 재검증**한다 — [[wiki/RAG/Graphiti-Overview.md]], [[wiki/RAG/LightRAG-Summary-2026.md]].
 
 ## 구현 패턴
 

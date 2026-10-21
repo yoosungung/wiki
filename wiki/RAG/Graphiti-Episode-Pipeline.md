@@ -9,8 +9,8 @@ tags:
   - graphiti
 type: wiki
 status: draft
-last_updated: "2026-04-19"
-updated: "2026-04-19"
+last_updated: "2026-10-22"
+updated: "2026-10-22"
 ---
 
 ### 에피소드 처리 파이프라인
@@ -43,6 +43,12 @@ graphiti_core/graphiti.py(501:558)
                 self.driver, [episode], episodic_edges, hydrated_nodes, entity_edges, self.embedder
             )
 ```
+
+### v0.31.2 에피소드 삭제·벌크 (2026-10-20)
+
+- `remove_episode`: restated fact를 남기고 summary를 다시 만든다(#2025). 삭제 = 그래프에서 에피소드만 지운다고 가정하지 말 것.
+- `add_episode_bulk`: 에피소드에 supported edges를 기록(#2030). 벌크 적재 후 엣지 포인터가 비면 0.31.2 미만 핀을 의심.
+- 릴리스 앵커: [[wiki/RAG/Graphiti-Overview.md]].
 
 
 

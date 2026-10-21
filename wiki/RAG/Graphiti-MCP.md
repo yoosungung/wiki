@@ -11,8 +11,8 @@ tags:
   - graphiti
 type: wiki
 status: draft
-last_updated: "2026-09-19"
-updated: "2026-09-19"
+last_updated: "2026-10-22"
+updated: "2026-10-22"
 sources:
   - https://pypi.org/project/graphiti-local/
   - raw/2026-09-19-graphiti-local-readonly-mcp.md
@@ -38,6 +38,15 @@ sources:
 - **`NEO4J_DATABASE` 명시**: MCP 서버가 드라이버 DB 설정을 존중하도록 수정됨(#1812). 기본 `neo4j`가 아니면 환경변수/설정을 반드시 맞춤 — [[wiki/RAG/Graphiti-Driver-Abstraction.md]]의 `execute_query` 라우팅과 동일 계열.
 - **멀티 테넌트 `group_id`**: 동시 요청 isolation은 요청 스코프 드라이버에 의존(0.30.2+). `clear` by `group_ids` 시 Saga 노드 누락 수정 포함.
 - **업그레이드 순서**: graphiti-core ≥0.30.2 → MCP 이미지/프로세스 재기동 → `http://graphiti/status`로 연결·DB 확인.
+
+### v0.31.x MCP (2026-10-14···20)
+
+출처: [v0.31.0](https://github.com/getzep/graphiti/releases/tag/v0.31.0), [v0.31.2](https://github.com/getzep/graphiti/releases/tag/v0.31.2).
+
+- **MCP SDK 2.x** (`mcp_server`). 도구는 요청 `group_id` 그래프만 본다(#1926).
+- 참조 MCP/REST 서버는 **reference-only**. 기본 listen은 **localhost** — 공개 바인딩을 가정하지 말 것(#2032/#2035).
+- 핀: graphiti-core **0.31.2** + MCP 서버 **1.1.2** + `certifi>=2026.10.19`(eMudhra).
+- 업그레이드: core 0.31.2 → MCP 1.1.2 재기동 → `http://graphiti/status`. graphiti-local 0.4.1 핀(`0.30.1`)과 섞지 말 것.
 
 ### graphiti-local 0.4.1 — 읽기 전용 MCP + 사람 승인 큐 (2026-09-18)
 
