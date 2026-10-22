@@ -3,8 +3,8 @@ title: "Supermemory: 에이전트 네이티브 메모리 시스템 및 MCP 아�
 tags: ["Agents", "Implementation", "Memory", "Supermemory", "MCP", "SMFS", "Cloudflare"]
 type: "wiki"
 status: "published"
-last_updated: "2026-10-03"
-updated: "2026-10-03"
+last_updated: "2026-10-23"
+updated: "2026-10-23"
 related_raw: ["[[raw/2026-09-20-supermemory-documentdate-backfill-openapi-root.md]]", "[[raw/2026-09-14-supermemory-discontinue-company-brain-nova.md]]", "[[raw/2026-08-31-mcp-memory-servers-stateless-letta-mem0.md]]", "[[raw/2026-08-28-supermemory-memory-governance-auto-decay.md]]", "[[2026-08-27-supermemory_mcp_memory_governance.md]]", "[[2026-08-25-supermemory-mcp-v4-tool-surface.md]]", "[[2026-08-24-supermemory-team-mcp-permissions.md]]", "[[2026-08-24-supermemory-python-sdk-profile-dedupe.md]]", "[[2026-08-18-supermemory-dynamic-dreaming-sla.md]]", "[[2026-08-17-supermemory-memorybench-skill-pipeline.md]]", "[[2026-08-08-supermemory-forget-matching-ids.md]]", "[[2026-08-02-supermemory-company-brain-skills.md]]", "[[2026-07-29-supermemory-company-brain-proactivity-nova.md]]", "[[2026-07-28-supermemory-company-brain-custom-mcp.md]]", "[[2026-07-26-supermemory-chatgpt-mcp-setup.md]]", "[[2026-07-25-supermemory-cursor-agents-company-brain.md]]", "[[2026-07-24-supermemory-mcp-scope-opencode.md]]", "[[2026-07-23-supermemory-agents-memory-workspace.md]]", "[[2026-07-22-supermemory-company-brain-open-signup.md]]", "[[2026-07-21-supermemory-mcp-tool-safety-annotations.md]]", "[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-06-19-supermemory_research.md]]", "[[2026-06-26-supermemory_mcp_memory_layer.md]]", "[[2026-06-28-supermemory_mcp_memory_layer_architecture.md]]", "[[2026-06-30-supermemory_mcp_memory_layer.md]]", "[[2026-07-01-supermemory-mcp-memory-server.md]]", "[[2026-07-07-supermemory-open-source-mcp-memory-server.md]]", "[[2026-07-11-supermemory_ai_mcp_memory_server_auto_forgetting.md]]", "[[2026-07-12-supermemory-local-6767-cli-mcp-context.md]]", "[[raw/2026-07-13-sadik-mohammad-rag-systems-limitations.md]]", "[[2026-07-13-supermemory-openclaw-claude-plugins.md]]", "[[2026-07-16-supermemory_ai_memory_layer_analysis.md]]", "[[2026-07-18-supermemory-server-v0.0.5-pluggable-embeddings.md]]", "[[2026-07-19-supermemory-server-v0.0.6-windows.md]]"]
 ---
 
@@ -215,6 +215,23 @@ KM 적용: 야간 린트/로컬 MCP(`:6767`)에서 사내 임베딩 엔드포인
 ```
 
 KM/에이전트 적용: Windows 개발 머신에서도 Linux/macOS와 같은 pluggable embeddings(`SUPERMEMORY_EMBEDDING_*`)·MCP 로컬 경로를 공유할 수 있습니다. v0.0.5의 임베딩 lock 규칙은 그대로 따릅니다.
+
+### 🐳 Local 0.0.9 Docker · API v5 (2026-10-12)
+
+[server-v0.0.9](https://github.com/supermemoryai/supermemory/releases/tag/server-v0.0.9)는 Darwin/Linux 셀프호스트 **현재 핀**. Native Windows는 당분간 **0.0.8**.
+
+- Linux amd64/arm64 프리빌드 이미지 `docker.io/supermemory/supermemory` (`SUPERMEMORY_VERSION=0.0.9`). Compose는 `:6767`을 `127.0.0.1`에만 바인드.
+- API v5. npm/PyPI `supermemory` 5.x는 서버 ≥0.0.9 필요. 로컬호스트 요청도 API 키 필수. `WORKFLOW_ENGINE=direct` 제거.
+- 데이터 디렉터리 기본 `~/.supermemory/` (`$SUPERMEMORY_DATA_DIR`; 0.0.9 이전은 `./.supermemory/`).
+- 업그레이드 전 스토어·키 백업. Local은 원본 백업이 완전한지 확인한 뒤에만 마이그레이션. 기존 cleanup이 오래된 중복 문서·소스 링크를 지울 수 있다.
+
+```bash
+# https://github.com/supermemoryai/supermemory/releases/tag/server-v0.0.9
+curl -fL https://github.com/supermemoryai/supermemory/releases/download/server-v0.0.9/compose.yaml -o compose.yaml
+# .env: SUPERMEMORY_VERSION=0.0.9 + provider key. 기존 볼륨 유지(`docker compose down -v` 금지).
+```
+
+KM/에이전트: 로컬 MCP(`:6767`)를 올릴 때 0.0.9+키 필수. Windows 네이티브는 0.0.8에 남기고, Docker Desktop Linux 컨테이너로 0.0.9를 쓴다.
 
 ### 🛡️ MCP Tool Safety Annotations (ChatGPT hosts, 2026-07-21)
 

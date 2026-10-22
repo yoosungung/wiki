@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-10-22 | Root: wiki/
+[META] Updated: 2026-10-23 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,13 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-10-23 (km-wiki drain)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-10-23 github-issue empty skip (PR#24 only) + Phase 6 doc-lag + uni-tutor 403
+- [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] — Phase 6 children done / checkbox open; uni-tutor 403 skip
+- [[wiki/Engineering/Development-Environment/CrewRP-Phase6-Todo-Board-Comments.md]] — board Done + ROADMAP doc lag (2026-10-23)
+- [[wiki/Agents/Implementation/Supermemory-Architecture-and-MCP.md]] — Local **server-v0.0.9** Docker·API v5 (Windows stays 0.0.8)
+- inbox drain: pm×2 git rm; LiteRT-LM tip still **v0.18.1** · Graphiti 0.31.2 · WebLLM v0.2.86 · LightRAG v1.5.7 — ALREADY_COVERED
 
 ### UPD 2026-10-22 (km-wiki drain)
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-10-22 github-issue empty skip (PR#24 only)
@@ -210,7 +217,7 @@
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Quick-Create-Compact-Description.md]] — F14 compact Description
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-10-03 empty skip / roadmap no-checklist
 - [[wiki/Engineering/Development-Environment/CrewRP-Local-Mobile-Build-Env.md]] — macOS iOS/Android toolchain snapshot
-- [[wiki/Agents/Implementation/Supermemory-Architecture-and-MCP.md]] — Company Brain harness OSS (2026-09-25)
+- [[wiki/Agents/Implementation/Supermemory-Architecture-and-MCP.md]] — Local server-v0.0.9 Docker·API v5 (2026-10-23)
 
 - wiki/Agents/ (250 files)
     - Multi-Agent-and-Orchestration: 19 files

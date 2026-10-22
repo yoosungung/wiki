@@ -1,6 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-10-23 | INBOX_DRAIN | inbox/ | 2 | pm GH-empty + roadmap-sync → Factory-Ops/Roadmap-Sync/Phase6; git rm |
+| 2026-10-23 | RESEARCH | 연구_주제_관리.md | 5 | wiki-first+웹: LiteRT-LM tip still v0.18.1; Graphiti 0.31.2; WebLLM 0.2.86; LightRAG 1.5.7 ALREADY; Supermemory **0.0.9** 신규 |
+| 2026-10-23 | SYNTHESIZE | wiki/ | 5 | Factory-Ops·Roadmap-Sync·Phase6·Supermemory 0.0.9; INDEX/log/daily |
+| 2026-10-23 | ALREADY_COVERED | wiki/ | 4 | LiteRT-LM tip still v0.18.1; Graphiti 0.31.2; WebLLM v0.2.86; LightRAG v1.5.7 |
+| 2026-10-23 | CLEANUP | inbox/ & root | 4 | inbox 2 git rm; D-0(2026-10-23)·D-1(2026-10-22) 유지; D-2(2026-10-21) 삭제 |
 | 2026-10-22 | INBOX_DRAIN | inbox/ | 1 | pm GH-empty → Factory-Ops; git rm |
 | 2026-10-22 | RESEARCH | 연구_주제_관리.md | 3 | wiki-first+웹: LiteRT-LM tip still v0.18.1 ALREADY; Graphiti 0.31.2·WebLLM 0.2.86 신규 |
 | 2026-10-22 | SYNTHESIZE | wiki/ | 11 | Factory-Ops; Graphiti Overview/MCP/Arch/Driver/Episode/Helix; WebLLM-Engine·브라우저서빙·WebGPU·스마트폰서빙 |
