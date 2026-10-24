@@ -1,6 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-10-25 | INBOX_DRAIN | inbox/ | 4 | pm GH-empty×2 + roadmap-sync×2 (10-24·25) → Factory-Ops/Roadmap-Sync/Phase6; git rm |
+| 2026-10-25 | RESEARCH | 연구_주제_관리.md | 5 | wiki-first+웹: LiteRT-LM tip still v0.18.1; Graphiti 0.31.2; WebLLM 0.2.86; LightRAG 1.5.7; Supermemory 0.0.9 ALREADY; 0.19 nightly GPU #4125 신규 |
+| 2026-10-25 | SYNTHESIZE | wiki/ | 4 | Factory-Ops·Roadmap-Sync·Phase6·스마트폰-서빙 §3.3 nightly GPU; INDEX/log/daily |
+| 2026-10-25 | ALREADY_COVERED | wiki/ | 4 | LiteRT-LM tip still v0.18.1; Graphiti 0.31.2; WebLLM v0.2.86; LightRAG v1.5.7; Supermemory 0.0.9 |
+| 2026-10-25 | CLEANUP | inbox/ & root | 5 | inbox 4 git rm; D-0(2026-10-25)·D-1(2026-10-23) 유지; D-2(2026-10-22) 삭제 |
 | 2026-10-23 | INBOX_DRAIN | inbox/ | 2 | pm GH-empty + roadmap-sync → Factory-Ops/Roadmap-Sync/Phase6; git rm |
 | 2026-10-23 | RESEARCH | 연구_주제_관리.md | 5 | wiki-first+웹: LiteRT-LM tip still v0.18.1; Graphiti 0.31.2; WebLLM 0.2.86; LightRAG 1.5.7 ALREADY; Supermemory **0.0.9** 신규 |
 | 2026-10-23 | SYNTHESIZE | wiki/ | 5 | Factory-Ops·Roadmap-Sync·Phase6·Supermemory 0.0.9; INDEX/log/daily |

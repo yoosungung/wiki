@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-10-23 | Root: wiki/
+[META] Updated: 2026-10-25 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,13 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-10-25 (km-wiki drain)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-10-24·25 github-issue empty skip (PR#24 only); factory ACL +sql-mcp
+- [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] — Phase 6 children done / checkbox open; uni-tutor 403
+- [[wiki/Engineering/Development-Environment/CrewRP-Phase6-Todo-Board-Comments.md]] — board Done + ROADMAP doc lag (2026-10-25)
+- [[wiki/Models/Optimization-and-Serving/스마트폰-환경의-LLM-서빙-기술-2026.md]] — LiteRT-LM tip still **v0.18.1**; 0.19 nightly GPU #4125
+- inbox drain: pm×4 git rm; Graphiti 0.31.2 · WebLLM v0.2.86 · LightRAG v1.5.7 · Supermemory 0.0.9 — ALREADY_COVERED
 
 ### UPD 2026-10-23 (km-wiki drain)
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-10-23 github-issue empty skip (PR#24 only) + Phase 6 doc-lag + uni-tutor 403
