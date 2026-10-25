@@ -3,9 +3,11 @@ id: factory-schedule-ops-skips
 title: "Factory 스케줄 ops: empty skip · registry placeholder"
 status: canonical
 owner: km
-updated: "2026-10-25"
+updated: "2026-10-26"
 review_after: "2027-01-15"
 sources:
+  - inbox/pm/2026-10-26-github-issue-check-empty-skip.md
+  - inbox/pm/2026-10-26-roadmap-sync.md
   - inbox/pm/2026-10-25-github-issue-check-empty-skip.md
   - inbox/pm/2026-10-25-roadmap-sync.md
   - inbox/pm/2026-10-24-github-issue-check-empty-skip.md
@@ -75,7 +77,7 @@ type: "wiki"
 - 스윕 2026-10-03···**19**: sw-factory/crewrp/UniTutorAI/wiki/codingland/candidate.win OPEN true-issue 0; sw-factory `open_issues_count=1`은 PR만(true-issue 제외); crewrp `open_issues_count=0`. `nl2sql` issues ACL/token 403 → `open_issues_count=0`만 확인·변환 티켓 미생성.
 - **2026-10-15** factory projects (pm session): `sw-factory`, `CrewRP` only (uni-tutor membership 없음 — 403과 동일 축).
 - **2026-10-16** same: true-issue 0 across crewrp/sw-factory/UniTutorAI/nl2sql/wiki/codingland; sw-factory `open_issues_count=1` PR-only; factory projects CrewRP+sw-factory only; `clients-repos-registry` empty → agents.yaml+wiki map; orphan Outcome 미생성.
-- **2026-10-17···25** same: OPEN true-issue 0 (sw-factory/crewrp/sql-mcp/nl2sql/wiki/UniTutorAI/codingland/candidate.win); sw-factory `open_issues_count=1`은 PR#24만; factory ACL sw-factory+CrewRP+sql-mcp (UniTutorAI membership 없음); registry empty → agents.yaml+wiki map; orphan Outcome 미생성. factory-mcp Cursor namespace 미노출 시 session-cookie REST fallback (pm 2026-10-21···25).
+- **2026-10-17···26** same: OPEN true-issue 0 (sw-factory/crewrp/sql-mcp/nl2sql/wiki/UniTutorAI/codingland/candidate.win); sw-factory `open_issues_count=1`은 PR#24만; factory ACL sw-factory+CrewRP+sql-mcp (UniTutorAI membership 없음); registry empty → agents.yaml+wiki map; orphan Outcome 미생성. factory-mcp Cursor namespace 미노출 시 session-cookie REST fallback (pm 2026-10-21···26). **2026-10-26:** env `GH_TOKEN` 401 → keyring fallback (sweep 성공; 시크릿 미기록).
 - Active `ticket_id` 없는 스케줄 → orphan Outcome 티켓 미생성([[wiki/Engineering/AI-Native-Engineering/Schedule-Outcome-Requires-Active-Ticket.md]]).
 - Actions/CD 실패 감시는 이 스케줄 범위 아님(→ ta).
 
