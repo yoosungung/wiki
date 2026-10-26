@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-10-26 | Root: wiki/
+[META] Updated: 2026-10-27 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,15 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-10-27 (km-wiki drain)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-10-27 github-issue empty skip (PR#24 only); GH_TOKEN 401 → keyring fallback
+- [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] — Phase 6 children done / checkbox open; uni-tutor 403
+- [[wiki/Engineering/Development-Environment/CrewRP-Phase6-Todo-Board-Comments.md]] — board Done + ROADMAP doc lag (2026-10-27)
+- [[wiki/Engineering/AI-Native-Engineering/Tenant-Quality-Yaml-Gate-Skip-Pattern.md]] — 2026-10-26 ta/aa/qa weekly NF skip (no quality.yaml)
+- [[wiki/Engineering/AI-Native-Engineering/Tenant-Repo-Sync-Dirty-Tree-Skip.md]] — 2026-10-26 qa sw-factory dirty sync skip
+- [[wiki/Models/Optimization-and-Serving/스마트폰-환경의-LLM-서빙-기술-2026.md]] — LiteRT-LM tip still **v0.18.1**; #4125 still open
+- inbox drain: pm×2 + qa/aa/ta×1 git rm; Graphiti 0.31.2 · WebLLM v0.2.86 · LightRAG v1.5.7 · Supermemory 0.0.9 — ALREADY_COVERED
 
 ### UPD 2026-10-26 (km-wiki drain)
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-10-26 github-issue empty skip (PR#24 only); GH_TOKEN 401 → keyring fallback

@@ -3,10 +3,13 @@ id: tenant-quality-yaml-gate-skip-pattern
 title: "테넌트 quality.yaml 게이트 키 누락 시 skip (NF 미생성)"
 status: canonical
 owner: km
-updated: "2026-10-20"
-last_updated: "2026-10-20"
+updated: "2026-10-27"
+last_updated: "2026-10-27"
 review_after: "2027-01-13"
 sources:
+  - inbox/qa/2026-10-26-qa-bulk-weekly.md
+  - inbox/aa/2026-10-26-aa-clean-weekly.md
+  - inbox/ta/2026-10-26-ta-load-weekly.md
   - inbox/qa/2026-10-19-qa-bulk-weekly.md
   - inbox/aa/2026-10-19-aa-clean-weekly.md
   - inbox/ta/2026-10-19-ta-load-weekly.md
@@ -146,6 +149,18 @@ Active 없는 스케줄 → orphan Outcome 금지. `nf-progress:` N/A.
 | qa-bulk-weekly | 3 repo no `bulk_api`/`opik` → skip; factory `/api/health` 200 `qa: pass`; sw-factory dirty WT (`package.json`/`package-lock.json`) → sync skip (no stash); tip `8e6f8af` origin-only |
 
 Active 없는 스케줄 → orphan Outcome 금지. `nf-progress:` N/A (명령 미기동).
+
+## 2026-10-26 주간 NF (ta/aa/qa)
+
+동일 registry 3 repo (`sw-factory` / `crewrp` / `uni-tutor`). tip sync 후 Discover — `.factory/quality.yaml` 전무 → 전수 skip; NF New=0.
+
+| 스케줄 | 결과 |
+| :--- | :--- |
+| ta-load-weekly | 3 repo no `load.command` → skip; NF=0; uni-tutor project GET 403 (멤버십) — path sync만. `nl2sql`은 registry 밖 |
+| aa-clean-weekly | 3 repo no `clean_code:` → skip; High/Med=0; not a prod gate. `nl2sql` `clean_code.command`는 registry 밖 |
+| qa-bulk-weekly | 3 repo no `bulk_api`/`opik` → skip; factory `/api/health` 200 `qa: pass`; sw-factory dirty WT (`package.json`/`package-lock.json`, `@rollup/rollup-linux-arm64-gnu`) → sync skip (HEAD behind origin; no stash) |
+
+Active 없는 스케줄 → orphan Outcome 금지. factory-mcp Cursor namespace 미노출 시 session-cookie REST fallback. `nf-progress:` N/A (명령 미기동).
 
 ## 🔗 관련 문서
 
