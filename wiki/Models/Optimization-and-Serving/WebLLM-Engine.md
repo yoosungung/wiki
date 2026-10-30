@@ -4,8 +4,8 @@ status: "published"
 category: "Models"
 subcategory: "Optimization-and-Serving"
 tags: [WebLLM, MLC-LLM, WebGPU, Browser-LLM]
-last_updated: "2026-10-22"
-updated: "2026-10-22"
+last_updated: "2026-10-31"
+updated: "2026-10-31"
 related_raw: [
   "[[raw/2026-09-20-webllm-v0.2.85-opfs-sync-worker.md]]",
   "[[raw/2026-05-13-WebLLM-Home.md]]",
@@ -68,6 +68,18 @@ const reply = await engine.chat.completions.create({
 4. **로더** — manifest 기반 audio/image(옵트인, 기존 레코드는 legacy 경로). crash-resumable generation. 중단 대화·취소 스트림·모델 lock·토큰 카운트·오디오 cleanup 수정.
 
 핀은 `@mlc-ai/web-llm@0.2.86`. 브라우저 서빙: [[wiki/Models/Optimization-and-Serving/브라우저-기반-LLM-서빙-기술-및-아키텍처-2026.md]].
+
+## v0.2.87 카탈로그 `v0_2_87` · TVM 0.28.0-dev1 (2026-10-30)
+
+[v0.2.87](https://github.com/mlc-ai/web-llm/releases/tag/v0.2.87)은 **가중치 카탈로그를 다시 바꾼다**. `v0_2_87`(subgroup 변형 포함). 엔진만 올리는 패치가 아니다.
+
+1. **TVM** — `@mlc-ai/web-runtime@0.28.0-dev1` (`0.28.0-dev0`에서 한 칸).
+2. **Gemma 4 q4f32 prefill** 성능 개선.
+3. **sliding-window KV cache** 수정.
+4. **Qwen3.5 JSON schema** 생성 수정.
+5. **Gemma 3 context** 처리 수정. 예제·문서는 0.2.87로.
+
+핀은 `@mlc-ai/web-llm@0.2.87`. 기존 `v0_2_86/base` 캐시만 있으면 새 바이너리를 받지 못한다. UniTutor 제품 핀은 별축(0.2.85) — [[wiki/Engineering/AI-Native-Engineering/UniTutor-On-Device-WebLLM.md]].
 
 ## 관련 문서
 - [[wiki/Models/Optimization-and-Serving/Browser-AI-Inference-MOC.md|Browser AI Inference MOC]]

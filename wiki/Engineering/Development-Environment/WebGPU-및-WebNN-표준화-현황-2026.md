@@ -3,8 +3,8 @@ title: "WebGPU 및 WebNN 표준화 현황 (2026)"
 tags: ["Engineering", "Development-Environment", "WebGPU", "WebNN", "W3C", "Standardization"]
 type: "wiki"
 status: "published"
-last_updated: "2026-10-22"
-updated: "2026-10-22"
+last_updated: "2026-10-31"
+updated: "2026-10-31"
 related_raw: ["[[raw/2026-09-20-webllm-v0.2.85-opfs-sync-worker.md]]", "[[raw/2026-08-28-webmcp-chrome-origin-trial.md]]", "[[2026-06-18-KM-Research-Update-Phase2.md]]", "[[2026-07-01-webgpu-webnn-wasm3-webmcp.md]]", "[[2026-07-10-web-inference-wasm-3.0.md]]", "[[2026-07-11-webgpu_wasm_3_0_webnn_webllm_browser_serving.md]]", "[[2026-07-12-webllm-3w-opfs-json-workers.md]]", "[[2026-07-13-litert-lm-swift-js-session-api.md]]"]
 ---
 
@@ -94,6 +94,12 @@ WebLLM/Transformers.js와 병행 평가 시, llama.cpp 생태계 사용자는 Ll
 [v0.2.86](https://github.com/mlc-ai/web-llm/releases/tag/v0.2.86)는 0.2.85와 달리 **모델 라이브러리를 재빌드**한다. 카탈로그 `v0_2_86/base`, TVM `@mlc-ai/web-runtime@0.28.0-dev0`. Gemma 4 E2B IT `q4f16_1`/`q4f32_1`(텍스트+오디오; FP32는 `shader-f16` 불필요). 기존 0.2.85 캐시만 있고 카탈로그를 안 받으면 E2B prebuilt가 없다.
 
 핀은 GitHub/npm `0.2.86`. 상세: [[wiki/Models/Optimization-and-Serving/WebLLM-Engine.md]], 온디바이스 Gemma 축은 [[wiki/Models/Optimization-and-Serving/스마트폰-환경의-LLM-서빙-기술-2026.md]].
+
+## 10. WebLLM v0.2.87 — `v0_2_87` · TVM 0.28.0-dev1 (2026-10-30)
+
+[v0.2.87](https://github.com/mlc-ai/web-llm/releases/tag/v0.2.87)은 카탈로그를 `v0_2_87`(subgroup 포함)로 재빌드한다. `@mlc-ai/web-runtime@0.28.0-dev1`. Gemma 4 q4f32 prefill, sliding-window KV cache, Qwen3.5 JSON schema, Gemma 3 context 수정. `v0_2_86/base` 캐시만 있으면 새 wasm을 받지 못한다.
+
+핀은 GitHub/npm `0.2.87`. 엔진 정본: [[wiki/Models/Optimization-and-Serving/WebLLM-Engine.md]].
 
 ---
 **관련 문서**:

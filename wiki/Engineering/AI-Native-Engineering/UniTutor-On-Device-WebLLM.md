@@ -3,7 +3,7 @@ id: unitutor-on-device-webllm
 title: "UniTutor on-device WebLLM TutorTurn opt-in"
 status: canonical
 owner: km
-updated: "2026-10-05"
+updated: "2026-10-31"
 review_after: "2027-01-05"
 sources:
   - inbox/uni-tutor/2026-10-04-unitutor-on-device-webllm.md
@@ -20,7 +20,7 @@ type: "wiki"
 ## Routing
 
 - Opt-in path: on-device WebLLM → on failure emit `on_device_unsupported` / `on_device_failed` (**no silent cloud fallback**). Off → SSE (+ BYOK → app Gemini).
-- `@mlc-ai/web-llm` **0.2.85** dynamic load + worker; not resident on default cloud path.
+- `@mlc-ai/web-llm` **0.2.85** dynamic load + worker; not resident on default cloud path. Engine tip **0.2.87**(2026-10-30, `v0_2_87` catalog)는 제품 핀과 별축 — ROADMAP bump 전 자동 추종 금지.
 - No WebGPU → explicit unsupported. COOP/COEP and large first-download UX are follow-ups (YouTube iframe conflict risk).
 - When on-device active: free Q&A quota not charged (cloud $0) — same treatment as BYOK.
 

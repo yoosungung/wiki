@@ -1,6 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-10-31 | INBOX_DRAIN | inbox/ | 4 | pm GH-empty (10-31) + roadmap-sync (10-29·30·31) → Factory-Ops/Roadmap-Sync/Phase6; git rm |
+| 2026-10-31 | RESEARCH | 연구_주제_관리.md | 5 | wiki-first+웹: LiteRT-LM **v0.19.0**; WebLLM **v0.2.87**; #4125 open; Graphiti 0.31.2; LightRAG 1.5.7; Supermemory 0.0.9 ALREADY |
+| 2026-10-31 | SYNTHESIZE | wiki/ | 8 | Factory-Ops·Roadmap-Sync·Phase6·WebLLM-Engine·브라우저서빙·WebGPU·스마트폰-서빙·UniTutor-WebLLM; INDEX/log/daily |
+| 2026-10-31 | ALREADY_COVERED | wiki/ | 3 | Graphiti 0.31.2; LightRAG v1.5.7; Supermemory 0.0.9 |
+| 2026-10-31 | CLEANUP | inbox/ & root | 5 | inbox 4 git rm; D-0(2026-10-31)·D-1(2026-10-27) 유지; D-2(2026-10-26) 삭제 |
 | 2026-10-27 | INBOX_DRAIN | inbox/ | 5 | pm GH-empty + roadmap-sync (10-27) + ta/aa/qa weekly (10-26) → Factory-Ops/Roadmap-Sync/Phase6/Tenant-Quality/Dirty-Tree; git rm |
 | 2026-10-27 | RESEARCH | 연구_주제_관리.md | 5 | wiki-first+웹: LiteRT-LM tip still v0.18.1; #4125 open; Graphiti 0.31.2; WebLLM 0.2.86; LightRAG 1.5.7; Supermemory 0.0.9 ALREADY |
 | 2026-10-27 | SYNTHESIZE | wiki/ | 6 | Factory-Ops·Roadmap-Sync·Phase6·Tenant-Quality·Dirty-Tree·스마트폰-서빙 §3.3 재확인; INDEX/log/daily |

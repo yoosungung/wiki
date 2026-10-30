@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-10-27 | Root: wiki/
+[META] Updated: 2026-10-31 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,14 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-10-31 (km-wiki drain)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-10-31 github-issue empty skip (PR#24 only); GH_TOKEN 401 → keyring fallback
+- [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] — Phase 6 children done / checkbox open; uni-tutor 403
+- [[wiki/Engineering/Development-Environment/CrewRP-Phase6-Todo-Board-Comments.md]] — board Done + ROADMAP doc lag (2026-10-31)
+- [[wiki/Models/Optimization-and-Serving/WebLLM-Engine.md]] — WebLLM **v0.2.87** `v0_2_87` catalog · TVM 0.28.0-dev1
+- [[wiki/Models/Optimization-and-Serving/스마트폰-환경의-LLM-서빙-기술-2026.md]] — LiteRT-LM **v0.19.0** (C API 1.0.0 breaking); #4125 still open
+- inbox drain: pm×4 git rm; Graphiti 0.31.2 · LightRAG v1.5.7 · Supermemory 0.0.9 — ALREADY_COVERED
 
 ### UPD 2026-10-27 (km-wiki drain)
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-10-27 github-issue empty skip (PR#24 only); GH_TOKEN 401 → keyring fallback
