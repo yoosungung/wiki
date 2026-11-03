@@ -1,6 +1,13 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-11-03 | INBOX_DRAIN | inbox/ | 5 | pm roadmap-sync (11-02·03) + qa bulk-weekly + aa clean-weekly + rhwp_batch v0.8.7 nested workspace vendor → Cargo-Nested-Workspace-Vendor-Pattern 신규 및 Roadmap-Sync·Phase6·Factory-Ops·Tenant-Quality·Dirty-Tree 갱신; git rm |
+| 2026-11-03 | INGEST | raw/ | 31 | RLTL;DR, NeMo-DCR, 2026 사후학습 16편, TencentDB Agent Memory, Colibrì, DeepInfer, DeepSeek-V4.1-Flash, Unstract/PapersWithCode MCP, EmbeddingGemma 2, AnyJev/Tacit, Jeva, JevAdvBench, Harness², OpenWiki Evidence Graph, K2 Horizon 375B, Unlimited OCR 2/MiniCPM-OCR, Plandex/Pullboard, Pstack/Tstack, Reranker vs Decision, RAW-RAG, Cognee GLiNER, PEFT Activation Steering, REA, Karpathy Sharp Funnel, Agent Infra 12 Patterns, KV-Lingo, Meta-Harness V2 표준화 |
+| 2026-11-03 | RESEARCH | 연구_주제_관리.md | 29 | raw 31건 + inbox 5건 전수 매핑 및 웹 원천 추적 완료; LiteRT-LM v0.19.0·WebLLM v0.2.87·Graphiti 0.31.2·LightRAG v1.5.7·Supermemory 0.0.9 ALREADY_COVERED |
+| 2026-11-03 | SYNTHESIZE | wiki/ | 29 | 신규 위키 15건(RLTLDR, NeMo-DCR, Post-Training-OPD, TencentDB-Memory, DeepInfer-V4.1-Flash, Dual-Interface-MCP, AnyJev-Jeva, JevAdvBench, Harness-Squared, K2-Horizon, Pstack-Tstack, RAW-RAG, PEFT-Steering, REA-Security, Agent-Infra-12, KV-Lingo, Cargo-Nested-Vendor) + 기존 위키 12건 및 MOC 11건 갱신 |
+| 2026-11-03 | ALREADY_COVERED | wiki/ | 5 | LiteRT-LM v0.19.0; WebLLM v0.2.87; Graphiti v0.31.2; LightRAG v1.5.7; Supermemory server-v0.0.9 |
+| 2026-11-03 | CLEANUP | raw/, inbox/, Root | 38 | 합성 완료된 raw 31건 삭제; inbox 5건 git rm; 과거 데일리(2026-10-27, 2026-10-31) 삭제; D-0(2026-11-03) 생성 |
+| 2026-11-03 | LINT | Root / wiki | ALL | INDEX.md META(2026-11-03) 및 카테고리 통계 갱신, MOC 동기화, KaTeX/YAML/Date 무결성 점검 완료 |
 | 2026-10-31 | INBOX_DRAIN | inbox/ | 4 | pm GH-empty (10-31) + roadmap-sync (10-29·30·31) → Factory-Ops/Roadmap-Sync/Phase6; git rm |
 | 2026-10-31 | RESEARCH | 연구_주제_관리.md | 5 | wiki-first+웹: LiteRT-LM **v0.19.0**; WebLLM **v0.2.87**; #4125 open; Graphiti 0.31.2; LightRAG 1.5.7; Supermemory 0.0.9 ALREADY |
 | 2026-10-31 | SYNTHESIZE | wiki/ | 8 | Factory-Ops·Roadmap-Sync·Phase6·WebLLM-Engine·브라우저서빙·WebGPU·스마트폰-서빙·UniTutor-WebLLM; INDEX/log/daily |

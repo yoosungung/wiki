@@ -11,3 +11,4 @@
 - [[wiki/Agents/Evaluations/HaluMem-에이전트-메모리-환각-벤치마크.md]]
 - [[wiki/Agents/Evaluations/Judge-Model-Comparison.md]]
 - [[wiki/Agents/Evaluations/TasteVal-Scientific-Research-Taste-Benchmark.md]]
+- [[wiki/Agents/Evaluations/JevAdvBench-Decision-Model-Adversarial-Benchmark.md]]

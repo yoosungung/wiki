@@ -106,5 +106,5 @@ EU 등 일부 지역은 대체 배포·대체 결제·Core Technology Fee 등 **
 
 ## 관련
 
-- Expo/RN 빌드 맥락: [[wiki/Engineering/Development-Environment/Expo-및-React-Native-개발-생태계-2026.md]]
+- Expo/RN 빌드 맥락: [[wiki/Engineering/Development-Environment/Expo-및-React-Native-개발-생태계-2026.md]]
 - Business MOC: [[wiki/Business/000_Business-MOC.md]]

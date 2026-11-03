@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-10-31 | Root: wiki/
+[META] Updated: 2026-11-03 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,28 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-11-03 (km-researcher auto-research + inbox drain)
+- [[wiki/Models/RL/RLTLDR-Self-Generated-Feedback-Internalization.md]] — Apple RLTL;DR 17토큰 오답노트 내재화 및 프롬프트 마스크 역전파 (`Pass@128=0` → `Pass@1` 13%)
+- [[wiki/Models/RL/NeMo-DCR-Delta-Compressed-RL-Refit.md]] — NVIDIA NeMo-DCR 1T 에이전틱 RL 1% 비트 델타 XOR+zstd 가중치 동기화 (87.5분 → 2.5분, 35x)
+- [[wiki/Models/RL/Post-Training-OPD-and-Sparse-Reward-Dynamics-2026.md]] — 사후학습 16편 종합: OPD 토큰 억제, 희소 보상 기아(SRD/DARA), False Frontiers, Mid-Harness, Sharpening Tax
+- [[wiki/Agents/Memory-and-Cognition/TencentDB-Agent-Memory-Semantic-Pyramid.md]] — SQLite 기반 L0~L3 시맨틱 피라미드 및 Mermaid 단기 상태 그래프 (-61% 토큰, PersonaMem 76%)
+- [[wiki/Models/Optimization-and-Serving/DeepInfer-and-DeepSeek-V4-1-Flash-Architecture.md]] — DeepInfer (`DSpark` 신뢰도 스케줄링·배치 불변 추론) 및 DeepSeek-V4.1-Flash (`1017`, DeepSWE 77.0%)
+- [[wiki/Models/Optimization-and-Serving/AnyJev-and-Jeva-Decision-Model-Ecosystem.md]] — Nokia `AnyJev` L0 회전/사전확률 보정 · `Tacit` · `Jeva` 4대 강건성 · 결정 모델 vs 전용 리랭커 비교
+- [[wiki/Agents/Evaluations/JevAdvBench-Decision-Model-Adversarial-Benchmark.md]] — RLCD 결정 모델 적대적 공격 벤치마크(12.1% 결정 반전) · `LettuceDetect` · RSI 벤치마크 감사
+- [[wiki/Agents/Self-Evolving/Harness-Squared-Recursive-Agent-Harnessing.md]] — Google `Harness²` 이중 재귀(`Propose → Probe → Compose`) 에이전트 하네스 진화 및 메타하네스 V2
+- [[wiki/Models/Architectures/K2-Horizon-Fully-Open-Source-LLM-and-Data-Recipe.md]] — UAE MBZUAI IFM `K2 Horizon` (0.9B~375B) 완전 오픈소스 LLM 및 23조 토큰 데이터 레시피
+- [[wiki/Agents/Coding-and-Engineering/Pstack-Tstack-and-Cumulative-Diff-Verification-Workflows.md]] — `Pstack` (`/create-verification-skill`) · `Tstack` (`full-send`) · `Plandex` 누적 Diff · `Pullboard`
+- [[wiki/Agents/Memory-and-Cognition/RAW-RAG-Raw-History-Retrieval-Baseline.md]] — 무변형 원본 대화 기록 리랭킹 베이스라인(`RAW-RAG`) 및 메모리 변이(`UPDATE`/`DELETE`) 손실 규명
+- [[wiki/Models/Architectures/PEFT-Activation-Steering-and-Neuron-Persona-Control.md]] — Hugging Face PEFT Activation Steering (PR #4066) 및 `Qwen3.5-4B` 단일 뉴런 페르소나 제어
+- [[wiki/Engineering/Security/REA-Agentic-Reverse-Engineering-and-Binary-Defense.md]] — `morluto/rea` MCP 에이전틱 역공학(DX-Ball 바이트 일치 복원) 및 AI 시대 소프트웨어 해자 전략
+- [[wiki/Agents/Implementation/Agent-Infrastructure-12-Core-Design-Patterns.md]] — 프로덕션 에이전트 인프라(Agent Infra) 12대 핵심 문제 및 아키텍처 해법
+- [[wiki/Models/Optimization-and-Serving/KV-Lingo-Cross-Model-KV-Cache-Translation.md]] — Apple `KV-Lingo` 1차 선형 행렬 + 자기 증류 기반 이종 모델 KV 캐시 직접 번역 (32K TTFT 29x 가속)
+- [[wiki/RAG/Dual-Interface-Document-Extraction-CLI-and-MCP.md]] — Unstract CLI/MCP 이중 문서 추출 및 Papers with Code OSS 공개 MCP 속도 제한 패턴
+- [[wiki/Engineering/Development-Environment/Cargo-Nested-Workspace-Vendor-Pattern.md]] — Rust Cargo 중첩 `[workspace]` 벤더링 어댑터 패턴 (`rhwp` v0.8.7)
+- 기존 노트 심층 보강: [[wiki/Models/Optimization/Colibri-Local-MoE-Inference-Engine.md]], [[wiki/Models/Small-Models/embeddinggemma-google-deepmind-model.md]], [[wiki/Agents/Memory-and-Cognition/OpenWiki-Claims-Runtime-Self-Correcting-Memory.md]], [[wiki/RAG/SOTA-OCR-및-문서-정규화-기술.md]], [[wiki/Agents/Memory-and-Cognition/Cognee-Architecture.md]], [[wiki/Engineering/Prompt-Engineering/Karpathy-Agentic-Engineering-Lifecycle.md]], [[wiki/Agents/Frameworks/TypeSafe-Jev-System-One-Decision-Architecture.md]]
+- inbox drain (5건 `git rm`): [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]], [[wiki/Engineering/Development-Environment/CrewRP-Phase6-Todo-Board-Comments.md]], [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]], [[wiki/Engineering/AI-Native-Engineering/Tenant-Quality-Yaml-Gate-Skip-Pattern.md]], [[wiki/Engineering/AI-Native-Engineering/Tenant-Repo-Sync-Dirty-Tree-Skip.md]]
+- ALREADY_COVERED: LiteRT-LM **v0.19.0** · WebLLM **v0.2.87** · Graphiti **0.31.2** · LightRAG **v1.5.7** · Supermemory **0.0.9**
 
 ### UPD 2026-10-31 (km-wiki drain)
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-10-31 github-issue empty skip (PR#24 only); GH_TOKEN 401 → keyring fallback
@@ -250,34 +272,34 @@
 - [[wiki/Engineering/Development-Environment/CrewRP-Local-Mobile-Build-Env.md]] — macOS iOS/Android toolchain snapshot
 - [[wiki/Agents/Implementation/Supermemory-Architecture-and-MCP.md]] — Local server-v0.0.9 Docker·API v5 (2026-10-23)
 
-- wiki/Agents/ (250 files)
+- wiki/Agents/ (256 files)
     - Multi-Agent-and-Orchestration: 19 files
     - Text-to-SQL: 34 files
-    - Evaluations: 9 files
-    - Memory-and-Cognition: 25 files
+    - Evaluations: 11 files
+    - Memory-and-Cognition: 27 files
     - Robotics-and-VLA: 20 files
-    - Implementation: 45 files
-    - Coding-and-Engineering: 23 files
-    - Self-Evolving: 11 files
-    - Frameworks: 64 files
-- wiki/Models/ (247 files)
-    - Optimization-and-Serving: 52 files
+    - Implementation: 46 files
+    - Coding-and-Engineering: 24 files
+    - Self-Evolving: 12 files
+    - Frameworks: 65 files
+- wiki/Models/ (259 files)
+    - Optimization-and-Serving: 58 files
     - Optimization: 3 files
-    - Architectures: 33 files
+    - Architectures: 36 files
     - Small-Models: 18 files
     - SFT: 52 files
     - Multimodal-and-Vision: 10 files
     - Reasoning-and-Cognition: 31 files
-    - RL: 47 files
-- wiki/RAG/ (106 files)
-- wiki/Engineering/ (209 files)
+    - RL: 51 files
+- wiki/RAG/ (107 files)
+- wiki/Engineering/ (213 files)
     - Data-and-Security: 14 files
-    - Security: 2 files
-    - Prompt-Engineering: 18 files
+    - Security: 3 files
+    - Prompt-Engineering: 19 files
     - Infrastructure-and-DevOps: 53 files
-    - Development-Environment: 23 files
+    - Development-Environment: 24 files
     - Prompt: 1 files
-    - AI-Native-Engineering: 91 files
+    - AI-Native-Engineering: 92 files
 - wiki/Business/ (41 files)
     - Recommendation Systems: 6 files
     - Trends: 12 files

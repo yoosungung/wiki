@@ -40,4 +40,4 @@ LLM이 답변을 평가하는 방식은 빠르지만, 비대칭적인 편향(Bia
 - [[wiki/Agents/Evaluations/TasteVal-Scientific-Research-Taste-Benchmark.md|TasteVal 과학적 탐구 및 연구 직관 벤치마크]]
 - [[wiki/Agents/Evaluations/Agent-evaluation-Methodology.md|AI 에이전트 평가 방법론]]
 - [[wiki/Agents/Evaluations/Deep-Agent-Evaluation-Framework.md|Deep Agent 평가 프레임워크]]
-- [[wiki/Agents/Evaluations/000_Evaluations-MOC.md|Evaluations-MOC]]
+- [[wiki/Agents/Frameworks/Evaluations/000_Evaluations-MOC.md|Evaluations-MOC]]

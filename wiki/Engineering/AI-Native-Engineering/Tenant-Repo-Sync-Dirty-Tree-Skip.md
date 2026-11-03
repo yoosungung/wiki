@@ -3,9 +3,12 @@ id: tenant-repo-sync-dirty-tree-skip
 title: "tenant-repo-sync: dirty working tree → skip sync (no stash)"
 status: canonical
 owner: km
-updated: "2026-10-27"
+updated: "2026-11-03"
+last_updated: "2026-11-03"
 review_after: "2027-01-05"
 sources:
+  - inbox/qa/2026-11-02-qa-bulk-weekly.md
+  - inbox/aa/2026-11-02-aa-clean-weekly.md
   - inbox/qa/2026-10-26-qa-bulk-weekly.md
   - inbox/qa/2026-10-05-qa-bulk-weekly.md
   - inbox/qa/2026-10-19-qa-bulk-weekly.md
@@ -41,6 +44,12 @@ type: "wiki"
 
 - `repo_id=sw-factory` dirty: `package.json`/`package-lock.json` + `@rollup/rollup-linux-arm64-gnu` → skip sync (no stash); HEAD behind origin/main (origin tip `8e6f8af`는 origin-only).
 - crewrp / uni-tutor: clean sync 후 `quality.yaml` 없음 → bulk_api/opik skip; factory `/api/health` 200 `qa: pass`.
+
+## 2026-11-02 사례 (qa / aa)
+
+- 레지스트리 4 repo (`sw-factory` / `crewrp` / `sql-mcp` / `rhwp_batch`; `uni-tutor`는 레지스트리 밖).
+- `qa-bulk-weekly`에서 `sw-factory` dirty (`package.json`/`package-lock.json`, no stash, HEAD `690c726` behind `origin/main` `8e6f8af` by 72) → skip sync (`origin/main`도 `quality.yaml` 부재).
+- `crewrp` (`47f0340`), `sql-mcp` (`37da574`), `rhwp_batch` (`642974c`): clean sync 후 `quality.yaml` 없음 → `bulk_api`/`opik`/`clean_code` skip; factory `GET /api/health` 200 `{"ok":true,"service":"sw-factory-workers"}`.
 
 ## 🔗 관련 문서
 

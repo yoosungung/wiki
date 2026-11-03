@@ -96,4 +96,4 @@ P-Zero Research는 OpenAI, Google DeepMind, NVIDIA, Microsoft Research, Oxford �
 - [[wiki/Agents/Evaluations/Judge-Model-Comparison.md]] — 평가 모델 및 벤치마크 프레임워크 비교
 - [[wiki/Agents/Evaluations/AgentEval-Reasoning-Driven-Evaluation-Framework.md]] — 추론 기반 에이전트 평가 프레임워크
 - [[wiki/Agents/Self-Evolving/SkillOpt-및-과학적-탐구-멀티-에이전트-시스템.md]] — 과학적 탐구 멀티 에이전트 시스템
-- [[wiki/Agents/Evaluations/000_Evaluations-MOC.md]] — 에이전트 평가 MOC 색인
+- [[wiki/Agents/Frameworks/Evaluations/000_Evaluations-MOC.md]] — 에이전트 평가 MOC 색인

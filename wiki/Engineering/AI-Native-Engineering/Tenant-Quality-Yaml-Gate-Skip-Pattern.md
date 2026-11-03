@@ -3,10 +3,12 @@ id: tenant-quality-yaml-gate-skip-pattern
 title: "테넌트 quality.yaml 게이트 키 누락 시 skip (NF 미생성)"
 status: canonical
 owner: km
-updated: "2026-10-27"
-last_updated: "2026-10-27"
+updated: "2026-11-03"
+last_updated: "2026-11-03"
 review_after: "2027-01-13"
 sources:
+  - inbox/qa/2026-11-02-qa-bulk-weekly.md
+  - inbox/aa/2026-11-02-aa-clean-weekly.md
   - inbox/qa/2026-10-26-qa-bulk-weekly.md
   - inbox/aa/2026-10-26-aa-clean-weekly.md
   - inbox/ta/2026-10-26-ta-load-weekly.md
@@ -161,6 +163,17 @@ Active 없는 스케줄 → orphan Outcome 금지. `nf-progress:` N/A (명령 �
 | qa-bulk-weekly | 3 repo no `bulk_api`/`opik` → skip; factory `/api/health` 200 `qa: pass`; sw-factory dirty WT (`package.json`/`package-lock.json`, `@rollup/rollup-linux-arm64-gnu`) → sync skip (HEAD behind origin; no stash) |
 
 Active 없는 스케줄 → orphan Outcome 금지. factory-mcp Cursor namespace 미노출 시 session-cookie REST fallback. `nf-progress:` N/A (명령 미기동).
+
+## 2026-11-02 주간 NF (aa/qa)
+
+레지스트리 변경: 이전 주 3 repo (`sw-factory` / `crewrp` / `uni-tutor`) → 이번 주 4 repo (`sw-factory` / `crewrp` / `sql-mcp` / `rhwp_batch`). `uni-tutor` checkout은 워크스페이스에 남아 있으나 registry 밖, `nl2sql` `.factory/quality.yaml` `clean_code.command`도 registry 밖으로 범위 외.
+
+| 스케줄 | 결과 |
+| :--- | :--- |
+| aa-clean-weekly | 4 repo (`sw-factory`/`crewrp`/`sql-mcp`/`rhwp_batch`) 모두 `.factory/quality.yaml` 및 `clean_code:` 없음 → skip; High/Med=0; NF New=0; prod 게이트 아님 |
+| qa-bulk-weekly | 4 repo 모두 `.factory/quality.yaml` (`bulk_api`/`opik`) 없음 → skip; factory `GET /api/health` 200 `{"ok":true,"service":"sw-factory-workers"}`; `sw-factory` dirty WT (`package.json`/`package-lock.json`, no stash, HEAD `690c726` behind `origin/main` `8e6f8af` by 72) → sync skip |
+
+Active `ticket_id` 없는 스케줄 → orphan Outcome 금지, feature Done 게이트 해당 없음 (`tenant-cd-registry.json` 부재). `factory-mcp` Cursor namespace 미노출 시 `FactoryClient`(session-cookie REST) fallback. `nf-progress:` N/A (mechanical 명령 미기동).
 
 ## 🔗 관련 문서
 

@@ -3,8 +3,8 @@ id: typesafe-jev-system-one-decision-architecture
 title: "TypeSafe Jev: 시스템 1(System One) 결정 전용 모델 및 에이전트 분기 아키텍처"
 status: canonical
 owner: km
-updated: "2026-10-11"
-last_updated: "2026-10-11"
+updated: "2026-11-03"
+last_updated: "2026-11-03"
 sources:
   - https://typesafe.ai/
   - https://craftbettersoftware.com/p/jev-engineering-101
@@ -195,9 +195,10 @@ flowchart TD
 1. **결정 전용 1차 판정(Decision-only First-Pass Judge)**: 긴 텍스트 사유를 생성하지 않고, 판정 라벨(`verdict`)과 확신도 점수(`confidence`)만을 단일 패스로 반환.
 2. **동적 캐스케이드 라우팅**: 확신도가 높은 대다수(80~90% 이상)의 일반 케이스는 Jev 결과를 즉시 수용. 확신도가 임계값 미만인 모호한 케이스에 한해서만 고비용 프론티어 모델로 에스컬레이션.
 3. **벤치마크 및 비용 효율**:
-   - 프론티어 모델 대비 **비용 단 0.36%**만 소모.
+   - 15개 평가 모델 중 단독 **8위** 기록, **GPT-6 대비 전체 정확도 차이는 단 `1.7%p`**에 불과하면서 **비용은 277배 저렴(0.36% 수준)**하고 **중앙값 응답 시간은 `0.15초`(GPT-6 `1.89초` 대비 12.6배 가속)**를 달성.
    - 일반 선호도(Preference) 및 근거 기반 사실성(Faithfulness) 평가에서 프론티어 모델 대비 **약 99%의 정확도**를 보존.
-   - 오류는 거의 전적으로 저확신도(Low-confidence) 구간에 집중되므로 에스컬레이션을 통해 손실 없이 복구 가능.
+   - 오류는 거의 전적으로 저확신도(Low-confidence) 구간에 집중되므로, 확신 시 Jev 판정을 수용하고 불확실 시에만 GPT-6 Judge로 에스컬레이션하는 캐스케이드 조합으로 손실 없이 복구 가능.
+   - 단, 적대적 조작에 대한 강건성 감사([[wiki/Agents/Evaluations/JevAdvBench-Decision-Model-Adversarial-Benchmark.md|JevAdvBench]])에서 검증되지 않은 의견 1문장 추가로 결정의 `12.1%`가 뒤집히고 고신뢰 응답의 `38%`가 `0.8` 임계값 아래로 하락해 인간 검토 큐를 포화시킬 수 있음이 밝혀져 입력 상태 정제(Sanitization)가 필수적이다.
 
 ---
 
@@ -205,16 +206,20 @@ flowchart TD
 
 Jev의 독점 클라우드 API를 대체하거나 보완하기 위해 다음과 같은 오픈소스 기술이 병행 활용된다:
 
-1. **[[wiki/Models/Optimization-and-Serving/CLM-Choice-Language-Model.md]] (Stanford + NVIDIA CLM-8B)**:
+1. **[[wiki/Models/Optimization-and-Serving/AnyJev-and-Jeva-Decision-Model-Ecosystem.md]] (Nokia AnyJev · Tacit · Jeva)**:
+   - 무학습 로짓 회전·사전확률 보정(`AnyJev L0`), 1.7B~9B 단일 패스 자기 증류 체크포인트(`Tacit`), 그리고 Null-aware·순열 불변·수천 개 후보군 확장·교차 요청 캐싱을 갖춘 `Jeva` 아키텍처.
+2. **[[wiki/Models/Optimization-and-Serving/CLM-Choice-Language-Model.md]] (Stanford + NVIDIA CLM-8B)**:
    - Qwen3-8B 기반의 듀얼 인코더 구조로, 사전 임베딩 캐싱을 통해 1,000개 선택지 기준 Jev 대비 최대 13배 빠른 16.5ms 지연 시간을 달성. Apache 2.0 라이선스로 자체 호스팅 가능.
-2. **[[wiki/Models/Optimization-and-Serving/TypeLLM-SGLang-Type-Safe-Generation.md]] (TypeLLM)**:
+3. **[[wiki/Models/Optimization-and-Serving/TypeLLM-SGLang-Type-Safe-Generation.md]] (TypeLLM)**:
    - 오픈소스 SGLang 엔진 기반으로 모델 가중치 수정 없이 JSON Schema 제약 디코딩과 의존성 DAG(`depends_on`) 실행을 지원하여 완벽한 스키마 정합성을 보장.
-3. **[[wiki/Models/Optimization-and-Serving/GLiNER2.5-Decide-Structured-Decision-Encoder.md]] (GLiNER2.5-Decide)**:
+4. **[[wiki/Models/Optimization-and-Serving/GLiNER2.5-Decide-Structured-Decision-Encoder.md]] (GLiNER2.5-Decide)**:
    - DeBERTa-v3 기반 340M 인코더로 텍스트 내 스팬/관계 추출과 명제 제약 조건을 결합한 경량 CPU 서빙 결정 모델.
 
 ---
 
 ## 🔗 관련 문서 링크
+- [[wiki/Models/Optimization-and-Serving/AnyJev-and-Jeva-Decision-Model-Ecosystem.md]] — AnyJev, Tacit, Jeva 및 결정 모델 vs 리랭커 비교
+- [[wiki/Agents/Evaluations/JevAdvBench-Decision-Model-Adversarial-Benchmark.md]] — RLCD 결정 모델 적대적 공격 벤치마크
 - [[wiki/Models/Optimization-and-Serving/CLM-Choice-Language-Model.md]] — Stanford + NVIDIA 오픈소스 선택 언어 모델
 - [[wiki/Models/Optimization-and-Serving/TypeLLM-SGLang-Type-Safe-Generation.md]] — SGLang 기반 타입 세이프 스키마 디코딩
 - [[wiki/Models/Optimization-and-Serving/GLiNER2.5-Decide-Structured-Decision-Encoder.md]] — 제약식 구조화 인코더 결정 모델

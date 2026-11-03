@@ -18,7 +18,7 @@ updated: "2026-06-29"
 - [[wiki/Agents/Implementation/LangSmith-No-Code-Agent-Builder]]: 개발자가 아닌 사용자도 에이전트를 구축할 수 있는 LangSmith 기반 노코드 빌더.
 - [[wiki/Agents/Implementation/open-agent-builder]]: 오픈 소스 기반의 에이전트 빌더 환경.
 - [[wiki/Agents/Implementation/MaxKB]]: RAG 파이프라인과 MCP 도구 사용을 지원하는 엔터프라이즈급 오픈 소스 에이전트 플랫폼.
-- [[wiki/Agents/Implementation/프로덕션-AI-에이전트-아키텍처-7대-계층]]: 프롬프트를 넘어 신뢰성 있는 서비스를 구축하기 위한 7대 시스템 레이어 설계 가이드.
+- [[wiki/Agents/Implementation/프로덕션-AI-에이전트-아키텍처-7대-계층]]: 프롬프트를 넘어 신뢰성 있는 서비스를 구축하기 위한 7대 시스템 레이어 설계 가이드.
 
 ## 2. 자율 및 자기 진화형 에이전트
 - [[wiki/Agents/Implementation/Agent0]]: 제로 데이터로부터 스스로 개선하고 진화하는 자율 에이전트 프레임워크 (Agent0-VL 포함).

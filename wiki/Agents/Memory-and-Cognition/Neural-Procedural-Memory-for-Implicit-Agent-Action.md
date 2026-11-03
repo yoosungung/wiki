@@ -30,4 +30,4 @@ type: "wiki"
 ## 🔗 연결된 문서
 - [[wiki/Agents/Memory-and-Cognition/000_Memory-and-Cognition-MOC.md]]
 - [[wiki/Agents/Memory-and-Cognition/AI-Agent-Memory-Architecture.md]]
-- [[wiki/Engineering/Prompt-Engineering/프롬프트 엔지니어링에서 컨텍스트 엔지니어링으로의 전환.md]]
+- [[wiki/Engineering/Prompt-Engineering/프롬프트 엔지니어링에서 컨텍스트 엔지니어링으로의 전환.md]]

@@ -68,4 +68,4 @@ class CodeBaseAgent(OOAgent):
 
 ## 🔗 연결된 문서
 - [[wiki/Agents/Frameworks/000_Frameworks-MOC.md]]
-- [[wiki/Engineering/Prompt-Engineering/프롬프트 엔지니어링에서 컨텍스트 엔지니어링으로의 전환.md]]
+- [[wiki/Engineering/Prompt-Engineering/프롬프트 엔지니어링에서 컨텍스트 엔지니어링으로의 전환.md]]

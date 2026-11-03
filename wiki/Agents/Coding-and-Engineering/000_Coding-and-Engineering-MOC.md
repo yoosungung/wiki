@@ -24,3 +24,4 @@
 - [[wiki/Agents/Coding-and-Engineering/에이전트-기반-엔지니어링-조직-전환-및-성숙도-모델.md]]
 - [[wiki/Agents/Coding-and-Engineering/코딩-에이전트-하네스-엔지니어링-가이드.md]]
 - [[wiki/Agents/Coding-and-Engineering/하네스-핸드북-및-하네스-이펙트-연구-2026.md]]
+- [[wiki/Agents/Coding-and-Engineering/Pstack-Tstack-and-Cumulative-Diff-Verification-Workflows.md]]
