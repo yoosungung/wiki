@@ -1,6 +1,12 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-11-07 | INBOX_DRAIN | inbox/ | 2 | pm github-issue-check empty skip + roadmap-sync → Factory-Ops/Roadmap-Sync/Phase6; git rm |
+| 2026-11-07 | RESEARCH | 연구_주제_관리.md | 6 | wiki-first 후 웹: LiteRT-LM **v0.19.1** 신규; WebLLM v0.2.87·Graphiti 0.31.2·LightRAG v1.5.7·Supermemory server-v0.0.9·Furiosa HiCache ALREADY; Reglos·EvoGroup·continual forgetting 신규 |
+| 2026-11-07 | INGEST | web | 4 | LiteRT-LM v0.19.1 release; arXiv:2611.06049, 2611.03868, 2611.03219. raw 파일 없음 |
+| 2026-11-07 | SYNTHESIZE | wiki/ | 10 | Reglos·EvoGroup·Continual-Forgetting 신규; LiteRT §3.4; Factory-Ops·Roadmap-Sync·Phase6; Self-Evolving/Memory MOC; INDEX |
+| 2026-11-07 | ALREADY_COVERED | wiki/ | 5 | WebLLM v0.2.87; Graphiti v0.31.2; LightRAG v1.5.7; Supermemory server-v0.0.9; Furiosa SDK 2026.4 HiCache |
+| 2026-11-07 | CLEANUP | root | 1 | D-0(2026-11-07) 생성; D-1(2026-11-06) 유지 |
 | 2026-11-06 | INBOX_DRAIN | inbox/ | 0 | status:inbox 없음. no-op |
 | 2026-11-06 | RESEARCH | 연구_주제_관리.md | 7 | wiki-first 후 웹: LiteRT-LM v0.19.0·WebLLM v0.2.87·Graphiti v0.31.2·LightRAG v1.5.7·Supermemory server-v0.0.9·Furiosa SDK 2026.4 HiCache ALREADY; Meta²(2611.05139)·Harness-S(2611.04277)·AMD×Furiosa×MangoBoost·Series D 신규 |
 | 2026-11-06 | INGEST | web | 3 | arXiv:2611.05139, arXiv:2611.04277, 2026-11-04 Furiosa 동맹·Series D 보도. raw 파일 없음(원문 URL을 sources에 유지) |

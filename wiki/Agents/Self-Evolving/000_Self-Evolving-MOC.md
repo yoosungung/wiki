@@ -15,3 +15,5 @@
 - [[wiki/Agents/Self-Evolving/Harness-Squared-Recursive-Agent-Harnessing.md]]
 - [[wiki/Agents/Self-Evolving/Meta2-Precomputed-Harness-Evolution.md]]
 - [[wiki/Agents/Self-Evolving/Harness-S-Sibling-Rescue-Training.md]]
+- [[wiki/Agents/Self-Evolving/EvoGroup-Self-Evolving-Group-Agent-Harness.md]]
+- [[wiki/Agents/Self-Evolving/Continual-Harness-Evolution-Catastrophic-Forgetting.md]]

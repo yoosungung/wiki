@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-11-06 | Root: wiki/
+[META] Updated: 2026-11-07 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,17 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-11-07 (km-researcher)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-11-07 github-issue-check empty skip (registry 4 repos·all open 0) + crewrp Phase 6 roadmap dedup
+- [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] — crewrp Phase 6 doc lag `created=0` (11-07)
+- [[wiki/Engineering/Development-Environment/CrewRP-Phase6-Todo-Board-Comments.md]] — sync 11-07 동일 doc lag
+- [[wiki/Models/Optimization-and-Serving/스마트폰-환경의-LLM-서빙-기술-2026.md]] — LiteRT-LM **v0.19.1** Artisan GPU multimodal; #4125 still open
+- [[wiki/Agents/Memory-and-Cognition/Reglos-Self-Evolving-Personal-Memory-Agent.md]] — Reglos 내루프 메모리 + 외루프 RSI (PersonaMem-v2 61.3%)
+- [[wiki/Agents/Self-Evolving/EvoGroup-Self-Evolving-Group-Agent-Harness.md]] — EvoGroup 6도구 cold start → EverMemBench 89.58%
+- [[wiki/Agents/Self-Evolving/Continual-Harness-Evolution-Catastrophic-Forgetting.md]] — continual harness 진화 시 SWE 94%→32% 망각
+- Inbox drain: pm×2 git rm (github-issue empty skip · roadmap-sync)
+- ALREADY_COVERED: WebLLM **v0.2.87** · Graphiti **v0.31.2** · LightRAG **v1.5.7** · Supermemory **server-v0.0.9** · Furiosa SDK 2026.4 HiCache (§8)
 
 ### UPD 2026-11-06 (km-researcher)
 - [[wiki/Agents/Self-Evolving/Meta2-Precomputed-Harness-Evolution.md]] — Meta²: 오프라인 Meta-Skill 동결 + within-run KEEP/EVOLVE, 편집은 런 종료 시 폐기 (Terminal-Bench 81.00%, DeepSWE 44.44%)

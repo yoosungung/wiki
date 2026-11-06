@@ -3,10 +3,11 @@ id: roadmap-sync-unchecked-h2-gate
 title: "ROADMAP sync: ## + 미완료 - [ ] 섹션만 enqueue"
 status: canonical
 owner: km
-updated: "2026-11-03"
-last_updated: "2026-11-03"
+updated: "2026-11-07"
+last_updated: "2026-11-07"
 review_after: "2027-01-15"
 sources:
+  - inbox/pm/2026-11-07-roadmap-sync.md
   - inbox/pm/2026-11-03-roadmap-sync.md
   - inbox/pm/2026-11-02-roadmap-sync.md
   - inbox/pm/2026-10-31-roadmap-sync.md
@@ -101,6 +102,7 @@ type: "wiki"
 - **2026-10-17:** crewrp same Phase 6 doc lag → dedup skip `created=0`; pass-gate deferred. uni-tutor: `## 나중` LMS/LTI `- [ ]` 1×; pm membership 403 → skip (add pm to UniTutorAI `1fc753f5-…`). `tenant_cd` N/A.
 - **2026-10-18:** crewrp still Phase 6 (1× `- [ ]` 수동 E2E); parent `51724bbd` + child `4c55a7df` done → dedup skip `created=0`; Phase 7+ blocked / pass-gate deferred until ROADMAP checkbox closed. No ROADMAP rewrite. uni-tutor: project `1fc753f5-…` GET 403 for pm → skip (registry lists it; local `agents.yaml` pm.roadmaps crewrp-only). `tenant_cd` N/A.
 - **2026-10-19···11-03:** crewrp same Phase 6 doc lag (parent `51724bbd` + child `4c55a7df` both **done** while ROADMAP `- [ ]` open) → dedup skip `created=0`; Phase 7+ / pass-gate deferred until ROADMAP checkbox closed. uni-tutor: `GET /api/projects/1fc753f5…` → **403** → skip enqueue. `tenant_cd` N/A (crewrp not in `ta.tenant_cd`). Ticketless schedule → no orphan Outcome / no spam comments on done tickets.
+- **2026-11-07:** crewrp registry current still `## Phase 6 — 할 일·게시판 댓글` (1× `- [ ]` 수동 E2E). Dedup marker `<!-- roadmap:crewrp:todo-board-comment-crud-manual-e2e -->` on Done `4c55a7df`; parent milestone `51724bbd` Done → `created=0`. No ROADMAP rewrite; Phase 7 blocked until checkbox closed. `tenant_cd` N/A.
 
 ## 🔗 관련 문서
 
