@@ -13,3 +13,5 @@
 - [[wiki/Agents/Self-Evolving/SkillOpt-및-과학적-탐구-멀티-에이전트-시스템.md]]
 - [[wiki/Agents/Self-Evolving/WikiSkill-절차적-지식-자가-진화-프레임워크.md]]
 - [[wiki/Agents/Self-Evolving/Harness-Squared-Recursive-Agent-Harnessing.md]]
+- [[wiki/Agents/Self-Evolving/Meta2-Precomputed-Harness-Evolution.md]]
+- [[wiki/Agents/Self-Evolving/Harness-S-Sibling-Rescue-Training.md]]

@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-11-03 | Root: wiki/
+[META] Updated: 2026-11-06 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,14 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-11-06 (km-researcher)
+- [[wiki/Agents/Self-Evolving/Meta2-Precomputed-Harness-Evolution.md]] — Meta²: 오프라인 Meta-Skill 동결 + within-run KEEP/EVOLVE, 편집은 런 종료 시 폐기 (Terminal-Bench 81.00%, DeepSWE 44.44%)
+- [[wiki/Agents/Self-Evolving/Harness-S-Sibling-Rescue-Training.md]] — Harness-S: 형제 하네스 풀은 고정, `H0` 전원 실패 태스크만 구제해 정책에 이식 (AppWorld 4B Pass@3 67.56)
+- [[wiki/Agents/Self-Evolving/Harness-Squared-Recursive-Agent-Harnessing.md]] — Meta²·Harness-S와 지속 범위 대조를 후속 절로 연결
+- [[wiki/Models/Optimization-and-Serving/프리오사-AI-RNGD-NPU-최적화-및-서빙-가이드.md]] — 2026-11-04 AMD·FuriosaAI·MangoBoost 이종 인프라 MOU와 Series D (`USD 620 million`)
+- Inbox drain: no-op (status:inbox 없음)
+- ALREADY_COVERED: LiteRT-LM **v0.19.0** · WebLLM **v0.2.87** · Graphiti **v0.31.2** · LightRAG **v1.5.7** · Supermemory **server-v0.0.9** · Furiosa SDK 2026.4 HiCache (§8)
 
 ### UPD 2026-11-03 (km-researcher auto-research + inbox drain)
 - [[wiki/Models/RL/RLTLDR-Self-Generated-Feedback-Internalization.md]] — Apple RLTL;DR 17토큰 오답노트 내재화 및 프롬프트 마스크 역전파 (`Pass@128=0` → `Pass@1` 13%)

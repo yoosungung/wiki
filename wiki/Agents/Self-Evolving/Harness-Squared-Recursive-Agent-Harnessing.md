@@ -1,8 +1,8 @@
 ---
 title: "Harness² (Harness Squared) 및 메타하네스: 가중치 고정 이중 재귀 에이전트 하네스 자가 진화 프레임워크"
 date: "2026-11-03"
-last_updated: "2026-11-03"
-updated: "2026-11-03"
+last_updated: "2026-11-06"
+updated: "2026-11-06"
 tags: ["Agents", "Self-Evolving", "Harness-Squared", "Google-Research", "Meta-Harness", "Propose-Probe-Compose", "Claude-Code", "Codex"]
 related_raw: ["[[2026-11-03-Google-Harness-Squared-Recursive-Agent-Harnessing.md]]", "[[2026-11-03-Meta-Harness-V2-Dynamic-Workflow-Codex.md]]"]
 type: "wiki"
@@ -63,7 +63,12 @@ flowchart TD
 
 ---
 
-## 4. 관련 문서 (Cross-References)
+## 4. 후속: 지식을 얼릴지, 정책을 고칠지 (2026-11-06)
+`Harness²`가 채택 하네스를 태스크 간에 남긴다면, 이후 두 논문은 그 지속 범위를 가른다.
+- **Meta²**: 오프라인에서는 “언제 고칠지”만 배우고, 온라인 편집은 런이 끝나면 버린다. [[wiki/Agents/Self-Evolving/Meta2-Precomputed-Harness-Evolution.md]]
+- **Harness-S**: 형제 하네스 풀은 고정하고, 베이스가 전부 실패한 태스크의 구제 궤적만 정책 가중치에 넣는다. 평가는 다시 `H0`. [[wiki/Agents/Self-Evolving/Harness-S-Sibling-Rescue-Training.md]]
+
+## 5. 관련 문서 (Cross-References)
 - [[wiki/Agents/Coding-and-Engineering/하네스-핸드북-및-하네스-이펙트-연구-2026.md]]
 - [[wiki/Engineering/Infrastructure-and-DevOps/Meta-Agent-Harness-Policy-Learning.md]]
 - [[wiki/Agents/Self-Evolving/WikiSkill-절차적-지식-자가-진화-프레임워크.md]]

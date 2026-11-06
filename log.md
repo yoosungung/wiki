@@ -1,6 +1,12 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-11-06 | INBOX_DRAIN | inbox/ | 0 | status:inbox 없음. no-op |
+| 2026-11-06 | RESEARCH | 연구_주제_관리.md | 7 | wiki-first 후 웹: LiteRT-LM v0.19.0·WebLLM v0.2.87·Graphiti v0.31.2·LightRAG v1.5.7·Supermemory server-v0.0.9·Furiosa SDK 2026.4 HiCache ALREADY; Meta²(2611.05139)·Harness-S(2611.04277)·AMD×Furiosa×MangoBoost·Series D 신규 |
+| 2026-11-06 | INGEST | web | 3 | arXiv:2611.05139, arXiv:2611.04277, 2026-11-04 Furiosa 동맹·Series D 보도. raw 파일 없음(원문 URL을 sources에 유지) |
+| 2026-11-06 | SYNTHESIZE | wiki/ | 4 | Meta2·Harness-S 신규; Harness² 후속 절·Self-Evolving MOC; RNGD 서빙 가이드 §5 이종 인프라·Series D |
+| 2026-11-06 | ALREADY_COVERED | wiki/ | 6 | LiteRT-LM v0.19.0; WebLLM v0.2.87; Graphiti v0.31.2; LightRAG v1.5.7; Supermemory server-v0.0.9; Furiosa SDK 2026.4 HiCache |
+| 2026-11-06 | CLEANUP | root | 1 | D-2(2026-11-03) 삭제; D-0(2026-11-06) 생성. D-1 파일 없음 |
 | 2026-11-03 | INBOX_DRAIN | inbox/ | 5 | pm roadmap-sync (11-02·03) + qa bulk-weekly + aa clean-weekly + rhwp_batch v0.8.7 nested workspace vendor → Cargo-Nested-Workspace-Vendor-Pattern 신규 및 Roadmap-Sync·Phase6·Factory-Ops·Tenant-Quality·Dirty-Tree 갱신; git rm |
 | 2026-11-03 | INGEST | raw/ | 31 | RLTL;DR, NeMo-DCR, 2026 사후학습 16편, TencentDB Agent Memory, Colibrì, DeepInfer, DeepSeek-V4.1-Flash, Unstract/PapersWithCode MCP, EmbeddingGemma 2, AnyJev/Tacit, Jeva, JevAdvBench, Harness², OpenWiki Evidence Graph, K2 Horizon 375B, Unlimited OCR 2/MiniCPM-OCR, Plandex/Pullboard, Pstack/Tstack, Reranker vs Decision, RAW-RAG, Cognee GLiNER, PEFT Activation Steering, REA, Karpathy Sharp Funnel, Agent Infra 12 Patterns, KV-Lingo, Meta-Harness V2 표준화 |
 | 2026-11-03 | RESEARCH | 연구_주제_관리.md | 29 | raw 31건 + inbox 5건 전수 매핑 및 웹 원천 추적 완료; LiteRT-LM v0.19.0·WebLLM v0.2.87·Graphiti 0.31.2·LightRAG v1.5.7·Supermemory 0.0.9 ALREADY_COVERED |

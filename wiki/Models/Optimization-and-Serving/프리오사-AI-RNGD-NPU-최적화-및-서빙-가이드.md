@@ -1,8 +1,8 @@
 ---
 title: "프리오사 AI RNGD NPU 최적화 및 서빙 가이드 (2026)"
 tags: ["FuriosaAI", "RNGD", "Renegade", "NPU", "Inference", "vLLM", "HBM3"]
-last_updated: "2026-09-09"
-updated: "2026-09-09"
+last_updated: "2026-11-06"
+updated: "2026-11-06"
 related_raw: ["[[raw/2026-09-09-furiosa-llm-llm-d-intelligent-inference-scheduling.md]]", "[[raw/2026-09-04-furiosa-sdk-2026-4-0-hierarchical-kv-specdec.md]]", "[[raw/2026-08-31-furiosa-sdk-v2026-3-0-fxb-bundle.md]]", "[[raw/2026-08-28-furiosa-rngd-scoring-dp-router.md]]", "[[raw/2026-08-27-furiosa-ai-npu-rngd-stork-2nm-broadcom.md]]", "[[2026-08-27-furiosa_rngd_tcp_fxb.md]]", "[[2026-08-20-furiosa-llm-2026.4.0b13.md]]", "[[2026-08-13-furiosa-llm-2026-4-0b11.md]]", "[[2026-06-16-Research-Synthesis-Update.md]]", "[[2026-06-17-Research-Synthesis-Update.md]]", "[[2026-06-26-furiosa_rngd_npu_serving_optimization.md]]", "[[2026-06-28-furiosa_rngd_npu_llm_serving_optimization.md]]", "[[2026-06-30-furiosa_rngd_furiosa_llm.md]]", "[[2026-07-01-furiosa-rngd-npu-hbm3-inference.md]]", "[[2026-07-07-furiosa-rngd-prefix-aware-dp-router.md]]", "[[2026-07-11-furiosa_rngd_npu_tcp_prefix_aware_router.md]]", "[[2026-07-12-furiosa-sdk-dp-routing-scoring-weights.md]]", "[[2026-07-15-samsung-sds-furiosa-npuaas-launch.md]]", "[[2026-07-16-furiosa-npuaas-launch-day-broadcom-stork.md]]"]
 ---
 
@@ -101,6 +101,13 @@ furiosa-llm serve <model> --data-parallel-size 2 \
 ### 글로벌 진출 및 생산 스케일업 (2026-07-14 업데이트)
 - **생산 스케일업 및 차세대 "Stork"**: 에이전틱 AI 추론 수요 급증에 대처하기 위해 2027년까지 RNGD NPU 카드를 **40,000~50,000대 규모로 생산 능력을 확장**할 계획입니다. 동시에 NVIDIA 추론용 dGPU 제품군에 대항해 극강의 토큰당 비용 효율을 보장하는 **2nm 공정 기반 3세대 NPU "Stork"(황새)** 개발에 전력을 다하고 있습니다.
 - **유럽 엔터프라이즈 개척**: 포르투갈 리스본에 유럽 본부 성격의 플래그십 사무실을 개설하고, Equinix 리스본 데이터센터에 RNGD 서버 인프라를 실전 구축하여 유럽 데이터센터와 기업향 NPU 시장 공략에 본격 돌입했습니다.
+
+### 이종 인프라 동맹 · Series D (2026-11-04)
+SDK 2026.4의 HiCache·멀티모달 FCFS는 §8에 이미 있다. 2026-11-04에 새로 확인한 사실은 칩 조합과 조달이다.
+
+- **AMD × FuriosaAI × MangoBoost**: Advancing AI World Tour Seoul에서 CPU·GPU(AMD), NPU(FuriosaAI), DPU·시스템 소프트웨어(MangoBoost)를 한 추론 인프라로 묶는 MOU. 워크로드를 칩 종류에 나눠 추론 비용·전력을 낮추는 설계를 같이 검증한다. 서울 레퍼런스 클러스터는 **2027년 봄**(AMD 키노트: 내년 봄) 목표. ([조선비즈](https://biz.chosun.com/en/en-it/2026/11/04/45FSZUJHQBHZJPQ36UHZC6YZBY/), [아시아경제](https://www.asiae.co.kr/en/article/2026110411195564944))
+- **Series D**: `USD 620 million`, 투자 후 가치 `USD 2.9 billion`. 국민성장펀드 `USD 280 million`. 용도는 RNGD 증산, 소프트웨어, Broadcom과 만드는 3세대(멀티다이 2nm, HBM4/4E, 에이전트 프론티어). 보도 기준 2026년 RNGD **2만 대**, 2027년 **4만 대 초과**. 리스본 Equinix LS2 배치는 기존 유럽 항목과 같다. ([ai.pt](https://ai.pt/en/news/furiosa-ai-closes-620-million-series-d-and-will-add-lisbon-research-and-ae3081/))
+- 위의 2027년 4만~5만 대 **능력** 계획과, 이번 보도의 **출하 대수**는 다른 숫자다. 스펙이 아닌 보도 인용이므로 샘플·공시 전에 설계 입력으로 쓰지 않는다.
 
 ## 6. furiosa-apps 레퍼런스 (2026-08-06)
 
