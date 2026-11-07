@@ -3,10 +3,13 @@ id: factory-schedule-ops-skips
 title: "Factory 스케줄 ops: empty skip · registry placeholder"
 status: canonical
 owner: km
-updated: "2026-11-07"
-last_updated: "2026-11-07"
+updated: "2026-11-08"
+last_updated: "2026-11-08"
 review_after: "2027-01-15"
 sources:
+  - inbox/pm/2026-11-08-github-issue-check-empty-skip.md
+  - inbox/pm/2026-11-08-roadmap-sync.md
+  - inbox/pm/2026-11-07-pm-checkpoint-flow-empty.md
   - inbox/pm/2026-11-07-github-issue-check-empty-skip.md
   - inbox/pm/2026-11-07-roadmap-sync.md
   - inbox/pm/2026-11-03-roadmap-sync.md
@@ -90,6 +93,7 @@ type: "wiki"
 - **2026-10-16** same: true-issue 0 across crewrp/sw-factory/UniTutorAI/nl2sql/wiki/codingland; sw-factory `open_issues_count=1` PR-only; factory projects CrewRP+sw-factory only; `clients-repos-registry` empty → agents.yaml+wiki map; orphan Outcome 미생성.
 - **2026-10-17···31** same: OPEN true-issue 0 (sw-factory/crewrp/sql-mcp/nl2sql/wiki/UniTutorAI/codingland/candidate.win); sw-factory `open_issues_count=1`은 PR#24만; factory ACL sw-factory+CrewRP+sql-mcp (UniTutorAI membership 없음); registry empty → agents.yaml+wiki map; orphan Outcome 미생성. factory-mcp Cursor namespace 미노출 시 session-cookie REST fallback (pm 2026-10-21···31). **2026-10-26···31:** env `GH_TOKEN` 401 → keyring fallback (sweep 성공; 시크릿 미기록).
 - **2026-11-07:** registry `.cursor/github-issues-registry.json` repos with client_id+project_id = sw-factory/crewrp/sql-mcp/rhwp_batch; `gh issue list --state open` (keyring; env GH_TOKEN 401 → unset) all 0 → `created=0`/`commented=0`/`skipped=empty-open`. No Active ticket_id → orphan Outcome 미생성. factory-mcp Cursor namespace absent → session-cookie REST project probe only.
+- **2026-11-08:** registry 6 repos (sw-factory, crewrp, sql-mcp, rhwp_batch, **aura**, **candidate.win**). `GH_TOKEN` OK but `gh` binary absent → REST `GET /repos/.../issues?state=open` + `pull_request==null` filter; OPEN true-issue 0 → `created=0`/`commented=0`/`skipped=empty-open`. factory-mcp absent → session-cookie REST membership probe (6×200). No Active ticket_id → orphan Outcome 미생성.
 - Active `ticket_id` 없는 스케줄 → orphan Outcome 티켓 미생성([[wiki/Engineering/AI-Native-Engineering/Schedule-Outcome-Requires-Active-Ticket.md]]).
 - Actions/CD 실패 감시는 이 스케줄 범위 아님(→ ta).
 
@@ -109,11 +113,18 @@ type: "wiki"
 - **crewrp 2026-10-15:** current still Phase 6 (1× `- [ ]` 수동 E2E). Milestone `51724bbd` + child `4c55a7df` already **done** → dedup skip / `created=0`. Doc lag: ROADMAP checkbox open → Phase 7+ blocked; pass-gate deferred until checkbox closed. `tenant_cd` N/A.
 - **crewrp 2026-10-16···11-03:** still Phase 6 (1× `- [ ]` 수동 E2E 댓글 CRUD). Parent `51724bbd` + child `4c55a7df` already **done** → dedup skip `created=0`. Doc lag keeps Phase 7+ blocked; pass-gate deferred until ROADMAP checkbox closed.
 - **crewrp 2026-11-07:** same Phase 6 doc lag (unchecked 수동 E2E); dedup hit on Done child `4c55a7df` + parent `51724bbd` → `created=0`. sync does not rewrite tenant ROADMAP; Phase 7 blocked until H2 checklist clears.
+- **crewrp 2026-11-08:** same Phase 6 doc lag → dedup `created=0`. **aura** registry: incomplete `##` `- [ ]` = 0 and no all-`[x]` passed section (plain bullets) → skip `no passed section`; project tickets = 0. `tenant_cd` N/A.
 - **uni-tutor 2026-10-05:** `## 나중` with 2× `- [ ]` → reuse milestone `f8d92c00`; child Editor/Roommate `66ac47e7`; LMS marker already done (`4aa8d43d`) even if ROADMAP checkbox lags.
 - **uni-tutor 2026-10-06···13:** `## 나중` still current with **1×** `- [ ]` (LMS/LTI); milestone reuse `f8d92c00`; LMS marker `4aa8d43d` (doc lag) → enqueue skip / `created=0`; pass-gate deferred until checkbox closed.
 - **uni-tutor 2026-10-14···11-03:** registry entry present but pm session → **403 forbidden** (not in pm membership) → skip enqueue (실패 아님). Prior LMS ticket `4aa8d43d` GET → 404 (inaccessible/purged). Human: add pm to UniTutorAI project `1fc753f5-…`. Local `agents.yaml` pm.roadmaps는 crewrp-only일 수 있음.
 - zsh heredoc 함정: `[x]`/`###` glob → JSON 파일로 API body 작성.
 - factory MCP namespace 부재 시 session-cookie REST로 동일 계약 수행(쓰기 전 get_ticket).
+
+## pm-checkpoint flow empty
+
+보드에 `in_progress`/`review`/`deploying_test`/`qa`/`deploying_prod`가 없으면 **FLOW_COUNT=0** → actionable `add_comment` 0 · status-board upsert N/A (실패 아님).
+
+- **2026-11-07:** 4 projects (rhwp_batch, sql-mcp, CrewRP, sw-factory) scan → flow empty (board mostly done: rhwp Sync v0.8.7 ×2, km-wiki 2026-11-07 ×2). factory-mcp absent → session-cookie REST. No Active ticket_id → orphan Outcome 금지.
 
 ## Outcome 티켓
 

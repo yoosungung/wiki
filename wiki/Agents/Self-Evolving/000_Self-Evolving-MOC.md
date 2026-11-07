@@ -17,3 +17,5 @@
 - [[wiki/Agents/Self-Evolving/Harness-S-Sibling-Rescue-Training.md]]
 - [[wiki/Agents/Self-Evolving/EvoGroup-Self-Evolving-Group-Agent-Harness.md]]
 - [[wiki/Agents/Self-Evolving/Continual-Harness-Evolution-Catastrophic-Forgetting.md]]
+- [[wiki/Agents/Self-Evolving/ReHarness-Recurrent-Harness-Agentic-Continual-Learning.md]]
+- [[wiki/Agents/Self-Evolving/Self-Evolving-Agents-Incomplete-Continual-Learners.md]]

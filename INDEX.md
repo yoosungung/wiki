@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-11-07 | Root: wiki/
+[META] Updated: 2026-11-08 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,15 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-11-08 (km-researcher)
+- [[wiki/Agents/Self-Evolving/ReHarness-Recurrent-Harness-Agentic-Continual-Learning.md]] — 후방 개정 순환 하네스 (norm. gain 0.240; grounded >95%)
+- [[wiki/Agents/Self-Evolving/Self-Evolving-Agents-Incomplete-Continual-Learners.md]] — drift 스트림에서 self-evolution 가소성↔안정성 트레이드오프
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-11-08 github-issue empty skip (registry 6 repos·aura+candidate.win) + crewrp/aura roadmap + pm-checkpoint FLOW_COUNT=0
+- [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] — crewrp Phase 6 doc lag `created=0` + aura no passed section (11-08)
+- [[wiki/Engineering/Development-Environment/CrewRP-Phase6-Todo-Board-Comments.md]] — sync 11-08 동일 doc lag
+- Inbox drain: pm×3 git rm (github-issue empty skip · roadmap-sync · pm-checkpoint flow empty)
+- ALREADY_COVERED: LiteRT-LM **v0.19.1** · WebLLM **v0.2.87** · Graphiti **v0.31.2** · LightRAG **v1.5.7** · Supermemory **server-v0.0.9** · Furiosa SDK 2026.4 HiCache (§8)
 
 ### UPD 2026-11-07 (km-researcher)
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-11-07 github-issue-check empty skip (registry 4 repos·all open 0) + crewrp Phase 6 roadmap dedup

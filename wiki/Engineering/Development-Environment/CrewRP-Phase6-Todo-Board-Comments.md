@@ -3,10 +3,11 @@ id: crewrp-phase6-todo-board-comments
 title: "CrewRP Phase 6: 할 일·게시판 댓글 CRUD 수동 E2E"
 status: canonical
 owner: km
-updated: "2026-11-07"
-last_updated: "2026-11-07"
+updated: "2026-11-08"
+last_updated: "2026-11-08"
 review_after: "2027-01-15"
 sources:
+  - inbox/pm/2026-11-08-roadmap-sync.md
   - inbox/pm/2026-11-07-roadmap-sync.md
   - inbox/pm/2026-11-03-roadmap-sync.md
   - inbox/pm/2026-11-02-roadmap-sync.md
@@ -40,7 +41,7 @@ ROADMAP current `## Phase 6 — 할 일·게시판 댓글` (2026-10-14 enqueue).
 
 ## 티켓 축
 
-| 역할 | id | marker | 보드 (2026-11-07) |
+| 역할 | id | marker | 보드 (2026-11-08) |
 |------|-----|--------|-------------------|
 | Parent milestone | `51724bbd` | `roadmap:crewrp:milestone:phase-6-todo-board-comments` | **done** |
 | Child | `4c55a7df` | `roadmap:crewrp:todo-board-comment-crud-manual-e2e` | **done** |
@@ -52,6 +53,7 @@ Done gate: child `test:` → parent Intent/`done`. `tenant_cd` N/A.
 - 보드 자식·milestone은 Done이나 ROADMAP `- [ ]`가 열려 있으면 sync current로 남음 → Phase 7+ enqueue 차단·pass-gate deferred (dedup `created=0`).
 - **2026-10-16···11-03 sync:** 동일 doc lag → `created=0` (재enqueue 없음).
 - **2026-11-07 sync:** 동일 doc lag → dedup `created=0` (재enqueue 없음).
+- **2026-11-08 sync:** 동일 doc lag → dedup `created=0` (재enqueue 없음).
 - 진행을 넘기려면 ROADMAP 체크를 닫는다 — [[wiki/Engineering/AI-Native-Engineering/Roadmap-Pass-Gate-Human-Approval.md]].
 
 ## 범위 (intake)
