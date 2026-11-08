@@ -49,5 +49,6 @@ gh run view <run_id> --repo <owner/repo>
 ## 🔗 관련 문서
 
 - [[wiki/Engineering/AI-Native-Engineering/Needs-Only-Aggregate-CI-Gate.md]]
+- [[wiki/Engineering/AI-Native-Engineering/GHA-macOS-14-Runner-Retirement-Hotfix.md]] — runner label unsupported는 budget과 별축
 - [[wiki/Engineering/AI-Native-Engineering/GHA-Workflow-PR-Only-Trigger.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Wiki-Synthesis-Policy.md]]

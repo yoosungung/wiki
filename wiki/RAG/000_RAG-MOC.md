@@ -114,3 +114,4 @@
 - [[wiki/RAG/NVIDIA-Researchers-Improve-Transformer-Variants-with-New-Projection-Akshay-Pachaar님이-토픽에-대해-올림.md]]
 - [[wiki/RAG/Optimize-Retrieval-Over-Tokens-for-Better-AI-Context-Sumanth-P님이-토픽에-대해-올림.md]]
 - [[wiki/RAG/Persistent-Knowledge-Graph-for-Codebases-with-Codebase-MCP-Sumanth-P님이-토픽에-대해-올림.md]]
+- [[wiki/RAG/LiteRAG-Cost-Efficient-Graph-RAG.md]]

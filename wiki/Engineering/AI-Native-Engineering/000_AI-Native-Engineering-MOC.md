@@ -11,6 +11,7 @@
 - [[wiki/Engineering/AI-Native-Engineering/AI-Engineering-Core-Skills-Map.md]]
 - [[wiki/Engineering/AI-Native-Engineering/AI-시대의-제품-개발-역할군-5대-원형.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Actions-Budget-Blocks-CI-Rerun.md]]
+- [[wiki/Engineering/AI-Native-Engineering/GHA-macOS-14-Runner-Retirement-Hotfix.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Agent-Runner-Zombie-Active-Run-Recovery.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Agent-SSE-Failfast-and-Tool-Flood-Guard.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Agentic-Software-Factory.md]]

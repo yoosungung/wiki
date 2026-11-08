@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-11-08 | Root: wiki/
+[META] Updated: 2026-11-09 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,17 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-11-09 (km-researcher)
+- [[wiki/Engineering/Development-Environment/Cargo-Nested-Workspace-Vendor-Pattern.md]] — rhwp **v0.9.0** `vendor/*`+fonts/font-rules + workspace flatten; lean Intent PR #6 → tag Release
+- [[wiki/Engineering/AI-Native-Engineering/GHA-macOS-14-Runner-Retirement-Hotfix.md]] — macos-14 retired 2026-11-02; pin macos-15 + workflow_dispatch re-release (rhwp_batch #7)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 2026-11-09 github-issue empty skip (registry 6) + crewrp/aura roadmap + pm-checkpoint rhwp v0.9.0 Done seal
+- [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] — crewrp Phase 6 doc lag `created=0` + aura no passed section (11-09)
+- [[wiki/Engineering/Development-Environment/CrewRP-Phase6-Todo-Board-Comments.md]] — sync 11-09 동일 doc lag
+- [[wiki/Agents/Self-Evolving/Harness-RSI-Self-Evolving-Agent-Harness.md]] — Harness RSI 정의·분류·PAC 승인 (arXiv:2610.18813)
+- [[wiki/RAG/LiteRAG-Cost-Efficient-Graph-RAG.md]] — LiteRAG 질의조건 그래프 탐색 (≠ LightRAG 제품)
+- Inbox drain: pm×10 + rhwp_batch×3 + ta×1 git rm (rhwp v0.9.0 nest/fonts/tag · macos-14 hotfix · schedule skips)
+- ALREADY_COVERED: LiteRT-LM **v0.19.1** · WebLLM **v0.2.87** · Graphiti **v0.31.2** · LightRAG **v1.5.7** · Supermemory **server-v0.0.9** · Furiosa SDK 2026.4 HiCache (§8)
 
 ### UPD 2026-11-08 (km-researcher)
 - [[wiki/Agents/Self-Evolving/ReHarness-Recurrent-Harness-Agentic-Continual-Learning.md]] — 후방 개정 순환 하네스 (norm. gain 0.240; grounded >95%)

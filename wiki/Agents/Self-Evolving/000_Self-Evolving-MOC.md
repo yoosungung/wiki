@@ -19,3 +19,4 @@
 - [[wiki/Agents/Self-Evolving/Continual-Harness-Evolution-Catastrophic-Forgetting.md]]
 - [[wiki/Agents/Self-Evolving/ReHarness-Recurrent-Harness-Agentic-Continual-Learning.md]]
 - [[wiki/Agents/Self-Evolving/Self-Evolving-Agents-Incomplete-Continual-Learners.md]]
+- [[wiki/Agents/Self-Evolving/Harness-RSI-Self-Evolving-Agent-Harness.md]]

@@ -3,9 +3,16 @@ id: cargo-nested-workspace-vendor-pattern
 title: "Rust Cargo 중첩 워크스페이스(Nested Workspace) 벤더링 및 어댑터 패턴"
 status: canonical
 owner: km
-updated: "2026-11-03"
-last_updated: "2026-11-03"
+updated: "2026-11-09"
+last_updated: "2026-11-09"
 sources:
+  - inbox/rhwp_batch/2026-11-09-rhwp-upstream-v0.9.0-vendor-nest.md
+  - inbox/rhwp_batch/2026-11-09-rhwp-upstream-v0.9.0-vendor-fonts.md
+  - inbox/rhwp_batch/2026-11-09-rhwp-upstream-v0.9.0-tag-release.md
+  - inbox/pm/2026-11-09-intent-pass-rhwp-v090-pr6.md
+  - ticket:0f34dece-193b-4a93-bca5-6c8d408fb620
+  - https://github.com/edwardkim/rhwp/releases/tag/v0.9.0
+  - https://github.com/yoosungung/rhwp_batch/pull/6
   - inbox/rhwp_batch/2026-11-03-rhwp-upstream-v0.8.7-nest.md
   - ticket:2802d700-87fe-4f67-81b9-877a44fdbe08
   - https://github.com/edwardkim/rhwp/releases/tag/v0.8.7
@@ -63,7 +70,34 @@ members = [
 
 ---
 
+
+## 4. v0.9.0 확장: `vendor/*` · fonts · workspace flatten
+
+edwardkim/rhwp **v0.9.0**부터 default feature가 path vendor(`vendor/rhwp-pdf-import-backend`, `rhwp-zune-jpeg`, `rhwp-jpeg-encoder`, `svg2pdf`, hayro/qcms/codec 등)를 당긴다. 0.8.7 nest 어댑터(루트 `[workspace]` strip + `rhwp/crates/*` members)만으로는 부족하다.
+
+### 4.1 Vendor copy-set
+
+| 경로 | 이유 |
+| :--- | :--- |
+| `rhwp/vendor/` | path-dep 크레이트 본체 |
+| `assets/fonts/*`, `assets/font-rules/*` | `include_bytes!`/`include_str!` — promo `chrome`/`edge` 없어도 **필수** |
+| `src/`, `crates/`, `saved/`, `samples/` | 기존 세트 |
+| `tools/` (~580MB) | `rhwp-batch` 미사용 — omit 가능 (0.8.7도 미포함) |
+
+전체 upstream tarball은 multi-GB이므로 sparse clone/checkout(`src`,`crates`,`saved`,`samples`,`vendor`,`assets`)이 실용적이다.
+
+### 4.2 Workspace inheritance flatten
+
+`vendor/svg2pdf` 등은 `[workspace.package]`/`[workspace.dependencies]` inheritance(`{ workspace = true }`)를 쓴다. 루트 `[workspace]` strip만 하면 outer `rhwp_batch`에서 multiple-root / missing `workspace.package` 파싱 오류가 난다. **값을 패키지 매니페스트에 인라인 flatten**해야 한다.
+
+### 4.3 Intent·Release 운영
+
+- Intent: lean nest PR(fonts/font-rules only, 예: #6)을 fat vendor(#5 chrome/edge)보다 우선. Repo CI는 tag-only `release.yml` — PR checks 부재; 게이트는 `cargo test -p rhwp-batch`.
+- Merge 후 annotated tag `v0.9.0`(force/retag 금지) → Release. macOS runner 라벨은 [[wiki/Engineering/AI-Native-Engineering/GHA-macOS-14-Runner-Retirement-Hotfix.md]].
+
+
 ## 🔗 관련 문서
 - [[wiki/Engineering/Development-Environment/000_Development-Environment-MOC.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]]
+- [[wiki/Engineering/AI-Native-Engineering/GHA-macOS-14-Runner-Retirement-Hotfix.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Wiki-Synthesis-Policy.md]]
