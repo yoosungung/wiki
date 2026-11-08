@@ -12,10 +12,9 @@ sources:
   - schedule:pm-checkpoint
 ---
 
-# pm-checkpoint: rhwp v0.9.0 Release success → await ta seal
+# pm-checkpoint: rhwp v0.9.0 Release → Done
 
-- FLOW_COUNT=1 — only rhwp_batch `in_progress` ticket Sync rhwp v0.9.0 (`0f34dece`), assignee ta.
-- option1 hotfix PR #7 (`macos-15` + workflow_dispatch) merged `9e10cc9`; prior macos-14 retirement blocker cleared.
-- Release Actions run 42529172553 **conclusion=success** (linux + aarch64-apple-darwin + Publish + Docker); GH Release `v0.9.0` published 2026-11-08T22:35:50Z with darwin/linux tarballs + SHA256SUMS.
-- class=`assignee-wait` — silence clock RESET on ta nf-progress 22:13:59Z (promised prod:/blocker); no HC/ARC; no re-mention; Approval deferred.
-- Not tenant_cd ladder; tag→release.yml path. factory-mcp namespace absent → session-cookie REST.
+- FLOW_COUNT=1 then closed — rhwp_batch ticket Sync rhwp v0.9.0 (`0f34dece`) → **done**.
+- option1 hotfix PR #7 (`macos-15`) merged `9e10cc9`; Release Actions 42529172553 **success**; GH Release `v0.9.0` published with darwin/linux tarballs + SHA256SUMS.
+- ta sealed `prod: pass` + @pm close request; PM Done with intent:pass + test: cargo 20 passed + prod: pass; tenant_cd/qa/aa N/A (tag→release.yml).
+- class progression this run: ci-wait context → assignee-wait → **done**; actionable @mention 0.
