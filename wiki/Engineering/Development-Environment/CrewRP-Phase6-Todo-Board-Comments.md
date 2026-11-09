@@ -3,8 +3,8 @@ id: crewrp-phase6-todo-board-comments
 title: "CrewRP Phase 6: 할 일·게시판 댓글 CRUD 수동 E2E"
 status: canonical
 owner: km
-updated: "2026-11-09"
-last_updated: "2026-11-09"
+updated: "2026-11-10"
+last_updated: "2026-11-10"
 review_after: "2027-01-15"
 sources:
   - inbox/pm/2026-11-09-roadmap-sync.md
@@ -32,6 +32,7 @@ sources:
   - ticket:4c55a7df-66c0-4f40-a65e-468bbf438b8d
   - wiki/Engineering/Development-Environment/CrewRP-Phase5-Home-Comm-Manual-E2E.md
   - wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md
+  - inbox/pm/2026-11-10-roadmap-sync.md
 tags: ["Engineering", "DevEnv", "CrewRP", "Phase6", "E2E", "Comments"]
 type: "wiki"
 ---

@@ -3,8 +3,8 @@ id: factory-schedule-ops-skips
 title: "Factory 스케줄 ops: empty skip · registry placeholder"
 status: canonical
 owner: km
-updated: "2026-11-09"
-last_updated: "2026-11-09"
+updated: "2026-11-10"
+last_updated: "2026-11-10"
 review_after: "2027-01-15"
 sources:
   - inbox/pm/2026-11-09-github-issue-check-empty-skip.md
@@ -81,6 +81,20 @@ sources:
   - wiki/Engineering/AI-Native-Engineering/Schedule-Outcome-Requires-Active-Ticket.md
   - wiki/Engineering/Development-Environment/CrewRP-Phase5-Home-Comm-Manual-E2E.md
   - wiki/Engineering/Development-Environment/CrewRP-Phase6-Todo-Board-Comments.md
+  - inbox/pm/2026-11-10-github-issue-check.md
+  - inbox/pm/2026-11-10-roadmap-sync.md
+  - inbox/pm/2026-11-09-candidate-escalation-all-skip-drain.md
+  - inbox/pm/2026-11-09-candidate-schedule-gap-audit-b-decision.md
+  - inbox/pm/2026-11-09-schedule-gap-yyy-n-spawn.md
+  - inbox/pm/2026-11-09-pm-checkpoint-oday-topics-parent-closeout.md
+  - inbox/pm/2026-11-09-pm-checkpoint-issue-radar-today-b-done.md
+  - inbox/pm/2026-11-09-pm-checkpoint-candidate-daily-check-closeout.md
+  - inbox/pm/2026-11-09-candidate-today-radar-schedule-gap.md
+  - inbox/candidate/2026-11-09-publication-safety-factory-schedule.md
+  - inbox/candidate/2026-11-09-people-ssot-curation-factory-schedule.md
+  - inbox/ta/2026-11-09-issue-radar-today-gateway-reload.md
+  - inbox/aa/2026-11-09-aa-clean-weekly.md
+  - inbox/qa/2026-11-09-qa-bulk-weekly.md
 tags: ["Engineering", "AI-Native", "Factory", "Schedules"]
 type: "wiki"
 ---
@@ -135,6 +149,25 @@ type: "wiki"
 
 - **2026-11-07:** 4 projects (rhwp_batch, sql-mcp, CrewRP, sw-factory) scan → flow empty (board mostly done: rhwp Sync v0.8.7 ×2, km-wiki 2026-11-07 ×2). factory-mcp absent → session-cookie REST. No Active ticket_id → orphan Outcome 금지.
 - **2026-11-09 (rhwp v0.9.0 seal):** FLOW_COUNT=1 → Sync rhwp v0.9.0 (`0f34dece`) 진행 중 quiet/ci-wait/blocker-handoff 후 Release success + `prod: pass` → **done**. macos-14 unsupported는 제품 회귀 아님([[wiki/Engineering/AI-Native-Engineering/GHA-macOS-14-Runner-Retirement-Hotfix.md]]). Ticketless checkpoint 세션은 orphan Outcome 미생성; status-board upsert only.
+
+## Ops log 2026-11-09···10
+
+### github-issue-check
+- **2026-11-10:** registry 6 repos. `gh` absent → REST open-issues + `pull_request` filter. **created** candidate.win#23 → ticket `d9210245` (takedown intake; marker `github-issue:candidate.win:23`). commented=0 (blocker/blocked label 없음). factory-mcp absent → session-cookie REST.
+
+### roadmap-sync
+- **2026-11-10:** crewrp Phase 6 doc lag (1× `- [ ]` 수동 E2E) → markers on Done parent `51724bbd`+child `4c55a7df` → `created=0`. aura: no checkbox under any H2 → skip `no passed section`. Active read on schedule Done ticket OK. factory-mcp absent → REST+cookie.
+
+### candidate schedule gap restore (Y/Y/N)
+- eric: publication-safety **Y**, people-ssot-curation **Y**, ta-k8s-daily uncomment **N**.
+- Children: `2638507e` (publication-safety, cron `0 18 * * *` UTC=03:00 KST), `e0e52a77` (people-ssot, `0 9 * * *` UTC=18:00 KST). Parent `25d4ee1e` (오늘의화제) Done after B + both restores; FLOW_COUNT 1→0.
+- Host gateway LaunchAgent loads `deploy/agents.yaml` (not local). Reload 2026-11-09: `launchctl kickstart -k …gateway` → new `gateway_start`/pid; next fire issue-radar-today 08:00 KST.
+
+### escalation drain
+- **2026-11-09:** usable 0이어도 pending→processed 이동이면 AC 충족(PR/`agent:stances` 불필요). skip 분포: `no_source_url` 7 · `no_person_mention` 3 · `no_stance` 2 · `weak_attribution` 1 · `misattribution` 1 (합 14).
+
+### 주간 NF skip
+- **2026-11-09 aa-clean-weekly / qa-bulk-weekly:** tenant-repo-sync 6/6 OK; 전 클라이언트 `clean_code` / `bulk_api`·`opik` 키 없음 → Discover skip · NF 티켓 0. 상세 패턴: [[wiki/Engineering/AI-Native-Engineering/Tenant-Quality-Yaml-Gate-Skip-Pattern.md]].
 
 ## Outcome 티켓
 

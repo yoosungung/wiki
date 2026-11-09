@@ -3,8 +3,8 @@ id: tenant-quality-yaml-gate-skip-pattern
 title: "테넌트 quality.yaml 게이트 키 누락 시 skip (NF 미생성)"
 status: canonical
 owner: km
-updated: "2026-11-03"
-last_updated: "2026-11-03"
+updated: "2026-11-10"
+last_updated: "2026-11-10"
 review_after: "2027-01-13"
 sources:
   - inbox/qa/2026-11-02-qa-bulk-weekly.md
@@ -52,6 +52,8 @@ sources:
   - inbox/aa/2026-10-12-aa-clean-weekly.md
   - inbox/qa/2026-10-12-qa-bulk-weekly.md
   - inbox/ta/2026-10-12-ta-load-weekly.md
+  - inbox/aa/2026-11-09-aa-clean-weekly.md
+  - inbox/qa/2026-11-09-qa-bulk-weekly.md
 tags: ["Engineering", "AI-Native", "Quality", "Factory", "NF", "Skip"]
 type: "wiki"
 ---
@@ -174,6 +176,11 @@ Active 없는 스케줄 → orphan Outcome 금지. factory-mcp Cursor namespace 
 | qa-bulk-weekly | 4 repo 모두 `.factory/quality.yaml` (`bulk_api`/`opik`) 없음 → skip; factory `GET /api/health` 200 `{"ok":true,"service":"sw-factory-workers"}`; `sw-factory` dirty WT (`package.json`/`package-lock.json`, no stash, HEAD `690c726` behind `origin/main` `8e6f8af` by 72) → sync skip |
 
 Active `ticket_id` 없는 스케줄 → orphan Outcome 금지, feature Done 게이트 해당 없음 (`tenant-cd-registry.json` 부재). `factory-mcp` Cursor namespace 미노출 시 `FactoryClient`(session-cookie REST) fallback. `nf-progress:` N/A (mechanical 명령 미기동).
+
+## 2026-11-09 주간 NF (aa/qa)
+
+- `aa-clean-weekly` / `qa-bulk-weekly`: tenant-repo-sync 6/6 OK (sw-factory, crewrp, sql-mcp, rhwp_batch, aura, candidate.win). dirty 없음 → stash 없음.
+- Discover: 전 클라이언트 `clean_code` / `bulk_api`·`opik` 키 없음 → **skip** · NF New 티켓 0 (실패 아님).
 
 ## 🔗 관련 문서
 

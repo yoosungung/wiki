@@ -104,3 +104,7 @@
 - [[wiki/Engineering/AI-Native-Engineering/VSCode-Extension-Host-QA-Gate.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Wiki-Synthesis-Policy.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Workspace-Ingest-Done-Vs-Skipped-Counter.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Candidate-Source-URL-NA-Guard.md]] — Pass A+Hugo source N/A 가드
+- [[wiki/Engineering/AI-Native-Engineering/Candidate-Correction-Report-Worker.md]] — Option A /api/report Worker
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Issue-Details-Parent-Children.md]] — Issue Details Parent/Children (milestone_id)
+- [[wiki/Engineering/Infrastructure-and-DevOps/Gateway-Bun-Native-Compile.md]] — gateway bun --compile

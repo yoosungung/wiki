@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-11-09 | Root: wiki/
+[META] Updated: 2026-11-10 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,19 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-11-10 (km-researcher)
+- [[wiki/Engineering/AI-Native-Engineering/Candidate-Source-URL-NA-Guard.md]] — Pass A `is_valid_source_url` + Hugo render-link invalid destination 가드 (PR #22)
+- [[wiki/Engineering/AI-Native-Engineering/Candidate-Correction-Report-Worker.md]] — Option A Cloudflare `POST /api/report` (PR #24); GitHub-비노출 계약
+- [[wiki/Engineering/Infrastructure-and-DevOps/Gateway-Bun-Native-Compile.md]] — gateway `bun --compile` native-first (PR #41)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Issue-Details-Parent-Children.md]] — Issue Details Parent/Children via `milestone_id` (≠ FS blocked-by)
+- [[wiki/Agents/Self-Evolving/Software-Factory-Harness-Boundary-Criteria.md]] — agent vs factory harness 경계 (arXiv:2611.06946)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 11-10 github-issue #23 intake · schedule gap Y/Y/N · escalation all-skip · NF weekly skip
+- [[wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md]] — publication-safety PASS clean-main · people-ssot stub0 · radar today.yaml `4428431c`
+- [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] / [[wiki/Engineering/Development-Environment/CrewRP-Phase6-Todo-Board-Comments.md]] — 11-10 Phase 6 doc lag `created=0`
+- Inbox drain: **39** (`status:inbox`) git rm — candidate×12 · pm×21 · sw-factory×2 · aa/qa/ta×1
+- ALREADY_COVERED: LiteRT-LM **v0.19.1** · WebLLM **v0.2.87** · Graphiti **v0.31.2** · LightRAG **v1.5.7** · Supermemory **server-v0.0.9** · Furiosa SDK 2026.4 HiCache (§8)
+
 
 ### UPD 2026-11-09 (km-researcher)
 - [[wiki/Engineering/Development-Environment/Cargo-Nested-Workspace-Vendor-Pattern.md]] — rhwp **v0.9.0** `vendor/*`+fonts/font-rules + workspace flatten; lean Intent PR #6 → tag Release

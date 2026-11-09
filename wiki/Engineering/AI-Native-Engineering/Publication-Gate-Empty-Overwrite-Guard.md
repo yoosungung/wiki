@@ -3,8 +3,8 @@ id: publication-gate-empty-overwrite-guard
 title: "퍼블리시 게이트 + 빈 산출물 덮어쓰기 금지"
 status: canonical
 owner: km
-updated: "2026-09-22"
-last_updated: "2026-09-22"
+updated: "2026-11-10"
+last_updated: "2026-11-10"
 review_after: "2026-12-21"
 sources:
   - inbox/candidate/2026-09-23-publication-safety.md
@@ -131,6 +131,14 @@ sources:
   - ticket:1992
   - skill:political-wiki-administration
   - agent/publication_gate.py
+  - inbox/candidate/2026-11-10-publication-safety.md
+  - inbox/candidate/2026-11-10-issue-radar-today.md
+  - inbox/candidate/2026-11-09-people-ssot-curation-18h.md
+  - inbox/candidate/2026-11-09-people-ssot-curation-factory-schedule.md
+  - inbox/candidate/2026-11-09-publication-safety-factory-schedule.md
+  - ticket:9ce55a56-360c-410a-baa3-ab68ec4373cb
+  - ticket:e8326d6b-1670-4edf-9b0d-4a6e38b1606d
+  - ticket:e27d5886-52eb-4700-a054-8bdc870e0030
 
 tags: ["Engineering", "AI-Native", "Publish", "Safety", "Git"]
 type: "wiki"
@@ -197,6 +205,15 @@ python agent/publication_gate.py --base origin/main
 - publication-safety 잡은 push 직전·직후 `publication_gate.py --base origin/main` PASS를 남기고, Pass 스택은 preserve 브랜치 또는 detach 경로로 다룬다(§분기·스택 운영). people curation은 Pass issue-stance 스택을 preserve 브랜치에 두고 **`origin/main`에 detach**해 작업·push한 뒤 로컬 스택을 rebase한다.
 - **hygiene 패턴(2026-09-01)**: SSoT slug alias remap, non-SSoT/org person 링크 delink, weak misattribution stance drop — publication 시점에 people stub를 새로 invent하지 않는다(slug shell이 이미 있을 때만).
 
+
+## Ops log 2026-11-09···10 (candidate schedules)
+
+- **publication-safety factory restore:** cron `0 18 * * *` UTC = **03:00 KST**. unpublished Pass diverge → `origin/main` detach; Pass ff-merge 금지; HOLD=no push; clean main+empty unpublished+gate exit 0 → Done without push/Hugo.
+- **2026-11-10 gate:** fetch → main behind only → `pull --ff-only` to `0c957763` → `publication_gate.py --base origin/main` **exit 0 PASS** (zero-stance ongoing blockers 없음). HEAD=`origin/main`, unpublished empty → Done without push/Hugo.
+- **people-ssot-curation factory restore:** cron `0 9 * * *` UTC = **18:00 KST**. stub→curated는 allowlisted official/profile URL ≥1일 때만; 부족≠실패. empty content diff → commit 금지. Pass ff-merge 금지.
+- **2026-11-09 curation:** base `origin/main` ff-only; push SHA `bf23cc3b`; stub→curated 0 (잔여 stub 31 전부 official/profile URL 없음); hygiene delink `/people/jeong-bu`(정부), `/people/bae-jae-go`(배재고); yaml↔wiki orphan 0.
+- **issue-radar-today 2026-11-10:** `issue_radar.py run` → `publish_today.py` exit 0; empty-overwrite 미발동(10 items). push only `wiki/data/today.yaml` SHA `4428431c…`; `generated_at` 2026-11-09T23:0xZ. No Leantime write; cache/report MD 제외.
+- **source N/A:** Pass A `is_valid_source_url` + Hugo render-link 가드 — [[wiki/Engineering/AI-Native-Engineering/Candidate-Source-URL-NA-Guard.md]].
 
 ## 🔗 관련 문서
 
