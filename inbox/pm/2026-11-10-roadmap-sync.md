@@ -14,6 +14,6 @@ sources:
 
 # pm-roadmap-sync 2026-11-10
 
-- **crewrp** current= (open 1: 수동 E2E 댓글 CRUD). Milestone/child markers already present; both **done** →  (doc lag: ROADMAP still ). Phase 7+ blocked on current.
-- **aura** no / checklists under any  → skip: **no passed section** (plain bullets / 「완료」 prose only). Pass-gate not opened.
-- factory MCP namespace unavailable in session; used REST+session cookie as equivalent read/write path. Active read: `4c55a7df` (done). No new ticket comment (doc-lag no-spam).
+- crewrp current = Phase 6 (할 일·게시판 댓글); open checklist 1건(수동 E2E 댓글 CRUD). Markers already on done milestone+child → created=0 (ROADMAP doc lag still unchecked). Phase 7+ blocked on current.
+- aura: no checkbox items under any H2 → skip no passed section; pass-gate not opened.
+- Active read 4c55a7df (done). factory MCP namespace missing; REST+cookie used.
