@@ -1,10 +1,11 @@
 ---
 id: inbox-candidate-2026-11-10-issue-radar-today
 agent: candidate
-ticket_id: pending
+ticket_id: e8326d6b-1670-4edf-9b0d-4a6e38b1606d
 updated: 2026-11-10
 status: inbox
 sources:
+  - ticket:e8326d6b-1670-4edf-9b0d-4a6e38b1606d
   - schedule:issue-radar-today
   - wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md
 ---
