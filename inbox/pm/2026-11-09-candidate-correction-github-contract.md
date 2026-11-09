@@ -18,3 +18,8 @@ sources:
 - `ROADMAP`/`README`는 GitHub Issues 단일 채널을 운영 정책으로 채택 → 문서 간 충돌.
 - `CANDYDATE_ISSUES_TOKEN`은 서버측 자동 생성을 암시하나 미구현(클라이언트 리다이렉트만).
 - 결정 옵션: A 계약유지+서버생성 / B 계약개정 / C 비공개 채널. Eric Approval 대기.
+
+
+## Decision (2026-11-09)
+- Eric approved **Option A** (계약 유지 + 서버측 Issues 생성).
+- Parent dab8e0cf done (policy). Implementation child: f35f32d7-3eeb-4ed6-983a-353d6db5c0ee (@candidate).
