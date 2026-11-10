@@ -9,7 +9,8 @@ permissions:
   id-token: write
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  # Prefer tip: frequent inbox pushes should not wait behind a doomed slow Pages sync.
+  cancel-in-progress: true
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -57,6 +58,9 @@ jobs:
             --exclude='quartz-build' \
             --exclude='inbox' \
             --exclude='raw' \
+            --exclude='tests' \
+            --exclude='.agents' \
+            --exclude='fix_wiki_links.py' \
             ./ quartz-build/content/
 
       - name: Configure Quartz
@@ -108,6 +112,10 @@ jobs:
       name: github-pages
       url: https://wiki.askwho.net
     steps:
+      # deploy-pages hard-caps timeout at 600000ms and cancels on expiry
+      # (Pages backend also enforces ~10m). Raising `timeout:` does not help.
+      # Flake: build green + deploy stuck in syncing_files → Timeout → red;
+      # next tip push usually recovers. See wiki/.../Org-Wiki-Pages-Deploy-Sync-Timeout.md
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
