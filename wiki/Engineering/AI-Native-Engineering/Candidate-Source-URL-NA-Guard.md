@@ -3,9 +3,9 @@ id: candidate-source-url-na-guard
 title: "candidate.win: source_url=N/A 가드 (Pass A + Hugo)"
 status: canonical
 owner: km
-updated: "2026-11-10"
-last_updated: "2026-11-10"
-review_after: "2027-02-10"
+updated: "2026-11-11"
+last_updated: "2026-11-11"
+review_after: "2027-02-11"
 sources:
   - inbox/candidate/2026-11-09-source-url-na-pass-a-guard.md
   - inbox/candidate/2026-11-09-source-href-na-render-guard.md
@@ -38,7 +38,14 @@ type: wiki
 - 점수 게이트 ≠ 출처 게이트 — [[wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md]].
 - candidate.win Pages: tenant_cd N/A; Done 게이트 = `test:` + `prod:` (TA/QA/AA ladder 없음). merge `7920b23d` + Pages Deploy → prod `href=N/A`=0.
 
+## Escalation / 미확인 잔존
+
+Pass A usable=0이어도 `no_person_mention` 등으로 pending→processed면 drain AC 충족(PR 불필요). Tier1 `mixed`/`neutral`도 본문 인물명 부재·quote `source_url=N/A`면 wiki 미기록.  
+Rule1이 원문 **미확인**을 스킵하면 sourceless 미확인이 라이브에 남을 수 있음 → content-only takedown: [[wiki/Engineering/AI-Native-Engineering/Candidate-Sourceless-Stance-Takedown.md]].
+
 ## 관련
 
 - [[wiki/Engineering/AI-Native-Engineering/Hugo-External-Link-New-Tab.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Candidate-Sourceless-Stance-Takedown.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Candidate-Pages-Deploy-Not-Tenant-CD.md]]

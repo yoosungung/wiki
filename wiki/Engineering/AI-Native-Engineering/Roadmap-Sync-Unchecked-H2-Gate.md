@@ -3,10 +3,11 @@ id: roadmap-sync-unchecked-h2-gate
 title: "ROADMAP sync: ## + 미완료 - [ ] 섹션만 enqueue"
 status: canonical
 owner: km
-updated: "2026-11-10"
-last_updated: "2026-11-10"
+updated: "2026-11-11"
+last_updated: "2026-11-11"
 review_after: "2027-01-15"
 sources:
+  - inbox/pm/2026-11-11-roadmap-sync.md
   - inbox/pm/2026-11-09-roadmap-sync.md
   - inbox/pm/2026-11-08-roadmap-sync.md
   - inbox/pm/2026-11-07-roadmap-sync.md
@@ -109,6 +110,7 @@ type: "wiki"
 - **2026-11-08:** crewrp same Phase 6 doc lag → dedup `created=0` (tickets `51724bbd`/`4c55a7df`). **aura** incomplete checkbox 0 + no passed all-`[x]` section → skip `no passed section`; tickets on project = 0. Ticketless schedule → no orphan Outcome.
 - **2026-11-10:** crewrp same Phase 6 doc lag → dedup `created=0` (tickets `51724bbd`/`4c55a7df`). aura incomplete 0 + no passed section → skip; project tickets = 0. Active schedule ticket read OK. `tenant_cd` N/A.
 - **2026-11-09:** crewrp same Phase 6 doc lag → dedup `created=0`. aura incomplete 0 + no passed section → skip; project tickets = 0. Ticketless → no orphan Outcome. `tenant_cd` N/A.
+- **2026-11-11:** crewrp same Phase 6 doc lag → dedup `created=0`. aura incomplete 0 + no passed section → skip; pass-gate skipped. factory-mcp absent → REST+cookie. `tenant_cd` N/A.
 
 ## 🔗 관련 문서
 

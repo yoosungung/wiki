@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-11-10 | Root: wiki/
+[META] Updated: 2026-11-11 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,17 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-11-11 (km-researcher)
+- [[wiki/Engineering/AI-Native-Engineering/Candidate-Sourceless-Stance-Takedown.md]] — sourceless 미확인 stance strip + issue mirror · prod live (PR #32 / #23)
+- [[wiki/Engineering/AI-Native-Engineering/Candidate-Pages-Deploy-Not-Tenant-CD.md]] — GH Pages = CD; tenant_cd 발명 금지; Done=`test:`+`prod:`
+- [[wiki/Engineering/AI-Native-Engineering/Candidate-Correction-Report-Worker.md]] — GH Actions CD (`deploy-report-worker.yml`) + 접수완료 모달 닫기
+- [[wiki/Agents/Self-Evolving/HarnessFlow-MCTS-Harness-Optimization.md]] — MCTS 하네스 검색 (arXiv:2611.06254)
+- [[wiki/Agents/Self-Evolving/BoxBox-Recursive-Harness-Hot-Reload.md]] — 장기 실행 hot-reload (arXiv:2611.09218)
+- [[wiki/Models/Optimization-and-Serving/WebLLM-Engine.md]] — WebLLM **v0.2.88** (엔진 패치 · TVM 0.28.0-dev2)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] / [[wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md]] / Roadmap·CrewRP Phase6 — 11-11 ops
+- Inbox drain: **16** (`status:inbox`) git rm — candidate×7 · pm×8 · ta×1
+- ALREADY_COVERED: LiteRT-LM **v0.19.1** · Graphiti **v0.31.2** · LightRAG **v1.5.7** · Supermemory **server-v0.0.9** · Furiosa SDK 2026.4 HiCache (§8)
 
 ### UPD 2026-11-10 (km-researcher)
 - [[wiki/Engineering/AI-Native-Engineering/Candidate-Source-URL-NA-Guard.md]] — Pass A `is_valid_source_url` + Hugo render-link invalid destination 가드 (PR #22)

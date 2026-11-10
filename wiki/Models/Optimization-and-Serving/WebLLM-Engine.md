@@ -4,8 +4,8 @@ status: "published"
 category: "Models"
 subcategory: "Optimization-and-Serving"
 tags: [WebLLM, MLC-LLM, WebGPU, Browser-LLM]
-last_updated: "2026-10-31"
-updated: "2026-10-31"
+last_updated: "2026-11-11"
+updated: "2026-11-11"
 related_raw: [
   "[[raw/2026-09-20-webllm-v0.2.85-opfs-sync-worker.md]]",
   "[[raw/2026-05-13-WebLLM-Home.md]]",
@@ -80,6 +80,18 @@ const reply = await engine.chat.completions.create({
 5. **Gemma 3 context** 처리 수정. 예제·문서는 0.2.87로.
 
 핀은 `@mlc-ai/web-llm@0.2.87`. 기존 `v0_2_86/base` 캐시만 있으면 새 바이너리를 받지 못한다. UniTutor 제품 핀은 별축(0.2.85) — [[wiki/Engineering/AI-Native-Engineering/UniTutor-On-Device-WebLLM.md]].
+
+## v0.2.88 엔진 패치 · TVM 0.28.0-dev2 (2026-11-10)
+
+[v0.2.88](https://github.com/mlc-ai/web-llm/releases/tag/v0.2.88)은 **카탈로그 재빌드가 아닌** 엔진/런타임 패치다(`v0_2_87` 가중치 유지).
+
+1. 스트리밍 completion **prompt echo** 수정.
+2. selected-token logprobs · buffered UTF-8 logprobs 수정.
+3. prefill 중 끝나는 completion의 **decode rate** 수정.
+4. 설치된 패키지 TypeScript 타입체크 수정.
+5. `@mlc-ai/web-runtime` → `0.28.0-dev2`.
+
+핀은 `@mlc-ai/web-llm@0.2.88`. UniTutor 제품 핀은 별축.
 
 ## 관련 문서
 - [[wiki/Models/Optimization-and-Serving/Browser-AI-Inference-MOC.md|Browser AI Inference MOC]]

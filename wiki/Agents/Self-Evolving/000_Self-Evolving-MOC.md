@@ -22,3 +22,5 @@
 - [[wiki/Agents/Self-Evolving/Harness-RSI-Self-Evolving-Agent-Harness.md]]
 
 - [[wiki/Agents/Self-Evolving/Software-Factory-Harness-Boundary-Criteria.md]] — run 정의로 agent vs factory harness 경계 (arXiv:2611.06946)
+- [[wiki/Agents/Self-Evolving/HarnessFlow-MCTS-Harness-Optimization.md]] — MCTS 가이드 실행 하네스 최적화 (arXiv:2611.06254)
+- [[wiki/Agents/Self-Evolving/BoxBox-Recursive-Harness-Hot-Reload.md]] — 장기 실행 중 재귀 harness hot-reload (arXiv:2611.09218)

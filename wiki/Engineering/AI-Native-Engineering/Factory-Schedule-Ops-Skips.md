@@ -3,8 +3,8 @@ id: factory-schedule-ops-skips
 title: "Factory 스케줄 ops: empty skip · registry placeholder"
 status: canonical
 owner: km
-updated: "2026-11-10"
-last_updated: "2026-11-10"
+updated: "2026-11-11"
+last_updated: "2026-11-11"
 review_after: "2027-01-15"
 sources:
   - inbox/pm/2026-11-09-github-issue-check-empty-skip.md
@@ -95,6 +95,12 @@ sources:
   - inbox/ta/2026-11-09-issue-radar-today-gateway-reload.md
   - inbox/aa/2026-11-09-aa-clean-weekly.md
   - inbox/qa/2026-11-09-qa-bulk-weekly.md
+  - inbox/candidate/2026-11-10-escalation-drain-all-skip.md
+  - inbox/pm/2026-11-10-pm-checkpoint-escalation-drain-dup-quiet.md
+  - inbox/pm/2026-11-10-pm-checkpoint-wiki-deploy-progress.md
+  - inbox/pm/2026-11-11-github-issue-check-candidate-intake.md
+  - inbox/pm/2026-11-11-roadmap-sync.md
+  - inbox/pm/2026-11-11-pm-checkpoint-takedown-i-si-ba-intent.md
 tags: ["Engineering", "AI-Native", "Factory", "Schedules"]
 type: "wiki"
 ---
@@ -165,9 +171,21 @@ type: "wiki"
 
 ### escalation drain
 - **2026-11-09:** usable 0이어도 pending→processed 이동이면 AC 충족(PR/`agent:stances` 불필요). skip 분포: `no_source_url` 7 · `no_person_mention` 3 · `no_stance` 2 · `weak_attribution` 1 · `misattribution` 1 (합 14).
+- **2026-11-10:** pending **12** → usable **0** (전부 `no_person_mention`). Tier1 `mixed`/`neutral`도 본문 인물명 부재·quote `source_url=N/A` → wiki 미기록. pending→processed면 AC. 동일 제목 in_progress 티켓 2건(~10s 간격) → checkpoint age <30m class=quiet.
 
 ### 주간 NF skip
 - **2026-11-09 aa-clean-weekly / qa-bulk-weekly:** tenant-repo-sync 6/6 OK; 전 클라이언트 `clean_code` / `bulk_api`·`opik` 키 없음 → Discover skip · NF 티켓 0. 상세 패턴: [[wiki/Engineering/AI-Native-Engineering/Tenant-Quality-Yaml-Gate-Skip-Pattern.md]].
+
+## Ops log 2026-11-11
+
+### github-issue-check
+- registry 6; open true-issue는 berryking404/candidate.win **#27–#30**만. factory tickets created (markers `github-issue:candidate.win:{n}`); #27/#28/#30 takedown(not-a-person), #29 correction(yun-jeon→윤석열). blocker labels 없음. Actions/CD out of scope(ta).
+
+### roadmap-sync
+- crewrp Phase 6 doc lag → markers on Done `51724bbd`+`4c55a7df` → `created=0`. aura: H2 checkbox 0 → skip `no passed section`.
+
+### pm-checkpoint
+- takedown `d9210245` review→deploying_test: Intent pass PR #32 · merge `18649b9` · Pages run 42882072568 · tenant_cd N/A. wiki-deploy `2567ad37` in_progress=progress (km 착수 silence RESET). Option A `f35f32d7` waiting_for_approval+eric KEEP (CF secrets human).
 
 ## Outcome 티켓
 

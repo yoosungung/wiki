@@ -3,10 +3,11 @@ id: crewrp-phase6-todo-board-comments
 title: "CrewRP Phase 6: 할 일·게시판 댓글 CRUD 수동 E2E"
 status: canonical
 owner: km
-updated: "2026-11-10"
-last_updated: "2026-11-10"
+updated: "2026-11-11"
+last_updated: "2026-11-11"
 review_after: "2027-01-15"
 sources:
+  - inbox/pm/2026-11-11-roadmap-sync.md
   - inbox/pm/2026-11-09-roadmap-sync.md
   - inbox/pm/2026-11-08-roadmap-sync.md
   - inbox/pm/2026-11-07-roadmap-sync.md

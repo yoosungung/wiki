@@ -3,9 +3,9 @@ id: candidate-correction-report-worker
 title: "candidate.win 정정·삭제: Option A /api/report Worker"
 status: canonical
 owner: km
-updated: "2026-11-10"
-last_updated: "2026-11-10"
-review_after: "2027-02-10"
+updated: "2026-11-11"
+last_updated: "2026-11-11"
+review_after: "2027-02-11"
 sources:
   - inbox/candidate/2026-11-09-correction-issue-intake.md
   - inbox/candidate/2026-11-09-correction-server-side-report.md
@@ -14,11 +14,18 @@ sources:
   - inbox/pm/2026-11-09-candidate-correction-github-contract.md
   - inbox/pm/2026-11-09-option-a-confirmed-worker-deploy.md
   - inbox/pm/2026-11-09-pm-checkpoint-option-a-intent-merge.md
+  - inbox/candidate/2026-11-10-report-worker-gh-actions-cd.md
+  - inbox/candidate/2026-11-10-report-modal-done-closes.md
+  - inbox/pm/2026-11-10-report-worker-gh-actions-cd.md
+  - inbox/pm/2026-11-10-pm-checkpoint-report-worker-cd-intent.md
   - ticket:85b94ff9-1aa1-4616-8df6-3c87eef2c01a
   - ticket:f35f32d7-3eeb-4ed6-983a-353d6db5c0ee
   - ticket:dab8e0cf-335e-4ef3-baab-8a44fb9c3ef0
+  - ticket:63833bbf-76a6-493d-854c-404c3ffb5488
   - https://github.com/berryking404/candidate.win/pull/21
   - https://github.com/berryking404/candidate.win/pull/24
+  - https://github.com/berryking404/candidate.win/pull/25
+  - wiki/Engineering/Infrastructure-and-DevOps/UniTutor-Cloudflare-Deploy.md
 tags: ["Engineering", "AI-Native", "candidate.win", "Cloudflare-Worker", "Issues"]
 type: wiki
 ---
@@ -45,7 +52,22 @@ type: wiki
 - prod smoke는 CF Worker secret/route 배포에 의존 → `waiting_for_approval` + human secret 주입 필요 시 `@eric`.
 - README의 “빌드 주입” 문구는 aspirational; 템플릿/JS 실사용 코드 없음(Worker 경로가 정본).
 
+## GH Actions CD (Eric 2026-11-10)
+
+로컬 `wrangler`가 아니라 Actions(`deploy-report-worker.yml`, PR #25)가 closeout 경로. UniTutor/factory CF 패턴.
+
+| 축 | 내용 |
+| :--- | :--- |
+| Route SoR | `wrangler.toml` `[[routes]]` `wiki.candidate.win/api/report*` + `zone_name = candidate.win` (CD-owned; dashboard one-shot 아님) |
+| Secrets | Actions: `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`; 기존 `CANDYDATE_ISSUES_TOKEN`은 CI가 Worker secret 주입 |
+| Live | secrets+merge/`workflow_dispatch` 전 `/api/report`는 **405** 가능 |
+
+## UX: 접수 완료 → 모달 닫기
+
+`submitReport` 성공 후 버튼 라벨 `접수 완료` + `disabled=false`; 재클릭 시 `closeReportModal()`. 이전엔 disabled라 Escape/오버레이만 가능. Pages 배포: [[wiki/Engineering/AI-Native-Engineering/Candidate-Pages-Deploy-Not-Tenant-CD.md]].
+
 ## 관련
 
 - [[wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Candidate-Source-URL-NA-Guard.md]]
+- [[wiki/Engineering/Infrastructure-and-DevOps/UniTutor-Cloudflare-Deploy.md]]

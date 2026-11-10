@@ -3,8 +3,8 @@ id: publication-gate-empty-overwrite-guard
 title: "퍼블리시 게이트 + 빈 산출물 덮어쓰기 금지"
 status: canonical
 owner: km
-updated: "2026-11-10"
-last_updated: "2026-11-10"
+updated: "2026-11-11"
+last_updated: "2026-11-11"
 review_after: "2026-12-21"
 sources:
   - inbox/candidate/2026-09-23-publication-safety.md
@@ -139,6 +139,12 @@ sources:
   - ticket:9ce55a56-360c-410a-baa3-ab68ec4373cb
   - ticket:e8326d6b-1670-4edf-9b0d-4a6e38b1606d
   - ticket:e27d5886-52eb-4700-a054-8bdc870e0030
+  - inbox/candidate/2026-11-11-publication-safety.md
+  - inbox/candidate/2026-11-11-issue-radar-today.md
+  - inbox/candidate/2026-11-10-people-ssot-curation-18h.md
+  - ticket:a78a10d3-4b9e-4799-8d9d-1fd52c39c4b2
+  - ticket:5fc4eccd-551a-46f0-8fd6-c04605f8eb95
+  - ticket:728f38a8-53d0-45e1-aa6d-7b2870714ce2
 
 tags: ["Engineering", "AI-Native", "Publish", "Safety", "Git"]
 type: "wiki"
@@ -214,6 +220,12 @@ python agent/publication_gate.py --base origin/main
 - **2026-11-09 curation:** base `origin/main` ff-only; push SHA `bf23cc3b`; stub→curated 0 (잔여 stub 31 전부 official/profile URL 없음); hygiene delink `/people/jeong-bu`(정부), `/people/bae-jae-go`(배재고); yaml↔wiki orphan 0.
 - **issue-radar-today 2026-11-10:** `issue_radar.py run` → `publish_today.py` exit 0; empty-overwrite 미발동(10 items). push only `wiki/data/today.yaml` SHA `4428431c…`; `generated_at` 2026-11-09T23:0xZ. No Leantime write; cache/report MD 제외.
 - **source N/A:** Pass A `is_valid_source_url` + Hugo render-link 가드 — [[wiki/Engineering/AI-Native-Engineering/Candidate-Source-URL-NA-Guard.md]].
+
+## Ops log 2026-11-11 (candidate schedules)
+
+- **publication-safety:** main already `55d1f459`==`origin/main`; `publication_gate.py --base origin/main` **exit 0 PASS**; unpublished empty → Done without push/Hugo.
+- **people-ssot-curation 18h (2026-11-10):** ff-only to `55d1f459`; stub→curated **0**; residual stub **32** (allowlist URL 없음) → 부족≠실패; content diff 0 → no commit. Hold: org 3 · journalist/weak 14 · no URL 15(incl. `i-si-ba`). yaml↔wiki orphan 0. pytest slug+stance links 2 passed.
+- **issue-radar-today:** items=10; empty-overwrite 미발동; push only `wiki/data/today.yaml` SHA `9dbd58d9…`; `generated_at` 2026-11-10T23:01:10Z. No Leantime.
 
 ## 🔗 관련 문서
 
