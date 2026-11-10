@@ -3,6 +3,16 @@ on:
   push:
     branches:
       - main
+    # Step2: inbox/raw/tests 등 publish 비대상 tip은 Deploy 스킵
+    paths:
+      - "wiki/**"
+      - "INDEX.md"
+      - "assets/**"
+      - "quartz.config.yaml"
+      - "quartz-plugins/**"
+      - "quartz.ts"
+      - ".github/workflows/deploy.yml"
+  workflow_dispatch:
 permissions:
   contents: read
   pages: write
@@ -50,18 +60,13 @@ jobs:
         run: |
           # Empty default Quartz content
           rm -rf quartz-build/content/*
-          
-          # Copy vault into Quartz content; do not publish inbox/ or raw/ (wiki body only)
-          rsync -av \
-            --exclude='.git' \
-            --exclude='.github' \
-            --exclude='quartz-build' \
-            --exclude='inbox' \
-            --exclude='raw' \
-            --exclude='tests' \
-            --exclude='.agents' \
-            --exclude='fix_wiki_links.py' \
-            ./ quartz-build/content/
+          mkdir -p quartz-build/content
+
+          # Step1 allowlist: published body only (align with quartz ignorePatterns)
+          rsync -av wiki/ quartz-build/content/wiki/
+          rsync -av assets/ quartz-build/content/assets/
+          rsync -av quartz-plugins/ quartz-build/content/quartz-plugins/
+          cp INDEX.md quartz-build/content/INDEX.md
 
       - name: Configure Quartz
         run: |

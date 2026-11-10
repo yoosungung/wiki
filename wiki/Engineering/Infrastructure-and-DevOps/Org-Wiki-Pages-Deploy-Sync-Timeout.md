@@ -38,3 +38,10 @@ type: "wiki"
 
 - fail `42739993452` (c6afa78): deploy ~10m `syncing_files` → Timeout
 - success `42740527660` (3550498): deploy ~90s; site `https://wiki.askwho.net` 200
+
+
+## 완화 단계 (ticket 2567ad37)
+
+1. **Publish allowlist** — Quartz content = `wiki/` + `assets/` + `quartz-plugins/` + `INDEX.md`. `projects/`·`log.md`·root 잡 md는 content에 넣지 않음(`projects`는 기존 `ignorePatterns`와 정합).
+2. **Deploy paths filter** — `inbox/**` 등 publish 비대상 push는 workflow 미기동. 수동은 `workflow_dispatch`.
+3. tip `cancel-in-progress` + 본 런북(0단계)은 유지.
