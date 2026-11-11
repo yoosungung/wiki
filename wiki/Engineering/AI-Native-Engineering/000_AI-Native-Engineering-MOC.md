@@ -110,3 +110,13 @@
 - [[wiki/Engineering/AI-Native-Engineering/Candidate-Pages-Deploy-Not-Tenant-CD.md]] — Pages CD · tenant_cd N/A
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Issue-Details-Parent-Children.md]] — Issue Details Parent/Children (milestone_id)
 - [[wiki/Engineering/Infrastructure-and-DevOps/Gateway-Bun-Native-Compile.md]] — gateway bun --compile
+- [[wiki/Engineering/AI-Native-Engineering/Candidate-Status-Public-Sanitize.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Candidate-Non-Person-People-Takedown.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Candidate-People-Slug-Alias-Redirect.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Factory-TicketPicker-7d-Combo.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Parent-Milestone-Not-Start-Gate.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-IR-Schema-Extensions.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-SQL-Parity-Normalize.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-PBI-Looker-Spoke-MVP.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-Factory-Onboard.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-Roadmap-Plain-Bullet-Skip.md]]

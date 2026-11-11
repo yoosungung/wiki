@@ -3,8 +3,8 @@ id: fs-blocked-by-vs-parent-link
 title: "선행은 blocked-by, 부모는 dependingTicketId"
 status: canonical
 owner: km
-updated: "2026-11-10"
-last_updated: "2026-11-10"
+updated: "2026-11-12"
+last_updated: "2026-11-12"
 review_after: "2026-11-13"
 sources:
   - ticket:564
@@ -36,3 +36,5 @@ Finish-to-Start 선행을 **부모/자식 필드**에 넣으면 선행이 Done�
 현재 공장 정본은 [[wiki/Engineering/AI-Native-Engineering/Factory-Ticket-Dependencies-SoR.md]] (D1 `ticket_dependencies` + REST). 이 문서는 Leantime 시대 필드 분리 함정용.
 
 Factory SPA Issue Details의 Parent/Children은 `milestone_id` 축(FS Blocked by UI와 분리) — [[wiki/Engineering/AI-Native-Engineering/Factory-Issue-Details-Parent-Children.md]].
+
+Factory: parent milestone은 start gate가 아님 — [[wiki/Engineering/AI-Native-Engineering/Factory-Parent-Milestone-Not-Start-Gate.md]].

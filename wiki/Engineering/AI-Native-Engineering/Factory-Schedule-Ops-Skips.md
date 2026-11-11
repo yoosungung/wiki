@@ -3,8 +3,8 @@ id: factory-schedule-ops-skips
 title: "Factory 스케줄 ops: empty skip · registry placeholder"
 status: canonical
 owner: km
-updated: "2026-11-11"
-last_updated: "2026-11-11"
+updated: "2026-11-12"
+last_updated: "2026-11-12"
 review_after: "2027-01-15"
 sources:
   - inbox/pm/2026-11-09-github-issue-check-empty-skip.md
@@ -101,6 +101,17 @@ sources:
   - inbox/pm/2026-11-11-github-issue-check-candidate-intake.md
   - inbox/pm/2026-11-11-roadmap-sync.md
   - inbox/pm/2026-11-11-pm-checkpoint-takedown-i-si-ba-intent.md
+  - inbox/pm/2026-11-12-github-issue-check-empty-skip.md
+  - inbox/pm/2026-11-12-roadmap-sync.md
+  - inbox/pm/2026-11-12-issue-radar-today-intent-pass.md
+  - inbox/pm/2026-11-11-escalation-drain-triple-dup-intake.md
+  - inbox/pm/2026-11-11-escalation-drain-all-skip-intent-pass.md
+  - inbox/candidate/2026-11-11-escalation-drain-all-skip.md
+  - inbox/candidate/2026-11-11-escalation-drain-empty-pending.md
+  - inbox/candidate/2026-11-11-people-ssot-curation-18h.md
+  - inbox/candidate/2026-11-12-issue-radar-today.md
+  - inbox/candidate/2026-11-12-publication-safety.md
+  - inbox/pm/2026-11-11-pm-checkpoint-flow.md
 tags: ["Engineering", "AI-Native", "Factory", "Schedules"]
 type: "wiki"
 ---
@@ -186,6 +197,26 @@ type: "wiki"
 
 ### pm-checkpoint
 - takedown `d9210245` review→deploying_test: Intent pass PR #32 · merge `18649b9` · Pages run 42882072568 · tenant_cd N/A. wiki-deploy `2567ad37` in_progress=progress (km 착수 silence RESET). Option A `f35f32d7` waiting_for_approval+eric KEEP (CF secrets human).
+
+
+## Ops log 2026-11-11···12 (drain)
+
+### github-issue-check
+- **2026-11-12:** registry 7 repos (+uni-semantic). `gh issue list --state open` all 0 → `created=0`/`commented=0`/`skipped=empty-open`. Spot-check open_issues_count sw-factory/candidate.win/uni-semantic=0. Ticketless → orphan Outcome 금지.
+
+### roadmap-sync
+- **2026-11-12:** crewrp Phase 6 — prior mile/child 404(project wipe) → recreate milestone `7ce664ec` + child. aura: skip `no passed section`. uni-semantic: Phase 2 checkbox → milestone `9c068a99` + 4 children. Plain-bullet skip 패턴: [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-Roadmap-Plain-Bullet-Skip.md]].
+
+### escalation drain
+- **2026-11-11:** pending **9** → usable **0** (`no_person_mention` 4 · `no_source_url` 5) → processed; PR/`agent:stances` skip. Same-day **triple** in_progress (~10–30s): `1322dc1a` / Active `0c229f2a` / `87730bdd` — schedule idempotency still open (gateway/agents.yaml). Later empty-pending no-op on Active.
+
+### candidate schedules
+- people-ssot 18h: stub→curated **0** (잔여 stub 31, allowlist URL 부족≠실패); clean no-op.
+- publication-safety 2026-11-12: exit 0 PASS; HEAD==origin/main; unpublished empty → Done without push/Hugo.
+- issue-radar-today 2026-11-12: items=10; push only `wiki/data/today.yaml` SHA `68757f34`; empty-overwrite 미발동.
+
+### pm-checkpoint
+- Multiple FLOW seals (status format, ticket picker, takedowns, uni-semantic phase1). factory-mcp absent → session-cookie REST; ticketless → no orphan Outcome.
 
 ## Outcome 티켓
 

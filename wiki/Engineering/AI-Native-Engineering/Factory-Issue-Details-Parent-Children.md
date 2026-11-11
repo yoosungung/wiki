@@ -3,8 +3,8 @@ id: factory-issue-details-parent-children
 title: "Factory SPA: Issue Details Parent/Children (milestone_id)"
 status: canonical
 owner: km
-updated: "2026-11-10"
-last_updated: "2026-11-10"
+updated: "2026-11-12"
+last_updated: "2026-11-12"
 review_after: "2027-02-10"
 sources:
   - inbox/sw-factory/2026-11-09-issue-parent-children-details.md
@@ -35,3 +35,8 @@ Leantime `dependingTicketId` 함정 문서([[wiki/Engineering/AI-Native-Engineer
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Ticket-Dependencies-SoR.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Parent-Done-Requires-Closed-Subtasks.md]]
 - [[wiki/Engineering/AI-Native-Engineering/FS-Blocked-By-Vs-Parent-Link.md]]
+
+## TicketPicker (2026-11-11)
+
+Parent/Blocked by/Children 인라인 연결은 [[wiki/Engineering/AI-Native-Engineering/Factory-TicketPicker-7d-Combo.md]] (`exclude_done` + 7d + UUID paste + `/api/search` typeahead).
+

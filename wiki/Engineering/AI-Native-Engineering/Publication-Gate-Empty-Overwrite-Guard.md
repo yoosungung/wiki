@@ -3,8 +3,8 @@ id: publication-gate-empty-overwrite-guard
 title: "퍼블리시 게이트 + 빈 산출물 덮어쓰기 금지"
 status: canonical
 owner: km
-updated: "2026-11-11"
-last_updated: "2026-11-11"
+updated: "2026-11-12"
+last_updated: "2026-11-12"
 review_after: "2026-12-21"
 sources:
   - inbox/candidate/2026-09-23-publication-safety.md
@@ -232,3 +232,10 @@ python agent/publication_gate.py --base origin/main
 - [[wiki/Engineering/Infrastructure-and-DevOps/GitHub-Fine-Grained-PAT-Contents-Write-Probe.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Hugo-External-Link-New-Tab.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Wiki-Synthesis-Policy.md]]
+
+## Ops 2026-11-12
+
+- publication-safety: exit 0 PASS; clean-main (HEAD=`fb3db2c9`==origin/main) → Done without push/Hugo.
+- issue-radar-today: items=10; `wiki/data/today.yaml` only SHA `68757f34`; empty-overwrite 미발동.
+- people-ssot 2026-11-11: stub→curated 0; residual stub 31 (allowlist URL 부족≠실패); content diff 0 no-op.
+

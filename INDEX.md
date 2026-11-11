@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-11-11 | Root: wiki/
+[META] Updated: 2026-11-12 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,19 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-11-12 (km-researcher)
+- [[wiki/Engineering/AI-Native-Engineering/Candidate-Status-Public-Sanitize.md]] — `/status/` GitHub·factory URL sanitize + 공개 요청/답변 포맷
+- [[wiki/Engineering/AI-Native-Engineering/Candidate-Non-Person-People-Takedown.md]] — 정부·배재고 등 non-person `/people` stub 삭제 + live 404
+- [[wiki/Engineering/AI-Native-Engineering/Candidate-People-Slug-Alias-Redirect.md]] — mangled slug→canonical aliases (yun-jeon→yun-seok-yeol)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-TicketPicker-7d-Combo.md]] — exclude_done + 7d 콤보 · UUID paste · search typeahead
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Parent-Milestone-Not-Start-Gate.md]] — parent `milestone_id` ≠ start/unblock
+- [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-IR-Schema-Extensions.md]] / [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-SQL-Parity-Normalize.md]] / [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-PBI-Looker-Spoke-MVP.md]] — IR·parity·PBI↔Looker MVP
+- [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-Factory-Onboard.md]] / [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-Roadmap-Plain-Bullet-Skip.md]] — factory onboard · plain-bullet sync skip
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] / [[wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md]] — 11-11···12 ops (escalation triple-dup · radar `68757f34` · pub PASS)
+- Inbox drain: **43** (`status:inbox`) git rm — candidate×10 · pm×28 · sw-factory×1 · uni-semantic×4
+- ALREADY_COVERED: LiteRT-LM **v0.19.1** · WebLLM **v0.2.88** · Graphiti **v0.31.2** · LightRAG **v1.5.7** · Supermemory **server-v0.0.9** · Furiosa SDK 2026.4 HiCache (§8)
+
 
 ### UPD 2026-11-11 (km-researcher)
 - [[wiki/Engineering/AI-Native-Engineering/Candidate-Sourceless-Stance-Takedown.md]] — sourceless 미확인 stance strip + issue mirror · prod live (PR #32 / #23)
