@@ -11,8 +11,8 @@ sources:
 
 # uni-semantic factory onboarding
 
-- Factory project `120b0eb1-39cd-40cb-a70c-5a16aecbb61a` (client `5441b7df-…`) created by pm.
-- New sessions user `uni-semantic@example.com` → `8fd7fb70-9634-4231-a30d-8d0a35dfd4ed` via `register-agent-users.sh`.
+- Factory project `120b0eb1-39cd-40cb-a70c-5a16aecbb61a` (client `5441b7df-…`) + sessions user `uni-semantic@example.com` → `8fd7fb70-…`.
 - Client membership is **owner-only**; without it project member add returns `not_client_member`.
-- macmini service refresh needs host SSH alias; DNS miss on agent host ≠ config failure.
-- PM roadmap: add `pm.roadmaps` + seed `roadmap-registry.json` (ROADMAP.md Phase 1 current).
+- Persona overlay optional: missing `deploy/personas/{name}` → `_default` only (same as aura/crewrp).
+- **Ops host:** gateway+cursor LaunchAgents run on **macmini-server**; agents.yaml refresh/restart there (no remote SSH alias needed when agent already runs on that host).
+- PM roadmap: `pm.roadmaps` + `roadmap-registry.json` / `github-issues-registry.json` for `uni-semantic`.
