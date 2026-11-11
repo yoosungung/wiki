@@ -111,6 +111,7 @@ type: "wiki"
 - **2026-11-10:** crewrp same Phase 6 doc lag → dedup `created=0` (tickets `51724bbd`/`4c55a7df`). aura incomplete 0 + no passed section → skip; project tickets = 0. Active schedule ticket read OK. `tenant_cd` N/A.
 - **2026-11-09:** crewrp same Phase 6 doc lag → dedup `created=0`. aura incomplete 0 + no passed section → skip; project tickets = 0. Ticketless → no orphan Outcome. `tenant_cd` N/A.
 - **2026-11-11:** crewrp same Phase 6 doc lag → dedup `created=0`. aura incomplete 0 + no passed section → skip; pass-gate skipped. factory-mcp absent → REST+cookie. `tenant_cd` N/A.
+- **2026-11-12:** crewrp Phase 6 — prior mile/child 404(project wipe) → recreate milestone `7ce664ec` + child `161a162c`. aura: skip `no passed section`. uni-semantic current=`## Phase 2` (4× `- [ ]`) → milestone `9c068a99` + 4 children; Phase 3–4 blocked. Plain-bullet skip: [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-Roadmap-Plain-Bullet-Skip.md]]. Ticketless → no orphan Outcome.
 
 ## 🔗 관련 문서
 
