@@ -3,7 +3,7 @@ id: crewrp-phase6-todo-board-comments
 title: "CrewRP Phase 6: 할 일·게시판 댓글 CRUD 수동 E2E"
 status: canonical
 owner: km
-updated: "2026-11-11"
+updated: "2026-11-13"
 last_updated: "2026-11-11"
 review_after: "2027-01-15"
 sources:
@@ -68,3 +68,7 @@ Done gate: child `test:` → parent Intent/`done`. `tenant_cd` N/A.
 
 - 시크릿·PAT 본문은 wiki에 기록하지 않는다.
 - Phase 5 Discussions OAuth-scope 게이트와 별축 — Phase 6 AC는 댓글 CRUD 증거로 판정.
+
+## Sync note 2026-11-13
+
+- ROADMAP still Phase 6 (1× `- [ ]` 수동 E2E). Dedup markers on Done mile `7ce664ec` + child `161a162c` → roadmap-sync `created=0`. Pass-gate deferred until checkbox closed.

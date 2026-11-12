@@ -3,8 +3,8 @@ id: uni-semantic-ir-schema-extensions
 title: "uni-semantic: IR schema 확장 + Phase1 기본 요소"
 status: canonical
 owner: km
-updated: "2026-11-12"
-last_updated: "2026-11-12"
+updated: "2026-11-13"
+last_updated: "2026-11-13"
 review_after: "2027-02-12"
 sources:
   - inbox/uni-semantic/2026-11-11-uni-semantic-ir-schema-extensions.md
@@ -14,6 +14,8 @@ sources:
   - ticket:dc3ff9fe-f924-483c-a9c6-96dfdd27fa11
   - ticket:029afe9a-b8af-4a5b-95d9-3f481429d3ec
   - wiki/Engineering/Data-and-Security/OSI-Open-Semantic-Interchange.md
+  - inbox/uni-semantic/2026-11-12-ir-snowflake-hierarchy.md
+  - ticket:68f4207a-e514-48cb-9243-f5d77c83e652
 tags: ["Engineering", "uni-semantic", "IR", "Schema"]
 type: wiki
 ---
@@ -30,7 +32,7 @@ Hub-and-Spoke Universal Semantic IR. 스키마는 sql-mcp `document.schema.json`
 | `unresolved_expression` | required `dialect`+`expression`+`warning`; 멤버 필드명 `unresolved` |
 | `hierarchy` | `name` + `levels`(≥2, 거친→세밀 dimension name); `cube.hierarchies[]` |
 | `role_playing` | `name`+`base_dimension`+`role`; `cube.role_playing[]` |
-| snowflake | `viewJoin.snowflake_path` stub만 (Phase 2 본구현 금지) |
+| snowflake | `$defs.snowflake_path` + `viewJoin.snowflake_path` $ref; omit=direct; empty invalid (`minItems`1) — Phase 2 done |
 
 ## Phase 1 참조 표면 (`ir/DESIGN.md`)
 
@@ -44,3 +46,5 @@ Hub-and-Spoke Universal Semantic IR. 스키마는 sql-mcp `document.schema.json`
 - [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-SQL-Parity-Normalize.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-PBI-Looker-Spoke-MVP.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-Factory-Onboard.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-Phase2-Spokes.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-Phase3-Dialect-and-Spokes.md]]

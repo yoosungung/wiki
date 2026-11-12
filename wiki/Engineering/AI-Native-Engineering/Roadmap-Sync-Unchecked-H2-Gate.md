@@ -3,7 +3,7 @@ id: roadmap-sync-unchecked-h2-gate
 title: "ROADMAP sync: ## + 미완료 - [ ] 섹션만 enqueue"
 status: canonical
 owner: km
-updated: "2026-11-11"
+updated: "2026-11-13"
 last_updated: "2026-11-11"
 review_after: "2027-01-15"
 sources:
@@ -112,6 +112,8 @@ type: "wiki"
 - **2026-11-09:** crewrp same Phase 6 doc lag → dedup `created=0`. aura incomplete 0 + no passed section → skip; project tickets = 0. Ticketless → no orphan Outcome. `tenant_cd` N/A.
 - **2026-11-11:** crewrp same Phase 6 doc lag → dedup `created=0`. aura incomplete 0 + no passed section → skip; pass-gate skipped. factory-mcp absent → REST+cookie. `tenant_cd` N/A.
 - **2026-11-12:** crewrp Phase 6 — prior mile/child 404(project wipe) → recreate milestone `7ce664ec` + child `161a162c`. aura: skip `no passed section`. uni-semantic current=`## Phase 2` (4× `- [ ]`) → milestone `9c068a99` + 4 children; Phase 3–4 blocked. Plain-bullet skip: [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-Roadmap-Plain-Bullet-Skip.md]]. Ticketless → no orphan Outcome.
+
+- **2026-11-13:** crewrp Phase 6 doc lag → dedup `created=0` (mile `7ce664ec`+child `161a162c`). aura: skip `no passed section`. uni-semantic Phase 2 all `[x]` → current=`## Phase 3` milestone `fc04b030` + 4 children; Phase 4 blocked. Ticketless → no orphan Outcome.
 
 ## 🔗 관련 문서
 

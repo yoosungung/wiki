@@ -3,8 +3,8 @@ id: factory-schedule-ops-skips
 title: "Factory 스케줄 ops: empty skip · registry placeholder"
 status: canonical
 owner: km
-updated: "2026-11-12"
-last_updated: "2026-11-12"
+updated: "2026-11-13"
+last_updated: "2026-11-13"
 review_after: "2027-01-15"
 sources:
   - inbox/pm/2026-11-09-github-issue-check-empty-skip.md
@@ -112,6 +112,18 @@ sources:
   - inbox/candidate/2026-11-12-issue-radar-today.md
   - inbox/candidate/2026-11-12-publication-safety.md
   - inbox/pm/2026-11-11-pm-checkpoint-flow.md
+  - inbox/pm/2026-11-13-github-issue-check-empty-skip.md
+  - inbox/pm/2026-11-13-roadmap-sync.md
+  - inbox/pm/2026-11-13-roadmap-sync-0600.md
+  - inbox/pm/2026-11-12-pm-checkpoint-flow-empty.md
+  - inbox/pm/2026-11-12-pm-checkpoint-uni-semantic-phase2-quiet.md
+  - inbox/pm/2026-11-12-pm-checkpoint-phase2-sap-quiet.md
+  - inbox/pm/2026-11-12-pm-checkpoint-uni-semantic-phase2-closeout.md
+  - inbox/pm/2026-11-12-escalation-drain-all-skip-intent-pass.md
+  - inbox/candidate/2026-11-12-escalation-drain-all-skip.md
+  - inbox/candidate/2026-11-12-people-ssot-curation-18h.md
+  - inbox/candidate/2026-11-13-issue-radar-today.md
+  - inbox/candidate/2026-11-13-publication-safety.md
 tags: ["Engineering", "AI-Native", "Factory", "Schedules"]
 type: "wiki"
 ---
@@ -217,6 +229,26 @@ type: "wiki"
 
 ### pm-checkpoint
 - Multiple FLOW seals (status format, ticket picker, takedowns, uni-semantic phase1). factory-mcp absent → session-cookie REST; ticketless → no orphan Outcome.
+
+
+## Ops log 2026-11-12···13 (drain)
+
+### github-issue-check
+- **2026-11-13:** registry 7 (sw-factory/crewrp/sql-mcp/rhwp_batch/aura/candidate.win/uni-semantic). `gh issue list --state open` all 0 → `created=0`/`commented=0`/`skipped=empty-open`. Spot-check open_issues_count sw-factory/candidate.win/uni-semantic=0. Ticketless → orphan Outcome 금지. factory-mcp absent → REST+cookie.
+
+### roadmap-sync
+- **2026-11-13:** crewrp Phase 6 doc lag → markers on Done `7ce664ec`+`161a162c` → `created=0`. aura: skip `no passed section`. uni-semantic current=`## Phase 3` → milestone `fc04b030` + children (Spotfire/MSTR/Dialect/Unresolved); Phase 4 blocked until Phase 3 closes. 06:00 sync idempotent dedup skip same markers.
+
+### escalation drain
+- **2026-11-12:** pending **15** → usable **0** (`no_person_mention` 12 · `no_source_url` 2 · `weak_attribution` 1) → processed; PR/`agent:stances` skip = AC.
+
+### candidate schedules
+- people-ssot 18h 2026-11-12: stub→curated **0** (잔여 stub 31, allowlist URL 부족≠실패); clean no-op.
+- publication-safety 2026-11-13: exit 0 PASS; HEAD==origin/main `6f3eaef3`; unpublished empty → Done without push/Hugo.
+- issue-radar-today 2026-11-13: items=10; push only `wiki/data/today.yaml` SHA `e4581e05…`; empty-overwrite 미발동.
+
+### pm-checkpoint
+- Phase 2 quiet→SAP quiet→Phase 2 closeout (parent `9c068a99` done after 4 children). Spotfire IL Intent pass → done (`0c9cee5a`, PR #12). FLOW empty runs: actionable 0. factory-mcp absent → REST+cookie.
 
 ## Outcome 티켓
 

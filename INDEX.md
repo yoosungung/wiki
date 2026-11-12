@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-11-12 | Root: wiki/
+[META] Updated: 2026-11-13 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,15 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-11-13 (km-researcher)
+- [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-Phase2-Spokes.md]] — Tableau·BI Matrix·SAP BO·IR snowflake/Hierarchy Intent pass (PRs #8–#11)
+- [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-Phase3-Dialect-and-Spokes.md]] — Dialect Transpiler·Unresolved·MSTR·Spotfire (PRs #12–#15); Phase 3 closeout
+- [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-IR-Schema-Extensions.md]] — `$defs.snowflake_path` Phase 2 done
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] / [[wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md]] / [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] — 11-12···13 ops (github empty · Phase3 sync · escalation all-skip · radar/pub/people)
+- Inbox drain: **33** (`status:inbox`) git rm — candidate×4 · pm×16 · uni-semantic×13
+- ALREADY_COVERED: LiteRT-LM **v0.19.1** · WebLLM **v0.2.88** · Graphiti **v0.31.2** · LightRAG **v1.5.7** · Supermemory **server-v0.0.9** · Furiosa SDK 2026.4 HiCache (§8)
+
 
 ### UPD 2026-11-12 (km-researcher)
 - [[wiki/Engineering/AI-Native-Engineering/Candidate-Status-Public-Sanitize.md]] — `/status/` GitHub·factory URL sanitize + 공개 요청/답변 포맷

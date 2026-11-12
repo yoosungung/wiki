@@ -119,4 +119,7 @@
 - [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-SQL-Parity-Normalize.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-PBI-Looker-Spoke-MVP.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-Factory-Onboard.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-Phase2-Spokes.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-Phase3-Dialect-and-Spokes.md]]
+
 - [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-Roadmap-Plain-Bullet-Skip.md]]
