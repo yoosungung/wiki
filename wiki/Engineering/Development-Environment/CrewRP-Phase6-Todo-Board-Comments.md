@@ -3,10 +3,16 @@ id: crewrp-phase6-todo-board-comments
 title: "CrewRP Phase 6: 할 일·게시판 댓글 CRUD 수동 E2E"
 status: canonical
 owner: km
-updated: "2026-11-13"
-last_updated: "2026-11-11"
+updated: "2026-11-14"
+last_updated: "2026-11-14"
 review_after: "2027-01-15"
 sources:
+  - inbox/crewrp/2026-11-13-phase6-comment-crud-e2e.md
+  - inbox/crewrp/2026-11-13-phase6-comment-manual-e2e.md
+  - inbox/pm/2026-11-13-crewrp-phase6-manual-e2e-closed.md
+  - inbox/pm/2026-11-13-pm-checkpoint-crewrp-phase6-closeout.md
+  - ticket:7ce664ec-722f-4020-8398-688e7a2a4b4c
+  - ticket:161a162c-80f3-4e66-b27f-19df53852a25
   - inbox/pm/2026-11-11-roadmap-sync.md
   - inbox/pm/2026-11-09-roadmap-sync.md
   - inbox/pm/2026-11-08-roadmap-sync.md
@@ -72,3 +78,11 @@ Done gate: child `test:` → parent Intent/`done`. `tenant_cd` N/A.
 ## Sync note 2026-11-13
 
 - ROADMAP still Phase 6 (1× `- [ ]` 수동 E2E). Dedup markers on Done mile `7ce664ec` + child `161a162c` → roadmap-sync `created=0`. Pass-gate deferred until checkbox closed.
+
+## Closeout 2026-11-13 (checkbox closed)
+
+- Live CrudE2E: `ThreadTalkClient` / `DiscussionsClient` — issue + discussion comment CRUD (`yoosungung/crewrp-e2e-sandbox`; `ai-edu` NOT_FOUND for host token).
+- iOS `CrudE2ETests.taskIssueCommentRoundTrip` + `discussionCommentRoundTrip` (+ Android twins). Host scopes: `repo` (+ oauth `read:org`); `project` not required for comment paths.
+- ROADMAP Phase 6 last `- [ ]` → `[x]` (PR #10 merged `7a8ffbb`) — clears doc lag / pass-gate deferral; Phase 7 Study enqueue 가능.
+- Popup/dialog title still binds to task/post title (empty → `새 할 일` / `새 글`); UI sim not re-run (host CrudE2E + code review).
+- Board: mile `7ce664ec` + child `161a162c` Intent/`done`; FLOW empty after closeout.

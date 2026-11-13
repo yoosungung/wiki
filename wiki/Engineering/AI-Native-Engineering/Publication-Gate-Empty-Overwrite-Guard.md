@@ -3,10 +3,19 @@ id: publication-gate-empty-overwrite-guard
 title: "퍼블리시 게이트 + 빈 산출물 덮어쓰기 금지"
 status: canonical
 owner: km
-updated: "2026-11-13"
-last_updated: "2026-11-13"
+updated: "2026-11-14"
+last_updated: "2026-11-14"
 review_after: "2026-12-21"
 sources:
+  - inbox/candidate/2026-11-14-publication-safety.md
+  - inbox/candidate/2026-11-14-issue-radar-today.md
+  - inbox/candidate/2026-11-13-people-ssot-curation-18h.md
+  - inbox/candidate/2026-11-13-escalation-drain-all-skip.md
+  - inbox/pm/2026-11-14-issue-radar-today-intent-pass.md
+  - ticket:b5e06d9c-4000-40e3-98dc-18c5ee499940
+  - ticket:39e8b08f-85d0-427a-ac95-fc51570290ec
+  - ticket:fa80ac61-9b49-4813-bb7e-1329b70667fa
+  - ticket:3dc67547-3eb8-4010-a00c-265c5a213371
   - inbox/candidate/2026-09-23-publication-safety.md
   - ticket:2245
   - inbox/candidate/2026-09-23-issue-radar-today.md
@@ -251,4 +260,11 @@ python agent/publication_gate.py --base origin/main
 - issue-radar-today 2026-11-13: items=10; `wiki/data/today.yaml` only SHA `e4581e05…`; empty-overwrite 미발동; `generated_at` 2026-11-12T23:01:07Z.
 - people-ssot 2026-11-12 18h: stub→curated 0; residual stub 31 (allowlist URL 부족≠실패); content diff 0 no-op.
 - escalation drain 2026-11-12: pending 15 → usable 0 → processed; PR skip = AC ([[wiki/Engineering/AI-Native-Engineering/Candidate-Source-URL-NA-Guard.md]]).
+
+## Ops 2026-11-13···14
+
+- publication-safety 2026-11-14: exit 0 PASS; clean-main HEAD=`0d19f300`==origin/main → Done without push/Hugo (ticket `b5e06d9c`).
+- issue-radar-today 2026-11-14: items=10; `wiki/data/today.yaml` only SHA `3fad5c50…`; empty-overwrite 미발동; `generated_at` 2026-11-13T23:01:42Z; PM Intent pass `3dc67547`.
+- people-ssot 2026-11-13 18h: stub→curated 0; residual stub **34** (allowlist URL 없음) → 부족≠실패; content diff 0 no-op (ticket `fa80ac61`).
+- escalation drain 2026-11-13: pending 17 → usable 0 (`no_person_mention` 9 · `no_source_url` 8) → processed; PR skip = AC.
 

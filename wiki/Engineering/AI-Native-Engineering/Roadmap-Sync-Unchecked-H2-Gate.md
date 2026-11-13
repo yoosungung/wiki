@@ -3,10 +3,13 @@ id: roadmap-sync-unchecked-h2-gate
 title: "ROADMAP sync: ## + 미완료 - [ ] 섹션만 enqueue"
 status: canonical
 owner: km
-updated: "2026-11-13"
-last_updated: "2026-11-11"
+updated: "2026-11-14"
+last_updated: "2026-11-14"
 review_after: "2027-01-15"
 sources:
+  - inbox/pm/2026-11-14-roadmap-sync.md
+  - inbox/pm/2026-11-13-roadmap-sync.md
+  - inbox/pm/2026-11-13-roadmap-sync-1800.md
   - inbox/pm/2026-11-11-roadmap-sync.md
   - inbox/pm/2026-11-09-roadmap-sync.md
   - inbox/pm/2026-11-08-roadmap-sync.md
@@ -114,6 +117,7 @@ type: "wiki"
 - **2026-11-12:** crewrp Phase 6 — prior mile/child 404(project wipe) → recreate milestone `7ce664ec` + child `161a162c`. aura: skip `no passed section`. uni-semantic current=`## Phase 2` (4× `- [ ]`) → milestone `9c068a99` + 4 children; Phase 3–4 blocked. Plain-bullet skip: [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-Roadmap-Plain-Bullet-Skip.md]]. Ticketless → no orphan Outcome.
 
 - **2026-11-13:** crewrp Phase 6 doc lag → dedup `created=0` (mile `7ce664ec`+child `161a162c`). aura: skip `no passed section`. uni-semantic Phase 2 all `[x]` → current=`## Phase 3` milestone `fc04b030` + 4 children; Phase 4 blocked. Ticketless → no orphan Outcome.
+- **2026-11-13 18:00 / 2026-11-14:** crewrp Phase 6 checkbox closed → incomplete `##` 0; passed=`## Phase 6`; Next `###` resolve fail (`### S7-*`에 `\bM\d+` 없음) → `no next ###` / invent 금지. aura: plain-bullet skip. uni-semantic current=`## Phase 4` (open 2 after Emitter `[x]`) — milestone `ba31c9e8` + MCP/`slg` backlog markers already present → sync `created=0`. Emitter: [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-Phase4-Emitter.md]].
 
 ## 🔗 관련 문서
 

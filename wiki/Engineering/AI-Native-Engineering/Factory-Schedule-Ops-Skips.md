@@ -3,10 +3,18 @@ id: factory-schedule-ops-skips
 title: "Factory 스케줄 ops: empty skip · registry placeholder"
 status: canonical
 owner: km
-updated: "2026-11-13"
-last_updated: "2026-11-13"
+updated: "2026-11-14"
+last_updated: "2026-11-14"
 review_after: "2027-01-15"
 sources:
+  - inbox/pm/2026-11-14-github-issue-check-empty-skip.md
+  - inbox/pm/2026-11-14-roadmap-sync.md
+  - inbox/pm/2026-11-13-roadmap-sync.md
+  - inbox/pm/2026-11-13-roadmap-sync-1800.md
+  - inbox/pm/2026-11-13-pm-checkpoint-crewrp-phase6-closeout.md
+  - inbox/pm/2026-11-13-pm-checkpoint-uni-semantic-phase4-quiet.md
+  - inbox/pm/2026-11-13-pm-checkpoint-uni-semantic-phase4-empty3.md
+  - inbox/candidate/2026-11-13-escalation-drain-all-skip.md
   - inbox/pm/2026-11-09-github-issue-check-empty-skip.md
   - inbox/pm/2026-11-09-roadmap-sync.md
   - inbox/pm/2026-11-09-pm-checkpoint-rhwp-v090-quiet.md
@@ -249,6 +257,25 @@ type: "wiki"
 
 ### pm-checkpoint
 - Phase 2 quiet→SAP quiet→Phase 2 closeout (parent `9c068a99` done after 4 children). Spotfire IL Intent pass → done (`0c9cee5a`, PR #12). FLOW empty runs: actionable 0. factory-mcp absent → REST+cookie.
+
+## Ops log 2026-11-13···14 (drain)
+
+### github-issue-check
+- **2026-11-14:** registry 7 (sw-factory/crewrp/sql-mcp/rhwp_batch/aura/candidate.win/uni-semantic). `gh issue list --state open` all `[]`; spot-check `open_issues_count=0` ×7 → `created=0`/`commented=0`/`skipped=empty-open`. Ticketless → orphan Outcome 금지. factory-mcp absent → REST membership 7×200.
+
+### roadmap-sync
+- **2026-11-13···14:** crewrp Phase 6 checkbox closed → incomplete 0; passed Phase 6; `### S7-*` no `\bM\d+` → `no next ###`. aura: plain-bullet skip. uni-semantic Phase 4 markers on `ba31c9e8` + MCP/`slg` backlog → `created=0`.
+
+### escalation drain
+- **2026-11-13:** pending **17** → usable **0** (`no_person_mention` 9 · `no_source_url` 8) → processed; PR/`agent:stances` skip = AC.
+
+### candidate schedules
+- people-ssot 18h 2026-11-13: stub→curated **0**; residual stub **34** (allowlist URL 없음) → 부족≠실패; content diff 0 → no commit.
+- publication-safety 2026-11-14: exit 0 PASS; HEAD==origin/main `0d19f300`; unpublished empty → Done without push/Hugo.
+- issue-radar-today 2026-11-14: items=10; push only `wiki/data/today.yaml` SHA `3fad5c50…`; `generated_at` 2026-11-13T23:01:42Z; empty-overwrite 미발동. PM Intent pass on Done `3dc67547`.
+
+### pm-checkpoint
+- CrewRP Phase 6 closeout (mile+child Intent/`done`, PR #10). uni-semantic Phase 4: quiet → empty 1/3 → 2/3 → Approval `@eric.yoo` (MCP/`slg` wait); Emitter Intent/`done` mid-ladder. factory-mcp absent → REST+cookie.
 
 ## Outcome 티켓
 

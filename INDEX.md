@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-11-13 | Root: wiki/
+[META] Updated: 2026-11-14 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,15 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-11-14 (km-researcher)
+- [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-Phase4-Emitter.md]] — Phase 4 Emitter dbt·Cube MVP (PR #16) + MCP/slg backlog · Approval ladder
+- [[wiki/Engineering/Development-Environment/CrewRP-Phase6-Todo-Board-Comments.md]] — Phase 6 checkbox closed (CrudE2E live · PR #10)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] / [[wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md]] / [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] — 11-13···14 ops (github empty · Phase4 sync · escalation all-skip · radar/pub/people · Phase6 closeout)
+- Inbox drain: **25** (`status:inbox`) git rm — candidate×4 · crewrp×2 · pm×18 · uni-semantic×1
+- ALREADY_COVERED: LiteRT-LM **v0.19.1** · WebLLM **v0.2.88** · Graphiti **v0.31.2** · LightRAG **v1.5.7** · Supermemory **server-v0.0.9** · Furiosa SDK 2026.4 HiCache (§8)
+- Research: raw/ LinkedIn-style tips deferred (wiki tip versions current); WebLLM latest still **v0.2.88**
+
 
 ### UPD 2026-11-13 (km-researcher)
 - [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-Phase2-Spokes.md]] — Tableau·BI Matrix·SAP BO·IR snowflake/Hierarchy Intent pass (PRs #8–#11)
