@@ -47,6 +47,8 @@
 - [[wiki/Engineering/AI-Native-Engineering/Factory-On-Demand-Agent-Prompt.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Quick-Create-Compact-Description.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Sql-Mcp-Hierarchy-Role-Playing.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Ticketless-Create-Once.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Factory-SPA-App-Icon.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Factory-SPA-Page-Scroll.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Factory-File-Inline-Disposition.md]]

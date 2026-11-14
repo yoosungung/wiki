@@ -3,8 +3,8 @@ id: schedule-outcome-requires-active-ticket
 title: "스케줄 결과 기록 전 Active ticket_id 필수"
 status: canonical
 owner: km
-updated: "2026-09-10"
-last_updated: "2026-09-10"
+updated: "2026-11-15"
+last_updated: "2026-11-15"
 review_after: "2026-12-10"
 sources:
   - ticket:206
@@ -41,3 +41,4 @@ type: "wiki"
 - [[wiki/Engineering/AI-Native-Engineering/Agentic-Software-Factory.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Tenant-Quality-Yaml-Gate-Skip-Pattern.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Ticketless-Create-Once.md]]

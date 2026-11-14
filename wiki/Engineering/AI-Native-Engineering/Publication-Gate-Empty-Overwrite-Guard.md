@@ -3,10 +3,15 @@ id: publication-gate-empty-overwrite-guard
 title: "퍼블리시 게이트 + 빈 산출물 덮어쓰기 금지"
 status: canonical
 owner: km
-updated: "2026-11-14"
-last_updated: "2026-11-14"
+updated: "2026-11-15"
+last_updated: "2026-11-15"
 review_after: "2026-12-21"
 sources:
+  - inbox/candidate/2026-11-15-issue-radar-today.md
+  - inbox/candidate/2026-11-15-publication-safety.md
+  - inbox/candidate/2026-11-14-people-ssot-curation-18h.md
+  - inbox/candidate/2026-11-14-escalation-drain-all-skip.md
+  - inbox/pm/2026-11-15-issue-radar-today-intent-pass.md
   - inbox/candidate/2026-11-14-publication-safety.md
   - inbox/candidate/2026-11-14-issue-radar-today.md
   - inbox/candidate/2026-11-13-people-ssot-curation-18h.md
@@ -268,3 +273,9 @@ python agent/publication_gate.py --base origin/main
 - people-ssot 2026-11-13 18h: stub→curated 0; residual stub **34** (allowlist URL 없음) → 부족≠실패; content diff 0 no-op (ticket `fa80ac61`).
 - escalation drain 2026-11-13: pending 17 → usable 0 (`no_person_mention` 9 · `no_source_url` 8) → processed; PR skip = AC.
 
+## Ops 2026-11-14···15
+
+- publication-safety 2026-11-15: exit 0 PASS; clean-main HEAD=`9125f417`==origin/main → Done without push/Hugo (ticket `de3d1bd9`).
+- issue-radar-today 2026-11-15: items=**7**; `wiki/data/today.yaml` only SHA `12af427b…`; `generated_at` 2026-11-14T23:01:34Z; empty-overwrite 미발동; PM Intent pass `6b05e84a`.
+- people-ssot 2026-11-14 18h: stub→curated **0**; residual stub **38** (allowlist URL 없음) → 부족≠실패; content diff 0 no-op (ticket `bfd8085c`). Hold: org/non-person 6 · journalist/weak 16 · no-URL 15(incl. `i-si-ba`) · role ambiguous 1 (`jo-deon`).
+- escalation drain 2026-11-14: pending 9 → usable 0 → processed; PR skip = AC.

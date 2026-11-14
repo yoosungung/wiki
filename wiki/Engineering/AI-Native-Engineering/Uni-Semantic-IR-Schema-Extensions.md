@@ -3,8 +3,8 @@ id: uni-semantic-ir-schema-extensions
 title: "uni-semantic: IR schema 확장 + Phase1 기본 요소"
 status: canonical
 owner: km
-updated: "2026-11-13"
-last_updated: "2026-11-13"
+updated: "2026-11-15"
+last_updated: "2026-11-15"
 review_after: "2027-02-12"
 sources:
   - inbox/uni-semantic/2026-11-11-uni-semantic-ir-schema-extensions.md
@@ -48,3 +48,4 @@ Hub-and-Spoke Universal Semantic IR. 스키마는 sql-mcp `document.schema.json`
 - [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-Factory-Onboard.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-Phase2-Spokes.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-Phase3-Dialect-and-Spokes.md]]
+- sql-mcp consume: [[wiki/Engineering/AI-Native-Engineering/Sql-Mcp-Hierarchy-Role-Playing.md]]

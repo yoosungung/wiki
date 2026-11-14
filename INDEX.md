@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-11-14 | Root: wiki/
+[META] Updated: 2026-11-15 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,16 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-11-15 (km-researcher)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Ticketless-Create-Once.md]] — ticketless create-once (`ticket.id` · POST≤1 · PR #48) + orphan dup closeout
+- [[wiki/Engineering/AI-Native-Engineering/Sql-Mcp-Hierarchy-Role-Playing.md]] — hierarchy adopt + role_playing reject/strip (sql-mcp PR #2 · uni-semantic PR #18)
+- [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-Phase4-Emitter.md]] — `slg` CLI done (PR #17) · MCP cancelled (스키마 갭)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] / [[wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md]] / [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] — 11-14···15 ops (github empty · crewrp S7 no-next · escalation all-skip · radar/pub/people)
+- Inbox drain: **27** (`status:inbox`) git rm — candidate×4 · pm×18 · sql-mcp×2 · ta×1 · uni-semantic×2
+- ALREADY_COVERED: LiteRT-LM **v0.19.1** · WebLLM **v0.2.88** · Graphiti **v0.31.2** · LightRAG **v1.5.7** · Supermemory **server-v0.0.9** · Furiosa SDK 2026.4 HiCache (§8)
+- Research: web confirm LiteRT-LM latest still **v0.19.1** · WebLLM latest still **v0.2.88** (no tip page bump)
+
 
 ### UPD 2026-11-14 (km-researcher)
 - [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-Phase4-Emitter.md]] — Phase 4 Emitter dbt·Cube MVP (PR #16) + MCP/slg backlog · Approval ladder

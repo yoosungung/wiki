@@ -3,10 +3,23 @@ id: factory-schedule-ops-skips
 title: "Factory 스케줄 ops: empty skip · registry placeholder"
 status: canonical
 owner: km
-updated: "2026-11-14"
-last_updated: "2026-11-14"
+updated: "2026-11-15"
+last_updated: "2026-11-15"
 review_after: "2027-01-15"
 sources:
+  - inbox/pm/2026-11-15-github-issue-check-empty-skip.md
+  - inbox/pm/2026-11-15-roadmap-sync.md
+  - inbox/pm/2026-11-15-roadmap-sync-0600.md
+  - inbox/pm/2026-11-14-roadmap-sync.md
+  - inbox/pm/2026-11-14-roadmap-sync-1800.md
+  - inbox/candidate/2026-11-14-escalation-drain-all-skip.md
+  - inbox/pm/2026-11-14-pm-checkpoint-km-wiki-orphan-dup.md
+  - inbox/pm/2026-11-14-pm-checkpoint-escalation-drain-orphan-dup.md
+  - inbox/pm/2026-11-14-pm-checkpoint-sql-mcp-hierarchy-quiet.md
+  - inbox/pm/2026-11-14-pm-checkpoint-sql-mcp-hierarchy-impl-quiet.md
+  - inbox/pm/2026-11-14-pm-checkpoint-sql-mcp-hierarchy-intent-pass.md
+  - inbox/ta/2026-11-14-escalation-drain-create-once-ticket-id.md
+  - wiki/Engineering/AI-Native-Engineering/Factory-Ticketless-Create-Once.md
   - inbox/pm/2026-11-14-github-issue-check-empty-skip.md
   - inbox/pm/2026-11-14-roadmap-sync.md
   - inbox/pm/2026-11-13-roadmap-sync.md
@@ -276,6 +289,26 @@ type: "wiki"
 
 ### pm-checkpoint
 - CrewRP Phase 6 closeout (mile+child Intent/`done`, PR #10). uni-semantic Phase 4: quiet → empty 1/3 → 2/3 → Approval `@eric.yoo` (MCP/`slg` wait); Emitter Intent/`done` mid-ladder. factory-mcp absent → REST+cookie.
+
+## Ops log 2026-11-14···15 (drain)
+
+### github-issue-check
+- **2026-11-15:** registry 7 repos (sw-factory/crewrp/sql-mcp/rhwp_batch/aura/candidate.win/uni-semantic). `gh issue list --state open` 전수 0 → `created=0`/`commented=0`/`explicit skip`. Outcome seal `167aa72f` done. factory-mcp absent → REST+cookie.
+
+### roadmap-sync
+- **2026-11-14···15** (00:00 / 06:00 / 12:00 / 18:00): crewrp incomplete `##` 0; passed=`## Phase 6`; Next `### S7-*`에 `\bM\d+` 없음 → `no next ###` / invent·pass-gate 금지; `created=0`. aura: checklist 0 → skip `no passed section`. uni-semantic current=`## Phase 4` (open MCP `- [ ]`); mile `ba31c9e8` waiting_for_approval 유지; MCP marker on `d15d16f2` already **done(cancelled)** → dedup `created=0`; doc lag (보드 cancelled vs ROADMAP open). Ticketless → orphan Outcome 금지.
+
+### escalation drain + create-once
+- **2026-11-14:** pending **9** → usable **0** (`no_person_mention` 5 · `no_source_url` 4) → processed; PR skip = AC.
+- Triple-ticket RCA + fix: [[wiki/Engineering/AI-Native-Engineering/Factory-Ticketless-Create-Once.md]] (PR #48).
+
+### pm-checkpoint
+- km-wiki / escalation-drain orphan in_progress dup → Done+pointer (no re-mention).
+- sql-mcp hierarchy research → intent:pass/done; impl quiet FRESH (<30m); FLOW seals/boards only.
+
+### candidate schedules
+- 상세: [[wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md]] Ops 2026-11-14···15.
+
 
 ## Outcome 티켓
 
