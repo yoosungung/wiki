@@ -3,10 +3,16 @@ id: factory-schedule-ops-skips
 title: "Factory 스케줄 ops: empty skip · registry placeholder"
 status: canonical
 owner: km
-updated: "2026-11-15"
-last_updated: "2026-11-15"
+updated: "2026-11-16"
+last_updated: "2026-11-16"
 review_after: "2027-01-15"
 sources:
+  - inbox/pm/2026-11-16-github-issue-check-empty-skip.md
+  - inbox/pm/2026-11-16-roadmap-sync.md
+  - inbox/pm/2026-11-16-roadmap-sync-0600.md
+  - inbox/pm/2026-11-15-roadmap-sync.md
+  - inbox/pm/2026-11-15-roadmap-sync-1800.md
+  - inbox/pm/2026-11-15-pm-checkpoint-people-ssot-already-sealed.md
   - inbox/pm/2026-11-15-github-issue-check-empty-skip.md
   - inbox/pm/2026-11-15-roadmap-sync.md
   - inbox/pm/2026-11-15-roadmap-sync-0600.md
@@ -308,6 +314,22 @@ type: "wiki"
 
 ### candidate schedules
 - 상세: [[wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md]] Ops 2026-11-14···15.
+
+
+
+## Ops log 2026-11-15···16 (drain)
+
+### github-issue-check
+- **2026-11-16:** registry 7 repos (`client_id`+`project_id`); all `gh issue list --state open` = 0 → explicit skip (not failure). Outcome `2981a265` Done. Orphan `d8dd4192` closed with pointer (diagnosis curl 2× POST; create-once POST≤1). factory-mcp absent → session-cookie REST; urllib hit CF 1010 → curl for writes. Actions/CD out of scope (ta).
+
+### roadmap-sync
+- **2026-11-15 18:00 / 2026-11-16 00:00 / 06:00:** crewrp incomplete `##` 0; passed=`## Phase 6`; Next `### S7-*`에 `\bM\d+` 없음 → `no next ###` / invent·pass-gate 금지; `created=0`. aura: H2 checkbox 0 → skip `no passed section`. uni-semantic current=`## Phase 4` (open MCP `- [ ]`); mile `ba31c9e8` waiting_for_approval 유지; MCP marker on `d15d16f2` already **done/cancelled** → dedup `created=0`; doc lag (보드 cancelled vs ROADMAP open). Ticketless → orphan Outcome 금지.
+
+### pm-checkpoint
+- **2026-11-15:** mid-run concurrent Intent seal on people-ssot `90f49986` → already `done` (v5); end FLOW_COUNT=0 · actionable 0 · class=skipped/already-sealed (not stall).
+
+### candidate schedules
+- 상세: [[wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md]] Ops 2026-11-15···16.
 
 
 ## Outcome 티켓

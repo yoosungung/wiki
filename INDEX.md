@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-11-15 | Root: wiki/
+[META] Updated: 2026-11-16 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,14 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-11-16 (km-researcher)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] / [[wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md]] / [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] — 11-15···16 ops (github empty · crewrp S7 no-next · radar/pub/people · already-sealed checkpoint)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Ticketless-Create-Once.md]] — github-issue-check orphan dup closeout (2× POST diagnosis)
+- Inbox drain: **9** (`status:inbox`) git rm — candidate×3 · pm×6
+- ALREADY_COVERED: LiteRT-LM **v0.19.1** · WebLLM **v0.2.88** · Graphiti **v0.31.2** · LightRAG **v1.5.7** · Supermemory **server-v0.0.9** · Furiosa SDK 2026.4 HiCache (§8)
+- Research: web confirm LiteRT-LM latest still **v0.19.1** · WebLLM latest still **v0.2.88** (no tip page bump); LightRAG tip still **v1.5.7** (watched `v1.5.8rc1` 2026-11-15 — stable tip deferred)
+
 
 ### UPD 2026-11-15 (km-researcher)
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Ticketless-Create-Once.md]] — ticketless create-once (`ticket.id` · POST≤1 · PR #48) + orphan dup closeout

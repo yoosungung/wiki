@@ -3,10 +3,12 @@ id: factory-ticketless-create-once
 title: "Ticketless schedule create-once: ticket.id parse · POST≤1"
 status: canonical
 owner: km
-updated: "2026-11-15"
-last_updated: "2026-11-15"
+updated: "2026-11-16"
+last_updated: "2026-11-16"
 review_after: "2027-02-15"
 sources:
+  - inbox/pm/2026-11-16-github-issue-check-empty-skip.md
+  - ticket:2981a265-5056-4fb1-ad5a-0c7c14ef694b
   - inbox/ta/2026-11-14-escalation-drain-create-once-ticket-id.md
   - inbox/pm/2026-11-14-escalation-drain-create-parse-retry-dup.md
   - inbox/pm/2026-11-14-escalation-drain-create-once-intent-pass.md
@@ -46,3 +48,8 @@ Ticketless 스케줄(Outcome 티켓 생성)에서 REST create 응답을 잘못 �
 
 - [[wiki/Engineering/AI-Native-Engineering/Schedule-Outcome-Requires-Active-Ticket.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]]
+
+## github-issue-check (2026-11-16)
+
+- Diagnosis curl **2× POST** → orphan `d8dd4192` + canonical Done `2981a265`. Close orphan with pointer; keep create-once POST≤1 + `ticket.id` unwrap.
+

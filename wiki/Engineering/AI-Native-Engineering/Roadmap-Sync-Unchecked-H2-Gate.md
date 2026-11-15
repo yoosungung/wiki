@@ -3,10 +3,13 @@ id: roadmap-sync-unchecked-h2-gate
 title: "ROADMAP sync: ## + 미완료 - [ ] 섹션만 enqueue"
 status: canonical
 owner: km
-updated: "2026-11-15"
-last_updated: "2026-11-15"
+updated: "2026-11-16"
+last_updated: "2026-11-16"
 review_after: "2027-01-15"
 sources:
+  - inbox/pm/2026-11-16-roadmap-sync.md
+  - inbox/pm/2026-11-16-roadmap-sync-0600.md
+  - inbox/pm/2026-11-15-roadmap-sync-1800.md
   - inbox/pm/2026-11-15-roadmap-sync.md
   - inbox/pm/2026-11-15-roadmap-sync-0600.md
   - inbox/pm/2026-11-14-roadmap-sync.md
@@ -138,3 +141,10 @@ type: "wiki"
 - crewrp: Phase 6 complete → Next `### S7-*` without `\bM\d+` → **`no next ###`** (invent 금지); `created=0`.
 - aura: H2 checkbox 0 → skip `no passed section`.
 - uni-semantic: Phase 4 open MCP checkbox + cancelled marker on `d15d16f2` → dedup; mile `ba31c9e8` waiting_for_approval 유지.
+
+## Ops 2026-11-15···16
+
+- crewrp: Phase 6 complete → Next `### S7-*` without `\bM\d+` → **`no next ###`** (invent 금지); `created=0`.
+- aura: H2 checkbox 0 → skip `no passed section`.
+- uni-semantic: Phase 4 open MCP checkbox + cancelled marker on `d15d16f2` → dedup; mile `ba31c9e8` waiting_for_approval 유지 (doc lag).
+
