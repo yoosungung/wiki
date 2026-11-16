@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-11-16 | Root: wiki/
+[META] Updated: 2026-11-17 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,17 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-11-17 (km-researcher)
+- [[wiki/Engineering/AI-Native-Engineering/Scanbooks-Factory-Onboard.md]] / [[wiki/Engineering/AI-Native-Engineering/Scanbooks-M1-DocTr-Onnx-Latency.md]] / [[wiki/Engineering/AI-Native-Engineering/Scanbooks-M2-App-Skeleton.md]] — scanbooks onboard·M1 DocTr/ONNX/FingerSeg/parity/latency · M2 UI/camera/ScanSession/stub/parity hooks
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Timeline-Merged-Into-List.md]] — Timeline 탭 제거·List 통합 (Option B)
+- [[wiki/Engineering/AI-Native-Engineering/Sql-Mcp-Hierarchy-Role-Playing.md]] — semantic-ui hierarchy 편집 PR #3 (FU3 done; dup `f3582e2c` cancelled)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] / [[wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md]] / [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] / [[wiki/Engineering/AI-Native-Engineering/Tenant-Quality-Yaml-Gate-Skip-Pattern.md]] — 11-16···17 ops (github empty×8 · scanbooks M2 sync · radar/pub · NF weekly skip×7)
+- [[wiki/Models/Optimization-and-Serving/스마트폰-환경의-LLM-서빙-기술-2026.md]] — LiteRT-LM tip still **v0.19.1**; watched PyPI **0.19.2** (no GH tag)
+- Inbox drain: **40** (`status:inbox`) git rm — aa×1 · candidate×2 · pm×25 · qa×1 · scanbooks×8 · sql-mcp×1 · sw-factory×1 · ta×1
+- ALREADY_COVERED: LiteRT-LM GitHub **v0.19.1** · WebLLM **v0.2.88** · Graphiti **v0.31.2** · LightRAG **v1.5.7** · Supermemory **server-v0.0.9** · Furiosa SDK 2026.4 HiCache (§8)
+- Research: WebLLM tip still **v0.2.88**; LightRAG stable tip still **v1.5.7** (watched `v1.5.8rc1`); LiteRT-LM GH tip **v0.19.1** (PyPI 0.19.2 watched, no tip bump)
+
 
 ### UPD 2026-11-16 (km-researcher)
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] / [[wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md]] / [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] — 11-15···16 ops (github empty · crewrp S7 no-next · radar/pub/people · already-sealed checkpoint)

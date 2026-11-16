@@ -125,3 +125,7 @@
 - [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-Phase3-Dialect-and-Spokes.md]]
 
 - [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-Roadmap-Plain-Bullet-Skip.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Scanbooks-Factory-Onboard.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Scanbooks-M1-DocTr-Onnx-Latency.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Scanbooks-M2-App-Skeleton.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Timeline-Merged-Into-List.md]]

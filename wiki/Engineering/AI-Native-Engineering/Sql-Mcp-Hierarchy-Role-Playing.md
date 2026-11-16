@@ -3,8 +3,8 @@ id: sql-mcp-hierarchy-role-playing
 title: "sql-mcp: hierarchy adopt · role_playing reject+strip"
 status: canonical
 owner: km
-updated: "2026-11-15"
-last_updated: "2026-11-15"
+updated: "2026-11-17"
+last_updated: "2026-11-17"
 review_after: "2027-02-15"
 sources:
   - inbox/sql-mcp/2026-11-14-hierarchy-role-playing-decision.md
@@ -17,6 +17,10 @@ sources:
   - ticket:ecf04706-af41-4a85-860c-7808727b2fde
   - ticket:8066ed99-6288-452e-bb2d-7b7bf6412a51
   - https://github.com/yoosungung/sql-mcp/pull/2
+  - inbox/sql-mcp/2026-11-16-hierarchy-semantic-ui-edit.md
+  - inbox/pm/2026-11-16-sql-mcp-hierarchy-semantic-ui-intent-pass.md
+  - inbox/pm/2026-11-16-semantic-ui-hierarchy-dup-close.md
+  - https://github.com/yoosungung/sql-mcp/pull/3
   - wiki/Engineering/AI-Native-Engineering/Uni-Semantic-IR-Schema-Extensions.md
 tags: ["Engineering", "sql-mcp", "uni-semantic", "hierarchy", "role_playing"]
 type: wiki
@@ -39,11 +43,19 @@ type: wiki
 - uni-semantic → sql-mcp emit: `cube.role_playing[]` **strip** (스키마 추가 없음). 허브 IR 필드는 유지 (PR #18 · `8066ed99`).
 - 후속(선택): emit 전 dimension+join alias 전개 — MCP 본구현 티켓 아님.
 
+## semantic-ui hierarchy 편집 (PR #3)
+
+- CubeMappingEditor Hierarchies: ordered dim multi-select (coarse→fine); Apply validates name + levels≥2 unique + levels⊆dims (`hierarchyLevelsError` / `hierarchyError` in `semantic-ui/src/model.ts`).
+- Empty hierarchy list **omits** `hierarchies` key (additive clear compatibility).
+- No role_playing UI (Non-goal). Consumes FU1 schema/store (PR #2).
+- Evidence: `cd semantic-ui && npm test` 103 passed; merge `f9564d11` PR #3; head deleted.
+- Dup close: `f3582e2c` cancelled; canonical UI ticket `a506b29f`.
+
 ## Follow-ups (backlog)
 
 1. schema+$defs+skills+libSQL+store round-trip + levels⊆dims 검증 — `546582a6` (schema+store+describe 축은 PR #2로 일부 닫힘)
 2. describe_table + skill/client 힌트
-3. semantic-ui 편집(후순위; 그전엔 `/api/meta`) — `f3582e2c`
+3. ~~semantic-ui 편집~~ — **done** PR #3 / canonical `a506b29f` (dup `f3582e2c` cancelled)
 
 ## 관련
 

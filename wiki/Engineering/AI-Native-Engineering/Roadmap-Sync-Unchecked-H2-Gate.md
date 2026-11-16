@@ -3,10 +3,14 @@ id: roadmap-sync-unchecked-h2-gate
 title: "ROADMAP sync: ## + 미완료 - [ ] 섹션만 enqueue"
 status: canonical
 owner: km
-updated: "2026-11-16"
-last_updated: "2026-11-16"
+updated: "2026-11-17"
+last_updated: "2026-11-17"
 review_after: "2027-01-15"
 sources:
+  - inbox/pm/2026-11-17-roadmap-sync.md
+  - inbox/pm/2026-11-17-roadmap-sync-0600.md
+  - inbox/pm/2026-11-16-roadmap-sync-1200.md
+  - inbox/pm/2026-11-16-scanbooks-roadmap-h2-format.md
   - inbox/pm/2026-11-16-roadmap-sync.md
   - inbox/pm/2026-11-16-roadmap-sync-0600.md
   - inbox/pm/2026-11-15-roadmap-sync-1800.md
@@ -148,3 +152,10 @@ type: "wiki"
 - aura: H2 checkbox 0 → skip `no passed section`.
 - uni-semantic: Phase 4 open MCP checkbox + cancelled marker on `d15d16f2` → dedup; mile `ba31c9e8` waiting_for_approval 유지 (doc lag).
 
+## Ops 2026-11-16···17
+
+- **scanbooks** H2 checklist (PR #1) → sync current `## M1` then `## M2`; mile+children with `roadmap:scanbooks:…` markers. Doc lag when children done but ROADMAP `- [ ]` open → `created=0`.
+- crewrp: Phase 6 complete → Next `### S7-*` without `\bM\d+` → **`no next ###`** (invent 금지).
+- uni-semantic: Phase 4 open MCP checkbox + cancelled/done marker `d15d16f2` → dedup; mile `ba31c9e8` done/waiting lag.
+- aura: H2 checkbox 0 → skip `no passed section` (when scanned).
+- Onboard pattern: [[wiki/Engineering/AI-Native-Engineering/Scanbooks-Factory-Onboard.md]].

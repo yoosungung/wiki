@@ -3,10 +3,12 @@ id: publication-gate-empty-overwrite-guard
 title: "퍼블리시 게이트 + 빈 산출물 덮어쓰기 금지"
 status: canonical
 owner: km
-updated: "2026-11-16"
-last_updated: "2026-11-16"
+updated: "2026-11-17"
+last_updated: "2026-11-17"
 review_after: "2026-12-21"
 sources:
+  - inbox/candidate/2026-11-17-issue-radar-today.md
+  - inbox/candidate/2026-11-17-publication-safety.md
   - inbox/candidate/2026-11-16-issue-radar-today.md
   - inbox/candidate/2026-11-16-publication-safety.md
   - inbox/candidate/2026-11-15-people-ssot-curation-18h.md
@@ -292,3 +294,7 @@ python agent/publication_gate.py --base origin/main
 - issue-radar-today 2026-11-16: items=**7**; `wiki/data/today.yaml` only SHA `386523aa…`; `generated_at` 2026-11-15T23:01:09Z; empty-overwrite 미발동 (ticket `197efc6c`).
 - people-ssot 2026-11-15 18h: stub→curated **0**; residual stub **38** (allowlist URL 없음) → 부족≠실패; content diff 0 no-op (ticket `90f49986`). Hold: org/non-person 6 · journalist/weak 10 · no-URL 21(incl. `i-si-ba`) · role ambiguous 1 (`jo-deon`). pytest slug+stance 2 passed.
 
+## Ops 2026-11-16···17
+
+- publication-safety 2026-11-17: exit 0 PASS; clean-main HEAD=`386523aa`==origin/main → Done without push/Hugo.
+- issue-radar-today 2026-11-17: items=**10**; `wiki/data/today.yaml` only SHA `f5bb1eb5…`; `generated_at` 2026-11-16T23:01:06Z; empty-overwrite 미발동.

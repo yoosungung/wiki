@@ -3,10 +3,28 @@ id: factory-schedule-ops-skips
 title: "Factory 스케줄 ops: empty skip · registry placeholder"
 status: canonical
 owner: km
-updated: "2026-11-16"
-last_updated: "2026-11-16"
+updated: "2026-11-17"
+last_updated: "2026-11-17"
 review_after: "2027-01-15"
 sources:
+  - inbox/pm/2026-11-17-github-issue-check-empty-skip.md
+  - inbox/pm/2026-11-17-roadmap-sync.md
+  - inbox/pm/2026-11-17-roadmap-sync-0600.md
+  - inbox/pm/2026-11-16-roadmap-sync-1200.md
+  - inbox/pm/2026-11-16-pm-checkpoint-overviews-quiet.md
+  - inbox/pm/2026-11-16-pm-checkpoint-scanbooks-flow-quiet2.md
+  - inbox/pm/2026-11-16-pm-checkpoint-scanbooks-flow-quiet3.md
+  - inbox/pm/2026-11-16-pm-checkpoint-scanbooks-onboard-quiet.md
+  - inbox/pm/2026-11-16-pm-checkpoint-scanbooks-m1-matrix-kickoff.md
+  - inbox/pm/2026-11-16-pm-checkpoint-scanbooks-m1-parity-kickoff.md
+  - inbox/pm/2026-11-16-pm-checkpoint-scanbooks-m1-latency-kickoff.md
+  - inbox/pm/2026-11-16-pm-checkpoint-scanbooks-m1-closeout.md
+  - inbox/pm/2026-11-16-pm-checkpoint-scanbooks-onnx-seal-fingerseg-kick.md
+  - inbox/pm/2026-11-17-pm-checkpoint-scanbooks-m2-ui-kickoff.md
+  - inbox/pm/2026-11-17-pm-checkpoint-scanbooks-m2-camera-quiet.md
+  - inbox/pm/2026-11-17-pm-checkpoint-scanbooks-m2-scansession-kickoff.md
+  - inbox/pm/2026-11-17-pm-checkpoint-scanbooks-m2-parity-quiet.md
+  - inbox/pm/2026-11-17-pm-checkpoint-scanbooks-m2-parity-quiet2.md
   - inbox/pm/2026-11-16-github-issue-check-empty-skip.md
   - inbox/pm/2026-11-16-roadmap-sync.md
   - inbox/pm/2026-11-16-roadmap-sync-0600.md
@@ -330,6 +348,25 @@ type: "wiki"
 
 ### candidate schedules
 - 상세: [[wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md]] Ops 2026-11-15···16.
+
+
+
+## Ops log 2026-11-16···17 (drain)
+
+### github-issue-check
+- **2026-11-17:** registry **8** (sw-factory · crewrp · sql-mcp · rhwp_batch · aura · candidate.win · uni-semantic · **scanbooks**). all open issues=0 → explicit skip. Outcome `17428927` Done. factory-mcp absent → session-cookie REST.
+
+### roadmap-sync
+- **2026-11-16 12:00:** crewrp incomplete `##` 0; passed Phase 6; Next `### S7-*` no `\bM\d+` → **no next ###**; invent 금지. Ticketless → orphan Outcome 금지.
+- **2026-11-17 00:00:** scanbooks current=`## M2` → mile `d4325e10` + children created (dedup markers). uni-semantic Phase 4 MCP `- [ ]` + done/cancelled marker `d15d16f2` → `created=0` (doc lag). crewrp **no next ###**.
+- **2026-11-17 06:00:** scanbooks M2 children already done → dedup `created=0` (doc lag). uni-semantic / crewrp same as above.
+
+### pm-checkpoint (scanbooks)
+- Onboard → M1 matrix/parity/ONNX/FingerSeg/latency kickoffs → M1 closeout (FLOW→0). M2 UI → camera → ScanSession → parity hooks; quiet ticks when FRESH <30m (empty 0/3). Kick **child** only; milestone `@IC` 금지.
+- sw-factory Overviews quiet (FLOW_COUNT=1 developer FRESH).
+
+### candidate schedules
+- 상세: [[wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md]] Ops 2026-11-16···17.
 
 
 ## Outcome 티켓
