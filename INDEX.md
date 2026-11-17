@@ -53,6 +53,10 @@
 
 ## 📌 KEY_FILE_LIST
 
+### UPD 2026-11-17 (km promote, b6ff2c01)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Lists-Newest-First.md]] — Board create·**status 변경** 모두 서버 `MAX(sort_order)+1` 맨 위; Backlog·List=`created_at DESC`; FE length→sort_order 함정
+- Inbox drain: **1** — `inbox/sw-factory/2026-11-17-factory-lists-status-change-top.md`
+
 ### UPD 2026-11-17 (km-researcher, 2차)
 - [[wiki/Engineering/AI-Native-Engineering/Tenant-Marketing-Yaml-Persona-Overlay-Pattern.md]] — `mm` persona overlay (`topic-radar`/`comment-draft`) · `.factory/marketing.yaml` missing→skip 계약 · `agents.yaml` 배선
 - [[wiki/Models/RL/ORSD-Online-Rubric-Self-Distillation-GRPO.md]] — ORSD (`arXiv:2611.06543`): 온폴리시 루브릭 자가증류 + 특권 로그-우도 격차 기반 GRPO 토큰 수준 신뢰 할당
