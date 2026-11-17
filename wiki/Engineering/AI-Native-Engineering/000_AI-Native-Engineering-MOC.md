@@ -129,4 +129,8 @@
 - [[wiki/Engineering/AI-Native-Engineering/Scanbooks-Factory-Onboard.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Scanbooks-M1-DocTr-Onnx-Latency.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Scanbooks-M2-App-Skeleton.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Mm-Macmini-Server-Deploy.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Sql-Mcp-Lane-Mm-Gap.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Scanbooks-M3-Pipeline-Ort-Temp-Smoke.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Aura-M0-Runtime-Nats-Keda-Fission.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Timeline-Merged-Into-List.md]]

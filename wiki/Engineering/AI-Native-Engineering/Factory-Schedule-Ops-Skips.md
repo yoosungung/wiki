@@ -3,10 +3,37 @@ id: factory-schedule-ops-skips
 title: "Factory 스케줄 ops: empty skip · registry placeholder"
 status: canonical
 owner: km
-updated: "2026-11-17"
-last_updated: "2026-11-17"
+updated: "2026-11-18"
+last_updated: "2026-11-18"
 review_after: "2027-01-15"
 sources:
+  - inbox/pm/2026-11-18-github-issue-check-empty-skip.md
+  - inbox/pm/2026-11-18-roadmap-sync-0000.md
+  - inbox/pm/2026-11-18-roadmap-sync-0600.md
+  - inbox/pm/2026-11-17-roadmap-sync-1200.md
+  - inbox/pm/2026-11-17-roadmap-sync-1800.md
+  - inbox/pm/2026-11-17-pm-checkpoint-aura-m0-sync-kick.md
+  - inbox/pm/2026-11-17-pm-checkpoint-dlq-fresh-m3-human-wait.md
+  - inbox/pm/2026-11-17-pm-checkpoint-m0-empty1-m3-human-wait.md
+  - inbox/pm/2026-11-17-pm-checkpoint-m0-empty1hold-m3-human-wait.md
+  - inbox/pm/2026-11-17-pm-checkpoint-m0-empty2-m3-human-wait.md
+  - inbox/pm/2026-11-17-pm-checkpoint-m0-empty2hold-m3-human-wait.md
+  - inbox/pm/2026-11-17-pm-checkpoint-m0-empty3-terminal-m3-human-wait.md
+  - inbox/pm/2026-11-17-pm-checkpoint-m0-quiet-m3-human-wait.md
+  - inbox/pm/2026-11-17-pm-checkpoint-m0-under30-m3-human-wait.md
+  - inbox/pm/2026-11-17-pm-checkpoint-m3-device-smoke-kick.md
+  - inbox/pm/2026-11-17-pm-checkpoint-m3-failed-retry-kick.md
+  - inbox/pm/2026-11-17-pm-checkpoint-m3-human-wait-aura-m0-terminal.md
+  - inbox/pm/2026-11-17-pm-checkpoint-m3-human-wait-hold.md
+  - inbox/pm/2026-11-17-pm-checkpoint-m3-human-wait-hold2.md
+  - inbox/pm/2026-11-17-pm-checkpoint-m3-human-wait-hold3.md
+  - inbox/pm/2026-11-17-pm-checkpoint-m3-pagemetrics-aura-m0-kick.md
+  - inbox/pm/2026-11-17-pm-checkpoint-poison-fresh-m3-human-wait.md
+  - inbox/pm/2026-11-17-pm-checkpoint-scanbooks-m2-checkbox-sync-done.md
+  - inbox/pm/2026-11-17-pm-checkpoint-scanbooks-m3-ort-pipeline-done.md
+  - inbox/pm/2026-11-18-pm-checkpoint-m3-human-wait-hold.md
+  - inbox/pm/2026-11-18-pm-checkpoint-m3-human-wait-hold2.md
+  - inbox/pm/2026-11-17-rhwp-batch-marketing-yaml-intent.md
   - inbox/pm/2026-11-17-github-issue-check-empty-skip.md
   - inbox/pm/2026-11-17-roadmap-sync.md
   - inbox/pm/2026-11-17-roadmap-sync-0600.md
@@ -367,6 +394,25 @@ type: "wiki"
 
 ### candidate schedules
 - 상세: [[wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md]] Ops 2026-11-16···17.
+
+
+
+
+## Ops log 2026-11-17···18 (drain)
+
+### github-issue-check
+- **2026-11-18:** registry 8 (sw-factory · crewrp · sql-mcp · rhwp_batch · aura · candidate.win · uni-semantic · scanbooks). all open issues=0 → explicit skip. Actions/CD out of scope (ta).
+
+### roadmap-sync
+- **2026-11-17 12:00 / 18:00 · 2026-11-18 00:00 / 06:00:** crewrp incomplete `##` 0; passed Phase 6; Next `### S7-*` no `\bM\d+` → **no next ###**. aura current=`## M0` (open PG+Pooler) → marker already backlog; mile may be `waiting_for_approval`. uni-semantic Phase 4 MCP checkbox open + done marker → dedup `created=0` (doc lag). scanbooks current=`## M3` (open 실기기 스모크); marker already Approval → dedup; M4 blocked.
+
+### pm-checkpoint (aura M0 + scanbooks M3)
+- aura M0: Sync kick → DLQ Term child → empty_ip ladder 1/3→2/3→**3/3 terminal** → Approval `@eric.yoo`. Poison child intent/done mid-flow.
+- scanbooks M3: ORT PipelineRunner / PageMetrics / failedStage slices → USB mid-range Approval KEEP → option 2 temp evidence Intent (sim/emu). Human-wait ticks: actionable 0 (board upsert only).
+- Detail spokes: [[wiki/Engineering/AI-Native-Engineering/Aura-M0-Runtime-Nats-Keda-Fission.md]] · [[wiki/Engineering/AI-Native-Engineering/Scanbooks-M3-Pipeline-Ort-Temp-Smoke.md]]
+
+### candidate schedules
+- 상세: [[wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md]] Ops 2026-11-17···18.
 
 
 ## Outcome 티켓

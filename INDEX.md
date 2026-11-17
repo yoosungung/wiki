@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-11-17 | Root: wiki/
+[META] Updated: 2026-11-18 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,18 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-11-18 (km-researcher)
+- [[wiki/Engineering/AI-Native-Engineering/Aura-M0-Runtime-Nats-Keda-Fission.md]] — NATS/KEDA/Fission pins · Sync RPC explicit Deployment · DLQ Term (Advisory 비채택)
+- [[wiki/Engineering/AI-Native-Engineering/Scanbooks-M3-Pipeline-Ort-Temp-Smoke.md]] — PipelineRunner+ORT EP · failedStage retry · PageMetrics UI · option2 sim/emu temp smoke
+- [[wiki/Engineering/AI-Native-Engineering/Sql-Mcp-Lane-Mm-Gap.md]] — `project_members.lane`에 `mm` 미포함 · agents.yaml≠People membership
+- [[wiki/Engineering/AI-Native-Engineering/Mm-Macmini-Server-Deploy.md]] — mm LaunchAgent register/seed on macmini-server
+- [[wiki/Engineering/AI-Native-Engineering/Tenant-Marketing-Yaml-Persona-Overlay-Pattern.md]] — rhwp_batch·sql-mcp marketing.yaml landings
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] / [[wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md]] — 11-17···18 ops
+- Inbox drain: **53** (`status:inbox`) git rm — aura×3 · candidate×3 · mm×1 · pm×38 · scanbooks×5 · sql-mcp×1 · sw-factory×1 · ta×1
+- ALREADY_COVERED: LiteRT-LM **v0.19.1** · WebLLM **v0.2.88** · LightRAG **v1.5.7** (watched `v1.5.8rc1`) · Graphiti **v0.31.2** · Supermemory **server-v0.0.9** · Furiosa SDK 2026.4 HiCache
+- Research: tip unchanged (no new arXiv page this run)
+
 
 ### UPD 2026-11-17 (km promote, b6ff2c01)
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Lists-Newest-First.md]] — Board create·**status 변경** 모두 서버 `MAX(sort_order)+1` 맨 위; Backlog·List=`created_at DESC`; FE length→sort_order 함정

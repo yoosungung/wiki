@@ -3,10 +3,16 @@ id: publication-gate-empty-overwrite-guard
 title: "퍼블리시 게이트 + 빈 산출물 덮어쓰기 금지"
 status: canonical
 owner: km
-updated: "2026-11-17"
-last_updated: "2026-11-17"
+updated: "2026-11-18"
+last_updated: "2026-11-18"
 review_after: "2026-12-21"
 sources:
+  - inbox/candidate/2026-11-18-issue-radar-today.md
+  - inbox/candidate/2026-11-18-publication-safety.md
+  - inbox/candidate/2026-11-17-people-ssot-curation-18h.md
+  - ticket:710c1012-97d0-4847-9c8f-8f87a93af9d0
+  - ticket:ce859307-ed78-47c8-ad8d-a8d73de8b5b1
+  - ticket:a204fe67-b064-4e4e-ba7b-bb54cb905c3c
   - inbox/candidate/2026-11-17-issue-radar-today.md
   - inbox/candidate/2026-11-17-publication-safety.md
   - inbox/candidate/2026-11-16-issue-radar-today.md
@@ -298,3 +304,9 @@ python agent/publication_gate.py --base origin/main
 
 - publication-safety 2026-11-17: exit 0 PASS; clean-main HEAD=`386523aa`==origin/main → Done without push/Hugo.
 - issue-radar-today 2026-11-17: items=**10**; `wiki/data/today.yaml` only SHA `f5bb1eb5…`; `generated_at` 2026-11-16T23:01:06Z; empty-overwrite 미발동.
+
+## Ops 2026-11-17···18
+
+- publication-safety 2026-11-18: exit 0 PASS; clean-main HEAD=`0dd50beb`==origin/main → Done without push/Hugo (ticket `ce859307`).
+- issue-radar-today 2026-11-18: items=**10**; `wiki/data/today.yaml` only SHA `e94c6497…`; `generated_at` 2026-11-17T23:01:21Z; empty-overwrite 미발동 (ticket `710c1012`).
+- people-ssot 2026-11-17 18h: stub→curated **0**; residual stub **39** (allowlist URL 없음) → 부족≠실패; New stub `bak-sang-seon`; Hold org/non-person **6**; content diff 0 no-op (ticket `a204fe67`).

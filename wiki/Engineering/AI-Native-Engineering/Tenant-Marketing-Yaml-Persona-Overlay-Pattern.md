@@ -3,10 +3,15 @@ id: tenant-marketing-yaml-persona-overlay-pattern
 title: "테넌트 marketing.yaml How/What 분리 및 마케팅 멘션 페르소나 오버레이 패턴"
 status: canonical
 owner: km
-updated: "2026-11-17"
-last_updated: "2026-11-17"
+updated: "2026-11-18"
+last_updated: "2026-11-18"
 review_after: "2027-02-17"
 sources:
+  - inbox/mm/2026-11-17-rhwp-batch-marketing-yaml.md
+  - inbox/sql-mcp/2026-11-17-sql-mcp-marketing-yaml.md
+  - inbox/pm/2026-11-17-rhwp-batch-marketing-yaml-intent.md
+  - ticket:01ab108e-cfa8-4732-9633-3c5ba4568870
+  - ticket:44336af7-b7a8-4e36-ad56-f5f24c538be2
   - inbox/pm/2026-11-17-mm-persona-overlay-intent-pass.md
   - inbox/pm/2026-11-17-mm-docs-contract-intent-pass.md
   - inbox/sw-factory/2026-11-17-mm-marketing-yaml-contract.md
@@ -58,6 +63,18 @@ must_avoid:
 - **예제 설정**: `deploy/agents.yaml.example`에 `mm` 세션·`repo_ids`와 주간 스케줄 `mm-topic-radar` (`0 4 * * 1` UTC)를 등록한다.
 - **프로비저닝**: `agents.yaml`에 `mm`이 정의되어 있으면 `./register-agent-users.sh` 및 `./seed-personas.sh` 실행 시 자동으로 포함된다. 운영 환경의 `user_id`는 호스트 등록(`register`) 완료 후 기입한다.
 - **참고 문서**: `deploy/docs/agent-workflows.md` §8, `deploy/docs/schedules.md` §5.12.
+
+
+
+## Tenant landings (2026-11-17)
+
+| Tenant | Note |
+| :--- | :--- |
+| `rhwp_batch` | `.factory/marketing.yaml` on `main` (`e4eef1d`); parallel feature PR #8 may differ sites/keywords — pick one. Soft-mention only. |
+| `sql-mcp` | flat contract (`sites`/`keywords`/`tone`/`product_mention`/`must_avoid`); keywords NL2SQL/text-to-SQL/sql-mcp; sites linkedin + KR blogs + medium/dev.to. |
+
+Lane/membership gap for `@mm` on sql-mcp: [[wiki/Engineering/AI-Native-Engineering/Sql-Mcp-Lane-Mm-Gap.md]].
+macmini seed: [[wiki/Engineering/AI-Native-Engineering/Mm-Macmini-Server-Deploy.md]].
 
 ## 🔗 관련 문서
 

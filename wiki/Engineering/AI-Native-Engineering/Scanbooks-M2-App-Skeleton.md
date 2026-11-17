@@ -57,3 +57,7 @@ type: wiki
 
 - [[wiki/Engineering/AI-Native-Engineering/Scanbooks-M1-DocTr-Onnx-Latency.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Scanbooks-Factory-Onboard.md]]
+
+## Next
+
+- [[wiki/Engineering/AI-Native-Engineering/Scanbooks-M3-Pipeline-Ort-Temp-Smoke.md]]
