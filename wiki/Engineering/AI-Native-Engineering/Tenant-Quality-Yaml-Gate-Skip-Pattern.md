@@ -201,6 +201,7 @@ factory-mcp 미노출 → session-cookie REST. Active 없는 스케줄 → orpha
 ## 🔗 관련 문서
 
 - [[wiki/Engineering/AI-Native-Engineering/Agentic-Software-Factory.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Tenant-Marketing-Yaml-Persona-Overlay-Pattern.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Playwright-Frontend-UI-Smoke-Pattern.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Quality-Yaml-Clean-Code-CI-Align.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Workspace-Ingest-Done-Vs-Skipped-Counter.md]]

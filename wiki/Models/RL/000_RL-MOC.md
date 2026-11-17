@@ -19,6 +19,7 @@
 - [[wiki/Models/RL/LeWorldModel-JEPA-2026.md]]
 - [[wiki/Models/RL/MIT의 재귀적 언어 모델(RLM) - 컨텍스트 한계 돌파.md]]
 - [[wiki/Models/RL/NVIDIA GDPO: 다중 보상 RL의 GRPO 결함 해결.md]]
+- [[wiki/Models/RL/ORSD-Online-Rubric-Self-Distillation-GRPO.md]]
 - [[wiki/Models/RL/Neural-World-Models-Robotic-Planning-2026.md]]
 - [[wiki/Models/RL/OpenAI-Sora-Shutdown-Robot-Pivot.md]]
 - [[wiki/Models/RL/OpenPipe-ART-Agent-Reinforcement-Trainer.md]]

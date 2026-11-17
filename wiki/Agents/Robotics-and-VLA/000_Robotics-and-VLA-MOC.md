@@ -6,6 +6,7 @@
 - [[wiki/Agents/Robotics-and-VLA/E-VLA-Efficient-Vision-Language-Action.md]]
 - [[wiki/Agents/Robotics-and-VLA/Figure-03-Helix-VLA-Stack.md]]
 - [[wiki/Agents/Robotics-and-VLA/Figure-PI-VLA-Update-2026-04-09.md]]
+- [[wiki/Agents/Robotics-and-VLA/GPWM-3D-Particle-World-Model.md]]
 - [[wiki/Agents/Robotics-and-VLA/Gemma4-Edge-Robotics-Nvidia-Cosmos-3-GR00T.md]]
 - [[wiki/Agents/Robotics-and-VLA/Google-RT-3-Open-Source-Robotics.md]]
 - [[wiki/Agents/Robotics-and-VLA/NVIDIA-GTC-2026-Physical-AI.md]]

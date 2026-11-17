@@ -1,6 +1,12 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-11-17 | INBOX_DRAIN | inbox/ | 5 | pm×2 + sw-factory×3 (`mm` persona overlay · `.factory/marketing.yaml` 계약 · `agents.yaml` 배선) → Tenant-Marketing-Yaml-Persona-Overlay-Pattern; git rm |
+| 2026-11-17 | RESEARCH | 연구_주제_관리.md | 10 | 추적 릴리스 6건 ALREADY_COVERED + arXiv 4건(ORSD 2611.06543, GPWM 2611.08338, VCoT-SQL 2611.00815, SRPI 2611.00960) 신규 탐색 |
+| 2026-11-17 | INGEST | web | 4 | arXiv:2611.06543, 2611.08338, 2611.00815, 2611.00960 (원문 URL을 sources에 유지) |
+| 2026-11-17 | SYNTHESIZE | wiki/ | 10 | 신규 5건(Tenant-Marketing-Yaml-Persona-Overlay-Pattern, ORSD, GPWM, VCoT-SQL, SRPI) + Tenant-Quality-Yaml-Gate-Skip-Pattern 상호링크 + MOC 4건 + INDEX |
+| 2026-11-17 | ALREADY_COVERED | wiki/ | 6 | LiteRT-LM v0.19.1; WebLLM v0.2.88; Graphiti v0.31.2; LightRAG v1.5.7; Supermemory server-v0.0.9; Furiosa SDK 2026.4 HiCache |
+| 2026-11-17 | CLEANUP | inbox/, root | 7 | inbox 5건 git rm; 과거 데일리(2026-11-06, 2026-11-07) 삭제; D-0(2026-11-17) 생성 |
 | 2026-11-07 | INBOX_DRAIN | inbox/ | 2 | pm github-issue-check empty skip + roadmap-sync → Factory-Ops/Roadmap-Sync/Phase6; git rm |
 | 2026-11-07 | RESEARCH | 연구_주제_관리.md | 6 | wiki-first 후 웹: LiteRT-LM **v0.19.1** 신규; WebLLM v0.2.87·Graphiti 0.31.2·LightRAG v1.5.7·Supermemory server-v0.0.9·Furiosa HiCache ALREADY; Reglos·EvoGroup·continual forgetting 신규 |
 | 2026-11-07 | INGEST | web | 4 | LiteRT-LM v0.19.1 release; arXiv:2611.06049, 2611.03868, 2611.03219. raw 파일 없음 |

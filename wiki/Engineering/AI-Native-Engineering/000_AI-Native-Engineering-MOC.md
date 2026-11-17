@@ -97,6 +97,7 @@
 - [[wiki/Engineering/AI-Native-Engineering/Soft-TTD-In-Process-Replay-Sandbox.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Spend-Alert-Human-Approval-Triage.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Static-Site-Frontmatter-Title-Sync.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Tenant-Marketing-Yaml-Persona-Overlay-Pattern.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Tenant-Quality-Yaml-Gate-Skip-Pattern.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Tenant-Repo-Sync-Dirty-Tree-Skip.md]]
 - [[wiki/Engineering/AI-Native-Engineering/The-End-of-Software-Engineering-Intent-Architecture.md]]

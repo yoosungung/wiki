@@ -53,6 +53,15 @@
 
 ## 📌 KEY_FILE_LIST
 
+### UPD 2026-11-17 (km-researcher, 2차)
+- [[wiki/Engineering/AI-Native-Engineering/Tenant-Marketing-Yaml-Persona-Overlay-Pattern.md]] — `mm` persona overlay (`topic-radar`/`comment-draft`) · `.factory/marketing.yaml` missing→skip 계약 · `agents.yaml` 배선
+- [[wiki/Models/RL/ORSD-Online-Rubric-Self-Distillation-GRPO.md]] — ORSD (`arXiv:2611.06543`): 온폴리시 루브릭 자가증류 + 특권 로그-우도 격차 기반 GRPO 토큰 수준 신뢰 할당
+- [[wiki/Agents/Robotics-and-VLA/GPWM-3D-Particle-World-Model.md]] — GPWM (`arXiv:2611.08338`): 3D 입자 모션 생성형 물리 월드 모델 + 노이즈 공간 계획
+- [[wiki/Agents/Text-to-SQL/VCoT-SQL-Dual-CoT-Validation.md]] — VCoT-SQL (`arXiv:2611.00815`): 절 단위 실행·스키마 검증 CoT 생성기 + 진단형 SQL 검증기
+- [[wiki/Agents/Text-to-SQL/SRPI-Streaming-Text-to-SQL-Prompt-Induction.md]] — SRPI (`arXiv:2611.00960`): 스트리밍 SQL 방언용 오프라인 무가중치 자기정제 프롬프트 유도
+- Inbox drain: **5** (`status:inbox`) git rm — pm×2 · sw-factory×3
+- ALREADY_COVERED: LiteRT-LM **v0.19.1** · WebLLM **v0.2.88** · Graphiti **v0.31.2** · LightRAG **v1.5.7** · Supermemory **server-v0.0.9** · Furiosa SDK 2026.4 HiCache
+
 ### UPD 2026-11-17 (km-researcher)
 - [[wiki/Engineering/AI-Native-Engineering/Scanbooks-Factory-Onboard.md]] / [[wiki/Engineering/AI-Native-Engineering/Scanbooks-M1-DocTr-Onnx-Latency.md]] / [[wiki/Engineering/AI-Native-Engineering/Scanbooks-M2-App-Skeleton.md]] — scanbooks onboard·M1 DocTr/ONNX/FingerSeg/parity/latency · M2 UI/camera/ScanSession/stub/parity hooks
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Timeline-Merged-Into-List.md]] — Timeline 탭 제거·List 통합 (Option B)
