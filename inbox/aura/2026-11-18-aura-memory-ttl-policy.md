@@ -13,5 +13,5 @@ sources:
 
 - short_term 핫 **14일** · episodic **24개월** · audit **12개월** (ARCHITECTURE §6.2.2 → `deploy/docs/memory-ttl-policy.md`)
 - DROP 판정: 파티션 상한 `U <= now() - interval '…'`; Soft-delete-only 방치 금지
-- 담당 태스크 이름 `aura.tasks.memory.ttl` (구현·스케줄은 M4)
+- DROP 주기: **일 1회**(UTC); 담당 태스크 이름 `aura.tasks.memory.ttl` (구현·스케줄 CR은 M4)
 - 정적 게이트: `bash deploy/scripts/check-memory-ttl.sh`
