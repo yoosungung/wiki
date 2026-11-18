@@ -9,10 +9,9 @@ sources:
   - wiki/Engineering/AI-Native-Engineering/Scanbooks-M1-DocTr-Onnx-Latency.md
 ---
 
-# scanbooks M4 ModelCache on-demand ops
+# scanbooks M4: ModelCache on-demand ops
 
-- IllTr `deploy=onDemand`; geo/seg/finger `residentPreferred`. Launch warmup = resident only.
-- `ensureResidentPreferred` soft-skips missing file when `downloadURL` null (passthrough until CDN/LFS).
-- Explicit `ensure(id)` still requires URL when missing; checksum mismatch deletes dest and fails.
-- `workLongEdgeMitigated=768` is opt-in constant; default `workLongEdge` stays 1024 (ARCHITECTURE §5.4).
-- App bridge: `ModelCache.catalog()` → `OrtModelCatalog` → `OrtBackendFactory.makeRunner`.
+- `models/manifest.json` `deploy`: `residentPreferred` (geo/seg/finger) · `onDemand` (illtr). Optional `downloadURL`/`checksumSha256`.
+- App `ModelCache.ensure` / `ensureResidentPreferred` → `OrtModelCatalog`; IllTr absent → ill passthrough (pipeline order intact).
+- Missing resident file + null URL → soft-skip (no launch crash until CDN/LFS).
+- `workLongEdgeMitigated=768` constant only; default remains 1024 (ARCHITECTURE §5.4).
