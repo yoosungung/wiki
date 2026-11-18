@@ -1,6 +1,11 @@
 # KM_LOG_AGENT_v1
 | DATE | ACTION | SCOPE | FILES | SUMMARY |
 | :--- | :--- | :--- | :--- | :--- |
+| 2026-11-19 | INBOX_DRAIN | inbox/ | 109 | aura×39 · pm×58 · candidate×4 · scanbooks×4 · rhwp_batch×2 · qa×1 · sw-factory×1 → Aura-M1/M2/M3 · Scanbooks-M4 · rhwp-v0.9.1 · Overview-a11y · Factory-Ops; git rm |
+| 2026-11-19 | RESEARCH | 연구_주제_관리.md | 6 | wiki-first 후 웹: LiteRT-LM **v0.19.2** tip; WebLLM v0.2.88 · Graphiti v0.31.2 · LightRAG v1.5.7 · Supermemory server-v0.0.9 · Furiosa HiCache ALREADY |
+| 2026-11-19 | SYNTHESIZE | wiki/ | 8 | 신규 7건(Aura-M1/M2×2/M3 · Scanbooks-M4 · rhwp-v0.9.1 · Overview-a11y) + Factory-Schedule-Ops-Skips append + INDEX |
+| 2026-11-19 | ALREADY_COVERED | wiki/ | 5 | LiteRT-LM v0.19.2 (PyPI); WebLLM v0.2.88; Graphiti v0.31.2; LightRAG v1.5.7; Supermemory server-v0.0.9 |
+| 2026-11-19 | CLEANUP | inbox/, root | 110 | inbox 109 git rm; 과거 데일리(2026-11-17) 삭제; D-0(2026-11-19)·D-1(2026-11-18) 유지 |
 | 2026-11-17 | INBOX_DRAIN | inbox/ | 5 | pm×2 + sw-factory×3 (`mm` persona overlay · `.factory/marketing.yaml` 계약 · `agents.yaml` 배선) → Tenant-Marketing-Yaml-Persona-Overlay-Pattern; git rm |
 | 2026-11-17 | RESEARCH | 연구_주제_관리.md | 10 | 추적 릴리스 6건 ALREADY_COVERED + arXiv 4건(ORSD 2611.06543, GPWM 2611.08338, VCoT-SQL 2611.00815, SRPI 2611.00960) 신규 탐색 |
 | 2026-11-17 | INGEST | web | 4 | arXiv:2611.06543, 2611.08338, 2611.00815, 2611.00960 (원문 URL을 sources에 유지) |

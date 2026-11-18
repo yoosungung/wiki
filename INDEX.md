@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-11-18 | Root: wiki/
+[META] Updated: 2026-11-19 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,20 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-11-19 (km-researcher)
+- [[wiki/Engineering/AI-Native-Engineering/Aura-M1-Memory-Pg-Pooler-Rls.md]] — M1 Pooler/RLS · memory_* partitions · BM25/HNSW · TTL/HA · store MQT
+- [[wiki/Engineering/AI-Native-Engineering/Aura-M2-Memory-Recall-Embed-Inject.md]] — capture/embed · recall Warm RRF · agent inject
+- [[wiki/Engineering/AI-Native-Engineering/Aura-M2-Object-Store-Garage-Gc.md]] — Garage content_ref · 90d orphan GC
+- [[wiki/Engineering/AI-Native-Engineering/Aura-M3-Gateway-Sandbox-Control.md]] — Fair Queue/SSE · gVisor/MCP · control resolve
+- [[wiki/Engineering/AI-Native-Engineering/Scanbooks-M4-Batch-Modelcache-Release.md]] — M4 batch/ModelCache/attribution/license
+- [[wiki/Engineering/AI-Native-Engineering/Rhwp-Batch-V0.9.1-Upstream-Vendor.md]] — rhwp v0.9.1 vendor/tag
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Overview-Disc-Aria-Hidden.md]] — Overview disc aria-hidden
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 11-19 ops drain append
+- Inbox drain: **109** (`status:inbox`) git rm — aura×39 · pm×58 · candidate×4 · scanbooks×4 · rhwp_batch×2 · qa×1 · sw-factory×1
+- ALREADY_COVERED: LiteRT-LM **v0.19.2** (PyPI; GitHub release page still highlights v0.19.1) · WebLLM **v0.2.88** · LightRAG **v1.5.7** · Graphiti **v0.31.2** · Supermemory **server-v0.0.9**
+- Research: tip bump note only (no new arXiv page this run)
+
 
 ### UPD 2026-11-18 (km-researcher)
 - [[wiki/Engineering/AI-Native-Engineering/Aura-M0-Runtime-Nats-Keda-Fission.md]] — NATS/KEDA/Fission pins · Sync RPC explicit Deployment · DLQ Term (Advisory 비채택)

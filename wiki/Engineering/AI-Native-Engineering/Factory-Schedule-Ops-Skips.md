@@ -3,10 +3,50 @@ id: factory-schedule-ops-skips
 title: "Factory 스케줄 ops: empty skip · registry placeholder"
 status: canonical
 owner: km
-updated: "2026-11-18"
-last_updated: "2026-11-18"
+updated: "2026-11-19"
+last_updated: "2026-11-19"
 review_after: "2027-01-15"
 sources:
+  - inbox/candidate/2026-11-18-escalation-drain-all-skip.md
+  - inbox/candidate/2026-11-18-people-ssot-curation-18h.md
+  - inbox/candidate/2026-11-19-issue-radar-today.md
+  - inbox/candidate/2026-11-19-publication-safety.md
+  - inbox/pm/2026-11-18-aura-m1-bm25-intent-pass.md
+  - inbox/pm/2026-11-18-aura-m1-embed-guard-intent-pass.md
+  - inbox/pm/2026-11-18-aura-m1-embedding-active-intent-pass.md
+  - inbox/pm/2026-11-18-aura-m1-embeddings-intent-pass.md
+  - inbox/pm/2026-11-18-aura-m1-ha-intent-pass.md
+  - inbox/pm/2026-11-18-aura-m1-hnsw-followup-intent-pass.md
+  - inbox/pm/2026-11-18-aura-m1-kickoff.md
+  - inbox/pm/2026-11-18-aura-m1-memory-audit-intent-pass.md
+  - inbox/pm/2026-11-18-aura-m1-memory-items-intent-pass.md
+  - inbox/pm/2026-11-18-aura-m1-nodes-edges-intent-pass.md
+  - inbox/pm/2026-11-18-aura-m1-pooler-intent-pass.md
+  - inbox/pm/2026-11-18-aura-m1-rls-intent-pass.md
+  - inbox/pm/2026-11-18-aura-m1-store-intent-pass.md
+  - inbox/pm/2026-11-18-aura-m1-store-mqt-intent-pass.md
+  - inbox/pm/2026-11-18-aura-m1-ttl-intent-pass.md
+  - inbox/pm/2026-11-18-escalation-drain-all-skip-intent-pass.md
+  - inbox/pm/2026-11-18-pm-checkpoint-aura-m1-audit-under30.md
+  - inbox/pm/2026-11-18-pm-checkpoint-aura-m1-embeddings-kick.md
+  - inbox/pm/2026-11-18-pm-checkpoint-aura-m1-empty1.md
+  - inbox/pm/2026-11-18-pm-checkpoint-aura-m1-empty1hold-kickoff.md
+  - inbox/pm/2026-11-18-pm-checkpoint-aura-m1-hnsw-under30.md
+  - inbox/pm/2026-11-18-pm-checkpoint-aura-m1-nodes-intent-pass.md
+  - inbox/pm/2026-11-18-pm-checkpoint-aura-m1-under30-b.md
+  - inbox/pm/2026-11-18-pm-checkpoint-aura-m1-under30.md
+  - inbox/pm/2026-11-18-pm-checkpoint-aura-multiaz-intent-pass.md
+  - inbox/pm/2026-11-18-pm-checkpoint-aura-pooler-intent-pass.md
+  - inbox/pm/2026-11-18-pm-checkpoint-hnsw-seal-embedding-kick.md
+  - inbox/pm/2026-11-18-pm-checkpoint-scanbooks-m4-empty1.md
+  - inbox/pm/2026-11-18-pm-checkpoint-scanbooks-m4-empty1hold.md
+  - inbox/pm/2026-11-18-pm-checkpoint-scanbooks-m4-empty2.md
+  - inbox/pm/2026-11-18-pm-checkpoint-scanbooks-m4-empty2hold.md
+  - inbox/pm/2026-11-18-pm-checkpoint-scanbooks-m4-empty3-approval.md
+  - inbox/pm/2026-11-18-pm-checkpoint-scanbooks-m4-seal.md
+  - inbox/pm/2026-11-18-pm-checkpoint-scanbooks-m4-under30.md
+  - inbox/pm/2026-11-18-roadmap-sync-child-kickoff.md
+  - inbox/pm/2026-11-18-roadmap-sync-milestone-start.md
   - inbox/pm/2026-11-18-github-issue-check-empty-skip.md
   - inbox/pm/2026-11-18-roadmap-sync-0000.md
   - inbox/pm/2026-11-18-roadmap-sync-0600.md
@@ -419,3 +459,77 @@ type: "wiki"
 
 Active `ticket_id` 없는 스케줄에서 감사용 orphan Outcome 생성 금지 — [[wiki/Engineering/AI-Native-Engineering/Schedule-Outcome-Requires-Active-Ticket.md]].  
 별도 Done/New 정책이 있는 스케줄(`km-wiki` 등)은 그 계약을 따른다.
+
+
+## 2026-11-19 inbox ops drain
+
+pm/candidate schedule & checkpoint notes promoted into product pages above where durable; remaining ops log:
+
+- `inbox/candidate/2026-11-18-escalation-drain-all-skip.md` — candidate.win escalation drain 2026-11-18 all-skip
+- `inbox/candidate/2026-11-18-people-ssot-curation-18h.md` — people-ssot-curation 18h (2026-11-18)
+- `inbox/candidate/2026-11-19-issue-radar-today.md` — issue-radar-today 2026-11-19
+- `inbox/candidate/2026-11-19-publication-safety.md` — publication-safety 2026-11-19 PASS (clean main)
+- `inbox/pm/2026-11-18-aura-m1-bm25-intent-pass.md` — aura M1 BM25 Intent pass → Pooler kickoff
+- `inbox/pm/2026-11-18-aura-m1-embed-guard-intent-pass.md` — aura M1 embed-guard Intent pass → HNSW fixture
+- `inbox/pm/2026-11-18-aura-m1-embedding-active-intent-pass.md` — aura M1 AURA_EMBEDDING pin Intent pass → svc-memory store
+- `inbox/pm/2026-11-18-aura-m1-embeddings-intent-pass.md` — aura M1 memory_embeddings Intent pass → short_term embed guard
+- `inbox/pm/2026-11-18-aura-m1-ha-intent-pass.md` — aura M1 Multi-AZ Intent pass → memory_items
+- `inbox/pm/2026-11-18-aura-m1-hnsw-followup-intent-pass.md` — aura M1 HNSW follow-up Intent pass
+- `inbox/pm/2026-11-18-aura-m1-kickoff.md` — aura M1 IC kickoff
+- `inbox/pm/2026-11-18-aura-m1-memory-audit-intent-pass.md` — aura M1 memory_audit Intent pass → short_term TTL policy
+- `inbox/pm/2026-11-18-aura-m1-memory-items-intent-pass.md` — aura M1 memory_items Intent pass → memory_audit
+- `inbox/pm/2026-11-18-aura-m1-nodes-edges-intent-pass.md` — aura M1 memory_nodes/edges Intent pass → edge indexes
+- `inbox/pm/2026-11-18-aura-m1-pooler-intent-pass.md` — aura M1 Pooler Intent pass → RLS kickoff
+- `inbox/pm/2026-11-18-aura-m1-rls-intent-pass.md` — aura M1 RLS V1.1 Intent pass → Multi-AZ kickoff
+- `inbox/pm/2026-11-18-aura-m1-store-intent-pass.md` — aura M1 store Intent pass → milestone done
+- `inbox/pm/2026-11-18-aura-m1-store-mqt-intent-pass.md` — aura M1 store MQT Intent pass
+- `inbox/pm/2026-11-18-aura-m1-ttl-intent-pass.md` — aura M1 TTL policy Intent pass → memory_nodes/edges
+- `inbox/pm/2026-11-18-escalation-drain-all-skip-intent-pass.md` — escalation-drain 2026-11-18 Intent Pass (all-skip)
+- `inbox/pm/2026-11-18-pm-checkpoint-aura-m1-audit-under30.md` — pm-checkpoint 2026-11-18 — aura M1 memory_audit under30 quiet
+- `inbox/pm/2026-11-18-pm-checkpoint-aura-m1-embeddings-kick.md` — pm-checkpoint: aura M1 edges sealed → embeddings kick
+- `inbox/pm/2026-11-18-pm-checkpoint-aura-m1-empty1.md` — pm-checkpoint 2026-11-18 — aura M1 empty 1/3
+- `inbox/pm/2026-11-18-pm-checkpoint-aura-m1-empty1hold-kickoff.md` — pm-checkpoint 2026-11-18 — aura M1 empty1hold → BM25 kickoff
+- `inbox/pm/2026-11-18-pm-checkpoint-aura-m1-hnsw-under30.md` — pm-checkpoint aura M1 HNSW under30
+- `inbox/pm/2026-11-18-pm-checkpoint-aura-m1-nodes-intent-pass.md` — pm-checkpoint: aura M1 nodes/edges Intent pass
+- `inbox/pm/2026-11-18-pm-checkpoint-aura-m1-under30-b.md` — pm-checkpoint 2026-11-18 — aura M1 under30 quiet (2nd)
+- `inbox/pm/2026-11-18-pm-checkpoint-aura-m1-under30.md` — pm-checkpoint 2026-11-18 — aura M1 under30 quiet
+- `inbox/pm/2026-11-18-pm-checkpoint-aura-multiaz-intent-pass.md` — Aura M1 Multi-AZ/PITR draft — Intent pass
+- `inbox/pm/2026-11-18-pm-checkpoint-aura-pooler-intent-pass.md` — pm-checkpoint 2026-11-18 — aura Pooler Intent + RLS kick
+- `inbox/pm/2026-11-18-pm-checkpoint-hnsw-seal-embedding-kick.md` — pm-checkpoint: aura M1 HNSW seal → AURA_EMBEDDING kickoff
+- `inbox/pm/2026-11-18-pm-checkpoint-scanbooks-m4-empty1.md` — pm-checkpoint 2026-11-18 — scanbooks M4 empty 1/3
+- `inbox/pm/2026-11-18-pm-checkpoint-scanbooks-m4-empty1hold.md` — pm-checkpoint 2026-11-18 — scanbooks M4 empty 1/3 hold
+- `inbox/pm/2026-11-18-pm-checkpoint-scanbooks-m4-empty2.md` — pm-checkpoint 2026-11-18 — scanbooks M4 empty 2/3
+- `inbox/pm/2026-11-18-pm-checkpoint-scanbooks-m4-empty2hold.md` — pm-checkpoint 2026-11-18 — scanbooks M4 empty 2/3 hold
+- `inbox/pm/2026-11-18-pm-checkpoint-scanbooks-m4-empty3-approval.md` — pm-checkpoint: scanbooks M4 empty 3/3 → Approval
+- `inbox/pm/2026-11-18-pm-checkpoint-scanbooks-m4-seal.md` — scanbooks M4 milestone seal (pm-checkpoint)
+- `inbox/pm/2026-11-18-pm-checkpoint-scanbooks-m4-under30.md` — pm-checkpoint 2026-11-18 — scanbooks M4 under30 quiet
+- `inbox/pm/2026-11-18-roadmap-sync-child-kickoff.md` — ROADMAP sync: milestone IP 후 child kickoff 필수
+- `inbox/pm/2026-11-18-roadmap-sync-milestone-start.md` — ROADMAP sync 후 milestone IP → child kickoff 규칙
+- `inbox/pm/2026-11-18-roadmap-sync.md` — roadmap-sync 2026-11-18
+- `inbox/pm/2026-11-18-scanbooks-m4-attribution-intent-pass.md` — scanbooks M4 #3 Intent pass
+- `inbox/pm/2026-11-18-scanbooks-m4-batch-intent-pass.md` — scanbooks M4 #1 Intent pass
+- `inbox/pm/2026-11-18-scanbooks-m4-release-checklist-intent-pass.md` — scanbooks M4 release checklist — intent pass
+- `inbox/pm/2026-11-19-aura-m2-agent-inject-intent-pass.md` — Aura M2 — Agent inject Intent pass
+- `inbox/pm/2026-11-19-aura-m2-embed-intent-pass.md` — aura M2 embed Intent pass + recall kickoff
+- `inbox/pm/2026-11-19-aura-m2-hybrid-rrf-intent-pass.md` — Aura M2 recall hybrid RRF — Intent pass
+- `inbox/pm/2026-11-19-aura-m2-object-store-intent-pass.md` — Aura M2 Object Store = Garage (Intent pass)
+- `inbox/pm/2026-11-19-aura-m2-orphan-gc-intent-m2-done.md` — Aura M2 closeout — orphan content_ref GC Intent
+- `inbox/pm/2026-11-19-aura-m2-recall-intent-pass.md` — aura M2 recall RPC Intent pass + hybrid RRF kickoff
+- `inbox/pm/2026-11-19-aura-m2-recall-rpc-intent-pass.md` — Aura M2 recall RPC Warm Pool — intent pass
+- `inbox/pm/2026-11-19-github-issue-check-empty-skip.md` — github-issue-check 2026-11-19 empty skip
+- `inbox/pm/2026-11-19-issue-radar-today-intent-pass.md` — issue-radar-today 2026-11-19 Intent Pass
+- `inbox/pm/2026-11-19-pm-checkpoint-aura-inflight-intent-pass.md` — pm-checkpoint: aura inflight Intent pass + mcp_invoke kickoff
+- `inbox/pm/2026-11-19-pm-checkpoint-aura-inflight-under30-rhwp-ci-wait.md` — pm-checkpoint: aura inflight under30 · rhwp ci-wait
+- `inbox/pm/2026-11-19-pm-checkpoint-aura-m2-capture-intent.md` — pm-checkpoint: aura M2 memory_capture Intent + embed kickoff
+- `inbox/pm/2026-11-19-pm-checkpoint-aura-m2-embed-intent.md` — Aura M2 embed Function MQT — Intent pass
+- `inbox/pm/2026-11-19-pm-checkpoint-aura-m2-recall-under30.md` — pm-checkpoint: aura M2 recall under30
+- `inbox/pm/2026-11-19-pm-checkpoint-aura-rl-rhwp-ciwait.md` — pm-checkpoint 2026-11-19 — aura RL kick + rhwp release ci-wait
+- `inbox/pm/2026-11-19-pm-checkpoint-m3-agent-invoke-kick.md` — pm-checkpoint: aura M3 agent_invoke kickoff
+- `inbox/pm/2026-11-19-roadmap-sync.md` — pm-roadmap-sync 2026-11-19
+- `inbox/pm/2026-11-19-svc-control-resolve-intent.md` — aura M3 — svc-control 최소 resolve Intent pass
+
+
+Durable rules reaffirmed:
+- ROADMAP sync: milestone `in_progress` 후 child kickoff 필수 (sync alone ≠ start).
+- github-issue-check 2026-11-19: open=0 → explicit skip (Outcome Done).
+- candidate publication-safety PASS · issue-radar Intent Pass · escalation-drain all-skip.
