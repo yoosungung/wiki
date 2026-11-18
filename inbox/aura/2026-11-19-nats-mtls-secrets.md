@@ -6,15 +6,12 @@ updated: 2026-11-19
 status: inbox
 sources:
   - ticket:012df201-9cc9-487c-a450-37dc45cc8a4e
-  - deploy/docs/nats-mtls-secrets.md
-  - pr:https://github.com/yoosungung/aura/pull/44
+  - https://docs.nats.io/reference/config/tls/
 ---
 
-# Aura M3: NATS mTLS + 시크릿 mask/TTL 캐시
+# Aura M3: NATS mTLS + secrets mask/TTL cache
 
-- §9.2: `deploy/k8s/nats-mtls/` — server `tls { verify: true }`, Secret 키만(PEM 값 out-of-band).
-- `maskSecrets` / `createSecretsCache` (TTL≤60s) / `handleRotatedEvent` on `aura.events.control.secrets.rotated`.
-- 클라이언트: `buildNatsTlsOptions` · `assertNatsMtlsConnect` (`services/control/nats-tls.js`).
-- 검증: `bash deploy/scripts/check-nats-mtls-secrets.sh` (live cert 클러스터 불필요).
-- PR: https://github.com/yoosungung/aura/pull/44
-- Non-goals: F1 · NATS Account · live cert CI 필수 · OTel 전면(M4).
+- §9.2 wire: `deploy/docs/nats-mtls-secrets.md` · overlay `deploy/k8s/nats-mtls/` (`tls { verify: true }`) · Secret keys only (no live PEM in git).
+- Control helpers: `maskSecrets` · `createSecretsCache` TTL≤60s · `aura.events.control.secrets.rotated` invalidate · `buildNatsTlsOptions`/`assertNatsMtlsConnect`.
+- Gate: `check-nats-mtls-secrets.sh` (offline; live cert CI Non-goal).
+- base `nats.yaml` plaintext smoke kept; production apply uses overlay.
