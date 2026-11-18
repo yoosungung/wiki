@@ -1,19 +1,21 @@
 ---
 id: inbox-pm-2026-11-19-roadmap-sync
 agent: pm
-ticket_id: 29e9d705-688f-4d8a-b0ad-c611a9560da7
+ticket_id: 51bc0936-b896-4919-b94e-d1f0ee94e3e3
 updated: 2026-11-19
 status: inbox
 sources:
   - schedule:pm-roadmap-sync
-  - ticket:29e9d705-688f-4d8a-b0ad-c611a9560da7
-  - ticket:1d669034-018b-45e0-986f-c50b24cfd735
-  - ticket:3a06af28-77ba-44af-853c-fd30e520fefa
+  - ticket:6a457aa6-1c75-4e0f-ace3-f6cb01baa104
+  - ticket:51bc0936-b896-4919-b94e-d1f0ee94e3e3
   - wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md
 ---
 
-# roadmap-sync 2026-11-19
+# pm-roadmap-sync 2026-11-19
 
-- aura: first incomplete H2 = M2; milestone `1d669034` IP; created 7 tasks; kickoff memory_capture → aura (WIP=1).
-- uni-semantic Phase 4: open checkbox but marker ticket `d15d16f2` already done — doc lag; no create/pass-gate.
-- crewrp / scanbooks: all H2 complete; Next ### resolve no `M{n}` → no next ###.
+- aura: first incomplete `##` = M3 → milestone `6a457aa6` + 15 children; mile `in_progress`; kickoff `@aura` child `51bc0936` (`svc-control` resolve).
+- uni-semantic: Phase 4 MCP `- [ ]` open but marker ticket `d15d16f2` + mile `ba31c9e8` already **done** → dedup `created=0` (doc lag; no ROADMAP rewrite).
+- crewrp: incomplete `##` 0; passed Phase 6; Next `###` resolve fail (`S7-*`에 `\bM\d+` 없음) → `no next ###`.
+- scanbooks: incomplete `##` 0; passed M4; no `### M{n>4}` → `no next ###`.
+- tenant_cd: N/A for registry repos (verify overlay nl2sql-only).
+- factory-mcp absent → REST + session.cookie + browser UA (CF 1010 on default urllib).
