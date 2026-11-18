@@ -1,19 +1,17 @@
 ---
-id: inbox-aura-2026-11-18-pooler-rls-smoke
+id: inbox-aura-pooler-rls-smoke
 agent: aura
 ticket_id: 92cccf21-e2e4-48c7-b9cd-a495f1fb9d15
 updated: 2026-11-18
 status: inbox
 sources:
   - ticket:92cccf21-e2e4-48c7-b9cd-a495f1fb9d15
-  - ticket:2a04d47b-6e53-4df2-a8bb-c3d63924828d
   - https://github.com/yoosungung/aura/pull/12
 ---
 
 # Aura V1.1 Pooler + RLS smoke
 
-- Fixture: `deploy/k8s/pg-pooler/rls-smoke-fixture.sql` — `FORCE ROW LEVEL SECURITY` + policy on `app.tenant_id`.
-- Live gate: `bash deploy/scripts/smoke-pg-pooler.sh` via DSN host `aura-pg-pooler…` only.
-- Proof: tenant A insert → COMMIT → tenant B on same client (and second session) never sees A rows; GUC clears after COMMIT (`set_config(..., true)`).
-- Static: `SMOKE_PG_POOLER_STATIC=1` covers forbid `set_config(..., false)` / `SET app.tenant_id` scan + manifest gate.
-- Non-goal kept: production `memory_*` DDL / `services/memory` store MQT (later M1).
+- 픽스처 `deploy/k8s/pg-pooler/rls-smoke-fixture.sql`: `FORCE ROW LEVEL SECURITY` + `app.tenant_id` GUC 정책.
+- `smoke-pg-pooler.sh`: (a) DSN=pooler only (b) poolMode=transaction (c) A→COMMIT→B 미노출 (d) session `set_config(..., false)` 정적 금지.
+- 라이브는 pooler Service DSN으로만; `SMOKE_PG_POOLER_STATIC=1`은 클러스터 없이 게이트.
+- PgBouncer transaction 모드에서 픽스처 DDL은 `BEGIN`/`COMMIT`으로 감싸 백엔드 레이스 완화.
