@@ -3,8 +3,8 @@ id: factory-schedule-ops-skips
 title: "Factory 스케줄 ops: empty skip · registry placeholder"
 status: canonical
 owner: km
-updated: "2026-11-19"
-last_updated: "2026-11-19"
+updated: "2026-11-20"
+last_updated: "2026-11-20"
 review_after: "2027-01-15"
 sources:
   - inbox/candidate/2026-11-18-escalation-drain-all-skip.md
@@ -236,6 +236,23 @@ sources:
   - inbox/candidate/2026-11-12-people-ssot-curation-18h.md
   - inbox/candidate/2026-11-13-issue-radar-today.md
   - inbox/candidate/2026-11-13-publication-safety.md
+  - inbox/candidate/2026-11-19-people-ssot-curation-18h.md
+  - inbox/candidate/2026-11-20-issue-radar-today.md
+  - inbox/candidate/2026-11-20-publication-safety.md
+  - inbox/pm/2026-11-19-pm-checkpoint-aura-m4-archive-closeout.md
+  - inbox/pm/2026-11-19-pm-checkpoint-aura-m4-graph-kickoff.md
+  - inbox/pm/2026-11-19-pm-checkpoint-aura-m5-dlq-replay-kickoff.md
+  - inbox/pm/2026-11-19-pm-checkpoint-aura-m5-nats-approval.md
+  - inbox/pm/2026-11-19-pm-checkpoint-aura-m5-pg-calendar-kickoff.md
+  - inbox/pm/2026-11-19-pm-checkpoint-aura-m5-runtimeclass-kickoff.md
+  - inbox/pm/2026-11-19-pm-checkpoint-aura-m5-under30.md
+  - inbox/pm/2026-11-19-pm-checkpoint-aura-supernode-under30.md
+  - inbox/pm/2026-11-19-pm-checkpoint-flow-empty.md
+  - inbox/pm/2026-11-20-github-issue-check-empty-skip.md
+  - inbox/pm/2026-11-20-issue-radar-today-intent-pass.md
+  - inbox/pm/2026-11-20-roadmap-sync-0600.md
+  - inbox/pm/2026-11-20-roadmap-sync.md
+  - ticket:da341eee-17c9-45dd-842e-e216d47d08aa
 tags: ["Engineering", "AI-Native", "Factory", "Schedules"]
 type: "wiki"
 ---
@@ -533,3 +550,23 @@ Durable rules reaffirmed:
 - ROADMAP sync: milestone `in_progress` 후 child kickoff 필수 (sync alone ≠ start).
 - github-issue-check 2026-11-19: open=0 → explicit skip (Outcome Done).
 - candidate publication-safety PASS · issue-radar Intent Pass · escalation-drain all-skip.
+
+
+### UPD 2026-11-20 (km-wiki drain)
+
+Ops / schedule evidence folded (no new durable rule beyond existing pages):
+
+- `inbox/candidate/2026-11-19-people-ssot-curation-18h.md` — stub→curated 0 · residual stub 39 · clean no-op
+- `inbox/candidate/2026-11-20-issue-radar-today.md` — items=10 · today.yaml `649ffdc5…`
+- `inbox/candidate/2026-11-20-publication-safety.md` — PASS clean main · no push/Hugo
+- `inbox/pm/2026-11-20-issue-radar-today-intent-pass.md` — Intent pass on radar Outcome
+- `inbox/pm/2026-11-20-github-issue-check-empty-skip.md` — registry 8 · open=0 · skipped=8
+- `inbox/pm/2026-11-20-roadmap-sync.md` / `…-0600.md` — crewrp/aura/scanbooks no next ### · uni-semantic Phase4 blocked
+- `inbox/pm/2026-11-19-pm-checkpoint-flow-empty.md` — FLOW_COUNT=0 ticketless
+- `inbox/pm/2026-11-19-pm-checkpoint-aura-m4-*` / `…-m5-*` / supernode — kickoff/under30/Approval chatter (NATS defer → [[wiki/Engineering/AI-Native-Engineering/Aura-M5-Nats-Account-Defer-Parking.md]])
+
+Durable rules reaffirmed:
+- github-issue-check open=0 → explicit empty skip (Outcome Done).
+- people-ssot: allowlist miss → residual stubs OK (부족≠실패); empty content diff → no commit.
+- publication-safety PASS on clean main may Done without push/Hugo.
+- ROADMAP `[~]` defer parking + parent Done blocked by open backlog child — see Aura-M5-Nats-Account-Defer-Parking.

@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-11-19 | Root: wiki/
+[META] Updated: 2026-11-20 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,18 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-11-20 (km-researcher, ticket da341eee)
+- [[wiki/Engineering/AI-Native-Engineering/Aura-M4-Object-Store-Shared-Bucket-Path.md]] — shared `aura-content` prefixes · Barman `aura-pg` non-shared
+- [[wiki/Engineering/AI-Native-Engineering/Aura-M4-Pg-Pitr-Drill.md]] — lab RPO/RTO · recovery_target_time after commit · new Cluster restore
+- [[wiki/Engineering/AI-Native-Engineering/Aura-M4-Compliance-Erase-Openbao-Transit.md]] — OpenBao Transit crypto-shred order · erase≠object_gc
+- [[wiki/Engineering/AI-Native-Engineering/Aura-M4-Memory-Ttl-Partition-Drop.md]] — monthly DROP RESTRICT · episodic needs_archive
+- [[wiki/Engineering/AI-Native-Engineering/Aura-M5-Nats-Account-Defer-Parking.md]] — `[~]` defer parking · parent Done blocked by open backlog
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 11-20 ops drain append
+- Inbox drain: **22** (`status:inbox`) git rm — aura×4 · pm×15 · candidate×3
+- ALREADY_COVERED: LiteRT-LM **v0.19.2** · Graphiti **v0.31.2**
+- Research tip: WebLLM **v0.2.89** (was 0.2.88) · LightRAG **v1.5.8rc1** (pre; stable tip still v1.5.7 until final) — no new arXiv page
+
 
 ### UPD 2026-11-19 (km promote, ticket b060ba50)
 - [[wiki/Engineering/AI-Native-Engineering/Aura-M4-Memory-Consolidate-Promotion.md]] — consolidate-only `memory_type` edges · soft_close+insert_promoted · recurrence≥3 · gate script

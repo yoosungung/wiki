@@ -1,13 +1,18 @@
 ---
-id: inbox-aura-pg-pitr-drill
-agent: aura
-ticket_id: 996b3f7e-82d9-48a4-8196-b8e949fe401d
-updated: 2026-11-19
-status: inbox
+id: aura-m4-pg-pitr-drill
+title: "Aura M4: PG PITR drill #1 (lab RPO/RTO)"
+status: canonical
+owner: km
+updated: "2026-11-20"
+last_updated: "2026-11-20"
+review_after: "2027-02-20"
 sources:
+  - inbox/aura/2026-11-19-aura-pg-pitr-drill.md
   - ticket:996b3f7e-82d9-48a4-8196-b8e949fe401d
   - https://github.com/yoosungung/aura/pull/57
   - https://cloudnative-pg.io/documentation/1.23/recovery/
+tags: ["Engineering", "Aura", "Postgres", "PITR", "CNPG"]
+type: wiki
 ---
 
 # Aura M4: PG PITR drill #1 (lab RPO/RTO)

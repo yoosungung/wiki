@@ -1,12 +1,17 @@
 ---
-id: inbox-aura-compliance-erase-openbao-transit
-agent: aura
-ticket_id: b355e99f-374f-4bb0-b184-488d7b19cbc3
-updated: 2026-11-19
-status: inbox
+id: aura-m4-compliance-erase-openbao-transit
+title: "Aura M4: compliance.erase · OpenBao Transit crypto-shred"
+status: canonical
+owner: km
+updated: "2026-11-20"
+last_updated: "2026-11-20"
+review_after: "2027-02-20"
 sources:
+  - inbox/aura/2026-11-19-compliance-erase-openbao-transit.md
   - ticket:b355e99f-374f-4bb0-b184-488d7b19cbc3
   - https://www.mongodb.com/docs/manual/core/csfle/tutorials/right-to-erasure/
+tags: ["Engineering", "Aura", "Compliance", "KMS", "OpenBao"]
+type: wiki
 ---
 
 # Aura M4: compliance.erase · OpenBao Transit crypto-shred
