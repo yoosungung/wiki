@@ -133,4 +133,5 @@
 - [[wiki/Engineering/AI-Native-Engineering/Sql-Mcp-Lane-Mm-Gap.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Scanbooks-M3-Pipeline-Ort-Temp-Smoke.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Aura-M0-Runtime-Nats-Keda-Fission.md]]
+- [[wiki/Engineering/AI-Native-Engineering/Aura-M4-Memory-Consolidate-Promotion.md]]
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Timeline-Merged-Into-List.md]]
