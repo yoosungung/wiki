@@ -53,6 +53,10 @@
 
 ## 📌 KEY_FILE_LIST
 
+### UPD 2026-11-19 (km promote, ticket 502e7094)
+- [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] — incomplete=`- [ ]` only; adopted markers `- [-]`(cancel) / `- [~]`(defer); authoring rules; aura M3 F1 doc-lag ops
+- Inbox drain: **7** git rm — pm×4 · aura×3 (resolved-markers · M4-blocked · checkpoint · sync-1203 · F1 checkbox/resolved · proposal)
+
 ### UPD 2026-11-19 (km-researcher)
 - [[wiki/Engineering/AI-Native-Engineering/Aura-M1-Memory-Pg-Pooler-Rls.md]] — M1 Pooler/RLS · memory_* partitions · BM25/HNSW · TTL/HA · store MQT
 - [[wiki/Engineering/AI-Native-Engineering/Aura-M2-Memory-Recall-Embed-Inject.md]] — capture/embed · recall Warm RRF · agent inject

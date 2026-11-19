@@ -3,10 +3,18 @@ id: roadmap-sync-unchecked-h2-gate
 title: "ROADMAP sync: ## + 미완료 - [ ] 섹션만 enqueue"
 status: canonical
 owner: km
-updated: "2026-11-17"
-last_updated: "2026-11-17"
-review_after: "2027-01-15"
+updated: "2026-11-19"
+last_updated: "2026-11-19"
+review_after: "2027-02-19"
 sources:
+  - ticket:502e7094-9637-413c-8a4a-cc777df81cb3
+  - inbox/pm/2026-11-19-roadmap-resolved-markers-adopted.md
+  - inbox/aura/2026-11-19-roadmap-resolved-checkbox-markers.md
+  - inbox/pm/2026-11-19-aura-m4-blocked-by-m3-f1-checkbox.md
+  - inbox/pm/2026-11-19-pm-checkpoint-aura-m3-f1-intent-pass.md
+  - inbox/aura/2026-11-19-m3-f1-checkbox-closed.md
+  - inbox/aura/2026-11-19-m3-f1-resolved-marker.md
+  - inbox/pm/2026-11-19-roadmap-sync-1203.md
   - inbox/pm/2026-11-17-roadmap-sync.md
   - inbox/pm/2026-11-17-roadmap-sync-0600.md
   - inbox/pm/2026-11-16-roadmap-sync-1200.md
@@ -82,15 +90,38 @@ type: "wiki"
 
 # ROADMAP sync: ## + 미완료 `- [ ]` 섹션만 enqueue
 
-`pm-roadmap-sync`는 `##` 섹션 중 **첫 미완료 `- [ ]` 체크리스트**만 티켓으로 만든다. `###` 하위·일반 `-` bullet·서술(“M0 Done”)만으로는 **no-op**(티켓 0).
+`pm-roadmap-sync`는 `##` 섹션 중 **첫 incomplete 체크리스트**만 티켓으로 만든다. **incomplete = `- [ ]`만**. `###` 하위·일반 `-` bullet·서술(“M0 Done”)만으로는 **no-op**(티켓 0). SoR: `factory-pm/references/roadmap-sync.md` (sync는 ROADMAP을 고쳐 쓰지 않음).
+
+## 체크리스트 마커 (2026-11-19 채택)
+
+| 마커 | 의미 | current 게이트 | 티켓 enqueue |
+|------|------|----------------|--------------|
+| `- [ ]` | 할 일 | **막음** | 예 |
+| `- [x]` / `- [X]` | 완료 | 통과 | 아니오 |
+| `- [-]` | 취소·불필요·won't-do·게이트 미발화 | 통과 | 아니오 |
+| `- [~]` | 연기(임시 parking) | 통과 | 아니오 |
+
+`passed` = 해당 `##`에 `- [ ]`가 **0** (줄이 `[x]`/`[-]`/`[~]`만 있어도 됨).
+
+### 작성 규칙 (테넌트 ROADMAP)
+
+| 의도 | ROADMAP에 쓰는 법 | sync 효과 |
+|------|-------------------|-----------|
+| 아직 해야 함 | `- [ ] …` | current에 남김 |
+| 완료 | `- [x] …` | non-open |
+| 취소·불필요·미실시·게이트 미발화 | `- [-] …` + 짧은 사유 | non-open (done과 동일 게이트) |
+| 뒤로 연기 | 가능하면 **대상 `##`로 잘라 붙여 `- [ ]`**. 대상 미정이면 임시 `- [~]` 후 다음 편집에서 이동 | `[~]`는 스톨 금지; 영구 방치 금지 |
+
+**금지:** 미실시 작업을 `- [x] (미실시…)`로 위장 — done vs cancelled가 문서에서 섞임. → `- [-]` 사용.
 
 ## 문서 계약
 
 ```markdown
 ## 현재 마일스톤 이름
 - [ ] 작업 A
-- [ ] 작업 B
 - [x] 완료된 항목
+- [-] 선택 작업 — 게이트 미발화·미실시
+- [~] 임시 연기 — 다음 ##로 이동 예정
 
 ### 나중 마일스톤   # sync 대상 아님
 - 그냥 bullet     # 무시
@@ -99,17 +130,18 @@ type: "wiki"
 ## 함정
 
 - `## 마일스톤` 아래 `### M0…M4` + plain bullet만 있으면 sync가 영원히 0.
-- 서술로만 “착수”를 적어도 Leantime 티켓은 안 생김 → current milestone을 `##` + `- [ ]`/`- [x]`로 바꾼다.
+- 서술로만 “착수”를 적어도 티켓은 안 생김 → current milestone을 `##` + 체크리스트로 바꾼다.
 - Dedup: `<!-- roadmap:repo_id:slug -->`.
 - `## 마일스톤` 아래 `### M3.1 — current` plain bullet은 sync 대상이 아님. 다음 체크리스트는 `##` + `- [ ]`가 생기기 전 no-op.
 - leftover `type=milestone` New는 자식·pass-gate Done 후 위생 closeout — [[wiki/Engineering/AI-Native-Engineering/Orphan-Milestone-Close-After-Children-Done.md]].
 - `### 나중` (plain H3 catalog) alone is **not** H2-checklist enqueue. After human asks to ticketize later-scope, create milestone+children with dedup markers; skip already-done markers even if ROADMAP checkbox still open (doc lag).
+- 선택/조건부 항목을 `[ ]`로 열어 두면 보드 Done이어도 다음 `##` enqueue가 **영원히 막힘**(doc lag). 미실시면 `- [-]`로 닫는다.
 
 ## Leantime Done ≠ ROADMAP 체크 완료 (idempotent)
 
-- sync는 **ROADMAP.md의 `- [ ]`만** 보고 enqueue한다. Leantime 자식 티켓이 이미 Done이어도 ROADMAP 체크박스가 열려 있으면 해당 `##`는 **current로 남는다**.
-- Dedup 마커(`<!-- roadmap:… -->`)가 있으면 **티켓을 다시 만들지 않는다**(idempotent skip). sync가 ROADMAP을 `- [x]`로 고쳐 쓰지 않는다.
-- **Pass-gate / approved→next**는 incomplete `##`가 0이 될 때까지 deferred. 다음 `##`/`###` enqueue는 current 체크리스트가 문서상 닫힌 뒤에만.
+- sync는 **ROADMAP.md의 `- [ ]`만** 보고 enqueue한다. 보드 자식이 이미 Done이어도 ROADMAP에 open `- [ ]`가 있으면 해당 `##`는 **current로 남는다**.
+- Dedup 마커(`<!-- roadmap:… -->`)가 있으면 **티켓을 다시 만들지 않는다**(idempotent skip). sync가 ROADMAP을 고쳐 쓰지 않는다.
+- **Pass-gate / approved→next**는 incomplete `##`가 0이 될 때까지 deferred. 다음 `##`/`###` enqueue는 current에 `- [ ]`가 0인 뒤에만.
 - 운영: 마일스톤 티켓 재사용 + 자식 skip은 정상; “Done인데 sync가 또 current”는 버그가 아니라 **문서·보드 축 분리**다. 진행을 넘기려면 ROADMAP 체크를 사람이(또는 pass-gate 승인 후) 닫는다 — [[wiki/Engineering/AI-Native-Engineering/Roadmap-Pass-Gate-Human-Approval.md]].
 - **2026-10-06···10 uni-tutor:** `## 나중`에 LMS/LTI `- [ ]` 1개만 남아 current; milestone `f8d92c00` 재사용 + LMS marker `4aa8d43d` → enqueue skip / `created=0`, pass-gate deferred (checkbox open). crewrp incomplete 0 → freeze no-op (Phase 4 invent 금지; pass-gate `f9f2416a` already `done`).
 - **2026-10-12:** crewrp current=`## Phase 4 — 소통 = Discord 계정 연동` → milestone `012deff8` + child `6beb03a9` (marker `roadmap:crewrp:discord-oauth-app-server-channel-keys-manual-e2e`); Phase 5/6 blocked. uni-tutor LMS/LTI still open checkbox + done marker `4aa8d43d` → `created=0` / doc lag; pass-gate deferred while any incomplete `##` remains. Discord E2E: [[wiki/Engineering/Development-Environment/CrewRP-Discord-OAuth-Manual-E2E.md]].
@@ -159,3 +191,9 @@ type: "wiki"
 - uni-semantic: Phase 4 open MCP checkbox + cancelled/done marker `d15d16f2` → dedup; mile `ba31c9e8` done/waiting lag.
 - aura: H2 checkbox 0 → skip `no passed section` (when scanned).
 - Onboard pattern: [[wiki/Engineering/AI-Native-Engineering/Scanbooks-Factory-Onboard.md]].
+
+## Ops 2026-11-19 (aura M3 F1 → markers A)
+
+- **1203 sync:** aura current=`## M3` (1× optional F1 `- [ ]`); mile+child already **done** → dedup `created=0`; **M4 blocked** (doc lag, not a sync bug). crewrp/scanbooks incomplete 0 → `no next ###`; uni-semantic Phase 4 MCP open → dedup.
+- Ticket `502e7094`: F1을 일시 `[x] (미실시…)`로 닫아 M3 incomplete=0 (PR #45) → 이후 **안 A 채택** (`[-]`/`[~]`); skill SoR `roadmap-sync.md` + aura PR #46 F1→`[-]` + 범례.
+- 교훈: 선택 게이트 미발화 항목을 `[ ]`로 두면 다음 `##`가 영구 스톨. 미실시는 `- [-]` (+ 사유).
