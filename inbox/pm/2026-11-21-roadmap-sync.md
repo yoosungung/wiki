@@ -18,3 +18,4 @@ sources:
 - **uni-semantic** current=`## Phase 4`; open MCP `- [ ]` but marker on cancelled/done `d15d16f2` → dedup skip; milestone `ba31c9e8` stays done; doc lag (prefer ROADMAP `- [-]`).
 - **crewrp / aura / scanbooks**: all `##` have zero `- [ ]` → pass-gate path; **no next ###** (M-id) → freeze, no gate ticket.
 - Sync never rewrites tenant ROADMAP; no invent reopen of MCP.
+- 06:00 KST re-run: idempotent same outcome; outcome comment on `ba31c9e8` (no re-@mention).
