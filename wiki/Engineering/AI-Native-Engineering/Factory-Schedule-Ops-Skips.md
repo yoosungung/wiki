@@ -3,10 +3,17 @@ id: factory-schedule-ops-skips
 title: "Factory 스케줄 ops: empty skip · registry placeholder"
 status: canonical
 owner: km
-updated: "2026-11-20"
-last_updated: "2026-11-20"
+updated: "2026-11-21"
+last_updated: "2026-11-21"
 review_after: "2027-01-15"
 sources:
+  - inbox/pm/2026-11-21-roadmap-sync.md
+  - inbox/pm/2026-11-21-issue-radar-today-intent-pass.md
+  - inbox/pm/2026-11-21-github-issue-check-empty-skip.md
+  - inbox/pm/2026-11-20-roadmap-sync.md
+  - inbox/candidate/2026-11-21-issue-radar-today.md
+  - inbox/candidate/2026-11-21-publication-safety.md
+  - inbox/candidate/2026-11-20-people-ssot-curation-18h.md
   - inbox/candidate/2026-11-18-escalation-drain-all-skip.md
   - inbox/candidate/2026-11-18-people-ssot-curation-18h.md
   - inbox/candidate/2026-11-19-issue-radar-today.md
@@ -570,3 +577,21 @@ Durable rules reaffirmed:
 - people-ssot: allowlist miss → residual stubs OK (부족≠실패); empty content diff → no commit.
 - publication-safety PASS on clean main may Done without push/Hugo.
 - ROADMAP `[~]` defer parking + parent Done blocked by open backlog child — see Aura-M5-Nats-Account-Defer-Parking.
+
+### UPD 2026-11-21 (km-wiki drain)
+
+Ops / schedule evidence folded (no new durable rule beyond existing pages):
+
+- `inbox/candidate/2026-11-20-people-ssot-curation-18h.md` — stub→curated 0 · residual stub 39 · clean no-op
+- `inbox/candidate/2026-11-21-issue-radar-today.md` — items=10 · today.yaml `f3bb6c50…`
+- `inbox/candidate/2026-11-21-publication-safety.md` — PASS clean main `649ffdc5` · no push/Hugo
+- `inbox/pm/2026-11-21-issue-radar-today-intent-pass.md` — Intent pass · SHA 일치
+- `inbox/pm/2026-11-21-github-issue-check-empty-skip.md` — registry 8 · open=0 · skipped=8 · create-once REST
+- `inbox/pm/2026-11-20-roadmap-sync.md` / `…-21-roadmap-sync.md` — crewrp/aura/scanbooks no next ### · uni-semantic Phase4 MCP open + cancelled `d15d16f2` dedup · mile `ba31c9e8` stays done
+
+Durable rules reaffirmed:
+- github-issue-check open=0 → explicit empty skip (Outcome Done); factory-mcp 부재 → session-cookie REST create-once (`ticket.id` · POST≤1).
+- people-ssot: allowlist miss → residual stubs OK (부족≠실패); empty content diff → no commit.
+- publication-safety PASS on clean main may Done without push/Hugo.
+- ROADMAP: incomplete=`- [ ]` only; cancelled marker on board → dedup; no invent reopen; freeze when no next `###` M-id.
+

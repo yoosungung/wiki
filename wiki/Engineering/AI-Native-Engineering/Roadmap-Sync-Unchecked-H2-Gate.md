@@ -3,10 +3,13 @@ id: roadmap-sync-unchecked-h2-gate
 title: "ROADMAP sync: ## + 미완료 - [ ] 섹션만 enqueue"
 status: canonical
 owner: km
-updated: "2026-11-19"
-last_updated: "2026-11-19"
+updated: "2026-11-21"
+last_updated: "2026-11-21"
 review_after: "2027-02-19"
 sources:
+  - inbox/pm/2026-11-21-roadmap-sync.md
+  - inbox/pm/2026-11-20-roadmap-sync.md
+  - ticket:ba31c9e8-b3a9-43a4-948a-fe02ded277e3
   - ticket:502e7094-9637-413c-8a4a-cc777df81cb3
   - inbox/pm/2026-11-19-roadmap-resolved-markers-adopted.md
   - inbox/aura/2026-11-19-roadmap-resolved-checkbox-markers.md
@@ -161,6 +164,12 @@ type: "wiki"
 
 - **2026-11-13:** crewrp Phase 6 doc lag → dedup `created=0` (mile `7ce664ec`+child `161a162c`). aura: skip `no passed section`. uni-semantic Phase 2 all `[x]` → current=`## Phase 3` milestone `fc04b030` + 4 children; Phase 4 blocked. Ticketless → no orphan Outcome.
 - **2026-11-13 18:00 / 2026-11-14:** crewrp Phase 6 checkbox closed → incomplete `##` 0; passed=`## Phase 6`; Next `###` resolve fail (`### S7-*`에 `\bM\d+` 없음) → `no next ###` / invent 금지. aura: plain-bullet skip. uni-semantic current=`## Phase 4` (open 2 after Emitter `[x]`) — milestone `ba31c9e8` + MCP/`slg` backlog markers already present → sync `created=0`. Emitter: [[wiki/Engineering/AI-Native-Engineering/Uni-Semantic-Phase4-Emitter.md]].
+
+## Ops 2026-11-20···21
+
+- **uni-semantic** current=`## Phase 4`; open MCP `- [ ]` but marker on cancelled/done `d15d16f2` → dedup `created=0`; milestone `ba31c9e8` stays done (no demote); doc lag (prefer ROADMAP `- [-]`).
+- **crewrp / aura / scanbooks**: all `##` have zero `- [ ]` → pass-gate path; **no next ###** (M-id) → freeze, no gate ticket invent.
+- Sync never rewrites tenant ROADMAP; no invent reopen of MCP. 06:00 KST re-run idempotent.
 
 ## 🔗 관련 문서
 

@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-11-20 | Root: wiki/
+[META] Updated: 2026-11-21 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,16 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-11-21 (km-researcher)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 11-21 ops drain append (github empty×8 · radar/pub/people · roadmap freeze)
+- [[wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md]] — 11-18···21 ops (radar `f3bb6c50` · pub PASS · people stub0)
+- [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] — 11-20···21 ops (uni-semantic Phase4 dedup · crewrp/aura/scanbooks no next ###)
+- Inbox drain: **7** (`status:inbox`) git rm — pm×4 · candidate×3
+- ALREADY_COVERED: LiteRT-LM **v0.19.2** · WebLLM **v0.2.89** · Graphiti **v0.31.2** · LightRAG stable **v1.5.7** (watched `v1.5.8rc1`)
+- Research: tip unchanged (no new arXiv page this run)
+- Left non-status:inbox: `inbox/aura/2026-11-19-dlq-replay-ops-runbook.md` · `inbox/pm/2026-11-19-aura-m4-sync-enqueued.md`
+
 
 ### UPD 2026-11-20 (km-researcher, ticket da341eee)
 - [[wiki/Engineering/AI-Native-Engineering/Aura-M4-Object-Store-Shared-Bucket-Path.md]] — shared `aura-content` prefixes · Barman `aura-pg` non-shared
