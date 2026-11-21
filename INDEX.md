@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-11-21 | Root: wiki/
+[META] Updated: 2026-11-22 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,16 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-11-22 (km-researcher)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 11-22 ops drain append (github empty×8 · radar/pub/people · roadmap freeze×4)
+- [[wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md]] — 11-21···22 ops (radar `fc2bb2f8` · pub PASS · people stub0)
+- [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] — 11-21···22 ops (uni-semantic Phase4 dedup · crewrp/aura/scanbooks no next ###)
+- [[wiki/Agents/Text-to-SQL/LuthorSQL-System1-Local-Gate.md]] — arXiv:2611.17780 System1 local gate + LLM cascade (−33% API)
+- Inbox drain: **8** (`status:inbox`) git rm — pm×5 · candidate×3
+- ALREADY_COVERED: LiteRT-LM **v0.19.2** · WebLLM **v0.2.89** · Graphiti **v0.31.2** · LightRAG stable **v1.5.7** (watched `v1.5.8rc1`)
+- Research: tip unchanged; new arXiv page LuthorSQL only
+- Left non-status:inbox: `inbox/aura/2026-11-19-dlq-replay-ops-runbook.md` · `inbox/pm/2026-11-19-aura-m4-sync-enqueued.md`
 
 ### UPD 2026-11-21 (km-researcher)
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 11-21 ops drain append (github empty×8 · radar/pub/people · roadmap freeze)

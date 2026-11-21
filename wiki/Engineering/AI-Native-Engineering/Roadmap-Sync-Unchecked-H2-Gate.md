@@ -3,10 +3,14 @@ id: roadmap-sync-unchecked-h2-gate
 title: "ROADMAP sync: ## + 미완료 - [ ] 섹션만 enqueue"
 status: canonical
 owner: km
-updated: "2026-11-21"
-last_updated: "2026-11-21"
+updated: "2026-11-22"
+last_updated: "2026-11-22"
 review_after: "2027-02-19"
 sources:
+  - inbox/pm/2026-11-22-roadmap-sync-0600.md
+  - inbox/pm/2026-11-22-roadmap-sync-0000.md
+  - inbox/pm/2026-11-21-roadmap-sync-1800.md
+  - inbox/pm/2026-11-21-roadmap-sync-1200.md
   - inbox/pm/2026-11-21-roadmap-sync.md
   - inbox/pm/2026-11-20-roadmap-sync.md
   - ticket:ba31c9e8-b3a9-43a4-948a-fe02ded277e3
@@ -170,6 +174,13 @@ type: "wiki"
 - **uni-semantic** current=`## Phase 4`; open MCP `- [ ]` but marker on cancelled/done `d15d16f2` → dedup `created=0`; milestone `ba31c9e8` stays done (no demote); doc lag (prefer ROADMAP `- [-]`).
 - **crewrp / aura / scanbooks**: all `##` have zero `- [ ]` → pass-gate path; **no next ###** (M-id) → freeze, no gate ticket invent.
 - Sync never rewrites tenant ROADMAP; no invent reopen of MCP. 06:00 KST re-run idempotent.
+
+
+## Ops 2026-11-21···22
+
+- **uni-semantic** current=`## Phase 4`; open MCP `- [ ]` but marker on cancelled/done `d15d16f2` → dedup `created=0`; milestone `ba31c9e8` stays done (no demote); doc lag (prefer ROADMAP `- [-]`).
+- **crewrp / aura / scanbooks**: all `##` have zero `- [ ]` → pass-gate path; **no next ###** (M-id) → freeze, no gate ticket invent.
+- Sync never rewrites tenant ROADMAP; no invent reopen of MCP. 00:00 / 06:00 / 12:00 / 18:00 KST re-runs idempotent.
 
 ## 🔗 관련 문서
 

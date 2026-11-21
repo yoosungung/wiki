@@ -3,10 +3,16 @@ id: publication-gate-empty-overwrite-guard
 title: "퍼블리시 게이트 + 빈 산출물 덮어쓰기 금지"
 status: canonical
 owner: km
-updated: "2026-11-21"
-last_updated: "2026-11-21"
+updated: "2026-11-22"
+last_updated: "2026-11-22"
 review_after: "2026-12-21"
 sources:
+  - inbox/candidate/2026-11-22-issue-radar-today.md
+  - inbox/candidate/2026-11-22-publication-safety.md
+  - inbox/candidate/2026-11-21-people-ssot-curation-18h.md
+  - ticket:a62d73d0-9ca1-404a-921b-23f4f181e2f9
+  - ticket:27a019c2-108f-47dd-a4b7-11c6ad6fc575
+  - ticket:72fac9f7-ad5f-4233-8bc4-4a8f6744fd5f
   - inbox/candidate/2026-11-21-issue-radar-today.md
   - inbox/candidate/2026-11-21-publication-safety.md
   - inbox/candidate/2026-11-20-people-ssot-curation-18h.md
@@ -323,4 +329,10 @@ python agent/publication_gate.py --base origin/main
 - publication-safety 2026-11-21: exit 0 PASS; clean-main HEAD=`649ffdc5`==origin/main → Done without push/Hugo (ticket `37124078`).
 - issue-radar-today 2026-11-21: items=**10**; `wiki/data/today.yaml` only SHA `f3bb6c50…`; `generated_at` 2026-11-20T23:01:10Z; empty-overwrite 미발동; PM Intent pass `39f4e669`.
 - people-ssot 2026-11-20 18h: stub→curated **0**; residual stub **39** (allowlist URL 없음) → 부족≠실패; content diff 0 no-op (ticket `9b5cffcc`). Hold: org/non-person 4 · journalist/weak 19 · role ambiguous 1 (`jo-deon`) · no-URL 15.
+
+## Ops 2026-11-21···22
+
+- publication-safety 2026-11-22: exit 0 PASS; clean-main HEAD=`f3bb6c50`==origin/main → Done without push/Hugo (ticket `a62d73d0`).
+- issue-radar-today 2026-11-22: items=**10**; `wiki/data/today.yaml` only SHA `fc2bb2f8…`; `generated_at` 2026-11-21T23:01:00Z; empty-overwrite 미발동 (ticket `27a019c2`).
+- people-ssot 2026-11-21 18h: stub→curated **0**; residual stub **39** (allowlist URL 없음) → 부족≠실패; content diff 0 no-op (ticket `72fac9f7`). Hold: org/non-person 4 · journalist/weak 10 · role ambiguous 2 · no-URL 23.
 

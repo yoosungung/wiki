@@ -13,6 +13,7 @@
 - [[wiki/Agents/Text-to-SQL/DeepAgent-T2SQL.md]]
 - [[wiki/Agents/Text-to-SQL/GRPO-for-T2SQL.md]]
 - [[wiki/Agents/Text-to-SQL/Genloop-Sentinel.md]]
+- [[wiki/Agents/Text-to-SQL/LuthorSQL-System1-Local-Gate.md]]
 - [[wiki/Agents/Text-to-SQL/MCP-Search-Short-Column-Reverse-Match.md]]
 - [[wiki/Agents/Text-to-SQL/MDL-Only-Domain-Knowledge.md]]
 - [[wiki/Agents/Text-to-SQL/Metadata-RAG.md]]
