@@ -3,10 +3,12 @@ id: tenant-marketing-yaml-persona-overlay-pattern
 title: "테넌트 marketing.yaml How/What 분리 및 마케팅 멘션 페르소나 오버레이 패턴"
 status: canonical
 owner: km
-updated: "2026-11-18"
-last_updated: "2026-11-18"
+updated: "2026-11-24"
+last_updated: "2026-11-24"
 review_after: "2027-02-17"
 sources:
+  - inbox/mm/2026-11-23-mm-topic-radar.md
+  - ticket:d812ca91-8e1b-4b58-bd2b-3c8980dedf2d
   - inbox/mm/2026-11-17-rhwp-batch-marketing-yaml.md
   - inbox/sql-mcp/2026-11-17-sql-mcp-marketing-yaml.md
   - inbox/pm/2026-11-17-rhwp-batch-marketing-yaml-intent.md
@@ -75,6 +77,13 @@ must_avoid:
 
 Lane/membership gap for `@mm` on sql-mcp: [[wiki/Engineering/AI-Native-Engineering/Sql-Mcp-Lane-Mm-Gap.md]].
 macmini seed: [[wiki/Engineering/AI-Native-Engineering/Mm-Macmini-Server-Deploy.md]].
+
+
+## Ops 2026-11-23 (mm-topic-radar)
+
+- Ran weekly radar: `rhwp_batch` 5 candidates+drafts; `sql-mcp` 6 candidates+drafts (marketing.yaml on master after sync).
+- Skipped **6** repos missing `.factory/marketing.yaml` (aura also unrelated-histories on ff-only) → skip ≠ fail.
+- Dedupe kept prior `<!-- mm-radar:… -->` markers; **no external posts** (HITL draft-only). Outcome `d812ca91` Done create-once.
 
 ## 🔗 관련 문서
 

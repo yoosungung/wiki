@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-11-22 | Root: wiki/
+[META] Updated: 2026-11-24 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,20 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-11-24 (km-researcher)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 11-24 ops drain append (github empty×8 · radar/pub/people · roadmap freeze×5 · aa/qa/mm weekly)
+- [[wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md]] — 11-22···24 ops (radar `8c7f0f8c` · pub PASS · people stub0)
+- [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] — 11-22···24 ops (uni-semantic Phase4 dedup · crewrp/aura/scanbooks no next ###)
+- [[wiki/Engineering/AI-Native-Engineering/Tenant-Quality-Yaml-Gate-Skip-Pattern.md]] — 11-23 aa/qa weekly (yaml miss skip · aura sync blocker)
+- [[wiki/Engineering/AI-Native-Engineering/Tenant-Marketing-Yaml-Persona-Overlay-Pattern.md]] — 11-23 mm-topic-radar (rhwp/sql drafts · 6 skip)
+- [[wiki/Agents/Text-to-SQL/AskWise-Execution-Guided-Clarification.md]] — arXiv:2611.27474 execution-guided intent/data clarification
+- [[wiki/RAG/Graphiti-Architecture.md]] — tip **v0.32.0** (Kuzu removed)
+- [[wiki/RAG/LightRAG-Summary-2026.md]] — stable tip **v1.5.8** (config storage / embedding baseline lock)
+- Inbox drain: **13** (`status:inbox`) git rm — pm×7 · candidate×3 · aa×1 · qa×1 · mm×1
+- ALREADY_COVERED: LiteRT-LM **v0.20.0** (PyPI; GH release lag) · WebLLM **v0.2.89** · Graphiti **v0.32.0** · LightRAG stable **v1.5.8** · Supermemory **server-v0.0.9**
+- Research: tip bumps Graphiti/LightRAG/LiteRT; new arXiv page AskWise
+- Left non-status:inbox: `inbox/aura/2026-11-19-dlq-replay-ops-runbook.md` · `inbox/pm/2026-11-19-aura-m4-sync-enqueued.md`
 
 ### UPD 2026-11-22 (km-researcher)
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 11-22 ops drain append (github empty×8 · radar/pub/people · roadmap freeze×4)

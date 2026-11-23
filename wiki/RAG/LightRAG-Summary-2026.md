@@ -9,7 +9,7 @@ tags:
   - graphrag_implementation
 type: wiki
 status: draft
-last_updated: "2026-09-15"
+last_updated: "2026-11-24"
 updated: "2026-09-15"
 ---
 
@@ -48,3 +48,10 @@ updated: "2026-09-15"
 - [[wiki/RAG/GraphRAG-vs-LightRAG-2026.md]]
 - [[wiki/RAG/000_RAG-MOC.md]]
 - [[wiki/RAG/Graphiti-Architecture.md]]
+
+## 5. v1.5.8 tip (2026-11-23)
+
+- Stable tip **v1.5.8** (was v1.5.7; watched `v1.5.8rc1` → final).
+- **Configuration storage** 신설 (`LIGHTRAG_CONFIG_STORAGE`): workspace별 embedding baseline 기록 — **기존 workspace에서 임베딩 모델 변경 시 기동 거부**.
+- Redis KV는 config storage 비허용 → Redis 배포는 JsonKV 기본 + startup warning.
+- 릴리스: https://github.com/HKUDS/LightRAG/releases/tag/v1.5.8

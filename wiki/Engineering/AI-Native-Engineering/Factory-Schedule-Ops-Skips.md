@@ -3,10 +3,23 @@ id: factory-schedule-ops-skips
 title: "Factory 스케줄 ops: empty skip · registry placeholder"
 status: canonical
 owner: km
-updated: "2026-11-22"
-last_updated: "2026-11-22"
+updated: "2026-11-24"
+last_updated: "2026-11-24"
 review_after: "2027-01-15"
 sources:
+  - inbox/pm/2026-11-24-github-issue-check-empty-skip.md
+  - inbox/pm/2026-11-24-issue-radar-today-intent-pass.md
+  - inbox/pm/2026-11-24-roadmap-sync-0000.md
+  - inbox/pm/2026-11-24-roadmap-sync-0600.md
+  - inbox/pm/2026-11-23-roadmap-sync-1200.md
+  - inbox/pm/2026-11-23-roadmap-sync-1800.md
+  - inbox/pm/2026-11-22-roadmap-sync-1200.md
+  - inbox/candidate/2026-11-24-issue-radar-today.md
+  - inbox/candidate/2026-11-24-publication-safety.md
+  - inbox/candidate/2026-11-23-people-ssot-curation-18h.md
+  - inbox/aa/2026-11-23-aa-clean-weekly.md
+  - inbox/qa/2026-11-23-qa-bulk-weekly.md
+  - inbox/mm/2026-11-23-mm-topic-radar.md
   - inbox/pm/2026-11-22-github-issue-check-empty-skip.md
   - inbox/pm/2026-11-22-roadmap-sync-0600.md
   - inbox/pm/2026-11-22-roadmap-sync-0000.md
@@ -619,3 +632,22 @@ Durable rules reaffirmed:
 - publication-safety PASS on clean main may Done without push/Hugo.
 - ROADMAP: incomplete=`- [ ]` only; cancelled marker on board → dedup; no invent reopen; freeze when no next `###` M-id.
 
+### UPD 2026-11-24 (km-wiki drain)
+
+Ops / schedule evidence folded (no new durable rule beyond existing pages):
+
+- `inbox/candidate/2026-11-23-people-ssot-curation-18h.md` — stub→curated 0 · residual stub 39 · clean no-op (`fc2bb2f8`)
+- `inbox/candidate/2026-11-24-issue-radar-today.md` — items=10 · today.yaml `8c7f0f8c…`
+- `inbox/candidate/2026-11-24-publication-safety.md` — PASS clean main `fc2bb2f8` · no push/Hugo
+- `inbox/pm/2026-11-24-issue-radar-today-intent-pass.md` — Intent pass · SHA 일치
+- `inbox/pm/2026-11-24-github-issue-check-empty-skip.md` — registry 8 · open=0 · skipped=8 · create-once REST (`f96816ea`)
+- `inbox/pm/2026-11-22-roadmap-sync-1200.md` / `…-23-1200.md` / `…-23-1800.md` / `…-24-0000.md` / `…-24-0600.md` — crewrp/aura/scanbooks no next ### · uni-semantic Phase4 MCP open + done `d15d16f2` dedup · mile `ba31c9e8` stays done
+- `inbox/aa/2026-11-23-aa-clean-weekly.md` / `inbox/qa/2026-11-23-qa-bulk-weekly.md` — registry 8 · quality.yaml missing → skip · aura sync unrelated-histories blocker (no force) · NF=0
+- `inbox/mm/2026-11-23-mm-topic-radar.md` — rhwp_batch 5 + sql-mcp 6 drafts · 6 repos missing marketing.yaml skip · no external posts
+
+Durable rules reaffirmed:
+- github-issue-check open=0 → explicit empty skip (Outcome Done); factory-mcp 부재 → session-cookie REST create-once (`ticket.id` · POST≤1).
+- people-ssot: allowlist miss → residual stubs OK (부족≠실패); empty content diff → no commit.
+- publication-safety PASS on clean main may Done without push/Hugo.
+- ROADMAP: incomplete=`- [ ]` only; cancelled/done marker → dedup; no invent reopen; freeze when no next `###` M-id.
+- quality/marketing yaml missing → skip ≠ fail; aura unrelated-histories → sync skip (no force).

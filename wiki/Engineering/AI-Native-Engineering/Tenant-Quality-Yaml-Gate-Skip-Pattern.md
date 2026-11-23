@@ -3,10 +3,14 @@ id: tenant-quality-yaml-gate-skip-pattern
 title: "테넌트 quality.yaml 게이트 키 누락 시 skip (NF 미생성)"
 status: canonical
 owner: km
-updated: "2026-11-17"
-last_updated: "2026-11-17"
+updated: "2026-11-24"
+last_updated: "2026-11-24"
 review_after: "2027-01-13"
 sources:
+  - inbox/aa/2026-11-23-aa-clean-weekly.md
+  - inbox/qa/2026-11-23-qa-bulk-weekly.md
+  - ticket:d45f1c4c-be11-4d92-b3a1-277540559fd4
+  - ticket:90701013-54c4-49e9-93c9-39adea1ceb4a
   - inbox/qa/2026-11-02-qa-bulk-weekly.md
   - inbox/aa/2026-11-02-aa-clean-weekly.md
   - inbox/qa/2026-10-26-qa-bulk-weekly.md
@@ -197,6 +201,18 @@ Registry **7** tip sync (sw-factory · crewrp · sql-mcp · rhwp_batch · aura �
 | qa-bulk-weekly | 7 repo no `bulk_api`/`opik` → skip; factory `GET /api/health` 200 `qa: pass`; Opik N/A (skill/key 부재); `nf-progress: complete` |
 
 factory-mcp 미노출 → session-cookie REST. Active 없는 스케줄 → orphan Outcome 금지(해당 스케줄 create-once 정책이 있으면 그 계약).
+
+
+## 2026-11-23 주간 NF (aa/qa)
+
+Registry **8** tip sync attempt: OK 7 (sw-factory/crewrp/sql-mcp/rhwp_batch/candidate.win/uni-semantic/scanbooks); **aura** sync blocker (ahead 125 / behind 174, unrelated histories — no force). Discover: 전 클라이언트 `.factory/quality.yaml` 게이트 키 없음 → skip; NF New=0.
+
+| 스케줄 | 결과 |
+| :--- | :--- |
+| aa-clean-weekly | 8 repo no `clean_code:` → skip; High/Med=0; not a prod gate (ticket `d45f1c4c`) |
+| qa-bulk-weekly | 8 repo no `bulk_api`/`opik` → skip; factory `GET /api/health` 200 `qa: pass`; Opik N/A; NF=0 (ticket `90701013`) |
+
+Pattern reuse: missing yaml ≠ fail; aura unrelated-histories → [[wiki/Engineering/AI-Native-Engineering/Tenant-Repo-Sync-Dirty-Tree-Skip.md]] 계열 sync skip.
 
 ## 🔗 관련 문서
 

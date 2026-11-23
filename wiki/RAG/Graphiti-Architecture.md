@@ -10,7 +10,7 @@ tags:
   - graphiti
 type: wiki
 status: draft
-last_updated: "2026-10-22"
+last_updated: "2026-11-24"
 updated: "2026-10-22"
 ---
 
@@ -23,5 +23,4 @@ updated: "2026-10-22"
 - **로컬 읽기 전용 래퍼**: `graphiti-local` 0.4.1은 임베디드 LadybugDB + Ollama. 쓰기 MCP가 아니라 제안 큐·사람 승인. core 핀 `0.30.1` — [[wiki/RAG/Graphiti-MCP.md]].
 - **0.31.0 라우팅·추출 (2026-10-14)**: `LLMRuntime`이 프롬프트·모델 경로를 나눈다. 결합 추출 기본 프롬프트는 **C2**. 노드/엣지 dedupe에 Jev·OpenAI Decisions 클라이언트. 호스팅 OpenAI 기본 모델은 `gpt-6-luna`(prompt caching off). 릴리스 앵커: [[wiki/RAG/Graphiti-Overview.md]].
 
-
-
+- **0.32.0 tip (2026-11-23)**: **Kuzu driver 제거**(breaking). UUID ops는 `group_id` 범위 검사 — 타 그룹 UUID는 `NodeNotFoundError`/`EdgeNotFoundError`. 동시 ingest(한 그래프) 추가. MCP 이미지 neo4j extra 제거. GH tip **v0.32.0** (was v0.31.2).

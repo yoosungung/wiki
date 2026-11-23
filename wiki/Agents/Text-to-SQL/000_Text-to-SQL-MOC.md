@@ -8,6 +8,7 @@
 - [[wiki/Agents/Text-to-SQL/AV-SQL-Agentic-Views-Spider-2-0.md]]
 - [[wiki/Agents/Text-to-SQL/Agentic-Semantic-Layer.md]]
 - [[wiki/Agents/Text-to-SQL/Arctic-Text2SQL-R1-Reinforcement-Learning.md]]
+- [[wiki/Agents/Text-to-SQL/AskWise-Execution-Guided-Clarification.md]]
 - [[wiki/Agents/Text-to-SQL/Composite-Grain-Join-Keys.md]]
 - [[wiki/Agents/Text-to-SQL/DBHub_MCP_Server.md]]
 - [[wiki/Agents/Text-to-SQL/DeepAgent-T2SQL.md]]
