@@ -10,7 +10,7 @@ tags:
   - graphiti
 type: wiki
 status: draft
-last_updated: "2026-11-24"
+last_updated: "2026-11-25"
 updated: "2026-10-22"
 ---
 
@@ -24,3 +24,5 @@ updated: "2026-10-22"
 - **0.31.0 라우팅·추출 (2026-10-14)**: `LLMRuntime`이 프롬프트·모델 경로를 나눈다. 결합 추출 기본 프롬프트는 **C2**. 노드/엣지 dedupe에 Jev·OpenAI Decisions 클라이언트. 호스팅 OpenAI 기본 모델은 `gpt-6-luna`(prompt caching off). 릴리스 앵커: [[wiki/RAG/Graphiti-Overview.md]].
 
 - **0.32.0 tip (2026-11-23)**: **Kuzu driver 제거**(breaking). UUID ops는 `group_id` 범위 검사 — 타 그룹 UUID는 `NodeNotFoundError`/`EdgeNotFoundError`. 동시 ingest(한 그래프) 추가. MCP 이미지 neo4j extra 제거. GH tip **v0.32.0** (was v0.31.2).
+
+- **0.32.1 tip (2026-11-24)**: GH tip **v0.32.1** replaces **v0.32.0** (no functional code changes; MCP lockfile → graphiti-core 0.32.1). PyPI `graphiti-core==0.32.1`. MCP **mcp-v1.1.5** requires `graphiti-core>=0.32.0` (group isolation for MCP tools).
