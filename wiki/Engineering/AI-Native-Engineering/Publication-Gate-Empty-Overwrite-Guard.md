@@ -3,10 +3,17 @@ id: publication-gate-empty-overwrite-guard
 title: "퍼블리시 게이트 + 빈 산출물 덮어쓰기 금지"
 status: canonical
 owner: km
-updated: "2026-11-25"
-last_updated: "2026-11-25"
+updated: "2026-11-26"
+last_updated: "2026-11-26"
 review_after: "2026-12-21"
 sources:
+  - inbox/candidate/2026-11-26-issue-radar-today.md
+  - inbox/candidate/2026-11-26-publication-safety.md
+  - inbox/candidate/2026-11-25-people-ssot-curation-18h.md
+  - inbox/pm/2026-11-26-issue-radar-today-intent-pass.md
+  - ticket:c197a861-73b3-48ec-ba64-32e34e747de6
+  - ticket:ef3e8b32-2a5e-4f5e-abab-a9caba356bda
+  - ticket:b5b7379c-f317-44fe-b2f5-46b04fe1af6d
   - inbox/candidate/2026-11-25-issue-radar-today.md
   - inbox/candidate/2026-11-25-publication-safety.md
   - inbox/candidate/2026-11-24-people-ssot-curation-18h.md
@@ -361,4 +368,10 @@ python agent/publication_gate.py --base origin/main
 - publication-safety 2026-11-25: exit 0 PASS; clean-main HEAD=`8c7f0f8c`==origin/main → Done without push/Hugo (ticket `1275127b`).
 - issue-radar-today 2026-11-25: items=**10**; `wiki/data/today.yaml` only SHA `bc5943a2…`; `generated_at` 2026-11-24T23:01:30Z; empty-overwrite 미발동; PM Intent pass `06cbe750`.
 - people-ssot 2026-11-24 18h: stub→curated **0**; residual stub **39** (allowlist URL 없음) → 부족≠실패; content diff 0 no-op (ticket `a7651d48`). Hold: nonperson/place 1 · fragment/weak-role 5 · journalist/media 10 · no-URL 23.
+
+## Ops 2026-11-25···26
+
+- publication-safety 2026-11-26: exit 0 PASS; clean-main HEAD=`bc5943a2`==origin/main → Done without push/Hugo (ticket `ef3e8b32`).
+- issue-radar-today 2026-11-26: items=**10**; `wiki/data/today.yaml` only SHA `c3896709…`; `generated_at` 2026-11-25T23:01:10Z; empty-overwrite 미발동; PM Intent pass `c197a861`.
+- people-ssot 2026-11-25 18h: stub→curated **0**; residual stub **39** (allowlist URL 없음) → 부족≠실패; content diff 0 no-op (ticket `b5b7379c`).
 
