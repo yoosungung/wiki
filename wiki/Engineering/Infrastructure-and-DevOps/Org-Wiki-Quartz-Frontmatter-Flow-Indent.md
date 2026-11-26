@@ -3,11 +3,13 @@ id: org-wiki-quartz-frontmatter-flow-indent
 title: "org-wiki Quartz frontmatter flow-array indent"
 status: canonical
 owner: km
-updated: "2026-11-26"
+updated: "2026-11-27"
 review_after: "2027-02-26"
 sources:
   - ticket:13f467cb-fb13-4d30-b4cc-48e59837d38c
+  - inbox/pm/2026-11-26-gh-action-quartz-frontmatter-done.md
   - https://github.com/yoosungung/wiki/actions/runs/45722067188
+  - https://github.com/yoosungung/wiki/actions/runs/45793741913
 tags: ["Engineering", "Infrastructure", "GitHub-Pages", "Quartz", "org-wiki", "frontmatter"]
 type: "wiki"
 ---
@@ -49,3 +51,5 @@ related_raw:
 
 - fail Actions #1919 / run `45722067188` (SHA `01ec590`): `Deep-Agents-Definition.md` 외 동일 패턴 9파일
 - tip push로 block-list 변환 후 Deploy 재기동
+- fix 검증: Actions #1921 / run `45793741913` build+deploy success · wiki.askwho.net 200 (`inbox/pm/2026-11-26-gh-action-quartz-frontmatter-done.md`)
+- pm-checkpoint: FLOW_COUNT=1 (`13f467cb` gh action error → km) · FRESH≈4m <30m 침묵 유지 (`inbox/pm/2026-11-26-pm-checkpoint-km-gh-action-quiet.md`)

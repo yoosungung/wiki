@@ -3,10 +3,25 @@ id: factory-schedule-ops-skips
 title: "Factory 스케줄 ops: empty skip · registry placeholder"
 status: canonical
 owner: km
-updated: "2026-11-26"
-last_updated: "2026-11-26"
+updated: "2026-11-27"
+last_updated: "2026-11-27"
 review_after: "2027-01-15"
 sources:
+  - inbox/pm/2026-11-27-github-issue-check-empty-skip.md
+  - inbox/pm/2026-11-27-issue-radar-today-intent-pass.md
+  - inbox/pm/2026-11-27-roadmap-sync-0600.md
+  - inbox/pm/2026-11-27-roadmap-sync-0000.md
+  - inbox/pm/2026-11-26-roadmap-sync-1800.md
+  - inbox/pm/2026-11-26-roadmap-sync-1200.md
+  - inbox/pm/2026-11-26-pm-checkpoint-km-gh-action-quiet.md
+  - inbox/candidate/2026-11-27-issue-radar-today.md
+  - inbox/candidate/2026-11-27-publication-safety.md
+  - inbox/candidate/2026-11-26-people-ssot-curation-18h.md
+  - ticket:0daa4a78-09c2-4aa2-b519-b20c9de09056
+  - ticket:fccd8de3-faf8-46de-b006-2bcdf7eff361
+  - ticket:2abba38b-653b-4ab2-bdb3-b99d1f5082f6
+  - ticket:7eb3f8c0-613e-4f2e-9556-ad25e3566adb
+  - ticket:19172550-03e2-49e7-895d-b0e900bc9525
   - inbox/pm/2026-11-26-github-issue-check-empty-skip.md
   - inbox/pm/2026-11-26-issue-radar-today-intent-pass.md
   - inbox/pm/2026-11-26-roadmap-sync-0600.md
@@ -706,4 +721,24 @@ Durable rules reaffirmed:
 - people-ssot: allowlist miss → residual stubs OK (부족≠실패); empty content diff → no commit.
 - publication-safety PASS on clean main may Done without push/Hugo.
 - ROADMAP: incomplete=`- [ ]` only; cancelled/done marker → dedup; no invent reopen; freeze when no next `###` M-id.
+
+### UPD 2026-11-27 (km-wiki drain)
+
+Ops / schedule evidence folded (no new durable rule beyond existing pages):
+
+- `inbox/candidate/2026-11-26-people-ssot-curation-18h.md` — stub→curated 0 · residual stub 39 · clean no-op (`c3896709`)
+- `inbox/candidate/2026-11-27-issue-radar-today.md` — items=10 · today.yaml `30c612c3…`
+- `inbox/candidate/2026-11-27-publication-safety.md` — PASS clean main `c3896709` · no push/Hugo
+- `inbox/pm/2026-11-27-issue-radar-today-intent-pass.md` — Intent pass · SHA 일치
+- `inbox/pm/2026-11-27-github-issue-check-empty-skip.md` — registry 8 · open=0 · skipped=8 · create-once REST (`0daa4a78`)
+- `inbox/pm/2026-11-26-roadmap-sync-1200.md` / `…-1800.md` / `…-27-0000.md` / `…-27-0600.md` — crewrp/aura/scanbooks no next ### · uni-semantic Phase4 MCP open + done/cancelled `d15d16f2` dedup · mile `ba31c9e8` stays done
+- `inbox/pm/2026-11-26-pm-checkpoint-km-gh-action-quiet.md` — FLOW_COUNT=1 (`13f467cb`) · FRESH≈4m <30m · actionable 0/5
+- Quartz frontmatter fix evidence → [[wiki/Engineering/Infrastructure-and-DevOps/Org-Wiki-Quartz-Frontmatter-Flow-Indent.md]] (Actions #1921)
+
+Durable rules reaffirmed:
+- github-issue-check open=0 → explicit empty skip (Outcome Done); factory-mcp 부재 → session-cookie REST create-once (`ticket.id` · POST≤1).
+- people-ssot: allowlist miss → residual stubs OK (부족≠실패); empty content diff → no commit.
+- publication-safety PASS on clean main may Done without push/Hugo.
+- ROADMAP: incomplete=`- [ ]` only; cancelled/done marker → dedup; no invent reopen; freeze when no next `###` M-id.
+- pm-checkpoint: FRESH <30m → silence (no HC/ARC spam).
 

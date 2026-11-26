@@ -1,5 +1,5 @@
 # KM_INDEX_AGENT_v1
-[META] Updated: 2026-11-26 | Root: wiki/
+[META] Updated: 2026-11-27 | Root: wiki/
 
 ## 📂 CATEGORIES_MOC
 - AGENTS: [[wiki/Agents/000_Agents-MOC.md]]
@@ -52,6 +52,17 @@
     - Trends: [[wiki/Business/Trends/000_Trends-MOC.md]]
 
 ## 📌 KEY_FILE_LIST
+
+### UPD 2026-11-27 (km-researcher)
+- [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 11-27 ops drain append (github empty×8 · radar/pub/people · roadmap freeze×4 · pm-checkpoint quiet)
+- [[wiki/Engineering/AI-Native-Engineering/Publication-Gate-Empty-Overwrite-Guard.md]] — 11-26···27 ops (radar `30c612c3` · pub PASS · people stub0)
+- [[wiki/Engineering/AI-Native-Engineering/Roadmap-Sync-Unchecked-H2-Gate.md]] — 11-26···27 ops (uni-semantic Phase4 dedup · crewrp/aura/scanbooks no next ###)
+- [[wiki/Engineering/Infrastructure-and-DevOps/Org-Wiki-Quartz-Frontmatter-Flow-Indent.md]] — Actions #1921 green evidence
+- [[wiki/Agents/Text-to-SQL/DisGuAD-Disagreement-Guided-Ambiguity.md]] — arXiv:2611.21645 SQL-disagreement clarification policy
+- Inbox drain: **11** (`status:inbox`) git rm — pm×8 · candidate×3
+- ALREADY_COVERED: LiteRT-LM **v0.20.0** · LightRAG stable **v1.5.8** · Graphiti tip **v0.32.1** / MCP **mcp-v1.1.5** · WebLLM **v0.2.89** · Supermemory **server-v0.0.9**
+- Research: tip bump 없음; new arXiv page DisGuAD
+- Left non-status:inbox: `inbox/aura/2026-11-19-dlq-replay-ops-runbook.md` · `inbox/pm/2026-11-19-aura-m4-sync-enqueued.md`
 
 ### UPD 2026-11-26 (km-researcher)
 - [[wiki/Engineering/AI-Native-Engineering/Factory-Schedule-Ops-Skips.md]] — 11-26 ops drain append (github empty×8 · radar/pub/people · roadmap freeze×4)

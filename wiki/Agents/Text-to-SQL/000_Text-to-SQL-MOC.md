@@ -12,6 +12,7 @@
 - [[wiki/Agents/Text-to-SQL/Composite-Grain-Join-Keys.md]]
 - [[wiki/Agents/Text-to-SQL/DBHub_MCP_Server.md]]
 - [[wiki/Agents/Text-to-SQL/DeepAgent-T2SQL.md]]
+- [[wiki/Agents/Text-to-SQL/DisGuAD-Disagreement-Guided-Ambiguity.md]]
 - [[wiki/Agents/Text-to-SQL/GRPO-for-T2SQL.md]]
 - [[wiki/Agents/Text-to-SQL/Genloop-Sentinel.md]]
 - [[wiki/Agents/Text-to-SQL/LuthorSQL-System1-Local-Gate.md]]

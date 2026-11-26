@@ -3,10 +3,14 @@ id: roadmap-sync-unchecked-h2-gate
 title: "ROADMAP sync: ## + 미완료 - [ ] 섹션만 enqueue"
 status: canonical
 owner: km
-updated: "2026-11-26"
-last_updated: "2026-11-26"
+updated: "2026-11-27"
+last_updated: "2026-11-27"
 review_after: "2027-02-19"
 sources:
+  - inbox/pm/2026-11-27-roadmap-sync-0600.md
+  - inbox/pm/2026-11-27-roadmap-sync-0000.md
+  - inbox/pm/2026-11-26-roadmap-sync-1800.md
+  - inbox/pm/2026-11-26-roadmap-sync-1200.md
   - inbox/pm/2026-11-26-roadmap-sync-0600.md
   - inbox/pm/2026-11-26-roadmap-sync-0000.md
   - inbox/pm/2026-11-25-roadmap-sync-1800.md
@@ -26,6 +30,8 @@ sources:
   - inbox/pm/2026-11-21-roadmap-sync.md
   - inbox/pm/2026-11-20-roadmap-sync.md
   - ticket:ba31c9e8-b3a9-43a4-948a-fe02ded277e3
+  - ticket:1d06f180-91a0-4af3-9234-1f445c3d18ea
+  - ticket:31d5eee1-f30c-44ad-a10e-a21d4eb3dff4
   - ticket:502e7094-9637-413c-8a4a-cc777df81cb3
   - inbox/pm/2026-11-19-roadmap-resolved-markers-adopted.md
   - inbox/aura/2026-11-19-roadmap-resolved-checkbox-markers.md
@@ -215,6 +221,12 @@ type: "wiki"
 - **uni-semantic** current=`## Phase 4`; open MCP `- [ ]` but marker on cancelled/done `d15d16f2` → dedup `created=0`; milestone `ba31c9e8` stays done (no demote); doc lag (prefer ROADMAP `- [-]`).
 - **crewrp / aura / scanbooks**: all `##` have zero `- [ ]` → pass-gate path; **no next ###** (M-id) → freeze, no gate ticket invent.
 - Sync never rewrites tenant ROADMAP; no invent reopen of MCP. 12:00 / 18:00 / 00:00 / 06:00 KST re-runs idempotent.
+
+## Ops 2026-11-26···27
+
+- **uni-semantic** current=`## Phase 4`; open MCP `- [ ]` but marker on cancelled/done `d15d16f2` → dedup `created=0`; milestone `ba31c9e8` stays done (no demote); doc lag (prefer ROADMAP `- [-]`).
+- **crewrp / aura / scanbooks**: all `##` have zero `- [ ]` → pass-gate path; **no next ###** (M-id) → freeze, no gate ticket invent.
+- Sync never rewrites tenant ROADMAP; no invent reopen of MCP. 12:00 / 18:00 / 00:00 / 06:00 KST re-runs idempotent (tickets `31d5eee1` · `1d06f180` · mile `ba31c9e8`).
 
 
 ## 🔗 관련 문서
