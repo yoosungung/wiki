@@ -58,6 +58,28 @@ class OrgWikiLayoutTest(unittest.TestCase):
             msg="deploy Prepare Content rsync에 --exclude=raw 필요",
         )
 
+    def test_wiki_frontmatter_no_column0_flow_close(self):
+        """Quartz: multiline `key: [ … ]` with `]` at column 0 → deficient indentation."""
+        bad_pat = re.compile(
+            r"(?m)^[A-Za-z0-9_-]+:\s*\[\s*\n(?:[ \t]+.+\n)+^\]\s*$"
+        )
+        wiki = ROOT / "wiki"
+        offenders = []
+        for path in wiki.rglob("*.md"):
+            text = path.read_text(encoding="utf-8")
+            if not text.startswith("---"):
+                continue
+            end = text.find("\n---", 3)
+            if end < 0:
+                continue
+            if bad_pat.search(text[: end + 4]):
+                offenders.append(str(path.relative_to(ROOT)))
+        self.assertEqual(
+            offenders,
+            [],
+            msg="multiline flow frontmatter with column-0 `]` breaks Quartz build",
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

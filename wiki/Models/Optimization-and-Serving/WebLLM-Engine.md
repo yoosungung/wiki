@@ -1,16 +1,14 @@
----
-title: "WebLLM 엔진 (WebLLM Engine)"
+---title: "WebLLM 엔진 (WebLLM Engine)"
 status: "published"
 category: "Models"
 subcategory: "Optimization-and-Serving"
 tags: [WebLLM, MLC-LLM, WebGPU, Browser-LLM]
 last_updated: "2026-11-11"
 updated: "2026-11-11"
-related_raw: [
-  "[[raw/2026-09-20-webllm-v0.2.85-opfs-sync-worker.md]]",
-  "[[raw/2026-05-13-WebLLM-Home.md]]",
-  "[[raw/2026-05-13-mlc-ai-web-llm-github.md]]"
-]
+related_raw:
+  - "[[raw/2026-09-20-webllm-v0.2.85-opfs-sync-worker.md]]"
+  - "[[raw/2026-05-13-WebLLM-Home.md]]"
+  - "[[raw/2026-05-13-mlc-ai-web-llm-github.md]]"
 ---
 
 # WebLLM 엔진 (WebLLM Engine)

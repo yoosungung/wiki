@@ -1,17 +1,15 @@
----
-title: "Browser-based AI Inference (브라우저 기반 AI 추론)"
+---title: "Browser-based AI Inference (브라우저 기반 AI 추론)"
 status: "published"
 category: "Models"
 subcategory: "Optimization-and-Serving"
 tags: [WebGPU, WASM, WebLLM, Transformers.js, Browser-AI]
 last_updated: "2026-05-13"
 updated: "2026-05-13"
-related_raw: [
-  "[[raw/2026-05-12-WebGPU-2026-70-Browser-Support-15x-Performance-Gains.md]]",
-  "[[raw/2026-05-12-Wasms-Identity-Crisis-What-the-3-0-Release-Tells-Us.md]]",
-  "[[raw/2026-05-13-WebLLM-Home.md]]",
-  "[[raw/2026-05-13-Transformers-js-Hugging-Face.md]]"
-]
+related_raw:
+  - "[[raw/2026-05-12-WebGPU-2026-70-Browser-Support-15x-Performance-Gains.md]]"
+  - "[[raw/2026-05-12-Wasms-Identity-Crisis-What-the-3-0-Release-Tells-Us.md]]"
+  - "[[raw/2026-05-13-WebLLM-Home.md]]"
+  - "[[raw/2026-05-13-Transformers-js-Hugging-Face.md]]"
 ---
 
 # 브라우저 기반 AI 추론 (Browser-based AI Inference)

@@ -1,16 +1,14 @@
----
-title: "WebAssembly (WASM) 3.0 for AI"
+---title: "WebAssembly (WASM) 3.0 for AI"
 status: "published"
 category: "Models"
 subcategory: "Optimization-and-Serving"
 tags: [WASM, WebAssembly, Memory64, AI-Inference]
 last_updated: "2026-08-27"
 updated: "2026-08-27"
-related_raw: [
-  "[[2026-08-27-wllama64-memory64-browser-llm.md]]",
-  "[[raw/2026-05-12-Wasms-Identity-Crisis-What-the-3-0-Release-Tells-Us.md]]",
-  "[[raw/2026-05-12-wasm64-support-memory-larger-than-16-gb.md]]"
-]
+related_raw:
+  - "[[2026-08-27-wllama64-memory64-browser-llm.md]]"
+  - "[[raw/2026-05-12-Wasms-Identity-Crisis-What-the-3-0-Release-Tells-Us.md]]"
+  - "[[raw/2026-05-12-wasm64-support-memory-larger-than-16-gb.md]]"
 ---
 
 # WebAssembly (WASM) 3.0 for AI

@@ -1,16 +1,14 @@
----
-title: "브라우저 기반 AI 추론을 위한 기술적 전제 조건 (Web Inference Prerequisites)"
+---title: "브라우저 기반 AI 추론을 위한 기술적 전제 조건 (Web Inference Prerequisites)"
 status: "published"
 category: "Engineering"
 subcategory: "Infrastructure-and-DevOps"
 tags: [Security, Cross-Origin-Isolation, COOP, COEP, WebNN]
 last_updated: "2026-05-13"
 updated: "2026-05-13"
-related_raw: [
-  "[[raw/2026-05-12-making-your-website-cross-origin-isolated.md]]",
-  "[[raw/2026-05-12-cross-origin-embedder-policy-coep-header.md]]",
-  "[[raw/2026-03-27-Web-Neural-Network-API.md]]"
-]
+related_raw:
+  - "[[raw/2026-05-12-making-your-website-cross-origin-isolated.md]]"
+  - "[[raw/2026-05-12-cross-origin-embedder-policy-coep-header.md]]"
+  - "[[raw/2026-03-27-Web-Neural-Network-API.md]]"
 ---
 
 # 브라우저 기반 AI 추론을 위한 기술적 전제 조건

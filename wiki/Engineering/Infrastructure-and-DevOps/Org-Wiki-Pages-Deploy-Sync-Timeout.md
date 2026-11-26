@@ -18,6 +18,8 @@ type: "wiki"
 
 `yoosungung/wiki` Deploy workflow가 **build success** 뒤 `actions/deploy-pages@v4`에서만 실패하면, 제품/콘텐츠 회귀보다 **GitHub Pages sync 지연 + 10분 하드캡**을 먼저 의심한다.
 
+build job이 `Invalid frontmatter`로 먼저 죽으면 이 문서 범위가 아니다 — [[wiki/Engineering/Infrastructure-and-DevOps/Org-Wiki-Quartz-Frontmatter-Flow-Indent.md]].
+
 ## 판별
 
 | 신호 | 해석 |

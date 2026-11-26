@@ -1,15 +1,13 @@
----
-title: "Deep Agents (Agents 2.0) 정의 및 세대 변화"
-related_raw: [
-  "[[raw/NVIDIA-NeMoProRL-Agent-Server.md]]",
-  "[[raw/The Runtime Behind Production Deep Agents.md]]",
-  "[[wiki/Agents/Implementation/Agents 2.0 - From Shallow Loops to Deep Agents.md]]",
-  "[[wiki/Agents/Implementation/Agents 2.0 - Part 2 - Architecture.md]]",
-  "[[wiki/Agents/Implementation/Agents 2.0 - Part 3 - Visualization and Conclusion.md]]",
-  "[[wiki/Agents/Implementation/Agents-2.0-Discussion.md]]",
-  "[[wiki/Agents/Implementation/Deep-Agents-2.0.md]]",
-  "[[wiki/Agents/Implementation/Deep-Agents-and-Agents-2.0-2026.md]]"
-]
+---title: "Deep Agents (Agents 2.0) 정의 및 세대 변화"
+related_raw:
+  - "[[raw/NVIDIA-NeMoProRL-Agent-Server.md]]"
+  - "[[raw/The Runtime Behind Production Deep Agents.md]]"
+  - "[[wiki/Agents/Implementation/Agents 2.0 - From Shallow Loops to Deep Agents.md]]"
+  - "[[wiki/Agents/Implementation/Agents 2.0 - Part 2 - Architecture.md]]"
+  - "[[wiki/Agents/Implementation/Agents 2.0 - Part 3 - Visualization and Conclusion.md]]"
+  - "[[wiki/Agents/Implementation/Agents-2.0-Discussion.md]]"
+  - "[[wiki/Agents/Implementation/Deep-Agents-2.0.md]]"
+  - "[[wiki/Agents/Implementation/Deep-Agents-and-Agents-2.0-2026.md]]"
 tags: ['wiki', 'agents_2.0', 'deep_agents', 'architecture', 'agent_evolution']
 type: "wiki"
 status: "published"
