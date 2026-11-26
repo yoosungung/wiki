@@ -1,4 +1,5 @@
----title: "WebAssembly (WASM) 3.0 for AI"
+---
+title: "WebAssembly (WASM) 3.0 for AI"
 status: "published"
 category: "Models"
 subcategory: "Optimization-and-Serving"

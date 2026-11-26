@@ -1,4 +1,5 @@
----title: "브라우저 기반 AI 추론을 위한 기술적 전제 조건 (Web Inference Prerequisites)"
+---
+title: "브라우저 기반 AI 추론을 위한 기술적 전제 조건 (Web Inference Prerequisites)"
 status: "published"
 category: "Engineering"
 subcategory: "Infrastructure-and-DevOps"

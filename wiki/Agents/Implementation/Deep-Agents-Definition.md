@@ -1,4 +1,5 @@
----title: "Deep Agents (Agents 2.0) 정의 및 세대 변화"
+---
+title: "Deep Agents (Agents 2.0) 정의 및 세대 변화"
 related_raw:
   - "[[raw/NVIDIA-NeMoProRL-Agent-Server.md]]"
   - "[[raw/The Runtime Behind Production Deep Agents.md]]"

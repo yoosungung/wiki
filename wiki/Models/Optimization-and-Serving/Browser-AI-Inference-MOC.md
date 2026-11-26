@@ -1,4 +1,5 @@
----title: "Browser-based AI Inference (브라우저 기반 AI 추론)"
+---
+title: "Browser-based AI Inference (브라우저 기반 AI 추론)"
 status: "published"
 category: "Models"
 subcategory: "Optimization-and-Serving"

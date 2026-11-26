@@ -1,4 +1,5 @@
----title: "WebGPU 가속 (WebGPU Acceleration)"
+---
+title: "WebGPU 가속 (WebGPU Acceleration)"
 status: "published"
 category: "Models"
 subcategory: "Optimization-and-Serving"

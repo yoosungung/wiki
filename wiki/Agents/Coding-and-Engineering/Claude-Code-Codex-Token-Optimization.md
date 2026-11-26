@@ -1,4 +1,5 @@
----title: "Claude Code 및 Codex 토큰 최적화 가이드"
+---
+title: "Claude Code 및 Codex 토큰 최적화 가이드"
 related_raw:
   - "[[Claude Code 및 Codex 설정 변경으로 토큰을 절약하는 방🇧ᅥᆸ.md]]"
   - "[[raw/andrej-karpathy-skillsREADME.md at main · forrestchangandrej-karpathy-skills.md]]"

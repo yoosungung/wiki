@@ -58,6 +58,18 @@ class OrgWikiLayoutTest(unittest.TestCase):
             msg="deploy Prepare Content rsync에 --exclude=raw 필요",
         )
 
+    def test_wiki_frontmatter_opener_has_newline(self):
+        """gray-matter needs `---\\n` not glued `---title`."""
+        wiki = ROOT / "wiki"
+        offenders = []
+        for path in wiki.rglob("*.md"):
+            text = path.read_text(encoding="utf-8")
+            if not text.startswith("---"):
+                continue
+            if not (text.startswith("---\n") or text.startswith("---\r\n")):
+                offenders.append(str(path.relative_to(ROOT)))
+        self.assertEqual(offenders, [], msg="frontmatter opener must be --- then newline")
+
     def test_wiki_frontmatter_no_column0_flow_close(self):
         """Quartz: multiline `key: [ … ]` with `]` at column 0 → deficient indentation."""
         bad_pat = re.compile(

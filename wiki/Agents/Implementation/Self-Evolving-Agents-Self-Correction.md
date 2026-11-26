@@ -1,4 +1,5 @@
----title: "자가 수정 및 자가 진화 메커니즘"
+---
+title: "자가 수정 및 자가 진화 메커니즘"
 related_raw:
   - "[[wiki/Agents/Implementation/Deep-Agents-and-Agents-2.0-2026.md]]"
   - "[[wiki/Agents/Implementation/Deep-Agents-2.0.md]]"
