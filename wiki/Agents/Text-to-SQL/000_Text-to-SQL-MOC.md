@@ -18,6 +18,7 @@
 - [[wiki/Agents/Text-to-SQL/LuthorSQL-System1-Local-Gate.md]]
 - [[wiki/Agents/Text-to-SQL/MCP-Search-Short-Column-Reverse-Match.md]]
 - [[wiki/Agents/Text-to-SQL/MDL-Only-Domain-Knowledge.md]]
+- [[wiki/Agents/Text-to-SQL/MEM-SQL-History-Aware-Memory.md]]
 - [[wiki/Agents/Text-to-SQL/Metadata-RAG.md]]
 - [[wiki/Agents/Text-to-SQL/Oracle-SOMA-SQL.md]]
 - [[wiki/Agents/Text-to-SQL/PremSQL-Update-2026-04-09.md]]
