@@ -16,5 +16,5 @@ sources:
 
 - registry 8 repos (client_id+project_id only); open GH issues = 0×8
 - created/commented none; skipped: sw-factory · crewrp · sql-mcp · rhwp_batch · aura · candidate.win · uni-semantic · scanbooks
-- factory-mcp absent → session-cookie REST create-once ( · POST≤1) → Outcome Done 
+- factory-mcp absent → session-cookie REST create-once (ticket.id · POST≤1) → Outcome Done 4015ad5a
 - Actions/CD monitoring remains ta scope
